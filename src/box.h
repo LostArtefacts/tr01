@@ -91,8 +91,8 @@ typedef struct
 extern int number_boxes;
 extern BOX_INFO *boxes;
 extern uint16 *overlap;
-extern sint16 *ground_zone[2];
 extern sint16 *ground_zone2[2];
+extern sint16 *ground_zone[2];
 extern sint16 *fly_zone[2];
 
 typedef enum

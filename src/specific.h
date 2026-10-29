@@ -3,15 +3,17 @@
 
 #include "types.h"
 
-extern uint8 game_palette[], water_palette[];
+extern uint8 water_palette[], game_palette[];
 extern int wet;
 extern char *bckscrn;
 extern int mode_lock;
-extern sint16 *aranges;
-extern int malloc_free, malloc_used;
 extern char *malloc_ptr;
+extern int hires_flag;
+extern int malloc_free;
+extern sint16 *aranges;
+extern int malloc_used;
 extern sint32 input;
-extern int hires_flag, game_hires;
+extern int game_hires;
 extern double screen_sizer, game_sizer;
 extern int title_loaded;
 

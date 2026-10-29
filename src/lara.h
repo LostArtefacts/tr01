@@ -180,6 +180,10 @@ extern int health_bar_timer;
 extern int overlay_flag;
 extern LARA_INFO lara;
 extern ITEM_INFO *lara_item;
+extern sint16 *cine;
+extern sint16 num_cine_frames;
+extern sint16 cine_frame;
+extern PHD_3DPOS cinematic_pos;
 
 void AddActiveItem(sint16 item_num);
 void RemoveActiveItem(sint16 item_num);

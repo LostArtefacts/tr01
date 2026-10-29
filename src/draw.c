@@ -966,9 +966,9 @@ void DrawLaraInt(ITEM_INFO *item, sint16 *frame1, sint16 *frame2, int frac, int 
     phd_PopMatrix();
 }
 
+sint32 IM_frac;
 sint32 *IMptr;
 sint32 IMstack[12 * 32];
-sint32 IM_frac;
 sint32 IM_rate;
 
 void InitInterpolate(int frac, int rate)

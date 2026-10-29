@@ -1,8 +1,8 @@
 #include <string.h>
 #include "game.h"
 
-uint32 *demoptr;
 int democount;
+uint32 *demoptr;
 int demo_level = LEVEL1;
 
 char valid_demos[] = {

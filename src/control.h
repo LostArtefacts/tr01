@@ -36,7 +36,4 @@ int zLOS(GAME_VECTOR *start, GAME_VECTOR *target);
 int xLOS(GAME_VECTOR *start, GAME_VECTOR *target);
 int ClipTarget(GAME_VECTOR *start, GAME_VECTOR *target, FLOOR_INFO *floor);
 
-extern sint16 *trigger_index;
-extern ITEM_INFO *items;
-
 #endif

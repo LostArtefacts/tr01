@@ -2,6 +2,10 @@
 #define GAME_H
 
 #include "types.h"
+
+extern int number_draw_rooms;
+extern ROOM_INFO *room;
+
 #include "objects.h"
 #include "box.h"
 #include "lara.h"
@@ -28,19 +32,19 @@
 
 extern int CurrentLevel;
 extern int level_complete;
-extern int number_draw_rooms;
 extern sint16 draw_rooms[];
 extern sint16 number_rooms;
-extern ROOM_INFO *room;
 extern OBJECT_INFO objects[];
 extern STATIC_INFO static_objects[];
-extern ANIM_STRUCT *anims;
 extern CHANGE_STRUCT *changes;
-extern RANGE_STRUCT *ranges;
-extern sint16 **meshes;
-extern sint16 *commands;
 extern sint16 *frames;
+extern RANGE_STRUCT *ranges;
+extern sint16 *commands;
+extern sint16 **meshes;
 extern sint32 *bones;
+extern ANIM_STRUCT *anims;
+extern ITEM_INFO *items;
+extern sint16 *trigger_index;
 extern sint16 next_item_active;
 extern FX_INFO *effects;
 extern sint16 next_fx_active;
@@ -81,11 +85,6 @@ sint32 GetRandomControl(void);
 sint32 GetRandomDraw(void);
 
 extern CAMERA_INFO camera;
-
-extern sint16 *cine;
-extern sint16 num_cine_frames;
-extern sint16 cine_frame;
-extern PHD_3DPOS cinematic_pos;
 
 sint32 StartCinematic(int level_number);
 void InitCinematicRooms(void);
