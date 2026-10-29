@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">57.34% (453)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">42.66% (337)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">57.47% (454)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">42.53% (336)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="428.34" height="6" x="0" y="0" class="named"/>
-<rect width="318.66" height="6" x="428.34" y="0" class="todo"/>
+<rect width="429.29" height="6" x="0" y="0" class="named"/>
+<rect width="317.71" height="6" x="429.29" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -521,7 +521,7 @@
 <rect width="12" height="12" x="15" y="135" class="named"><title>0x0002b2a4 undraw_shotgun (390 bytes)</title></rect>
 <rect width="12" height="12" x="30" y="135" class="named"><title>0x0002b42c draw_shotgun_meshes (55 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="135" class="named"><title>0x0002b464 undraw_shotgun_meshes (55 bytes)</title></rect>
-<rect width="12" height="12" x="60" y="135" class="todo"><title>0x0002b49c ready_shotgun (141 bytes)</title></rect>
+<rect width="12" height="12" x="60" y="135" class="named"><title>0x0002b49c ready_shotgun (141 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="135" class="todo"><title>0x0002b52c RifleHandler (145 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="135" class="todo"><title>0x0002b5c0 AnimateShotgun (532 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="135" class="todo"><title>0x0002b7d4 FireShotgun (201 bytes)</title></rect>
@@ -861,10 +861,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">52.24%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">47.76%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">52.31%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">47.69%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="390.25" height="6" x="0" y="0" class="named"/>
-<rect width="356.75" height="6" x="390.25" y="0" class="todo"/>
+<rect width="390.77" height="6" x="0" y="0" class="named"/>
+<rect width="356.23" height="6" x="390.77" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1219,7 +1219,7 @@
 <rect width="8.08" height="8.45" x="705.90" y="84.58" class="named"><title>0x0001f640 S_DrawSpriteSize (142 bytes)</title></rect>
 <rect width="8.01" height="8.45" x="716.98" y="84.58" class="named"><title>0x00018e28 TriggerNormalCDTrack (141 bytes)</title></rect>
 <rect width="8.01" height="8.45" x="727.99" y="84.58" class="named"><title>0x0002515c lara_as_walk (141 bytes)</title></rect>
-<rect width="8.01" height="8.45" x="738.99" y="84.58" class="todo"><title>0x0002b49c ready_shotgun (141 bytes)</title></rect>
+<rect width="8.01" height="8.45" x="738.99" y="84.58" class="named"><title>0x0002b49c ready_shotgun (141 bytes)</title></rect>
 <rect width="7.76" height="8.63" x="592.39" y="96.03" class="named"><title>0x0001f5b0 S_COLOUR (140 bytes)</title></rect>
 <rect width="7.76" height="8.63" x="592.39" y="107.66" class="todo"><title>0x0002bb1c ready_pistols (140 bytes)</title></rect>
 <rect width="7.76" height="8.47" x="592.39" y="119.29" class="named"><title>0x00010ed0 S_DisplayPicture (138 bytes)</title></rect>

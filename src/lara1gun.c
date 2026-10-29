@@ -98,3 +98,16 @@ void undraw_shotgun_meshes(void)
     lara.mesh_ptrs[HAND_R] = meshes[objects[LARA].mesh_index + HAND_R];
     lara.mesh_ptrs[TORSO] = meshes[objects[SHOTGUN].mesh_index + TORSO];
 }
+
+void ready_shotgun(void)
+{
+    lara.gun_status = LG_READY;
+    lara.left_arm.x_rot = lara.left_arm.y_rot = lara.left_arm.z_rot = 0;
+    lara.right_arm.x_rot = lara.right_arm.y_rot = lara.right_arm.z_rot = 0;
+    lara.left_arm.frame_number = lara.right_arm.frame_number = 0;
+    lara.left_arm.lock = lara.right_arm.lock = 0;
+    lara.target = NULL;
+    lara.left_arm.frame_base = lara.right_arm.frame_base = objects[SHOTGUN].frame_base;
+    lara.torso_x_rot = lara.torso_y_rot = 0;
+    lara.head_x_rot = lara.head_y_rot = 0;
+}
