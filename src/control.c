@@ -931,3 +931,31 @@ sint16 GetCeiling(FLOOR_INFO *floor, sint32 x, sint32 y, sint32 z)
     return height;
 }
 
+
+sint16 GetDoor(FLOOR_INFO *floor)
+{
+    sint16 *data, type;
+
+    if (!floor->index)
+        return NO_ROOM;
+
+    data = &floor_data[floor->index];
+    type = *(data++);
+
+    if (type == TILT_TYPE)
+    {
+        data++;
+        type = *(data++);
+    }
+
+    if (type == ROOF_TYPE)
+    {
+        data++;
+        type = *(data++);
+    }
+
+    if ((type & DATA_TYPE) == DOOR_TYPE)
+        return *data;
+
+    return NO_ROOM;
+}
