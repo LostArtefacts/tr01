@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">69.14% (549)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">30.86% (245)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">69.27% (550)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">30.73% (244)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="516.50" height="6" x="0" y="0" class="named"/>
-<rect width="230.50" height="6" x="516.50" y="0" class="todo"/>
+<rect width="517.44" height="6" x="0" y="0" class="named"/>
+<rect width="229.56" height="6" x="517.44" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -616,7 +616,7 @@
 <rect width="12" height="12" x="690" y="150" class="named"><title>0x00032450 Targetable (110 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="150" class="named"><title>0x000324c0 ControlGunShot (62 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="150" class="named"><title>0x00032500 GunShot (124 bytes)</title></rect>
-<rect width="12" height="12" x="735" y="150" class="todo"><title>0x0003257c Func3257c (182 bytes)</title></rect>
+<rect width="12" height="12" x="735" y="150" class="named"><title>0x0003257c GunHit (182 bytes)</title></rect>
 <rect width="12" height="12" x="0" y="165" class="todo"><title>0x00032634 Func32634 (150 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="165" class="todo"><title>0x000326cc Func326cc (131 bytes)</title></rect>
 <rect width="12" height="12" x="30" y="165" class="todo"><title>0x00032f8c Func32f8c (261 bytes)</title></rect>
@@ -865,10 +865,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">66.44%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">33.56%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">66.53%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">33.47%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="496.31" height="6" x="0" y="0" class="named"/>
-<rect width="250.69" height="6" x="496.31" y="0" class="todo"/>
+<rect width="496.97" height="6" x="0" y="0" class="named"/>
+<rect width="250.03" height="6" x="496.97" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.01" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1168,7 +1168,7 @@
 <rect width="9.85" height="9.52" x="724.37" y="59.16" class="todo"><title>0x00046c71 Func46c71 (183 bytes)</title></rect>
 <rect width="9.78" height="9.52" x="737.22" y="59.16" class="named"><title>0x00026618 lara_col_turn_r (182 bytes)</title></rect>
 <rect width="9.61" height="9.68" x="568.09" y="71.67" class="named"><title>0x000296a4 lara_as_glide (182 bytes)</title></rect>
-<rect width="9.61" height="9.68" x="568.09" y="84.35" class="todo"><title>0x0003257c Func3257c (182 bytes)</title></rect>
+<rect width="9.61" height="9.68" x="568.09" y="84.35" class="named"><title>0x0003257c GunHit (182 bytes)</title></rect>
 <rect width="9.61" height="9.61" x="568.09" y="97.03" class="named"><title>0x0002d7ec mn_get_fx_slot (181 bytes)</title></rect>
 <rect width="9.61" height="9.54" x="568.09" y="109.65" class="todo"><title>0x0003e18c phd_TranslateRel (180 bytes)</title></rect>
 <rect width="9.61" height="9.47" x="568.09" y="122.19" class="named"><title>0x0002fdd4 OnDrawBridge (179 bytes)</title></rect>
