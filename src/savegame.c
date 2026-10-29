@@ -337,3 +337,9 @@ int ConfirmSave(int fade)
 
     return status;
 }
+
+void CompleteSave(int fade)
+{
+    if (fade)
+        S_FadeOutInventory(1);
+}
