@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">65.70% (521)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">34.30% (272)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">65.83% (522)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">34.17% (271)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="490.78" height="6" x="0" y="0" class="named"/>
-<rect width="256.22" height="6" x="490.78" y="0" class="todo"/>
+<rect width="491.72" height="6" x="0" y="0" class="named"/>
+<rect width="255.28" height="6" x="491.72" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -590,7 +590,7 @@
 <rect width="12" height="12" x="300" y="150" class="named"><title>0x0002ff8c BridgeTilt1Floor (35 bytes)</title></rect>
 <rect width="12" height="12" x="315" y="150" class="named"><title>0x0002ffb0 BridgeTilt1Ceiling (37 bytes)</title></rect>
 <rect width="12" height="12" x="330" y="150" class="named"><title>0x0002ffd8 BridgeTilt2Floor (34 bytes)</title></rect>
-<rect width="12" height="12" x="345" y="150" class="todo"><title>0x0002fffc Func2fffc (36 bytes)</title></rect>
+<rect width="12" height="12" x="345" y="150" class="named"><title>0x0002fffc BridgeTilt2Ceiling (36 bytes)</title></rect>
 <rect width="12" height="12" x="360" y="150" class="todo"><title>0x00030020 Func30020 (111 bytes)</title></rect>
 <rect width="12" height="12" x="375" y="150" class="todo"><title>0x00030090 Func30090 (131 bytes)</title></rect>
 <rect width="12" height="12" x="390" y="150" class="todo"><title>0x00030114 Func30114 (82 bytes)</title></rect>
@@ -864,10 +864,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">59.85%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">40.15%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">59.87%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">40.13%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="447.07" height="6" x="0" y="0" class="named"/>
-<rect width="299.93" height="6" x="447.07" y="0" class="todo"/>
+<rect width="447.20" height="6" x="0" y="0" class="named"/>
+<rect width="299.80" height="6" x="447.20" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.01" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1521,7 +1521,7 @@
 <rect width="2.51" height="2.90" x="744.49" y="192.28" class="named"><title>0x0002ffb0 BridgeTilt1Ceiling (37 bytes)</title></rect>
 <rect width="2.59" height="2.82" x="699.66" y="198.18" class="todo"><title>0x0003ed48 phd_InitPolyList (37 bytes)</title></rect>
 <rect width="2.59" height="2.66" x="699.66" y="204" class="named"><title>0x00025bd8 lara_as_ppready (36 bytes)</title></rect>
-<rect width="2.59" height="2.66" x="699.66" y="209.66" class="todo"><title>0x0002fffc Func2fffc (36 bytes)</title></rect>
+<rect width="2.59" height="2.66" x="699.66" y="209.66" class="named"><title>0x0002fffc BridgeTilt2Ceiling (36 bytes)</title></rect>
 <rect width="2.59" height="2.66" x="699.66" y="215.32" class="todo"><title>0x0003b7fc Func3b7fc (36 bytes)</title></rect>
 <rect width="2.59" height="2.50" x="699.66" y="220.98" class="named"><title>0x00014fc0 InitialiseGenPlayer (35 bytes)</title></rect>
 <rect width="2.59" height="2.50" x="699.66" y="226.49" class="named"><title>0x0001ce60 phd_PopMatrix_I (35 bytes)</title></rect>

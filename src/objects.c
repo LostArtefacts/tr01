@@ -198,3 +198,12 @@ void BridgeTilt2Floor(ITEM_INFO *item, sint32 x, sint32 y, sint32 z, sint16 *hei
     if (y <= level)
         *height = (sint16)level;
 }
+
+void BridgeTilt2Ceiling(ITEM_INFO *item, sint32 x, sint32 y, sint32 z, sint16 *height)
+{
+    sint32 level;
+
+    level = item->pos.y_pos + (GetOffset(item, x, z) >> 1);
+    if (y > level)
+        *height = (sint16)(level + STEP_L);
+}
