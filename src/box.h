@@ -89,7 +89,6 @@ typedef struct
 } CREATURE_INFO;
 
 extern int number_boxes;
-extern int number_overlaps;
 extern BOX_INFO *boxes;
 extern uint16 *overlap;
 extern sint16 *ground_zone[2];

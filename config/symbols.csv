@@ -1795,6 +1795,7 @@ address,size,name,symbol
 0x000cb294,8,ground_zone2,_ground_zone2
 0x000cb29c,4,overlap,_overlap
 0x000cb2a0,4,boxes,_boxes
+0x000cb2a4,4,number_boxes,_number_boxes
 0x000cb2a8,93,camera,_camera
 0x000cb308,4,cine,_cine
 0x000cb30c,18,cinematic_pos,_cinematic_pos
