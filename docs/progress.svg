@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">62.55% (496)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">37.45% (297)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">62.67% (497)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">37.33% (296)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="467.23" height="6" x="0" y="0" class="named"/>
-<rect width="279.77" height="6" x="467.23" y="0" class="todo"/>
+<rect width="468.17" height="6" x="0" y="0" class="named"/>
+<rect width="278.83" height="6" x="468.17" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -564,7 +564,7 @@
 <rect width="12" height="12" x="660" y="135" class="named"><title>0x0002ddfc TorsoControl (1205 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="135" class="named"><title>0x0002e2ec NatlaControl (1620 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="135" class="named"><title>0x0002e940 ControlNatlaGun (321 bytes)</title></rect>
-<rect width="12" height="12" x="705" y="135" class="todo"><title>0x0002ea84 NatlaGun (122 bytes)</title></rect>
+<rect width="12" height="12" x="705" y="135" class="named"><title>0x0002ea84 NatlaGun (122 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="135" class="todo"><title>0x0002eb00 Func2eb00 (49 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="135" class="todo"><title>0x0002eb34 Func2eb34 (296 bytes)</title></rect>
 <rect width="12" height="12" x="0" y="150" class="todo"><title>0x0002ec7c Func2ec7c (547 bytes)</title></rect>
@@ -731,7 +731,7 @@
 <rect width="12" height="12" x="165" y="195" class="todo"><title>0x0003b3fc Func3b3fc (311 bytes)</title></rect>
 <rect width="12" height="12" x="180" y="195" class="todo"><title>0x0003b7fc Func3b7fc (36 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="195" class="todo"><title>0x0003be70 Func3be70 (627 bytes)</title></rect>
-<rect width="12" height="12" x="210" y="195" class="todo"><title>0x0003c0e4 Func3c0e4 (213 bytes)</title></rect>
+<rect width="12" height="12" x="210" y="195" class="todo"><title>0x0003c0e4 ShootAtLara (213 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="195" class="todo"><title>0x0003c1bc ShardGun (122 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="195" class="todo"><title>0x0003c238 RocketGun (122 bytes)</title></rect>
 <rect width="12" height="12" x="255" y="195" class="todo"><title>0x0003c2b4 Func3c2b4 (63 bytes)</title></rect>
@@ -864,10 +864,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">57.92%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">42.08%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">57.98%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">42.02%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="432.68" height="6" x="0" y="0" class="named"/>
-<rect width="314.32" height="6" x="432.68" y="0" class="todo"/>
+<rect width="433.12" height="6" x="0" y="0" class="named"/>
+<rect width="313.88" height="6" x="433.12" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.01" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1129,7 +1129,7 @@
 <rect width="11.25" height="10.32" x="583.91" y="45.84" class="named"><title>0x0002a7e8 InitialiseNewWeapon (216 bytes)</title></rect>
 <rect width="11.19" height="10.32" x="598.17" y="45.84" class="named"><title>0x00015e50 GetNearByRooms (215 bytes)</title></rect>
 <rect width="11.06" height="10.32" x="612.35" y="45.84" class="named"><title>0x00026540 lara_col_fastback (213 bytes)</title></rect>
-<rect width="11.06" height="10.32" x="626.41" y="45.84" class="todo"><title>0x0003c0e4 Func3c0e4 (213 bytes)</title></rect>
+<rect width="11.06" height="10.32" x="626.41" y="45.84" class="todo"><title>0x0003c0e4 ShootAtLara (213 bytes)</title></rect>
 <rect width="10.92" height="10.32" x="640.46" y="45.84" class="named"><title>0x0001283c BadFloor (211 bytes)</title></rect>
 <rect width="10.79" height="10.32" x="654.39" y="45.84" class="named"><title>0x00027140 lara_col_roll2 (209 bytes)</title></rect>
 <rect width="10.73" height="10.32" x="668.18" y="45.84" class="named"><title>0x00027a74 LaraSlideEdgeJump (208 bytes)</title></rect>
@@ -1261,7 +1261,7 @@
 <rect width="7.33" height="7.46" x="603.39" y="201.40" class="named"><title>0x0001f4c8 FindCdDrive (123 bytes)</title></rect>
 <rect width="7.33" height="7.38" x="603.39" y="211.86" class="named"><title>0x0001e0d8 SandFX (122 bytes)</title></rect>
 <rect width="7.33" height="7.38" x="603.39" y="222.24" class="named"><title>0x000244e8 Inv_RingMotionInit (122 bytes)</title></rect>
-<rect width="7.33" height="7.38" x="603.39" y="232.62" class="todo"><title>0x0002ea84 NatlaGun (122 bytes)</title></rect>
+<rect width="7.33" height="7.38" x="603.39" y="232.62" class="named"><title>0x0002ea84 NatlaGun (122 bytes)</title></rect>
 <rect width="7.70" height="7.02" x="613.72" y="106.03" class="todo"><title>0x0003c1bc ShardGun (122 bytes)</title></rect>
 <rect width="7.70" height="7.02" x="624.41" y="106.03" class="todo"><title>0x0003c238 RocketGun (122 bytes)</title></rect>
 <rect width="7.61" height="7.02" x="635.11" y="106.03" class="named"><title>0x000266d0 lara_col_death (121 bytes)</title></rect>

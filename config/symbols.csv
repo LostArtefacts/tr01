@@ -663,7 +663,7 @@ address,size,name,symbol
 0x0003b3fc,311,Func3b3fc,
 0x0003b7fc,36,Func3b7fc,
 0x0003be70,627,Func3be70,
-0x0003c0e4,213,Func3c0e4,
+0x0003c0e4,213,ShootAtLara,ShootAtLara_
 0x0003c1bc,122,ShardGun,ShardGun_
 0x0003c238,122,RocketGun,RocketGun_
 0x0003c2b4,63,Func3c2b4,
