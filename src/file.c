@@ -414,3 +414,24 @@ int LoadDepthQ(FILE *file)
     }
     return 1;
 }
+
+int LoadPalette(FILE *file)
+{
+    int i, col;
+
+    fread(game_palette, sizeof(char), 256 * 3, file);
+
+    game_palette[0] = game_palette[1] = game_palette[2] = 0;
+
+    wet = 0;
+    for (i = 0; i < 256 * 3; i += 3)
+    {
+        col = (int)(game_palette[i] * 2) / 3;
+        water_palette[i] = col;
+        col = (int)(game_palette[i + 1] * 2) / 3;
+        water_palette[i + 1] = col;
+        water_palette[i + 2] = game_palette[i + 2];
+    }
+
+    return 1;
+}

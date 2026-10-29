@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">23.87% (185)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">76.13% (590)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">24% (186)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">76% (589)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="178.32" height="6" x="0" y="0" class="named"/>
-<rect width="568.68" height="6" x="178.32" y="0" class="todo"/>
+<rect width="179.28" height="6" x="0" y="0" class="named"/>
+<rect width="567.72" height="6" x="179.28" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -254,7 +254,7 @@
 <rect width="12" height="12" x="510" y="45" class="named"><title>0x0001ed10 LoadSprites (265 bytes)</title></rect>
 <rect width="12" height="12" x="525" y="45" class="named"><title>0x0001ee1c LoadItems (441 bytes)</title></rect>
 <rect width="12" height="12" x="540" y="45" class="named"><title>0x0001efd8 LoadDepthQ (107 bytes)</title></rect>
-<rect width="12" height="12" x="555" y="45" class="todo"><title>0x0001f044 LoadPalette (137 bytes)</title></rect>
+<rect width="12" height="12" x="555" y="45" class="named"><title>0x0001f044 LoadPalette (137 bytes)</title></rect>
 <rect width="12" height="12" x="570" y="45" class="todo"><title>0x0001f0d0 LoadCameras (90 bytes)</title></rect>
 <rect width="12" height="12" x="585" y="45" class="todo"><title>0x0001f12c LoadSoundEffects (90 bytes)</title></rect>
 <rect width="12" height="12" x="600" y="45" class="todo"><title>0x0001f188 LoadBoxes (469 bytes)</title></rect>
@@ -846,10 +846,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">28.23%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">71.77%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">28.30%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">71.70%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="210.90" height="6" x="0" y="0" class="named"/>
-<rect width="536.10" height="6" x="210.90" y="0" class="todo"/>
+<rect width="211.40" height="6" x="0" y="0" class="named"/>
+<rect width="535.60" height="6" x="211.40" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1208,7 +1208,7 @@
 <rect width="7.76" height="8.63" x="592.39" y="96.04" class="todo"><title>0x0001f5b0 Func1f5b0 (140 bytes)</title></rect>
 <rect width="7.76" height="8.63" x="592.39" y="107.67" class="todo"><title>0x0002bb1c Func2bb1c (140 bytes)</title></rect>
 <rect width="7.76" height="8.46" x="592.39" y="119.30" class="named"><title>0x00010ed0 S_DisplayPicture (138 bytes)</title></rect>
-<rect width="7.76" height="8.38" x="592.39" y="130.76" class="todo"><title>0x0001f044 LoadPalette (137 bytes)</title></rect>
+<rect width="7.76" height="8.38" x="592.39" y="130.76" class="named"><title>0x0001f044 LoadPalette (137 bytes)</title></rect>
 <rect width="7.76" height="8.38" x="592.39" y="142.14" class="todo"><title>0x00046378 Func46378 (137 bytes)</title></rect>
 <rect width="7.76" height="8.38" x="592.39" y="153.53" class="todo"><title>0x00046d28 Func46d28 (137 bytes)</title></rect>
 <rect width="7.76" height="8.30" x="592.39" y="164.91" class="named"><title>0x0001628c EffectHit (136 bytes)</title></rect>
