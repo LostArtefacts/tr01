@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">32.65% (254)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">67.35% (524)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">32.78% (255)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">67.22% (523)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="243.88" height="6" x="0" y="0" class="named"/>
-<rect width="503.12" height="6" x="243.88" y="0" class="todo"/>
+<rect width="244.84" height="6" x="0" y="0" class="named"/>
+<rect width="502.16" height="6" x="244.84" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -322,7 +322,7 @@
 <rect width="12" height="12" x="30" y="75" class="named"><title>0x00022c10 GetDebouncedInput (32 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="75" class="named"><title>0x00022c30 InitColours (225 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="75" class="named"><title>0x00022d14 RingIsOpen (363 bytes)</title></rect>
-<rect width="12" height="12" x="75" y="75" class="todo"><title>0x00022e80 RingIsNotOpen (112 bytes)</title></rect>
+<rect width="12" height="12" x="75" y="75" class="named"><title>0x00022e80 RingIsNotOpen (112 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="75" class="todo"><title>0x00022ef0 RingNotActive (1763 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="75" class="todo"><title>0x000235d4 RingActive (59 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="75" class="todo"><title>0x0002371c Func2371c (1057 bytes)</title></rect>
@@ -849,10 +849,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">35.89%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">64.11%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">35.94%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">64.06%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="268.08" height="6" x="0" y="0" class="named"/>
-<rect width="478.92" height="6" x="268.08" y="0" class="todo"/>
+<rect width="268.49" height="6" x="0" y="0" class="named"/>
+<rect width="478.51" height="6" x="268.49" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1267,7 +1267,7 @@
 <rect width="6.81" height="7.29" x="653.27" y="106.96" class="todo"><title>0x00029dc4 Func29dc4 (113 bytes)</title></rect>
 <rect width="6.81" height="7.29" x="663.08" y="106.96" class="todo"><title>0x00036770 Func36770 (113 bytes)</title></rect>
 <rect width="6.73" height="7.29" x="672.89" y="106.96" class="named"><title>0x0001a0e0 TempVideoAdjust (112 bytes)</title></rect>
-<rect width="6.73" height="7.29" x="682.62" y="106.96" class="todo"><title>0x00022e80 RingIsNotOpen (112 bytes)</title></rect>
+<rect width="6.73" height="7.29" x="682.62" y="106.96" class="named"><title>0x00022e80 RingIsNotOpen (112 bytes)</title></rect>
 <rect width="6.64" height="7.29" x="692.34" y="106.96" class="todo"><title>0x00024db8 CreateEffect (111 bytes)</title></rect>
 <rect width="6.64" height="7.29" x="701.98" y="106.96" class="todo"><title>0x0002b8a0 Func2b8a0 (111 bytes)</title></rect>
 <rect width="6.64" height="7.29" x="711.62" y="106.96" class="todo"><title>0x0002bba8 Func2bba8 (111 bytes)</title></rect>

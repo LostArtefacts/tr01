@@ -68,3 +68,26 @@ void RingIsOpen(RING_INFO *ring)
         }
     }
 }
+
+void RingIsNotOpen(RING_INFO *ring)
+{
+    if (Inv_ringText)
+    {
+        T_RemovePrint(Inv_ringText);
+        Inv_ringText = NULL;
+
+        if (Inv_upArrow1)
+        {
+            T_RemovePrint(Inv_upArrow1);
+            T_RemovePrint(Inv_upArrow2);
+            Inv_upArrow1 = Inv_upArrow2 = NULL;
+        }
+
+        if (Inv_downArrow1)
+        {
+            T_RemovePrint(Inv_downArrow1);
+            T_RemovePrint(Inv_downArrow2);
+            Inv_downArrow1 = Inv_downArrow2 = NULL;
+        }
+    }
+}
