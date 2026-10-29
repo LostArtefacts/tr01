@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">24.90% (193)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">75.10% (582)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">25.03% (194)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">74.97% (581)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="186.03" height="6" x="0" y="0" class="named"/>
-<rect width="560.97" height="6" x="186.03" y="0" class="todo"/>
+<rect width="186.99" height="6" x="0" y="0" class="named"/>
+<rect width="560.01" height="6" x="186.99" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -262,7 +262,7 @@
 <rect width="12" height="12" x="630" y="45" class="named"><title>0x0001f3ac LoadCinematic (95 bytes)</title></rect>
 <rect width="12" height="12" x="645" y="45" class="named"><title>0x0001f40c LoadDemo (100 bytes)</title></rect>
 <rect width="12" height="12" x="660" y="45" class="named"><title>0x0001f470 build_ext (49 bytes)</title></rect>
-<rect width="12" height="12" x="675" y="45" class="todo"><title>0x0001f4a4 GetFullPath (33 bytes)</title></rect>
+<rect width="12" height="12" x="675" y="45" class="named"><title>0x0001f4a4 GetFullPath (33 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="45" class="todo"><title>0x0001f4c8 Func1f4c8 (123 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="45" class="todo"><title>0x0001f544 Func1f544 (96 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="45" class="todo"><title>0x0001f5a4 Func1f5a4 (3 bytes)</title></rect>
@@ -846,10 +846,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">28.78%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">71.22%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">28.79%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">71.21%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="214.95" height="6" x="0" y="0" class="named"/>
-<rect width="532.05" height="6" x="214.95" y="0" class="todo"/>
+<rect width="215.07" height="6" x="0" y="0" class="named"/>
+<rect width="531.93" height="6" x="215.07" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1517,7 +1517,7 @@
 <rect width="2.51" height="2.52" x="705.48" y="231.96" class="todo"><title>0x000367e4 Func367e4 (34 bytes)</title></rect>
 <rect width="2.51" height="2.52" x="705.48" y="237.48" class="todo"><title>0x00039560 Func39560 (34 bytes)</title></rect>
 <rect width="2.79" height="2.25" x="710.99" y="198.69" class="todo"><title>0x000398c8 Func398c8 (34 bytes)</title></rect>
-<rect width="2.62" height="2.25" x="716.78" y="198.69" class="todo"><title>0x0001f4a4 GetFullPath (33 bytes)</title></rect>
+<rect width="2.62" height="2.25" x="716.78" y="198.69" class="named"><title>0x0001f4a4 GetFullPath (33 bytes)</title></rect>
 <rect width="2.62" height="2.25" x="722.40" y="198.69" class="todo"><title>0x0002f264 Func2f264 (33 bytes)</title></rect>
 <rect width="2.62" height="2.25" x="728.02" y="198.69" class="todo"><title>0x00039908 Func39908 (33 bytes)</title></rect>
 <rect width="2.45" height="2.25" x="733.65" y="198.69" class="named"><title>0x00010064 S_InitialiseScreen (32 bytes)</title></rect>

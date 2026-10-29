@@ -22,6 +22,7 @@ char *sprite_base;
 char *room_text_base;
 char *object_text_base;
 sint16 *floor_data;
+char cd_drive = 0;
 
 char *levelnames[NUMBER_OF_LEVELS] = {
     "data\\gym.phd",
@@ -555,4 +556,13 @@ void build_ext(char *fname, char *ext)
     *(fname++) = *(ext++);
     *(fname++) = *(ext++);
     *(fname++) = 0;
+}
+
+char *GetFullPath(char *filename)
+{
+    static char newpath[128];
+
+    sprintf(newpath, "%c:\\%s", cd_drive, filename);
+
+    return newpath;
 }
