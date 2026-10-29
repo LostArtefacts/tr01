@@ -14,6 +14,12 @@ typedef struct
 
 extern SETUP game_setup;
 
+#define NO_MIDI 0x00000001
+#define NO_DIGI 0x00000002
+#define NO_SOS (NO_MIDI | NO_DIGI)
+#define CD_ON 0x00000004
+#define NO_MOUSE 0x00000010
+
 #define SIZE_KEYMAP 256
 #define SIZE_KEYBUF 64
 
@@ -56,5 +62,8 @@ void ScreenPartialDump(void);
 void TempVideoRemove(void);
 void FadeToPal(int count, uint8 *pal);
 void FadeWait(void);
+void ShellInit(SETUP *pSetup, uint32 dwFlags);
+uint32 SoundGetSOSHandle(void);
+uint32 SoundGetSOSDriver(void);
 
 #endif

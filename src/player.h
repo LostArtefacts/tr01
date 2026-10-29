@@ -33,8 +33,6 @@ typedef struct
 typedef void *LPVIDEOHANDLE;
 typedef void *LPSOUNDHANDLE;
 
-ULONG SoundGetSOSHandle(void);
-void *SoundGetSOSDriver(void);
 PLRESULT Player_InitPlaybackSystem(ULONG sos_handle, void *sos_driver);
 PLRESULT Player_ShutDownPlaybackSystem(void);
 PLRESULT Player_InitMovie(LPMOVIEHANDLE *mhandle, void *a, void *b, char *filename, int buffer_size);
