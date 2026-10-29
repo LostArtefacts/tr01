@@ -50,3 +50,23 @@ void SoundEffects(void)
 
     mn_update_sound_effects();
 }
+
+sint16 DoBloodSplat(sint32 x, sint32 y, sint32 z, sint16 speed, PHD_ANGLE direction, sint16 room_num)
+{
+    FX_INFO *fx;
+    sint16 fx_num;
+
+    if ((fx_num = CreateEffect(room_num)) != NO_ITEM)
+    {
+        fx = &effects[fx_num];
+        fx->pos.x_pos = x;
+        fx->pos.y_pos = y;
+        fx->pos.z_pos = z;
+        fx->pos.y_rot = direction;
+        fx->speed = speed;
+        fx->frame_number = 0;
+        fx->object_number = BLOOD1;
+        fx->counter = 0;
+    }
+    return fx_num;
+}

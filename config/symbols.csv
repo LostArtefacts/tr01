@@ -288,8 +288,8 @@ address,size,name,symbol
 0x00024c60,160,Func24c60,
 0x00024d00,127,Func24d00,
 0x00024d80,56,Func24d80,
-0x00024db8,111,Func24db8,
-0x00024e28,192,Func24e28,
+0x00024db8,111,CreateEffect,CreateEffect_
+0x00024e28,192,KillEffect,KillEffect_
 0x00024ee8,155,Func24ee8,
 0x00024f90,458,Func24f90,
 0x0002515c,141,Func2515c,
