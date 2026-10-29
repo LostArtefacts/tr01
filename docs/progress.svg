@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">5.06% (39)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">94.94% (732)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">5.19% (40)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">94.81% (731)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="37.79" height="6" x="0" y="0" class="named"/>
-<rect width="709.21" height="6" x="37.79" y="0" class="todo"/>
+<rect width="38.75" height="6" x="0" y="0" class="named"/>
+<rect width="708.25" height="6" x="38.75" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -111,7 +111,7 @@
 <rect width="12" height="12" x="615" y="0" class="named"><title>0x00013aa0 BadPosition (79 bytes)</title></rect>
 <rect width="12" height="12" x="630" y="0" class="named"><title>0x00013af0 SmartShift (1123 bytes)</title></rect>
 <rect width="12" height="12" x="645" y="0" class="named"><title>0x00013f54 ChaseCamera (267 bytes)</title></rect>
-<rect width="12" height="12" x="660" y="0" class="todo"><title>0x00014060 ShiftClamp (402 bytes)</title></rect>
+<rect width="12" height="12" x="660" y="0" class="named"><title>0x00014060 ShiftClamp (402 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="0" class="todo"><title>0x000141f4 CombatCamera (317 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="0" class="todo"><title>0x00014334 LookCamera (510 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="0" class="todo"><title>0x00014534 FixedCamera (146 bytes)</title></rect>
@@ -842,10 +842,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">6.51%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">93.49%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">6.71%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">93.29%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="48.61" height="6" x="0" y="0" class="named"/>
-<rect width="698.39" height="6" x="48.61" y="0" class="todo"/>
+<rect width="50.10" height="6" x="0" y="0" class="named"/>
+<rect width="696.90" height="6" x="50.10" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="54.65" height="67.43" x="0" y="0" class="todo"><title>0x0001bc98 Func1bc98 (4489 bytes)</title></rect>
@@ -987,7 +987,7 @@
 <rect width="16.69" height="15.61" x="453.88" y="113.99" class="todo"><title>0x00027d4c Func27d4c (405 bytes)</title></rect>
 <rect width="16.69" height="15.61" x="453.88" y="132.60" class="todo"><title>0x0002a8c0 Func2a8c0 (405 bytes)</title></rect>
 <rect width="16.69" height="15.56" x="453.88" y="151.20" class="todo"><title>0x000364a4 Func364a4 (404 bytes)</title></rect>
-<rect width="16.69" height="15.47" x="453.88" y="169.76" class="todo"><title>0x00014060 ShiftClamp (402 bytes)</title></rect>
+<rect width="16.69" height="15.47" x="453.88" y="169.76" class="named"><title>0x00014060 ShiftClamp (402 bytes)</title></rect>
 <rect width="16.69" height="15.42" x="453.88" y="188.23" class="named"><title>0x000104a8 S_CalculateLight (401 bytes)</title></rect>
 <rect width="16.69" height="15.19" x="453.88" y="206.66" class="todo"><title>0x0003afd0 Func3afd0 (396 bytes)</title></rect>
 <rect width="16.69" height="15.15" x="453.88" y="224.85" class="todo"><title>0x00030184 Func30184 (395 bytes)</title></rect>

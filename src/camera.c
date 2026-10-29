@@ -334,3 +334,42 @@ void ChaseCamera(ITEM_INFO *item)
     else
         MoveCamera(&ideal, CHASE_SPEED);
 }
+
+int ShiftClamp(GAME_VECTOR *pos, sint32 clamp)
+{
+    sint32 height, ceiling, shift, x, y, z;
+    FLOOR_INFO *floor;
+    BOX_INFO *box;
+
+    x = pos->x;
+    y = pos->y;
+    z = pos->z;
+
+    floor = GetFloor(x, y, z, &pos->room_number);
+
+    box = &boxes[floor->box];
+    if (z < box->left + clamp && BadPosition(x, y, z - clamp, pos->room_number))
+        pos->z = box->left + clamp;
+    else if (z > box->right - clamp && BadPosition(x, y, z + clamp, pos->room_number))
+        pos->z = box->right - clamp;
+
+    if (x < box->top + clamp && BadPosition(x - clamp, y, z, pos->room_number))
+        pos->x = box->top + clamp;
+    else if (x > box->bottom - clamp && BadPosition(x + clamp, y, z, pos->room_number))
+        pos->x = box->bottom - clamp;
+
+    height = GetHeight(floor, x, y, z) - clamp;
+    ceiling = GetCeiling(floor, x, y, z) + clamp;
+
+    if (height < ceiling)
+        height = ceiling = (height + ceiling) >> 1;
+
+    if (y > height)
+        shift = height - y;
+    else if (pos->y < ceiling)
+        shift = ceiling - y;
+    else
+        shift = 0;
+
+    return shift;
+}
