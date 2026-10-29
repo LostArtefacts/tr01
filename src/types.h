@@ -41,6 +41,8 @@ typedef uint16 SG_COL;
 
 #define UNIT_SHADOW 256
 
+#define DEMOCOUNT_MAX (30 * 60 * 5)
+
 enum game_levels
 {
     GYM,

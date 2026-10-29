@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">13.21% (102)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">86.79% (670)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">13.34% (103)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">86.66% (669)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="98.70" height="6" x="0" y="0" class="named"/>
-<rect width="648.30" height="6" x="98.70" y="0" class="todo"/>
+<rect width="99.66" height="6" x="0" y="0" class="named"/>
+<rect width="647.34" height="6" x="99.66" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -170,7 +170,7 @@
 <rect width="12" height="12" x="0" y="30" class="named"><title>0x000191f4 CrocControl (800 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="30" class="named"><title>0x00019520 StartDemo (335 bytes)</title></rect>
 <rect width="12" height="12" x="30" y="30" class="named"><title>0x00019670 LoadLaraDemoPos (150 bytes)</title></rect>
-<rect width="12" height="12" x="45" y="30" class="todo"><title>0x00019708 GetDemoInput (55 bytes)</title></rect>
+<rect width="12" height="12" x="45" y="30" class="named"><title>0x00019708 GetDemoInput (55 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="30" class="todo"><title>0x00019dc4 Func19dc4 (229 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="30" class="todo"><title>0x00019eb0 Func19eb0 (90 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="30" class="todo"><title>0x00019f0c Func19f0c (91 bytes)</title></rect>
@@ -843,10 +843,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">17.44%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">82.56%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">17.46%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">82.54%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="130.26" height="6" x="0" y="0" class="named"/>
-<rect width="616.74" height="6" x="130.26" y="0" class="todo"/>
+<rect width="130.46" height="6" x="0" y="0" class="named"/>
+<rect width="616.54" height="6" x="130.46" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="54.42" height="67.43" x="0" y="0" class="todo"><title>0x0001bc98 Func1bc98 (4489 bytes)</title></rect>
@@ -1397,7 +1397,7 @@
 <rect width="4.29" height="3.92" x="720.95" y="160.30" class="todo"><title>0x00020a78 Func20a78 (56 bytes)</title></rect>
 <rect width="4.29" height="3.92" x="728.25" y="160.30" class="todo"><title>0x00024d80 Func24d80 (56 bytes)</title></rect>
 <rect width="4.29" height="3.92" x="735.54" y="160.30" class="todo"><title>0x0002d8a4 Func2d8a4 (56 bytes)</title></rect>
-<rect width="4.16" height="3.92" x="742.84" y="160.30" class="todo"><title>0x00019708 GetDemoInput (55 bytes)</title></rect>
+<rect width="4.16" height="3.92" x="742.84" y="160.30" class="named"><title>0x00019708 GetDemoInput (55 bytes)</title></rect>
 <rect width="4.11" height="3.97" x="667.67" y="167.21" class="todo"><title>0x00023eac Func23eac (55 bytes)</title></rect>
 <rect width="4.11" height="3.97" x="667.67" y="174.18" class="todo"><title>0x00024838 Func24838 (55 bytes)</title></rect>
 <rect width="4.11" height="3.97" x="667.67" y="181.15" class="todo"><title>0x0002b42c Func2b42c (55 bytes)</title></rect>
