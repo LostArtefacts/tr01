@@ -303,3 +303,39 @@ void PrintRooms(sint16 room_number)
     r->top = (sint16)phd_winymax;
     r->right = r->bottom = 0;
 }
+
+void DrawEffect(sint16 fx_num)
+{
+    FX_INFO *fx;
+    OBJECT_INFO *object;
+
+    fx = &effects[fx_num];
+    object = &objects[fx->object_number];
+
+    if (!object->loaded)
+        return;
+
+    if (object->nmeshes < 0)
+        S_DrawSpriteAbs(fx->pos.x_pos, fx->pos.y_pos, fx->pos.z_pos, object->mesh_index - fx->frame_number, 16 * 256);
+    else
+    {
+        phd_PushMatrix();
+        phd_TranslateAbs(fx->pos.x_pos, fx->pos.y_pos, fx->pos.z_pos);
+        if (*(phd_mxptr + M23) > phd_znear && *(phd_mxptr + M23) < phd_zfar)
+        {
+            phd_RotYXZ(fx->pos.y_rot, fx->pos.x_rot, fx->pos.z_rot);
+            if (object->nmeshes)
+            {
+                S_CalculateStaticLight(fx->shade);
+                phd_PutPolygons(meshes[object->mesh_index], -1);
+            }
+            else
+            {
+                S_CalculateLight(fx->pos.x_pos, fx->pos.y_pos, fx->pos.z_pos, fx->room_number);
+                phd_PutPolygons(meshes[fx->frame_number], -1);
+            }
+        }
+
+        phd_PopMatrix();
+    }
+}

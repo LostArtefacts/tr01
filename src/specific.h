@@ -30,6 +30,7 @@ void S_SetupAboveWater(int underwater);
 void S_AnimateTextures(int nframes);
 void S_DrawLighteningSegment(sint32 x1, sint32 y1, sint32 z1, sint32 x2, sint32 y2, sint32 z2, sint32 width);
 void S_DisplayPicture(char *filename);
+void S_DrawSpriteAbs(sint32 x, sint32 y, sint32 z, sint16 sprnum, sint16 shade);
 void S_ExitSystem(char *exit_message);
 void S_UpdateInput(void);
 int S_SaveGame(void *data, int size, int slot);

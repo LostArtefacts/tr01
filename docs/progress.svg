@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">15.89% (123)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">84.11% (651)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">16.02% (124)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">83.98% (650)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="118.71" height="6" x="0" y="0" class="named"/>
-<rect width="628.29" height="6" x="118.71" y="0" class="todo"/>
+<rect width="119.67" height="6" x="0" y="0" class="named"/>
+<rect width="627.33" height="6" x="119.67" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -191,7 +191,7 @@
 <rect width="12" height="12" x="315" y="30" class="named"><title>0x0001a500 GetRoomBounds (118 bytes)</title></rect>
 <rect width="12" height="12" x="330" y="30" class="named"><title>0x0001a578 SetRoomBounds (990 bytes)</title></rect>
 <rect width="12" height="12" x="345" y="30" class="named"><title>0x0001a958 PrintRooms (452 bytes)</title></rect>
-<rect width="12" height="12" x="360" y="30" class="todo"><title>0x0001ab1c DrawEffect (270 bytes)</title></rect>
+<rect width="12" height="12" x="360" y="30" class="named"><title>0x0001ab1c DrawEffect (270 bytes)</title></rect>
 <rect width="12" height="12" x="375" y="30" class="todo"><title>0x0001ac2c Func1ac2c (69 bytes)</title></rect>
 <rect width="12" height="12" x="390" y="30" class="todo"><title>0x0001ac74 Func1ac74 (1417 bytes)</title></rect>
 <rect width="12" height="12" x="405" y="30" class="todo"><title>0x0001b224 DrawLara (2294 bytes)</title></rect>
@@ -760,7 +760,7 @@
 <rect width="12" height="12" x="600" y="195" class="todo"><title>0x0003f02b phd_sin (25 bytes)</title></rect>
 <rect width="12" height="12" x="615" y="195" class="todo"><title>0x0003f044 Func3f044 (26 bytes)</title></rect>
 <rect width="12" height="12" x="630" y="195" class="todo"><title>0x0003f05e phd_sqrt (46 bytes)</title></rect>
-<rect width="12" height="12" x="645" y="195" class="todo"><title>0x0003f090 Func3f090 (559 bytes)</title></rect>
+<rect width="12" height="12" x="645" y="195" class="todo"><title>0x0003f090 S_DrawSpriteAbs (559 bytes)</title></rect>
 <rect width="12" height="12" x="660" y="195" class="todo"><title>0x0003f2c0 Func3f2c0 (460 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="195" class="todo"><title>0x0003f48c Func3f48c (223 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="195" class="todo"><title>0x0003f56c Func3f56c (376 bytes)</title></rect>
@@ -845,10 +845,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">19.77%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">80.23%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">19.90%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">80.10%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="147.69" height="6" x="0" y="0" class="named"/>
-<rect width="599.31" height="6" x="147.69" y="0" class="todo"/>
+<rect width="148.68" height="6" x="0" y="0" class="named"/>
+<rect width="598.32" height="6" x="148.68" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="todo"><title>0x0001bc98 Func1bc98 (4489 bytes)</title></rect>
@@ -937,7 +937,7 @@
 <rect width="20.72" height="20.21" x="345.27" y="219.79" class="todo"><title>0x00039da8 Func39da8 (616 bytes)</title></rect>
 <rect width="19.48" height="20.82" x="368.99" y="0" class="todo"><title>0x0002f00c Func2f00c (599 bytes)</title></rect>
 <rect width="19.48" height="20.30" x="368.99" y="23.82" class="todo"><title>0x0003f910 Func3f910 (586 bytes)</title></rect>
-<rect width="19.48" height="19.23" x="368.99" y="47.12" class="todo"><title>0x0003f090 Func3f090 (559 bytes)</title></rect>
+<rect width="19.48" height="19.23" x="368.99" y="47.12" class="todo"><title>0x0003f090 S_DrawSpriteAbs (559 bytes)</title></rect>
 <rect width="19.48" height="19.19" x="368.99" y="69.35" class="todo"><title>0x0001d02c Func1d02c (558 bytes)</title></rect>
 <rect width="19.48" height="18.91" x="368.99" y="91.54" class="todo"><title>0x0003f6e4 Func3f6e4 (551 bytes)</title></rect>
 <rect width="19.48" height="18.83" x="368.99" y="113.45" class="named"><title>0x000118f0 SearchLOT (549 bytes)</title></rect>
@@ -1059,7 +1059,7 @@
 <rect width="12.97" height="12.28" x="639.23" y="16.53" class="todo"><title>0x0003ca00 Func3ca00 (273 bytes)</title></rect>
 <rect width="12.97" height="12.28" x="655.20" y="16.53" class="todo"><title>0x00042fe8 Func42fe8 (273 bytes)</title></rect>
 <rect width="12.91" height="12.28" x="671.16" y="16.53" class="todo"><title>0x00034434 Func34434 (272 bytes)</title></rect>
-<rect width="12.79" height="12.28" x="687.07" y="16.53" class="todo"><title>0x0001ab1c DrawEffect (270 bytes)</title></rect>
+<rect width="12.79" height="12.28" x="687.07" y="16.53" class="named"><title>0x0001ab1c DrawEffect (270 bytes)</title></rect>
 <rect width="12.79" height="12.28" x="702.86" y="16.53" class="todo"><title>0x000298d4 Func298d4 (270 bytes)</title></rect>
 <rect width="12.73" height="12.28" x="718.65" y="16.53" class="todo"><title>0x00020790 S_SaveGame (269 bytes)</title></rect>
 <rect width="12.62" height="12.28" x="734.38" y="16.53" class="named"><title>0x00013f54 ChaseCamera (267 bytes)</title></rect>
