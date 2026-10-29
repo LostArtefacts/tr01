@@ -554,6 +554,7 @@ address,size,name,symbol
 0x0003276c,819,PeopleControl,PeopleControl_
 0x00032abc,1229,PierreControl,PierreControl_
 0x00032f8c,261,ApeVault,ApeVault_
+0x000330b8,849,ApeControl,ApeControl_
 0x0003340c,35,Func3340c,
 0x000336dc,114,Func336dc,
 0x00033ac4,35,Func33ac4,
@@ -1978,6 +1979,9 @@ address,size,name,symbol
 0x000c3c7c,16,larson_gun,_larson_gun
 0x000c3c8c,16,pierre_gun1,_pierre_gun1
 0x000c3c9c,16,pierre_gun2,_pierre_gun2
+0x000c3cac,16,cowboy_gun1,_cowboy_gun1
+0x000c3cbc,16,cowboy_gun2,_cowboy_gun2
+0x000c3ccc,16,ape_bite,_ape_bite
 0x000c3e38,4,number_cameras,_number_cameras
 0x000c3e68,128,exit_message,_exit_message
 0x000c3ee8,4,title_loaded,_title_loaded
