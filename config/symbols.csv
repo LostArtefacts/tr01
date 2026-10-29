@@ -215,7 +215,7 @@ address,size,name,symbol
 0x0001fdf0,298,StartGame,StartGame_
 0x0001ff1c,96,GameLoop,GameLoop_
 0x0001ffcc,328,LevelCompleteSequence,LevelCompleteSequence_
-0x00020114,766,Func20114,
+0x00020114,766,LevelStats,LevelStats_
 0x00020414,29,GetRandomControl,GetRandomControl_
 0x00020434,6,SeedRandomControl,SeedRandomControl_
 0x0002043c,29,GetRandomDraw,GetRandomDraw_

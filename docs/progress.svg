@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">27.48% (213)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">72.52% (562)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">27.61% (214)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">72.39% (561)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="205.30" height="6" x="0" y="0" class="named"/>
-<rect width="541.70" height="6" x="205.30" y="0" class="todo"/>
+<rect width="206.27" height="6" x="0" y="0" class="named"/>
+<rect width="540.73" height="6" x="206.27" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -282,8 +282,8 @@
 <rect width="12" height="12" x="180" y="60" class="named"><title>0x0001fd50 S_PlayFMV (82 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="60" class="named"><title>0x0001fdf0 StartGame (298 bytes)</title></rect>
 <rect width="12" height="12" x="210" y="60" class="named"><title>0x0001ff1c GameLoop (96 bytes)</title></rect>
-<rect width="12" height="12" x="225" y="60" class="todo"><title>0x0001ffcc LevelCompleteSequence (328 bytes)</title></rect>
-<rect width="12" height="12" x="240" y="60" class="todo"><title>0x00020114 Func20114 (766 bytes)</title></rect>
+<rect width="12" height="12" x="225" y="60" class="named"><title>0x0001ffcc LevelCompleteSequence (328 bytes)</title></rect>
+<rect width="12" height="12" x="240" y="60" class="todo"><title>0x00020114 LevelStats (766 bytes)</title></rect>
 <rect width="12" height="12" x="255" y="60" class="todo"><title>0x00020414 GetRandomControl (29 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="60" class="todo"><title>0x00020434 SeedRandomControl (6 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="60" class="todo"><title>0x0002043c GetRandomDraw (29 bytes)</title></rect>
@@ -846,10 +846,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">30.08%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">69.92%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">30.24%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">69.76%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="224.70" height="6" x="0" y="0" class="named"/>
-<rect width="522.30" height="6" x="224.70" y="0" class="todo"/>
+<rect width="225.90" height="6" x="0" y="0" class="named"/>
+<rect width="521.10" height="6" x="225.90" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -909,7 +909,7 @@
 <rect width="24.72" height="22.41" x="267.16" y="217.59" class="todo"><title>0x00043568 Func43568 (788 bytes)</title></rect>
 <rect width="21.94" height="24.63" x="294.88" y="0" class="todo"><title>0x00041bb0 Func41bb0 (771 bytes)</title></rect>
 <rect width="21.94" height="24.49" x="294.88" y="27.63" class="todo"><title>0x00025d14 Func25d14 (767 bytes)</title></rect>
-<rect width="21.94" height="24.45" x="294.88" y="55.12" class="todo"><title>0x00020114 Func20114 (766 bytes)</title></rect>
+<rect width="21.94" height="24.45" x="294.88" y="55.12" class="todo"><title>0x00020114 LevelStats (766 bytes)</title></rect>
 <rect width="21.94" height="24.42" x="294.88" y="82.58" class="todo"><title>0x00044a15 Func44a15 (765 bytes)</title></rect>
 <rect width="21.94" height="23.99" x="294.88" y="110" class="todo"><title>0x00046404 Func46404 (753 bytes)</title></rect>
 <rect width="21.94" height="23.77" x="294.88" y="136.98" class="named"><title>0x00018464 zLOS (747 bytes)</title></rect>
@@ -1022,7 +1022,7 @@
 <rect width="14.93" height="13.70" x="490.94" y="193.01" class="named"><title>0x00014d68 CalculateCinematicCamera (335 bytes)</title></rect>
 <rect width="14.93" height="13.70" x="490.94" y="209.71" class="named"><title>0x00019520 StartDemo (335 bytes)</title></rect>
 <rect width="14.93" height="13.60" x="490.94" y="226.40" class="todo"><title>0x00020fd0 Func20fd0 (333 bytes)</title></rect>
-<rect width="14.74" height="13.53" x="508.87" y="0" class="todo"><title>0x0001ffcc LevelCompleteSequence (328 bytes)</title></rect>
+<rect width="14.74" height="13.53" x="508.87" y="0" class="named"><title>0x0001ffcc LevelCompleteSequence (328 bytes)</title></rect>
 <rect width="14.74" height="13.53" x="526.61" y="0" class="todo"><title>0x00033fd4 Func33fd4 (328 bytes)</title></rect>
 <rect width="14.68" height="13.53" x="544.35" y="0" class="todo"><title>0x00023d64 Func23d64 (327 bytes)</title></rect>
 <rect width="14.63" height="13.53" x="562.03" y="0" class="todo"><title>0x00020648 Func20648 (326 bytes)</title></rect>

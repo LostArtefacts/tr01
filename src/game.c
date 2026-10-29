@@ -34,6 +34,8 @@ sint16 valid_levels[] = {
     -1
 };
 
+void DisplayCredits(void);
+
 sint32 StartGame(int level_number)
 {
     switch (level_number)
@@ -132,4 +134,88 @@ sint32 GameLoop(int demo_mode)
         S_CDVolume(Option_Music_Volume * 25 + 5);
 
     return game_over;
+}
+
+sint32 LevelCompleteSequence(int level_number)
+{
+    switch (level_number)
+    {
+    case GYM:
+        return EXIT_TO_OPTION;
+
+    case LEVEL1:
+        LevelStats(LEVEL1);
+        return STARTGAME | LEVEL2;
+
+    case LEVEL2:
+        LevelStats(LEVEL2);
+        return STARTGAME | LEVEL3A;
+
+    case LEVEL3A:
+        LevelStats(LEVEL3A);
+        return STARTGAME | LEVEL3B;
+
+    case LEVEL3B:
+        return STARTCINE | CUTSCENE1;
+
+    case CUTSCENE1:
+        LevelStats(LEVEL3B);
+        return STARTGAME | LEVEL4;
+
+    case LEVEL4:
+        LevelStats(LEVEL4);
+        return STARTGAME | LEVEL5;
+
+    case LEVEL5:
+        LevelStats(LEVEL5);
+        return STARTGAME | LEVEL6;
+
+    case LEVEL6:
+        LevelStats(LEVEL6);
+        return STARTGAME | LEVEL7A;
+
+    case LEVEL7A:
+        LevelStats(LEVEL7A);
+        return STARTGAME | LEVEL7B;
+
+    case LEVEL7B:
+        return STARTCINE | CUTSCENE2;
+
+    case CUTSCENE2:
+        LevelStats(LEVEL7B);
+        return STARTGAME | LEVEL8A;
+
+    case LEVEL8A:
+        LevelStats(LEVEL8A);
+        return STARTGAME | LEVEL8B;
+
+    case LEVEL8B:
+        LevelStats(LEVEL8B);
+        return STARTGAME | LEVEL8C;
+
+    case LEVEL8C:
+        LevelStats(LEVEL8C);
+        return STARTGAME | LEVEL10A;
+
+    case LEVEL10A:
+        LevelStats(LEVEL10A);
+        return STARTCINE | CUTSCENE3;
+
+    case CUTSCENE3:
+        return STARTGAME | LEVEL10B;
+
+    case LEVEL10B:
+        S_PlayFMV(FMV_PRISON, 1);
+        return STARTCINE | CUTSCENE4;
+
+    case CUTSCENE4:
+        LevelStats(LEVEL10B);
+        return STARTGAME | LEVEL10C;
+
+    case LEVEL10C:
+        LevelStats(LEVEL10C);
+        DisplayCredits();
+        return EXIT_TO_TITLE;
+    }
+    return EXIT_TO_TITLE;
 }
