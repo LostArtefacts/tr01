@@ -343,3 +343,16 @@ void CompleteSave(int fade)
     if (fade)
         S_FadeOutInventory(1);
 }
+
+void CreateCheckSum(void)
+{
+    int i;
+    signed char *ptr, csum;
+
+    csum = 0;
+    savegame.checksum = 0;
+    ptr = (signed char *)&savegame;
+    for (i = 0; i < sizeof(SAVEGAME_INFO); i++, ptr++)
+        csum += *ptr;
+    savegame.checksum = -csum;
+}

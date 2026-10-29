@@ -590,6 +590,7 @@ address,size,name,symbol
 0x0003647c,39,ReadSG,ReadSG_
 0x000364a4,404,ConfirmSave,ConfirmSave_
 0x00036638,14,CompleteSave,CompleteSave_
+0x00036648,51,CreateCheckSum,CreateCheckSum_
 0x0003667c,34,Func3667c,
 0x000366a0,208,InitialiseLevel,InitialiseLevel_
 0x00036770,113,Func36770,
