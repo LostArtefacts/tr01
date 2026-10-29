@@ -300,7 +300,7 @@ address,size,name,symbol
 0x000252f8,411,lara_as_stop,lara_as_stop_
 0x00025494,194,lara_as_forwardjump,lara_as_forwardjump_
 0x00025558,1,lara_as_pose,lara_as_pose_
-0x0002555c,93,Func2555c,
+0x0002555c,93,lara_as_fastback,lara_as_fastback_
 0x000255bc,135,Func255bc,
 0x00025644,145,Func25644,
 0x000256d8,5,Func256d8,

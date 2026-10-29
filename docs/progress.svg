@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">38.56% (300)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">61.44% (478)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">38.69% (301)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">61.31% (477)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="288.05" height="6" x="0" y="0" class="named"/>
-<rect width="458.95" height="6" x="288.05" y="0" class="todo"/>
+<rect width="289.01" height="6" x="0" y="0" class="named"/>
+<rect width="457.99" height="6" x="289.01" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -368,7 +368,7 @@
 <rect width="12" height="12" x="720" y="75" class="named"><title>0x000252f8 lara_as_stop (411 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="75" class="named"><title>0x00025494 lara_as_forwardjump (194 bytes)</title></rect>
 <rect width="12" height="12" x="0" y="90" class="named"><title>0x00025558 lara_as_pose (1 bytes)</title></rect>
-<rect width="12" height="12" x="15" y="90" class="todo"><title>0x0002555c Func2555c (93 bytes)</title></rect>
+<rect width="12" height="12" x="15" y="90" class="named"><title>0x0002555c lara_as_fastback (93 bytes)</title></rect>
 <rect width="12" height="12" x="30" y="90" class="todo"><title>0x000255bc Func255bc (135 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="90" class="todo"><title>0x00025644 Func25644 (145 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="90" class="todo"><title>0x000256d8 Func256d8 (5 bytes)</title></rect>
@@ -849,10 +849,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">40.46%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">59.54%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">40.50%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">59.50%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="302.23" height="6" x="0" y="0" class="named"/>
-<rect width="444.77" height="6" x="302.23" y="0" class="todo"/>
+<rect width="302.57" height="6" x="0" y="0" class="named"/>
+<rect width="444.43" height="6" x="302.57" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1316,7 +1316,7 @@
 <rect width="6.24" height="6.10" x="633.38" y="144.99" class="todo"><title>0x0002d8dc mn_stop_ambient_samples (94 bytes)</title></rect>
 <rect width="6.24" height="6.10" x="633.38" y="154.08" class="todo"><title>0x00031f6c Remove_Requester (94 bytes)</title></rect>
 <rect width="6.24" height="6.10" x="633.38" y="163.18" class="todo"><title>0x000383f8 InitialiseObjects (94 bytes)</title></rect>
-<rect width="6.24" height="6" x="633.38" y="172.27" class="todo"><title>0x0002555c Func2555c (93 bytes)</title></rect>
+<rect width="6.24" height="6" x="633.38" y="172.27" class="named"><title>0x0002555c lara_as_fastback (93 bytes)</title></rect>
 <rect width="6.24" height="5.90" x="633.38" y="181.27" class="todo"><title>0x0003e3e4 S_InsertRoom (92 bytes)</title></rect>
 <rect width="6.24" height="5.80" x="633.38" y="190.17" class="named"><title>0x00015f28 GetNewRoom (91 bytes)</title></rect>
 <rect width="6.24" height="5.80" x="633.38" y="198.98" class="named"><title>0x00019f0c DecreaseScreenSize (91 bytes)</title></rect>
