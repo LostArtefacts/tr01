@@ -352,7 +352,7 @@ address,size,name,symbol
 0x000266d0,121,lara_col_death,lara_col_death_
 0x0002674c,177,lara_col_fastfall,lara_col_fastfall_
 0x00026800,108,lara_col_hang,lara_col_hang_
-0x0002686c,171,Func2686c,
+0x0002686c,171,lara_col_reach,lara_col_reach_
 0x00026918,95,Func26918,
 0x00026978,173,Func26978,
 0x00026a28,240,Func26a28,
@@ -395,7 +395,7 @@ address,size,name,symbol
 0x0002793c,309,LaraDeflectEdgeJump,LaraDeflectEdgeJump_
 0x00027a74,208,LaraSlideEdgeJump,LaraSlideEdgeJump_
 0x00027b44,519,TestLaraVault,TestLaraVault_
-0x00027d4c,405,Func27d4c,
+0x00027d4c,405,LaraTestHangJump,LaraTestHangJump_
 0x00027ee4,187,Func27ee4,
 0x00027fa0,392,Func27fa0,
 0x00028128,356,TestLaraSlide,TestLaraSlide_
