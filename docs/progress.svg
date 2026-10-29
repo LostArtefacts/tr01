@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">55.70% (440)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">44.30% (350)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">55.82% (441)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">44.18% (349)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="416.05" height="6" x="0" y="0" class="named"/>
-<rect width="330.95" height="6" x="416.05" y="0" class="todo"/>
+<rect width="417" height="6" x="0" y="0" class="named"/>
+<rect width="330" height="6" x="417" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -508,7 +508,7 @@
 <rect width="12" height="12" x="570" y="120" class="named"><title>0x0002a170 lara_col_surfright (22 bytes)</title></rect>
 <rect width="12" height="12" x="585" y="120" class="named"><title>0x0002a188 lara_col_surftread (19 bytes)</title></rect>
 <rect width="12" height="12" x="600" y="120" class="named"><title>0x0002a19c LaraSurfaceCollision (224 bytes)</title></rect>
-<rect width="12" height="12" x="615" y="120" class="todo"><title>0x0002a27c LaraTestWaterClimbOut (453 bytes)</title></rect>
+<rect width="12" height="12" x="615" y="120" class="named"><title>0x0002a27c LaraTestWaterClimbOut (453 bytes)</title></rect>
 <rect width="12" height="12" x="630" y="120" class="todo"><title>0x0002a460 LaraGun (904 bytes)</title></rect>
 <rect width="12" height="12" x="645" y="120" class="todo"><title>0x0002a7e8 InitialiseNewWeapon (216 bytes)</title></rect>
 <rect width="12" height="12" x="660" y="120" class="todo"><title>0x0002a8c0 Func2a8c0 (405 bytes)</title></rect>
@@ -861,10 +861,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">49.99%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">50.01%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">50.21%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">49.79%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="373.42" height="6" x="0" y="0" class="named"/>
-<rect width="373.58" height="6" x="373.42" y="0" class="todo"/>
+<rect width="375.08" height="6" x="0" y="0" class="named"/>
+<rect width="371.92" height="6" x="375.08" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -987,7 +987,7 @@
 <rect width="17.71" height="16.76" x="412.15" y="223.24" class="named"><title>0x00024f90 LaraAboveWater (458 bytes)</title></rect>
 <rect width="16.79" height="17.64" x="432.86" y="0" class="named"><title>0x000160c0 LaraBaddieCollision (457 bytes)</title></rect>
 <rect width="16.79" height="17.51" x="432.86" y="20.64" class="named"><title>0x00029430 LaraUnderWater (454 bytes)</title></rect>
-<rect width="16.79" height="17.46" x="432.86" y="41.15" class="todo"><title>0x0002a27c LaraTestWaterClimbOut (453 bytes)</title></rect>
+<rect width="16.79" height="17.46" x="432.86" y="41.15" class="named"><title>0x0002a27c LaraTestWaterClimbOut (453 bytes)</title></rect>
 <rect width="16.79" height="17.42" x="432.86" y="61.61" class="named"><title>0x0001a958 PrintRooms (452 bytes)</title></rect>
 <rect width="16.79" height="17.37" x="432.86" y="82.02" class="named"><title>0x00029f64 lara_as_surftread (451 bytes)</title></rect>
 <rect width="16.79" height="17.33" x="432.86" y="102.39" class="named"><title>0x0001083c S_DrawAirBar (450 bytes)</title></rect>
