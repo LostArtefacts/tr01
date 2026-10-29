@@ -1740,6 +1740,7 @@ address,size,name,symbol
 0x000c17a4,60,shadowman,_shadowman
 0x000c1988,4,CurrentLevel,_CurrentLevel
 0x000c2090,24,game_setup,_game_setup
+0x000c409c,4,wibble_offset,_wibble_offset
 0x000c40a0,4,water_effect,_water_effect
 0x000c40a4,4,shade_effect,_shade_effect
 0x000cac70,768,game_palette,_game_palette

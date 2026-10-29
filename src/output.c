@@ -400,3 +400,9 @@ void S_SetupAboveWater(int underwater)
     water_effect = underwater;
     shade_effect = 0;
 }
+
+void S_AnimateTextures(int nframes)
+{
+    wibble_offset = (wibble_offset + (nframes / 2)) & (WIBBLE_SIZE - 1);
+    AnimateTextures(nframes);
+}
