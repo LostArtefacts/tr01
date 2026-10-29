@@ -594,3 +594,26 @@ void Inv_InsertItem(INVENTORY_ITEM *inv_item)
         }
     }
 }
+
+int Inv_RequestItem(int itemNum)
+{
+    int n;
+    int itemNumOption;
+    INVENTORY_ITEM *inv_item;
+
+    itemNumOption = Inv_GetItemOption(itemNum);
+
+    for (n = 0; n < inv_main_objects; n++)
+    {
+        inv_item = inv_main_list[n];
+        if (inv_item->object_number == itemNumOption)
+            return inv_main_qtys[n];
+    }
+    for (n = 0; n < inv_keys_objects; n++)
+    {
+        inv_item = inv_keys_list[n];
+        if (inv_item->object_number == itemNumOption)
+            return inv_keys_qtys[n];
+    }
+    return 0;
+}
