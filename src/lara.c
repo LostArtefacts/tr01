@@ -501,3 +501,9 @@ void lara_as_backjump(ITEM_INFO *item, COLL_INFO *coll)
     if (item->fallspeed > LARA_FASTFALL_SPEED)
         item->goal_anim_state = AS_FASTFALL;
 }
+
+void lara_as_rightjump(ITEM_INFO *item, COLL_INFO *coll)
+{
+    if (item->fallspeed > LARA_FASTFALL_SPEED)
+        item->goal_anim_state = AS_FASTFALL;
+}

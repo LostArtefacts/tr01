@@ -317,7 +317,7 @@ address,size,name,symbol
 0x000259ec,120,lara_as_stepleft,lara_as_stepleft_
 0x00025a64,35,lara_as_slide,lara_as_slide_
 0x00025a88,32,lara_as_backjump,lara_as_backjump_
-0x00025aa8,15,Func25aa8,
+0x00025aa8,15,lara_as_rightjump,lara_as_rightjump_
 0x00025ab8,15,Func25ab8,
 0x00025ac8,15,Func25ac8,
 0x00025ad8,40,Func25ad8,
