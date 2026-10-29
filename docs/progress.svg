@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">44.90% (352)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">55.10% (432)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">45.03% (353)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">54.97% (431)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="335.39" height="6" x="0" y="0" class="named"/>
-<rect width="411.61" height="6" x="335.39" y="0" class="todo"/>
+<rect width="336.34" height="6" x="0" y="0" class="named"/>
+<rect width="410.66" height="6" x="336.34" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -419,7 +419,7 @@
 <rect width="12" height="12" x="735" y="90" class="named"><title>0x00026618 lara_col_turn_l (0 bytes)</title></rect>
 <rect width="12" height="12" x="0" y="105" class="named"><title>0x000266d0 lara_col_death (121 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="105" class="named"><title>0x0002674c lara_col_fastfall (177 bytes)</title></rect>
-<rect width="12" height="12" x="30" y="105" class="todo"><title>0x00026800 Func26800 (108 bytes)</title></rect>
+<rect width="12" height="12" x="30" y="105" class="named"><title>0x00026800 lara_col_hang (108 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="105" class="todo"><title>0x0002686c Func2686c (171 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="105" class="todo"><title>0x00026918 Func26918 (95 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="105" class="todo"><title>0x00026978 Func26978 (173 bytes)</title></rect>
@@ -458,7 +458,7 @@
 <rect width="12" height="12" x="570" y="105" class="named"><title>0x000274ec GetLaraCollisionInfo (48 bytes)</title></rect>
 <rect width="12" height="12" x="585" y="105" class="todo"><title>0x0002751c Func2751c (257 bytes)</title></rect>
 <rect width="12" height="12" x="600" y="105" class="todo"><title>0x00027620 LaraHitCeiling (91 bytes)</title></rect>
-<rect width="12" height="12" x="615" y="105" class="todo"><title>0x0002769c Func2769c (549 bytes)</title></rect>
+<rect width="12" height="12" x="615" y="105" class="todo"><title>0x0002769c LaraHangTest (549 bytes)</title></rect>
 <rect width="12" height="12" x="630" y="105" class="todo"><title>0x000278d0 LaraDeflectEdge (106 bytes)</title></rect>
 <rect width="12" height="12" x="645" y="105" class="todo"><title>0x0002793c LaraDeflectEdgeJump (309 bytes)</title></rect>
 <rect width="12" height="12" x="660" y="105" class="todo"><title>0x00027a74 LaraSlideEdgeJump (208 bytes)</title></rect>
@@ -855,10 +855,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">42.79%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">57.21%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">42.84%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">57.16%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="319.62" height="6" x="0" y="0" class="named"/>
-<rect width="427.38" height="6" x="319.62" y="0" class="todo"/>
+<rect width="320.02" height="6" x="0" y="0" class="named"/>
+<rect width="426.98" height="6" x="320.02" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -951,7 +951,7 @@
 <rect width="19.48" height="19.19" x="369.01" y="69.35" class="named"><title>0x0001d02c InterpolateMatrix (558 bytes)</title></rect>
 <rect width="19.48" height="18.91" x="369.01" y="91.54" class="todo"><title>0x0003f6e4 Func3f6e4 (551 bytes)</title></rect>
 <rect width="19.48" height="18.83" x="369.01" y="113.45" class="named"><title>0x000118f0 SearchLOT (549 bytes)</title></rect>
-<rect width="19.48" height="18.83" x="369.01" y="135.28" class="todo"><title>0x0002769c Func2769c (549 bytes)</title></rect>
+<rect width="19.48" height="18.83" x="369.01" y="135.28" class="todo"><title>0x0002769c LaraHangTest (549 bytes)</title></rect>
 <rect width="19.48" height="18.75" x="369.01" y="157.11" class="todo"><title>0x0002ec7c Func2ec7c (547 bytes)</title></rect>
 <rect width="19.48" height="18.55" x="369.01" y="178.86" class="todo"><title>0x000291b4 Func291b4 (542 bytes)</title></rect>
 <rect width="19.48" height="18.43" x="369.01" y="200.41" class="todo"><title>0x0003875c CheckCheatMode (539 bytes)</title></rect>
@@ -1281,7 +1281,7 @@
 <rect width="6.55" height="7.29" x="730.90" y="106.97" class="named"><title>0x0001d574 SoundEffects (110 bytes)</title></rect>
 <rect width="6.55" height="7.29" x="740.45" y="106.97" class="todo"><title>0x00032450 Func32450 (110 bytes)</title></rect>
 <rect width="6.72" height="7.02" x="623.67" y="117.26" class="named"><title>0x00020e54 game_malloc (109 bytes)</title></rect>
-<rect width="6.72" height="6.93" x="623.67" y="127.28" class="todo"><title>0x00026800 Func26800 (108 bytes)</title></rect>
+<rect width="6.72" height="6.93" x="623.67" y="127.28" class="named"><title>0x00026800 lara_col_hang (108 bytes)</title></rect>
 <rect width="6.72" height="6.83" x="623.67" y="137.21" class="named"><title>0x0001efd8 LoadDepthQ (107 bytes)</title></rect>
 <rect width="6.72" height="6.74" x="623.67" y="147.04" class="named"><title>0x0001d5e4 DoBloodSplat (106 bytes)</title></rect>
 <rect width="6.72" height="6.74" x="623.67" y="156.79" class="named"><title>0x0002460c Inv_RingMotionItemSelect (106 bytes)</title></rect>

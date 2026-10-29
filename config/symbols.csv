@@ -351,7 +351,7 @@ address,size,name,symbol
 0x00026618,0,lara_col_turn_l,lara_col_turn_l_
 0x000266d0,121,lara_col_death,lara_col_death_
 0x0002674c,177,lara_col_fastfall,lara_col_fastfall_
-0x00026800,108,Func26800,
+0x00026800,108,lara_col_hang,lara_col_hang_
 0x0002686c,171,Func2686c,
 0x00026918,95,Func26918,
 0x00026978,173,Func26978,
@@ -390,7 +390,7 @@ address,size,name,symbol
 0x000274ec,48,GetLaraCollisionInfo,GetLaraCollisionInfo_
 0x0002751c,257,Func2751c,
 0x00027620,91,LaraHitCeiling,LaraHitCeiling_
-0x0002769c,549,Func2769c,
+0x0002769c,549,LaraHangTest,LaraHangTest_
 0x000278d0,106,LaraDeflectEdge,LaraDeflectEdge_
 0x0002793c,309,LaraDeflectEdgeJump,LaraDeflectEdgeJump_
 0x00027a74,208,LaraSlideEdgeJump,LaraSlideEdgeJump_

@@ -1066,6 +1066,21 @@ void lara_col_fastfall(ITEM_INFO *item, COLL_INFO *coll)
     }
 }
 
+void lara_col_hang(ITEM_INFO *item, COLL_INFO *coll)
+{
+    LaraHangTest(item, coll);
+    if ((item->goal_anim_state == AS_HANG) && (input & IN_FORWARD))
+    {
+        if (coll->front_floor > -850 && coll->front_floor < -650 && coll->front_floor - coll->front_ceiling >= 0 && coll->left_floor - coll->left_ceiling >= 0 && coll->right_floor - coll->right_ceiling >= 0 && !coll->hit_static)
+        {
+            if (input & IN_SLOW)
+                item->goal_anim_state = AS_GYMNAST;
+            else
+                item->goal_anim_state = AS_NULL;
+        }
+    }
+}
+
 void GetLaraCollisionInfo(ITEM_INFO *item, COLL_INFO *coll)
 {
     coll->facing = lara.move_angle;
