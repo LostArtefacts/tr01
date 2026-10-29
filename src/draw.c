@@ -441,3 +441,14 @@ void phd_RotY_I(sint16 ang)
     phd_RotY(ang);
     phd_mxptr = oldm;
 }
+
+void phd_RotX_I(sint16 ang)
+{
+    sint32 *oldm;
+
+    phd_RotX(ang);
+    oldm = phd_mxptr;
+    phd_mxptr = IMptr;
+    phd_RotX(ang);
+    phd_mxptr = oldm;
+}
