@@ -498,3 +498,32 @@ int S_FrontEndCheck(void *data, int size)
 
     return 1;
 }
+
+int S_SaveGame(void *data, int size, int slot)
+{
+    FILE *file;
+    char filename[80];
+    REQUEST_INFO *req;
+
+    sprintf(filename, "savegame.%d", slot);
+
+    file = fopen(filename, "wb");
+    if (file)
+    {
+        sprintf(filename, "%s", Level_Strings[savegame.current_level]);
+        fwrite(filename, 1, 75, file);
+        fwrite(&save_counter, sizeof(sint32), 1, file);
+        fwrite(data, size, 1, file);
+        fclose(file);
+
+        req = &Load_Game_Requester;
+        sprintf(req->itemtexts + (slot * req->itemtextlen), "%s %d", filename, save_counter);
+        saved_levels[slot] = 1;
+        save_counter++;
+        SavedGames++;
+
+        return 1;
+    }
+
+    return 0;
+}
