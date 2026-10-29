@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">66.71% (529)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">33.29% (264)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">66.96% (531)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">33.04% (262)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="498.31" height="6" x="0" y="0" class="named"/>
-<rect width="248.69" height="6" x="498.31" y="0" class="todo"/>
+<rect width="500.20" height="6" x="0" y="0" class="named"/>
+<rect width="246.80" height="6" x="500.20" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -597,15 +597,15 @@
 <rect width="12" height="12" x="405" y="150" class="named"><title>0x00030168 ScionControl (28 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="150" class="named"><title>0x00030184 Scion3Control (395 bytes)</title></rect>
 <rect width="12" height="12" x="435" y="150" class="named"><title>0x00030310 EarthQuake (105 bytes)</title></rect>
-<rect width="12" height="12" x="450" y="150" class="todo"><title>0x00030380 do_inventory_options (373 bytes)</title></rect>
-<rect width="12" height="12" x="465" y="150" class="todo"><title>0x000304f8 Func304f8 (1412 bytes)</title></rect>
-<rect width="12" height="12" x="480" y="150" class="todo"><title>0x00030a7c Func30a7c (256 bytes)</title></rect>
-<rect width="12" height="12" x="495" y="150" class="todo"><title>0x00030b7c Func30b7c (689 bytes)</title></rect>
-<rect width="12" height="12" x="510" y="150" class="todo"><title>0x00030e30 Func30e30 (1260 bytes)</title></rect>
-<rect width="12" height="12" x="525" y="150" class="todo"><title>0x0003131c Func3131c (27 bytes)</title></rect>
+<rect width="12" height="12" x="450" y="150" class="named"><title>0x00030380 do_inventory_options (373 bytes)</title></rect>
+<rect width="12" height="12" x="465" y="150" class="todo"><title>0x000304f8 do_passport_option (1412 bytes)</title></rect>
+<rect width="12" height="12" x="480" y="150" class="todo"><title>0x00030a7c do_gamma_option (256 bytes)</title></rect>
+<rect width="12" height="12" x="495" y="150" class="todo"><title>0x00030b7c do_detail_option (689 bytes)</title></rect>
+<rect width="12" height="12" x="510" y="150" class="todo"><title>0x00030e30 do_sound_option (1260 bytes)</title></rect>
+<rect width="12" height="12" x="525" y="150" class="named"><title>0x0003131c do_compass_option (27 bytes)</title></rect>
 <rect width="12" height="12" x="540" y="150" class="todo"><title>0x00031338 Func31338 (117 bytes)</title></rect>
 <rect width="12" height="12" x="555" y="150" class="todo"><title>0x000313b0 Func313b0 (81 bytes)</title></rect>
-<rect width="12" height="12" x="570" y="150" class="todo"><title>0x00031414 Func31414 (1496 bytes)</title></rect>
+<rect width="12" height="12" x="570" y="150" class="todo"><title>0x00031414 do_control_option (1496 bytes)</title></rect>
 <rect width="12" height="12" x="585" y="150" class="todo"><title>0x000319ec Func319ec (1181 bytes)</title></rect>
 <rect width="12" height="12" x="600" y="150" class="todo"><title>0x00031e8c Func31e8c (124 bytes)</title></rect>
 <rect width="12" height="12" x="615" y="150" class="todo"><title>0x00031f08 Func31f08 (51 bytes)</title></rect>
@@ -864,10 +864,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">61.59%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">38.41%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">61.79%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">38.21%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="460.11" height="6" x="0" y="0" class="named"/>
-<rect width="286.89" height="6" x="460.11" y="0" class="todo"/>
+<rect width="461.55" height="6" x="0" y="0" class="named"/>
+<rect width="285.45" height="6" x="461.55" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.01" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -885,18 +885,18 @@
 <rect width="33.05" height="38.49" x="102.39" y="87.34" class="named"><title>0x000151c0 GetCollisionInfo (1702 bytes)</title></rect>
 <rect width="33.05" height="36.49" x="102.39" y="128.82" class="named"><title>0x0002e2ec NatlaControl (1620 bytes)</title></rect>
 <rect width="33.05" height="35.22" x="102.39" y="168.31" class="named"><title>0x00017a40 TestTriggers (1568 bytes)</title></rect>
-<rect width="33.05" height="33.47" x="102.39" y="206.53" class="todo"><title>0x00031414 Func31414 (1496 bytes)</title></rect>
+<rect width="33.05" height="33.47" x="102.39" y="206.53" class="todo"><title>0x00031414 do_control_option (1496 bytes)</title></rect>
 <rect width="32.28" height="32.99" x="138.44" y="0" class="named"><title>0x000158a8 CollideStaticObjects (1445 bytes)</title></rect>
 <rect width="32.28" height="32.77" x="138.44" y="35.99" class="todo"><title>0x00042910 ins_poly_trans8 (1436 bytes)</title></rect>
 <rect width="32.28" height="32.29" x="138.44" y="71.76" class="named"><title>0x0001ac74 DrawAnimatingItem (1417 bytes)</title></rect>
-<rect width="32.28" height="32.17" x="138.44" y="107.05" class="todo"><title>0x000304f8 Func304f8 (1412 bytes)</title></rect>
+<rect width="32.28" height="32.17" x="138.44" y="107.05" class="todo"><title>0x000304f8 do_passport_option (1412 bytes)</title></rect>
 <rect width="32.28" height="31.72" x="138.44" y="142.22" class="todo"><title>0x0002f5bc InitialiseDoor (1394 bytes)</title></rect>
 <rect width="32.28" height="30.28" x="138.44" y="176.94" class="named"><title>0x0002d2b4 SoundEffect (1336 bytes)</title></rect>
 <rect width="32.28" height="29.78" x="138.44" y="210.22" class="named"><title>0x0002c050 DrawLightning (1316 bytes)</title></rect>
 <rect width="28.37" height="33.47" x="173.71" y="0" class="todo"><title>0x000406c8 Func406c8 (1302 bytes)</title></rect>
 <rect width="28.37" height="33.41" x="173.71" y="36.47" class="todo"><title>0x0004130c Func4130c (1300 bytes)</title></rect>
 <rect width="28.37" height="32.74" x="173.71" y="72.88" class="named"><title>0x000145c8 CalculateCamera (1276 bytes)</title></rect>
-<rect width="28.37" height="32.29" x="173.71" y="108.62" class="todo"><title>0x00030e30 Func30e30 (1260 bytes)</title></rect>
+<rect width="28.37" height="32.29" x="173.71" y="108.62" class="todo"><title>0x00030e30 do_sound_option (1260 bytes)</title></rect>
 <rect width="28.37" height="30.75" x="173.71" y="143.91" class="named"><title>0x0002ddfc TorsoControl (1205 bytes)</title></rect>
 <rect width="28.37" height="30.08" x="173.71" y="177.66" class="todo"><title>0x000319ec Func319ec (1181 bytes)</title></rect>
 <rect width="28.37" height="29.27" x="173.71" y="210.73" class="todo"><title>0x00031fcc Func31fcc (1152 bytes)</title></rect>
@@ -941,7 +941,7 @@
 <rect width="22.43" height="21.05" x="319.34" y="99.92" class="todo"><title>0x00035020 Func35020 (696 bytes)</title></rect>
 <rect width="22.43" height="21.01" x="319.34" y="123.97" class="todo"><title>0x00042658 Func42658 (695 bytes)</title></rect>
 <rect width="22.43" height="20.98" x="319.34" y="147.98" class="named"><title>0x00019b0c DinoControl (694 bytes)</title></rect>
-<rect width="22.43" height="20.81" x="319.34" y="171.96" class="todo"><title>0x00030b7c Func30b7c (689 bytes)</title></rect>
+<rect width="22.43" height="20.81" x="319.34" y="171.96" class="todo"><title>0x00030b7c do_detail_option (689 bytes)</title></rect>
 <rect width="22.43" height="20.63" x="319.34" y="195.77" class="todo"><title>0x000432bc Func432bc (684 bytes)</title></rect>
 <rect width="22.43" height="20.60" x="319.34" y="219.40" class="named"><title>0x00021120 S_UpdateInput (683 bytes)</title></rect>
 <rect width="20.86" height="22.08" x="344.77" y="0" class="todo"><title>0x000390a0 GetSpheres (681 bytes)</title></rect>
@@ -1029,7 +1029,7 @@
 <rect width="15.11" height="15.49" x="491.25" y="0" class="named"><title>0x00024304 Inv_RingDoMotions (381 bytes)</title></rect>
 <rect width="15.11" height="15.34" x="491.25" y="18.49" class="todo"><title>0x000456ec ShellInit (378 bytes)</title></rect>
 <rect width="15.11" height="15.24" x="491.25" y="36.83" class="todo"><title>0x0003f56c Func3f56c (376 bytes)</title></rect>
-<rect width="15.11" height="15.10" x="491.25" y="55.07" class="todo"><title>0x00030380 do_inventory_options (373 bytes)</title></rect>
+<rect width="15.11" height="15.10" x="491.25" y="55.07" class="named"><title>0x00030380 do_inventory_options (373 bytes)</title></rect>
 <rect width="15.11" height="14.61" x="491.25" y="73.17" class="named"><title>0x00022d14 RingIsOpen (363 bytes)</title></rect>
 <rect width="15.11" height="14.37" x="491.25" y="90.79" class="named"><title>0x000240bc Inv_RingInit (358 bytes)</title></rect>
 <rect width="15.11" height="14.27" x="491.25" y="108.16" class="named"><title>0x00028128 TestLaraSlide (356 bytes)</title></rect>
@@ -1091,7 +1091,7 @@
 <rect width="12.16" height="12.02" x="525.78" y="124.38" class="named"><title>0x00018a38 ClipTarget (259 bytes)</title></rect>
 <rect width="12.16" height="11.96" x="525.78" y="139.40" class="named"><title>0x0002579c lara_as_compress (258 bytes)</title></rect>
 <rect width="12.16" height="11.90" x="525.78" y="154.36" class="named"><title>0x0002751c lara_slide_slope (257 bytes)</title></rect>
-<rect width="12.16" height="11.84" x="525.78" y="169.26" class="todo"><title>0x00030a7c Func30a7c (256 bytes)</title></rect>
+<rect width="12.16" height="11.84" x="525.78" y="169.26" class="todo"><title>0x00030a7c do_gamma_option (256 bytes)</title></rect>
 <rect width="12.16" height="11.78" x="525.78" y="184.10" class="named"><title>0x0001f7c4 S_DrawScreenSprite (255 bytes)</title></rect>
 <rect width="12.16" height="11.78" x="525.78" y="198.88" class="todo"><title>0x00035338 ModifyStartInfo (255 bytes)</title></rect>
 <rect width="12.16" height="11.73" x="525.78" y="213.66" class="named"><title>0x0002eefc TestBlockPush (254 bytes)</title></rect>
@@ -1560,7 +1560,7 @@
 <rect width="1.91" height="2.01" x="715.32" y="213.68" class="todo"><title>0x00034d24 Func34d24 (28 bytes)</title></rect>
 <rect width="1.91" height="2.01" x="715.32" y="218.68" class="todo"><title>0x000469e1 Func469e1 (28 bytes)</title></rect>
 <rect width="1.91" height="1.83" x="715.32" y="223.69" class="named"><title>0x00024564 Inv_RingMotionSetup (27 bytes)</title></rect>
-<rect width="1.91" height="1.83" x="715.32" y="228.52" class="todo"><title>0x0003131c Func3131c (27 bytes)</title></rect>
+<rect width="1.91" height="1.83" x="715.32" y="228.52" class="named"><title>0x0003131c do_compass_option (27 bytes)</title></rect>
 <rect width="1.91" height="1.83" x="715.32" y="233.34" class="todo"><title>0x00039768 Func39768 (27 bytes)</title></rect>
 <rect width="1.91" height="1.83" x="715.32" y="238.17" class="todo"><title>0x000456d0 Func456d0 (27 bytes)</title></rect>
 <rect width="2.19" height="1.58" x="720.23" y="208.67" class="todo"><title>0x00046974 Func46974 (27 bytes)</title></rect>
