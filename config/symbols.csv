@@ -14,7 +14,7 @@ address,size,name,symbol
 0x00010aa4,74,S_SetupBelowWater,S_SetupBelowWater_
 0x00010af0,16,S_SetupAboveWater,S_SetupAboveWater_
 0x00010b00,37,S_AnimateTextures,S_AnimateTextures_
-0x00010b28,936,Func10b28,
+0x00010b28,936,S_DrawLighteningSegment,S_DrawLighteningSegment_
 0x00010ed0,138,Func10ed0,
 0x00010f5c,246,Func10f5c,
 0x00011060,313,Func11060,
@@ -701,7 +701,7 @@ address,size,name,symbol
 0x0004130c,1300,Func4130c,
 0x00041820,910,Func41820,
 0x00041bb0,771,Func41bb0,
-0x00041eb4,793,Func41eb4,
+0x00041eb4,793,XYGClipper,XYGClipper_
 0x000421d0,630,Func421d0,
 0x00042448,525,Func42448,
 0x00042658,695,Func42658,
@@ -1747,11 +1747,15 @@ address,size,name,symbol
 0x000caf70,768,water_palette,_water_palette
 0x000cb274,4,aranges,_aranges
 0x000cc088,4,room,_room
+0x000ce960,34,inv_colours,_inv_colours
 0x000d4744,48000,vbuf,_vbuf
 0x000e02c4,40960,phdtextinfo,_phdtextinfo
+0x0012f3b4,4,sort3dptr,_sort3dptr
 0x0012f3c0,4,phd_bottom,_phd_bottom
 0x0012f3c4,4,phd_left,_phd_left
+0x0012f3cc,4,surfacenum,_surfacenum
 0x0012f3d0,4,phd_persp,_phd_persp
+0x0012f3e0,4,info3dptr,_info3dptr
 0x0012f3e4,4,phd_winymax,_phd_winymax
 0x0012f3e8,4,phd_winxmax,_phd_winxmax
 0x0012f3ec,4,phd_centerx,_phd_centerx
@@ -1763,5 +1767,6 @@ address,size,name,symbol
 0x0012f404,4,phd_znear,_phd_znear
 0x0012f420,4,ls_adder,_ls_adder
 0x0012f424,4,ls_divider,_ls_divider
+0x0012f430,480,v_buffer,_v_buffer
 0x0012f63c,4,old_clock_ticks,_old_clock_ticks
 0x0012f644,4,clock_ticks,_clock_ticks

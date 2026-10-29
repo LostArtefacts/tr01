@@ -35,6 +35,26 @@ typedef struct
     uint16 u4, v4;
 } PHDTEXTURESTRUCT;
 
+typedef struct
+{
+    float x, y;
+    float ooz;
+    float u, v, g;
+} VERTEX_INFO;
+
+enum
+{
+    DRAW_POLY_GTMAP,
+    DRAW_POLY_WGTMAP,
+    DRAW_POLY_GTMAP_PERSPECTIVE,
+    DRAW_POLY_WGTMAP_PERSPECTIVE,
+    DRAW_POLY_LINE,
+    DRAW_POLY_FLAT,
+    DRAW_POLY_GOURAUD,
+    DRAW_POLY_TRANS,
+    DRAW_SCALED_SPRITE
+};
+
 #define phd_PopMatrix() phd_mxptr -= 12
 
 extern sint32 ls_adder;
@@ -53,10 +73,15 @@ extern sint32 phd_zfar;
 extern sint32 phd_persp;
 extern sint32 *phd_mxptr;
 
+extern sint32 surfacenum;
+extern sint16 *info3dptr;
+extern sint32 *sort3dptr;
+
 extern sint32 wibble_offset;
 extern sint32 water_effect;
 extern sint32 shade_effect;
 
+extern VERTEX_INFO v_buffer[];
 extern PHD_VBUF vbuf[];
 extern PHDTEXTURESTRUCT phdtextinfo[];
 
@@ -67,6 +92,7 @@ void phd_TranslateAbs(sint32 x, sint32 y, sint32 z);
 void phd_RotateLight(PHD_ANGLE pitch, PHD_ANGLE yaw);
 sint16 *calc_object_vertices(sint16 *objptr);
 int ins_poly_trans8(PHD_VBUF *v, sint16 shade);
+int XYGClipper(int number, VERTEX_INFO *input);
 void Insert2DLine(sint32 x1, sint32 y1, sint32 x2, sint32 y2, sint32 z, char color);
 void phd_InitPolyList(void);
 void phd_SortPolyList(void);

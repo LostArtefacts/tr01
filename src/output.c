@@ -1,6 +1,7 @@
 #include "game.h"
 #include "shell.h"
 #include "3dglodef.h"
+#include "inventry.h"
 
 
 #define DEPTHQ_END (20 * 1024)
@@ -405,4 +406,130 @@ void S_AnimateTextures(int nframes)
 {
     wibble_offset = (wibble_offset + (nframes / 2)) & (WIBBLE_SIZE - 1);
     AnimateTextures(nframes);
+}
+
+void S_DrawLighteningSegment(sint32 x1, sint32 y1, sint32 z1, sint32 x2, sint32 y2, sint32 z2, sint32 width)
+{
+    sint32 z, npoints;
+    sint32 minx, maxx, miny, maxy;
+    sint32 thickness1, thickness2;
+    VERTEX_INFO *v;
+
+    if (z1 < phd_znear || z1 > phd_zfar ||
+        z2 < phd_znear || z2 > phd_zfar)
+        return;
+    z = z1 / phd_persp;
+    x1 = x1 / z + phd_centerx;
+    y1 = y1 / z + phd_centery;
+    thickness1 = (width << W2V_SHIFT) / z;
+    z = z2 / phd_persp;
+    x2 = x2 / z + phd_centerx;
+    y2 = y2 / z + phd_centery;
+    thickness2 = (width << W2V_SHIFT) / z;
+
+    if (x1 < x2)
+    {
+        minx = x1;
+        maxx = x2;
+    }
+    else
+    {
+        minx = x2;
+        maxx = x1;
+    }
+    if (y1 < y2)
+    {
+        miny = y1;
+        maxy = y2;
+    }
+    else
+    {
+        miny = y2;
+        maxy = y1;
+    }
+
+    if (maxx < phd_left || minx > phd_right ||
+        maxy < phd_top || miny > phd_bottom ||
+        maxx >= 16000 || minx <= -16000 ||
+        maxy >= 16000 || miny <= -16000)
+        return;
+
+    if (z1 < z2)
+        z1 = z2;
+
+    v = v_buffer;
+    if (y1 < y2)
+    {
+        v->x = (float)x1;
+        v->y = (float)y1;
+        v->g = 0.0f;
+        v++;
+
+        v->x = (float)(x1 + thickness1);
+        v->y = (float)y1;
+        v->g = 0.0f;
+        v++;
+
+        v->x = (float)(x2 + thickness2);
+        v->y = (float)y2;
+        v->g = 0.0f;
+        v++;
+
+        v->x = (float)x2;
+        v->y = (float)y2;
+        v->g = 0.0f;
+    }
+    else
+    {
+        v->x = (float)x2;
+        v->y = (float)y2;
+        v->g = 0.0f;
+        v++;
+
+        v->x = (float)(x2 + thickness2);
+        v->y = (float)y2;
+        v->g = 0.0f;
+        v++;
+
+        v->x = (float)(x1 + thickness1);
+        v->y = (float)y1;
+        v->g = 0.0f;
+        v++;
+
+        v->x = (float)x1;
+        v->y = (float)y1;
+        v->g = 0.0f;
+    }
+
+    npoints = XYGClipper(4, v_buffer);
+    if (npoints)
+    {
+        *(sort3dptr + 0) = (sint32)(info3dptr);
+        *(sort3dptr + 1) = z1;
+        sort3dptr += 2;
+        *(info3dptr + 0) = DRAW_POLY_GOURAUD;
+        *(info3dptr + 1) = inv_colours[C_BLUE];
+        *(info3dptr + 2) = (sint16)npoints;
+        info3dptr += 3;
+        for (v = v_buffer; npoints > 0; npoints--, info3dptr += 3, v++)
+        {
+            *(info3dptr) = (sint16)v->x;
+            *(info3dptr + 1) = (sint16)v->y;
+            *(info3dptr + 2) = (sint16)v->g;
+        }
+        surfacenum++;
+    }
+
+    *(sort3dptr + 0) = (sint32)(info3dptr);
+    *(sort3dptr + 1) = z1 - 2;
+    sort3dptr += 2;
+
+    *(info3dptr + 0) = DRAW_POLY_LINE;
+    *(info3dptr + 1) = (sint16)(x1 + thickness1 / 2);
+    *(info3dptr + 2) = (sint16)y1;
+    *(info3dptr + 3) = (sint16)(x2 + thickness2 / 2);
+    *(info3dptr + 4) = (sint16)y2;
+    *(info3dptr + 5) = inv_colours[C_WHITE];
+    info3dptr += 6;
+    surfacenum++;
 }

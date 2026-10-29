@@ -8,6 +8,8 @@ typedef unsigned short uint16;
 typedef long sint32;
 typedef unsigned long uint32;
 
+typedef sint16 SG_COL;
+
 #define W2V_SHIFT 14
 
 #define UNIT_SHADOW 256
