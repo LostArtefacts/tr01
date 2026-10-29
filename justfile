@@ -16,6 +16,11 @@ build:
 compare *symbols: build _elf
     python3 tools/compare.py "$@"
 
+# Check each MODULE's _BSS order against wcc386's layout rule (-v: details)
+[positional-arguments]
+bss *args:
+    python3 tools/bss.py "$@"
+
 # Set up build/game: the game files, the CD image and TOMB.EXE with src/ hooked in
 game: build _elf
     mkdir -p build/game/TOMBRAID

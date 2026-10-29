@@ -99,6 +99,12 @@ Everything runs headless. `just` lists the recipes.
    the module's own segments, such as its string literals, through
    where the original puts them. The literals' bytes are compared too.
    `just compare SYMBOL` shows a disassembly diff.
+   wcc386 does not lay out a module's uninitialized globals in
+   definition order but by size class, then by the 25-entry block of
+   the symbol table where each was first declared, newest first, then
+   by name hash, so the order of the externs in the headers matters.
+   `just bss` predicts each module's `_BSS` from that rule and shows
+   where it differs from the original; see `tools/bss.py`.
 5. Play (`just run`): `tools/patch_exe.py` copies every compiled
    function into a new LE object of the original and puts a jump to it
    at the original's entry, with fixups for its calls and references,
