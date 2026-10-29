@@ -1,3 +1,4 @@
+#include <string.h>
 #include "game.h"
 
 int number_draw_rooms;
@@ -401,4 +402,18 @@ void CalculateObjectLighting(ITEM_INFO *item, sint16 *frame)
     }
     else
         S_CalculateStaticLight(item->shade);
+}
+
+sint32 *IMptr;
+sint32 IMstack[12 * 32];
+sint32 IM_frac;
+sint32 IM_rate;
+
+void InitInterpolate(int frac, int rate)
+{
+    IM_frac = frac;
+    IM_rate = rate;
+
+    IMptr = IMstack;
+    memcpy(IMstack, phd_mxptr, 12 * 4);
 }
