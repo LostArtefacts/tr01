@@ -87,7 +87,7 @@ def compare_built(root: str) -> dict[int, bool]:
     for path in sorted(glob.glob(os.path.join(root, "build/obj/*.obj"))):
         for mod in omf.modules(path):
             for r in compare.compare_module(mod, orig, by_symbol)[0]:
-                if r.addr is not None:
+                if r.addr is not None and not r.warning:
                     built[r.addr] = built.get(r.addr, True) and r.ok()
     return built
 

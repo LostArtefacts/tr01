@@ -7,8 +7,9 @@ has one (a self-relative call has none in either) and must resolve to the
 address the original uses: an external through config/symbols.csv, a
 segment of the same module through that segment's place in the original,
 which is worked out from its first use and must be the same for every
-other. The CONST, CONST2 and _DATA bytes of each placed segment must
-then match the original's too.
+other; its own code through the function that holds the target. The
+CONST, CONST2 and _DATA bytes of each placed segment must then match the
+original's too.
 
 Watcom puts a function's switch jump tables in the code segment right
 before the function. They are compared with the code they sit in: the
@@ -16,6 +17,11 @@ bytes after a function's last public up to the next, and the bytes of a
 segment before its first public with that first public. A function's
 size, checked against config/symbols.csv, leaves out the jump tables
 at its end.
+
+Each function is checked at its own address, so one that does not match
+yet can be left out of its module: references to it then go through
+symbols.csv like any external, and the functions after it still match.
+A module whose functions are not contiguous gets a warning.
 
 With SYMBOLs, shows a disassembly diff for each.
 """
@@ -53,6 +59,7 @@ class Result:
     def __init__(self, name, addr):
         self.name, self.addr = name, addr
         self.errors = []
+        self.warning = None
         self.ours = None
         self.size = 0
 
@@ -79,9 +86,24 @@ def jump_tables(seg, si, start, end):
         n += 4
 
 
+def code_owner(seg, off, by_symbol):
+    """The address of offset off of a code segment, through the function that holds it.
+    Bytes before the first function belong to it."""
+    pubs = seg.publics
+    if not pubs:
+        return None
+    holder = pubs[0]
+    for p in pubs:
+        if p[0] <= off:
+            holder = p
+    row = by_symbol.get(holder[1])
+    return int(row["address"], 16) + off - holder[0] if row else None
+
+
 def compare_module(mod, orig, by_symbol):
     results = []
     bases = {}
+    layout = {}
     segs = mod.segments
     first = set()
     for seg, name, start, end in mod.functions():
@@ -100,10 +122,7 @@ def compare_module(mod, orig, by_symbol):
         results.append(r)
         addr -= lead
         si = segs.index(seg)
-        want = addr - start
-        if bases.setdefault(si, want) != want:
-            r.errors.append(f"{seg.name} is placed at {bases[si]:#x} by an earlier function, "
-                            f"this one puts it at {want:#x}")
+        layout.setdefault(si, []).append((start, end, addr))
         ours = bytearray(strip_padding(bytes(seg.data[start:end])))
         tables = jump_tables(seg, si, start, start + len(ours))
         try:
@@ -140,6 +159,14 @@ def compare_module(mod, orig, by_symbol):
                                     f"{target - f.disp - inline:#x}")
                     continue
                 expect = int(sym["address"], 16) + f.disp + inline
+            elif kind == "seg" and segs[what].is_code():
+                off2 = f.disp + inline
+                owner = code_owner(segs[what], off2, by_symbol)
+                if owner is None:
+                    r.errors.append(f"{segs[what].name}+{off2:#x} at {at:#x} is in no function of "
+                                    f"config/symbols.csv; the original's is {target:#x}")
+                    continue
+                expect = owner
             elif kind == "seg":
                 base = target - f.disp - inline
                 placed = bases.setdefault(what, base)
@@ -167,6 +194,14 @@ def compare_module(mod, orig, by_symbol):
         if size and own != size:
             r.errors.append(f"{own} bytes, the original's is {size}")
         r.ours, r.size = bytes(ours[lead:]), own
+    for si, placed in layout.items():
+        base = placed[0][2] - placed[0][0]
+        moved = [(start, addr) for start, end, addr in placed if addr - start != base]
+        if moved:
+            r = Result(f"layout of {segs[si].name} in {mod.name.replace(chr(92), '/').rsplit('/', 1)[-1]}", base + moved[0][0])
+            r.warning = (f"{len(moved)} functions are not where a contiguous {segs[si].name} puts "
+                         f"them, first at {moved[0][1]:#x} (a function between them is missing)")
+            results.append(r)
     for si, base in bases.items():
         seg = segs[si]
         if seg.is_code() or seg.cls.upper() == "BSS" or not seg.size:
@@ -198,6 +233,8 @@ def main():
         for mod in omf.modules(path):
             results += compare_module(mod, orig, by_symbol)[0]
     wanted = sys.argv[1:]
+    warnings = [r for r in results if r.warning]
+    results = [r for r in results if not r.warning]
     for r in results:
         if wanted and r.name not in wanted:
             continue
@@ -207,11 +244,11 @@ def main():
         if wanted and r.ours is not None:
             a = disasm(r.ours, r.addr)
             b = disasm(orig.read(r.addr, max(len(r.ours), 1)), r.addr)
-            sys.stdout.writelines(difflib.unified_diff(b, a, "original", "ours", lineterm="\n", n=3)
-                                  if a != b else [])
             for line in difflib.unified_diff(b, a, "original", "ours", lineterm=""):
                 print(line)
     if not wanted:
+        for r in warnings:
+            print(f"warning  {r.addr:#010x} {r.name}: {r.warning}")
         good = [r for r in results if r.ok() and r.addr]
         print(f"{len(good)} of {len(results)} match, {sum(r.size for r in good)} bytes")
     sys.exit(0 if all(r.ok() for r in results if not wanted or r.name in wanted) else 1)
