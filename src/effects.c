@@ -481,3 +481,23 @@ void draw_right_gun(ITEM_INFO *item)
     meshes[obj->mesh_index + HAND_R] = meshes[objects[PISTOLS].mesh_index + HAND_R];
     meshes[objects[PISTOLS].mesh_index + HAND_R] = temp;
 }
+
+void (*effect_routines[])(ITEM_INFO *item) = {
+    turn180_effect,
+    dino_stomp_effect,
+    lara_normal_effect,
+    LaraBubbles,
+    finish_level_effect,
+    EarthQuakeFX,
+    FloodFX,
+    RaisingBlockFX,
+    Stairs2SlopeFX,
+    SandFX,
+    PowerUpFX,
+    ExplosionFX,
+    lara_hands_free,
+    flip_map_effect,
+    draw_right_gun,
+    ChainBlockFX,
+    FlickerFX
+};
