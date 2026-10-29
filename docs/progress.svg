@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">43.86% (343)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">56.14% (439)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">43.99% (344)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">56.01% (438)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="327.65" height="6" x="0" y="0" class="named"/>
-<rect width="419.35" height="6" x="327.65" y="0" class="todo"/>
+<rect width="328.60" height="6" x="0" y="0" class="named"/>
+<rect width="418.40" height="6" x="328.60" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -410,7 +410,7 @@
 <rect width="12" height="12" x="600" y="90" class="named"><title>0x00026038 lara_as_fastdive (60 bytes)</title></rect>
 <rect width="12" height="12" x="615" y="90" class="named"><title>0x00026074 lara_as_waterout (15 bytes)</title></rect>
 <rect width="12" height="12" x="630" y="90" class="named"><title>0x00026084 lara_col_walk (429 bytes)</title></rect>
-<rect width="12" height="12" x="645" y="90" class="todo"><title>0x00026234 Func26234 (387 bytes)</title></rect>
+<rect width="12" height="12" x="645" y="90" class="named"><title>0x00026234 lara_col_run (387 bytes)</title></rect>
 <rect width="12" height="12" x="660" y="90" class="todo"><title>0x000263b8 Func263b8 (204 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="90" class="todo"><title>0x00026484 Func26484 (186 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="90" class="todo"><title>0x00026540 Func26540 (213 bytes)</title></rect>
@@ -853,10 +853,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">42.07%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">57.93%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">42.26%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">57.74%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="314.24" height="6" x="0" y="0" class="named"/>
-<rect width="432.76" height="6" x="314.24" y="0" class="todo"/>
+<rect width="315.66" height="6" x="0" y="0" class="named"/>
+<rect width="431.34" height="6" x="315.66" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1007,7 +1007,7 @@
 <rect width="15.51" height="16.07" x="472.46" y="38.48" class="todo"><title>0x00030184 Func30184 (395 bytes)</title></rect>
 <rect width="15.51" height="15.93" x="472.46" y="57.55" class="todo"><title>0x00027fa0 Func27fa0 (392 bytes)</title></rect>
 <rect width="15.51" height="15.83" x="472.46" y="76.48" class="todo"><title>0x0002b2a4 Func2b2a4 (390 bytes)</title></rect>
-<rect width="15.51" height="15.68" x="472.46" y="95.31" class="todo"><title>0x00026234 Func26234 (387 bytes)</title></rect>
+<rect width="15.51" height="15.68" x="472.46" y="95.31" class="named"><title>0x00026234 lara_col_run (387 bytes)</title></rect>
 <rect width="15.51" height="15.68" x="472.46" y="113.99" class="todo"><title>0x00038d58 LoadSamples (387 bytes)</title></rect>
 <rect width="15.51" height="15.54" x="472.46" y="132.68" class="todo"><title>0x00044895 Func44895 (384 bytes)</title></rect>
 <rect width="15.51" height="15.49" x="472.46" y="151.22" class="named"><title>0x00023b40 Inv_InsertItem (383 bytes)</title></rect>
