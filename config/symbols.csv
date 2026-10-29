@@ -29,8 +29,8 @@ address,size,name,symbol
 0x00011de4,157,ValidBox,ValidBox_
 0x00011eb4,1096,CreatureMood,CreatureMood_
 0x000122fc,1120,CalculateTarget,CalculateTarget_
-0x0001275c,224,Func1275c,
-0x0001283c,211,Func1283c,
+0x0001275c,224,CreatureCreature,CreatureCreature_
+0x0001283c,211,BadFloor,BadFloor_
 0x00012910,2734,CreatureAnimation,CreatureAnimation_
 0x000133c0,185,CreatureTurn,CreatureTurn_
 0x0001347c,44,Func1347c,
@@ -81,7 +81,7 @@ address,size,name,symbol
 0x00016ff4,707,Func16ff4,
 0x000172b8,154,Func172b8,
 0x00017354,101,Func17354,
-0x000173bc,434,Func173bc,
+0x000173bc,434,GetFloor,GetFloor_
 0x00017570,248,Func17570,
 0x0001767c,653,Func1767c,
 0x0001790c,230,Func1790c,

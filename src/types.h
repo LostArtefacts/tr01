@@ -22,6 +22,8 @@ typedef sint16 SG_COL;
 #define WALL_L 1024
 #define STEP_L (WALL_L / 4)
 
+#define NO_ITEM -1
+
 #define NOT_ACTIVE 0
 #define ACTIVE 1
 #define DEACTIVATED 2

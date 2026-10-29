@@ -111,6 +111,8 @@ int ValidBox(ITEM_INFO *item, sint16 zone_number, sint16 box_number);
 void CreatureAIInfo(ITEM_INFO *item, AI_INFO *info);
 void CreatureMood(ITEM_INFO *item, AI_INFO *info, int violent);
 TARGET_TYPE CalculateTarget(PHD_VECTOR *target, ITEM_INFO *item, LOT_INFO *LOT);
+int CreatureCreature(sint16 item_number);
+int BadFloor(sint32 x, sint32 y, sint32 z, sint16 box_height, sint16 next_height, sint16 room_number, LOT_INFO *LOT);
 int CreatureAnimation(sint16 item_number, sint16 angle, sint16 tilt);
 sint16 CreatureTurn(ITEM_INFO *item, sint16 maximum_turn);
 void CreatureHead(ITEM_INFO *item, sint16 required);

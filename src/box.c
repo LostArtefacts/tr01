@@ -669,3 +669,38 @@ TARGET_TYPE CalculateTarget(PHD_VECTOR *target, ITEM_INFO *item, LOT_INFO *LOT)
 
     return NO_TARGET;
 }
+
+int CreatureCreature(sint16 item_number)
+{
+    sint16 link;
+    sint32 x, y, z, distance, radius;
+    ROOM_INFO *r;
+    ITEM_INFO *item;
+
+    item = &items[item_number];
+    x = item->pos.x_pos;
+    y = item->pos.y_pos;
+    z = item->pos.z_pos;
+    radius = SQUARE(objects[item->object_number].radius);
+
+    r = &room[item->room_number];
+    link = r->item_number;
+    do
+    {
+        item = &items[link];
+
+        if (link == item_number)
+            return 0;
+
+        if (item != lara_item && item->status == ACTIVE && item->speed != 0)
+        {
+            distance = SQUARE(item->pos.x_pos - x) + SQUARE(item->pos.y_pos - y) + SQUARE(item->pos.z_pos - z);
+            if (distance < radius)
+                return 1;
+        }
+
+        link = item->next_item;
+    } while (link != NO_ITEM);
+
+    return 0;
+}
