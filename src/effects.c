@@ -250,3 +250,33 @@ void ControlBubble1(sint16 fx_num)
     fx->pos.y_pos = y;
     fx->pos.z_pos = z;
 }
+
+void Splash(ITEM_INFO *item)
+{
+    int i;
+    sint16 fx_number, room_number;
+    sint32 height;
+    FX_INFO *fx;
+
+    height = GetWaterHeight(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, item->room_number);
+    room_number = item->room_number;
+    GetFloor(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, &room_number);
+
+    SoundEffect(33, &item->pos, NULL);
+
+    for (i = 10; i > 0; i--)
+    {
+        fx_number = CreateEffect(room_number);
+        if (fx_number != NO_ITEM)
+        {
+            fx = &effects[fx_number];
+            fx->pos.x_pos = item->pos.x_pos;
+            fx->pos.y_pos = height;
+            fx->pos.z_pos = item->pos.z_pos;
+            fx->pos.y_rot = (sint16)(GetRandomDraw() - 0x4000) * 2;
+            fx->speed = (sint16)(GetRandomDraw() / 256);
+            fx->frame_number = 0;
+            fx->object_number = SPLASH1;
+        }
+    }
+}

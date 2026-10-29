@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">20.41% (158)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">79.59% (616)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">20.54% (159)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">79.46% (615)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="152.49" height="6" x="0" y="0" class="named"/>
-<rect width="594.51" height="6" x="152.49" y="0" class="todo"/>
+<rect width="153.45" height="6" x="0" y="0" class="named"/>
+<rect width="593.55" height="6" x="153.45" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -226,7 +226,7 @@
 <rect width="12" height="12" x="90" y="45" class="named"><title>0x0001d8b0 ItemSparkle (302 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="45" class="named"><title>0x0001d9e0 LaraBubbles (221 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="45" class="named"><title>0x0001dac0 ControlBubble1 (312 bytes)</title></rect>
-<rect width="12" height="12" x="135" y="45" class="todo"><title>0x0001dbf8 Func1dbf8 (185 bytes)</title></rect>
+<rect width="12" height="12" x="135" y="45" class="named"><title>0x0001dbf8 Splash (185 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="45" class="todo"><title>0x0001dcb4 Func1dcb4 (134 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="45" class="todo"><title>0x0001dd3c Func1dd3c (281 bytes)</title></rect>
 <rect width="12" height="12" x="180" y="45" class="todo"><title>0x0001de58 Func1de58 (11 bytes)</title></rect>
@@ -845,10 +845,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">25.85%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">74.15%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">25.94%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">74.06%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="193.08" height="6" x="0" y="0" class="named"/>
-<rect width="553.92" height="6" x="193.08" y="0" class="todo"/>
+<rect width="193.76" height="6" x="0" y="0" class="named"/>
+<rect width="553.24" height="6" x="193.76" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1138,7 +1138,7 @@
 <rect width="10.20" height="9.59" x="580.93" y="60.03" class="todo"><title>0x00026b4c Func26b4c (186 bytes)</title></rect>
 <rect width="10.20" height="9.59" x="594.14" y="60.03" class="todo"><title>0x0002f380 AlterFloorHeight (186 bytes)</title></rect>
 <rect width="10.13" height="9.59" x="607.34" y="60.03" class="named"><title>0x000133c0 CreatureTurn (185 bytes)</title></rect>
-<rect width="10.13" height="9.59" x="620.47" y="60.03" class="todo"><title>0x0001dbf8 Func1dbf8 (185 bytes)</title></rect>
+<rect width="10.13" height="9.59" x="620.47" y="60.03" class="named"><title>0x0001dbf8 Splash (185 bytes)</title></rect>
 <rect width="10.06" height="9.59" x="633.60" y="60.03" class="named"><title>0x00011d2c EscapeBox (184 bytes)</title></rect>
 <rect width="9.99" height="9.59" x="646.66" y="60.03" class="todo"><title>0x0002ace8 Func2ace8 (183 bytes)</title></rect>
 <rect width="9.99" height="9.59" x="659.65" y="60.03" class="todo"><title>0x0003d504 Func3d504 (183 bytes)</title></rect>
