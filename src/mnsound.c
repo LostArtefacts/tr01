@@ -371,6 +371,75 @@ extern void mn_stop_ambient_samples(void)
     }
 }
 
+extern void mn_update_sound_effects(void)
+{
+    MN_SFX_PLAY_INFO *updateslot;
+
+    if (!sound_active)
+        return;
+
+    mn_sounds_playing = 0;
+
+    if (mn_sound_master_fade_on)
+    {
+        if (mn_sound_fade_counter == mn_sound_fade_rate)
+        {
+            mn_sound_fade_counter = 0;
+
+            if (mn_sound_master_volume > 0)
+                mn_sound_master_volume--;
+        }
+        else
+            mn_sound_fade_counter++;
+    }
+
+    for (updateslot = sfx_playing; updateslot < (sfx_playing + MAX_PLAYING_FX); updateslot++)
+    {
+        if (updateslot->mn_flags & MN_FX_USED)
+        {
+            if (updateslot->mn_flags & MN_FX_AMBIENT)
+            {
+                if ((updateslot->loudness != MN_NOT_AUDIBLE) && (updateslot->handle >= 0))
+                {
+                    S_SoundSetPanAndVolume(updateslot->handle, updateslot->pan, updateslot->volume);
+                    mn_sounds_playing++;
+                }
+                else
+                {
+                    if (updateslot->handle >= 0)
+                        S_SoundStopSample(updateslot->handle);
+                    mn_clear_fx_slot(updateslot);
+                }
+            }
+            else
+            {
+                if (S_SoundSampleIsPlaying(updateslot->handle))
+                {
+                    if (updateslot->pos != NULL)
+                    {
+                        mn_get_sound_params(updateslot);
+
+                        if ((updateslot->volume > 0) && (updateslot->handle >= 0))
+                        {
+                            S_SoundSetPanAndVolume(updateslot->handle, updateslot->pan, updateslot->volume);
+                            mn_sounds_playing++;
+                        }
+                        else
+                        {
+                            if (updateslot->handle >= 0)
+                                S_SoundStopSample(updateslot->handle);
+
+                            mn_clear_fx_slot(updateslot);
+                        }
+                    }
+                }
+                else
+                    mn_clear_fx_slot(updateslot);
+            }
+        }
+    }
+}
+
 void mn_clear_fx_slot(MN_SFX_PLAY_INFO *slot)
 {
     slot->handle = -1;

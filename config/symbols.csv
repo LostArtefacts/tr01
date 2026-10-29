@@ -486,7 +486,7 @@ address,size,name,symbol
 0x0002d8a4,56,mn_reset_ambient_loudness,mn_reset_ambient_loudness_
 0x0002d8dc,94,mn_stop_ambient_samples,mn_stop_ambient_samples_
 0x0002d93c,414,mn_update_sound_effects,mn_update_sound_effects_
-0x0002dadc,292,Func2dadc,
+0x0002dadc,292,mn_get_sound_params,mn_get_sound_params_
 0x0002dc00,312,mn_stop_sound_effect,mn_stop_sound_effect_
 0x0002dd38,14,Func2dd38,
 0x0002dd48,24,Func2dd48,

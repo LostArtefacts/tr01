@@ -77,6 +77,6 @@ sint32 S_SoundPlaySampleLooped(sint32 dwSample, uint16 wVol, uint16 wPitch, sint
 sint32 S_SoundSampleIsPlaying(sint32 handle);
 void S_SoundStopAllSamples(void);
 void S_SoundStopSample(sint32 handle);
-void S_SoundSetPanAndVolume(sint32 handle, sint16 wPan, sint16 newvol);
+void S_SoundSetPanAndVolume(sint32 handle, sint16 wPan, uint16 wVolume);
 
 #endif

@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">61.57% (487)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">38.43% (304)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">61.69% (488)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">38.31% (303)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="459.91" height="6" x="0" y="0" class="named"/>
-<rect width="287.09" height="6" x="459.91" y="0" class="todo"/>
+<rect width="460.85" height="6" x="0" y="0" class="named"/>
+<rect width="286.15" height="6" x="460.85" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -553,8 +553,8 @@
 <rect width="12" height="12" x="495" y="135" class="named"><title>0x0002d7ec mn_get_fx_slot (181 bytes)</title></rect>
 <rect width="12" height="12" x="510" y="135" class="named"><title>0x0002d8a4 mn_reset_ambient_loudness (56 bytes)</title></rect>
 <rect width="12" height="12" x="525" y="135" class="named"><title>0x0002d8dc mn_stop_ambient_samples (94 bytes)</title></rect>
-<rect width="12" height="12" x="540" y="135" class="todo"><title>0x0002d93c mn_update_sound_effects (414 bytes)</title></rect>
-<rect width="12" height="12" x="555" y="135" class="todo"><title>0x0002dadc Func2dadc (292 bytes)</title></rect>
+<rect width="12" height="12" x="540" y="135" class="named"><title>0x0002d93c mn_update_sound_effects (414 bytes)</title></rect>
+<rect width="12" height="12" x="555" y="135" class="todo"><title>0x0002dadc mn_get_sound_params (292 bytes)</title></rect>
 <rect width="12" height="12" x="570" y="135" class="todo"><title>0x0002dc00 mn_stop_sound_effect (312 bytes)</title></rect>
 <rect width="12" height="12" x="585" y="135" class="todo"><title>0x0002dd38 Func2dd38 (14 bytes)</title></rect>
 <rect width="12" height="12" x="600" y="135" class="todo"><title>0x0002dd48 Func2dd48 (24 bytes)</title></rect>
@@ -862,10 +862,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">56.67%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">43.33%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">56.87%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">43.13%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="423.29" height="6" x="0" y="0" class="named"/>
-<rect width="323.71" height="6" x="423.29" y="0" class="todo"/>
+<rect width="424.80" height="6" x="0" y="0" class="named"/>
+<rect width="322.20" height="6" x="424.80" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.78" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1003,7 +1003,7 @@
 <rect width="16.88" height="16.40" x="452.03" y="38.84" class="todo"><title>0x0003e614 Func3e614 (433 bytes)</title></rect>
 <rect width="16.88" height="16.22" x="452.03" y="58.24" class="named"><title>0x00026084 lara_col_walk (429 bytes)</title></rect>
 <rect width="16.88" height="16.13" x="452.03" y="77.46" class="todo"><title>0x0003d7e0 phd_GenerateW2V (427 bytes)</title></rect>
-<rect width="16.88" height="15.55" x="452.03" y="96.59" class="todo"><title>0x0002d93c mn_update_sound_effects (414 bytes)</title></rect>
+<rect width="16.88" height="15.55" x="452.03" y="96.59" class="named"><title>0x0002d93c mn_update_sound_effects (414 bytes)</title></rect>
 <rect width="16.88" height="15.55" x="452.03" y="115.14" class="todo"><title>0x0003abf0 Func3abf0 (414 bytes)</title></rect>
 <rect width="16.88" height="15.41" x="452.03" y="133.69" class="named"><title>0x000252f8 lara_as_stop (411 bytes)</title></rect>
 <rect width="16.88" height="15.32" x="452.03" y="152.10" class="named"><title>0x00014fe4 InGameCinematicCamera (409 bytes)</title></rect>
@@ -1062,7 +1062,7 @@
 <rect width="13.46" height="13.13" x="508.49" y="132.18" class="named"><title>0x0001fdf0 StartGame (298 bytes)</title></rect>
 <rect width="13.46" height="13.02" x="508.49" y="148.30" class="todo"><title>0x0002eb34 Func2eb34 (296 bytes)</title></rect>
 <rect width="13.46" height="12.96" x="508.49" y="164.32" class="named"><title>0x00013978 ShiftCamera (295 bytes)</title></rect>
-<rect width="13.46" height="12.80" x="508.49" y="180.28" class="todo"><title>0x0002dadc Func2dadc (292 bytes)</title></rect>
+<rect width="13.46" height="12.80" x="508.49" y="180.28" class="todo"><title>0x0002dadc mn_get_sound_params (292 bytes)</title></rect>
 <rect width="13.46" height="12.80" x="508.49" y="196.08" class="todo"><title>0x0003b2d8 Func3b2d8 (292 bytes)</title></rect>
 <rect width="13.46" height="12.69" x="508.49" y="211.88" class="named"><title>0x0001f928 S_DrawScreenBox (290 bytes)</title></rect>
 <rect width="13.46" height="12.42" x="508.49" y="227.58" class="todo"><title>0x0003a698 Func3a698 (285 bytes)</title></rect>
