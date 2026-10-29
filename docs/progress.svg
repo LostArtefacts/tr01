@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">13.82% (107)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">86.18% (667)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">13.95% (108)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">86.05% (666)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="103.27" height="6" x="0" y="0" class="named"/>
-<rect width="643.73" height="6" x="103.27" y="0" class="todo"/>
+<rect width="104.23" height="6" x="0" y="0" class="named"/>
+<rect width="642.77" height="6" x="104.23" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -175,7 +175,7 @@
 <rect width="12" height="12" x="75" y="30" class="named"><title>0x00019b0c DinoControl (694 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="30" class="named"><title>0x00019dc4 LaraDinoDeath (229 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="30" class="named"><title>0x00019eb0 IncreaseScreenSize (90 bytes)</title></rect>
-<rect width="12" height="12" x="120" y="30" class="todo"><title>0x00019f0c DecreaseScreenSize (91 bytes)</title></rect>
+<rect width="12" height="12" x="120" y="30" class="named"><title>0x00019f0c DecreaseScreenSize (91 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="30" class="todo"><title>0x00019f68 setup_screen_size (229 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="30" class="todo"><title>0x0001a050 switch_resolution (144 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="30" class="todo"><title>0x0001a0e0 TempVideoAdjust (112 bytes)</title></rect>
@@ -845,10 +845,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">18.27%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">81.73%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">18.32%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">81.68%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="136.49" height="6" x="0" y="0" class="named"/>
-<rect width="610.51" height="6" x="136.49" y="0" class="todo"/>
+<rect width="136.82" height="6" x="0" y="0" class="named"/>
+<rect width="610.18" height="6" x="136.82" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="todo"><title>0x0001bc98 Func1bc98 (4489 bytes)</title></rect>
@@ -1315,7 +1315,7 @@
 <rect width="6.24" height="5.99" x="633.42" y="172.31" class="todo"><title>0x0002555c Func2555c (93 bytes)</title></rect>
 <rect width="6.24" height="5.90" x="633.42" y="181.30" class="todo"><title>0x0003e3e4 Func3e3e4 (92 bytes)</title></rect>
 <rect width="6.24" height="5.80" x="633.42" y="190.20" class="named"><title>0x00015f28 GetNewRoom (91 bytes)</title></rect>
-<rect width="6.24" height="5.80" x="633.42" y="199" class="todo"><title>0x00019f0c DecreaseScreenSize (91 bytes)</title></rect>
+<rect width="6.24" height="5.80" x="633.42" y="199" class="named"><title>0x00019f0c DecreaseScreenSize (91 bytes)</title></rect>
 <rect width="6.24" height="5.80" x="633.42" y="207.80" class="todo"><title>0x00020cd4 Func20cd4 (91 bytes)</title></rect>
 <rect width="6.24" height="5.80" x="633.42" y="216.60" class="todo"><title>0x00027400 Func27400 (91 bytes)</title></rect>
 <rect width="6.24" height="5.80" x="633.42" y="225.40" class="todo"><title>0x00027620 Func27620 (91 bytes)</title></rect>
