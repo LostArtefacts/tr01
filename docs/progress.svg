@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">66.46% (527)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">33.54% (266)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">66.58% (528)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">33.42% (265)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="496.43" height="6" x="0" y="0" class="named"/>
-<rect width="250.57" height="6" x="496.43" y="0" class="todo"/>
+<rect width="497.37" height="6" x="0" y="0" class="named"/>
+<rect width="249.63" height="6" x="497.37" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -595,7 +595,7 @@
 <rect width="12" height="12" x="375" y="150" class="named"><title>0x00030090 CabinControl (131 bytes)</title></rect>
 <rect width="12" height="12" x="390" y="150" class="named"><title>0x00030114 BoatControl (82 bytes)</title></rect>
 <rect width="12" height="12" x="405" y="150" class="named"><title>0x00030168 ScionControl (28 bytes)</title></rect>
-<rect width="12" height="12" x="420" y="150" class="todo"><title>0x00030184 Func30184 (395 bytes)</title></rect>
+<rect width="12" height="12" x="420" y="150" class="named"><title>0x00030184 Scion3Control (395 bytes)</title></rect>
 <rect width="12" height="12" x="435" y="150" class="todo"><title>0x00030310 Func30310 (105 bytes)</title></rect>
 <rect width="12" height="12" x="450" y="150" class="todo"><title>0x00030380 do_inventory_options (373 bytes)</title></rect>
 <rect width="12" height="12" x="465" y="150" class="todo"><title>0x000304f8 Func304f8 (1412 bytes)</title></rect>
@@ -864,10 +864,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">61.35%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">38.65%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">61.54%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">38.46%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="458.31" height="6" x="0" y="0" class="named"/>
-<rect width="288.69" height="6" x="458.31" y="0" class="todo"/>
+<rect width="459.73" height="6" x="0" y="0" class="named"/>
+<rect width="287.27" height="6" x="459.73" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.01" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1018,7 +1018,7 @@
 <rect width="15.47" height="16.12" x="472.77" y="38.48" class="named"><title>0x00014060 ShiftClamp (402 bytes)</title></rect>
 <rect width="15.47" height="16.07" x="472.77" y="57.60" class="named"><title>0x000104a8 S_CalculateLight (401 bytes)</title></rect>
 <rect width="15.47" height="15.83" x="472.77" y="76.67" class="todo"><title>0x0003afd0 Func3afd0 (396 bytes)</title></rect>
-<rect width="15.47" height="15.79" x="472.77" y="95.51" class="todo"><title>0x00030184 Func30184 (395 bytes)</title></rect>
+<rect width="15.47" height="15.79" x="472.77" y="95.51" class="named"><title>0x00030184 Scion3Control (395 bytes)</title></rect>
 <rect width="15.47" height="15.64" x="472.77" y="114.29" class="named"><title>0x00027fa0 LaraTestHangJumpUp (392 bytes)</title></rect>
 <rect width="15.47" height="15.55" x="472.77" y="132.94" class="named"><title>0x0002b2a4 undraw_shotgun (390 bytes)</title></rect>
 <rect width="15.47" height="15.41" x="472.77" y="151.49" class="named"><title>0x00026234 lara_col_run (387 bytes)</title></rect>

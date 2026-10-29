@@ -287,3 +287,54 @@ void ScionControl(sint16 item_number)
 {
     AnimateItem(&items[item_number]);
 }
+
+void Scion3Control(sint16 item_number)
+{
+    static int count = 0;
+    ITEM_INFO *item;
+    FLOOR_INFO *floor;
+    FX_INFO *fx;
+    sint16 room_number;
+    sint16 fx_num;
+
+    item = &items[item_number];
+    if (item->hit_points <= 0)
+    {
+        if (count == 0)
+        {
+            item->status = INVISIBLE;
+            item->hit_points = DONT_TARGET;
+            room_number = item->room_number;
+            floor = GetFloor(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, &room_number);
+            GetHeight(floor, item->pos.x_pos, item->pos.y_pos, item->pos.z_pos);
+            TestTriggers(trigger_index, 1);
+            RemoveDrawnItem(item_number);
+        }
+
+        if ((count % 10) == 0)
+        {
+            if ((fx_num = CreateEffect(item->room_number)) != NO_ITEM)
+            {
+                fx = &effects[fx_num];
+                fx->pos.x_pos = item->pos.x_pos + (GetRandomControl() - 0x4000) / 32;
+                fx->pos.y_pos = item->pos.y_pos + (GetRandomControl() - 0x4000) / 256 - 500;
+                fx->pos.z_pos = item->pos.z_pos + (GetRandomControl() - 0x4000) / 32;
+                fx->speed = 0;
+                fx->frame_number = 0;
+                fx->object_number = EXPLOSION1;
+                fx->counter = 0;
+                SoundEffect(104, &fx->pos, NULL);
+                camera.bounce = -200;
+            }
+        }
+
+        count++;
+        if (count == 30 * 3)
+            RemoveActiveItem(item_number);
+    }
+    else
+    {
+        count = 0;
+        AnimateItem(item);
+    }
+}
