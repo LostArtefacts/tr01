@@ -52,6 +52,7 @@ enum T_flags
 void T_InitPrint(void);
 TEXTSTRING *T_Print(sint16 xpos, sint16 ypos, sint16 zpos, char *string);
 void T_ChangeText(TEXTSTRING *textString, char *string);
+void T_SetScale(TEXTSTRING *textString, sint32 scaleH, sint32 scaleV);
 void T_FlashText(TEXTSTRING *textString, sint16 i_bool, sint16 rate);
 void T_AddBackground(TEXTSTRING *textString, sint16 xsize, sint16 ysize, sint16 xoff, sint16 yoff, sint16 zoff, sint16 colour, SG_COL *gourptr, uint16 flags);
 void T_RemoveBackground(TEXTSTRING *textString);

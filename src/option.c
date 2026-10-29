@@ -854,6 +854,90 @@ void do_control_option(INVENTORY_ITEM *inv_item)
     inputDB = 0;
 }
 
+void S_ShowControls(void)
+{
+    int i, centre, vpos;
+    sint16 *key;
+
+    centre = phd_winwidth / 2;
+
+    if (!btext[0])
+    {
+        key = layout[iconfig];
+
+        if (hires_flag)
+            vpos = centre - 200;
+        else
+            vpos = centre - 140;
+        btext[0] = T_Print(vpos, -25, 0, kname[*key]);
+        btext[1] = T_Print(vpos, -10, 0, kname[*(key + 1)]);
+        btext[2] = T_Print(vpos, 5, 0, kname[*(key + 2)]);
+        btext[3] = T_Print(vpos, 20, 0, kname[*(key + 3)]);
+        btext[4] = T_Print(vpos, 35, 0, kname[*(key + 4)]);
+        btext[5] = T_Print(vpos, 50, 0, kname[*(key + 5)]);
+        btext[6] = T_Print(vpos, 65, 0, kname[*(key + 6)]);
+
+        vpos = centre + 20;
+        btext[7] = T_Print(vpos, -25, 0, kname[*(key + 7)]);
+        btext[8] = T_Print(vpos, -10, 0, kname[*(key + 8)]);
+        btext[9] = T_Print(vpos, 5, 0, kname[*(key + 9)]);
+        btext[10] = T_Print(vpos, 20, 0, kname[*(key + 10)]);
+        btext[11] = T_Print(vpos, 35, 0, kname[*(key + 11)]);
+        btext[12] = T_Print(vpos, 65, 0, kname[*(key + 12)]);
+
+        for (i = 0; i < 13; i++)
+            T_CentreV(btext[i], 1);
+
+        keychange = 0;
+    }
+
+    if (!ctext[0])
+    {
+        if (hires_flag)
+            vpos = centre - 130;
+        else
+            vpos = centre - 70;
+        ctext[0] = T_Print(vpos, -25, 0, str_run);
+        ctext[1] = T_Print(vpos, -10, 0, str_back);
+        ctext[2] = T_Print(vpos, 5, 0, str_left);
+        ctext[3] = T_Print(vpos, 20, 0, str_right);
+        ctext[4] = T_Print(vpos, 35, 0, str_stepl);
+        ctext[5] = T_Print(vpos, 50, 0, str_stepr);
+        ctext[6] = T_Print(vpos, 65, 0, str_slow);
+
+        vpos = centre + 90;
+        ctext[7] = T_Print(vpos, -25, 0, str_jump);
+        ctext[8] = T_Print(vpos, -10, 0, str_action);
+        ctext[9] = T_Print(vpos, 5, 0, str_draw);
+        ctext[10] = T_Print(vpos, 20, 0, str_look);
+        ctext[11] = T_Print(vpos, 35, 0, str_roll);
+        ctext[12] = T_Print(vpos, 65, 0, str_inv);
+
+        for (i = 0; i < 13; i++)
+            T_CentreV(ctext[i], 1);
+    }
+
+    if (hires_flag)
+        control_text[1] = T_Print(0, -60, 0, " ");
+    else
+        control_text[1] = T_Print(0, -55, 0, " ");
+    T_CentreV(control_text[1], 1);
+    T_CentreH(control_text[1], 1);
+    T_AddOutline(control_text[1], 1, C_BLUE, NULL, NULL);
+
+    if (!hires_flag)
+    {
+        for (i = 0; i < 13; i++)
+        {
+            T_SetScale(btext[i], 0x8000, 0x10000);
+            T_SetScale(ctext[i], 0x8000, 0x10000);
+        }
+        T_AddBackground(control_text[1], 300, 140, 0, 0, 48, C_BLACK, NULL, NULL);
+    }
+    else
+        T_AddBackground(control_text[1], 420, 150, 0, 0, 48, C_BLACK, NULL, NULL);
+}
+
 void Init_Requester(REQUEST_INFO *req)
 {
     int n;

@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">68.01% (540)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">31.99% (254)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">68.14% (541)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">31.86% (253)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="508.04" height="6" x="0" y="0" class="named"/>
-<rect width="238.96" height="6" x="508.04" y="0" class="todo"/>
+<rect width="508.98" height="6" x="0" y="0" class="named"/>
+<rect width="238.02" height="6" x="508.98" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -607,7 +607,7 @@
 <rect width="12" height="12" x="555" y="150" class="named"><title>0x00031338 FlashConflicts (117 bytes)</title></rect>
 <rect width="12" height="12" x="570" y="150" class="named"><title>0x000313b0 DefaultConflict (81 bytes)</title></rect>
 <rect width="12" height="12" x="585" y="150" class="named"><title>0x00031414 do_control_option (1496 bytes)</title></rect>
-<rect width="12" height="12" x="600" y="150" class="todo"><title>0x000319ec S_ShowControls (1181 bytes)</title></rect>
+<rect width="12" height="12" x="600" y="150" class="named"><title>0x000319ec S_ShowControls (1181 bytes)</title></rect>
 <rect width="12" height="12" x="615" y="150" class="todo"><title>0x00031e8c S_ChangeCtrlText (124 bytes)</title></rect>
 <rect width="12" height="12" x="630" y="150" class="todo"><title>0x00031f08 S_RemoveCtrlText (51 bytes)</title></rect>
 <rect width="12" height="12" x="645" y="150" class="named"><title>0x00031f3c Init_Requester (48 bytes)</title></rect>
@@ -686,7 +686,7 @@
 <rect width="12" height="12" x="240" y="180" class="todo"><title>0x000396dc Func396dc (3 bytes)</title></rect>
 <rect width="12" height="12" x="255" y="180" class="todo"><title>0x000396e0 Func396e0 (5 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="180" class="todo"><title>0x000396e8 Func396e8 (5 bytes)</title></rect>
-<rect width="12" height="12" x="285" y="180" class="todo"><title>0x000396f0 Func396f0 (7 bytes)</title></rect>
+<rect width="12" height="12" x="285" y="180" class="todo"><title>0x000396f0 T_SetScale (7 bytes)</title></rect>
 <rect width="12" height="12" x="300" y="180" class="todo"><title>0x000396f8 Func396f8 (8 bytes)</title></rect>
 <rect width="12" height="12" x="315" y="180" class="todo"><title>0x00039700 Func39700 (8 bytes)</title></rect>
 <rect width="12" height="12" x="330" y="180" class="todo"><title>0x00039708 T_FlashText (25 bytes)</title></rect>
@@ -865,10 +865,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">64.37%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">35.63%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">64.94%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">35.06%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="480.85" height="6" x="0" y="0" class="named"/>
-<rect width="266.15" height="6" x="480.85" y="0" class="todo"/>
+<rect width="485.11" height="6" x="0" y="0" class="named"/>
+<rect width="261.89" height="6" x="485.11" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.01" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -899,7 +899,7 @@
 <rect width="28.37" height="32.74" x="173.71" y="72.88" class="named"><title>0x000145c8 CalculateCamera (1276 bytes)</title></rect>
 <rect width="28.37" height="32.29" x="173.71" y="108.62" class="named"><title>0x00030e30 do_sound_option (1260 bytes)</title></rect>
 <rect width="28.37" height="30.75" x="173.71" y="143.91" class="named"><title>0x0002ddfc TorsoControl (1205 bytes)</title></rect>
-<rect width="28.37" height="30.08" x="173.71" y="177.66" class="todo"><title>0x000319ec S_ShowControls (1181 bytes)</title></rect>
+<rect width="28.37" height="30.08" x="173.71" y="177.66" class="named"><title>0x000319ec S_ShowControls (1181 bytes)</title></rect>
 <rect width="28.37" height="29.27" x="173.71" y="210.73" class="todo"><title>0x00031fcc Display_Requester (1152 bytes)</title></rect>
 <rect width="28.87" height="27.96" x="205.09" y="0" class="named"><title>0x00013af0 SmartShift (1123 bytes)</title></rect>
 <rect width="28.87" height="27.88" x="205.09" y="30.96" class="named"><title>0x000122fc CalculateTarget (1120 bytes)</title></rect>
@@ -1620,7 +1620,7 @@
 <rect width="0.10" height="0.10" x="736.38" y="235.56" class="named"><title>0x00010084 S_OutputPolyList (10 bytes)</title></rect>
 <rect width="0.10" height="0.10" x="736.38" y="238.42" class="todo"><title>0x000396f8 Func396f8 (8 bytes)</title></rect>
 <rect width="0.10" height="0.10" x="736.38" y="240.71" class="todo"><title>0x00039700 Func39700 (8 bytes)</title></rect>
-<rect width="0.10" height="0.10" x="739.45" y="232.42" class="todo"><title>0x000396f0 Func396f0 (7 bytes)</title></rect>
+<rect width="0.10" height="0.10" x="739.45" y="232.42" class="todo"><title>0x000396f0 T_SetScale (7 bytes)</title></rect>
 <rect width="0.10" height="0.10" x="742.19" y="232.42" class="todo"><title>0x0004566b phd_PushUnitMatrix (7 bytes)</title></rect>
 <rect width="0.10" height="0.10" x="744.92" y="232.42" class="todo"><title>0x00046703 Func46703 (7 bytes)</title></rect>
 <rect width="0.10" height="0.10" x="747.66" y="232.42" class="named"><title>0x00020434 SeedRandomControl (6 bytes)</title></rect>
