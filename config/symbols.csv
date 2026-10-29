@@ -577,6 +577,7 @@ address,size,name,symbol
 0x00034d08,26,InitialiseSavegameItem,InitialiseSavegameItem_
 0x00034d24,28,ControlSavegameItem,ControlSavegameItem_
 0x00034d40,5,DrawSavegameItem,DrawSavegameItem_
+0x00034d68,693,RatControl,RatControl_
 0x00035020,696,Func35020,
 0x000352e0,6,Func352e0,
 0x000352e8,78,Func352e8,
@@ -2007,6 +2008,7 @@ address,size,name,symbol
 0x000c3df8,12,KeyHolePosition,_KeyHolePosition
 0x000c3e04,24,PuzzleHoleBounds,_PuzzleHoleBounds
 0x000c3e1c,12,PuzzleHolePosition,_PuzzleHolePosition
+0x000c3e28,16,rat_bite,_rat_bite
 0x000c3e38,4,number_cameras,_number_cameras
 0x000c3e68,128,exit_message,_exit_message
 0x000c3ee8,4,title_loaded,_title_loaded
