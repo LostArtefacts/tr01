@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">46.95% (369)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">53.05% (417)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">47.07% (370)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">52.93% (416)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="350.69" height="6" x="0" y="0" class="named"/>
-<rect width="396.31" height="6" x="350.69" y="0" class="todo"/>
+<rect width="351.64" height="6" x="0" y="0" class="named"/>
+<rect width="395.36" height="6" x="351.64" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -435,7 +435,7 @@
 <rect width="12" height="12" x="225" y="105" class="named"><title>0x00026d0c lara_col_leftjump (25 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="105" class="named"><title>0x00026d28 lara_col_upjump (160 bytes)</title></rect>
 <rect width="12" height="12" x="255" y="105" class="named"><title>0x00026dc8 lara_col_fallback (150 bytes)</title></rect>
-<rect width="12" height="12" x="270" y="105" class="todo"><title>0x00026e60 lara_col_hangleft (45 bytes)</title></rect>
+<rect width="12" height="12" x="270" y="105" class="named"><title>0x00026e60 lara_col_hangleft (45 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="105" class="todo"><title>0x00026e90 Func26e90 (39 bytes)</title></rect>
 <rect width="12" height="12" x="300" y="105" class="todo"><title>0x00026eb8 Func26eb8 (22 bytes)</title></rect>
 <rect width="12" height="12" x="315" y="105" class="todo"><title>0x00026ed0 Func26ed0 (49 bytes)</title></rect>
@@ -857,10 +857,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">43.62%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">56.38%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">43.64%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">56.36%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="325.85" height="6" x="0" y="0" class="named"/>
-<rect width="421.15" height="6" x="325.85" y="0" class="todo"/>
+<rect width="326.02" height="6" x="0" y="0" class="named"/>
+<rect width="420.98" height="6" x="326.02" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1465,7 +1465,7 @@
 <rect width="3.17" height="3.67" x="731.64" y="173.99" class="named"><title>0x00024484 Inv_RingRotateLeft (46 bytes)</title></rect>
 <rect width="3.17" height="3.67" x="737.80" y="173.99" class="todo"><title>0x0003f05e phd_sqrt (46 bytes)</title></rect>
 <rect width="3.03" height="3.67" x="743.97" y="173.99" class="named"><title>0x00015868 FindGridShift (45 bytes)</title></rect>
-<rect width="3.41" height="3.28" x="687.14" y="180.66" class="todo"><title>0x00026e60 lara_col_hangleft (45 bytes)</title></rect>
+<rect width="3.41" height="3.28" x="687.14" y="180.66" class="named"><title>0x00026e60 lara_col_hangleft (45 bytes)</title></rect>
 <rect width="3.41" height="3.28" x="687.14" y="186.94" class="todo"><title>0x0002dd68 Func2dd68 (45 bytes)</title></rect>
 <rect width="3.41" height="3.28" x="687.14" y="193.21" class="todo"><title>0x00039898 T_RemovePrint (45 bytes)</title></rect>
 <rect width="3.41" height="3.28" x="687.14" y="199.49" class="todo"><title>0x00042f28 Func42f28 (45 bytes)</title></rect>
