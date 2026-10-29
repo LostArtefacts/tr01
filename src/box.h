@@ -3,6 +3,8 @@
 
 #include "types.h"
 
+#define MAX_EXPANSION 5
+
 #define NO_BOX -1
 #define BOX_NUMBER 0x7fff
 
