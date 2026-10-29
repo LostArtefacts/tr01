@@ -238,7 +238,7 @@ address,size,name,symbol
 0x00020d30,186,Func20d30,
 0x00020dec,70,S_ExitSystem,S_ExitSystem_
 0x00020e34,31,init_game_malloc,init_game_malloc_
-0x00020e54,109,Func20e54,
+0x00020e54,109,game_malloc,game_malloc_
 0x00020ec4,47,Func20ec4,
 0x00020ef4,105,Func20ef4,
 0x00020f60,97,Func20f60,
@@ -1845,6 +1845,7 @@ address,size,name,symbol
 0x000cee94,10596,savegame,_savegame
 0x000d4744,48000,vbuf,_vbuf
 0x000e02c4,40960,phdtextinfo,_phdtextinfo
+0x000ea2c4,,texture_page_ptrs,_texture_page_ptrs
 0x0012ca84,8192,depthq_table,_depthq_table
 0x0012ea84,48,w2v_matrix,_w2v_matrix
 0x0012f3b4,4,sort3dptr,_sort3dptr

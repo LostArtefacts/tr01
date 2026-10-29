@@ -121,3 +121,17 @@ int LoadLevel(char *filename, int req_level)
     fclose(file);
     return 1;
 }
+
+int LoadTexturePages(FILE *file)
+{
+    char *base;
+    int i, num_pages;
+
+    fread(&num_pages, sizeof(int), 1, file);
+    base = game_malloc(num_pages * 65536, TEXTURE_PAGES);
+    fread(base, 65536, num_pages, file);
+    for (i = 0; i < num_pages; i++, base += 65536)
+        texture_page_ptrs[i] = base;
+
+    return 1;
+}

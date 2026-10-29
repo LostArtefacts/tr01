@@ -61,6 +61,7 @@ enum
 
 #define phd_PopMatrix() phd_mxptr -= 12
 
+extern char *texture_page_ptrs[];
 extern sint32 ls_adder;
 extern sint32 ls_divider;
 

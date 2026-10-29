@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">23.10% (179)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">76.90% (596)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">23.23% (180)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">76.77% (595)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="172.53" height="6" x="0" y="0" class="named"/>
-<rect width="574.47" height="6" x="172.53" y="0" class="todo"/>
+<rect width="173.50" height="6" x="0" y="0" class="named"/>
+<rect width="573.50" height="6" x="173.50" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -248,7 +248,7 @@
 <rect width="12" height="12" x="420" y="45" class="named"><title>0x0001e2c0 S_LoadTitle (18 bytes)</title></rect>
 <rect width="12" height="12" x="435" y="45" class="named"><title>0x0001e2d4 S_LoadLevel (21 bytes)</title></rect>
 <rect width="12" height="12" x="450" y="45" class="named"><title>0x0001e2ec LoadLevel (354 bytes)</title></rect>
-<rect width="12" height="12" x="465" y="45" class="todo"><title>0x0001e450 LoadTexturePages (104 bytes)</title></rect>
+<rect width="12" height="12" x="465" y="45" class="named"><title>0x0001e450 LoadTexturePages (104 bytes)</title></rect>
 <rect width="12" height="12" x="480" y="45" class="todo"><title>0x0001e4b8 LoadRooms (1041 bytes)</title></rect>
 <rect width="12" height="12" x="495" y="45" class="todo"><title>0x0001e8cc LoadObjects (1090 bytes)</title></rect>
 <rect width="12" height="12" x="510" y="45" class="todo"><title>0x0001ed10 LoadSprites (265 bytes)</title></rect>
@@ -306,7 +306,7 @@
 <rect width="12" height="12" x="540" y="60" class="todo"><title>0x00020d30 Func20d30 (186 bytes)</title></rect>
 <rect width="12" height="12" x="555" y="60" class="todo"><title>0x00020dec S_ExitSystem (70 bytes)</title></rect>
 <rect width="12" height="12" x="570" y="60" class="todo"><title>0x00020e34 init_game_malloc (31 bytes)</title></rect>
-<rect width="12" height="12" x="585" y="60" class="todo"><title>0x00020e54 Func20e54 (109 bytes)</title></rect>
+<rect width="12" height="12" x="585" y="60" class="todo"><title>0x00020e54 game_malloc (109 bytes)</title></rect>
 <rect width="12" height="12" x="600" y="60" class="todo"><title>0x00020ec4 Func20ec4 (47 bytes)</title></rect>
 <rect width="12" height="12" x="615" y="60" class="todo"><title>0x00020ef4 Func20ef4 (105 bytes)</title></rect>
 <rect width="12" height="12" x="630" y="60" class="todo"><title>0x00020f60 Func20f60 (97 bytes)</title></rect>
@@ -846,10 +846,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">26.74%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">73.26%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">26.79%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">73.21%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="199.73" height="6" x="0" y="0" class="named"/>
-<rect width="547.27" height="6" x="199.73" y="0" class="todo"/>
+<rect width="200.11" height="6" x="0" y="0" class="named"/>
+<rect width="546.89" height="6" x="200.11" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1271,7 +1271,7 @@
 <rect width="6.64" height="7.29" x="721.26" y="106.97" class="todo"><title>0x00030020 Func30020 (111 bytes)</title></rect>
 <rect width="6.55" height="7.29" x="730.90" y="106.97" class="named"><title>0x0001d574 SoundEffects (110 bytes)</title></rect>
 <rect width="6.55" height="7.29" x="740.45" y="106.97" class="todo"><title>0x00032450 Func32450 (110 bytes)</title></rect>
-<rect width="6.72" height="7.02" x="623.68" y="117.26" class="todo"><title>0x00020e54 Func20e54 (109 bytes)</title></rect>
+<rect width="6.72" height="7.02" x="623.68" y="117.26" class="todo"><title>0x00020e54 game_malloc (109 bytes)</title></rect>
 <rect width="6.72" height="6.93" x="623.68" y="127.28" class="todo"><title>0x00026800 Func26800 (108 bytes)</title></rect>
 <rect width="6.72" height="6.83" x="623.68" y="137.21" class="todo"><title>0x0001efd8 LoadDepthQ (107 bytes)</title></rect>
 <rect width="6.72" height="6.74" x="623.68" y="147.04" class="named"><title>0x0001d5e4 DoBloodSplat (106 bytes)</title></rect>
@@ -1280,7 +1280,7 @@
 <rect width="6.72" height="6.65" x="623.68" y="176.27" class="todo"><title>0x00020ef4 Func20ef4 (105 bytes)</title></rect>
 <rect width="6.72" height="6.65" x="623.68" y="185.92" class="todo"><title>0x000227cc Func227cc (105 bytes)</title></rect>
 <rect width="6.72" height="6.65" x="623.68" y="195.57" class="todo"><title>0x00030310 Func30310 (105 bytes)</title></rect>
-<rect width="6.72" height="6.56" x="623.68" y="205.22" class="todo"><title>0x0001e450 LoadTexturePages (104 bytes)</title></rect>
+<rect width="6.72" height="6.56" x="623.68" y="205.22" class="named"><title>0x0001e450 LoadTexturePages (104 bytes)</title></rect>
 <rect width="6.72" height="6.47" x="623.68" y="214.78" class="named"><title>0x00015fb8 UpdateLaraRoom (103 bytes)</title></rect>
 <rect width="6.72" height="6.38" x="623.68" y="224.25" class="todo"><title>0x0002f4b8 Func2f4b8 (102 bytes)</title></rect>
 <rect width="6.72" height="6.38" x="623.68" y="233.62" class="todo"><title>0x0003e240 phd_TranslateAbs (102 bytes)</title></rect>

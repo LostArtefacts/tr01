@@ -3,6 +3,49 @@
 
 #include "types.h"
 
+enum game_malloc_types
+{
+    TEXTURE_PAGES,
+    OBJECT_TEXTURES,
+    MESH_POINTERS,
+    MESHES,
+    ANIMS,
+    STRUCTS,
+    RANGES,
+    COMMANDS,
+    BONES,
+    FRAMES,
+    ROOM_TEXTURES,
+    ROOM_INFOS,
+    ROOM_MESH,
+    ROOM_DOOR,
+    ROOM_FLOOR,
+    ROOM_LIGHTS,
+    ROOM_STATIC_MESH_INFOS,
+    FLOOR_DATA,
+    ITEMS,
+    CAMERAS,
+    SOUND_FX,
+    BOXES,
+    OVERLAPS,
+    GROUNDZONE,
+    FLYZONE,
+    ANIMATING_TEXTURE_RANGES,
+    CINEMATIC_FRAMES,
+    LOADDEMO_BUFFER,
+    SAVEDEMO_BUFFER,
+    CINEMATIC_EFFECTS,
+    MUMMY_HEAD_TURN,
+    EXTRA_DOOR_STUFF,
+    EFFECTS_ARRAY,
+    CREATURE_DATA,
+    CREATURE_LOT,
+    SAMPLEINFOS,
+    SAMPLES,
+    SAMPLEOFFSETS,
+    ROLLINGBALL_STUFF
+};
+
 extern uint8 water_palette[], game_palette[];
 extern int wet;
 extern char *bckscrn;
@@ -38,6 +81,7 @@ void S_DisplayPicture(char *filename);
 void S_DrawSpriteAbs(sint32 x, sint32 y, sint32 z, sint16 sprnum, sint16 shade);
 void S_ExitSystem(char *exit_message);
 void init_game_malloc(void);
+char *game_malloc(int size, int type);
 void S_UpdateInput(void);
 int S_SaveGame(void *data, int size, int slot);
 void CheckCheatMode(void);
