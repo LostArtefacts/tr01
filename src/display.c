@@ -85,3 +85,21 @@ void switch_resolution(void)
     else
         FadeToPal(1, game_palette);
 }
+
+void TempVideoAdjust(int hires, double sizer)
+{
+    mode_lock = 1;
+
+    if (hires == hires_flag && sizer == screen_sizer)
+        return;
+
+    screen_sizer = sizer;
+
+    if (hires_flag < 0)
+        hires_flag = !hires;
+
+    if (hires != hires_flag)
+        switch_resolution();
+    else
+        setup_screen_size();
+}
