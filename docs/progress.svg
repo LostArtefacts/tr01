@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">14.34% (111)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">85.66% (663)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">14.47% (112)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">85.53% (662)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="107.13" height="6" x="0" y="0" class="named"/>
-<rect width="639.87" height="6" x="107.13" y="0" class="todo"/>
+<rect width="108.09" height="6" x="0" y="0" class="named"/>
+<rect width="638.91" height="6" x="108.09" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -179,7 +179,7 @@
 <rect width="12" height="12" x="135" y="30" class="named"><title>0x00019f68 setup_screen_size (229 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="30" class="named"><title>0x0001a050 switch_resolution (144 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="30" class="named"><title>0x0001a0e0 TempVideoAdjust (112 bytes)</title></rect>
-<rect width="12" height="12" x="180" y="30" class="todo"><title>0x0001a150 TempVideoRemove (116 bytes)</title></rect>
+<rect width="12" height="12" x="180" y="30" class="named"><title>0x0001a150 TempVideoRemove (116 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="30" class="todo"><title>0x0001a1c4 S_CopyScreenToBuffer (72 bytes)</title></rect>
 <rect width="12" height="12" x="210" y="30" class="todo"><title>0x0001a20c S_CopyBufferToScreen (145 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="30" class="todo"><title>0x0001a2a0 S_NoFade (20 bytes)</title></rect>
@@ -845,10 +845,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">18.55%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">81.45%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">18.61%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">81.39%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="138.60" height="6" x="0" y="0" class="named"/>
-<rect width="608.40" height="6" x="138.60" y="0" class="todo"/>
+<rect width="139.02" height="6" x="0" y="0" class="named"/>
+<rect width="607.98" height="6" x="139.02" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="todo"><title>0x0001bc98 Func1bc98 (4489 bytes)</title></rect>
@@ -1253,7 +1253,7 @@
 <rect width="7.06" height="7.48" x="613.64" y="170.77" class="todo"><title>0x0001a500 Func1a500 (118 bytes)</title></rect>
 <rect width="7.06" height="7.39" x="613.64" y="181.25" class="todo"><title>0x00031338 Func31338 (117 bytes)</title></rect>
 <rect width="7.06" height="7.31" x="613.64" y="191.65" class="named"><title>0x000163dc DoorCollision (116 bytes)</title></rect>
-<rect width="7.06" height="7.31" x="613.64" y="201.95" class="todo"><title>0x0001a150 TempVideoRemove (116 bytes)</title></rect>
+<rect width="7.06" height="7.31" x="613.64" y="201.95" class="named"><title>0x0001a150 TempVideoRemove (116 bytes)</title></rect>
 <rect width="7.06" height="7.31" x="613.64" y="212.26" class="todo"><title>0x0001d434 GetBoundsAccurate (116 bytes)</title></rect>
 <rect width="7.06" height="7.22" x="613.64" y="222.57" class="named"><title>0x00018060 TriggerActive (115 bytes)</title></rect>
 <rect width="7.06" height="7.22" x="613.64" y="232.78" class="todo"><title>0x0002828c LaraFloorFront (115 bytes)</title></rect>
