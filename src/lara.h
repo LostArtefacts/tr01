@@ -219,6 +219,7 @@ void DoorCollision(sint16 item_num, ITEM_INFO *laraitem, COLL_INFO *coll);
 void TrapCollision(sint16 item_num, ITEM_INFO *laraitem, COLL_INFO *coll);
 void ItemPushLara(ITEM_INFO *item, ITEM_INFO *laraitem, COLL_INFO *coll, int enable_hit, int bigpush);
 int GetSpheres(ITEM_INFO *item, SPHERE *ptr, int WorldSpace);
+void GetJointAbsPosition(ITEM_INFO *item, PHD_VECTOR *vec, int joint);
 int TestBoundsCollide(ITEM_INFO *item, ITEM_INFO *laraitem, sint32 radius);
 int TestLaraPosition(sint16 *bounds, ITEM_INFO *item, ITEM_INFO *laraitem);
 void AlignLaraPosition(PHD_VECTOR *vec, ITEM_INFO *item, ITEM_INFO *laraitem);

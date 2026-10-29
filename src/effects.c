@@ -181,3 +181,34 @@ void ItemSparkle(ITEM_INFO *item, int meshmask)
         }
     }
 }
+
+void LaraBubbles(ITEM_INFO *item)
+{
+    PHD_VECTOR offset;
+    FX_INFO *fx;
+    int i;
+    sint16 fx_num;
+
+    i = (GetRandomDraw() * 3) / 32768;
+    if (i)
+    {
+        SoundEffect(37, &item->pos, UNDERWATER);
+        offset.x = 0;
+        offset.y = 0;
+        offset.z = 50;
+        GetJointAbsPosition(item, &offset, 14);
+        for (; i > 0; i--)
+        {
+            if ((fx_num = CreateEffect(item->room_number)) != NO_ITEM)
+            {
+                fx = &effects[fx_num];
+                fx->pos.x_pos = offset.x;
+                fx->pos.y_pos = offset.y;
+                fx->pos.z_pos = offset.z;
+                fx->speed = 10 + (GetRandomDraw() * 6) / 32768;
+                fx->frame_number = -((GetRandomDraw() * 3) / 32768);
+                fx->object_number = BUBBLES1;
+            }
+        }
+    }
+}
