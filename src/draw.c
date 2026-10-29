@@ -44,3 +44,14 @@ sint32 DrawPhaseCinematic(void)
     S_AnimateTextures(camera.number_frames);
     return camera.number_frames;
 }
+
+sint32 DrawPhaseGame(void)
+{
+    S_InitialisePolyList();
+    DrawRooms(camera.pos.room_number);
+    DrawGameInfo();
+    S_OutputPolyList();
+    camera.number_frames = S_DumpScreen();
+    S_AnimateTextures(camera.number_frames);
+    return camera.number_frames;
+}
