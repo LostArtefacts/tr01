@@ -471,3 +471,19 @@ void ShiftItem(ITEM_INFO *item, COLL_INFO *coll)
     item->pos.z_pos += coll->shift.z;
     coll->shift.x = coll->shift.y = coll->shift.z = 0;
 }
+
+void UpdateLaraRoom(ITEM_INFO *item, int height)
+{
+    sint16 room_number;
+    FLOOR_INFO *floor;
+    sint32 x, y, z;
+
+    x = item->pos.x_pos;
+    y = item->pos.y_pos + height;
+    z = item->pos.z_pos;
+    room_number = item->room_number;
+    floor = GetFloor(x, y, z, &room_number);
+    item->floor = GetHeight(floor, x, y, z);
+    if (item->room_number != room_number)
+        ItemNewRoom(lara.item_number, room_number);
+}
