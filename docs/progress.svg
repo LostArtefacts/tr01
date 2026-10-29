@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">64.56% (512)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">35.44% (281)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">64.69% (513)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">35.31% (280)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="482.30" height="6" x="0" y="0" class="named"/>
-<rect width="264.70" height="6" x="482.30" y="0" class="todo"/>
+<rect width="483.24" height="6" x="0" y="0" class="named"/>
+<rect width="263.76" height="6" x="483.24" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -581,7 +581,7 @@
 <rect width="12" height="12" x="165" y="150" class="todo"><title>0x0002f5bc InitialiseDoor (1394 bytes)</title></rect>
 <rect width="12" height="12" x="180" y="150" class="named"><title>0x0002fb30 DoorControl (673 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="150" class="named"><title>0x0002fdd4 OnDrawBridge (179 bytes)</title></rect>
-<rect width="12" height="12" x="210" y="150" class="todo"><title>0x0002fe88 Func2fe88 (51 bytes)</title></rect>
+<rect width="12" height="12" x="210" y="150" class="named"><title>0x0002fe88 DrawBridgeFloor (51 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="150" class="todo"><title>0x0002febc Func2febc (49 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="150" class="todo"><title>0x0002fef0 Func2fef0 (39 bytes)</title></rect>
 <rect width="12" height="12" x="255" y="150" class="todo"><title>0x0002ff18 Func2ff18 (19 bytes)</title></rect>
@@ -864,10 +864,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">59.68%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">40.32%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">59.70%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">40.30%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="445.78" height="6" x="0" y="0" class="named"/>
-<rect width="301.22" height="6" x="445.78" y="0" class="todo"/>
+<rect width="445.97" height="6" x="0" y="0" class="named"/>
+<rect width="301.03" height="6" x="445.97" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.01" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1439,7 +1439,7 @@
 <rect width="3.66" height="3.87" x="673.70" y="209.20" class="todo"><title>0x0003d5bc Func3d5bc (52 bytes)</title></rect>
 <rect width="3.66" height="3.73" x="673.70" y="216.07" class="named"><title>0x00015f84 ShiftItem (51 bytes)</title></rect>
 <rect width="3.66" height="3.73" x="673.70" y="222.80" class="named"><title>0x0001a2b4 S_FadeInInventory (51 bytes)</title></rect>
-<rect width="3.66" height="3.73" x="673.70" y="229.53" class="todo"><title>0x0002fe88 Func2fe88 (51 bytes)</title></rect>
+<rect width="3.66" height="3.73" x="673.70" y="229.53" class="named"><title>0x0002fe88 DrawBridgeFloor (51 bytes)</title></rect>
 <rect width="3.66" height="3.73" x="673.70" y="236.27" class="todo"><title>0x00031f08 Func31f08 (51 bytes)</title></rect>
 <rect width="3.45" height="3.81" x="680.35" y="166.95" class="named"><title>0x0001d4a8 GetBestFrame (50 bytes)</title></rect>
 <rect width="3.32" height="3.81" x="686.80" y="166.95" class="named"><title>0x0001a3b4 DrawPhaseGame (49 bytes)</title></rect>

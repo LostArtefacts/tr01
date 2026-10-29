@@ -513,7 +513,7 @@ address,size,name,symbol
 0x0002f5bc,1394,InitialiseDoor,InitialiseDoor_
 0x0002fb30,673,DoorControl,DoorControl_
 0x0002fdd4,179,OnDrawBridge,OnDrawBridge_
-0x0002fe88,51,Func2fe88,
+0x0002fe88,51,DrawBridgeFloor,DrawBridgeFloor_
 0x0002febc,49,Func2febc,
 0x0002fef0,39,Func2fef0,
 0x0002ff18,19,Func2ff18,
