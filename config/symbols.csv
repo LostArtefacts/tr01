@@ -244,7 +244,7 @@ address,size,name,symbol
 0x00020ef4,105,CalculateWibbleTable,CalculateWibbleTable_
 0x00020f60,94,S_SeedRandom,S_SeedRandom_
 0x00020fc0,1,CheckSellByDate,CheckSellByDate_
-0x00020fd0,333,Func20fd0,
+0x00020fd0,333,Key,Key_
 0x00021120,683,S_UpdateInput,S_UpdateInput_
 0x00021498,4461,Display_Inventory,Display_Inventory_
 0x00022608,300,Func22608,
@@ -1800,6 +1800,8 @@ address,size,name,symbol
 0x000c2090,24,game_setup,_game_setup
 0x000c20a8,4,malloc_buffer,_malloc_buffer
 0x000c20ac,156,game_malloc_strings,_game_malloc_strings
+0x000c2148,4,record_demo,_record_demo
+0x000c214c,52,layout,_layout
 0x000c352c,,Load_Game_Requester,_Load_Game_Requester
 0x000c3822,2,Inventory_Chosen,_Inventory_Chosen
 0x000c3824,,Inventory_ExtraData,_Inventory_ExtraData
@@ -1872,6 +1874,7 @@ address,size,name,symbol
 0x000ce910,4,SavedGames,_SavedGames
 0x000ce914,12,pickups,_pickups
 0x000ce924,4,malloc_size,_malloc_size
+0x000ce928,52,conflict,_conflict
 0x000ce95c,4,input,_input
 0x000ce960,34,inv_colours,_inv_colours
 0x000ce984,4,effects,_effects
@@ -1913,3 +1916,4 @@ address,size,name,symbol
 0x0012f63c,4,old_clock_ticks,_old_clock_ticks
 0x0012f644,4,clock_ticks,_clock_ticks
 0x0012f658,4,keydata,_keydata
+0x0012ffb2,1,joy_fire,_joy_fire

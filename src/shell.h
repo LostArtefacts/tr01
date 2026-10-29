@@ -36,8 +36,39 @@ typedef struct
 } KEYSTUFF;
 
 extern KEYSTUFF *keydata;
+extern uint8 joy_fire;
 
-#define K_ESC 0x01
+enum key_codes
+{
+    K_ESC = 0x01,
+    K_LCTRL = 0x1d,
+    K_LSHIFT = 0x2a,
+    K_RSHIFT = 0x36,
+    K_LALT = 0x38,
+    K_SPACE = 0x39,
+    K_NUMHOME = 0x47,
+    K_NUMUP = 0x48,
+    K_NUMPGUP = 0x49,
+    K_NUMLEFT = 0x4b,
+    K_NUM5 = 0x4c,
+    K_NUMRIGHT = 0x4d,
+    K_NUMPLUS = 0x4e,
+    K_NUMEND = 0x4f,
+    K_NUMDOWN = 0x50,
+    K_NUMPGDN = 0x51,
+    K_NUM0 = 0x52,
+    K_NUMDEL = 0x53,
+    K_NUMENTER = 0x9c,
+    K_RCTRL = 0x9d,
+    K_RALT = 0xb8,
+    K_UP = 0xc8,
+    K_LEFT = 0xcb,
+    K_RIGHT = 0xcd,
+    K_END = 0xcf,
+    K_DOWN = 0xd0,
+    K_PGDN = 0xd1,
+    K_DELETE = 0xd3
+};
 #define rawkey(k) (keydata->keymap[k])
 extern int file_len;
 
