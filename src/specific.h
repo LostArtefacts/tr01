@@ -40,6 +40,8 @@ void S_UpdateInput(void);
 int S_SaveGame(void *data, int size, int slot);
 void CheckCheatMode(void);
 void S_SaveSettings(void);
+int S_LoadTitle(void);
+int LoadLevel(char *filename, int req_level);
 char *GetFullPath(char *filename);
 void S_CDVolume(sint16 volume);
 void S_CDPlay(sint16 track);
