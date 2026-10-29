@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">25.81% (200)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">74.19% (575)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">25.94% (201)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">74.06% (574)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="192.77" height="6" x="0" y="0" class="named"/>
-<rect width="554.23" height="6" x="192.77" y="0" class="todo"/>
+<rect width="193.74" height="6" x="0" y="0" class="named"/>
+<rect width="553.26" height="6" x="193.74" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -269,7 +269,7 @@
 <rect width="12" height="12" x="735" y="45" class="named"><title>0x0001f5b0 S_COLOUR (140 bytes)</title></rect>
 <rect width="12" height="12" x="0" y="60" class="named"><title>0x0001f63c S_SetGamma (1 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="60" class="named"><title>0x0001f640 S_DrawSpriteSize (142 bytes)</title></rect>
-<rect width="12" height="12" x="30" y="60" class="todo"><title>0x0001f6d0 Func1f6d0 (241 bytes)</title></rect>
+<rect width="12" height="12" x="30" y="60" class="named"><title>0x0001f6d0 S_DrawScreenSprite2d (241 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="60" class="todo"><title>0x0001f7c4 Func1f7c4 (255 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="60" class="todo"><title>0x0001f8c4 Func1f8c4 (98 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="60" class="todo"><title>0x0001f928 Func1f928 (290 bytes)</title></rect>
@@ -846,10 +846,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">29.04%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">70.96%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">29.16%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">70.84%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="216.92" height="6" x="0" y="0" class="named"/>
-<rect width="530.08" height="6" x="216.92" y="0" class="todo"/>
+<rect width="217.80" height="6" x="0" y="0" class="named"/>
+<rect width="529.20" height="6" x="217.80" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1080,7 +1080,7 @@
 <rect width="12.15" height="11.58" x="525.29" y="228.42" class="todo"><title>0x0002f288 Func2f288 (247 bytes)</title></rect>
 <rect width="11.68" height="11.98" x="540.44" y="31.81" class="named"><title>0x00010f5c decomp_pcx (246 bytes)</title></rect>
 <rect width="11.62" height="11.98" x="555.12" y="31.81" class="todo"><title>0x0003411c Func3411c (245 bytes)</title></rect>
-<rect width="11.38" height="11.98" x="569.74" y="31.81" class="todo"><title>0x0001f6d0 Func1f6d0 (241 bytes)</title></rect>
+<rect width="11.38" height="11.98" x="569.74" y="31.81" class="named"><title>0x0001f6d0 S_DrawScreenSprite2d (241 bytes)</title></rect>
 <rect width="11.32" height="11.98" x="584.12" y="31.81" class="todo"><title>0x00026a28 Func26a28 (240 bytes)</title></rect>
 <rect width="11.20" height="11.98" x="598.44" y="31.81" class="named"><title>0x00014c78 DoCinematic (238 bytes)</title></rect>
 <rect width="11.08" height="11.98" x="612.64" y="31.81" class="named"><title>0x000167c4 TestBoundsCollide (236 bytes)</title></rect>

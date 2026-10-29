@@ -29,6 +29,10 @@ SG_COL S_COLOUR(int R, int G, int B)
     return colour;
 }
 
+void S_SetGamma(sint16 gamma)
+{
+}
+
 void S_DrawSpriteSize(sint32 x, sint32 y, sint32 z, sint32 w, sint32 h, sint16 sprnum, sint16 shade, uint16 flags)
 {
     if (x + w < 0 || y + h < 0 || x >= phd_winwidth || y >= phd_winheight)
@@ -48,6 +52,32 @@ void S_DrawSpriteSize(sint32 x, sint32 y, sint32 z, sint32 w, sint32 h, sint16 s
     surfacenum++;
 }
 
-void S_SetGamma(sint16 gamma)
+void S_DrawScreenSprite2d(sint32 sx, sint32 sy, sint32 z, sint32 scaleH, sint32 scaleV, sint16 sprnum, sint16 shade, uint16 flags)
 {
+    PHDSPRITESTRUCT *sptr;
+    sint16 x1, y1, x2, y2;
+
+    sptr = &phdsprinfo[sprnum];
+    x1 = (sint16)(((sptr->x1 * scaleH) >> 16) + sx);
+    x2 = (sint16)((((sptr->x2) * scaleH) >> 16) + sx);
+    y1 = (sint16)(((sptr->y1 * scaleV) >> 16) + sy);
+    y2 = (sint16)((((sptr->y2) * scaleV) >> 16) + sy);
+
+    if (x2 < 0 || y2 < 0 || x1 >= phd_winwidth || y1 >= phd_winheight)
+        return;
+
+    *(sort3dptr) = (sint32)(info3dptr);
+    *(sort3dptr + 1) = z << 3;
+    sort3dptr += 2;
+
+    *(info3dptr) = DRAW_SCALED_SPRITE;
+    *(info3dptr + 1) = x1;
+    *(info3dptr + 2) = y1;
+    *(info3dptr + 3) = x2;
+    *(info3dptr + 4) = y2;
+    *(info3dptr + 5) = sprnum;
+    *(info3dptr + 6) = shade;
+    info3dptr += 7;
+
+    surfacenum++;
 }
