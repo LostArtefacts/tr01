@@ -227,3 +227,36 @@ void CogControl(sint16 item_number)
     if (room_number != item->room_number)
         ItemNewRoom(item_number, room_number);
 }
+
+void CabinControl(sint16 item_number)
+{
+    ITEM_INFO *item;
+
+    item = &items[item_number];
+
+    if ((item->flags & CODE_BITS) == CODE_BITS)
+    {
+        switch (item->current_anim_state)
+        {
+        case CABIN_START:
+            item->goal_anim_state = CABIN_DROP1;
+            break;
+        case CABIN_DROP1:
+            item->goal_anim_state = CABIN_DROP2;
+            break;
+        case CABIN_DROP2:
+            item->goal_anim_state = CABIN_DROP3;
+            break;
+        }
+        item->flags = 0;
+    }
+
+    if (item->current_anim_state == CABIN_FINISH)
+    {
+        flipmap[3] = CODE_BITS;
+        FlipMap();
+        KillItem(item_number);
+    }
+
+    AnimateItem(item);
+}
