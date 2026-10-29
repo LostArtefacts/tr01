@@ -492,6 +492,59 @@ MN_SFX_PLAY_INFO *mn_get_sound_params(MN_SFX_PLAY_INFO *sndslot)
     return sndslot;
 }
 
+extern void mn_stop_sound_effect(int sfx_num, PHD_3DPOS *pos)
+{
+    MN_SFX_PLAY_INFO *stopslot;
+
+    if (!sound_active)
+        return;
+
+    if (pos != NULL)
+    {
+        for (stopslot = sfx_playing; stopslot < (sfx_playing + MAX_PLAYING_FX); stopslot++)
+        {
+            if (stopslot->mn_flags & MN_FX_USED)
+            {
+                if (sfx_num < 0)
+                {
+                    if (stopslot->pos == pos)
+                    {
+                        S_SoundStopSample(stopslot->handle);
+
+                        mn_clear_fx_slot(stopslot);
+                    }
+                }
+                else
+                {
+                    if ((stopslot->pos == pos) && sfx_num == stopslot->fxnum)
+                    {
+                        S_SoundStopSample(stopslot->handle);
+
+                        mn_clear_fx_slot(stopslot);
+                        return;
+                    }
+                }
+            }
+        }
+        return;
+    }
+    else
+    {
+        for (stopslot = sfx_playing; stopslot < (sfx_playing + MAX_PLAYING_FX); stopslot++)
+        {
+            if (stopslot->mn_flags & MN_FX_USED)
+            {
+                if ((stopslot->fxnum == sfx_num) && (S_SoundSampleIsPlaying(stopslot->handle)))
+                {
+                    S_SoundStopSample(stopslot->handle);
+
+                    mn_clear_fx_slot(stopslot);
+                }
+            }
+        }
+    }
+}
+
 void mn_clear_fx_slot(MN_SFX_PLAY_INFO *slot)
 {
     slot->handle = -1;
