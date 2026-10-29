@@ -111,3 +111,28 @@ void ready_shotgun(void)
     lara.torso_x_rot = lara.torso_y_rot = 0;
     lara.head_x_rot = lara.head_y_rot = 0;
 }
+
+void RifleHandler(int weapon_type)
+{
+    WEAPON_INFO *winfo;
+
+    winfo = &weapons[LG_SHOTGUN];
+
+    if (input & IN_ACTION)
+        LaraTargetInfo(winfo);
+    else
+        lara.target = NULL;
+    if (lara.target == NULL)
+        LaraGetNewTarget(winfo);
+
+    AimWeapon(winfo, &lara.left_arm);
+
+    if (lara.left_arm.lock)
+    {
+        lara.torso_y_rot = lara.left_arm.y_rot / 2;
+        lara.torso_x_rot = lara.left_arm.x_rot / 2;
+        lara.head_x_rot = lara.head_y_rot = 0;
+    }
+
+    AnimateShotgun();
+}
