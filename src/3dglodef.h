@@ -97,6 +97,7 @@ int XYGClipper(int number, VERTEX_INFO *input);
 void Insert2DLine(sint32 x1, sint32 y1, sint32 x2, sint32 y2, sint32 z, char color);
 void phd_InitPolyList(void);
 sint32 phd_cos(sint32 angle);
+sint32 phd_sqrt(sint32 n);
 sint32 phd_sin(sint32 angle);
 sint32 phd_atan(sint32 x, sint32 y);
 void phd_SortPolyList(void);

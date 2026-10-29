@@ -124,3 +124,58 @@ void ClipCamera(sint32 *x, sint32 *y, sint32 target_x, sint32 target_y, sint32 l
         *y = top;
     }
 }
+
+void ShiftCamera(sint32 *x, sint32 *y, sint32 target_x, sint32 target_y, sint32 left, sint32 top, sint32 right, sint32 bottom)
+{
+    sint32 shift, TL_square, BL_square, TR_square;
+
+    TL_square = SQUARE(target_x - left) + SQUARE(target_y - top);
+    BL_square = SQUARE(target_x - left) + SQUARE(target_y - bottom);
+    TR_square = SQUARE(target_x - right) + SQUARE(target_y - top);
+
+    if (camera.target_square < TL_square)
+    {
+        *x = left;
+        shift = camera.target_square - SQUARE(target_x - left);
+        if (shift < 0)
+            return;
+
+        shift = phd_sqrt(shift);
+        *y = target_y + ((top < bottom) ? -shift : shift);
+    }
+    else if (TL_square > MIN_SQUARE)
+    {
+        *x = left;
+        *y = top;
+    }
+    else if (camera.target_square < BL_square)
+    {
+        *x = left;
+        shift = camera.target_square - SQUARE(target_x - left);
+        if (shift < 0)
+            return;
+
+        shift = phd_sqrt(shift);
+        *y = target_y + ((top < bottom) ? shift : -shift);
+    }
+    else if (BL_square > MIN_SQUARE)
+    {
+        *x = left;
+        *y = bottom;
+    }
+    else if (camera.target_square < TR_square)
+    {
+        shift = camera.target_square - SQUARE(target_y - top);
+        if (shift < 0)
+            return;
+
+        shift = phd_sqrt(shift);
+        *x = target_x + ((left < right) ? shift : -shift);
+        *y = top;
+    }
+    else
+    {
+        *x = right;
+        *y = top;
+    }
+}
