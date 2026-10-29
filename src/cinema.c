@@ -160,3 +160,15 @@ void CalculateCinematicCamera(void)
     AlterFOV(fov);
     phd_LookAt(campos.x, campos.y, campos.z, camtar.x, camtar.y, camtar.z, roll);
 }
+
+void ControlCinematicPlayer(sint16 item_num)
+{
+    ITEM_INFO *item;
+
+    item = &items[item_num];
+    item->pos.y_rot = camera.target_angle;
+    item->pos.x_pos = camera.pos.x;
+    item->pos.y_pos = camera.pos.y;
+    item->pos.z_pos = camera.pos.z;
+    AnimateItem(item);
+}

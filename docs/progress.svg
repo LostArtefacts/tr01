@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">6.23% (48)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">93.77% (723)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">6.36% (49)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">93.64% (722)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="46.51" height="6" x="0" y="0" class="named"/>
-<rect width="700.49" height="6" x="46.51" y="0" class="todo"/>
+<rect width="47.47" height="6" x="0" y="0" class="named"/>
+<rect width="699.53" height="6" x="47.47" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -120,7 +120,7 @@
 <rect width="12" height="12" x="0" y="15" class="named"><title>0x00014bf8 InitCinematicRooms (128 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="15" class="named"><title>0x00014c78 DoCinematic (238 bytes)</title></rect>
 <rect width="12" height="12" x="30" y="15" class="named"><title>0x00014d68 CalculateCinematicCamera (335 bytes)</title></rect>
-<rect width="12" height="12" x="45" y="15" class="todo"><title>0x00014eb8 ControlCinematicPlayer (66 bytes)</title></rect>
+<rect width="12" height="12" x="45" y="15" class="named"><title>0x00014eb8 ControlCinematicPlayer (66 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="15" class="todo"><title>0x00014efc ControlCinematicPlayer4 (28 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="15" class="todo"><title>0x00014f18 InitialisePlayer1 (168 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="15" class="todo"><title>0x00014fc0 InitialiseGenPlayer (35 bytes)</title></rect>
@@ -842,10 +842,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">8.31%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">91.69%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">8.34%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">91.66%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="62.07" height="6" x="0" y="0" class="named"/>
-<rect width="684.93" height="6" x="62.07" y="0" class="todo"/>
+<rect width="62.31" height="6" x="0" y="0" class="named"/>
+<rect width="684.69" height="6" x="62.31" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="54.65" height="67.43" x="0" y="0" class="todo"><title>0x0001bc98 Func1bc98 (4489 bytes)</title></rect>
@@ -1369,7 +1369,7 @@
 <rect width="4.75" height="5.06" x="683.09" y="152.79" class="todo"><title>0x0003a970 Func3a970 (69 bytes)</title></rect>
 <rect width="4.52" height="5.06" x="690.84" y="152.79" class="named"><title>0x00011630 InitialiseCreature (67 bytes)</title></rect>
 <rect width="4.52" height="5.06" x="698.36" y="152.79" class="todo"><title>0x0003a3ec Func3a3ec (67 bytes)</title></rect>
-<rect width="4.41" height="5.06" x="705.88" y="152.79" class="todo"><title>0x00014eb8 ControlCinematicPlayer (66 bytes)</title></rect>
+<rect width="4.41" height="5.06" x="705.88" y="152.79" class="named"><title>0x00014eb8 ControlCinematicPlayer (66 bytes)</title></rect>
 <rect width="4.41" height="5.06" x="713.29" y="152.79" class="todo"><title>0x00045b64 Func45b64 (66 bytes)</title></rect>
 <rect width="4.41" height="5.06" x="720.70" y="152.79" class="todo"><title>0x00045f28 Func45f28 (66 bytes)</title></rect>
 <rect width="4.30" height="5.06" x="728.11" y="152.79" class="named"><title>0x00010018 S_DumpScreen (65 bytes)</title></rect>
