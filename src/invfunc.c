@@ -757,3 +757,17 @@ int Inv_GetItemOption(int itemNum)
     }
     return -1;
 }
+
+void RemoveInventoryText(void)
+{
+    int n;
+
+    for (n = 0; n < IT_NUMBEROF; n++)
+    {
+        if (Inv_itemText[n])
+        {
+            T_RemovePrint(Inv_itemText[n]);
+            Inv_itemText[n] = NULL;
+        }
+    }
+}
