@@ -247,3 +247,17 @@ void LightningControl(sint16 item_number)
         item->status = NOT_ACTIVE;
     }
 }
+
+void LightningCollision(sint16 item_num, ITEM_INFO *laraitem, COLL_INFO *coll)
+{
+    struct lightning *l;
+
+    l = (struct lightning *)items[item_num].data;
+    if (!l->zapped)
+        return;
+
+    lara.hit_direction = (sint16)(GetRandomControl() * 4 / 0x7fff + 1);
+    lara.hit_frame++;
+    if (lara.hit_frame > 34)
+        lara.hit_frame = 34;
+}
