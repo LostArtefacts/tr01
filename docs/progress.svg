@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">36.38% (283)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">63.62% (495)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">36.50% (284)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">63.50% (494)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="271.72" height="6" x="0" y="0" class="named"/>
-<rect width="475.28" height="6" x="271.72" y="0" class="todo"/>
+<rect width="272.68" height="6" x="0" y="0" class="named"/>
+<rect width="474.32" height="6" x="272.68" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -351,7 +351,7 @@
 <rect width="12" height="12" x="465" y="75" class="named"><title>0x00024700 InitialiseItemArray (83 bytes)</title></rect>
 <rect width="12" height="12" x="480" y="75" class="named"><title>0x00024754 KillItem (226 bytes)</title></rect>
 <rect width="12" height="12" x="495" y="75" class="named"><title>0x00024838 CreateItem (55 bytes)</title></rect>
-<rect width="12" height="12" x="510" y="75" class="todo"><title>0x00024870 InitialiseItem (446 bytes)</title></rect>
+<rect width="12" height="12" x="510" y="75" class="named"><title>0x00024870 InitialiseItem (446 bytes)</title></rect>
 <rect width="12" height="12" x="525" y="75" class="todo"><title>0x00024a30 RemoveActiveItem (151 bytes)</title></rect>
 <rect width="12" height="12" x="540" y="75" class="todo"><title>0x00024ac8 Func24ac8 (114 bytes)</title></rect>
 <rect width="12" height="12" x="555" y="75" class="todo"><title>0x00024b3c AddActiveItem (136 bytes)</title></rect>
@@ -849,10 +849,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">38.85%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">61.15%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">39.07%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">60.93%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="290.24" height="6" x="0" y="0" class="named"/>
-<rect width="456.76" height="6" x="290.24" y="0" class="todo"/>
+<rect width="291.88" height="6" x="0" y="0" class="named"/>
+<rect width="455.12" height="6" x="291.88" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -981,7 +981,7 @@
 <rect width="16.79" height="17.33" x="432.82" y="102.39" class="named"><title>0x0001083c S_DrawAirBar (450 bytes)</title></rect>
 <rect width="16.79" height="17.28" x="432.82" y="122.72" class="todo"><title>0x0002aa58 Func2aa58 (449 bytes)</title></rect>
 <rect width="16.79" height="17.23" x="432.82" y="143" class="todo"><title>0x000430fc Func430fc (448 bytes)</title></rect>
-<rect width="16.79" height="17.14" x="432.82" y="163.23" class="todo"><title>0x00024870 InitialiseItem (446 bytes)</title></rect>
+<rect width="16.79" height="17.14" x="432.82" y="163.23" class="named"><title>0x00024870 InitialiseItem (446 bytes)</title></rect>
 <rect width="16.79" height="17.10" x="432.82" y="183.38" class="todo"><title>0x0003934c GetJointAbsPosition (445 bytes)</title></rect>
 <rect width="16.79" height="16.92" x="432.82" y="203.48" class="named"><title>0x0001ee1c LoadItems (441 bytes)</title></rect>
 <rect width="16.79" height="16.60" x="432.82" y="223.40" class="named"><title>0x000173bc GetFloor (434 bytes)</title></rect>

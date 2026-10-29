@@ -77,3 +77,53 @@ sint16 CreateItem(void)
     next_item_free = items[item_num].next_item;
     return item_num;
 }
+
+void InitialiseItem(sint16 item_num)
+{
+    ITEM_INFO *item;
+    ROOM_INFO *r;
+    FLOOR_INFO *floor;
+
+    item = &items[item_num];
+    item->anim_number = objects[item->object_number].anim_index;
+    item->frame_number = anims[item->anim_number].frame_base;
+    item->current_anim_state = item->goal_anim_state = anims[item->anim_number].current_anim_state;
+    item->required_anim_state = 0;
+    item->pos.x_rot = item->pos.z_rot = 0;
+    item->speed = item->fallspeed = 0;
+    item->status = NOT_ACTIVE;
+    item->active = 0;
+    item->gravity_status = item->hit_status = item->looked_at = 0;
+    item->hit_points = objects[item->object_number].hit_points;
+    item->collidable = 1;
+    item->timer = 0;
+    item->mesh_bits = 0xffffffff;
+    item->touch_bits = 0;
+    item->data = NULL;
+
+    if (item->flags & NOT_VISIBLE)
+    {
+        item->status = INVISIBLE;
+        item->flags -= NOT_VISIBLE;
+    }
+
+    if ((item->flags & CODE_BITS) == CODE_BITS)
+    {
+        item->flags -= CODE_BITS;
+        item->flags |= REVERSE;
+        AddActiveItem(item_num);
+        item->status = ACTIVE;
+    }
+
+    r = &room[item->room_number];
+    item->next_item = r->item_number;
+    r->item_number = item_num;
+    floor = &r->floor[((item->pos.z_pos - r->z) >> WALL_SHIFT) + ((item->pos.x_pos - r->x) >> WALL_SHIFT) * r->x_size];
+    item->floor = floor->floor << 8;
+
+    if (savegame.bonus_flag)
+        item->hit_points *= 2;
+
+    if (objects[item->object_number].initialise)
+        (*objects[item->object_number].initialise)(item_num);
+}
