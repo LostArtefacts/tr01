@@ -12,8 +12,6 @@ extern int reset_flag;
 extern int animation_rate;
 extern int flipeffect, fliptimer;
 extern int chunky_flag;
-extern sint16 *trigger_index;
-extern ITEM_INFO *items;
 
 sint32 ControlPhase(sint32 nframes, int demo_mode);
 int GetChange(ITEM_INFO *item, ANIM_STRUCT *anim);
@@ -37,5 +35,8 @@ int LOS(GAME_VECTOR *start, GAME_VECTOR *target);
 int zLOS(GAME_VECTOR *start, GAME_VECTOR *target);
 int xLOS(GAME_VECTOR *start, GAME_VECTOR *target);
 int ClipTarget(GAME_VECTOR *start, GAME_VECTOR *target, FLOOR_INFO *floor);
+
+extern sint16 *trigger_index;
+extern ITEM_INFO *items;
 
 #endif
