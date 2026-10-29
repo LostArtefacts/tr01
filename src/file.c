@@ -511,3 +511,13 @@ int LoadBoxes(FILE *file)
 
     return 1;
 }
+
+int LoadAnimatedTextures(FILE *file)
+{
+    int size;
+
+    fread(&size, sizeof(int), 1, file);
+    aranges = (sint16 *)game_malloc(size * sizeof(sint16), ANIMATING_TEXTURE_RANGES);
+    fread(aranges, sizeof(sint16), size, file);
+    return 1;
+}
