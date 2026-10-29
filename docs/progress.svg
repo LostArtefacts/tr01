@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">21.71% (168)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">78.29% (606)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">21.83% (169)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">78.17% (605)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="162.14" height="6" x="0" y="0" class="named"/>
-<rect width="584.86" height="6" x="162.14" y="0" class="todo"/>
+<rect width="163.10" height="6" x="0" y="0" class="named"/>
+<rect width="583.90" height="6" x="163.10" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -237,7 +237,7 @@
 <rect width="12" height="12" x="255" y="45" class="named"><title>0x0001dfc4 FloodFX (127 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="45" class="named"><title>0x0001e044 RaisingBlockFX (29 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="45" class="named"><title>0x0001e064 ChainBlockFX (72 bytes)</title></rect>
-<rect width="12" height="12" x="300" y="45" class="todo"><title>0x0001e0ac Stairs2SlopeFX (44 bytes)</title></rect>
+<rect width="12" height="12" x="300" y="45" class="named"><title>0x0001e0ac Stairs2SlopeFX (44 bytes)</title></rect>
 <rect width="12" height="12" x="315" y="45" class="todo"><title>0x0001e0d8 Func1e0d8 (122 bytes)</title></rect>
 <rect width="12" height="12" x="330" y="45" class="todo"><title>0x0001e154 Func1e154 (100 bytes)</title></rect>
 <rect width="12" height="12" x="345" y="45" class="todo"><title>0x0001e1b8 Func1e1b8 (41 bytes)</title></rect>
@@ -845,10 +845,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">26.29%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">73.71%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">26.31%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">73.69%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="196.39" height="6" x="0" y="0" class="named"/>
-<rect width="550.61" height="6" x="196.39" y="0" class="todo"/>
+<rect width="196.55" height="6" x="0" y="0" class="named"/>
+<rect width="550.45" height="6" x="196.55" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1465,7 +1465,7 @@
 <rect width="3.42" height="3.13" x="687.20" y="236.87" class="named"><title>0x0001ceb8 phd_RotY_I (44 bytes)</title></rect>
 <rect width="3.39" height="3.15" x="693.61" y="180.73" class="named"><title>0x0001cee4 phd_RotX_I (44 bytes)</title></rect>
 <rect width="3.39" height="3.15" x="700.01" y="180.73" class="named"><title>0x0001cf10 phd_RotZ_I (44 bytes)</title></rect>
-<rect width="3.39" height="3.15" x="706.40" y="180.73" class="todo"><title>0x0001e0ac Stairs2SlopeFX (44 bytes)</title></rect>
+<rect width="3.39" height="3.15" x="706.40" y="180.73" class="named"><title>0x0001e0ac Stairs2SlopeFX (44 bytes)</title></rect>
 <rect width="3.39" height="3.15" x="712.79" y="180.73" class="todo"><title>0x00025cac Func25cac (44 bytes)</title></rect>
 <rect width="3.39" height="3.15" x="719.19" y="180.73" class="todo"><title>0x00045672 Func45672 (44 bytes)</title></rect>
 <rect width="3.10" height="3.15" x="725.58" y="180.73" class="named"><title>0x0001df20 lara_normal_effect (42 bytes)</title></rect>

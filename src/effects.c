@@ -390,3 +390,13 @@ void ChainBlockFX(ITEM_INFO *item)
         flipeffect = -1;
     }
 }
+
+void Stairs2SlopeFX(ITEM_INFO *item)
+{
+    if (fliptimer == 5)
+    {
+        SoundEffect(119, NULL, NULL);
+        flipeffect = -1;
+    }
+    fliptimer++;
+}
