@@ -444,3 +444,16 @@ void ExplosionFX(ITEM_INFO *item)
     camera.bounce = -75;
     flipeffect = -1;
 }
+
+void FlickerFX(ITEM_INFO *item)
+{
+    if (fliptimer > 125)
+    {
+        FlipMap();
+        flipeffect = -1;
+    }
+    else if (fliptimer == 90 || fliptimer == 92 || fliptimer == 105 || fliptimer == 107)
+        FlipMap();
+
+    fliptimer++;
+}

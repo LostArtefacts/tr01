@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">22.22% (172)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">77.78% (602)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">22.35% (173)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">77.65% (601)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="166" height="6" x="0" y="0" class="named"/>
-<rect width="581" height="6" x="166" y="0" class="todo"/>
+<rect width="166.97" height="6" x="0" y="0" class="named"/>
+<rect width="580.03" height="6" x="166.97" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -241,7 +241,7 @@
 <rect width="12" height="12" x="315" y="45" class="named"><title>0x0001e0d8 SandFX (122 bytes)</title></rect>
 <rect width="12" height="12" x="330" y="45" class="named"><title>0x0001e154 PowerUpFX (100 bytes)</title></rect>
 <rect width="12" height="12" x="345" y="45" class="named"><title>0x0001e1b8 ExplosionFX (41 bytes)</title></rect>
-<rect width="12" height="12" x="360" y="45" class="todo"><title>0x0001e1e4 Func1e1e4 (65 bytes)</title></rect>
+<rect width="12" height="12" x="360" y="45" class="named"><title>0x0001e1e4 FlickerFX (65 bytes)</title></rect>
 <rect width="12" height="12" x="375" y="45" class="todo"><title>0x0001e228 Func1e228 (12 bytes)</title></rect>
 <rect width="12" height="12" x="390" y="45" class="todo"><title>0x0001e23c Func1e23c (132 bytes)</title></rect>
 <rect width="12" height="12" x="405" y="45" class="todo"><title>0x0001e2c0 Func1e2c0 (18 bytes)</title></rect>
@@ -845,10 +845,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">26.44%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">73.56%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">26.47%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">73.53%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="197.51" height="6" x="0" y="0" class="named"/>
-<rect width="549.49" height="6" x="197.51" y="0" class="todo"/>
+<rect width="197.75" height="6" x="0" y="0" class="named"/>
+<rect width="549.25" height="6" x="197.75" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1379,7 +1379,7 @@
 <rect width="4.35" height="5.03" x="728.07" y="152.61" class="todo"><title>0x00045b64 Func45b64 (66 bytes)</title></rect>
 <rect width="4.35" height="5.03" x="735.42" y="152.61" class="todo"><title>0x00045f28 Func45f28 (66 bytes)</title></rect>
 <rect width="4.23" height="5.03" x="742.77" y="152.61" class="named"><title>0x00010018 S_DumpScreen (65 bytes)</title></rect>
-<rect width="4.60" height="4.65" x="659.74" y="160.64" class="todo"><title>0x0001e1e4 Func1e1e4 (65 bytes)</title></rect>
+<rect width="4.60" height="4.65" x="659.74" y="160.64" class="named"><title>0x0001e1e4 FlickerFX (65 bytes)</title></rect>
 <rect width="4.60" height="4.65" x="659.74" y="168.28" class="todo"><title>0x000242c0 Func242c0 (65 bytes)</title></rect>
 <rect width="4.60" height="4.65" x="659.74" y="175.93" class="todo"><title>0x000287ac LaraSwapMeshExtra (65 bytes)</title></rect>
 <rect width="4.60" height="4.65" x="659.74" y="183.58" class="todo"><title>0x00038cb8 S_CDStop (65 bytes)</title></rect>
