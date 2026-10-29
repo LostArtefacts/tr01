@@ -344,3 +344,36 @@ void DrawSpriteItem(ITEM_INFO *item)
 {
     S_DrawSpriteAbs(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, objects[item->object_number].mesh_index - item->frame_number, item->shade);
 }
+
+sint16 null_rotations[] = {
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+};
+
+void DrawGunFlash(int weapon_type, int clip)
+{
+    int light;
+    int g_len;
+
+    switch (weapon_type)
+    {
+    case LG_MAGNUMS:
+        light = 16 * 256;
+        g_len = 155;
+        break;
+
+    case LG_UZIS:
+        light = 10 * 256;
+        g_len = 180;
+        break;
+
+    default:
+        light = 20 * 256;
+        g_len = 155;
+        break;
+    }
+
+    phd_TranslateRel(0, g_len, 55);
+    phd_RotYXZ(0, -90 * ONE_DEGREE, (PHD_ANGLE)(GetRandomDraw() * 2));
+    S_CalculateStaticLight(light);
+    phd_PutPolygons(meshes[objects[GUN_FLASH].mesh_index], clip);
+}

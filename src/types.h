@@ -45,6 +45,10 @@ typedef uint16 SG_COL;
 
 #define DEMOCOUNT_MAX (30 * 60 * 5)
 
+#define ROT_X 4
+#define ROT_Y 8
+#define ROT_Z 16
+
 enum game_levels
 {
     GYM,

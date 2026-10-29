@@ -79,6 +79,7 @@ sint16 *GetBoundsAccurate(ITEM_INFO *item);
 sint16 *GetBestFrame(ITEM_INFO *item);
 
 sint32 GetRandomControl(void);
+sint32 GetRandomDraw(void);
 
 extern CAMERA_INFO camera;
 
