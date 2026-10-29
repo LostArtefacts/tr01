@@ -354,6 +354,23 @@ extern void mn_reset_ambient_loudness(void)
         resetslot->loudness = MN_NOT_AUDIBLE;
 }
 
+extern void mn_stop_ambient_samples(void)
+{
+    MN_SFX_PLAY_INFO *resetslot;
+
+    if (!sound_active)
+        return;
+
+    for (resetslot = sfx_playing; resetslot < (sfx_playing + mn_ambient_lookup_indx); resetslot++)
+    {
+        if (S_SoundSampleIsPlaying(resetslot->handle))
+        {
+            S_SoundStopSample(resetslot->handle);
+            mn_clear_fx_slot(resetslot);
+        }
+    }
+}
+
 void mn_clear_fx_slot(MN_SFX_PLAY_INFO *slot)
 {
     slot->handle = -1;
