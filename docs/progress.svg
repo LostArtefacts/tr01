@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">46.69% (367)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">53.31% (419)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">46.82% (368)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">53.18% (418)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="348.79" height="6" x="0" y="0" class="named"/>
-<rect width="398.21" height="6" x="348.79" y="0" class="todo"/>
+<rect width="349.74" height="6" x="0" y="0" class="named"/>
+<rect width="397.26" height="6" x="349.74" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -433,7 +433,7 @@
 <rect width="12" height="12" x="195" y="105" class="named"><title>0x00026cdc lara_col_backjump (22 bytes)</title></rect>
 <rect width="12" height="12" x="210" y="105" class="named"><title>0x00026cf4 lara_col_rightjump (22 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="105" class="named"><title>0x00026d0c lara_col_leftjump (25 bytes)</title></rect>
-<rect width="12" height="12" x="240" y="105" class="todo"><title>0x00026d28 Func26d28 (160 bytes)</title></rect>
+<rect width="12" height="12" x="240" y="105" class="named"><title>0x00026d28 lara_col_upjump (160 bytes)</title></rect>
 <rect width="12" height="12" x="255" y="105" class="todo"><title>0x00026dc8 Func26dc8 (150 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="105" class="todo"><title>0x00026e60 lara_col_hangleft (45 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="105" class="todo"><title>0x00026e90 Func26e90 (39 bytes)</title></rect>
@@ -467,7 +467,7 @@
 <rect width="12" height="12" x="705" y="105" class="todo"><title>0x00027b44 TestLaraVault (519 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="105" class="todo"><title>0x00027d4c LaraTestHangJump (405 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="105" class="todo"><title>0x00027ee4 Func27ee4 (187 bytes)</title></rect>
-<rect width="12" height="12" x="0" y="120" class="todo"><title>0x00027fa0 Func27fa0 (392 bytes)</title></rect>
+<rect width="12" height="12" x="0" y="120" class="todo"><title>0x00027fa0 LaraTestHangJumpUp (392 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="120" class="todo"><title>0x00028128 TestLaraSlide (356 bytes)</title></rect>
 <rect width="12" height="12" x="30" y="120" class="todo"><title>0x0002828c LaraFloorFront (115 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="120" class="todo"><title>0x00028300 LaraLandedBad (169 bytes)</title></rect>
@@ -857,10 +857,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">43.47%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">56.53%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">43.55%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">56.45%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="324.71" height="6" x="0" y="0" class="named"/>
-<rect width="422.29" height="6" x="324.71" y="0" class="todo"/>
+<rect width="325.30" height="6" x="0" y="0" class="named"/>
+<rect width="421.70" height="6" x="325.30" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1009,7 +1009,7 @@
 <rect width="15.51" height="16.36" x="472.46" y="0" class="named"><title>0x000104a8 S_CalculateLight (401 bytes)</title></rect>
 <rect width="15.51" height="16.12" x="472.46" y="19.36" class="todo"><title>0x0003afd0 Func3afd0 (396 bytes)</title></rect>
 <rect width="15.51" height="16.07" x="472.46" y="38.48" class="todo"><title>0x00030184 Func30184 (395 bytes)</title></rect>
-<rect width="15.51" height="15.93" x="472.46" y="57.55" class="todo"><title>0x00027fa0 Func27fa0 (392 bytes)</title></rect>
+<rect width="15.51" height="15.93" x="472.46" y="57.55" class="todo"><title>0x00027fa0 LaraTestHangJumpUp (392 bytes)</title></rect>
 <rect width="15.51" height="15.83" x="472.46" y="76.48" class="todo"><title>0x0002b2a4 Func2b2a4 (390 bytes)</title></rect>
 <rect width="15.51" height="15.68" x="472.46" y="95.31" class="named"><title>0x00026234 lara_col_run (387 bytes)</title></rect>
 <rect width="15.51" height="15.68" x="472.46" y="113.99" class="todo"><title>0x00038d58 LoadSamples (387 bytes)</title></rect>
@@ -1185,7 +1185,7 @@
 <rect width="9.02" height="8.97" x="678.39" y="72.62" class="named"><title>0x00010a00 AnimateTextures (161 bytes)</title></rect>
 <rect width="8.95" height="8.97" x="690.42" y="72.62" class="named"><title>0x00016020 GetTiltType (160 bytes)</title></rect>
 <rect width="8.95" height="8.97" x="702.36" y="72.62" class="named"><title>0x00024c60 SpawnItem (160 bytes)</title></rect>
-<rect width="8.95" height="8.97" x="714.31" y="72.62" class="todo"><title>0x00026d28 Func26d28 (160 bytes)</title></rect>
+<rect width="8.95" height="8.97" x="714.31" y="72.62" class="named"><title>0x00026d28 lara_col_upjump (160 bytes)</title></rect>
 <rect width="8.95" height="8.97" x="726.26" y="72.62" class="todo"><title>0x0003dd08 phd_RotZ (160 bytes)</title></rect>
 <rect width="8.80" height="8.97" x="738.20" y="72.62" class="named"><title>0x00023ff0 Inv_GetItemOption (158 bytes)</title></rect>
 <rect width="9.02" height="8.68" x="580.36" y="84.59" class="named"><title>0x00011de4 ValidBox (157 bytes)</title></rect>
