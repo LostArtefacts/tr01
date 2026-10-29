@@ -109,3 +109,18 @@ void ready_pistols(int weapon_type)
     lara.head_x_rot = lara.head_y_rot = 0;
     lara.left_arm.frame_base = lara.right_arm.frame_base = objects[PISTOLS].frame_base;
 }
+
+void draw_pistol_meshes(int weapon_type)
+{
+    int obj;
+
+    obj = PISTOLS;
+    if (weapon_type == LG_MAGNUMS)
+        obj = MAGNUM;
+    else if (weapon_type == LG_UZIS)
+        obj = UZI;
+    lara.mesh_ptrs[HAND_L] = meshes[(&objects[obj])->mesh_index + HAND_L];
+    lara.mesh_ptrs[HAND_R] = meshes[(&objects[obj])->mesh_index + HAND_R];
+    lara.mesh_ptrs[THIGH_L] = meshes[(&objects[LARA])->mesh_index + THIGH_L];
+    lara.mesh_ptrs[THIGH_R] = meshes[(&objects[LARA])->mesh_index + THIGH_R];
+}
