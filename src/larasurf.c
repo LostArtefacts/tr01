@@ -216,3 +216,9 @@ void lara_col_surfswim(ITEM_INFO *item, COLL_INFO *coll)
     lara.move_angle = item->pos.y_rot;
     LaraSurfaceCollision(item, coll);
 }
+
+void lara_col_surfback(ITEM_INFO *item, COLL_INFO *coll)
+{
+    lara.move_angle = item->pos.y_rot - 32768;
+    LaraSurfaceCollision(item, coll);
+}
