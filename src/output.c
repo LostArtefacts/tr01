@@ -1,7 +1,9 @@
+#include <string.h>
 #include "game.h"
 #include "shell.h"
 #include "3dglodef.h"
 #include "inventry.h"
+#include "specific.h"
 
 
 #define DEPTHQ_END (20 * 1024)
@@ -16,6 +18,24 @@
 #define AirBarW 100
 
 #define ANIMATED_TEXTURE 10
+
+typedef struct pcx_header
+{
+    char zsoft_flag, version, encoding, bits;
+    unsigned short xmin, ymin, xmax, ymax;
+    unsigned short h_res, v_res;
+    char header_pal[48], reserved, planes;
+    unsigned short bytes_per_line, pal_interp, width, height;
+    char blank[54];
+} PCX_HEADER;
+
+typedef struct pic
+{
+    char mask, comp, type;
+    short w, h, d, x, y;
+    char *ptr;
+    char pal[256 * 3];
+} PIC;
 
 int wet = 0;
 uint8 game_palette[256 * 3], water_palette[256 * 3];
@@ -532,4 +552,20 @@ void S_DrawLighteningSegment(sint32 x1, sint32 y1, sint32 z1, sint32 x2, sint32 
     *(info3dptr + 5) = inv_colours[C_WHITE];
     info3dptr += 6;
     surfacenum++;
+}
+
+int decomp_pcx(PIC *pic, uint8 *file_buf);
+
+void S_DisplayPicture(char *filename)
+{
+    uint8 *pcx;
+    PIC pic;
+    char name[100];
+
+    strcpy(name, filename);
+    strcat(name, ".pcx");
+
+    pcx = FileLoad(GetFullPath(name), bckscrn, 0);
+
+    decomp_pcx(&pic, pcx);
 }

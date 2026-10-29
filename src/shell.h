@@ -13,6 +13,7 @@ typedef struct
 } SETUP;
 
 extern SETUP game_setup;
+extern int file_len;
 
 extern sint32 clock_ticks;
 extern sint32 old_clock_ticks;
@@ -26,6 +27,7 @@ sint32 Sync(void);
     value [eax] \
     modify [ebx];
 
+uint8 *FileLoad(char *name, void *where, uint32 flags);
 void ScreenClear(void);
 void ScreenPartialDump(void);
 void TempVideoRemove(void);
