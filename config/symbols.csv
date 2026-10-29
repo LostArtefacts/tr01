@@ -327,7 +327,7 @@ address,size,name,symbol
 0x00025b80,42,lara_as_pushblock,lara_as_pushblock_
 0x00025bac,42,lara_as_pullblock,lara_as_pullblock_
 0x00025bd8,36,lara_as_ppready,lara_as_ppready_
-0x00025bfc,42,Func25bfc,
+0x00025bfc,42,lara_as_pickup,lara_as_pickup_
 0x00025c28,42,Func25c28,
 0x00025c54,42,Func25c54,
 0x00025c80,42,Func25c80,

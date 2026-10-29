@@ -580,3 +580,12 @@ void lara_as_ppready(ITEM_INFO *item, COLL_INFO *coll)
     if (!(input & IN_ACTION))
         item->goal_anim_state = AS_STOP;
 }
+
+void lara_as_pickup(ITEM_INFO *item, COLL_INFO *coll)
+{
+    coll->enable_hit = 0;
+    coll->enable_baddie_push = 0;
+    camera.target_angle = -130 * ONE_DEGREE;
+    camera.target_elevation = -15 * ONE_DEGREE;
+    camera.target_distance = WALL_L;
+}
