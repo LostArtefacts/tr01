@@ -704,3 +704,28 @@ int CreatureCreature(sint16 item_number)
 
     return 0;
 }
+
+int BadFloor(sint32 x, sint32 y, sint32 z, sint16 box_height, sint16 next_height, sint16 room_number, LOT_INFO *LOT)
+{
+    sint32 height;
+    FLOOR_INFO *floor;
+
+    floor = GetFloor(x, y, z, &room_number);
+    if (floor->box == NO_BOX)
+        return 1;
+
+    if (boxes[floor->box].overlap_index & LOT->block_mask)
+        return 1;
+
+    height = boxes[floor->box].height;
+    if (box_height - height > LOT->step || box_height - height < LOT->drop)
+        return 1;
+
+    if (box_height - height < -LOT->step && height > next_height)
+        return 1;
+
+    if ((LOT->fly != NO_FLYING) && y > height + LOT->fly)
+        return 1;
+
+    return 0;
+}
