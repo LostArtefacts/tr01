@@ -222,7 +222,7 @@ address,size,name,symbol
 0x0002045c,6,SeedRandomDraw,SeedRandomDraw_
 0x00020464,76,LevelIsValid,LevelIsValid_
 0x000204b0,128,GetValidLevelsList,GetValidLevelsList_
-0x00020530,60,Func20530,
+0x00020530,60,GetSavedGamesList,GetSavedGamesList_
 0x0002056c,220,DisplayCredits,DisplayCredits_
 0x00020648,326,Func20648,
 0x00020790,269,S_SaveGame,S_SaveGame_

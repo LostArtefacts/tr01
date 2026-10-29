@@ -400,3 +400,20 @@ void GetValidLevelsList(REQUEST_INFO *req)
         valids++;
     }
 }
+
+void GetSavedGamesList(REQUEST_INFO *req)
+{
+    if (hires_flag)
+    {
+        req->ypos = -90;
+        req->vis_lines = 10;
+    }
+    else
+    {
+        req->ypos = -32;
+        req->vis_lines = 5;
+    }
+
+    if (req->selected >= req->vis_lines)
+        req->line_offset = req->selected - req->vis_lines + 1;
+}
