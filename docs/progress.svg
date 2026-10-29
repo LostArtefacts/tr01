@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">60.56% (479)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">39.44% (312)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">60.68% (480)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">39.32% (311)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="452.36" height="6" x="0" y="0" class="named"/>
-<rect width="294.64" height="6" x="452.36" y="0" class="todo"/>
+<rect width="453.30" height="6" x="0" y="0" class="named"/>
+<rect width="293.70" height="6" x="453.30" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -547,7 +547,7 @@
 <rect width="12" height="12" x="405" y="135" class="named"><title>0x0002cf08 InitialiseSlot (247 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="135" class="named"><title>0x0002d000 CreateZone (284 bytes)</title></rect>
 <rect width="12" height="12" x="435" y="135" class="named"><title>0x0002d11c InitialiseLOT (39 bytes)</title></rect>
-<rect width="12" height="12" x="450" y="135" class="todo"><title>0x0002d144 ClearLOT (87 bytes)</title></rect>
+<rect width="12" height="12" x="450" y="135" class="named"><title>0x0002d144 ClearLOT (87 bytes)</title></rect>
 <rect width="12" height="12" x="465" y="135" class="todo"><title>0x0002d1a0 Func2d1a0 (273 bytes)</title></rect>
 <rect width="12" height="12" x="480" y="135" class="todo"><title>0x0002d2b4 SoundEffect (1336 bytes)</title></rect>
 <rect width="12" height="12" x="495" y="135" class="todo"><title>0x0002d7ec Func2d7ec (181 bytes)</title></rect>
@@ -862,10 +862,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">55.63%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">44.37%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">55.67%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">44.33%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="415.55" height="6" x="0" y="0" class="named"/>
-<rect width="331.45" height="6" x="415.55" y="0" class="todo"/>
+<rect width="415.86" height="6" x="0" y="0" class="named"/>
+<rect width="331.14" height="6" x="415.86" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.78" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1344,7 +1344,7 @@
 <rect width="6.14" height="5.78" x="679.45" y="135.43" class="named"><title>0x0001f12c LoadSoundEffects (90 bytes)</title></rect>
 <rect width="5.93" height="5.78" x="688.59" y="135.43" class="named"><title>0x0002c894 LightningCollision (88 bytes)</title></rect>
 <rect width="5.93" height="5.78" x="697.52" y="135.43" class="todo"><title>0x00045ba8 FadeToPal (88 bytes)</title></rect>
-<rect width="5.83" height="5.78" x="706.45" y="135.43" class="todo"><title>0x0002d144 ClearLOT (87 bytes)</title></rect>
+<rect width="5.83" height="5.78" x="706.45" y="135.43" class="named"><title>0x0002d144 ClearLOT (87 bytes)</title></rect>
 <rect width="5.83" height="5.78" x="715.28" y="135.43" class="todo"><title>0x000469fd Func469fd (87 bytes)</title></rect>
 <rect width="5.73" height="5.78" x="724.12" y="135.43" class="named"><title>0x000134a8 CreatureHead (86 bytes)</title></rect>
 <rect width="5.63" height="5.78" x="732.85" y="135.43" class="todo"><title>0x00045b0c Func45b0c (85 bytes)</title></rect>
