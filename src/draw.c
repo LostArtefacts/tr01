@@ -417,3 +417,9 @@ void InitInterpolate(int frac, int rate)
     IMptr = IMstack;
     memcpy(IMstack, phd_mxptr, 12 * 4);
 }
+
+void phd_PopMatrix_I(void)
+{
+    phd_PopMatrix();
+    IMptr -= 12;
+}
