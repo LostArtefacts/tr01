@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">54.68% (432)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">45.32% (358)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">54.81% (433)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">45.19% (357)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="408.49" height="6" x="0" y="0" class="named"/>
-<rect width="338.51" height="6" x="408.49" y="0" class="todo"/>
+<rect width="409.43" height="6" x="0" y="0" class="named"/>
+<rect width="337.57" height="6" x="409.43" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -500,7 +500,7 @@
 <rect width="12" height="12" x="450" y="120" class="named"><title>0x00029dc4 lara_as_surfswim (113 bytes)</title></rect>
 <rect width="12" height="12" x="465" y="120" class="named"><title>0x00029e38 lara_as_surfback (98 bytes)</title></rect>
 <rect width="12" height="12" x="480" y="120" class="named"><title>0x00029e9c lara_as_surfleft (98 bytes)</title></rect>
-<rect width="12" height="12" x="495" y="120" class="todo"><title>0x00029f00 lara_as_surfright (98 bytes)</title></rect>
+<rect width="12" height="12" x="495" y="120" class="named"><title>0x00029f00 lara_as_surfright (98 bytes)</title></rect>
 <rect width="12" height="12" x="510" y="120" class="todo"><title>0x00029f64 lara_as_surftread (451 bytes)</title></rect>
 <rect width="12" height="12" x="525" y="120" class="todo"><title>0x0002a128 lara_col_surfswim (19 bytes)</title></rect>
 <rect width="12" height="12" x="540" y="120" class="todo"><title>0x0002a13c lara_col_surfback (22 bytes)</title></rect>
@@ -861,10 +861,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">49.56%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">50.44%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">49.61%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">50.39%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="370.20" height="6" x="0" y="0" class="named"/>
-<rect width="376.80" height="6" x="370.20" y="0" class="todo"/>
+<rect width="370.55" height="6" x="0" y="0" class="named"/>
+<rect width="376.45" height="6" x="370.55" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1309,7 +1309,7 @@
 <rect width="6.60" height="6.12" x="701.99" y="117.25" class="named"><title>0x0001f8c4 S_DrawScreenLine (98 bytes)</title></rect>
 <rect width="6.60" height="6.12" x="711.59" y="117.25" class="named"><title>0x00029e38 lara_as_surfback (98 bytes)</title></rect>
 <rect width="6.60" height="6.12" x="721.19" y="117.25" class="named"><title>0x00029e9c lara_as_surfleft (98 bytes)</title></rect>
-<rect width="6.60" height="6.12" x="730.80" y="117.25" class="todo"><title>0x00029f00 lara_as_surfright (98 bytes)</title></rect>
+<rect width="6.60" height="6.12" x="730.80" y="117.25" class="named"><title>0x00029f00 lara_as_surfright (98 bytes)</title></rect>
 <rect width="6.60" height="6.12" x="740.40" y="117.25" class="todo"><title>0x00046912 Func46912 (98 bytes)</title></rect>
 <rect width="6.11" height="6.52" x="633.41" y="126.38" class="named"><title>0x00018c20 RemoveRoomFlipItems (97 bytes)</title></rect>
 <rect width="6.11" height="6.52" x="642.51" y="126.38" class="named"><title>0x00018c84 AddRoomFlipItems (97 bytes)</title></rect>
