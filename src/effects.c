@@ -102,3 +102,21 @@ void ControlExplosion1(sint16 fx_num)
             KillEffect(fx_num);
     }
 }
+
+void Richochet(GAME_VECTOR *pos)
+{
+    sint16 fx_num;
+    FX_INFO *fx;
+
+    if ((fx_num = CreateEffect(pos->room_number)) != NO_ITEM)
+    {
+        fx = &effects[fx_num];
+        fx->pos.x_pos = pos->x;
+        fx->pos.y_pos = pos->y;
+        fx->pos.z_pos = pos->z;
+        fx->counter = 4;
+        fx->frame_number = (sint16) - ((int)(GetRandomDraw() * 3) / 32768);
+        fx->object_number = RICOCHET1;
+        SoundEffect(10, &fx->pos, NULL);
+    }
+}

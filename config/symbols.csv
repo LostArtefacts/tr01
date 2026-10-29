@@ -151,7 +151,7 @@ address,size,name,symbol
 0x0001d5e4,106,DoBloodSplat,DoBloodSplat_
 0x0001d650,157,ControlBlood1,ControlBlood1_
 0x0001d6f0,99,ControlExplosion1,ControlExplosion1_
-0x0001d754,119,Func1d754,
+0x0001d754,119,Richochet,Richochet_
 0x0001d7cc,46,Func1d7cc,
 0x0001d7fc,80,Func1d7fc,
 0x0001d84c,100,Func1d84c,
