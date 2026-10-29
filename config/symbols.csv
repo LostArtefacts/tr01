@@ -1960,6 +1960,8 @@ address,size,name,symbol
 0x000ce960,34,inv_colours,_inv_colours
 0x000ce984,4,effects,_effects
 0x000ce988,2,next_fx_active,_next_fx_active
+0x000ce98a,2,next_item_free,_next_item_free
+0x000ce98c,2,next_fx_free,_next_fx_free
 0x000ce98e,2,next_item_active,_next_item_active
 0x000ce990,4,lara_item,_lara_item
 0x000ce994,236,lara,_lara
