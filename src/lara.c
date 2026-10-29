@@ -94,3 +94,50 @@ void lara_as_walk(ITEM_INFO *item, COLL_INFO *coll)
     else
         item->goal_anim_state = AS_STOP;
 }
+
+void lara_as_run(ITEM_INFO *item, COLL_INFO *coll)
+{
+    if (item->hit_points <= 0)
+    {
+        item->goal_anim_state = AS_DEATH;
+        return;
+    }
+
+    if (input & IN_ROLL)
+    {
+        item->anim_number = ROLL_A;
+        item->frame_number = ROLL_F;
+        item->current_anim_state = AS_ROLL;
+        item->goal_anim_state = AS_STOP;
+        return;
+    }
+    if (input & IN_LEFT)
+    {
+        lara.turn_rate -= LARA_TURN_RATE;
+        if (lara.turn_rate < -LARA_FAST_TURN)
+            lara.turn_rate = -LARA_FAST_TURN;
+        item->pos.z_rot -= LARA_LEAN_RATE;
+        if (item->pos.z_rot < -LARA_LEAN_MAX)
+            item->pos.z_rot = -LARA_LEAN_MAX;
+    }
+    else if (input & IN_RIGHT)
+    {
+        lara.turn_rate += LARA_TURN_RATE;
+        if (lara.turn_rate > LARA_FAST_TURN)
+            lara.turn_rate = LARA_FAST_TURN;
+        item->pos.z_rot += LARA_LEAN_RATE;
+        if (item->pos.z_rot > LARA_LEAN_MAX)
+            item->pos.z_rot = LARA_LEAN_MAX;
+    }
+    if (input & IN_JUMP && !item->gravity_status)
+        item->goal_anim_state = AS_FORWARDJUMP;
+    else if (input & IN_FORWARD)
+    {
+        if (input & IN_SLOW)
+            item->goal_anim_state = AS_WALK;
+        else
+            item->goal_anim_state = AS_RUN;
+    }
+    else
+        item->goal_anim_state = AS_STOP;
+}
