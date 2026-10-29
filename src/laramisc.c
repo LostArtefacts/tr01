@@ -145,6 +145,128 @@ void LaraSwapMeshExtra(void)
     }
 }
 
+void AnimateLara(ITEM_INFO *item)
+{
+    int i;
+    ANIM_STRUCT *anim;
+    sint16 *command;
+    sint32 speed;
+
+    item->frame_number++;
+    anim = &anims[item->anim_number];
+
+    if (anim->number_changes > 0)
+    {
+        if (GetChange(item, anim))
+        {
+            anim = &anims[item->anim_number];
+            item->current_anim_state = anim->current_anim_state;
+        }
+    }
+
+    if (item->frame_number > anim->frame_end)
+    {
+        if (anim->number_commands > 0)
+        {
+            command = &commands[anim->command_index];
+            for (i = anim->number_commands; i > 0; i--)
+            {
+                switch (*(command++))
+                {
+                case COMMAND_MOVE_ORIGIN:
+                    TranslateItem(item, (sint32)*(command), (sint32)*(command + 1), (sint32)*(command + 2));
+                    command += 3;
+                    break;
+
+                case COMMAND_JUMP_VELOCITY:
+                    item->fallspeed = *(command++);
+                    item->speed = *(command++);
+                    item->gravity_status = 1;
+                    if (lara.calc_fallspeed)
+                    {
+                        item->fallspeed = lara.calc_fallspeed;
+                        lara.calc_fallspeed = 0;
+                    }
+                    break;
+
+                case COMMAND_ATTACK_READY:
+                    lara.gun_status = LG_ARMLESS;
+                    break;
+
+                case COMMAND_DEACTIVATE:
+                    break;
+
+                case COMMAND_SOUND_FX:
+                case COMMAND_EFFECT:
+                    command += 2;
+                    break;
+                }
+            }
+        }
+
+        item->anim_number = anim->jump_anim_num;
+        item->frame_number = anim->jump_frame_num;
+
+        anim = &anims[item->anim_number];
+        item->current_anim_state = anim->current_anim_state;
+    }
+
+    if (anim->number_commands > 0)
+    {
+        command = &commands[anim->command_index];
+        for (i = anim->number_commands; i > 0; i--)
+        {
+            switch (*(command++))
+            {
+            case COMMAND_MOVE_ORIGIN:
+                command += 3;
+                break;
+
+            case COMMAND_JUMP_VELOCITY:
+                command += 2;
+                break;
+
+            case COMMAND_ATTACK_READY:
+            case COMMAND_DEACTIVATE:
+                break;
+
+            case COMMAND_SOUND_FX:
+                if (item->frame_number == *(command))
+                    SoundEffect((int)*(command + 1), &item->pos, SFX_ALWAYS);
+                command += 2;
+                break;
+
+            case COMMAND_EFFECT:
+                if (item->frame_number == *(command))
+                    (*effect_routines[(int)*(command + 1)])(item);
+                command += 2;
+                break;
+            }
+        }
+    }
+
+    if (!item->gravity_status)
+    {
+        speed = anim->velocity;
+        if (anim->acceleration)
+            speed += anim->acceleration * (item->frame_number - anim->frame_base);
+        item->speed = (sint16)(speed >> 16);
+    }
+    else
+    {
+        speed = anim->velocity + anim->acceleration * (item->frame_number - anim->frame_base - 1);
+        item->speed -= speed >> 16;
+        speed += anim->acceleration;
+        item->speed += speed >> 16;
+
+        item->fallspeed += (item->fallspeed < FASTFALL_SPEED) ? GRAVITY : 1;
+
+        item->pos.y_pos += item->fallspeed;
+    }
+    item->pos.x_pos += (phd_sin(lara.move_angle) * item->speed) >> W2V_SHIFT;
+    item->pos.z_pos += (phd_cos(lara.move_angle) * item->speed) >> W2V_SHIFT;
+}
+
 void lara_as_walk(ITEM_INFO *item, COLL_INFO *coll);
 void lara_as_run(ITEM_INFO *item, COLL_INFO *coll);
 void lara_as_stop(ITEM_INFO *item, COLL_INFO *coll);

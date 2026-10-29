@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">51.33% (405)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">48.67% (384)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">51.46% (406)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">48.54% (383)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="383.44" height="6" x="0" y="0" class="named"/>
-<rect width="363.56" height="6" x="383.44" y="0" class="todo"/>
+<rect width="384.39" height="6" x="0" y="0" class="named"/>
+<rect width="362.61" height="6" x="384.39" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -473,7 +473,7 @@
 <rect width="12" height="12" x="45" y="120" class="named"><title>0x00028300 LaraLandedBad (169 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="120" class="named"><title>0x000283b0 LaraControl (1018 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="120" class="named"><title>0x000287ac LaraSwapMeshExtra (65 bytes)</title></rect>
-<rect width="12" height="12" x="90" y="120" class="todo"><title>0x00028820 AnimateLara (732 bytes)</title></rect>
+<rect width="12" height="12" x="90" y="120" class="named"><title>0x00028820 AnimateLara (732 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="120" class="todo"><title>0x00028afc UseItem (508 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="120" class="todo"><title>0x00028cf8 Func28cf8 (28 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="120" class="todo"><title>0x00028d14 Func28d14 (34 bytes)</title></rect>
@@ -860,10 +860,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">46.70%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">53.30%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">47.06%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">52.94%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="348.87" height="6" x="0" y="0" class="named"/>
-<rect width="398.13" height="6" x="348.87" y="0" class="todo"/>
+<rect width="351.55" height="6" x="0" y="0" class="named"/>
+<rect width="395.45" height="6" x="351.55" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -929,7 +929,7 @@
 <rect width="21.94" height="23.77" x="294.89" y="136.98" class="named"><title>0x00018464 zLOS (747 bytes)</title></rect>
 <rect width="21.94" height="23.56" x="294.89" y="163.76" class="named"><title>0x00018750 xLOS (741 bytes)</title></rect>
 <rect width="21.94" height="23.45" x="294.89" y="190.31" class="todo"><title>0x00046000 JoyRead (738 bytes)</title></rect>
-<rect width="21.94" height="23.24" x="294.89" y="216.76" class="todo"><title>0x00028820 AnimateLara (732 bytes)</title></rect>
+<rect width="21.94" height="23.24" x="294.89" y="216.76" class="named"><title>0x00028820 AnimateLara (732 bytes)</title></rect>
 <rect width="22.44" height="22.12" x="319.82" y="0" class="named"><title>0x00013608 MoveCamera (715 bytes)</title></rect>
 <rect width="22.44" height="21.84" x="319.82" y="25.12" class="named"><title>0x00016ff4 AnimateItem (707 bytes)</title></rect>
 <rect width="22.44" height="21.45" x="319.82" y="49.96" class="todo"><title>0x00035020 Func35020 (696 bytes)</title></rect>
