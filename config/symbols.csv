@@ -322,7 +322,7 @@ address,size,name,symbol
 0x00025ac8,15,lara_as_upjump,lara_as_upjump_
 0x00025ad8,40,lara_as_fallback,lara_as_fallback_
 0x00025b00,54,lara_as_hangleft,lara_as_hangleft_
-0x00025b38,54,Func25b38,
+0x00025b38,54,lara_as_hangright,lara_as_hangright_
 0x00025b70,16,lara_as_slideback,lara_as_slideback_
 0x00025b80,42,Func25b80,
 0x00025bac,42,Func25bac,
