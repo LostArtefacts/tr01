@@ -338,3 +338,56 @@ void LaraTargetInfo(WEAPON_INFO *winfo)
     lara.target_angles[0] = ang[0];
     lara.target_angles[1] = ang[1];
 }
+
+void LaraGetNewTarget(WEAPON_INFO *winfo)
+{
+    int x, y, z;
+    int dist, maxdist, maxdist2;
+    ITEM_INFO *item, *bestitem;
+    PHD_ANGLE ang[2], bestyrot, yrot;
+    GAME_VECTOR src, target;
+    sint16 item_num;
+
+    src.x = lara_item->pos.x_pos;
+    src.y = lara_item->pos.y_pos - 650;
+    src.z = lara_item->pos.z_pos;
+    src.room_number = lara_item->room_number;
+    bestitem = NULL;
+    bestyrot = 32767;
+    maxdist = winfo->target_dist;
+    maxdist2 = maxdist * maxdist;
+    for (item_num = next_item_active; item_num != NO_ITEM; item_num = item->next_active)
+    {
+        item = &items[item_num];
+        if (item->hit_points <= 0)
+            continue;
+        x = item->pos.x_pos - src.x;
+        y = item->pos.y_pos - src.y;
+        z = item->pos.z_pos - src.z;
+        if ((ABS(x)) > maxdist || (ABS(y)) > maxdist || (ABS(z)) > maxdist)
+            continue;
+        dist = x * x + y * y + z * z;
+        if (dist < maxdist2)
+        {
+            find_target_point(item, &target);
+            if (LOS(&src, &target))
+            {
+                phd_GetVectorAngles(target.x - src.x, target.y - src.y, target.z - src.z, ang);
+                ang[0] -= lara_item->pos.y_rot + lara.torso_y_rot;
+                ang[1] -= lara_item->pos.x_rot + lara.torso_x_rot;
+                if (ang[0] >= winfo->lock_angles[0] && ang[0] <= winfo->lock_angles[1] && ang[1] >= winfo->lock_angles[2] && ang[1] <= winfo->lock_angles[3])
+                {
+                    yrot = ABS(ang[0]);
+                    if (yrot < bestyrot)
+                    {
+                        bestyrot = yrot;
+                        bestitem = item;
+                    }
+                }
+            }
+        }
+    }
+    lara.target = bestitem;
+
+    LaraTargetInfo(winfo);
+}

@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">56.20% (444)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">43.80% (346)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">56.33% (445)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">43.67% (345)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="419.83" height="6" x="0" y="0" class="named"/>
-<rect width="327.17" height="6" x="419.83" y="0" class="todo"/>
+<rect width="420.78" height="6" x="0" y="0" class="named"/>
+<rect width="326.22" height="6" x="420.78" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -512,7 +512,7 @@
 <rect width="12" height="12" x="630" y="120" class="named"><title>0x0002a460 LaraGun (904 bytes)</title></rect>
 <rect width="12" height="12" x="645" y="120" class="named"><title>0x0002a7e8 InitialiseNewWeapon (216 bytes)</title></rect>
 <rect width="12" height="12" x="660" y="120" class="named"><title>0x0002a8c0 LaraTargetInfo (405 bytes)</title></rect>
-<rect width="12" height="12" x="675" y="120" class="todo"><title>0x0002aa58 LaraGetNewTarget (449 bytes)</title></rect>
+<rect width="12" height="12" x="675" y="120" class="named"><title>0x0002aa58 LaraGetNewTarget (449 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="120" class="todo"><title>0x0002ac1c find_target_point (203 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="120" class="todo"><title>0x0002ace8 AimWeapon (183 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="120" class="todo"><title>0x0002ada0 FireWeapon (911 bytes)</title></rect>
@@ -861,10 +861,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">50.96%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">49.04%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">51.18%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">48.82%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="380.67" height="6" x="0" y="0" class="named"/>
-<rect width="366.33" height="6" x="380.67" y="0" class="todo"/>
+<rect width="382.31" height="6" x="0" y="0" class="named"/>
+<rect width="364.69" height="6" x="382.31" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -991,7 +991,7 @@
 <rect width="16.79" height="17.42" x="432.86" y="61.61" class="named"><title>0x0001a958 PrintRooms (452 bytes)</title></rect>
 <rect width="16.79" height="17.37" x="432.86" y="82.02" class="named"><title>0x00029f64 lara_as_surftread (451 bytes)</title></rect>
 <rect width="16.79" height="17.33" x="432.86" y="102.39" class="named"><title>0x0001083c S_DrawAirBar (450 bytes)</title></rect>
-<rect width="16.79" height="17.28" x="432.86" y="122.72" class="todo"><title>0x0002aa58 LaraGetNewTarget (449 bytes)</title></rect>
+<rect width="16.79" height="17.28" x="432.86" y="122.72" class="named"><title>0x0002aa58 LaraGetNewTarget (449 bytes)</title></rect>
 <rect width="16.79" height="17.23" x="432.86" y="143" class="todo"><title>0x000430fc Func430fc (448 bytes)</title></rect>
 <rect width="16.79" height="17.14" x="432.86" y="163.23" class="named"><title>0x00024870 InitialiseItem (446 bytes)</title></rect>
 <rect width="16.79" height="17.10" x="432.86" y="183.38" class="todo"><title>0x0003934c GetJointAbsPosition (445 bytes)</title></rect>
