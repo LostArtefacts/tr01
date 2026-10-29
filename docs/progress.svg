@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">28% (217)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">72% (558)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">28.13% (218)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">71.87% (557)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="209.16" height="6" x="0" y="0" class="named"/>
-<rect width="537.84" height="6" x="209.16" y="0" class="todo"/>
+<rect width="210.12" height="6" x="0" y="0" class="named"/>
+<rect width="536.88" height="6" x="210.12" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -286,7 +286,7 @@
 <rect width="12" height="12" x="240" y="60" class="named"><title>0x00020114 LevelStats (766 bytes)</title></rect>
 <rect width="12" height="12" x="255" y="60" class="named"><title>0x00020414 GetRandomControl (29 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="60" class="named"><title>0x00020434 SeedRandomControl (6 bytes)</title></rect>
-<rect width="12" height="12" x="285" y="60" class="todo"><title>0x0002043c GetRandomDraw (29 bytes)</title></rect>
+<rect width="12" height="12" x="285" y="60" class="named"><title>0x0002043c GetRandomDraw (29 bytes)</title></rect>
 <rect width="12" height="12" x="300" y="60" class="todo"><title>0x0002045c SeedRandomDraw (6 bytes)</title></rect>
 <rect width="12" height="12" x="315" y="60" class="todo"><title>0x00020464 Func20464 (76 bytes)</title></rect>
 <rect width="12" height="12" x="330" y="60" class="todo"><title>0x000204b0 Func204b0 (128 bytes)</title></rect>
@@ -846,10 +846,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">30.63%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">69.37%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">30.65%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">69.35%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="228.84" height="6" x="0" y="0" class="named"/>
-<rect width="518.16" height="6" x="228.84" y="0" class="todo"/>
+<rect width="228.94" height="6" x="0" y="0" class="named"/>
+<rect width="518.06" height="6" x="228.94" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1531,7 +1531,7 @@
 <rect width="2.29" height="1.90" x="739.43" y="203.94" class="named"><title>0x0001d00c phd_PutPolygons_I (29 bytes)</title></rect>
 <rect width="2.29" height="1.90" x="744.71" y="203.94" class="named"><title>0x0001e044 RaisingBlockFX (29 bytes)</title></rect>
 <rect width="2.21" height="1.98" x="710.99" y="208.84" class="named"><title>0x00020414 GetRandomControl (29 bytes)</title></rect>
-<rect width="2.21" height="1.98" x="710.99" y="213.82" class="todo"><title>0x0002043c GetRandomDraw (29 bytes)</title></rect>
+<rect width="2.21" height="1.98" x="710.99" y="213.82" class="named"><title>0x0002043c GetRandomDraw (29 bytes)</title></rect>
 <rect width="2.21" height="1.98" x="710.99" y="218.80" class="todo"><title>0x000245ec Func245ec (29 bytes)</title></rect>
 <rect width="2.21" height="1.81" x="710.99" y="223.77" class="named"><title>0x00014efc ControlCinematicPlayer4 (28 bytes)</title></rect>
 <rect width="2.21" height="1.81" x="710.99" y="228.58" class="todo"><title>0x00028cf8 Func28cf8 (28 bytes)</title></rect>
