@@ -532,3 +532,15 @@ int LoadCinematic(FILE *file)
     }
     return 1;
 }
+
+int LoadDemo(FILE *file)
+{
+    sint16 length;
+
+    democount = 0;
+    demoptr = (uint32 *)game_malloc(DEMOCOUNT_MAX * sizeof(uint32), LOADDEMO_BUFFER);
+    fread(&length, sizeof(sint16), 1, file);
+    if (length)
+        fread(demoptr, sizeof(char), length, file);
+    return 1;
+}

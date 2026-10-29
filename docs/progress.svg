@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">24.65% (191)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">75.35% (584)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">24.77% (192)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">75.23% (583)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="184.10" height="6" x="0" y="0" class="named"/>
-<rect width="562.90" height="6" x="184.10" y="0" class="todo"/>
+<rect width="185.06" height="6" x="0" y="0" class="named"/>
+<rect width="561.94" height="6" x="185.06" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -260,7 +260,7 @@
 <rect width="12" height="12" x="600" y="45" class="named"><title>0x0001f188 LoadBoxes (469 bytes)</title></rect>
 <rect width="12" height="12" x="615" y="45" class="named"><title>0x0001f360 LoadAnimatedTextures (76 bytes)</title></rect>
 <rect width="12" height="12" x="630" y="45" class="named"><title>0x0001f3ac LoadCinematic (95 bytes)</title></rect>
-<rect width="12" height="12" x="645" y="45" class="todo"><title>0x0001f40c LoadDemo (100 bytes)</title></rect>
+<rect width="12" height="12" x="645" y="45" class="named"><title>0x0001f40c LoadDemo (100 bytes)</title></rect>
 <rect width="12" height="12" x="660" y="45" class="todo"><title>0x0001f470 Func1f470 (49 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="45" class="todo"><title>0x0001f4a4 GetFullPath (33 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="45" class="todo"><title>0x0001f4c8 Func1f4c8 (123 bytes)</title></rect>
@@ -846,10 +846,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">28.70%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">71.30%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">28.75%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">71.25%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="214.41" height="6" x="0" y="0" class="named"/>
-<rect width="532.59" height="6" x="214.41" y="0" class="todo"/>
+<rect width="214.77" height="6" x="0" y="0" class="named"/>
+<rect width="532.23" height="6" x="214.77" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1288,7 +1288,7 @@
 <rect width="6.90" height="6.12" x="643.30" y="117.26" class="todo"><title>0x0003d9e8 phd_GetVectorAngles (101 bytes)</title></rect>
 <rect width="6.80" height="6.12" x="653.19" y="117.26" class="named"><title>0x0001d84c ControlTwinkle (100 bytes)</title></rect>
 <rect width="6.80" height="6.12" x="662.99" y="117.26" class="named"><title>0x0001e154 PowerUpFX (100 bytes)</title></rect>
-<rect width="6.80" height="6.12" x="672.79" y="117.26" class="todo"><title>0x0001f40c LoadDemo (100 bytes)</title></rect>
+<rect width="6.80" height="6.12" x="672.79" y="117.26" class="named"><title>0x0001f40c LoadDemo (100 bytes)</title></rect>
 <rect width="6.70" height="6.12" x="682.59" y="117.26" class="named"><title>0x0001d6f0 ControlExplosion1 (99 bytes)</title></rect>
 <rect width="6.70" height="6.12" x="692.29" y="117.26" class="todo"><title>0x0003aec4 Func3aec4 (99 bytes)</title></rect>
 <rect width="6.60" height="6.12" x="701.99" y="117.26" class="todo"><title>0x0001f8c4 Func1f8c4 (98 bytes)</title></rect>
