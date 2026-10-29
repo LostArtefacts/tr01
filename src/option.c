@@ -10,18 +10,27 @@ int detail_level = 1;
 TEXTSTRING *ctext[13] = {NULL};
 TEXTSTRING *btext[13] = {NULL};
 
+#define JOY_KEY 256
+
 void do_passport_option(INVENTORY_ITEM *inv_item);
 void do_gamma_option(INVENTORY_ITEM *inv_item);
 void do_detail_option(INVENTORY_ITEM *inv_item);
 void do_sound_option(INVENTORY_ITEM *inv_item);
 void do_compass_option(INVENTORY_ITEM *inv_item);
 void do_control_option(INVENTORY_ITEM *inv_item);
+void S_ShowControls(void);
+void S_ChangeCtrlText(void);
+void S_RemoveCtrlText(void);
 void GetSavedGamesList(REQUEST_INFO *req);
 void Init_Requester(REQUEST_INFO *req);
 sint32 Display_Requester(REQUEST_INFO *req);
 
 extern sint16 layout[2][13];
 extern int conflict[];
+extern char *kname[];
+
+int KeyGet(void);
+void KeyClearBuffer(void);
 
 sint32 m_status = 0;
 
@@ -616,6 +625,8 @@ void do_compass_option(INVENTORY_ITEM *inv_item)
     }
 }
 
+TEXTSTRING *control_text[2] = {NULL};
+
 void FlashConflicts(void)
 {
     int i, j;
@@ -661,6 +672,186 @@ void DefaultConflict(void)
             }
         }
     }
+}
+
+void do_control_option(INVENTORY_ITEM *inv_item)
+{
+    sint16 key;
+
+    if (!control_text[0])
+    {
+        if (iconfig)
+            control_text[0] = T_Print(0, -50, 0, str_heading);
+        else
+            control_text[0] = T_Print(0, -50, 0, str_default);
+        T_CentreH(control_text[0], 1);
+        T_CentreV(control_text[0], 1);
+        S_ShowControls();
+
+        keychange = -1;
+        T_AddOutline(control_text[0], 1, C_ORANGE, NULL, NULL);
+        T_AddBackground(control_text[0], 0, 0, 0, 0, 48, C_BLACK, 0, 0);
+    }
+
+    switch (select_key)
+    {
+    case 0:
+        if (inputDB & (IN_RIGHT | IN_LEFT))
+        {
+            if (keychange == -1)
+            {
+                iconfig = !iconfig;
+                S_ChangeCtrlText();
+                FlashConflicts();
+            }
+            else
+            {
+                T_RemoveOutline(ctext[keychange]);
+                T_RemoveBackground(ctext[keychange]);
+
+                if (keychange <= 6)
+                {
+                    keychange += 7;
+                    if (keychange == 13)
+                        keychange = 12;
+                }
+                else
+                {
+                    if (keychange == 12)
+                        keychange = 6;
+                    else
+                        keychange -= 7;
+                }
+
+                T_AddOutline(ctext[keychange], 1, C_ORANGE, NULL, NULL);
+                T_AddBackground(ctext[keychange], 0, 0, 0, 0, 48, C_BLACK, 0, 0);
+            }
+        }
+        else if ((inputDB & IN_DESELECT) || ((inputDB & IN_SELECT) && keychange == -1))
+        {
+            T_RemovePrint(control_text[0]);
+            T_RemovePrint(control_text[1]);
+            control_text[0] = NULL;
+            S_RemoveCtrlText();
+            DefaultConflict();
+            return;
+        }
+
+        if (iconfig)
+        {
+            if (inputDB & IN_SELECT)
+            {
+                select_key = 1;
+                T_RemoveOutline(ctext[keychange]);
+                T_RemoveBackground(ctext[keychange]);
+
+                T_AddOutline(btext[keychange], 1, C_ORANGE, NULL, NULL);
+                T_AddBackground(btext[keychange], 0, 0, 0, 0, 48, C_BLACK, 0, 0);
+            }
+            else if (inputDB & IN_FORWARD)
+            {
+                if (keychange == -1)
+                {
+                    T_RemoveOutline(control_text[0]);
+                    T_RemoveBackground(control_text[0]);
+                }
+                else
+                {
+                    T_RemoveOutline(ctext[keychange]);
+                    T_RemoveBackground(ctext[keychange]);
+                }
+
+                keychange--;
+                if (keychange < -1)
+                    keychange = 12;
+
+                if (keychange == -1)
+                {
+                    T_AddOutline(control_text[0], 1, C_ORANGE, NULL, NULL);
+                    T_AddBackground(control_text[0], 0, 0, 0, 0, 48, C_BLACK, 0, 0);
+                }
+                else
+                {
+                    T_AddOutline(ctext[keychange], 1, C_ORANGE, NULL, NULL);
+                    T_AddBackground(ctext[keychange], 0, 0, 0, 0, 48, C_BLACK, 0, 0);
+                }
+            }
+            else if (inputDB & IN_BACK)
+            {
+                if (keychange == -1)
+                {
+                    T_RemoveOutline(control_text[0]);
+                    T_RemoveBackground(control_text[0]);
+                }
+                else
+                {
+                    T_RemoveOutline(ctext[keychange]);
+                    T_RemoveBackground(ctext[keychange]);
+                }
+
+                keychange++;
+                if (keychange > 12)
+                    keychange = -1;
+
+                if (keychange == -1)
+                {
+                    T_AddOutline(control_text[0], 1, C_ORANGE, NULL, NULL);
+                    T_AddBackground(control_text[0], 0, 0, 0, 0, 48, C_BLACK, 0, 0);
+                }
+                else
+                {
+                    T_AddOutline(ctext[keychange], 1, C_ORANGE, NULL, NULL);
+                    T_AddBackground(ctext[keychange], 0, 0, 0, 0, 48, C_BLACK, 0, 0);
+                }
+            }
+        }
+        break;
+
+    case 1:
+        if (!(inputDB & IN_SELECT))
+            select_key = 2;
+        KeyClearBuffer();
+        break;
+
+    case 2:
+        if (joy_fire)
+            key = joy_fire + JOY_KEY;
+        else
+            key = KeyGet();
+
+        if (key && kname[key])
+        {
+            if (key == K_ESC || key == K_RET || key == K_LEFT || key == K_RIGHT || key == K_UP || key == K_DOWN)
+                break;
+
+            layout[iconfig][keychange] = key;
+            T_ChangeText(btext[keychange], kname[key]);
+
+            T_RemoveOutline(btext[keychange]);
+            T_RemoveBackground(btext[keychange]);
+
+            T_AddOutline(ctext[keychange], 1, C_ORANGE, NULL, NULL);
+            T_AddBackground(ctext[keychange], 0, 0, 0, 0, 48, C_BLACK, 0, 0);
+
+            select_key = 3;
+
+            FlashConflicts();
+        }
+        break;
+
+    case 3:
+        if (layout[iconfig][keychange] & JOY_KEY)
+        {
+            if (joy_fire != layout[iconfig][keychange])
+                select_key = 0;
+        }
+        else if (!rawkey(layout[iconfig][keychange]))
+            select_key = 0;
+        break;
+    }
+
+    input = 0;
+    inputDB = 0;
 }
 
 void Init_Requester(REQUEST_INFO *req)

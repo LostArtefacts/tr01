@@ -539,9 +539,9 @@ address,size,name,symbol
 0x00031338,117,FlashConflicts,FlashConflicts_
 0x000313b0,81,DefaultConflict,DefaultConflict_
 0x00031414,1496,do_control_option,do_control_option_
-0x000319ec,1181,Func319ec,
-0x00031e8c,124,Func31e8c,
-0x00031f08,51,Func31f08,
+0x000319ec,1181,S_ShowControls,S_ShowControls_
+0x00031e8c,124,S_ChangeCtrlText,S_ChangeCtrlText_
+0x00031f08,51,S_RemoveCtrlText,S_RemoveCtrlText_
 0x00031f3c,48,Init_Requester,Init_Requester_
 0x00031f6c,94,Remove_Requester,Remove_Requester_
 0x00031fcc,1152,Display_Requester,Display_Requester_
@@ -765,7 +765,7 @@ address,size,name,symbol
 0x00045c60,78,Func45c60,
 0x00045cb0,131,Func45cb0,
 0x00045d34,459,SwitchVideoMode,SwitchVideoMode_
-0x00045f00,39,Func45f00,
+0x00045f00,39,KeyClearBuffer,KeyClearBuffer_
 0x00045f28,66,Func45f28,
 0x00045f6c,148,Func45f6c,
 0x00046000,738,JoyRead,JoyRead_
@@ -904,7 +904,7 @@ address,size,name,symbol
 0x0004a144,47,time,time_
 0x0004a173,81,_localtime,_localtime_
 0x0004a1c4,13,localtime,localtime_
-0x0004a1d4,57,Func4a1d4,
+0x0004a1d4,57,KeyGet,KeyGet_
 0x0004a20d,189,Func4a20d,
 0x0004a2ca,161,Func4a2ca,
 0x0004a36b,148,Func4a36b,
@@ -1824,6 +1824,8 @@ address,size,name,symbol
 0x000c1e38,88,key2_strings,_key2_strings
 0x000c1e90,88,key3_strings,_key3_strings
 0x000c1ee8,88,key4_strings,_key4_strings
+0x000c1f60,13,str_default,_str_default
+0x000c1f6d,10,str_heading,_str_heading
 0x000c1fd1,11,str_timetaken,_str_timetaken
 0x000c1fdc,8,str_secrets,_str_secrets
 0x000c1fe4,8,str_pickups,_str_pickups
@@ -1842,6 +1844,7 @@ address,size,name,symbol
 0x000c20ac,156,game_malloc_strings,_game_malloc_strings
 0x000c2148,4,record_demo,_record_demo
 0x000c214c,52,layout,_layout
+0x000c2180,1088,kname,_kname
 0x000c25c0,4,inv_nframes,_inv_nframes
 0x000c271c,220,is_gamma_level,_is_gamma_level
 0x000c27f8,8,is_gamma_list,_is_gamma_list
@@ -1947,6 +1950,7 @@ address,size,name,symbol
 0x000c3c3e,2,normal_pitch,_normal_pitch
 0x000c3c40,20,dtext,_dtext
 0x000c3c54,16,sa_text,_sa_text
+0x000c3c64,8,control_text,_control_text
 0x000c3e38,4,number_cameras,_number_cameras
 0x000c3e68,128,exit_message,_exit_message
 0x000c3ee8,4,title_loaded,_title_loaded

@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">67.88% (539)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">32.12% (255)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">68.01% (540)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">31.99% (254)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="507.09" height="6" x="0" y="0" class="named"/>
-<rect width="239.91" height="6" x="507.09" y="0" class="todo"/>
+<rect width="508.04" height="6" x="0" y="0" class="named"/>
+<rect width="238.96" height="6" x="508.04" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -606,10 +606,10 @@
 <rect width="12" height="12" x="540" y="150" class="named"><title>0x0003131c do_compass_option (27 bytes)</title></rect>
 <rect width="12" height="12" x="555" y="150" class="named"><title>0x00031338 FlashConflicts (117 bytes)</title></rect>
 <rect width="12" height="12" x="570" y="150" class="named"><title>0x000313b0 DefaultConflict (81 bytes)</title></rect>
-<rect width="12" height="12" x="585" y="150" class="todo"><title>0x00031414 do_control_option (1496 bytes)</title></rect>
-<rect width="12" height="12" x="600" y="150" class="todo"><title>0x000319ec Func319ec (1181 bytes)</title></rect>
-<rect width="12" height="12" x="615" y="150" class="todo"><title>0x00031e8c Func31e8c (124 bytes)</title></rect>
-<rect width="12" height="12" x="630" y="150" class="todo"><title>0x00031f08 Func31f08 (51 bytes)</title></rect>
+<rect width="12" height="12" x="585" y="150" class="named"><title>0x00031414 do_control_option (1496 bytes)</title></rect>
+<rect width="12" height="12" x="600" y="150" class="todo"><title>0x000319ec S_ShowControls (1181 bytes)</title></rect>
+<rect width="12" height="12" x="615" y="150" class="todo"><title>0x00031e8c S_ChangeCtrlText (124 bytes)</title></rect>
+<rect width="12" height="12" x="630" y="150" class="todo"><title>0x00031f08 S_RemoveCtrlText (51 bytes)</title></rect>
 <rect width="12" height="12" x="645" y="150" class="named"><title>0x00031f3c Init_Requester (48 bytes)</title></rect>
 <rect width="12" height="12" x="660" y="150" class="todo"><title>0x00031f6c Remove_Requester (94 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="150" class="todo"><title>0x00031fcc Display_Requester (1152 bytes)</title></rect>
@@ -833,7 +833,7 @@
 <rect width="12" height="12" x="195" y="225" class="todo"><title>0x00045c60 Func45c60 (78 bytes)</title></rect>
 <rect width="12" height="12" x="210" y="225" class="todo"><title>0x00045cb0 Func45cb0 (131 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="225" class="todo"><title>0x00045d34 SwitchVideoMode (459 bytes)</title></rect>
-<rect width="12" height="12" x="240" y="225" class="todo"><title>0x00045f00 Func45f00 (39 bytes)</title></rect>
+<rect width="12" height="12" x="240" y="225" class="todo"><title>0x00045f00 KeyClearBuffer (39 bytes)</title></rect>
 <rect width="12" height="12" x="255" y="225" class="todo"><title>0x00045f28 Func45f28 (66 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="225" class="todo"><title>0x00045f6c Func45f6c (148 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="225" class="todo"><title>0x00046000 JoyRead (738 bytes)</title></rect>
@@ -865,10 +865,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">63.65%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">36.35%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">64.37%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">35.63%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="475.46" height="6" x="0" y="0" class="named"/>
-<rect width="271.54" height="6" x="475.46" y="0" class="todo"/>
+<rect width="480.85" height="6" x="0" y="0" class="named"/>
+<rect width="266.15" height="6" x="480.85" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.01" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -886,7 +886,7 @@
 <rect width="33.05" height="38.49" x="102.39" y="87.34" class="named"><title>0x000151c0 GetCollisionInfo (1702 bytes)</title></rect>
 <rect width="33.05" height="36.49" x="102.39" y="128.82" class="named"><title>0x0002e2ec NatlaControl (1620 bytes)</title></rect>
 <rect width="33.05" height="35.22" x="102.39" y="168.31" class="named"><title>0x00017a40 TestTriggers (1568 bytes)</title></rect>
-<rect width="33.05" height="33.47" x="102.39" y="206.53" class="todo"><title>0x00031414 do_control_option (1496 bytes)</title></rect>
+<rect width="33.05" height="33.47" x="102.39" y="206.53" class="named"><title>0x00031414 do_control_option (1496 bytes)</title></rect>
 <rect width="32.28" height="32.99" x="138.44" y="0" class="named"><title>0x000158a8 CollideStaticObjects (1445 bytes)</title></rect>
 <rect width="32.28" height="32.77" x="138.44" y="35.99" class="todo"><title>0x00042910 ins_poly_trans8 (1436 bytes)</title></rect>
 <rect width="32.28" height="32.29" x="138.44" y="71.76" class="named"><title>0x0001ac74 DrawAnimatingItem (1417 bytes)</title></rect>
@@ -899,7 +899,7 @@
 <rect width="28.37" height="32.74" x="173.71" y="72.88" class="named"><title>0x000145c8 CalculateCamera (1276 bytes)</title></rect>
 <rect width="28.37" height="32.29" x="173.71" y="108.62" class="named"><title>0x00030e30 do_sound_option (1260 bytes)</title></rect>
 <rect width="28.37" height="30.75" x="173.71" y="143.91" class="named"><title>0x0002ddfc TorsoControl (1205 bytes)</title></rect>
-<rect width="28.37" height="30.08" x="173.71" y="177.66" class="todo"><title>0x000319ec Func319ec (1181 bytes)</title></rect>
+<rect width="28.37" height="30.08" x="173.71" y="177.66" class="todo"><title>0x000319ec S_ShowControls (1181 bytes)</title></rect>
 <rect width="28.37" height="29.27" x="173.71" y="210.73" class="todo"><title>0x00031fcc Display_Requester (1152 bytes)</title></rect>
 <rect width="28.87" height="27.96" x="205.09" y="0" class="named"><title>0x00013af0 SmartShift (1123 bytes)</title></rect>
 <rect width="28.87" height="27.88" x="205.09" y="30.96" class="named"><title>0x000122fc CalculateTarget (1120 bytes)</title></rect>
@@ -1257,7 +1257,7 @@
 <rect width="7.33" height="7.55" x="603.39" y="148.65" class="named"><title>0x000209a8 DrawHealthBar (124 bytes)</title></rect>
 <rect width="7.33" height="7.55" x="603.39" y="159.20" class="named"><title>0x00023cc0 Inv_RequestItem (124 bytes)</title></rect>
 <rect width="7.33" height="7.55" x="603.39" y="169.75" class="named"><title>0x0002f43c DrawMovableBlock (124 bytes)</title></rect>
-<rect width="7.33" height="7.55" x="603.39" y="180.30" class="todo"><title>0x00031e8c Func31e8c (124 bytes)</title></rect>
+<rect width="7.33" height="7.55" x="603.39" y="180.30" class="todo"><title>0x00031e8c S_ChangeCtrlText (124 bytes)</title></rect>
 <rect width="7.33" height="7.55" x="603.39" y="190.85" class="todo"><title>0x00032500 Func32500 (124 bytes)</title></rect>
 <rect width="7.33" height="7.46" x="603.39" y="201.40" class="named"><title>0x0001f4c8 FindCdDrive (123 bytes)</title></rect>
 <rect width="7.33" height="7.38" x="603.39" y="211.86" class="named"><title>0x0001e0d8 SandFX (122 bytes)</title></rect>
@@ -1441,7 +1441,7 @@
 <rect width="3.66" height="3.73" x="673.70" y="216.07" class="named"><title>0x00015f84 ShiftItem (51 bytes)</title></rect>
 <rect width="3.66" height="3.73" x="673.70" y="222.80" class="named"><title>0x0001a2b4 S_FadeInInventory (51 bytes)</title></rect>
 <rect width="3.66" height="3.73" x="673.70" y="229.53" class="named"><title>0x0002fe88 DrawBridgeFloor (51 bytes)</title></rect>
-<rect width="3.66" height="3.73" x="673.70" y="236.27" class="todo"><title>0x00031f08 Func31f08 (51 bytes)</title></rect>
+<rect width="3.66" height="3.73" x="673.70" y="236.27" class="todo"><title>0x00031f08 S_RemoveCtrlText (51 bytes)</title></rect>
 <rect width="3.45" height="3.81" x="680.35" y="166.95" class="named"><title>0x0001d4a8 GetBestFrame (50 bytes)</title></rect>
 <rect width="3.32" height="3.81" x="686.80" y="166.95" class="named"><title>0x0001a3b4 DrawPhaseGame (49 bytes)</title></rect>
 <rect width="3.32" height="3.81" x="693.12" y="166.95" class="named"><title>0x0001ce84 phd_PushMatrix_I (49 bytes)</title></rect>
@@ -1510,7 +1510,7 @@
 <rect width="3.15" height="2.57" x="693.51" y="220.71" class="named"><title>0x0002fef0 DrawBridgeCollision (39 bytes)</title></rect>
 <rect width="3.15" height="2.57" x="693.51" y="226.28" class="todo"><title>0x0003647c Func3647c (39 bytes)</title></rect>
 <rect width="3.15" height="2.57" x="693.51" y="231.86" class="todo"><title>0x00042eb0 Func42eb0 (39 bytes)</title></rect>
-<rect width="3.15" height="2.57" x="693.51" y="237.43" class="todo"><title>0x00045f00 Func45f00 (39 bytes)</title></rect>
+<rect width="3.15" height="2.57" x="693.51" y="237.43" class="todo"><title>0x00045f00 KeyClearBuffer (39 bytes)</title></rect>
 <rect width="2.66" height="2.90" x="699.66" y="192.28" class="named"><title>0x00020980 DrawGameInfo (38 bytes)</title></rect>
 <rect width="2.66" height="2.90" x="705.32" y="192.28" class="named"><title>0x00025cdc lara_as_special (38 bytes)</title></rect>
 <rect width="2.66" height="2.90" x="710.98" y="192.28" class="todo"><title>0x00042ed8 Func42ed8 (38 bytes)</title></rect>
