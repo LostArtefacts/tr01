@@ -623,9 +623,9 @@ address,size,name,symbol
 0x00039700,8,Func39700,
 0x00039708,25,T_FlashText,T_FlashText_
 0x00039724,58,T_AddBackground,T_AddBackground_
-0x00039760,5,Func39760,
-0x00039768,27,Func39768,
-0x00039784,5,Func39784,
+0x00039760,5,T_RemoveBackground,T_RemoveBackground_
+0x00039768,27,T_AddOutline,T_AddOutline_
+0x00039784,5,T_RemoveOutline,T_RemoveOutline_
 0x0003978c,13,T_CentreH,T_CentreH_
 0x0003979c,13,T_CentreV,T_CentreV_
 0x000397ac,13,T_RightAlign,T_RightAlign_
@@ -1830,6 +1830,10 @@ address,size,name,symbol
 0x000c1fec,6,str_kills,_str_kills
 0x000c1ff2,3,str_of,_str_of
 0x000c2042,11,sav_mess7,_sav_mess7
+0x000c2064,14,str_detail,_str_detail
+0x000c2072,5,str_high,_str_high
+0x000c2077,7,str_medium,_str_medium
+0x000c207e,4,str_low,_str_low
 0x000c2084,4,overlay_flag,_overlay_flag
 0x000c208c,4,ammotext,_ammotext
 0x000c2090,24,game_setup,_game_setup
@@ -1934,6 +1938,9 @@ address,size,name,symbol
 0x000c3c30,4,m_status,_m_status
 0x000c3c34,4,passport_text1,_passport_text1
 0x000c3c38,4,passport_mode,_passport_mode
+0x000c3c3c,2,sam_num,_sam_num
+0x000c3c3e,2,normal_pitch,_normal_pitch
+0x000c3c40,20,dtext,_dtext
 0x000c3e38,4,number_cameras,_number_cameras
 0x000c3e68,128,exit_message,_exit_message
 0x000c3ee8,4,title_loaded,_title_loaded

@@ -119,6 +119,9 @@ TEXTSTRING *passport_text1 = NULL;
 
 int passport_mode = 0;
 
+sint16 sam_num = 0;
+sint16 normal_pitch = 0x1700;
+
 void do_passport_option(INVENTORY_ITEM *inv_item)
 {
     sint16 page;
@@ -391,6 +394,80 @@ void do_gamma_option(INVENTORY_ITEM *inv_item)
             gamma = -255;
         if (Inventory_Mode != INV_TITLE_MODE)
             S_SetBackgroundGamma(gamma);
+    }
+}
+
+TEXTSTRING *dtext[5] = {NULL};
+
+#define DWIDTH 160
+
+void do_detail_option(INVENTORY_ITEM *inv_item)
+{
+    int i;
+
+    if (dtext[0] == NULL)
+    {
+        dtext[2] = T_Print(0, 0, 0, str_high);
+        dtext[1] = T_Print(0, 25, 0, str_medium);
+        dtext[0] = T_Print(0, 50, 0, str_low);
+        dtext[3] = T_Print(0, -32, 0, " ");
+        dtext[4] = T_Print(0, -30, 0, str_detail);
+
+        T_AddBackground(dtext[4], DWIDTH - 4, 0, 0, 0, 8, C_BLACK, NULL, NULL);
+        T_AddOutline(dtext[4], 1, C_ORANGE, NULL, NULL);
+
+        T_AddBackground(dtext[detail_level], DWIDTH - 12, 0, 0, 0, 8, C_BLACK, NULL, NULL);
+        T_AddOutline(dtext[detail_level], 1, C_ORANGE, NULL, NULL);
+
+        T_AddBackground(dtext[3], DWIDTH, 107, 0, 0, 16, C_BLACK, NULL, NULL);
+        T_AddOutline(dtext[3], 1, C_BLUE, NULL, NULL);
+
+        for (i = 0; i < 5; i++)
+        {
+            T_CentreH(dtext[i], 1);
+            T_CentreV(dtext[i], 1);
+        }
+    }
+
+    if ((inputDB & IN_BACK) && detail_level > 0)
+    {
+        T_RemoveOutline(dtext[detail_level]);
+        T_RemoveBackground(dtext[detail_level]);
+
+        detail_level--;
+
+        T_AddOutline(dtext[detail_level], 1, C_ORANGE, NULL, NULL);
+        T_AddBackground(dtext[detail_level], DWIDTH - 12, 0, 0, 0, 8, C_BLACK, NULL, NULL);
+    }
+    if ((inputDB & IN_FORWARD) && detail_level < 2)
+    {
+        T_RemoveOutline(dtext[detail_level]);
+        T_RemoveBackground(dtext[detail_level]);
+
+        detail_level++;
+
+        T_AddOutline(dtext[detail_level], 1, C_ORANGE, NULL, NULL);
+        T_AddBackground(dtext[detail_level], DWIDTH - 12, 0, 0, 0, 8, C_BLACK, NULL, NULL);
+    }
+
+    switch (detail_level)
+    {
+    case 0:
+        perspective_distance = 0 * 1024 * W2V_SCALE;
+        break;
+    case 1:
+        perspective_distance = 3 * 1024 * W2V_SCALE;
+        break;
+    case 2:
+        perspective_distance = 6 * 1024 * W2V_SCALE;
+        break;
+    }
+
+    if (inputDB & (SELECT_ITEM | DESELECT_ITEM))
+    {
+        for (i = 0; i < 5; i++)
+            T_RemovePrint(dtext[i]);
+        dtext[0] = NULL;
     }
 }
 
