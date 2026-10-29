@@ -1,4 +1,5 @@
 #include "game.h"
+#include <string.h>
 
 #define LIGHTENING_DAMAGE 400
 
@@ -260,4 +261,22 @@ void LightningCollision(sint16 item_num, ITEM_INFO *laraitem, COLL_INFO *coll)
     lara.hit_frame++;
     if (lara.hit_frame > 34)
         lara.hit_frame = 34;
+}
+
+void InitialiseThorsHandle(sint16 item_num)
+{
+    ITEM_INFO *handitem;
+    ITEM_INFO *headitem;
+    sint16 headnum;
+
+    handitem = &items[item_num];
+    headnum = CreateItem();
+    headitem = &items[headnum];
+    headitem->object_number = THORS_HEAD;
+    headitem->room_number = handitem->room_number;
+    memcpy(&headitem->pos, &handitem->pos, sizeof(PHD_3DPOS));
+    headitem->shade = handitem->shade;
+    InitialiseItem(headnum);
+    handitem->data = (void *)headitem;
+    level_items++;
 }

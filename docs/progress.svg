@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">59.29% (469)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">40.71% (322)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">59.42% (470)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">40.58% (321)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="442.91" height="6" x="0" y="0" class="named"/>
-<rect width="304.09" height="6" x="442.91" y="0" class="todo"/>
+<rect width="443.86" height="6" x="0" y="0" class="named"/>
+<rect width="303.14" height="6" x="443.86" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -537,7 +537,7 @@
 <rect width="12" height="12" x="255" y="135" class="named"><title>0x0002c574 InitialiseLightning (125 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="135" class="named"><title>0x0002c5f4 LightningControl (671 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="135" class="named"><title>0x0002c894 LightningCollision (88 bytes)</title></rect>
-<rect width="12" height="12" x="300" y="135" class="todo"><title>0x0002c8ec InitialiseThorsHandle (125 bytes)</title></rect>
+<rect width="12" height="12" x="300" y="135" class="named"><title>0x0002c8ec InitialiseThorsHandle (125 bytes)</title></rect>
 <rect width="12" height="12" x="315" y="135" class="todo"><title>0x0002c97c ThorsHandleControl (666 bytes)</title></rect>
 <rect width="12" height="12" x="330" y="135" class="todo"><title>0x0002cc18 ThorsHandleCollision (69 bytes)</title></rect>
 <rect width="12" height="12" x="345" y="135" class="todo"><title>0x0002cc60 ThorsHeadCollision (76 bytes)</title></rect>
@@ -862,10 +862,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">54.60%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">45.40%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">54.66%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">45.34%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="407.87" height="6" x="0" y="0" class="named"/>
-<rect width="339.13" height="6" x="407.87" y="0" class="todo"/>
+<rect width="408.33" height="6" x="0" y="0" class="named"/>
+<rect width="338.67" height="6" x="408.33" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.78" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1247,7 +1247,7 @@
 <rect width="7.93" height="7.35" x="602.88" y="201.92" class="named"><title>0x0001dfc4 FloodFX (127 bytes)</title></rect>
 <rect width="7.93" height="7.35" x="602.88" y="212.27" class="named"><title>0x00024d00 GlobalItemReplace (127 bytes)</title></rect>
 <rect width="7.93" height="7.19" x="602.88" y="222.62" class="named"><title>0x0002c574 InitialiseLightning (125 bytes)</title></rect>
-<rect width="7.93" height="7.19" x="602.88" y="232.81" class="todo"><title>0x0002c8ec InitialiseThorsHandle (125 bytes)</title></rect>
+<rect width="7.93" height="7.19" x="602.88" y="232.81" class="named"><title>0x0002c8ec InitialiseThorsHandle (125 bytes)</title></rect>
 <rect width="7.57" height="7.45" x="613.82" y="95.97" class="named"><title>0x0001bb1c DrawGunFlash (124 bytes)</title></rect>
 <rect width="7.57" height="7.45" x="624.38" y="95.97" class="named"><title>0x000209a8 DrawHealthBar (124 bytes)</title></rect>
 <rect width="7.57" height="7.45" x="634.95" y="95.97" class="named"><title>0x00023cc0 Inv_RequestItem (124 bytes)</title></rect>
