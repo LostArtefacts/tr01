@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">46.56% (366)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">53.44% (420)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">46.69% (367)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">53.31% (419)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="347.84" height="6" x="0" y="0" class="named"/>
-<rect width="399.16" height="6" x="347.84" y="0" class="todo"/>
+<rect width="348.79" height="6" x="0" y="0" class="named"/>
+<rect width="398.21" height="6" x="348.79" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -432,7 +432,7 @@
 <rect width="12" height="12" x="180" y="105" class="named"><title>0x00026cc8 lara_col_slide (19 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="105" class="named"><title>0x00026cdc lara_col_backjump (22 bytes)</title></rect>
 <rect width="12" height="12" x="210" y="105" class="named"><title>0x00026cf4 lara_col_rightjump (22 bytes)</title></rect>
-<rect width="12" height="12" x="225" y="105" class="todo"><title>0x00026d0c Func26d0c (25 bytes)</title></rect>
+<rect width="12" height="12" x="225" y="105" class="named"><title>0x00026d0c lara_col_leftjump (25 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="105" class="todo"><title>0x00026d28 Func26d28 (160 bytes)</title></rect>
 <rect width="12" height="12" x="255" y="105" class="todo"><title>0x00026dc8 Func26dc8 (150 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="105" class="todo"><title>0x00026e60 lara_col_hangleft (45 bytes)</title></rect>
@@ -857,10 +857,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">43.46%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">56.54%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">43.47%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">56.53%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="324.62" height="6" x="0" y="0" class="named"/>
-<rect width="422.38" height="6" x="324.62" y="0" class="todo"/>
+<rect width="324.71" height="6" x="0" y="0" class="named"/>
+<rect width="422.29" height="6" x="324.71" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1557,7 +1557,7 @@
 <rect width="1.97" height="1.67" x="716.20" y="233.65" class="todo"><title>0x00034d08 Func34d08 (26 bytes)</title></rect>
 <rect width="1.97" height="1.67" x="716.20" y="238.33" class="todo"><title>0x000398ec Func398ec (26 bytes)</title></rect>
 <rect width="1.96" height="1.68" x="721.17" y="209.39" class="todo"><title>0x0003f044 Func3f044 (26 bytes)</title></rect>
-<rect width="1.77" height="1.68" x="726.13" y="209.39" class="todo"><title>0x00026d0c Func26d0c (25 bytes)</title></rect>
+<rect width="1.77" height="1.68" x="726.13" y="209.39" class="named"><title>0x00026d0c lara_col_leftjump (25 bytes)</title></rect>
 <rect width="1.77" height="1.68" x="730.91" y="209.39" class="todo"><title>0x0002a154 Func2a154 (25 bytes)</title></rect>
 <rect width="1.77" height="1.68" x="735.68" y="209.39" class="todo"><title>0x00039708 T_FlashText (25 bytes)</title></rect>
 <rect width="1.77" height="1.68" x="740.45" y="209.39" class="todo"><title>0x0003f02b phd_sin (25 bytes)</title></rect>
