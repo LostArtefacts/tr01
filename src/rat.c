@@ -149,3 +149,118 @@ void RatControl(sint16 item_number)
 
     CreatureAnimation(item_number, angle, 0);
 }
+
+void VoleControl(sint16 item_number)
+{
+    ITEM_INFO *item;
+    CREATURE_INFO *vole;
+    sint16 head, angle;
+    sint32 height, water_level;
+    AI_INFO info;
+
+    item = &items[item_number];
+    if (item->status == INVISIBLE)
+    {
+        if (!EnableBaddieAI(item_number, 0))
+            return;
+        item->status = ACTIVE;
+    }
+    vole = (CREATURE_INFO *)item->data;
+    head = angle = 0;
+
+    if (item->hit_points <= 0)
+    {
+        if (item->current_anim_state != VOLE_DEATH)
+        {
+            item->anim_number = objects[VOLE].anim_index + VOLE_DIE_ANIM;
+            item->frame_number = anims[item->anim_number].frame_base;
+            item->current_anim_state = VOLE_DEATH;
+        }
+
+        CreatureHead(item, head);
+
+        AnimateItem(item);
+        if (item->status == DEACTIVATED)
+        {
+            item->collidable = 0;
+            item->hit_points = DONT_TARGET;
+
+            if (CurrentLevel != LEVEL7A)
+            {
+                DisableBaddieAI(item_number);
+                RemoveActiveItem(item_number);
+            }
+            else
+                item->status = ACTIVE;
+        }
+
+        if (GetWaterHeight(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, item->room_number) == NO_HEIGHT)
+        {
+            item->object_number = RAT;
+            item->anim_number = objects[RAT].anim_index + RAT_DIE_ANIM;
+            item->frame_number = anims[item->anim_number].frame_base;
+            item->current_anim_state = item->goal_anim_state = RAT_DEATH;
+            item->pos.y_pos = item->floor;
+        }
+
+        return;
+    }
+    else
+    {
+        CreatureAIInfo(item, &info);
+
+        if (info.ahead)
+            head = info.angle;
+
+        CreatureMood(item, &info, VIOLENT);
+
+        angle = CreatureTurn(item, VOLE_SWIM_TURN);
+
+        switch (item->current_anim_state)
+        {
+        case VOLE_SWIM:
+            if (info.ahead && (item->touch_bits & RAT_TOUCH))
+                item->goal_anim_state = VOLE_ATTACK;
+            break;
+
+        case VOLE_ATTACK:
+            if (!item->required_anim_state && info.ahead && (item->touch_bits & RAT_TOUCH))
+            {
+                CreatureEffect(item, &rat_bite, DoBloodSplat);
+
+                lara_item->hit_points -= RAT_BITE_DAMAGE;
+                lara_item->hit_status = 1;
+
+                item->required_anim_state = VOLE_SWIM;
+            }
+            item->goal_anim_state = VOLE_EMPTY;
+            break;
+        }
+    }
+
+    CreatureHead(item, head);
+
+    water_level = GetWaterHeight(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, item->room_number);
+    if (water_level == NO_HEIGHT)
+    {
+        item->object_number = RAT;
+        item->anim_number = objects[RAT].anim_index;
+        item->frame_number = anims[item->anim_number].frame_base;
+        item->current_anim_state = item->goal_anim_state = anims[item->anim_number].current_anim_state;
+    }
+
+    height = item->pos.y_pos;
+    item->pos.y_pos = item->floor;
+
+    CreatureAnimation(item_number, angle, 0);
+
+    if (height != NO_HEIGHT)
+    {
+        if (water_level - height < -STEP_L / 8)
+            item->pos.y_pos = height - STEP_L / 8;
+        else if (water_level - height > STEP_L / 8)
+            item->pos.y_pos = height + STEP_L / 8;
+        else
+            item->pos.y_pos = water_level;
+    }
+}
