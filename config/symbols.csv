@@ -11,7 +11,7 @@ address,size,name,symbol
 0x00010668,465,S_DrawHealthBar,S_DrawHealthBar_
 0x0001083c,450,S_DrawAirBar,S_DrawAirBar_
 0x00010a00,161,AnimateTextures,AnimateTextures_
-0x00010aa4,74,Func10aa4,
+0x00010aa4,74,S_SetupBelowWater,S_SetupBelowWater_
 0x00010af0,16,Func10af0,
 0x00010b00,37,S_AnimateTextures,S_AnimateTextures_
 0x00010b28,936,Func10b28,
@@ -1736,10 +1736,14 @@ address,size,name,symbol
 0x0008f9e2,88,__Intel_hook_init,__Intel_hook_init_
 0x0008fa3a,1,Func8fa3a,
 0x0008fa3b,3,Func8fa3b,
+0x000c17a0,4,wet,_wet
 0x000c17a4,60,shadowman,_shadowman
 0x000c1988,4,CurrentLevel,_CurrentLevel
 0x000c2090,24,game_setup,_game_setup
+0x000c40a0,4,water_effect,_water_effect
+0x000c40a4,4,shade_effect,_shade_effect
 0x000cac70,768,game_palette,_game_palette
+0x000caf70,768,water_palette,_water_palette
 0x000cb274,4,aranges,_aranges
 0x000cc088,4,room,_room
 0x000d4744,48000,vbuf,_vbuf

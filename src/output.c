@@ -2,7 +2,6 @@
 #include "shell.h"
 #include "3dglodef.h"
 
-extern uint8 game_palette[256 * 3];
 
 #define DEPTHQ_END (20 * 1024)
 #define DEPTHQ_START ((DEPTHQ_END) - (8 * 1024))
@@ -16,6 +15,9 @@ extern uint8 game_palette[256 * 3];
 #define AirBarW 100
 
 #define ANIMATED_TEXTURE 10
+
+int wet = 0;
+uint8 game_palette[256 * 3], water_palette[256 * 3];
 
 sint16 *aranges;
 
@@ -374,4 +376,21 @@ void AnimateTextures(int nframes)
         }
         frame_comp -= ANIMATED_TEXTURE;
     }
+}
+
+void S_SetupBelowWater(int underwater)
+{
+    if (underwater ^ wet)
+    {
+        if (underwater)
+            FadeToPal(1, water_palette);
+        else
+            FadeToPal(1, game_palette);
+
+        wet = underwater;
+    }
+
+    water_effect = !underwater;
+
+    shade_effect = 1;
 }
