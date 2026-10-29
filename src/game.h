@@ -11,4 +11,6 @@
 extern int CurrentLevel;
 extern ROOM_INFO *room;
 
+sint32 GetRandomControl(void);
+
 #endif

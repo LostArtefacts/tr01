@@ -18,6 +18,7 @@ address,size,name,symbol
 0x00010ed0,138,S_DisplayPicture,S_DisplayPicture_
 0x00010f5c,246,decomp_pcx,decomp_pcx_
 0x00011060,313,BatControl,BatControl_
+0x000111e8,1087,BearControl,BearControl_
 0x00011630,67,Func11630,
 0x00011674,634,CreatureAIInfo,CreatureAIInfo_
 0x000118f0,549,Func118f0,
@@ -33,7 +34,7 @@ address,size,name,symbol
 0x00012910,2734,CreatureAnimation,CreatureAnimation_
 0x000133c0,185,CreatureTurn,CreatureTurn_
 0x0001347c,44,Func1347c,
-0x000134a8,86,Func134a8,
+0x000134a8,86,CreatureHead,CreatureHead_
 0x00013500,82,CreatureEffect,CreatureEffect_
 0x00013560,168,Func13560,
 0x00013608,715,Func13608,
@@ -211,7 +212,7 @@ address,size,name,symbol
 0x0001ff1c,96,Func1ff1c,
 0x0001ffcc,328,LevelCompleteSequence,LevelCompleteSequence_
 0x00020114,766,Func20114,
-0x00020414,29,Func20414,
+0x00020414,29,GetRandomControl,GetRandomControl_
 0x00020434,6,Func20434,
 0x0002043c,29,Func2043c,
 0x0002045c,6,Func2045c,
@@ -1739,6 +1740,7 @@ address,size,name,symbol
 0x000c17a0,4,wet,_wet
 0x000c17a4,60,shadowman,_shadowman
 0x000c17e4,16,bat_bite,_bat_bite
+0x000c17f4,16,bear_head_bite,_bear_head_bite
 0x000c1888,4,bckscrn,_bckscrn
 0x000c1988,4,CurrentLevel,_CurrentLevel
 0x000c2090,24,game_setup,_game_setup

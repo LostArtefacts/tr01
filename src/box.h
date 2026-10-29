@@ -64,9 +64,11 @@ void CreatureAIInfo(ITEM_INFO *item, AI_INFO *info);
 void CreatureMood(ITEM_INFO *item, AI_INFO *info, int violent);
 int CreatureAnimation(sint16 item_number, sint16 angle, sint16 tilt);
 sint16 CreatureTurn(ITEM_INFO *item, sint16 maximum_turn);
+void CreatureHead(ITEM_INFO *item, sint16 required);
 sint16 CreatureEffect(ITEM_INFO *item, BITE_INFO *bite,
     sint16 (*generate)(sint32 x, sint32 y, sint32 z, sint16 speed, PHD_ANGLE yrot, sint16 room_number));
 
 void BatControl(sint16 item_number);
+void BearControl(sint16 item_number);
 
 #endif
