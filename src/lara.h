@@ -214,5 +214,6 @@ int Move3DPosTo3DPos(PHD_3DPOS *srcpos, PHD_3DPOS *destpos, int velocity, PHD_AN
 void DisableBaddieAI(sint16 item_num);
 int EnableBaddieAI(sint16 item_number, int Always);
 void AlterFloorHeight(ITEM_INFO *item, int height);
+void LaraSwapMeshExtra(void);
 
 #endif

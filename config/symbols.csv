@@ -393,7 +393,7 @@ address,size,name,symbol
 0x0002828c,115,LaraFloorFront,LaraFloorFront_
 0x00028300,169,Func28300,
 0x000283b0,1018,LaraControl,LaraControl_
-0x000287ac,65,Func287ac,
+0x000287ac,65,LaraSwapMeshExtra,LaraSwapMeshExtra_
 0x00028820,732,Func28820,
 0x00028afc,508,Func28afc,
 0x00028cf8,28,Func28cf8,

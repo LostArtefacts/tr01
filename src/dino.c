@@ -321,3 +321,35 @@ void DinoControl(sint16 item_number)
 
     item->collidable = 1;
 }
+
+void LaraDinoDeath(ITEM_INFO *item)
+{
+    ITEM_INFO *litem;
+
+    item->goal_anim_state = DINO_KILL;
+    litem = lara_item;
+    if (litem->room_number != item->room_number)
+        ItemNewRoom(lara.item_number, item->room_number);
+
+    litem->pos.x_pos = item->pos.x_pos;
+    litem->pos.y_pos = item->pos.y_pos;
+    litem->pos.z_pos = item->pos.z_pos;
+    litem->pos.y_rot = item->pos.y_rot;
+    litem->pos.x_rot = litem->pos.z_rot = 0;
+    litem->gravity_status = 0;
+
+    litem->anim_number = objects[LARA_EXTRA].anim_index + 1;
+    litem->frame_number = anims[litem->anim_number].frame_base;
+    litem->current_anim_state = AS_SPECIAL;
+    litem->goal_anim_state = AS_SPECIAL;
+    LaraSwapMeshExtra();
+
+    litem->hit_points = -1;
+    lara.air = -1;
+    lara.gun_status = LG_HANDSBUSY;
+    lara.gun_type = LG_UNARMED;
+
+    camera.flags = FOLLOW_CENTRE;
+    camera.target_angle = 170 * ONE_DEGREE;
+    camera.target_elevation = -25 * ONE_DEGREE;
+}
