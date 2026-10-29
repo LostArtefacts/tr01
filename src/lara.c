@@ -640,3 +640,10 @@ void lara_as_special(ITEM_INFO *item, COLL_INFO *coll)
     camera.target_angle = 170 * ONE_DEGREE;
     camera.target_elevation = -25 * ONE_DEGREE;
 }
+
+void lara_as_usemidas(ITEM_INFO *item, COLL_INFO *coll)
+{
+    coll->enable_hit = 0;
+    coll->enable_baddie_push = 0;
+    ItemSparkle(item, (1 << HAND_L) | (1 << HAND_R));
+}
