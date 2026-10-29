@@ -496,3 +496,14 @@ void phd_RotYXZ_I(sint16 y, sint16 x, sint16 z)
     phd_RotYXZ(y, x, z);
     phd_mxptr = oldm;
 }
+
+void phd_RotYXZpack_I(sint32 r1, sint32 r2)
+{
+    sint32 *oldm;
+
+    phd_RotYXZpack(r1);
+    oldm = phd_mxptr;
+    phd_mxptr = IMptr;
+    phd_RotYXZpack(r2);
+    phd_mxptr = oldm;
+}

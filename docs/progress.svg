@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">17.57% (136)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">82.43% (638)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">17.70% (137)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">82.30% (637)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="131.26" height="6" x="0" y="0" class="named"/>
-<rect width="615.74" height="6" x="131.26" y="0" class="todo"/>
+<rect width="132.22" height="6" x="0" y="0" class="named"/>
+<rect width="614.78" height="6" x="132.22" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -207,7 +207,7 @@
 <rect width="12" height="12" x="555" y="30" class="named"><title>0x0001cf3c phd_TranslateRel_I (53 bytes)</title></rect>
 <rect width="12" height="12" x="570" y="30" class="named"><title>0x0001cf74 phd_TranslateRel_ID (47 bytes)</title></rect>
 <rect width="12" height="12" x="585" y="30" class="named"><title>0x0001cfa4 phd_RotYXZ_I (62 bytes)</title></rect>
-<rect width="12" height="12" x="600" y="30" class="todo"><title>0x0001cfe4 phd_RotYXZpack_I (37 bytes)</title></rect>
+<rect width="12" height="12" x="600" y="30" class="named"><title>0x0001cfe4 phd_RotYXZpack_I (37 bytes)</title></rect>
 <rect width="12" height="12" x="615" y="30" class="todo"><title>0x0001d00c phd_PutPolygons_I (29 bytes)</title></rect>
 <rect width="12" height="12" x="630" y="30" class="todo"><title>0x0001d02c InterpolateMatrix (558 bytes)</title></rect>
 <rect width="12" height="12" x="645" y="30" class="todo"><title>0x0001d25c InterpolateArmMatrix (276 bytes)</title></rect>
@@ -845,10 +845,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">20.33%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">79.67%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">20.34%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">79.66%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="151.84" height="6" x="0" y="0" class="named"/>
-<rect width="595.16" height="6" x="151.84" y="0" class="todo"/>
+<rect width="151.98" height="6" x="0" y="0" class="named"/>
+<rect width="595.02" height="6" x="151.98" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="todo"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1494,7 +1494,7 @@
 <rect width="3" height="2.66" x="699.53" y="198.74" class="todo"><title>0x00042f00 Func42f00 (38 bytes)</title></rect>
 <rect width="3" height="2.66" x="699.53" y="204.40" class="todo"><title>0x00046821 Func46821 (38 bytes)</title></rect>
 <rect width="3" height="2.51" x="699.53" y="210.06" class="named"><title>0x00010b00 S_AnimateTextures (37 bytes)</title></rect>
-<rect width="3" height="2.51" x="699.53" y="215.58" class="todo"><title>0x0001cfe4 phd_RotYXZpack_I (37 bytes)</title></rect>
+<rect width="3" height="2.51" x="699.53" y="215.58" class="named"><title>0x0001cfe4 phd_RotYXZpack_I (37 bytes)</title></rect>
 <rect width="3" height="2.51" x="699.53" y="221.09" class="todo"><title>0x00024580 Func24580 (37 bytes)</title></rect>
 <rect width="3" height="2.51" x="699.53" y="226.61" class="todo"><title>0x0002ffb0 Func2ffb0 (37 bytes)</title></rect>
 <rect width="3" height="2.51" x="699.53" y="232.12" class="todo"><title>0x0003ed48 phd_InitPolyList (37 bytes)</title></rect>
