@@ -484,7 +484,7 @@ address,size,name,symbol
 0x0002f00c,599,Func2f00c,
 0x0002f264,33,Func2f264,
 0x0002f288,247,Func2f288,
-0x0002f380,186,Func2f380,
+0x0002f380,186,AlterFloorHeight,AlterFloorHeight_
 0x0002f43c,124,Func2f43c,
 0x0002f4b8,102,Func2f4b8,
 0x0002f520,77,Func2f520,
