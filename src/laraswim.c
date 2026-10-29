@@ -173,6 +173,28 @@ void lara_as_uwdeath(ITEM_INFO *item, COLL_INFO *coll)
         item->pos.x_rot -= 2 * ONE_DEGREE;
 }
 
+#define UW_WALLDEFLECT (2 * ONE_DEGREE)
+
+void lara_col_swim(ITEM_INFO *item, COLL_INFO *coll)
+{
+    LaraSwimCollision(item, coll);
+}
+
+void lara_col_glide(ITEM_INFO *item, COLL_INFO *coll)
+{
+    LaraSwimCollision(item, coll);
+}
+
+void lara_col_tread(ITEM_INFO *item, COLL_INFO *coll)
+{
+    LaraSwimCollision(item, coll);
+}
+
+void lara_col_dive(ITEM_INFO *item, COLL_INFO *coll)
+{
+    LaraSwimCollision(item, coll);
+}
+
 void lara_col_uwdeath(ITEM_INFO *item, COLL_INFO *coll)
 {
     int wh;
@@ -184,4 +206,45 @@ void lara_col_uwdeath(ITEM_INFO *item, COLL_INFO *coll)
     if (wh != NO_HEIGHT && wh < item->pos.y_pos - 100)
         item->pos.y_pos -= 5;
     LaraSwimCollision(item, coll);
+}
+
+void LaraSwimCollision(ITEM_INFO *item, COLL_INFO *coll)
+{
+    if (item->pos.x_rot >= -16384 && item->pos.x_rot <= 16384)
+        coll->facing = lara.move_angle = item->pos.y_rot;
+    else
+        coll->facing = lara.move_angle = item->pos.y_rot - 32768;
+    GetCollisionInfo(coll, item->pos.x_pos, item->pos.y_pos + UW_HITE / 2, item->pos.z_pos, item->room_number, UW_HITE);
+    ShiftItem(item, coll);
+    if (coll->coll_type == COLL_FRONT)
+    {
+        if (item->pos.x_rot > 35 * ONE_DEGREE)
+            item->pos.x_rot += UW_WALLDEFLECT;
+        else if (item->pos.x_rot < -35 * ONE_DEGREE)
+            item->pos.x_rot -= UW_WALLDEFLECT;
+        else
+            item->fallspeed = 0;
+    }
+    else if (coll->coll_type == COLL_TOP)
+    {
+        if (item->pos.x_rot >= -45 * ONE_DEGREE)
+            item->pos.x_rot -= UW_WALLDEFLECT;
+    }
+    else if (coll->coll_type == COLL_TOPFRONT)
+        item->fallspeed = 0;
+    else if (coll->coll_type == COLL_LEFT)
+        item->pos.y_rot += 5 * ONE_DEGREE;
+    else if (coll->coll_type == COLL_RIGHT)
+        item->pos.y_rot -= 5 * ONE_DEGREE;
+    else if (coll->coll_type == COLL_CLAMP)
+    {
+        item->fallspeed = 0;
+        return;
+    }
+
+    if (coll->mid_floor < 0)
+    {
+        item->pos.y_pos += coll->mid_floor;
+        item->pos.x_rot += UW_WALLDEFLECT;
+    }
 }

@@ -422,9 +422,9 @@ address,size,name,symbol
 0x00029804,16,lara_as_dive,lara_as_dive_
 0x00029814,94,lara_as_uwdeath,lara_as_uwdeath_
 0x00029874,94,lara_col_uwdeath,lara_col_uwdeath_
-0x000298d4,0,lara_col_tread,lara_col_tread_
+0x000298d4,270,lara_col_tread,lara_col_tread_
 0x000298d4,0,LaraSwimCollision,LaraSwimCollision_
-0x000298d4,270,lara_col_swim,lara_col_swim_
+0x000298d4,0,lara_col_swim,lara_col_swim_
 0x000298d4,0,lara_col_glide,lara_col_glide_
 0x000298d4,0,lara_col_dive,lara_col_dive_
 0x000299e4,471,LaraWaterCurrent,LaraWaterCurrent_
