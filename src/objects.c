@@ -57,3 +57,39 @@ void OpenThatDoor(DOORPOS_DATA *d)
             boxes[d->block].overlap_index &= (~BLOCKED);
     }
 }
+
+void DoorControl(sint16 item_number)
+{
+    ITEM_INFO *item;
+    DOOR_DATA *door;
+
+    item = &items[item_number];
+    door = (DOOR_DATA *)item->data;
+
+    if (TriggerActive(item))
+    {
+        if (item->current_anim_state == DOOR_CLOSED)
+            item->goal_anim_state = DOOR_OPEN;
+        else
+        {
+            OpenThatDoor(&door->d1);
+            OpenThatDoor(&door->d2);
+            OpenThatDoor(&door->d1flip);
+            OpenThatDoor(&door->d2flip);
+        }
+    }
+    else
+    {
+        if (item->current_anim_state == DOOR_OPEN)
+            item->goal_anim_state = DOOR_CLOSED;
+        else
+        {
+            ShutThatDoor(&door->d1);
+            ShutThatDoor(&door->d2);
+            ShutThatDoor(&door->d1flip);
+            ShutThatDoor(&door->d2flip);
+        }
+    }
+
+    AnimateItem(item);
+}
