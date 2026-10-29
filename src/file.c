@@ -463,3 +463,51 @@ int LoadSoundEffects(FILE *file)
 
     return 1;
 }
+
+int LoadBoxes(FILE *file)
+{
+    sint32 i;
+    sint32 number_overlaps;
+
+    fread(&number_boxes, sizeof(sint32), 1, file);
+    boxes = (BOX_INFO *)game_malloc(sizeof(BOX_INFO) * number_boxes, BOXES);
+    if (!fread(boxes, sizeof(BOX_INFO), number_boxes, file))
+    {
+        sprintf(exit_message, "LoadBoxes(): Unable to load boxes");
+        return 0;
+    }
+
+    fread(&number_overlaps, sizeof(sint32), 1, file);
+    overlap = (uint16 *)game_malloc(sizeof(uint16)*number_overlaps, OVERLAPS);
+    if (!fread(overlap, sizeof(uint16), number_overlaps, file))
+    {
+        sprintf(exit_message, "LoadBoxes(): Unable to load box overlaps");
+        return 0;
+    }
+
+    for (i = 0; i < 2; i++)
+    {
+        ground_zone[i] = (sint16 *)game_malloc(sizeof(sint16)*number_boxes, GROUNDZONE);
+        if (ground_zone[i] == NULL || !fread(ground_zone[i], sizeof(sint16), number_boxes, file))
+        {
+            sprintf(exit_message, "LoadBoxes(): Unable to load 'ground_zone'");
+            return 0;
+        }
+
+        ground_zone2[i] = (sint16 *)game_malloc(sizeof(sint16)*number_boxes, GROUNDZONE);
+        if (ground_zone2[i] == NULL || !fread(ground_zone2[i], sizeof(sint16), number_boxes, file))
+        {
+            sprintf(exit_message, "LoadBoxes(): Unable to load 'ground2_zone'");
+            return 0;
+        }
+
+        fly_zone[i] = (sint16 *)game_malloc(sizeof(sint16)*number_boxes, FLYZONE);
+        if (fly_zone[i] == NULL || !fread(fly_zone[i], sizeof(sint16), number_boxes, file))
+        {
+            sprintf(exit_message, "LoadBoxes(): Unable to load 'fly_zone'");
+            return 0;
+        }
+    }
+
+    return 1;
+}
