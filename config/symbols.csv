@@ -370,7 +370,7 @@ address,size,name,symbol
 0x00026e60,45,lara_col_hangleft,lara_col_hangleft_
 0x00026e90,39,lara_col_hangright,lara_col_hangright_
 0x00026eb8,22,lara_col_slideback,lara_col_slideback_
-0x00026ed0,49,Func26ed0,
+0x00026ed0,49,lara_col_pushblock,lara_col_pushblock_
 0x00026f04,49,Func26f04,
 0x00026f38,49,Func26f38,
 0x00026f6c,49,Func26f6c,
