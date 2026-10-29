@@ -163,3 +163,18 @@ void DrawPickups(void)
             pu->duration = 0;
     }
 }
+
+void AddDisplayPickup(sint16 objnum)
+{
+    int i;
+
+    for (i = 0; i < NUM_PU; i++)
+    {
+        if (pickups[i].duration <= 0)
+        {
+            pickups[i].duration = 75;
+            pickups[i].sprnum = objects[objnum].mesh_index;
+            return;
+        }
+    }
+}

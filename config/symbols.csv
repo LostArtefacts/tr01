@@ -234,7 +234,7 @@ address,size,name,symbol
 0x00020ac0,306,DrawAmmoInfo,DrawAmmoInfo_
 0x00020bf4,22,InitialisePickUpDisplay,InitialisePickUpDisplay_
 0x00020c0c,199,DrawPickups,DrawPickups_
-0x00020cd4,91,Func20cd4,
+0x00020cd4,91,AddDisplayPickup,AddDisplayPickup_
 0x00020d30,186,Func20d30,
 0x00020dec,70,S_ExitSystem,S_ExitSystem_
 0x00020e34,31,init_game_malloc,init_game_malloc_
