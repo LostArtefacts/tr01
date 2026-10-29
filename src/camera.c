@@ -2,6 +2,24 @@
 
 CAMERA_INFO camera;
 
+#define MIN_SQUARE SQUARE(WALL_L / 4)
+#define MIN_CAM_ANGLE (ONE_DEGREE / 2)
+
+#define GROUND_SHIFT (STEP_L)
+
+#define MAX_ELEVATION (ONE_DEGREE * 85)
+
+#define MAX_HEAD_ROTATION (50 * ONE_DEGREE)
+
+#define MAX_HEAD_TILT (85 * ONE_DEGREE)
+#define MIN_HEAD_TILT (-85 * ONE_DEGREE)
+#define HEAD_TURN (4 * ONE_DEGREE)
+
+#define CHASE_SPEED 12
+#define COMBAT_SPEED 8
+#define COMBAT_DISTANCE (WALL_L * 5 / 2)
+#define LOOK_SPEED 4
+
 void InitialiseCamera(void)
 {
     camera.target.x = lara_item->pos.x_pos;
@@ -26,4 +44,68 @@ void InitialiseCamera(void)
     camera.number = NO_CAMERA;
 
     CalculateCamera();
+}
+
+void MoveCamera(GAME_VECTOR *ideal, int speed)
+{
+    sint32 height, ceiling, shake;
+    FLOOR_INFO *floor;
+
+    camera.pos.x += (ideal->x - camera.pos.x) / speed;
+    camera.pos.z += (ideal->z - camera.pos.z) / speed;
+    camera.pos.y += (ideal->y - camera.pos.y) / speed;
+    camera.pos.room_number = ideal->room_number;
+
+    chunky_flag = 0;
+
+    floor = GetFloor(camera.pos.x, camera.pos.y, camera.pos.z, &camera.pos.room_number);
+    height = GetHeight(floor, camera.pos.x, camera.pos.y, camera.pos.z) - GROUND_SHIFT;
+
+    if (camera.pos.y >= height && ideal->y >= height)
+    {
+        LOS(&camera.target, &camera.pos);
+        floor = GetFloor(camera.pos.x, camera.pos.y, camera.pos.z, &camera.pos.room_number);
+        height = GetHeight(floor, camera.pos.x, camera.pos.y, camera.pos.z) - GROUND_SHIFT;
+    }
+
+    ceiling = GetCeiling(floor, camera.pos.x, camera.pos.y, camera.pos.z) + GROUND_SHIFT;
+    if (height < ceiling)
+        height = ceiling = (height + ceiling) >> 1;
+
+    if (camera.bounce)
+    {
+        if (camera.bounce > 0)
+        {
+            camera.pos.y += camera.bounce;
+            camera.target.y += camera.bounce;
+            camera.bounce = 0;
+        }
+        else
+        {
+            shake = (GetRandomControl() - 0x4000) * camera.bounce / 0x7fff;
+            camera.pos.x += shake;
+            camera.target.y += shake;
+            shake = (GetRandomControl() - 0x4000) * camera.bounce / 0x7fff;
+            camera.pos.y += shake;
+            camera.target.y += shake;
+            shake = (GetRandomControl() - 0x4000) * camera.bounce / 0x7fff;
+            camera.pos.z += shake;
+            camera.target.z += shake;
+            camera.bounce += 5;
+        }
+    }
+
+    if (camera.pos.y > height)
+        camera.shift = height - camera.pos.y;
+    else if (camera.pos.y < ceiling)
+        camera.shift = ceiling - camera.pos.y;
+    else
+        camera.shift = 0;
+
+    GetFloor(camera.pos.x, camera.pos.y + camera.shift, camera.pos.z, &camera.pos.room_number);
+
+    phd_LookAt(camera.pos.x, camera.pos.y + camera.shift, camera.pos.z, camera.target.x, camera.target.y,
+               camera.target.z, 0);
+
+    camera.actual_angle = (sint16)phd_atan(camera.target.z - camera.pos.z, camera.target.x - camera.pos.x);
 }

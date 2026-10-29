@@ -37,7 +37,7 @@ address,size,name,symbol
 0x000134a8,86,CreatureHead,CreatureHead_
 0x00013500,82,CreatureEffect,CreatureEffect_
 0x00013560,168,InitialiseCamera,InitialiseCamera_
-0x00013608,715,Func13608,
+0x00013608,715,MoveCamera,MoveCamera_
 0x000138d4,164,Func138d4,
 0x00013978,295,Func13978,
 0x00013aa0,79,BadPosition,BadPosition_
@@ -89,7 +89,7 @@ address,size,name,symbol
 0x00018060,115,Func18060,
 0x000180e8,641,GetCeiling,GetCeiling_
 0x0001836c,82,Func1836c,
-0x000183c0,163,Func183c0,
+0x000183c0,163,LOS,LOS_
 0x00018464,747,Func18464,
 0x00018750,741,Func18750,
 0x00018a38,259,Func18a38,
@@ -1741,6 +1741,7 @@ address,size,name,symbol
 0x000c17a4,60,shadowman,_shadowman
 0x000c17e4,16,bat_bite,_bat_bite
 0x000c17f4,16,bear_head_bite,_bear_head_bite
+0x000c1810,4,chunky_flag,_chunky_flag
 0x000c1888,4,bckscrn,_bckscrn
 0x000c1988,4,CurrentLevel,_CurrentLevel
 0x000c2090,24,game_setup,_game_setup
