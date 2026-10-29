@@ -3,6 +3,30 @@
 
 #include "types.h"
 
+#define NO_BOX -1
+#define BOX_NUMBER 0x7fff
+
+#define BLOCKABLE 0x8000
+#define BLOCKED 0x4000
+#define OVERLAP_INDEX 0x3fff
+
+#define SEARCH_NUMBER 0x7fff
+#define BLOCKED_SEARCH 0x8000
+
+#define NO_FLYING 0
+
+#define FRONT_ARC 0x4000
+
+typedef struct
+{
+    sint32 left;
+    sint32 right;
+    sint32 top;
+    sint32 bottom;
+    sint16 height;
+    sint16 overlap_index;
+} BOX_INFO;
+
 typedef struct
 {
     sint16 exit_box;
@@ -60,6 +84,15 @@ typedef struct
     PHD_VECTOR target;
 } CREATURE_INFO;
 
+extern int number_boxes;
+extern int number_overlaps;
+extern BOX_INFO *boxes;
+extern uint16 *overlap;
+extern sint16 *ground_zone[2];
+extern sint16 *ground_zone2[2];
+extern sint16 *fly_zone[2];
+
+void InitialiseCreature(sint16 item_number);
 void CreatureAIInfo(ITEM_INFO *item, AI_INFO *info);
 void CreatureMood(ITEM_INFO *item, AI_INFO *info, int violent);
 int CreatureAnimation(sint16 item_number, sint16 angle, sint16 tilt);

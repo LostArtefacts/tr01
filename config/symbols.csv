@@ -19,7 +19,7 @@ address,size,name,symbol
 0x00010f5c,246,decomp_pcx,decomp_pcx_
 0x00011060,313,BatControl,BatControl_
 0x000111e8,1087,BearControl,BearControl_
-0x00011630,67,Func11630,
+0x00011630,67,InitialiseCreature,InitialiseCreature_
 0x00011674,634,CreatureAIInfo,CreatureAIInfo_
 0x000118f0,549,Func118f0,
 0x00011b18,132,Func11b18,
@@ -1751,6 +1751,10 @@ address,size,name,symbol
 0x000cac70,768,game_palette,_game_palette
 0x000caf70,768,water_palette,_water_palette
 0x000cb274,4,aranges,_aranges
+0x000cb284,8,fly_zone,_fly_zone
+0x000cb28c,8,ground_zone,_ground_zone
+0x000cb294,8,ground_zone2,_ground_zone2
+0x000cb2a0,4,boxes,_boxes
 0x000cb3d0,4,items,_items
 0x000cc088,4,room,_room
 0x000ce960,34,inv_colours,_inv_colours

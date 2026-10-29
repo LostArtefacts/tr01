@@ -1,6 +1,8 @@
 #ifndef TYPES_H
 #define TYPES_H
 
+#include <stddef.h>
+
 typedef signed char sint8;
 typedef unsigned char uint8;
 typedef short sint16;
@@ -23,6 +25,8 @@ typedef sint16 SG_COL;
 #define INVISIBLE 3
 
 typedef sint16 PHD_ANGLE;
+
+typedef struct COLL_INFO COLL_INFO;
 
 typedef struct
 {
@@ -136,6 +140,32 @@ typedef struct
     sint32 z;
     sint32 mesh_num;
 } BITE_INFO;
+
+typedef struct
+{
+    sint16 nmeshes;
+    sint16 mesh_index;
+    sint32 bone_index;
+    sint16 *frame_base;
+    void (*initialise)(sint16 item_number);
+    void (*control)(sint16 item_number);
+    void (*floor)(ITEM_INFO *item, sint32 x, sint32 y, sint32 z, sint16 *height);
+    void (*ceiling)(ITEM_INFO *item, sint32 x, sint32 y, sint32 z, sint16 *height);
+    void (*draw_routine)(ITEM_INFO *item);
+    void (*collision)(sint16 item_num, ITEM_INFO *laraitem, COLL_INFO *coll);
+    sint16 anim_index;
+    sint16 hit_points;
+    sint16 pivot_length;
+    sint16 radius;
+    sint16 smartness;
+    sint16 shadow_size;
+    uint16 loaded:1;
+    uint16 intelligent:1;
+    uint16 save_position:1;
+    uint16 save_hitpoints:1;
+    uint16 save_flags:1;
+    uint16 save_anim:1;
+} OBJECT_INFO;
 
 #define SQUARE(A) ((A) * (A))
 

@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">2.59% (20)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">97.41% (751)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">2.72% (21)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">97.28% (750)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="19.38" height="6" x="0" y="0" class="named"/>
-<rect width="727.62" height="6" x="19.38" y="0" class="todo"/>
+<rect width="20.35" height="6" x="0" y="0" class="named"/>
+<rect width="726.65" height="6" x="20.35" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -87,7 +87,7 @@
 <rect width="12" height="12" x="255" y="0" class="named"><title>0x00010f5c decomp_pcx (246 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="0" class="named"><title>0x00011060 BatControl (313 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="0" class="named"><title>0x000111e8 BearControl (1087 bytes)</title></rect>
-<rect width="12" height="12" x="300" y="0" class="todo"><title>0x00011630 Func11630 (67 bytes)</title></rect>
+<rect width="12" height="12" x="300" y="0" class="named"><title>0x00011630 InitialiseCreature (67 bytes)</title></rect>
 <rect width="12" height="12" x="315" y="0" class="todo"><title>0x00011674 CreatureAIInfo (634 bytes)</title></rect>
 <rect width="12" height="12" x="330" y="0" class="todo"><title>0x000118f0 Func118f0 (549 bytes)</title></rect>
 <rect width="12" height="12" x="345" y="0" class="todo"><title>0x00011b18 Func11b18 (132 bytes)</title></rect>
@@ -842,10 +842,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">2.74%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">97.26%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">2.78%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">97.22%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="20.49" height="6" x="0" y="0" class="named"/>
-<rect width="726.51" height="6" x="20.49" y="0" class="todo"/>
+<rect width="20.74" height="6" x="0" y="0" class="named"/>
+<rect width="726.26" height="6" x="20.74" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="54.65" height="67.43" x="0" y="0" class="todo"><title>0x0001bc98 Func1bc98 (4489 bytes)</title></rect>
@@ -1367,7 +1367,7 @@
 <rect width="4.75" height="5.06" x="667.60" y="152.79" class="todo"><title>0x00038b10 Func38b10 (69 bytes)</title></rect>
 <rect width="4.75" height="5.06" x="675.35" y="152.79" class="todo"><title>0x00039d60 Func39d60 (69 bytes)</title></rect>
 <rect width="4.75" height="5.06" x="683.09" y="152.79" class="todo"><title>0x0003a970 Func3a970 (69 bytes)</title></rect>
-<rect width="4.52" height="5.06" x="690.84" y="152.79" class="todo"><title>0x00011630 Func11630 (67 bytes)</title></rect>
+<rect width="4.52" height="5.06" x="690.84" y="152.79" class="named"><title>0x00011630 InitialiseCreature (67 bytes)</title></rect>
 <rect width="4.52" height="5.06" x="698.36" y="152.79" class="todo"><title>0x0003a3ec Func3a3ec (67 bytes)</title></rect>
 <rect width="4.41" height="5.06" x="705.88" y="152.79" class="todo"><title>0x00014eb8 Func14eb8 (66 bytes)</title></rect>
 <rect width="4.41" height="5.06" x="713.29" y="152.79" class="todo"><title>0x00045b64 Func45b64 (66 bytes)</title></rect>
