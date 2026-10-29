@@ -695,7 +695,7 @@ address,size,name,symbol
 0x0003f05e,46,phd_sqrt,phd_sqrt_
 0x0003f090,559,S_DrawSpriteAbs,S_DrawSpriteAbs_
 0x0003f2c0,460,Func3f2c0,
-0x0003f48c,223,Func3f48c,
+0x0003f48c,223,S_DrawPickup,S_DrawPickup_
 0x0003f56c,376,Func3f56c,
 0x0003f6e4,551,Func3f6e4,
 0x0003f910,586,Func3f910,

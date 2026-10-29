@@ -134,3 +134,32 @@ void InitialisePickUpDisplay(void)
     for (i = 0; i < NUM_PU; i++)
         pickups[i].duration = 0;
 }
+
+void DrawPickups(void)
+{
+    int i, time;
+    static int old_game_timer;
+    DISPLAYPU *pu;
+    int wa, w, x, y;
+    int scaler = 12288;
+
+    time = savegame.timer - old_game_timer;
+    old_game_timer = savegame.timer;
+    if (time <= 0 || time >= 60)
+        return;
+
+    w = phd_winwidth / 10;
+    x = phd_winwidth - w;
+    y = phd_winheight - w;
+    wa = (w * 4) / 3;
+
+    pu = pickups;
+    for (i = 0; i < NUM_PU; i++, pu++, x -= wa)
+    {
+        pu->duration -= time;
+        if (pu->duration > 0)
+            S_DrawPickup(x, y, scaler, pu->sprnum, 16 * 256, 0);
+        else
+            pu->duration = 0;
+    }
+}

@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">29.94% (232)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">70.06% (543)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">30.06% (233)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">69.94% (542)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="223.62" height="6" x="0" y="0" class="named"/>
-<rect width="523.38" height="6" x="223.62" y="0" class="todo"/>
+<rect width="224.58" height="6" x="0" y="0" class="named"/>
+<rect width="522.42" height="6" x="224.58" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -301,7 +301,7 @@
 <rect width="12" height="12" x="465" y="60" class="named"><title>0x00020a78 MakeAmmoString (56 bytes)</title></rect>
 <rect width="12" height="12" x="480" y="60" class="named"><title>0x00020ac0 DrawAmmoInfo (306 bytes)</title></rect>
 <rect width="12" height="12" x="495" y="60" class="named"><title>0x00020bf4 InitialisePickUpDisplay (22 bytes)</title></rect>
-<rect width="12" height="12" x="510" y="60" class="todo"><title>0x00020c0c DrawPickups (199 bytes)</title></rect>
+<rect width="12" height="12" x="510" y="60" class="named"><title>0x00020c0c DrawPickups (199 bytes)</title></rect>
 <rect width="12" height="12" x="525" y="60" class="todo"><title>0x00020cd4 Func20cd4 (91 bytes)</title></rect>
 <rect width="12" height="12" x="540" y="60" class="todo"><title>0x00020d30 Func20d30 (186 bytes)</title></rect>
 <rect width="12" height="12" x="555" y="60" class="todo"><title>0x00020dec S_ExitSystem (70 bytes)</title></rect>
@@ -763,7 +763,7 @@
 <rect width="12" height="12" x="645" y="195" class="todo"><title>0x0003f05e phd_sqrt (46 bytes)</title></rect>
 <rect width="12" height="12" x="660" y="195" class="todo"><title>0x0003f090 S_DrawSpriteAbs (559 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="195" class="todo"><title>0x0003f2c0 Func3f2c0 (460 bytes)</title></rect>
-<rect width="12" height="12" x="690" y="195" class="todo"><title>0x0003f48c Func3f48c (223 bytes)</title></rect>
+<rect width="12" height="12" x="690" y="195" class="todo"><title>0x0003f48c S_DrawPickup (223 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="195" class="todo"><title>0x0003f56c Func3f56c (376 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="195" class="todo"><title>0x0003f6e4 Func3f6e4 (551 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="195" class="todo"><title>0x0003f910 Func3f910 (586 bytes)</title></rect>
@@ -846,10 +846,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">31.55%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">68.45%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">31.65%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">68.35%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="235.70" height="6" x="0" y="0" class="named"/>
-<rect width="511.30" height="6" x="235.70" y="0" class="todo"/>
+<rect width="236.43" height="6" x="0" y="0" class="named"/>
+<rect width="510.57" height="6" x="236.43" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1101,7 +1101,7 @@
 <rect width="11.18" height="11.12" x="540.44" y="117.95" class="todo"><title>0x0002a19c Func2a19c (224 bytes)</title></rect>
 <rect width="11.18" height="11.12" x="540.44" y="132.07" class="todo"><title>0x00034544 Func34544 (224 bytes)</title></rect>
 <rect width="11.18" height="11.06" x="540.44" y="146.19" class="todo"><title>0x0003eeac phd_InitWindow (223 bytes)</title></rect>
-<rect width="11.18" height="11.06" x="540.44" y="160.24" class="todo"><title>0x0003f48c Func3f48c (223 bytes)</title></rect>
+<rect width="11.18" height="11.06" x="540.44" y="160.24" class="todo"><title>0x0003f48c S_DrawPickup (223 bytes)</title></rect>
 <rect width="11.18" height="10.93" x="540.44" y="174.30" class="named"><title>0x0001d9e0 LaraBubbles (221 bytes)</title></rect>
 <rect width="11.18" height="10.87" x="540.44" y="188.23" class="named"><title>0x0002056c DisplayCredits (220 bytes)</title></rect>
 <rect width="11.18" height="10.74" x="540.44" y="202.09" class="todo"><title>0x00038ee0 S_CDPlay (218 bytes)</title></rect>
@@ -1120,7 +1120,7 @@
 <rect width="10.71" height="10.23" x="695.70" y="46.79" class="todo"><title>0x0002ac1c Func2ac1c (203 bytes)</title></rect>
 <rect width="10.57" height="10.23" x="709.41" y="46.79" class="todo"><title>0x0002b7d4 Func2b7d4 (201 bytes)</title></rect>
 <rect width="10.57" height="10.23" x="722.99" y="46.79" class="todo"><title>0x000397cc Func397cc (201 bytes)</title></rect>
-<rect width="10.44" height="10.23" x="736.56" y="46.79" class="todo"><title>0x00020c0c DrawPickups (199 bytes)</title></rect>
+<rect width="10.44" height="10.23" x="736.56" y="46.79" class="named"><title>0x00020c0c DrawPickups (199 bytes)</title></rect>
 <rect width="10.10" height="10.58" x="554.62" y="60.02" class="todo"><title>0x0003edb4 Func3edb4 (199 bytes)</title></rect>
 <rect width="10.10" height="10.51" x="554.62" y="73.60" class="named"><title>0x00016a04 AlignLaraPosition (198 bytes)</title></rect>
 <rect width="10.10" height="10.37" x="554.62" y="87.11" class="todo"><title>0x00025494 Func25494 (196 bytes)</title></rect>
