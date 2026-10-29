@@ -331,8 +331,9 @@ address,size,name,symbol
 0x00025c28,42,lara_as_switchon,lara_as_switchon_
 0x00025c54,42,lara_as_switchoff,lara_as_switchoff_
 0x00025c80,42,lara_as_usekey,lara_as_usekey_
-0x00025cac,44,Func25cac,
-0x00025cd8,1,Func25cd8,
+0x00025cac,41,lara_as_usepuzzle,lara_as_usepuzzle_
+0x00025cd8,1,lara_as_roll,lara_as_roll_
+0x00025cd8,0,lara_as_roll2,lara_as_roll2_
 0x00025cdc,38,Func25cdc,
 0x00025d04,14,Func25d04,
 0x00025d14,767,Func25d14,
