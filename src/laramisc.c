@@ -267,6 +267,69 @@ void AnimateLara(ITEM_INFO *item)
     item->pos.z_pos += (phd_cos(lara.move_angle) * item->speed) >> W2V_SHIFT;
 }
 
+void UseItem(sint16 object_num)
+{
+    if (object_num < 0 || object_num >= NUMBER_OBJECTS)
+        return;
+    switch (object_num)
+    {
+    case GUN_ITEM:
+    case GUN_OPTION:
+        lara.request_gun_type = LG_PISTOLS;
+        if (lara.gun_status == LG_ARMLESS && lara.gun_type == LG_PISTOLS)
+            lara.gun_type = LG_UNARMED;
+        break;
+
+    case MAGNUM_ITEM:
+    case MAGNUM_OPTION:
+        lara.request_gun_type = LG_MAGNUMS;
+        if (lara.gun_status == LG_ARMLESS && lara.gun_type == LG_MAGNUMS)
+            lara.gun_type = LG_UNARMED;
+        break;
+
+    case UZI_ITEM:
+    case UZI_OPTION:
+        lara.request_gun_type = LG_UZIS;
+        if (lara.gun_status == LG_ARMLESS && lara.gun_type == LG_UZIS)
+            lara.gun_type = LG_UNARMED;
+        break;
+
+    case SHOTGUN_ITEM:
+    case SHOTGUN_OPTION:
+        lara.request_gun_type = LG_SHOTGUN;
+        if (lara.gun_status == LG_ARMLESS && lara.gun_type == LG_SHOTGUN)
+            lara.gun_type = LG_UNARMED;
+        break;
+
+    case MEDI_ITEM:
+    case MEDI_OPTION:
+        if (lara_item->hit_points > 0 && lara_item->hit_points < LARA_HITPOINTS)
+        {
+            lara_item->hit_points += LARA_HITPOINTS / 2;
+            if (lara_item->hit_points > LARA_HITPOINTS)
+                lara_item->hit_points = LARA_HITPOINTS;
+            Inv_RemoveItem(MEDI_ITEM);
+            SoundEffect(116, NULL, SFX_ALWAYS);
+        }
+        break;
+
+    case BIGMEDI_ITEM:
+    case BIGMEDI_OPTION:
+        if (lara_item->hit_points > 0 && lara_item->hit_points < LARA_HITPOINTS)
+        {
+            lara_item->hit_points += LARA_HITPOINTS;
+            if (lara_item->hit_points > LARA_HITPOINTS)
+                lara_item->hit_points = LARA_HITPOINTS;
+            Inv_RemoveItem(BIGMEDI_ITEM);
+            SoundEffect(116, NULL, SFX_ALWAYS);
+        }
+        break;
+
+    default:
+        break;
+    }
+}
+
 void lara_as_walk(ITEM_INFO *item, COLL_INFO *coll);
 void lara_as_run(ITEM_INFO *item, COLL_INFO *coll);
 void lara_as_stop(ITEM_INFO *item, COLL_INFO *coll);
