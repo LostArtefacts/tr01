@@ -1778,6 +1778,7 @@ address,size,name,symbol
 0x000cc08c,4,number_draw_rooms,_number_draw_rooms
 0x000cc090,9550,objects,_objects
 0x000ce5de,2,number_rooms,_number_rooms
+0x000ce5f8,4,floor_data,_floor_data
 0x000ce95c,4,input,_input
 0x000ce960,34,inv_colours,_inv_colours
 0x000ce984,4,effects,_effects

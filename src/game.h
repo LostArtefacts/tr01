@@ -59,6 +59,7 @@ extern ROOM_INFO *room;
 extern OBJECT_INFO objects[];
 extern sint16 **meshes;
 extern STATIC_INFO static_objects[];
+extern sint16 *floor_data;
 
 sint32 GetRandomControl(void);
 

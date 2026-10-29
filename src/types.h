@@ -184,6 +184,8 @@ typedef struct
     sint8 ceiling;
 } FLOOR_INFO;
 
+#define NO_ROOM 255
+
 #define NO_HEIGHT (-0x7f00)
 
 enum height_types

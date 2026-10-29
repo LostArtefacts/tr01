@@ -487,3 +487,32 @@ void UpdateLaraRoom(ITEM_INFO *item, int height)
     if (item->room_number != room_number)
         ItemNewRoom(lara.item_number, room_number);
 }
+
+sint16 GetTiltType(FLOOR_INFO *floor, sint32 x, sint32 y, sint32 z)
+{
+    ROOM_INFO *r;
+    sint16 *data;
+    uint16 index;
+    sint16 type;
+
+    while (floor->pit_room != NO_ROOM)
+    {
+        r = &room[floor->pit_room];
+        floor = &r->floor[((z - r->z) >> WALL_SHIFT) + ((x - r->x) >> WALL_SHIFT) * r->x_size];
+    }
+
+    index = floor->index;
+
+    if (y + 512 < ((sint32)floor->floor << 8))
+        return 0;
+
+    if (floor->index)
+    {
+        data = &floor_data[floor->index];
+        type = *(data) & DATA_TYPE;
+        if (type == TILT_TYPE)
+            return *(data + 1);
+    }
+
+    return 0;
+}
