@@ -350,7 +350,7 @@ address,size,name,symbol
 0x00026618,182,lara_col_turn_r,lara_col_turn_r_
 0x00026618,0,lara_col_turn_l,lara_col_turn_l_
 0x000266d0,121,lara_col_death,lara_col_death_
-0x0002674c,177,Func2674c,
+0x0002674c,177,lara_col_fastfall,lara_col_fastfall_
 0x00026800,108,Func26800,
 0x0002686c,171,Func2686c,
 0x00026918,95,Func26918,
@@ -393,7 +393,7 @@ address,size,name,symbol
 0x0002769c,549,Func2769c,
 0x000278d0,106,LaraDeflectEdge,LaraDeflectEdge_
 0x0002793c,309,LaraDeflectEdgeJump,LaraDeflectEdgeJump_
-0x00027a74,208,Func27a74,
+0x00027a74,208,LaraSlideEdgeJump,LaraSlideEdgeJump_
 0x00027b44,519,TestLaraVault,TestLaraVault_
 0x00027d4c,405,Func27d4c,
 0x00027ee4,187,Func27ee4,
