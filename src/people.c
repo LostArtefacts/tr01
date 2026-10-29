@@ -13,6 +13,8 @@ sint16 pierre_item;
 #define KID_STOP_SHOT_DAMAGE 50
 #define KID_SKATE_SHOT_DAMAGE 40
 
+#define BALDY_SHOT_DAMAGE 150
+
 #define PEOPLE_SHOOT_RANGE SQUARE(WALL_L * 7)
 #define PEOPLE_MISS_CHANCE 0x2000
 
@@ -1096,4 +1098,128 @@ void InitialiseBaldy(sint16 item_number)
 {
     InitialiseCreature(item_number);
     items[item_number].current_anim_state = BALDY_RUN;
+}
+
+void BaldyControl(sint16 item_number)
+{
+    ITEM_INFO *item;
+    CREATURE_INFO *baldy;
+    sint16 angle, head, tilt;
+    AI_INFO info;
+
+    item = &items[item_number];
+    if (item->status == INVISIBLE)
+    {
+        if (!EnableBaddieAI(item_number, 0))
+            return;
+        item->status = ACTIVE;
+    }
+    baldy = (CREATURE_INFO *)item->data;
+    head = angle = tilt = 0;
+
+    if (item->hit_points <= 0)
+    {
+        if (item->current_anim_state != BALDY_DEATH)
+        {
+            item->anim_number = objects[MERCENARY3].anim_index + BALDY_DIE_ANIM;
+            item->frame_number = anims[item->anim_number].frame_base;
+            item->current_anim_state = BALDY_DEATH;
+            SpawnItem(item, SHOTGUN_ITEM);
+        }
+    }
+    else
+    {
+        CreatureAIInfo(item, &info);
+
+        if (info.ahead)
+            head = info.angle;
+
+        CreatureMood(item, &info, VIOLENT);
+
+        angle = CreatureTurn(item, baldy->maximum_turn);
+
+        switch (item->current_anim_state)
+        {
+        case BALDY_STOP:
+            if (item->required_anim_state)
+                item->goal_anim_state = item->required_anim_state;
+            else if (Targetable(item, &info))
+                item->goal_anim_state = BALDY_AIM;
+            else if (baldy->mood == BORED_MOOD)
+                item->goal_anim_state = BALDY_WALK;
+            else
+                item->goal_anim_state = BALDY_RUN;
+            break;
+
+        case BALDY_WALK:
+            baldy->maximum_turn = BALDY_WALK_TURN;
+
+            if (baldy->mood == ESCAPE_MOOD || !info.ahead)
+            {
+                item->required_anim_state = BALDY_RUN;
+                item->goal_anim_state = BALDY_STOP;
+            }
+            else if (Targetable(item, &info))
+            {
+                item->required_anim_state = BALDY_AIM;
+                item->goal_anim_state = BALDY_STOP;
+            }
+            else if (info.distance > BALDY_WALK_RANGE)
+            {
+                item->required_anim_state = BALDY_RUN;
+                item->goal_anim_state = BALDY_STOP;
+            }
+            break;
+
+        case BALDY_RUN:
+            baldy->maximum_turn = BALDY_RUN_TURN;
+            tilt = angle / 2;
+
+            if (baldy->mood == ESCAPE_MOOD && !info.ahead)
+                break;
+
+            if (Targetable(item, &info))
+            {
+                item->required_anim_state = BALDY_AIM;
+                item->goal_anim_state = BALDY_STOP;
+            }
+            else if (info.ahead && info.distance < BALDY_WALK_RANGE)
+            {
+                item->required_anim_state = BALDY_WALK;
+                item->goal_anim_state = BALDY_STOP;
+            }
+            break;
+
+        case BALDY_AIM:
+            baldy->flags = 0;
+            if (item->required_anim_state)
+                item->goal_anim_state = BALDY_STOP;
+            else if (Targetable(item, &info))
+                item->goal_anim_state = BALDY_SHOOT;
+            else
+                item->goal_anim_state = BALDY_STOP;
+            break;
+
+        case BALDY_SHOOT:
+            if (!baldy->flags)
+            {
+                if (ShotLara(item, info.distance / 2, &baldy_gun, head))
+                {
+                    lara_item->hit_points -= BALDY_SHOT_DAMAGE;
+                    lara_item->hit_status = 1;
+                }
+
+                baldy->flags = 1;
+            }
+
+            if (baldy->mood == ESCAPE_MOOD)
+                item->required_anim_state = BALDY_RUN;
+            break;
+        }
+    }
+
+    CreatureTilt(item, tilt);
+    CreatureHead(item, head);
+
+    CreatureAnimation(item_number, angle, 0);
 }

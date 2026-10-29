@@ -560,6 +560,7 @@ address,size,name,symbol
 0x000336dc,114,DrawSkateKid,DrawSkateKid_
 0x00033768,857,CowboyControl,CowboyControl_
 0x00033ac4,35,InitialiseBaldy,InitialiseBaldy_
+0x00033b00,751,BaldyControl,BaldyControl_
 0x00033df0,484,Func33df0,
 0x00033fd4,328,Func33fd4,
 0x0003411c,245,Func3411c,
