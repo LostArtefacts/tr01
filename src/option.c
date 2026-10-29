@@ -20,6 +20,9 @@ void GetSavedGamesList(REQUEST_INFO *req);
 void Init_Requester(REQUEST_INFO *req);
 sint32 Display_Requester(REQUEST_INFO *req);
 
+extern sint16 layout[2][13];
+extern int conflict[];
+
 sint32 m_status = 0;
 
 void do_inventory_options(INVENTORY_ITEM *inv_item)
@@ -610,6 +613,31 @@ void do_compass_option(INVENTORY_ITEM *inv_item)
     {
         inv_item->goal_frame = inv_item->frames_total - 1;
         inv_item->anim_direction = 1;
+    }
+}
+
+void FlashConflicts(void)
+{
+    int i, j;
+    sint16 key;
+
+    for (i = 0; i < 13; i++)
+    {
+        key = layout[iconfig][i];
+
+        T_FlashText(btext[i], 0, 0);
+
+        for (j = 0; j < 13; j++)
+        {
+            if (i == j)
+                continue;
+
+            if (key == layout[iconfig][j])
+            {
+                T_FlashText(btext[i], 1, 20);
+                break;
+            }
+        }
     }
 }
 
