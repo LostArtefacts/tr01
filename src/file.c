@@ -521,3 +521,14 @@ int LoadAnimatedTextures(FILE *file)
     fread(aranges, sizeof(sint16), size, file);
     return 1;
 }
+
+int LoadCinematic(FILE *file)
+{
+    fread(&num_cine_frames, sizeof(sint16), 1, file);
+    if (num_cine_frames)
+    {
+        cine = (sint16 *)game_malloc(sizeof(sint16)*8 * num_cine_frames, CINEMATIC_FRAMES);
+        fread(cine, sizeof(sint16)*8, num_cine_frames, file);
+    }
+    return 1;
+}
