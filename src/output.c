@@ -7,6 +7,10 @@ extern uint8 game_palette[256 * 3];
 #define DEPTHQ_END (20 * 1024)
 #define DEPTHQ_START ((DEPTHQ_END) - (8 * 1024))
 
+#define HealthBarX 8
+#define HealthBarY 6
+#define HealthBarW 100
+
 static sint16 shadowman[] = {
     0, 0, 0,
     32767,
@@ -278,4 +282,34 @@ void S_CalculateStaticLight(sint16 adder)
     zdist = *(phd_mxptr + M23) >> W2V_SHIFT;
     if (zdist > DEPTHQ_START)
         ls_adder += zdist - DEPTHQ_START;
+}
+
+void S_DrawHealthBar(int percent)
+{
+    int x, y;
+    int w;
+
+    x = HealthBarX;
+    y = HealthBarY;
+    w = (percent * HealthBarW) / 100;
+
+    Insert2DLine(x - 1, y + 1, x + HealthBarW + 1, y + 1, -100, 0);
+    Insert2DLine(x - 1, y + 2, x + HealthBarW + 1, y + 2, -100, 0);
+    Insert2DLine(x - 1, y + 3, x + HealthBarW + 1, y + 3, -100, 0);
+    Insert2DLine(x - 1, y + 4, x + HealthBarW + 1, y + 4, -100, 0);
+    Insert2DLine(x - 1, y + 5, x + HealthBarW + 1, y + 5, -100, 0);
+    Insert2DLine(x - 1, y + 6, x + HealthBarW + 1, y + 6, -100, 0);
+    Insert2DLine(x - 1, y + 7, x + HealthBarW + 1, y + 7, -100, 0);
+    Insert2DLine(x - 2, y + 8, x + HealthBarW + 2, y + 8, -200, 17);
+    Insert2DLine(x + HealthBarW + 2, y, x + HealthBarW + 2, y + 8, -200, 17);
+    Insert2DLine(x - 2, y, x + HealthBarW + 2, y, -300, 19);
+    Insert2DLine(x - 2, y, x - 2, y + 8, -300, 19);
+    if (w)
+    {
+        Insert2DLine(x, y + 2, x + w, y + 2, -400, 8);
+        Insert2DLine(x, y + 3, x + w, y + 3, -400, 11);
+        Insert2DLine(x, y + 4, x + w, y + 4, -400, 8);
+        Insert2DLine(x, y + 5, x + w, y + 5, -400, 6);
+        Insert2DLine(x, y + 6, x + w, y + 6, -400, 24);
+    }
 }

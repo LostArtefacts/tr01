@@ -50,6 +50,7 @@ void phd_TranslateAbs(sint32 x, sint32 y, sint32 z);
 void phd_RotateLight(PHD_ANGLE pitch, PHD_ANGLE yaw);
 sint16 *calc_object_vertices(sint16 *objptr);
 int ins_poly_trans8(PHD_VBUF *v, sint16 shade);
+void Insert2DLine(sint32 x1, sint32 y1, sint32 x2, sint32 y2, sint32 z, char color);
 void phd_InitPolyList(void);
 void phd_SortPolyList(void);
 void phd_PrintPolyList(void);
