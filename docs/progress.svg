@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">25.42% (197)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">74.58% (578)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">25.55% (198)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">74.45% (577)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="189.88" height="6" x="0" y="0" class="named"/>
-<rect width="557.12" height="6" x="189.88" y="0" class="todo"/>
+<rect width="190.85" height="6" x="0" y="0" class="named"/>
+<rect width="556.15" height="6" x="190.85" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -267,7 +267,7 @@
 <rect width="12" height="12" x="705" y="45" class="named"><title>0x0001f544 TestCdDrive (96 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="45" class="named"><title>0x0001f5a4 disk_error_handler (3 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="45" class="todo"><title>0x0001f5b0 Func1f5b0 (140 bytes)</title></rect>
-<rect width="12" height="12" x="0" y="60" class="todo"><title>0x0001f63c Func1f63c (1 bytes)</title></rect>
+<rect width="12" height="12" x="0" y="60" class="named"><title>0x0001f63c S_SetGamma (1 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="60" class="todo"><title>0x0001f640 Func1f640 (142 bytes)</title></rect>
 <rect width="12" height="12" x="30" y="60" class="todo"><title>0x0001f6d0 Func1f6d0 (241 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="60" class="todo"><title>0x0001f7c4 Func1f7c4 (255 bytes)</title></rect>
@@ -1620,7 +1620,7 @@
 <rect width="0.10" height="0.10" x="745.07" y="241.52" class="named"><title>0x0001f5a4 disk_error_handler (3 bytes)</title></rect>
 <rect width="0.10" height="0.10" x="746.89" y="239.55" class="todo"><title>0x000396dc Func396dc (3 bytes)</title></rect>
 <rect width="0.10" height="0.10" x="748.76" y="239.55" class="todo"><title>0x00038b0c Func38b0c (2 bytes)</title></rect>
-<rect width="0.10" height="0.10" x="746.89" y="240.99" class="todo"><title>0x0001f63c Func1f63c (1 bytes)</title></rect>
+<rect width="0.10" height="0.10" x="746.89" y="240.99" class="named"><title>0x0001f63c S_SetGamma (1 bytes)</title></rect>
 <rect width="0.10" height="0.10" x="746.89" y="241.99" class="todo"><title>0x0001fb0c Func1fb0c (1 bytes)</title></rect>
 <rect width="0.10" height="0.10" x="747.78" y="240.99" class="todo"><title>0x00025558 Func25558 (1 bytes)</title></rect>
 <rect width="0.10" height="0.10" x="747.78" y="241.99" class="todo"><title>0x00025798 Func25798 (1 bytes)</title></rect>

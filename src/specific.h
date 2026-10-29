@@ -105,5 +105,6 @@ void S_NoFade(void);
 void S_FadeInInventory(int fade);
 void S_FadeOutInventory(int fade);
 void S_FadeToBlack(void);
+void S_SetGamma(sint16 gamma);
 
 #endif
