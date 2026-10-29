@@ -346,7 +346,7 @@ address,size,name,symbol
 0x000263b8,0,lara_col_pose,lara_col_pose_
 0x000263b8,204,lara_col_stop,lara_col_stop_
 0x00026484,186,lara_col_forwardjump,lara_col_forwardjump_
-0x00026540,213,Func26540,
+0x00026540,213,lara_col_fastback,lara_col_fastback_
 0x00026618,182,Func26618,
 0x000266d0,121,Func266d0,
 0x0002674c,177,Func2674c,

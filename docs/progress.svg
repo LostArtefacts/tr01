@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">44.32% (347)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">55.68% (436)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">44.44% (348)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">55.56% (435)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="331.05" height="6" x="0" y="0" class="named"/>
-<rect width="415.95" height="6" x="331.05" y="0" class="todo"/>
+<rect width="332" height="6" x="0" y="0" class="named"/>
+<rect width="415" height="6" x="332" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -414,7 +414,7 @@
 <rect width="12" height="12" x="660" y="90" class="named"><title>0x000263b8 lara_col_pose (0 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="90" class="named"><title>0x000263b8 lara_col_stop (204 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="90" class="named"><title>0x00026484 lara_col_forwardjump (186 bytes)</title></rect>
-<rect width="12" height="12" x="705" y="90" class="todo"><title>0x00026540 Func26540 (213 bytes)</title></rect>
+<rect width="12" height="12" x="705" y="90" class="named"><title>0x00026540 lara_col_fastback (213 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="90" class="todo"><title>0x00026618 Func26618 (182 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="90" class="todo"><title>0x000266d0 Func266d0 (121 bytes)</title></rect>
 <rect width="12" height="12" x="0" y="105" class="todo"><title>0x0002674c Func2674c (177 bytes)</title></rect>
@@ -854,10 +854,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">42.45%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">57.55%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">42.55%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">57.45%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="317.08" height="6" x="0" y="0" class="named"/>
-<rect width="429.92" height="6" x="317.08" y="0" class="todo"/>
+<rect width="317.86" height="6" x="0" y="0" class="named"/>
+<rect width="429.14" height="6" x="317.86" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1115,7 +1115,7 @@
 <rect width="11.18" height="10.74" x="540.47" y="202.09" class="todo"><title>0x00038ee0 S_CDPlay (218 bytes)</title></rect>
 <rect width="11.18" height="10.61" x="540.47" y="215.83" class="todo"><title>0x0002a7e8 Func2a7e8 (216 bytes)</title></rect>
 <rect width="11.18" height="10.55" x="540.47" y="229.45" class="named"><title>0x00015e50 GetNearByRooms (215 bytes)</title></rect>
-<rect width="11.38" height="10.24" x="554.65" y="46.79" class="todo"><title>0x00026540 Func26540 (213 bytes)</title></rect>
+<rect width="11.38" height="10.24" x="554.65" y="46.79" class="named"><title>0x00026540 lara_col_fastback (213 bytes)</title></rect>
 <rect width="11.38" height="10.24" x="569.03" y="46.79" class="todo"><title>0x0003c0e4 Func3c0e4 (213 bytes)</title></rect>
 <rect width="11.32" height="10.24" x="583.42" y="46.79" class="todo"><title>0x00027140 Func27140 (212 bytes)</title></rect>
 <rect width="11.25" height="10.24" x="597.73" y="46.79" class="named"><title>0x0001283c BadFloor (211 bytes)</title></rect>
