@@ -1091,3 +1091,9 @@ void CowboyControl(sint16 item_number)
 
     CreatureAnimation(item_number, angle, 0);
 }
+
+void InitialiseBaldy(sint16 item_number)
+{
+    InitialiseCreature(item_number);
+    items[item_number].current_anim_state = BALDY_RUN;
+}

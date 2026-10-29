@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">70.09% (560)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">29.91% (239)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">70.21% (561)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">29.79% (238)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="523.55" height="6" x="0" y="0" class="named"/>
-<rect width="223.45" height="6" x="523.55" y="0" class="todo"/>
+<rect width="524.49" height="6" x="0" y="0" class="named"/>
+<rect width="222.51" height="6" x="524.49" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -627,7 +627,7 @@
 <rect width="12" height="12" x="105" y="165" class="named"><title>0x00033444 SkateKidControl (664 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="165" class="named"><title>0x000336dc DrawSkateKid (114 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="165" class="named"><title>0x00033768 CowboyControl (857 bytes)</title></rect>
-<rect width="12" height="12" x="150" y="165" class="todo"><title>0x00033ac4 Func33ac4 (35 bytes)</title></rect>
+<rect width="12" height="12" x="150" y="165" class="named"><title>0x00033ac4 InitialiseBaldy (35 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="165" class="todo"><title>0x00033df0 Func33df0 (484 bytes)</title></rect>
 <rect width="12" height="12" x="180" y="165" class="todo"><title>0x00033fd4 Func33fd4 (328 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="165" class="todo"><title>0x0003411c Func3411c (245 bytes)</title></rect>
@@ -870,10 +870,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">67.55%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">32.45%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">67.57%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">32.43%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="504.62" height="6" x="0" y="0" class="named"/>
-<rect width="242.38" height="6" x="504.62" y="0" class="todo"/>
+<rect width="504.74" height="6" x="0" y="0" class="named"/>
+<rect width="242.26" height="6" x="504.74" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="51.84" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1539,7 +1539,7 @@
 <rect width="2.75" height="2.24" x="727.01" y="196.64" class="named"><title>0x00025a64 lara_as_slide (35 bytes)</title></rect>
 <rect width="2.75" height="2.24" x="732.76" y="196.64" class="named"><title>0x0002ff8c BridgeTilt1Floor (35 bytes)</title></rect>
 <rect width="2.75" height="2.24" x="738.51" y="196.64" class="named"><title>0x0003340c InitialiseSkateKid (35 bytes)</title></rect>
-<rect width="2.75" height="2.24" x="744.25" y="196.64" class="todo"><title>0x00033ac4 Func33ac4 (35 bytes)</title></rect>
+<rect width="2.75" height="2.24" x="744.25" y="196.64" class="named"><title>0x00033ac4 InitialiseBaldy (35 bytes)</title></rect>
 <rect width="2.71" height="2.27" x="703.70" y="201.88" class="todo"><title>0x0003cce0 Func3cce0 (35 bytes)</title></rect>
 <rect width="2.71" height="2.12" x="703.70" y="207.15" class="named"><title>0x000245c8 Inv_RingMotionCameraPos (34 bytes)</title></rect>
 <rect width="2.71" height="2.12" x="703.70" y="212.27" class="named"><title>0x00026014 lara_as_swandive (34 bytes)</title></rect>
