@@ -330,6 +330,11 @@ void UseItem(sint16 object_num)
     }
 }
 
+void ControlLaraExtra(sint16 item_num)
+{
+    AnimateItem(&items[item_num]);
+}
+
 void lara_as_walk(ITEM_INFO *item, COLL_INFO *coll);
 void lara_as_run(ITEM_INFO *item, COLL_INFO *coll);
 void lara_as_stop(ITEM_INFO *item, COLL_INFO *coll);

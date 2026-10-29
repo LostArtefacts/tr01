@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">51.58% (407)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">48.42% (382)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">51.71% (408)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">48.29% (381)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="385.33" height="6" x="0" y="0" class="named"/>
-<rect width="361.67" height="6" x="385.33" y="0" class="todo"/>
+<rect width="386.28" height="6" x="0" y="0" class="named"/>
+<rect width="360.72" height="6" x="386.28" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -475,7 +475,7 @@
 <rect width="12" height="12" x="75" y="120" class="named"><title>0x000287ac LaraSwapMeshExtra (65 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="120" class="named"><title>0x00028820 AnimateLara (732 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="120" class="named"><title>0x00028afc UseItem (508 bytes)</title></rect>
-<rect width="12" height="12" x="120" y="120" class="todo"><title>0x00028cf8 Func28cf8 (28 bytes)</title></rect>
+<rect width="12" height="12" x="120" y="120" class="named"><title>0x00028cf8 ControlLaraExtra (28 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="120" class="todo"><title>0x00028d14 Func28d14 (34 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="120" class="todo"><title>0x00028d38 Func28d38 (355 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="120" class="todo"><title>0x00028e9c Func28e9c (468 bytes)</title></rect>
@@ -860,10 +860,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">47.31%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">52.69%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">47.32%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">52.68%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="353.41" height="6" x="0" y="0" class="named"/>
-<rect width="393.59" height="6" x="353.41" y="0" class="todo"/>
+<rect width="353.52" height="6" x="0" y="0" class="named"/>
+<rect width="393.48" height="6" x="353.52" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1548,7 +1548,7 @@
 <rect width="2.27" height="1.92" x="710.93" y="209.39" class="named"><title>0x0002043c GetRandomDraw (29 bytes)</title></rect>
 <rect width="2.27" height="1.92" x="710.93" y="214.31" class="named"><title>0x000245ec Inv_RingMotionCameraPitch (29 bytes)</title></rect>
 <rect width="2.27" height="1.75" x="710.93" y="219.24" class="named"><title>0x00014efc ControlCinematicPlayer4 (28 bytes)</title></rect>
-<rect width="2.27" height="1.75" x="710.93" y="223.99" class="todo"><title>0x00028cf8 Func28cf8 (28 bytes)</title></rect>
+<rect width="2.27" height="1.75" x="710.93" y="223.99" class="named"><title>0x00028cf8 ControlLaraExtra (28 bytes)</title></rect>
 <rect width="2.27" height="1.75" x="710.93" y="228.74" class="todo"><title>0x00030168 Func30168 (28 bytes)</title></rect>
 <rect width="2.27" height="1.75" x="710.93" y="233.49" class="todo"><title>0x00034d24 Func34d24 (28 bytes)</title></rect>
 <rect width="2.27" height="1.75" x="710.93" y="238.25" class="todo"><title>0x000469e1 Func469e1 (28 bytes)</title></rect>
