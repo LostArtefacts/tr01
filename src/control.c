@@ -1293,3 +1293,25 @@ void TriggerCDTrack(sint16 value, sint16 flags, sint16 type)
     }
     TriggerNormalCDTrack(value, flags, type);
 }
+
+void TriggerNormalCDTrack(sint16 value, sint16 flags, sint16 type)
+{
+    if (cd_flags[value] & ONESHOT)
+        return;
+    if (type == SWITCH)
+        cd_flags[value] ^= (flags & CODE_BITS);
+    else if (type == ANTIPAD)
+        cd_flags[value] &= (0xffffffff - (flags & CODE_BITS));
+    else if (flags & CODE_BITS)
+        cd_flags[value] |= (flags & CODE_BITS);
+
+    if ((cd_flags[value] & CODE_BITS) == CODE_BITS)
+    {
+        if (flags & ONESHOT)
+            cd_flags[value] |= ONESHOT;
+        if (value != cdtrack)
+            S_CDPlay(value);
+    }
+    else
+        S_CDStop();
+}
