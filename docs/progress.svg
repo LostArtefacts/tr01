@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">41.15% (321)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">58.85% (459)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">41.28% (322)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">58.72% (458)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="307.42" height="6" x="0" y="0" class="named"/>
-<rect width="439.58" height="6" x="307.42" y="0" class="todo"/>
+<rect width="308.38" height="6" x="0" y="0" class="named"/>
+<rect width="438.62" height="6" x="308.38" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -389,7 +389,7 @@
 <rect width="12" height="12" x="285" y="90" class="named"><title>0x00025ab8 lara_as_leftjump (15 bytes)</title></rect>
 <rect width="12" height="12" x="300" y="90" class="named"><title>0x00025ac8 lara_as_upjump (15 bytes)</title></rect>
 <rect width="12" height="12" x="315" y="90" class="named"><title>0x00025ad8 lara_as_fallback (40 bytes)</title></rect>
-<rect width="12" height="12" x="330" y="90" class="todo"><title>0x00025b00 Func25b00 (54 bytes)</title></rect>
+<rect width="12" height="12" x="330" y="90" class="named"><title>0x00025b00 lara_as_hangleft (54 bytes)</title></rect>
 <rect width="12" height="12" x="345" y="90" class="todo"><title>0x00025b38 Func25b38 (54 bytes)</title></rect>
 <rect width="12" height="12" x="360" y="90" class="todo"><title>0x00025b70 lara_as_slideback (16 bytes)</title></rect>
 <rect width="12" height="12" x="375" y="90" class="todo"><title>0x00025b80 Func25b80 (42 bytes)</title></rect>
@@ -851,10 +851,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">41.15%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">58.85%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">41.18%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">58.82%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="307.42" height="6" x="0" y="0" class="named"/>
-<rect width="439.58" height="6" x="307.42" y="0" class="todo"/>
+<rect width="307.62" height="6" x="0" y="0" class="named"/>
+<rect width="439.38" height="6" x="307.62" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1414,7 +1414,7 @@
 <rect width="3.95" height="4.07" x="701.98" y="160.57" class="todo"><title>0x0002b464 Func2b464 (55 bytes)</title></rect>
 <rect width="3.95" height="4.07" x="708.93" y="160.57" class="todo"><title>0x00034b10 Func34b10 (55 bytes)</title></rect>
 <rect width="3.95" height="4.07" x="715.88" y="160.57" class="todo"><title>0x0003a468 Func3a468 (55 bytes)</title></rect>
-<rect width="3.82" height="4.07" x="722.83" y="160.57" class="todo"><title>0x00025b00 Func25b00 (54 bytes)</title></rect>
+<rect width="3.82" height="4.07" x="722.83" y="160.57" class="named"><title>0x00025b00 lara_as_hangleft (54 bytes)</title></rect>
 <rect width="3.82" height="4.07" x="729.66" y="160.57" class="todo"><title>0x00025b38 Func25b38 (54 bytes)</title></rect>
 <rect width="3.82" height="4.07" x="736.48" y="160.57" class="todo"><title>0x00038cfc Func38cfc (54 bytes)</title></rect>
 <rect width="3.70" height="4.07" x="743.30" y="160.57" class="named"><title>0x0001cf3c phd_TranslateRel_I (53 bytes)</title></rect>

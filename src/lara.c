@@ -527,3 +527,13 @@ void lara_as_fallback(ITEM_INFO *item, COLL_INFO *coll)
     if ((input & IN_ACTION) && lara.gun_status == LG_ARMLESS)
         item->goal_anim_state = AS_REACH;
 }
+
+void lara_as_hangleft(ITEM_INFO *item, COLL_INFO *coll)
+{
+    coll->enable_hit = 0;
+    coll->enable_baddie_push = 0;
+    camera.target_angle = CAM_A_HANG;
+    camera.target_elevation = CAM_E_HANG;
+    if (!(input & IN_LEFT) && !(input & IN_STEPL))
+        item->goal_anim_state = AS_HANG;
+}
