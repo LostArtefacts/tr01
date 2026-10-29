@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">62.67% (497)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">37.33% (296)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">62.80% (498)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">37.20% (295)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="468.17" height="6" x="0" y="0" class="named"/>
-<rect width="278.83" height="6" x="468.17" y="0" class="todo"/>
+<rect width="469.11" height="6" x="0" y="0" class="named"/>
+<rect width="277.89" height="6" x="469.11" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -565,7 +565,7 @@
 <rect width="12" height="12" x="675" y="135" class="named"><title>0x0002e2ec NatlaControl (1620 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="135" class="named"><title>0x0002e940 ControlNatlaGun (321 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="135" class="named"><title>0x0002ea84 NatlaGun (122 bytes)</title></rect>
-<rect width="12" height="12" x="720" y="135" class="todo"><title>0x0002eb00 Func2eb00 (49 bytes)</title></rect>
+<rect width="12" height="12" x="720" y="135" class="named"><title>0x0002eb00 InitialiseMovingBlock (49 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="135" class="todo"><title>0x0002eb34 Func2eb34 (296 bytes)</title></rect>
 <rect width="12" height="12" x="0" y="150" class="todo"><title>0x0002ec7c Func2ec7c (547 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="150" class="todo"><title>0x0002eea0 Func2eea0 (74 bytes)</title></rect>
@@ -864,10 +864,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">57.98%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">42.02%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">58%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">42%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="433.12" height="6" x="0" y="0" class="named"/>
-<rect width="313.88" height="6" x="433.12" y="0" class="todo"/>
+<rect width="433.30" height="6" x="0" y="0" class="named"/>
+<rect width="313.70" height="6" x="433.30" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.01" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1461,7 +1461,7 @@
 <rect width="3.84" height="3.29" x="680.35" y="211.53" class="named"><title>0x000273cc lara_col_waterout (49 bytes)</title></rect>
 <rect width="3.84" height="3.29" x="680.35" y="217.82" class="named"><title>0x0002ccfc DisableBaddieAI (49 bytes)</title></rect>
 <rect width="3.84" height="3.29" x="680.35" y="224.12" class="named"><title>0x0002dd98 mn_clear_handles (49 bytes)</title></rect>
-<rect width="3.84" height="3.29" x="680.35" y="230.41" class="todo"><title>0x0002eb00 Func2eb00 (49 bytes)</title></rect>
+<rect width="3.84" height="3.29" x="680.35" y="230.41" class="named"><title>0x0002eb00 InitialiseMovingBlock (49 bytes)</title></rect>
 <rect width="3.84" height="3.29" x="680.35" y="236.71" class="todo"><title>0x0002febc Func2febc (49 bytes)</title></rect>
 <rect width="3.36" height="3.63" x="687.19" y="173.76" class="named"><title>0x000274ec GetLaraCollisionInfo (48 bytes)</title></rect>
 <rect width="3.36" height="3.63" x="693.55" y="173.76" class="todo"><title>0x00031f3c Func31f3c (48 bytes)</title></rect>

@@ -497,7 +497,7 @@ address,size,name,symbol
 0x0002e2ec,1620,NatlaControl,NatlaControl_
 0x0002e940,321,ControlNatlaGun,ControlNatlaGun_
 0x0002ea84,122,NatlaGun,NatlaGun_
-0x0002eb00,49,Func2eb00,
+0x0002eb00,49,InitialiseMovingBlock,InitialiseMovingBlock_
 0x0002eb34,296,Func2eb34,
 0x0002ec7c,547,Func2ec7c,
 0x0002eea0,74,Func2eea0,
@@ -1916,6 +1916,7 @@ address,size,name,symbol
 0x000c3b80,4,mn_sound_fade_rate,_mn_sound_fade_rate
 0x000c3b84,4,mn_ambient_lookup_indx,_mn_ambient_lookup_indx
 0x000c3b88,16,natla_gun,_natla_gun
+0x000c3b9c,24,MovingBlockBounds,_MovingBlockBounds
 0x000c3bc4,4,detail_level,_detail_level
 0x000c3e38,4,number_cameras,_number_cameras
 0x000c3e68,128,exit_message,_exit_message
