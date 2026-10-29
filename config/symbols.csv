@@ -409,8 +409,8 @@ address,size,name,symbol
 0x00028afc,508,UseItem,UseItem_
 0x00028cf8,28,ControlLaraExtra,ControlLaraExtra_
 0x00028d14,34,InitialiseLaraLoad,InitialiseLaraLoad_
-0x00028d38,355,Func28d38,
-0x00028e9c,468,Func28e9c,
+0x00028d38,355,InitialiseLara,InitialiseLara_
+0x00028e9c,468,InitialiseLaraInventory,InitialiseLaraInventory_
 0x00029070,280,Func29070,
 0x00029188,41,Func29188,
 0x000291b4,542,Func291b4,

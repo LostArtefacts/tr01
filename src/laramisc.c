@@ -341,6 +341,57 @@ void InitialiseLaraLoad(sint16 item_num)
     lara_item = &items[item_num];
 }
 
+void InitialiseLara(void)
+{
+    ITEM_INFO *item;
+
+    item = lara_item;
+    item->data = (void *)&lara;
+    item->collidable = 0;
+    item->hit_points = LARA_HITPOINTS;
+    lara.air = LARA_AIR;
+    lara.torso_x_rot = lara.torso_y_rot = lara.torso_z_rot = 0;
+    lara.head_x_rot = lara.head_y_rot = lara.head_z_rot = 0;
+    lara.calc_fallspeed = 0;
+    lara.mesh_effects = 0;
+    lara.hit_frame = 0;
+    lara.hit_direction = 0;
+    lara.death_count = 0;
+    lara.target = NULL;
+    lara.hit_effect = NULL;
+    lara.hit_effect_count = 0;
+    lara.turn_rate = 0;
+    lara.move_angle = 0;
+    lara.left_arm.flash_gun = lara.right_arm.flash_gun = 0;
+    lara.left_arm.lock = lara.right_arm.lock = 0;
+
+    if ((room[item->room_number].flags & 1))
+    {
+        lara.water_status = LARA_UNDERWATER;
+        item->fallspeed = 0;
+        item->goal_anim_state = AS_TREAD;
+        item->current_anim_state = AS_TREAD;
+        item->anim_number = TREAD_A;
+        item->frame_number = TREAD_F;
+    }
+    else
+    {
+        lara.water_status = LARA_ABOVEWATER;
+        item->goal_anim_state = AS_STOP;
+        item->current_anim_state = AS_STOP;
+        item->anim_number = STOP_A;
+        item->frame_number = STOP_F;
+    }
+
+    lara.current_active = 0;
+    InitialiseLOT(&lara.LOT);
+    lara.LOT.step = WALL_L * 20;
+    lara.LOT.drop = -WALL_L * 20;
+    lara.LOT.fly = STEP_L;
+
+    InitialiseLaraInventory(CurrentLevel);
+}
+
 void lara_as_walk(ITEM_INFO *item, COLL_INFO *coll);
 void lara_as_run(ITEM_INFO *item, COLL_INFO *coll);
 void lara_as_stop(ITEM_INFO *item, COLL_INFO *coll);
