@@ -201,3 +201,9 @@ void InitialisePlayer1(sint16 item_num)
         meshes[objects[PISTOLS].mesh_index + THIGH_R] = temp;
     }
 }
+
+void InitialiseGenPlayer(sint16 item_num)
+{
+    AddActiveItem(item_num);
+    items[item_num].pos.y_rot = 0;
+}
