@@ -30,6 +30,9 @@ typedef struct
 } KEYSTUFF;
 
 extern KEYSTUFF *keydata;
+
+#define K_ESC 0x01
+#define rawkey(k) (keydata->keymap[k])
 extern int file_len;
 
 extern sint32 clock_ticks;

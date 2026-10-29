@@ -1,4 +1,6 @@
+#include <stdio.h>
 #include "game.h"
+#include "player.h"
 
 SG_COL S_COLOUR(int R, int G, int B)
 {
@@ -208,4 +210,105 @@ void S_Wait(int frames)
             ;
         frames--;
     }
+}
+
+char *fmv_names[] = {
+    "fmv\\cafe.rpl",
+    "fmv\\mansion.rpl",
+    "fmv\\snow.rpl",
+    "fmv\\lift.rpl",
+    "fmv\\vision.rpl",
+    "fmv\\canyon.rpl",
+    "fmv\\pyramid.rpl",
+    "fmv\\prison.rpl",
+    "fmv\\end.rpl",
+    "fmv\\core.rpl",
+    "fmv\\escape.rpl"
+};
+
+int EscapeFMV(int sequence, int mode)
+{
+    int finished, frames, xoffset = 0, yoffset = 0, frigfactor = 2;
+    PLRESULT pRes = PLAYER_OK;
+    LPMOVIEHANDLE mhandle = NULL;
+    LPVIDEOHANDLE vhandle = NULL;
+    LPSOUNDHANDLE shandle = NULL;
+
+    finished = 1;
+
+    Player_InitPlaybackSystem((ULONG)SoundGetSOSHandle(), (void *)SoundGetSOSDriver());
+
+    pRes = Player_InitMovie(&mhandle, NULL, NULL, GetFullPath(fmv_names[sequence]), 1 << 20);
+
+    if (pRes != PLAYER_OK)
+        S_ExitSystem("ERROR: Cannot initialise FMV player");
+
+    if (mode == 0)
+    {
+        yoffset = 0;
+        pRes = Player_InitVideo(&vhandle, mhandle->header.x_size, mhandle->header.y_size, xoffset, yoffset, 0, 0, 640, 480, 0, DFLAG_INVIEWPORT | DFLAG_CLEAROUTPUT);
+    }
+    else
+    {
+        yoffset = (480 - (mhandle->header.y_size << 1)) >> 1;
+        pRes = Player_InitVideo(&vhandle, mhandle->header.x_size, mhandle->header.y_size, xoffset, yoffset, 0, 0, 640, 480, 0, DFLAG_SOFTDOUBLED | DFLAG_INVIEWPORT | DFLAG_CLEAROUTPUT);
+    }
+
+    if (pRes != PLAYER_OK)
+        goto shutdownplayer;
+
+    if (sound_active)
+        pRes = Player_InitSound(&shandle, 44100, 1, 1, 22050, mhandle->header.sound_channels, mhandle->header.sound_rate, mhandle->header.sound_precision);
+    else
+        pRes = PLAYER_OK;
+
+    if (pRes != PLAYER_OK)
+        goto shutdownplayer;
+
+    pRes = Player_InitMoviePlayback(mhandle, vhandle, shandle);
+
+    if (pRes != PLAYER_OK)
+        goto shutdownplayer;
+
+    pRes = Player_InitPlaybackMode();
+
+    if (pRes != PLAYER_OK)
+        goto shutdownplayer;
+
+    Player_MapVideo(vhandle, 0);
+
+    frames = (mhandle->header.number_of_chunks + 1) * mhandle->header.frames_per_chunk;
+
+    pRes = Player_StartTimer(mhandle);
+
+    sprintf(exit_message, "Frames %d\n", frames);
+
+    if (pRes != PLAYER_OK)
+        goto shutdownplayer;
+
+    if (shandle)
+        Player_StartSound(shandle);
+
+    while (mhandle->vdf < frames - frigfactor)
+    {
+        pRes = Player_Playframe(mhandle, vhandle, shandle, NULL, 0, 0, NULL, 0);
+        if (pRes != PLAYER_OK)
+            break;
+
+        if (rawkey(K_ESC))
+        {
+            finished = 0;
+            break;
+        }
+    }
+
+shutdownplayer:
+    if (shandle)
+        Player_StopSound(shandle);
+    Player_ShutDownSound(shandle);
+    Player_ShutDownVideo(vhandle);
+    Player_ShutDownMovie(mhandle);
+    Player_ShutDownPlaybackSystem();
+
+    return finished;
 }
