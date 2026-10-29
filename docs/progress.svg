@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">52.47% (414)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">47.53% (375)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">52.60% (415)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">47.40% (374)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="391.96" height="6" x="0" y="0" class="named"/>
-<rect width="355.04" height="6" x="391.96" y="0" class="todo"/>
+<rect width="392.91" height="6" x="0" y="0" class="named"/>
+<rect width="354.09" height="6" x="392.91" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -482,7 +482,7 @@
 <rect width="12" height="12" x="180" y="120" class="named"><title>0x00029070 LaraInitialiseMeshes (280 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="120" class="named"><title>0x00029188 InitialiseEvilLara (41 bytes)</title></rect>
 <rect width="12" height="12" x="210" y="120" class="named"><title>0x000291b4 ControlEvilLara (542 bytes)</title></rect>
-<rect width="12" height="12" x="225" y="120" class="todo"><title>0x000293d4 Func293d4 (91 bytes)</title></rect>
+<rect width="12" height="12" x="225" y="120" class="named"><title>0x000293d4 DrawEvilLara (91 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="120" class="todo"><title>0x00029430 LaraUnderWater (454 bytes)</title></rect>
 <rect width="12" height="12" x="255" y="120" class="todo"><title>0x000295f8 lara_as_swim (170 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="120" class="todo"><title>0x000296a4 lara_as_glide (182 bytes)</title></rect>
@@ -860,10 +860,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">48.17%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">51.83%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">48.21%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">51.79%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="359.82" height="6" x="0" y="0" class="named"/>
-<rect width="387.18" height="6" x="359.82" y="0" class="todo"/>
+<rect width="360.15" height="6" x="0" y="0" class="named"/>
+<rect width="386.85" height="6" x="360.15" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1334,7 +1334,7 @@
 <rect width="6.24" height="5.80" x="633.41" y="207.78" class="named"><title>0x00020cd4 AddDisplayPickup (91 bytes)</title></rect>
 <rect width="6.24" height="5.80" x="633.41" y="216.59" class="named"><title>0x00027400 lara_default_col (91 bytes)</title></rect>
 <rect width="6.24" height="5.80" x="633.41" y="225.39" class="named"><title>0x00027620 LaraHitCeiling (91 bytes)</title></rect>
-<rect width="6.24" height="5.80" x="633.41" y="234.20" class="todo"><title>0x000293d4 Func293d4 (91 bytes)</title></rect>
+<rect width="6.24" height="5.80" x="633.41" y="234.20" class="named"><title>0x000293d4 DrawEvilLara (91 bytes)</title></rect>
 <rect width="5.76" height="6.28" x="642.64" y="135.90" class="todo"><title>0x0003d98c phd_LookAt (91 bytes)</title></rect>
 <rect width="5.76" height="6.18" x="642.64" y="145.18" class="named"><title>0x00019eb0 IncreaseScreenSize (90 bytes)</title></rect>
 <rect width="5.76" height="6.18" x="642.64" y="154.36" class="named"><title>0x0001f0d0 LoadCameras (90 bytes)</title></rect>

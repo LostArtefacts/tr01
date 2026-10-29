@@ -591,6 +591,25 @@ void ControlEvilLara(sint16 item_num)
     }
 }
 
+void DrawEvilLara(ITEM_INFO *item)
+{
+    sint16 *meshstore[15];
+    sint16 **meshpp;
+    int i;
+
+    meshpp = &meshes[objects[EVIL_LARA].mesh_index];
+    for (i = 0; i < 15; i++)
+    {
+        meshstore[i] = lara.mesh_ptrs[i];
+        lara.mesh_ptrs[i] = *(meshpp++);
+    }
+
+    DrawLara(item);
+
+    for (i = 0; i < 15; i++)
+        lara.mesh_ptrs[i] = meshstore[i];
+}
+
 void lara_as_walk(ITEM_INFO *item, COLL_INFO *coll);
 void lara_as_run(ITEM_INFO *item, COLL_INFO *coll);
 void lara_as_stop(ITEM_INFO *item, COLL_INFO *coll);

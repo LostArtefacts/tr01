@@ -414,7 +414,7 @@ address,size,name,symbol
 0x00029070,280,LaraInitialiseMeshes,LaraInitialiseMeshes_
 0x00029188,41,InitialiseEvilLara,InitialiseEvilLara_
 0x000291b4,542,ControlEvilLara,ControlEvilLara_
-0x000293d4,91,Func293d4,
+0x000293d4,91,DrawEvilLara,DrawEvilLara_
 0x00029430,454,LaraUnderWater,LaraUnderWater_
 0x000295f8,170,lara_as_swim,lara_as_swim_
 0x000296a4,182,lara_as_glide,lara_as_glide_
