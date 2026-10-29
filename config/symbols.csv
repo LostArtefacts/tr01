@@ -493,8 +493,10 @@ address,size,name,symbol
 0x0002dd60,6,mn_set_sound_fade_rate,mn_set_sound_fade_rate_
 0x0002dd68,45,mn_clear_fx_slot,mn_clear_fx_slot_
 0x0002dd98,49,mn_clear_handles,mn_clear_handles_
-0x0002e940,321,Func2e940,
-0x0002ea84,122,Func2ea84,
+0x0002ddfc,1205,TorsoControl,TorsoControl_
+0x0002e2ec,1620,NatlaControl,NatlaControl_
+0x0002e940,321,ControlNatlaGun,ControlNatlaGun_
+0x0002ea84,122,NatlaGun,NatlaGun_
 0x0002eb00,49,Func2eb00,
 0x0002eb34,296,Func2eb34,
 0x0002ec7c,547,Func2ec7c,
@@ -666,7 +668,7 @@ address,size,name,symbol
 0x0003c238,122,Func3c238,
 0x0003c2b4,63,Func3c2b4,
 0x0003c2f4,165,Func3c2f4,
-0x0003c39c,932,Func3c39c,
+0x0003c39c,932,ExplodingDeath,ExplodingDeath_
 0x0003c740,433,Func3c740,
 0x0003ca00,273,Func3ca00,
 0x0003cb14,232,Func3cb14,
@@ -1913,6 +1915,7 @@ address,size,name,symbol
 0x000c3b7c,4,mn_sound_fade_counter,_mn_sound_fade_counter
 0x000c3b80,4,mn_sound_fade_rate,_mn_sound_fade_rate
 0x000c3b84,4,mn_ambient_lookup_indx,_mn_ambient_lookup_indx
+0x000c3b88,16,natla_gun,_natla_gun
 0x000c3bc4,4,detail_level,_detail_level
 0x000c3e38,4,number_cameras,_number_cameras
 0x000c3e68,128,exit_message,_exit_message
