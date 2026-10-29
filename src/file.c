@@ -435,3 +435,17 @@ int LoadPalette(FILE *file)
 
     return 1;
 }
+
+int LoadCameras(FILE *file)
+{
+    fread(&number_cameras, sizeof(sint32), 1, file);
+    if (number_cameras == 0)
+        return 1;
+
+    camera.fixed = (OBJECT_VECTOR *)game_malloc(sizeof(OBJECT_VECTOR) * number_cameras, CAMERAS);
+    if (camera.fixed == NULL)
+        return 0;
+    fread(camera.fixed, sizeof(OBJECT_VECTOR), number_cameras, file);
+
+    return 1;
+}

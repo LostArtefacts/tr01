@@ -1781,6 +1781,7 @@ address,size,name,symbol
 0x000c38a8,4,level_items,_level_items
 0x000c38ac,4,health_bar_timer,_health_bar_timer
 0x000c3b68,4,sound_active,_sound_active
+0x000c3e38,4,number_cameras,_number_cameras
 0x000c3e68,128,exit_message,_exit_message
 0x000c3ee8,4,title_loaded,_title_loaded
 0x000c409c,4,wibble_offset,_wibble_offset

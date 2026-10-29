@@ -48,6 +48,7 @@ typedef struct
 } SAVEGAME_INFO;
 
 extern SAVEGAME_INFO savegame;
+extern int number_cameras;
 
 void CreateSaveGameInfo(void);
 
