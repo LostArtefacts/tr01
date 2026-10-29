@@ -1804,6 +1804,7 @@ address,size,name,symbol
 0x000cb3d4,4,flip_status,_flip_status
 0x000cb3d8,4,demoptr,_demoptr
 0x000cb3dc,4,democount,_democount
+0x000cb9e0,48,vbufdoor,_vbufdoor
 0x000cba10,1400,static_objects,_static_objects
 0x000cbf88,200,draw_rooms,_draw_rooms
 0x000cc068,4,camera_underwater,_camera_underwater
@@ -1828,6 +1829,7 @@ address,size,name,symbol
 0x000d4744,48000,vbuf,_vbuf
 0x000e02c4,40960,phdtextinfo,_phdtextinfo
 0x0012ca84,8192,depthq_table,_depthq_table
+0x0012ea84,48,w2v_matrix,_w2v_matrix
 0x0012f3b4,4,sort3dptr,_sort3dptr
 0x0012f3c0,4,phd_bottom,_phd_bottom
 0x0012f3c4,4,phd_left,_phd_left

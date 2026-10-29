@@ -76,6 +76,7 @@ extern sint32 phd_znear;
 extern sint32 phd_zfar;
 extern sint32 phd_persp;
 extern sint32 *phd_mxptr;
+extern sint32 w2v_matrix[];
 
 extern sint32 surfacenum;
 extern sint16 *info3dptr;
