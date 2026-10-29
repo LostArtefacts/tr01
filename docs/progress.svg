@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">71.48% (574)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">28.52% (229)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">71.61% (575)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">28.39% (228)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="533.97" height="6" x="0" y="0" class="named"/>
-<rect width="213.03" height="6" x="533.97" y="0" class="todo"/>
+<rect width="534.90" height="6" x="0" y="0" class="named"/>
+<rect width="212.10" height="6" x="534.90" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -641,7 +641,7 @@
 <rect width="12" height="12" x="315" y="165" class="named"><title>0x00034b48 SwitchTrigger (120 bytes)</title></rect>
 <rect width="12" height="12" x="330" y="165" class="named"><title>0x00034bc0 KeyTrigger (74 bytes)</title></rect>
 <rect width="12" height="12" x="345" y="165" class="named"><title>0x00034c0c PickupTrigger (64 bytes)</title></rect>
-<rect width="12" height="12" x="360" y="165" class="todo"><title>0x00034c4c Func34c4c (188 bytes)</title></rect>
+<rect width="12" height="12" x="360" y="165" class="named"><title>0x00034c4c PickUpSaveGameCollision (188 bytes)</title></rect>
 <rect width="12" height="12" x="375" y="165" class="todo"><title>0x00034d08 Func34d08 (26 bytes)</title></rect>
 <rect width="12" height="12" x="390" y="165" class="todo"><title>0x00034d24 Func34d24 (28 bytes)</title></rect>
 <rect width="12" height="12" x="405" y="165" class="todo"><title>0x00035020 Func35020 (696 bytes)</title></rect>
@@ -874,10 +874,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">68.82%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">31.18%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">68.90%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">31.10%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="514.06" height="6" x="0" y="0" class="named"/>
-<rect width="232.94" height="6" x="514.06" y="0" class="todo"/>
+<rect width="514.71" height="6" x="0" y="0" class="named"/>
+<rect width="232.29" height="6" x="514.71" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="51.21" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1170,7 +1170,7 @@
 <rect width="10.20" height="10.06" x="723.67" y="63.61" class="todo"><title>0x0003b218 Func3b218 (191 bytes)</title></rect>
 <rect width="10.13" height="10.06" x="736.87" y="63.61" class="todo"><title>0x00045a4c FileLoad (190 bytes)</title></rect>
 <rect width="9.96" height="10.17" x="558.62" y="76.67" class="named"><title>0x00026c08 lara_col_stepleft (189 bytes)</title></rect>
-<rect width="9.96" height="10.10" x="558.62" y="89.84" class="todo"><title>0x00034c4c Func34c4c (188 bytes)</title></rect>
+<rect width="9.96" height="10.10" x="558.62" y="89.84" class="named"><title>0x00034c4c PickUpSaveGameCollision (188 bytes)</title></rect>
 <rect width="9.96" height="10.10" x="558.62" y="102.93" class="todo"><title>0x0003b15c LavaBurn (188 bytes)</title></rect>
 <rect width="9.96" height="10.03" x="558.62" y="116.03" class="named"><title>0x00027ee4 TestHangSwingIn (187 bytes)</title></rect>
 <rect width="9.96" height="10.03" x="558.62" y="129.06" class="todo"><title>0x0003db04 Func3db04 (187 bytes)</title></rect>

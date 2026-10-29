@@ -643,3 +643,28 @@ int PickupTrigger(sint16 item_num)
     }
     return 0;
 }
+
+void PickUpSaveGameCollision(sint16 item_num, ITEM_INFO *laraitem, COLL_INFO *coll)
+{
+    ITEM_INFO *item;
+
+    ObjectCollision(item_num, laraitem, coll);
+    item = &items[item_num];
+    if (input & IN_ACTION && lara.gun_status == LG_ARMLESS && !laraitem->gravity_status && laraitem->current_anim_state == AS_STOP)
+    {
+        item->pos.y_rot = laraitem->pos.y_rot;
+        item->pos.z_rot = 0;
+        item->pos.x_rot = 0;
+        if (!TestLaraPosition(PickUpBounds, item, laraitem))
+            return;
+        item->status = INVISIBLE;
+        CreateSaveGameInfo();
+        if (S_SaveGame(&savegame, sizeof(SAVEGAME_INFO), 1))
+        {
+            item->status = INVISIBLE;
+            RemoveDrawnItem(item_num);
+        }
+        else
+            item->status = ACTIVE;
+    }
+}
