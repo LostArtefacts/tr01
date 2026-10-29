@@ -28,6 +28,7 @@ sint16 GetTiltType(FLOOR_INFO *floor, sint32 x, sint32 y, sint32 z);
 sint16 GetHeight(FLOOR_INFO *floor, sint32 x, sint32 y, sint32 z);
 sint16 GetCeiling(FLOOR_INFO *floor, sint32 x, sint32 y, sint32 z);
 void FlipMap(void);
+void TriggerCDTrack(sint16 value, sint16 flags, sint16 type);
 sint16 GetDoor(FLOOR_INFO *floor);
 int LOS(GAME_VECTOR *start, GAME_VECTOR *target);
 

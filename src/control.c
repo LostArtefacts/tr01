@@ -551,3 +551,259 @@ void RefreshCamera(sint16 type, sint16 *data)
     if (!target_ok || (target_ok == 2 && camera.item->looked_at && camera.item != camera.last_item))
         camera.item = NULL;
 }
+
+void TestTriggers(sint16 *data, int heavy)
+{
+    ITEM_INFO *item, *camera_item;
+    OBJECT_VECTOR *obvector;
+    sint16 type, trigger, value, timer, flags;
+    sint16 camera_flags, camera_timer;
+    int switch_off = 0, flip = 0, neweffect = -1;
+
+    if (data == NULL)
+        return;
+
+    if ((*data & DATA_TYPE) == LAVA_TYPE)
+    {
+        if (!heavy && lara_item->pos.y_pos == lara_item->floor)
+            LavaBurn(lara_item);
+
+        if (*data & END_BIT)
+            return;
+
+        data++;
+    }
+
+    type = (*(data++) >> 8) & 0x3f;
+
+    flags = *(data++);
+    timer = flags & 0xff;
+
+    if (camera.type != HEAVY_CAMERA)
+        RefreshCamera(type, data);
+
+    if (heavy)
+    {
+        if (type != HEAVY)
+            return;
+    }
+    else
+    {
+        switch (type)
+        {
+        case SWITCH:
+            value = *(data++) & VALUE_BITS;
+            if (!SwitchTrigger(value, timer))
+                return;
+            switch_off = (items[value].current_anim_state == 1);
+            break;
+
+        case PAD:
+        case ANTIPAD:
+            if (lara_item->pos.y_pos != lara_item->floor)
+                return;
+            break;
+
+        case KEY:
+            value = *(data++) & VALUE_BITS;
+            if (!KeyTrigger(value))
+                return;
+            break;
+
+        case PICKUP:
+            value = *(data++) & VALUE_BITS;
+            if (!PickupTrigger(value))
+                return;
+            break;
+
+        case HEAVY:
+            return;
+
+        case COMBAT:
+            if (lara.gun_status != LG_READY)
+                return;
+            break;
+
+        case DUMMY:
+            return;
+        }
+    }
+
+    camera_item = NULL;
+    do
+    {
+        trigger = *(data++);
+        value = trigger & VALUE_BITS;
+
+        switch (TRIG_BITS(trigger))
+        {
+        case TO_OBJECT:
+            item = &items[value];
+
+            if (item->flags & ONESHOT)
+                break;
+
+            item->timer = timer;
+            if (timer != 1)
+                item->timer *= 30;
+
+            if (type == SWITCH)
+                item->flags ^= (flags & CODE_BITS);
+            else if (type == ANTIPAD)
+                item->flags &= (0xffffffff - (flags & CODE_BITS));
+            else if (flags & CODE_BITS)
+                item->flags |= (flags & CODE_BITS);
+
+            if ((item->flags & CODE_BITS) != CODE_BITS)
+                break;
+
+            if (flags & ONESHOT)
+                item->flags |= ONESHOT;
+
+            if (!item->active)
+            {
+                if (objects[item->object_number].intelligent)
+                {
+                    if (item->status == NOT_ACTIVE)
+                    {
+                        item->touch_bits = 0;
+                        item->status = ACTIVE;
+                        AddActiveItem(value);
+                        EnableBaddieAI(value, 1);
+                    }
+                    else if (item->status == INVISIBLE)
+                    {
+                        item->touch_bits = 0;
+                        if (EnableBaddieAI(value, 0))
+                            item->status = ACTIVE;
+                        else
+                            item->status = INVISIBLE;
+                        AddActiveItem(value);
+                    }
+                }
+                else
+                {
+                    item->touch_bits = 0;
+                    item->status = ACTIVE;
+                    AddActiveItem(value);
+                }
+            }
+            break;
+
+        case TO_CAMERA:
+            trigger = *(data++);
+            camera_flags = trigger;
+            camera_timer = trigger & 0xff;
+
+            if (camera.fixed[value].flags & ONESHOT)
+                break;
+
+            camera.number = value;
+
+            if (camera.type == LOOK_CAMERA || camera.type == COMBAT_CAMERA)
+                break;
+
+            if (type == COMBAT)
+                break;
+
+            if (type == SWITCH && timer && switch_off)
+                break;
+
+            if (camera.number != camera.last || type == SWITCH)
+            {
+                if (camera_timer == 1)
+                    camera.timer = 1;
+                else
+                    camera.timer = camera_timer * 30;
+
+                if (camera_flags & ONESHOT)
+                    camera.fixed[camera.number].flags |= ONESHOT;
+
+                camera.speed = ((camera_flags & CODE_BITS) >> 6) + 1;
+                camera.type = (heavy) ? HEAVY_CAMERA : FIXED_CAMERA;
+            }
+            break;
+
+        case TO_TARGET:
+            camera_item = &items[value];
+            break;
+
+        case TO_SINK:
+            obvector = &camera.fixed[value];
+
+            if (lara.LOT.required_box != obvector->flags)
+            {
+                lara.LOT.target.x = obvector->x;
+                lara.LOT.target.y = obvector->y;
+                lara.LOT.target.z = obvector->z;
+                lara.LOT.required_box = obvector->flags;
+            }
+
+            lara.current_active = obvector->data * 6;
+            break;
+
+        case TO_FLIPMAP:
+            if (flipmap[value] & ONESHOT)
+                break;
+
+            if (type == SWITCH)
+                flipmap[value] ^= (flags & CODE_BITS);
+            else if (flags & CODE_BITS)
+                flipmap[value] |= (flags & CODE_BITS);
+
+            if ((flipmap[value] & CODE_BITS) == CODE_BITS)
+            {
+                if (flags & ONESHOT)
+                    flipmap[value] |= ONESHOT;
+                if (!flip_status)
+                    flip = 1;
+            }
+            else if (flip_status)
+                flip = 1;
+            break;
+
+        case TO_FLIPON:
+            if ((flipmap[value] & CODE_BITS) == CODE_BITS && !flip_status)
+                flip = 1;
+            break;
+
+        case TO_FLIPOFF:
+            if ((flipmap[value] & CODE_BITS) == CODE_BITS && flip_status)
+                flip = 1;
+            break;
+
+        case TO_FLIPEFFECT:
+            neweffect = value;
+            break;
+
+        case TO_FINISH:
+            level_complete = 1;
+            break;
+
+        case TO_CD:
+            TriggerCDTrack(value, flags, type);
+            break;
+
+        case TO_SECRET:
+            if (!(savegame.secrets & (1 << value)))
+            {
+                savegame.secrets |= (1 << value);
+                S_CDPlay(13);
+            }
+            break;
+        }
+    } while (!(trigger & END_BIT));
+
+    if (camera_item && (camera.type == FIXED_CAMERA || camera.type == HEAVY_CAMERA))
+        camera.item = camera_item;
+
+    if (flip)
+    {
+        FlipMap();
+        if (neweffect != -1)
+        {
+            flipeffect = neweffect;
+            fliptimer = 0;
+        }
+    }
+}

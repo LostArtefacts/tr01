@@ -79,6 +79,12 @@ enum game_levels
 
 #define NO_ITEM -1
 
+#define ONESHOT 0x0100
+#define CODE_BITS 0x3e00
+#define REVERSE 0x4000
+#define NOT_VISIBLE ONESHOT
+#define KILLED_ITEM (1 << 15)
+
 #define DONT_TARGET (-16384)
 
 #define GRAVITY 6

@@ -96,7 +96,7 @@ address,size,name,symbol
 0x00018b3c,227,FlipMap,FlipMap_
 0x00018c20,97,Func18c20,
 0x00018c84,97,Func18c84,
-0x00018ce8,319,Func18ce8,
+0x00018ce8,319,TriggerCDTrack,TriggerCDTrack_
 0x00018e28,141,Func18e28,
 0x00018ec0,800,Func18ec0,
 0x00019520,335,Func19520,
@@ -539,9 +539,9 @@ address,size,name,symbol
 0x00034434,272,Func34434,
 0x00034544,224,Func34544,
 0x00034b10,55,Func34b10,
-0x00034b48,120,Func34b48,
-0x00034bc0,74,Func34bc0,
-0x00034c0c,64,Func34c0c,
+0x00034b48,120,SwitchTrigger,SwitchTrigger_
+0x00034bc0,74,KeyTrigger,KeyTrigger_
+0x00034c0c,64,PickupTrigger,PickupTrigger_
 0x00034c4c,188,Func34c4c,
 0x00034d08,26,Func34d08,
 0x00034d24,28,Func34d24,
@@ -584,7 +584,7 @@ address,size,name,symbol
 0x00038d54,1,Func38d54,
 0x00038d58,387,Func38d58,
 0x00038edc,4,S_StartSyncedAudio,S_StartSyncedAudio_
-0x00038ee0,218,Func38ee0,
+0x00038ee0,218,S_CDPlay,S_CDPlay_
 0x00038f14,6,S_CDVolume,S_CDVolume_
 0x00038f20,383,TestCollision,TestCollision_
 0x000390a0,681,Func390a0,
@@ -636,7 +636,7 @@ address,size,name,symbol
 0x0003aec4,99,Func3aec4,
 0x0003af28,167,Func3af28,
 0x0003afd0,396,Func3afd0,
-0x0003b15c,188,Func3b15c,
+0x0003b15c,188,LavaBurn,LavaBurn_
 0x0003b218,191,Func3b218,
 0x0003b2d8,292,Func3b2d8,
 0x0003b3fc,311,Func3b3fc,
@@ -1779,6 +1779,7 @@ address,size,name,symbol
 0x000cb31e,2,cinematic_level,_cinematic_level
 0x000cb320,2,cine_frame,_cine_frame
 0x000cb322,2,num_cine_frames,_num_cine_frames
+0x000cb3a4,40,flipmap,_flipmap
 0x000cb3cc,4,trigger_index,_trigger_index
 0x000cb3d0,4,items,_items
 0x000cb3d4,4,flip_status,_flip_status

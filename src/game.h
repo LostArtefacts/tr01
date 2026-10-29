@@ -13,6 +13,7 @@
 #include "shell.h"
 #include "title.h"
 #include "savegame.h"
+#include "traps.h"
 
 #define NO_ACTION 0
 #define GAME_ACTION 1

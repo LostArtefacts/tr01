@@ -72,6 +72,25 @@ enum lara_water_states
     LARA_CHEAT
 };
 
+enum lara_gun_types
+{
+    LG_UNARMED = 0,
+    LG_PISTOLS,
+    LG_MAGNUMS,
+    LG_UZIS,
+    LG_SHOTGUN,
+    NUM_WEAPONS
+};
+
+enum lara_gun_states
+{
+    LG_ARMLESS,
+    LG_HANDSBUSY,
+    LG_DRAW,
+    LG_UNDRAW,
+    LG_READY
+};
+
 enum headings
 {
     NORTH = 0,
@@ -108,6 +127,9 @@ sint16 DoBloodSplat(sint32 x, sint32 y, sint32 z, sint16 speed, PHD_ANGLE direct
 sint32 DrawPhaseCinematic(void);
 void LaraControl(sint16 item_num);
 void InGameCinematicCamera(void);
+int SwitchTrigger(sint16 item_num, sint16 timer);
+int KeyTrigger(sint16 item_num);
+int PickupTrigger(sint16 item_num);
 int TestCollision(ITEM_INFO *item, ITEM_INFO *laraitem);
 void GetCollisionInfo(COLL_INFO *coll, sint32 xpos, sint32 ypos, sint32 zpos, sint16 room_number, sint32 objheight);
 sint32 FindGridShift(sint32 src, sint32 dst);
