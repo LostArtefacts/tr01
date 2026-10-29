@@ -515,3 +515,48 @@ void phd_PutPolygons_I(sint16 *ptr, int clip)
     phd_PutPolygons(ptr, clip);
     phd_PopMatrix();
 }
+
+void InterpolateMatrix(void)
+{
+    sint32 *mptr, *iptr;
+    sint32 frac, rate;
+
+    mptr = phd_mxptr;
+    iptr = IMptr;
+    frac = IM_frac;
+    rate = IM_rate;
+    if (rate == 2)
+    {
+        *(mptr + M00) = (*(iptr + M00) + *(mptr + M00)) / 2;
+        *(mptr + M01) = (*(iptr + M01) + *(mptr + M01)) / 2;
+        *(mptr + M02) = (*(iptr + M02) + *(mptr + M02)) / 2;
+        *(mptr + M03) = (*(iptr + M03) + *(mptr + M03)) / 2;
+
+        *(mptr + M10) = (*(iptr + M10) + *(mptr + M10)) / 2;
+        *(mptr + M11) = (*(iptr + M11) + *(mptr + M11)) / 2;
+        *(mptr + M12) = (*(iptr + M12) + *(mptr + M12)) / 2;
+        *(mptr + M13) = (*(iptr + M13) + *(mptr + M13)) / 2;
+
+        *(mptr + M20) = (*(iptr + M20) + *(mptr + M20)) / 2;
+        *(mptr + M21) = (*(iptr + M21) + *(mptr + M21)) / 2;
+        *(mptr + M22) = (*(iptr + M22) + *(mptr + M22)) / 2;
+        *(mptr + M23) = (*(iptr + M23) + *(mptr + M23)) / 2;
+    }
+    else
+    {
+        *(mptr + M00) += ((*(iptr + M00) - *(mptr + M00)) * frac) / rate;
+        *(mptr + M01) += ((*(iptr + M01) - *(mptr + M01)) * frac) / rate;
+        *(mptr + M02) += ((*(iptr + M02) - *(mptr + M02)) * frac) / rate;
+        *(mptr + M03) += ((*(iptr + M03) - *(mptr + M03)) * frac) / rate;
+
+        *(mptr + M10) += ((*(iptr + M10) - *(mptr + M10)) * frac) / rate;
+        *(mptr + M11) += ((*(iptr + M11) - *(mptr + M11)) * frac) / rate;
+        *(mptr + M12) += ((*(iptr + M12) - *(mptr + M12)) * frac) / rate;
+        *(mptr + M13) += ((*(iptr + M13) - *(mptr + M13)) * frac) / rate;
+
+        *(mptr + M20) += ((*(iptr + M20) - *(mptr + M20)) * frac) / rate;
+        *(mptr + M21) += ((*(iptr + M21) - *(mptr + M21)) * frac) / rate;
+        *(mptr + M22) += ((*(iptr + M22) - *(mptr + M22)) * frac) / rate;
+        *(mptr + M23) += ((*(iptr + M23) - *(mptr + M23)) * frac) / rate;
+    }
+}
