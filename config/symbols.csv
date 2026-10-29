@@ -38,8 +38,8 @@ address,size,name,symbol
 0x00013500,82,CreatureEffect,CreatureEffect_
 0x00013560,168,InitialiseCamera,InitialiseCamera_
 0x00013608,715,MoveCamera,MoveCamera_
-0x000138d4,164,Func138d4,
-0x00013978,295,Func13978,
+0x000138d4,164,ClipCamera,ClipCamera_
+0x00013978,295,ShiftCamera,ShiftCamera_
 0x00013aa0,79,BadPosition,BadPosition_
 0x00013af0,1123,Func13af0,
 0x00013f54,267,Func13f54,
