@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">35.73% (278)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">64.27% (500)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">35.86% (279)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">64.14% (499)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="266.92" height="6" x="0" y="0" class="named"/>
-<rect width="480.08" height="6" x="266.92" y="0" class="todo"/>
+<rect width="267.88" height="6" x="0" y="0" class="named"/>
+<rect width="479.12" height="6" x="267.88" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -346,7 +346,7 @@
 <rect width="12" height="12" x="390" y="75" class="named"><title>0x000245a8 Inv_RingMotionRotation (31 bytes)</title></rect>
 <rect width="12" height="12" x="405" y="75" class="named"><title>0x000245c8 Inv_RingMotionCameraPos (34 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="75" class="named"><title>0x000245ec Inv_RingMotionCameraPitch (29 bytes)</title></rect>
-<rect width="12" height="12" x="435" y="75" class="todo"><title>0x0002460c Inv_RingMotionItemSelect (106 bytes)</title></rect>
+<rect width="12" height="12" x="435" y="75" class="named"><title>0x0002460c Inv_RingMotionItemSelect (106 bytes)</title></rect>
 <rect width="12" height="12" x="450" y="75" class="todo"><title>0x00024678 Inv_RingMotionItemDeselect (128 bytes)</title></rect>
 <rect width="12" height="12" x="465" y="75" class="todo"><title>0x00024700 InitialiseItemArray (83 bytes)</title></rect>
 <rect width="12" height="12" x="480" y="75" class="todo"><title>0x00024754 Func24754 (226 bytes)</title></rect>
@@ -849,10 +849,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">38.56%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">61.44%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">38.61%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">61.39%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="288.05" height="6" x="0" y="0" class="named"/>
-<rect width="458.95" height="6" x="288.05" y="0" class="todo"/>
+<rect width="288.44" height="6" x="0" y="0" class="named"/>
+<rect width="458.56" height="6" x="288.44" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1278,7 +1278,7 @@
 <rect width="6.72" height="6.93" x="623.65" y="127.27" class="todo"><title>0x00026800 Func26800 (108 bytes)</title></rect>
 <rect width="6.72" height="6.84" x="623.65" y="137.20" class="named"><title>0x0001efd8 LoadDepthQ (107 bytes)</title></rect>
 <rect width="6.72" height="6.74" x="623.65" y="147.03" class="named"><title>0x0001d5e4 DoBloodSplat (106 bytes)</title></rect>
-<rect width="6.72" height="6.74" x="623.65" y="156.78" class="todo"><title>0x0002460c Inv_RingMotionItemSelect (106 bytes)</title></rect>
+<rect width="6.72" height="6.74" x="623.65" y="156.78" class="named"><title>0x0002460c Inv_RingMotionItemSelect (106 bytes)</title></rect>
 <rect width="6.72" height="6.74" x="623.65" y="166.52" class="todo"><title>0x000278d0 Func278d0 (106 bytes)</title></rect>
 <rect width="6.72" height="6.65" x="623.65" y="176.26" class="named"><title>0x00020ef4 CalculateWibbleTable (105 bytes)</title></rect>
 <rect width="6.72" height="6.65" x="623.65" y="185.92" class="named"><title>0x000227cc AnimateInventoryItem (105 bytes)</title></rect>
