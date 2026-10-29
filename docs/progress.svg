@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">50.13% (394)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">49.87% (392)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">50.25% (395)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">49.75% (391)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="374.45" height="6" x="0" y="0" class="named"/>
-<rect width="372.55" height="6" x="374.45" y="0" class="todo"/>
+<rect width="375.40" height="6" x="0" y="0" class="named"/>
+<rect width="371.60" height="6" x="375.40" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -462,7 +462,7 @@
 <rect width="12" height="12" x="630" y="105" class="named"><title>0x00027620 LaraHitCeiling (91 bytes)</title></rect>
 <rect width="12" height="12" x="645" y="105" class="named"><title>0x0002769c LaraHangTest (563 bytes)</title></rect>
 <rect width="12" height="12" x="660" y="105" class="named"><title>0x000278d0 LaraDeflectEdge (106 bytes)</title></rect>
-<rect width="12" height="12" x="675" y="105" class="todo"><title>0x0002793c LaraDeflectEdgeJump (309 bytes)</title></rect>
+<rect width="12" height="12" x="675" y="105" class="named"><title>0x0002793c LaraDeflectEdgeJump (309 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="105" class="todo"><title>0x00027a74 LaraSlideEdgeJump (208 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="105" class="todo"><title>0x00027b44 TestLaraVault (519 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="105" class="todo"><title>0x00027d4c LaraTestHangJump (405 bytes)</title></rect>
@@ -857,10 +857,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">44.87%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">55.13%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">45.02%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">54.98%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="335.16" height="6" x="0" y="0" class="named"/>
-<rect width="411.84" height="6" x="335.16" y="0" class="todo"/>
+<rect width="336.29" height="6" x="0" y="0" class="named"/>
+<rect width="410.71" height="6" x="336.29" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1046,7 +1046,7 @@
 <rect width="13.87" height="13.53" x="682.74" y="0" class="named"><title>0x0001dac0 ControlBubble1 (312 bytes)</title></rect>
 <rect width="13.87" height="13.53" x="699.61" y="0" class="todo"><title>0x0002dc00 mn_stop_sound_effect (312 bytes)</title></rect>
 <rect width="13.81" height="13.53" x="716.48" y="0" class="todo"><title>0x0003b3fc Func3b3fc (311 bytes)</title></rect>
-<rect width="13.71" height="13.53" x="733.29" y="0" class="todo"><title>0x0002793c LaraDeflectEdgeJump (309 bytes)</title></rect>
+<rect width="13.71" height="13.53" x="733.29" y="0" class="named"><title>0x0002793c LaraDeflectEdgeJump (309 bytes)</title></rect>
 <rect width="13.42" height="13.77" x="508.93" y="16.53" class="todo"><title>0x00044761 Func44761 (308 bytes)</title></rect>
 <rect width="13.42" height="13.71" x="508.93" y="33.30" class="todo"><title>0x00045868 Func45868 (307 bytes)</title></rect>
 <rect width="13.42" height="13.66" x="508.93" y="50.01" class="named"><title>0x00020ac0 DrawAmmoInfo (306 bytes)</title></rect>

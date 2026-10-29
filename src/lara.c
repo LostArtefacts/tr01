@@ -1699,3 +1699,44 @@ int LaraDeflectEdge(ITEM_INFO *item, COLL_INFO *coll)
     }
     return 0;
 }
+
+void LaraDeflectEdgeJump(ITEM_INFO *item, COLL_INFO *coll)
+{
+    ShiftItem(item, coll);
+    switch (coll->coll_type)
+    {
+    case COLL_FRONT:
+    case COLL_TOPFRONT:
+        item->goal_anim_state = AS_FASTFALL;
+        item->current_anim_state = AS_FASTFALL;
+        item->frame_number = FASTFALL_F;
+        item->anim_number = FASTFALL_A;
+        item->speed /= 4;
+        lara.move_angle -= 32768;
+        if (item->fallspeed <= 0)
+            item->fallspeed = 1;
+        break;
+
+    case COLL_LEFT:
+        item->pos.y_rot += LARA_DEF_ADD_EDGE;
+        break;
+
+    case COLL_RIGHT:
+        item->pos.y_rot -= LARA_DEF_ADD_EDGE;
+        break;
+
+    case COLL_TOP:
+        if (item->fallspeed <= 0)
+            item->fallspeed = 1;
+        break;
+
+    case COLL_CLAMP:
+        item->pos.z_pos -= (phd_cos(coll->facing) * 100) >> W2V_SHIFT;
+        item->pos.x_pos -= (phd_sin(coll->facing) * 100) >> W2V_SHIFT;
+        item->speed = 0;
+        coll->mid_floor = 0;
+        if (item->fallspeed <= 0)
+            item->fallspeed = 16;
+        break;
+    }
+}
