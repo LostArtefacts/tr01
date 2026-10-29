@@ -633,3 +633,10 @@ void lara_as_roll(ITEM_INFO *item, COLL_INFO *coll)
 void lara_as_roll2(ITEM_INFO *item, COLL_INFO *coll)
 {
 }
+
+void lara_as_special(ITEM_INFO *item, COLL_INFO *coll)
+{
+    camera.flags = FOLLOW_CENTRE;
+    camera.target_angle = 170 * ONE_DEGREE;
+    camera.target_elevation = -25 * ONE_DEGREE;
+}

@@ -334,7 +334,7 @@ address,size,name,symbol
 0x00025cac,41,lara_as_usepuzzle,lara_as_usepuzzle_
 0x00025cd8,1,lara_as_roll,lara_as_roll_
 0x00025cd8,0,lara_as_roll2,lara_as_roll2_
-0x00025cdc,38,Func25cdc,
+0x00025cdc,38,lara_as_special,lara_as_special_
 0x00025d04,14,Func25d04,
 0x00025d14,767,Func25d14,
 0x00026014,34,Func26014,
