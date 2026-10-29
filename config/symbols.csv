@@ -564,6 +564,7 @@ address,size,name,symbol
 0x00033df0,484,PickUpCollision,PickUpCollision_
 0x00033fd4,328,PickUpScionCollision,PickUpScionCollision_
 0x0003411c,245,PickUpScion4Collision,PickUpScion4Collision_
+0x00034224,526,MidasCollision,MidasCollision_
 0x00034434,272,Func34434,
 0x00034544,224,Func34544,
 0x00034b10,55,Func34b10,

@@ -220,3 +220,62 @@ void PickUpScion4Collision(sint16 item_num, ITEM_INFO *laraitem, COLL_INFO *coll
         cinematic_pos.y_rot -= 16384;
     }
 }
+
+void MidasCollision(sint16 item_num, ITEM_INFO *laraitem, COLL_INFO *coll)
+{
+    ITEM_INFO *item;
+    uint16 quadrant;
+
+    item = &items[item_num];
+    if (!laraitem->gravity_status && laraitem->current_anim_state == AS_STOP && laraitem->pos.x_pos > item->pos.x_pos - 512 && laraitem->pos.x_pos < item->pos.x_pos + 512 && laraitem->pos.z_pos > item->pos.z_pos - 512 && laraitem->pos.z_pos < item->pos.z_pos + 512)
+    {
+        laraitem->anim_number = objects[LARA_EXTRA].anim_index + 1;
+        laraitem->frame_number = anims[laraitem->anim_number].frame_base;
+        laraitem->current_anim_state = AS_DIEMIDAS;
+        laraitem->goal_anim_state = AS_DIEMIDAS;
+        laraitem->hit_points = -1;
+        laraitem->gravity_status = 0;
+        lara.air = -1;
+        lara.gun_status = LG_HANDSBUSY;
+        lara.gun_type = LG_UNARMED;
+        camera.type = CINEMATIC_CAMERA;
+        cine_frame = 0;
+        memcpy(&cinematic_pos, &laraitem->pos, sizeof(PHD_3DPOS));
+    }
+    else
+    {
+        if ((Inventory_Chosen == -1 && !(input & IN_ACTION)) || lara.gun_status != LG_ARMLESS || laraitem->gravity_status || laraitem->current_anim_state != AS_STOP)
+            return;
+
+        quadrant = (uint16)(laraitem->pos.y_rot + 0x2000) / 0x4000;
+        switch (quadrant)
+        {
+        case 0:
+            item->pos.y_rot = 0;
+            break;
+        case 1:
+            item->pos.y_rot = 16384;
+            break;
+        case 2:
+            item->pos.y_rot = -32768;
+            break;
+        case 3:
+            item->pos.y_rot = -16384;
+            break;
+        }
+        if (!TestLaraPosition(MidasBounds, item, laraitem))
+            return;
+        if (Inventory_Chosen == -1)
+            Display_Inventory(INV_KEYS_MODE);
+        if (Inventory_Chosen != LEADBAR_OPTION)
+            return;
+        Inv_RemoveItem(LEADBAR_OPTION);
+        Inv_AddItem(PUZZLE_ITEM1);
+
+        laraitem->anim_number = objects[LARA_EXTRA].anim_index;
+        laraitem->frame_number = anims[item->anim_number].frame_base;
+        laraitem->current_anim_state = AS_USEMIDAS;
+        laraitem->goal_anim_state = AS_USEMIDAS;
+        lara.gun_status = LG_HANDSBUSY;
+    }
+}
