@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">11.41% (88)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">88.59% (683)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">11.54% (89)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">88.46% (682)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="85.26" height="6" x="0" y="0" class="named"/>
-<rect width="661.74" height="6" x="85.26" y="0" class="todo"/>
+<rect width="86.23" height="6" x="0" y="0" class="named"/>
+<rect width="660.77" height="6" x="86.23" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -102,7 +102,7 @@
 <rect width="12" height="12" x="480" y="0" class="todo"><title>0x00012910 CreatureAnimation (2734 bytes)</title></rect>
 <rect width="12" height="12" x="495" y="0" class="named"><title>0x000133c0 CreatureTurn (185 bytes)</title></rect>
 <rect width="12" height="12" x="510" y="0" class="named"><title>0x0001347c CreatureTilt (44 bytes)</title></rect>
-<rect width="12" height="12" x="525" y="0" class="todo"><title>0x000134a8 CreatureHead (86 bytes)</title></rect>
+<rect width="12" height="12" x="525" y="0" class="named"><title>0x000134a8 CreatureHead (86 bytes)</title></rect>
 <rect width="12" height="12" x="540" y="0" class="todo"><title>0x00013500 CreatureEffect (82 bytes)</title></rect>
 <rect width="12" height="12" x="555" y="0" class="named"><title>0x00013560 InitialiseCamera (168 bytes)</title></rect>
 <rect width="12" height="12" x="570" y="0" class="named"><title>0x00013608 MoveCamera (715 bytes)</title></rect>
@@ -842,10 +842,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">15.08%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">84.92%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">15.13%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">84.87%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="112.68" height="6" x="0" y="0" class="named"/>
-<rect width="634.32" height="6" x="112.68" y="0" class="todo"/>
+<rect width="113" height="6" x="0" y="0" class="named"/>
+<rect width="634" height="6" x="113" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="54.65" height="67.43" x="0" y="0" class="todo"><title>0x0001bc98 Func1bc98 (4489 bytes)</title></rect>
@@ -1322,7 +1322,7 @@
 <rect width="6.15" height="5.70" x="661.86" y="136.26" class="todo"><title>0x00045ba8 FadeToPal (88 bytes)</title></rect>
 <rect width="6.04" height="5.70" x="671.01" y="136.26" class="todo"><title>0x0002d144 Func2d144 (87 bytes)</title></rect>
 <rect width="6.04" height="5.70" x="680.05" y="136.26" class="todo"><title>0x000469fd Func469fd (87 bytes)</title></rect>
-<rect width="5.94" height="5.70" x="689.09" y="136.26" class="todo"><title>0x000134a8 CreatureHead (86 bytes)</title></rect>
+<rect width="5.94" height="5.70" x="689.09" y="136.26" class="named"><title>0x000134a8 CreatureHead (86 bytes)</title></rect>
 <rect width="5.83" height="5.70" x="698.03" y="136.26" class="todo"><title>0x00045b0c Func45b0c (85 bytes)</title></rect>
 <rect width="5.73" height="5.70" x="706.87" y="136.26" class="named"><title>0x00016450 TrapCollision (84 bytes)</title></rect>
 <rect width="5.73" height="5.70" x="715.60" y="136.26" class="todo"><title>0x00020a24 Func20a24 (84 bytes)</title></rect>
