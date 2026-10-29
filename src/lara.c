@@ -1773,3 +1773,65 @@ void LaraSlideEdgeJump(ITEM_INFO *item, COLL_INFO *coll)
         break;
     }
 }
+
+#define VAULT_ANGLE (30 * ONE_DEGREE)
+
+int TestLaraVault(ITEM_INFO *item, COLL_INFO *coll)
+{
+    int hdif;
+    PHD_ANGLE angle;
+
+    if (coll->coll_type != COLL_FRONT || !(input & IN_ACTION) || lara.gun_status != LG_ARMLESS || (ABS(coll->left_floor - coll->right_floor)) >= SLOPE_DIF)
+        return 0;
+
+    angle = item->pos.y_rot;
+    if (angle >= 0 - VAULT_ANGLE && angle <= 0 + VAULT_ANGLE)
+        angle = 0;
+    else if (angle >= 16384 - VAULT_ANGLE && angle <= 16384 + VAULT_ANGLE)
+        angle = 16384;
+    else if (angle >= 32767 - VAULT_ANGLE || angle <= -32767 + VAULT_ANGLE)
+        angle = -32768;
+    else if (angle >= -16384 - VAULT_ANGLE && angle <= -16384 + VAULT_ANGLE)
+        angle = -16384;
+
+    if (angle & 0x3fff)
+        return 0;
+
+    hdif = coll->front_floor;
+    if (hdif >= -STEP_L * 2 - STEP_L / 2 && hdif <= -STEP_L * 2 + STEP_L / 2)
+    {
+        if (coll->front_floor - coll->front_ceiling < 0 || coll->left_floor - coll->left_ceiling < 0 || coll->right_floor - coll->right_ceiling < 0)
+            return 0;
+        item->anim_number = VAULT12_A;
+        item->frame_number = VAULT12_F;
+        item->current_anim_state = AS_NULL;
+        item->goal_anim_state = AS_STOP;
+        item->pos.y_pos += STEP_L * 2 + hdif;
+        lara.gun_status = LG_HANDSBUSY;
+    }
+    else if (hdif >= -STEP_L * 3 - STEP_L / 2 && hdif <= -STEP_L * 3 + STEP_L / 2)
+    {
+        if (coll->front_floor - coll->front_ceiling < 0 || coll->left_floor - coll->left_ceiling < 0 || coll->right_floor - coll->right_ceiling < 0)
+            return 0;
+        item->anim_number = VAULT34_A;
+        item->frame_number = VAULT34_F;
+        item->current_anim_state = AS_NULL;
+        item->goal_anim_state = AS_STOP;
+        item->pos.y_pos += STEP_L * 3 + hdif;
+        lara.gun_status = LG_HANDSBUSY;
+    }
+    else if (hdif >= -STEP_L * 7 - STEP_L / 2 && hdif <= -STEP_L * 4 + STEP_L / 2)
+    {
+        item->anim_number = STOP_A;
+        item->frame_number = STOP_F;
+        item->goal_anim_state = AS_UPJUMP;
+        item->current_anim_state = AS_STOP;
+        lara.calc_fallspeed = -(sint16)(phd_sqrt((int)(-2 * GRAVITY * (hdif + 800))) + 3);
+        AnimateLara(item);
+    }
+    else
+        return 0;
+    item->pos.y_rot = angle;
+    ShiftItem(item, coll);
+    return 1;
+}
