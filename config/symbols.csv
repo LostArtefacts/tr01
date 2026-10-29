@@ -211,7 +211,7 @@ address,size,name,symbol
 0x0001fb0c,1,S_LoadingScreen,S_LoadingScreen_
 0x0001fb10,82,S_Wait,S_Wait_
 0x0001fb64,491,EscapeFMV,EscapeFMV_
-0x0001fd50,82,Func1fd50,
+0x0001fd50,82,S_PlayFMV,S_PlayFMV_
 0x0001fdf0,298,Func1fdf0,
 0x0001ff1c,96,GameLoop,GameLoop_
 0x0001ffcc,328,LevelCompleteSequence,LevelCompleteSequence_
@@ -1779,6 +1779,7 @@ address,size,name,symbol
 0x000c1ba4,10,demomode_text,_demomode_text
 0x000c2084,4,overlay_flag,_overlay_flag
 0x000c2090,24,game_setup,_game_setup
+0x000c20a8,4,malloc_buffer,_malloc_buffer
 0x000c3822,2,Inventory_Chosen,_Inventory_Chosen
 0x000c3824,,Inventory_ExtraData,_Inventory_ExtraData
 0x000c3844,4,Inventory_Mode,_Inventory_Mode

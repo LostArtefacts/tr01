@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "game.h"
 #include "player.h"
 
@@ -309,6 +310,25 @@ shutdownplayer:
     Player_ShutDownVideo(vhandle);
     Player_ShutDownMovie(mhandle);
     Player_ShutDownPlaybackSystem();
+
+    return finished;
+}
+
+int S_PlayFMV(int sequence, int mode)
+{
+    int finished;
+
+    if (malloc_buffer)
+        free(malloc_buffer);
+
+    finished = EscapeFMV(sequence, mode);
+
+    hires_flag = -1;
+
+    malloc_buffer = malloc(MALLOC_SIZE);
+    if (!malloc_buffer)
+        S_ExitSystem("ERROR: Could not allocate enough memory");
+    init_game_malloc();
 
     return finished;
 }

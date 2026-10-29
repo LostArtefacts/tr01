@@ -3,6 +3,8 @@
 
 #include "types.h"
 
+#define MALLOC_SIZE (1024 * 1024 * 7 / 2)
+
 enum game_malloc_types
 {
     TEXTURE_PAGES,
@@ -60,6 +62,7 @@ extern int game_hires;
 extern char exit_message[];
 extern double screen_sizer, game_sizer;
 extern int title_loaded;
+extern char *malloc_buffer;
 
 void S_InitialisePolyList(void);
 sint32 S_DumpScreen(void);
@@ -110,5 +113,6 @@ void S_Wait(int frames);
 SG_COL S_COLOUR(int R, int G, int B);
 void S_DrawSpriteSize(sint32 x, sint32 y, sint32 z, sint32 w, sint32 h, sint16 sprnum, sint16 shade, uint16 flags);
 void S_SetGamma(sint16 gamma);
+int S_PlayFMV(int sequence, int mode);
 
 #endif

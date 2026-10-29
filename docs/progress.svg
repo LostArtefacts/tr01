@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">27.10% (210)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">72.90% (565)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">27.23% (211)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">72.77% (564)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="202.41" height="6" x="0" y="0" class="named"/>
-<rect width="544.59" height="6" x="202.41" y="0" class="todo"/>
+<rect width="203.38" height="6" x="0" y="0" class="named"/>
+<rect width="543.62" height="6" x="203.38" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -279,7 +279,7 @@
 <rect width="12" height="12" x="135" y="60" class="named"><title>0x0001fb0c S_LoadingScreen (1 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="60" class="named"><title>0x0001fb10 S_Wait (82 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="60" class="named"><title>0x0001fb64 EscapeFMV (491 bytes)</title></rect>
-<rect width="12" height="12" x="180" y="60" class="todo"><title>0x0001fd50 Func1fd50 (82 bytes)</title></rect>
+<rect width="12" height="12" x="180" y="60" class="named"><title>0x0001fd50 S_PlayFMV (82 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="60" class="todo"><title>0x0001fdf0 Func1fdf0 (298 bytes)</title></rect>
 <rect width="12" height="12" x="210" y="60" class="todo"><title>0x0001ff1c GameLoop (96 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="60" class="todo"><title>0x0001ffcc LevelCompleteSequence (328 bytes)</title></rect>
@@ -846,10 +846,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">29.85%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">70.15%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">29.89%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">70.11%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="222.96" height="6" x="0" y="0" class="named"/>
-<rect width="524.04" height="6" x="222.96" y="0" class="todo"/>
+<rect width="223.26" height="6" x="0" y="0" class="named"/>
+<rect width="523.74" height="6" x="223.26" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1338,7 +1338,7 @@
 <rect width="5.30" height="5.83" x="668.11" y="135.93" class="named"><title>0x00016388 ObjectCollision (82 bytes)</title></rect>
 <rect width="5.30" height="5.83" x="676.41" y="135.93" class="named"><title>0x0001836c GetDoor (82 bytes)</title></rect>
 <rect width="5.30" height="5.83" x="684.71" y="135.93" class="named"><title>0x0001fb10 S_Wait (82 bytes)</title></rect>
-<rect width="5.30" height="5.83" x="693.01" y="135.93" class="todo"><title>0x0001fd50 Func1fd50 (82 bytes)</title></rect>
+<rect width="5.30" height="5.83" x="693.01" y="135.93" class="named"><title>0x0001fd50 S_PlayFMV (82 bytes)</title></rect>
 <rect width="5.30" height="5.83" x="701.31" y="135.93" class="todo"><title>0x00030114 Func30114 (82 bytes)</title></rect>
 <rect width="5.20" height="5.83" x="709.61" y="135.93" class="todo"><title>0x000313b0 Func313b0 (81 bytes)</title></rect>
 <rect width="5.20" height="5.83" x="717.81" y="135.93" class="todo"><title>0x0003950c Func3950c (81 bytes)</title></rect>
