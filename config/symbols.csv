@@ -160,7 +160,8 @@ address,size,name,symbol
 0x0001dac0,312,ControlBubble1,ControlBubble1_
 0x0001dbf8,185,Splash,Splash_
 0x0001dcb4,134,ControlSplash1,ControlSplash1_
-0x0001dd3c,281,WaterFall,WaterFall_
+0x0001dd3c,279,WaterFall,WaterFall_
+0x0001de54,1,void_effect,void_effect_
 0x0001de58,11,finish_level_effect,finish_level_effect_
 0x0001de64,5,turn180_effect,turn180_effect_
 0x0001de6c,178,dino_stomp_effect,dino_stomp_effect_

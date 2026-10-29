@@ -297,6 +297,44 @@ void ControlSplash1(sint16 fx_num)
     fx->pos.x_pos += fx->speed * phd_sin(fx->pos.y_rot) >> W2V_SHIFT;
 }
 
+#define WF_RANGE (WALL_L * 10)
+
+void WaterFall(sint16 item_number)
+{
+    ITEM_INFO *item;
+    sint16 fx_number;
+    FX_INFO *fx;
+    sint32 x, y, z;
+
+    item = &items[item_number];
+
+    if ((item->flags & CODE_BITS) != CODE_BITS)
+        return;
+
+    x = item->pos.x_pos - lara_item->pos.x_pos;
+    y = item->pos.y_pos - lara_item->pos.y_pos;
+    z = item->pos.z_pos - lara_item->pos.z_pos;
+
+    if (x < -WF_RANGE || x > WF_RANGE || z < -WF_RANGE || z > WF_RANGE || y < -WF_RANGE || y > WF_RANGE)
+        return;
+
+    fx_number = CreateEffect(item->room_number);
+    if (fx_number != NO_ITEM)
+    {
+        fx = &effects[fx_number];
+        fx->pos.x_pos = item->pos.x_pos + (GetRandomDraw() - 0x4000) * WALL_L / 0x7fff;
+        fx->pos.z_pos = item->pos.z_pos + (GetRandomDraw() - 0x4000) * WALL_L / 0x7fff;
+        fx->pos.y_pos = item->pos.y_pos;
+        fx->speed = 0;
+        fx->frame_number = 0;
+        fx->object_number = SPLASH1;
+    }
+}
+
+void void_effect(ITEM_INFO *item)
+{
+}
+
 void finish_level_effect(ITEM_INFO *item)
 {
     level_complete = 1;
