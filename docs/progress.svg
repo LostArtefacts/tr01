@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">48.35% (380)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">51.65% (406)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">48.47% (381)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">51.53% (405)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="361.15" height="6" x="0" y="0" class="named"/>
-<rect width="385.85" height="6" x="361.15" y="0" class="todo"/>
+<rect width="362.10" height="6" x="0" y="0" class="named"/>
+<rect width="384.90" height="6" x="362.10" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -446,7 +446,7 @@
 <rect width="12" height="12" x="390" y="105" class="named"><title>0x00026fd4 lara_col_switchoff (49 bytes)</title></rect>
 <rect width="12" height="12" x="405" y="105" class="named"><title>0x00027008 lara_col_usekey (49 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="105" class="named"><title>0x0002703c lara_col_usepuzzle (49 bytes)</title></rect>
-<rect width="12" height="12" x="435" y="105" class="todo"><title>0x00027070 Func27070 (207 bytes)</title></rect>
+<rect width="12" height="12" x="435" y="105" class="named"><title>0x00027070 lara_col_roll (207 bytes)</title></rect>
 <rect width="12" height="12" x="450" y="105" class="todo"><title>0x00027140 Func27140 (212 bytes)</title></rect>
 <rect width="12" height="12" x="465" y="105" class="todo"><title>0x00027214 Func27214 (1 bytes)</title></rect>
 <rect width="12" height="12" x="480" y="105" class="todo"><title>0x00027218 Func27218 (49 bytes)</title></rect>
@@ -857,10 +857,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">43.87%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">56.13%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">43.97%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">56.03%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="327.68" height="6" x="0" y="0" class="named"/>
-<rect width="419.32" height="6" x="327.68" y="0" class="todo"/>
+<rect width="328.43" height="6" x="0" y="0" class="named"/>
+<rect width="418.57" height="6" x="328.43" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1124,7 +1124,7 @@
 <rect width="11.25" height="10.24" x="597.73" y="46.79" class="named"><title>0x0001283c BadFloor (211 bytes)</title></rect>
 <rect width="11.05" height="10.24" x="611.98" y="46.79" class="todo"><title>0x00027a74 LaraSlideEdgeJump (208 bytes)</title></rect>
 <rect width="11.05" height="10.24" x="626.02" y="46.79" class="todo"><title>0x000366a0 InitialiseLevel (208 bytes)</title></rect>
-<rect width="10.98" height="10.24" x="640.07" y="46.79" class="todo"><title>0x00027070 Func27070 (207 bytes)</title></rect>
+<rect width="10.98" height="10.24" x="640.07" y="46.79" class="named"><title>0x00027070 lara_col_roll (207 bytes)</title></rect>
 <rect width="10.98" height="10.24" x="654.05" y="46.79" class="todo"><title>0x00038a28 Func38a28 (207 bytes)</title></rect>
 <rect width="10.91" height="10.24" x="668.02" y="46.79" class="todo"><title>0x0002b130 Func2b130 (206 bytes)</title></rect>
 <rect width="10.78" height="10.24" x="681.93" y="46.79" class="named"><title>0x000263b8 lara_col_stop (204 bytes)</title></rect>

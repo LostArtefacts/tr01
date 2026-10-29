@@ -378,7 +378,7 @@ address,size,name,symbol
 0x00026fd4,49,lara_col_switchoff,lara_col_switchoff_
 0x00027008,49,lara_col_usekey,lara_col_usekey_
 0x0002703c,49,lara_col_usepuzzle,lara_col_usepuzzle_
-0x00027070,207,Func27070,
+0x00027070,207,lara_col_roll,lara_col_roll_
 0x00027140,212,Func27140,
 0x00027214,1,Func27214,
 0x00027218,49,Func27218,
