@@ -89,6 +89,7 @@ void CalculateWibbleTable(void);
 void S_SeedRandom(void);
 void init_game_malloc(void);
 char *game_malloc(int size, int type);
+void game_free(int size, int type);
 void S_UpdateInput(void);
 int S_SaveGame(void *data, int size, int slot);
 int S_LoadGame(void *data, int size, int slot);

@@ -117,3 +117,10 @@ char *game_malloc(int size, int type)
     S_ExitSystem(exit_message);
     return NULL;
 }
+
+void game_free(int size, int type)
+{
+    malloc_ptr -= size;
+    malloc_free += size;
+    malloc_used -= size;
+}

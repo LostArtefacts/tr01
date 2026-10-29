@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">30.67% (238)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">69.33% (538)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">30.80% (239)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">69.20% (537)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="229.11" height="6" x="0" y="0" class="named"/>
-<rect width="517.89" height="6" x="229.11" y="0" class="todo"/>
+<rect width="230.07" height="6" x="0" y="0" class="named"/>
+<rect width="516.93" height="6" x="230.07" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -307,7 +307,7 @@
 <rect width="12" height="12" x="555" y="60" class="named"><title>0x00020dec S_ExitSystem (70 bytes)</title></rect>
 <rect width="12" height="12" x="570" y="60" class="named"><title>0x00020e34 init_game_malloc (31 bytes)</title></rect>
 <rect width="12" height="12" x="585" y="60" class="named"><title>0x00020e54 game_malloc (109 bytes)</title></rect>
-<rect width="12" height="12" x="600" y="60" class="todo"><title>0x00020ec4 Func20ec4 (47 bytes)</title></rect>
+<rect width="12" height="12" x="600" y="60" class="named"><title>0x00020ec4 game_free (47 bytes)</title></rect>
 <rect width="12" height="12" x="615" y="60" class="todo"><title>0x00020ef4 CalculateWibbleTable (105 bytes)</title></rect>
 <rect width="12" height="12" x="630" y="60" class="todo"><title>0x00020f60 S_SeedRandom (97 bytes)</title></rect>
 <rect width="12" height="12" x="645" y="60" class="todo"><title>0x00020fd0 Func20fd0 (333 bytes)</title></rect>
@@ -847,10 +847,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">31.89%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">68.11%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">31.91%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">68.09%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="238.22" height="6" x="0" y="0" class="named"/>
-<rect width="508.78" height="6" x="238.22" y="0" class="todo"/>
+<rect width="238.39" height="6" x="0" y="0" class="named"/>
+<rect width="508.61" height="6" x="238.39" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1450,7 +1450,7 @@
 <rect width="3.67" height="3.44" x="680.99" y="192.99" class="todo"><title>0x0003dad4 Func3dad4 (48 bytes)</title></rect>
 <rect width="3.67" height="3.44" x="680.99" y="199.43" class="todo"><title>0x0003ee7c phd_PrintPolyList (48 bytes)</title></rect>
 <rect width="3.67" height="3.30" x="680.99" y="205.86" class="named"><title>0x0001cf74 phd_TranslateRel_ID (47 bytes)</title></rect>
-<rect width="3.67" height="3.30" x="680.99" y="212.16" class="todo"><title>0x00020ec4 Func20ec4 (47 bytes)</title></rect>
+<rect width="3.67" height="3.30" x="680.99" y="212.16" class="named"><title>0x00020ec4 game_free (47 bytes)</title></rect>
 <rect width="3.67" height="3.17" x="680.99" y="218.46" class="named"><title>0x0001d7cc ControlRichochet1 (46 bytes)</title></rect>
 <rect width="3.67" height="3.17" x="680.99" y="224.63" class="todo"><title>0x00024484 Func24484 (46 bytes)</title></rect>
 <rect width="3.67" height="3.17" x="680.99" y="230.80" class="todo"><title>0x0003f05e phd_sqrt (46 bytes)</title></rect>

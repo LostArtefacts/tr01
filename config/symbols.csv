@@ -239,7 +239,7 @@ address,size,name,symbol
 0x00020dec,70,S_ExitSystem,S_ExitSystem_
 0x00020e34,31,init_game_malloc,init_game_malloc_
 0x00020e54,109,game_malloc,game_malloc_
-0x00020ec4,47,Func20ec4,
+0x00020ec4,47,game_free,game_free_
 0x00020ef4,105,CalculateWibbleTable,CalculateWibbleTable_
 0x00020f60,97,S_SeedRandom,S_SeedRandom_
 0x00020fd0,333,Func20fd0,
