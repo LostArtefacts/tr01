@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">73.77% (599)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">26.23% (213)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">73.89% (600)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">26.11% (212)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="551.05" height="6" x="0" y="0" class="named"/>
-<rect width="195.95" height="6" x="551.05" y="0" class="todo"/>
+<rect width="551.97" height="6" x="0" y="0" class="named"/>
+<rect width="195.03" height="6" x="551.97" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -667,7 +667,7 @@
 <rect width="12" height="12" x="705" y="165" class="named"><title>0x00036808 BaddyObjects (3805 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="165" class="named"><title>0x000376e8 TrapObjects (1012 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="165" class="named"><title>0x00037adc ObjectObjects (2329 bytes)</title></rect>
-<rect width="12" height="12" x="0" y="180" class="todo"><title>0x000383f8 InitialiseObjects (94 bytes)</title></rect>
+<rect width="12" height="12" x="0" y="180" class="named"><title>0x000383f8 InitialiseObjects (94 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="180" class="todo"><title>0x00038460 Func38460 (499 bytes)</title></rect>
 <rect width="12" height="12" x="30" y="180" class="todo"><title>0x00038654 Func38654 (228 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="180" class="todo"><title>0x0003875c CheckCheatMode (539 bytes)</title></rect>
@@ -883,10 +883,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">72.48%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">27.52%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">72.52%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">27.48%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="541.42" height="6" x="0" y="0" class="named"/>
-<rect width="205.58" height="6" x="541.42" y="0" class="todo"/>
+<rect width="541.74" height="6" x="0" y="0" class="named"/>
+<rect width="205.26" height="6" x="541.74" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.95" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1367,7 +1367,7 @@
 <rect width="5.75" height="6.48" x="715" y="143.35" class="named"><title>0x0002bc78 undraw_pistol_mesh_right (94 bytes)</title></rect>
 <rect width="5.75" height="6.48" x="723.75" y="143.35" class="named"><title>0x0002d8dc mn_stop_ambient_samples (94 bytes)</title></rect>
 <rect width="5.75" height="6.48" x="732.50" y="143.35" class="named"><title>0x00031f6c Remove_Requester (94 bytes)</title></rect>
-<rect width="5.75" height="6.48" x="741.25" y="143.35" class="todo"><title>0x000383f8 InitialiseObjects (94 bytes)</title></rect>
+<rect width="5.75" height="6.48" x="741.25" y="143.35" class="named"><title>0x000383f8 InitialiseObjects (94 bytes)</title></rect>
 <rect width="6.16" height="5.96" x="635.52" y="152.83" class="named"><title>0x0002555c lara_as_fastback (93 bytes)</title></rect>
 <rect width="6.16" height="5.86" x="635.52" y="161.78" class="todo"><title>0x0003e3e4 S_InsertRoom (92 bytes)</title></rect>
 <rect width="6.16" height="5.76" x="635.52" y="170.64" class="named"><title>0x00015f28 GetNewRoom (91 bytes)</title></rect>

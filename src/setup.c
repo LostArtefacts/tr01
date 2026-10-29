@@ -138,6 +138,8 @@ sint16 level_music[NUMBER_OF_LEVELS] = {
     0
 };
 
+#define DEFAULT_RADIUS 10
+
 #define BEAR_HIT_POINTS 20
 #define BEAR_RADIUS (WALL_L / 3)
 #define BEAR_SMARTNESS 0x4000
@@ -1037,4 +1039,29 @@ void ObjectObjects(void)
     objects[MISSILE3].control = ControlMissile;
 
     objects[GUN_FLASH].control = ControlGunShot;
+}
+
+void InitialiseObjects(void)
+{
+    int i;
+    OBJECT_INFO *obj;
+
+    for (i = 0, obj = objects; i < NUMBER_OBJECTS; i++, obj++)
+    {
+        obj->initialise = NULL;
+        obj->collision = NULL;
+        obj->control = NULL;
+        obj->draw_routine = DrawAnimatingItem;
+        obj->floor = obj->ceiling = NULL;
+        obj->pivot_length = 0;
+        obj->radius = DEFAULT_RADIUS;
+        obj->shadow_size = 0;
+        obj->hit_points = DONT_TARGET;
+        obj->intelligent = 0;
+        obj->save_position = obj->save_hitpoints = obj->save_flags = obj->save_anim = 0;
+    }
+
+    BaddyObjects();
+    TrapObjects();
+    ObjectObjects();
 }
