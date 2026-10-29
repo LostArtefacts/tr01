@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">8.17% (63)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">91.83% (708)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">8.30% (64)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">91.70% (707)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="61.04" height="6" x="0" y="0" class="named"/>
-<rect width="685.96" height="6" x="61.04" y="0" class="todo"/>
+<rect width="62.01" height="6" x="0" y="0" class="named"/>
+<rect width="684.99" height="6" x="62.01" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -135,7 +135,7 @@
 <rect width="12" height="12" x="225" y="15" class="named"><title>0x00016020 GetTiltType (160 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="15" class="named"><title>0x000160c0 LaraBaddieCollision (457 bytes)</title></rect>
 <rect width="12" height="12" x="255" y="15" class="named"><title>0x0001628c EffectHit (136 bytes)</title></rect>
-<rect width="12" height="12" x="270" y="15" class="todo"><title>0x00016314 CreatureCollision (113 bytes)</title></rect>
+<rect width="12" height="12" x="270" y="15" class="named"><title>0x00016314 CreatureCollision (113 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="15" class="todo"><title>0x00016388 ObjectCollision (82 bytes)</title></rect>
 <rect width="12" height="12" x="300" y="15" class="todo"><title>0x000163dc DoorCollision (116 bytes)</title></rect>
 <rect width="12" height="12" x="315" y="15" class="todo"><title>0x00016450 TrapCollision (84 bytes)</title></rect>
@@ -654,7 +654,7 @@
 <rect width="12" height="12" x="510" y="165" class="todo"><title>0x00038edc S_StartSyncedAudio (4 bytes)</title></rect>
 <rect width="12" height="12" x="525" y="165" class="todo"><title>0x00038ee0 Func38ee0 (218 bytes)</title></rect>
 <rect width="12" height="12" x="540" y="165" class="todo"><title>0x00038f14 S_CDVolume (6 bytes)</title></rect>
-<rect width="12" height="12" x="555" y="165" class="todo"><title>0x00038f20 Func38f20 (383 bytes)</title></rect>
+<rect width="12" height="12" x="555" y="165" class="todo"><title>0x00038f20 TestCollision (383 bytes)</title></rect>
 <rect width="12" height="12" x="570" y="165" class="todo"><title>0x000390a0 Func390a0 (681 bytes)</title></rect>
 <rect width="12" height="12" x="585" y="165" class="todo"><title>0x0003934c Func3934c (445 bytes)</title></rect>
 <rect width="12" height="12" x="600" y="165" class="todo"><title>0x0003950c Func3950c (81 bytes)</title></rect>
@@ -842,10 +842,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">10.85%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">89.15%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">10.90%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">89.10%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="81.02" height="6" x="0" y="0" class="named"/>
-<rect width="665.98" height="6" x="81.02" y="0" class="todo"/>
+<rect width="81.43" height="6" x="0" y="0" class="named"/>
+<rect width="665.57" height="6" x="81.43" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="54.65" height="67.43" x="0" y="0" class="todo"><title>0x0001bc98 Func1bc98 (4489 bytes)</title></rect>
@@ -997,7 +997,7 @@
 <rect width="15.37" height="16.06" x="473.56" y="57.56" class="todo"><title>0x00038d58 Func38d58 (387 bytes)</title></rect>
 <rect width="15.37" height="15.91" x="473.56" y="76.62" class="todo"><title>0x00044895 Func44895 (384 bytes)</title></rect>
 <rect width="15.37" height="15.86" x="473.56" y="95.53" class="todo"><title>0x00023b40 Func23b40 (383 bytes)</title></rect>
-<rect width="15.37" height="15.86" x="473.56" y="114.38" class="todo"><title>0x00038f20 Func38f20 (383 bytes)</title></rect>
+<rect width="15.37" height="15.86" x="473.56" y="114.38" class="todo"><title>0x00038f20 TestCollision (383 bytes)</title></rect>
 <rect width="15.37" height="15.76" x="473.56" y="133.24" class="todo"><title>0x00024304 Func24304 (381 bytes)</title></rect>
 <rect width="15.37" height="15.61" x="473.56" y="152" class="todo"><title>0x000456ec Func456ec (378 bytes)</title></rect>
 <rect width="15.37" height="15.51" x="473.56" y="170.62" class="todo"><title>0x0003f56c Func3f56c (376 bytes)</title></rect>
@@ -1253,7 +1253,7 @@
 <rect width="7.33" height="7.07" x="709.04" y="107.19" class="todo"><title>0x0002828c LaraFloorFront (115 bytes)</title></rect>
 <rect width="7.24" height="7.07" x="719.37" y="107.19" class="todo"><title>0x00024ac8 Func24ac8 (114 bytes)</title></rect>
 <rect width="7.24" height="7.07" x="729.61" y="107.19" class="todo"><title>0x000336dc Func336dc (114 bytes)</title></rect>
-<rect width="7.15" height="7.07" x="739.85" y="107.19" class="todo"><title>0x00016314 CreatureCollision (113 bytes)</title></rect>
+<rect width="7.15" height="7.07" x="739.85" y="107.19" class="named"><title>0x00016314 CreatureCollision (113 bytes)</title></rect>
 <rect width="7.34" height="6.88" x="614.19" y="117.26" class="todo"><title>0x00029dc4 Func29dc4 (113 bytes)</title></rect>
 <rect width="7.34" height="6.88" x="614.19" y="127.14" class="todo"><title>0x00036770 Func36770 (113 bytes)</title></rect>
 <rect width="7.34" height="6.79" x="614.19" y="137.02" class="todo"><title>0x0001a0e0 Func1a0e0 (112 bytes)</title></rect>

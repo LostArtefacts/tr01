@@ -599,3 +599,23 @@ void EffectHit(ITEM_INFO *laraitem, COLL_INFO *coll)
 
     lara.hit_effect_count--;
 }
+
+void CreatureCollision(sint16 item_num, ITEM_INFO *laraitem, COLL_INFO *coll)
+{
+    ITEM_INFO *item;
+
+    item = &items[item_num];
+    if (!TestBoundsCollide(item, laraitem, coll->radius))
+        return;
+
+    if (!TestCollision(item, laraitem))
+        return;
+
+    if (coll->enable_baddie_push)
+    {
+        if (item->hit_points <= 0)
+            ItemPushLara(item, laraitem, coll, 0, 0);
+        else
+            ItemPushLara(item, laraitem, coll, coll->enable_hit, 0);
+    }
+}
