@@ -278,10 +278,10 @@ address,size,name,symbol
 0x000245ec,29,Func245ec,
 0x0002460c,106,Func2460c,
 0x00024678,128,Func24678,
-0x00024700,83,Func24700,
+0x00024700,83,InitialiseItemArray,InitialiseItemArray_
 0x00024754,226,Func24754,
 0x00024838,55,Func24838,
-0x00024870,446,Func24870,
+0x00024870,446,InitialiseItem,InitialiseItem_
 0x00024a30,151,RemoveActiveItem,RemoveActiveItem_
 0x00024ac8,114,Func24ac8,
 0x00024b3c,136,AddActiveItem,AddActiveItem_
@@ -1778,6 +1778,7 @@ address,size,name,symbol
 0x000c3822,2,Inventory_Chosen,_Inventory_Chosen
 0x000c3824,,Inventory_ExtraData,_Inventory_ExtraData
 0x000c384c,2,Option_Music_Volume,_Option_Music_Volume
+0x000c38a8,4,level_items,_level_items
 0x000c38ac,4,health_bar_timer,_health_bar_timer
 0x000c3b68,4,sound_active,_sound_active
 0x000c3e68,128,exit_message,_exit_message

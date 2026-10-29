@@ -8,6 +8,8 @@
 #define NO_BAD_POS (-NO_HEIGHT)
 #define NO_BAD_NEG NO_HEIGHT
 
+#define NUMBER_ITEMS 256
+
 #define LARA_RAD 100
 #define LARA_HITE 762
 #define UW_RADIUS 300
@@ -199,6 +201,8 @@ void KillEffect(sint16 fx_num);
 sint16 CreateEffect(sint16 room_num);
 void EffectNewRoom(sint16 fx_num, sint16 room_number);
 void WaterFall(sint16 item_number);
+void InitialiseItemArray(int numitems);
+void InitialiseItem(sint16 item_num);
 void LoadLaraDemoPos(void);
 void GetDemoInput(void);
 sint16 DoBloodSplat(sint32 x, sint32 y, sint32 z, sint16 speed, PHD_ANGLE direction, sint16 room_num);

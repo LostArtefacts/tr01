@@ -32,6 +32,7 @@ extern ROOM_INFO *room;
 
 extern int CurrentLevel;
 extern int level_complete;
+extern int level_items;
 extern sint16 draw_rooms[];
 extern sint16 number_rooms;
 extern OBJECT_INFO objects[];

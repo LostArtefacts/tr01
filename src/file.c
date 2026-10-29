@@ -345,3 +345,55 @@ int LoadSprites(FILE *file)
     }
     return 1;
 }
+
+int LoadItems(FILE *file)
+{
+    int i;
+    sint32 number_items;
+    ITEM_INFO *item;
+
+    fread(&number_items, sizeof(sint32), 1, file);
+
+    if (number_items == 0)
+        return 1;
+
+    if (number_items > NUMBER_ITEMS)
+    {
+        strcpy(exit_message, "LoadItems(): Too Many Items being Loaded!!");
+        return 0;
+    }
+
+    items = (ITEM_INFO *)game_malloc(sizeof(ITEM_INFO) * NUMBER_ITEMS, ITEMS);
+    if (items == NULL)
+    {
+        strcpy(exit_message, "LoadItems(): Unable to allocate memory for 'items'");
+        return 0;
+    }
+
+    level_items = number_items;
+
+    InitialiseItemArray(NUMBER_ITEMS);
+
+    for (i = 0; i < number_items; i++)
+    {
+        item = &items[i];
+        fread(&item->object_number, sizeof(sint16), 1, file);
+        fread(&item->room_number, sizeof(sint16), 1, file);
+        fread(&item->pos.x_pos, sizeof(sint32), 1, file);
+        fread(&item->pos.y_pos, sizeof(sint32), 1, file);
+        fread(&item->pos.z_pos, sizeof(sint32), 1, file);
+        fread(&item->pos.y_rot, sizeof(sint16), 1, file);
+        fread(&item->shade, sizeof(sint16), 1, file);
+        fread(&item->flags, sizeof(sint16), 1, file);
+
+        if (item->object_number < 0 || item->object_number >= NUMBER_OBJECTS)
+        {
+            sprintf(exit_message, "LoadItems(): Bad Object number (%d) on Item %d", item->object_number, i);
+            S_ExitSystem(exit_message);
+        }
+
+        InitialiseItem(i);
+    }
+
+    return 1;
+}
