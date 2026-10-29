@@ -7,9 +7,13 @@ has one (a self-relative call has none in either) and must resolve to the
 address the original uses: an external through config/symbols.csv, a
 segment of the same module through that segment's place in the original,
 which is worked out from its first use and must be the same for every
-other; its own code through the function that holds the target. The
+other, or failing that from the first pointer to it in a data segment;
+its own code through the function that holds the target. The
 CONST, CONST2 and _DATA bytes of each placed segment must then match the
-original's too.
+original's too. A module's own public data is referenced by name, like
+any external, so each data segment is also placed through its publics'
+addresses in symbols.csv, which must all agree, and its bytes and
+pointers are compared the same way.
 
 Watcom puts a function's switch jump tables in the code segment right
 before the function. They are compared with the code they sit in: the
@@ -60,6 +64,7 @@ class Result:
         self.name, self.addr = name, addr
         self.errors = []
         self.warning = None
+        self.data = False
         self.ours = None
         self.size = 0
 
@@ -202,16 +207,80 @@ def compare_module(mod, orig, by_symbol):
             r.warning = (f"{len(moved)} functions are not where a contiguous {segs[si].name} puts "
                          f"them, first at {moved[0][1]:#x} (a function between them is missing)")
             results.append(r)
-    for si, base in bases.items():
-        seg = segs[si]
-        if seg.is_code() or seg.cls.upper() == "BSS" or not seg.size:
+    modname = mod.name.replace(chr(92), "/").rsplit("/", 1)[-1]
+    misplaced = {}
+    for si, seg in enumerate(segs[1:], 1):
+        if seg.is_code():
             continue
-        theirs = orig.read(base, seg.size)
-        if bytes(seg.data) != theirs:
-            i = next(i for i in range(seg.size) if seg.data[i] != theirs[i])
-            r = Result(f"{seg.name} of {os.path.basename(mod.name)}", base)
-            r.errors.append(f"data differs at {base + i:#x}")
-            results.append(r)
+        for off, name, _ in seg.publics:
+            row = by_symbol.get(name)
+            if not row:
+                misplaced.setdefault(si, []).append(f"{name} is not in config/symbols.csv")
+                continue
+            want = int(row["address"], 16) - off
+            placed = bases.setdefault(si, want)
+            if placed != want:
+                misplaced.setdefault(si, []).append(
+                    f"{name} is at {want + off:#x}, {seg.name} puts it at {placed + off:#x}")
+    done = set()
+    while True:
+        todo = sorted((si, base) for si, base in bases.items() if si not in done)
+        if not todo:
+            break
+        si, base = todo[0]
+        done.add(si)
+        seg = segs[si]
+        if seg.is_code() or not seg.size:
+            continue
+        r = Result(f"{seg.name} of {modname}", base)
+        r.data = True
+        results.append(r)
+        r.errors += misplaced.get(si, [])
+        try:
+            theirs = orig.read(base, seg.size)
+        except ValueError as e:
+            r.errors.append(str(e))
+            continue
+        ours = bytearray(seg.data)
+        fixed = set()
+        for f in seg.fixups:
+            at = base + f.offset
+            fixed.update(range(at, at + f.size))
+            if f.size != 4 or f.rel:
+                r.errors.append(f"{f.size}-byte {'relative ' if f.rel else ''}fixup at {at:#x}")
+                continue
+            if at not in orig.fixups:
+                r.errors.append(f"fixup at {at:#x}, the original has none")
+                continue
+            target = orig.fixups[at]
+            inline, = struct.unpack_from("<i", ours, f.offset)
+            kind, what = f.target
+            if kind == "ext":
+                sym = by_symbol.get(what)
+                expect = int(sym["address"], 16) + f.disp + inline if sym else None
+                if expect is None:
+                    r.errors.append(f"{what} is not in config/symbols.csv; the original uses "
+                                    f"{target - f.disp - inline:#x}")
+                    continue
+            elif kind == "seg" and segs[what].is_code():
+                expect = code_owner(segs[what], f.disp + inline, by_symbol)
+            elif kind == "seg":
+                expect = bases.setdefault(what, target - f.disp - inline) + f.disp + inline
+            else:
+                r.errors.append(f"unsupported fixup target {f.target} at {at:#x}")
+                continue
+            if expect != target:
+                r.errors.append(f"pointer at {at:#x} is {expect if expect is None else hex(expect)}, "
+                                f"the original's is {target:#x}")
+            struct.pack_into("<I", ours, f.offset, (expect or 0) & 0xFFFFFFFF)
+        for at in range(base, base + seg.size):
+            if at in orig.fixups and at not in fixed:
+                r.errors.append(f"the original has a fixup at {at:#x}, this has none")
+        if seg.cls.upper() != "BSS":
+            diff = [base + i for i in range(seg.size) if base + i not in fixed and ours[i] != theirs[i]]
+            if diff:
+                r.errors.append(f"{len(diff)} bytes differ, first at {diff[0]:#x}")
+        r.ours, r.size = bytes(ours), seg.size
     return results, bases
 
 
@@ -249,8 +318,11 @@ def main():
     if not wanted:
         for r in warnings:
             print(f"warning  {r.addr:#010x} {r.name}: {r.warning}")
-        good = [r for r in results if r.ok() and r.addr]
-        print(f"{len(good)} of {len(results)} match, {sum(r.size for r in good)} bytes")
+        funcs = [r for r in results if not r.data]
+        data = [r for r in results if r.data]
+        good = [r for r in funcs if r.ok() and r.addr]
+        print(f"{len(good)} of {len(funcs)} match, {sum(r.size for r in good)} bytes; "
+              f"{sum(r.ok() for r in data)} of {len(data)} data segments match")
     sys.exit(0 if all(r.ok() for r in results if not wanted or r.name in wanted) else 1)
 
 
