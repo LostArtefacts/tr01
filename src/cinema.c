@@ -172,3 +172,8 @@ void ControlCinematicPlayer(sint16 item_num)
     item->pos.z_pos = camera.pos.z;
     AnimateItem(item);
 }
+
+void ControlCinematicPlayer4(sint16 item_num)
+{
+    AnimateItem(&items[item_num]);
+}
