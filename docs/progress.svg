@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">66.33% (526)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">33.67% (267)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">66.46% (527)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">33.54% (266)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="495.49" height="6" x="0" y="0" class="named"/>
-<rect width="251.51" height="6" x="495.49" y="0" class="todo"/>
+<rect width="496.43" height="6" x="0" y="0" class="named"/>
+<rect width="250.57" height="6" x="496.43" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -99,7 +99,7 @@
 <rect width="12" height="12" x="435" y="0" class="named"><title>0x000122fc CalculateTarget (1120 bytes)</title></rect>
 <rect width="12" height="12" x="450" y="0" class="named"><title>0x0001275c CreatureCreature (224 bytes)</title></rect>
 <rect width="12" height="12" x="465" y="0" class="named"><title>0x0001283c BadFloor (211 bytes)</title></rect>
-<rect width="12" height="12" x="480" y="0" class="todo"><title>0x00012910 CreatureAnimation (2734 bytes)</title></rect>
+<rect width="12" height="12" x="480" y="0" class="named"><title>0x00012910 CreatureAnimation (2734 bytes)</title></rect>
 <rect width="12" height="12" x="495" y="0" class="named"><title>0x000133c0 CreatureTurn (185 bytes)</title></rect>
 <rect width="12" height="12" x="510" y="0" class="named"><title>0x0001347c CreatureTilt (44 bytes)</title></rect>
 <rect width="12" height="12" x="525" y="0" class="named"><title>0x000134a8 CreatureHead (86 bytes)</title></rect>
@@ -864,16 +864,16 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">60.04%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">39.96%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">61.35%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">38.65%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="448.46" height="6" x="0" y="0" class="named"/>
-<rect width="298.54" height="6" x="448.46" y="0" class="todo"/>
+<rect width="458.31" height="6" x="0" y="0" class="named"/>
+<rect width="288.69" height="6" x="458.31" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.01" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
 <rect width="53.01" height="66.99" x="0" y="70.43" class="named"><title>0x00021498 Display_Inventory (4461 bytes)</title></rect>
 <rect width="53.01" height="56.69" x="0" y="140.41" class="todo"><title>0x00036808 Func36808 (3805 bytes)</title></rect>
-<rect width="53.01" height="39.89" x="0" y="200.11" class="todo"><title>0x00012910 CreatureAnimation (2734 bytes)</title></rect>
+<rect width="53.01" height="39.89" x="0" y="200.11" class="named"><title>0x00012910 CreatureAnimation (2734 bytes)</title></rect>
 <rect width="43.38" height="47.08" x="56.01" y="0" class="todo"><title>0x000359c0 Func359c0 (2643 bytes)</title></rect>
 <rect width="43.38" height="41.13" x="56.01" y="50.08" class="todo"><title>0x00037adc Func37adc (2329 bytes)</title></rect>
 <rect width="43.38" height="40.47" x="56.01" y="94.21" class="named"><title>0x0001b224 DrawLara (2294 bytes)</title></rect>
