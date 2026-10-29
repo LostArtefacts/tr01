@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">41.79% (326)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">58.21% (454)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">41.92% (327)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">58.08% (453)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="312.21" height="6" x="0" y="0" class="named"/>
-<rect width="434.79" height="6" x="312.21" y="0" class="todo"/>
+<rect width="313.17" height="6" x="0" y="0" class="named"/>
+<rect width="433.83" height="6" x="313.17" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -394,7 +394,7 @@
 <rect width="12" height="12" x="360" y="90" class="named"><title>0x00025b70 lara_as_slideback (16 bytes)</title></rect>
 <rect width="12" height="12" x="375" y="90" class="named"><title>0x00025b80 lara_as_pushblock (42 bytes)</title></rect>
 <rect width="12" height="12" x="390" y="90" class="named"><title>0x00025bac lara_as_pullblock (42 bytes)</title></rect>
-<rect width="12" height="12" x="405" y="90" class="todo"><title>0x00025bd8 Func25bd8 (36 bytes)</title></rect>
+<rect width="12" height="12" x="405" y="90" class="named"><title>0x00025bd8 lara_as_ppready (36 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="90" class="todo"><title>0x00025bfc Func25bfc (42 bytes)</title></rect>
 <rect width="12" height="12" x="435" y="90" class="todo"><title>0x00025c28 Func25c28 (42 bytes)</title></rect>
 <rect width="12" height="12" x="450" y="90" class="todo"><title>0x00025c54 Func25c54 (42 bytes)</title></rect>
@@ -851,10 +851,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">41.26%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">58.74%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">41.27%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">58.73%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="308.18" height="6" x="0" y="0" class="named"/>
-<rect width="438.82" height="6" x="308.18" y="0" class="todo"/>
+<rect width="308.32" height="6" x="0" y="0" class="named"/>
+<rect width="438.68" height="6" x="308.32" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1504,7 +1504,7 @@
 <rect width="2.98" height="2.53" x="699.44" y="221.05" class="named"><title>0x00024580 Inv_RingMotionRadius (37 bytes)</title></rect>
 <rect width="2.98" height="2.53" x="699.44" y="226.57" class="todo"><title>0x0002ffb0 Func2ffb0 (37 bytes)</title></rect>
 <rect width="2.98" height="2.53" x="699.44" y="232.10" class="todo"><title>0x0003ed48 phd_InitPolyList (37 bytes)</title></rect>
-<rect width="2.98" height="2.38" x="699.44" y="237.62" class="todo"><title>0x00025bd8 Func25bd8 (36 bytes)</title></rect>
+<rect width="2.98" height="2.38" x="699.44" y="237.62" class="named"><title>0x00025bd8 lara_as_ppready (36 bytes)</title></rect>
 <rect width="2.69" height="2.65" x="705.43" y="192.97" class="todo"><title>0x0002fffc Func2fffc (36 bytes)</title></rect>
 <rect width="2.69" height="2.65" x="711.12" y="192.97" class="todo"><title>0x0003b7fc Func3b7fc (36 bytes)</title></rect>
 <rect width="2.53" height="2.65" x="716.81" y="192.97" class="named"><title>0x00014fc0 InitialiseGenPlayer (35 bytes)</title></rect>
