@@ -127,3 +127,15 @@ void DrawBridgeFloor(ITEM_INFO *item, sint32 x, sint32 y, sint32 z, sint16 *heig
             *height = (sint16)item->pos.y_pos;
     }
 }
+
+void DrawBridgeCeiling(ITEM_INFO *item, sint32 x, sint32 y, sint32 z, sint16 *height)
+{
+    if (item->current_anim_state == DOOR_OPEN)
+    {
+        if (!OnDrawBridge(item, z, x))
+            return;
+
+        if (y > item->pos.y_pos)
+            *height = (sint16)(item->pos.y_pos + STEP_L);
+    }
+}
