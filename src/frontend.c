@@ -188,3 +188,7 @@ void S_FadeToBlack(void)
     ScreenClear();
     ScreenDump();
 }
+
+void S_LoadingScreen(int level_number)
+{
+}
