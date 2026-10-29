@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">71.11% (571)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">28.89% (232)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">71.23% (572)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">28.77% (231)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="531.18" height="6" x="0" y="0" class="named"/>
-<rect width="215.82" height="6" x="531.18" y="0" class="todo"/>
+<rect width="532.11" height="6" x="0" y="0" class="named"/>
+<rect width="214.89" height="6" x="532.11" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -638,7 +638,7 @@
 <rect width="12" height="12" x="270" y="165" class="named"><title>0x00034634 KeyHoleCollision (543 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="165" class="named"><title>0x00034874 PuzzleHoleCollision (668 bytes)</title></rect>
 <rect width="12" height="12" x="300" y="165" class="named"><title>0x00034b10 SwitchControl (55 bytes)</title></rect>
-<rect width="12" height="12" x="315" y="165" class="todo"><title>0x00034b48 SwitchTrigger (120 bytes)</title></rect>
+<rect width="12" height="12" x="315" y="165" class="named"><title>0x00034b48 SwitchTrigger (120 bytes)</title></rect>
 <rect width="12" height="12" x="330" y="165" class="todo"><title>0x00034bc0 KeyTrigger (74 bytes)</title></rect>
 <rect width="12" height="12" x="345" y="165" class="todo"><title>0x00034c0c PickupTrigger (64 bytes)</title></rect>
 <rect width="12" height="12" x="360" y="165" class="todo"><title>0x00034c4c Func34c4c (188 bytes)</title></rect>
@@ -874,10 +874,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">68.70%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">31.30%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">68.75%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">31.25%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="513.16" height="6" x="0" y="0" class="named"/>
-<rect width="233.84" height="6" x="513.16" y="0" class="todo"/>
+<rect width="513.58" height="6" x="0" y="0" class="named"/>
+<rect width="233.42" height="6" x="513.58" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="51.21" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1288,7 +1288,7 @@
 <rect width="7.48" height="7.34" x="606.47" y="175.89" class="named"><title>0x0001fa4c S_DrawScreenFBox (120 bytes)</title></rect>
 <rect width="7.48" height="7.34" x="606.47" y="186.23" class="named"><title>0x00025974 lara_as_stepright (120 bytes)</title></rect>
 <rect width="7.48" height="7.34" x="606.47" y="196.57" class="named"><title>0x000259ec lara_as_stepleft (120 bytes)</title></rect>
-<rect width="7.48" height="7.34" x="606.47" y="206.91" class="todo"><title>0x00034b48 SwitchTrigger (120 bytes)</title></rect>
+<rect width="7.48" height="7.34" x="606.47" y="206.91" class="named"><title>0x00034b48 SwitchTrigger (120 bytes)</title></rect>
 <rect width="7.48" height="7.25" x="606.47" y="217.25" class="named"><title>0x0001d754 Richochet (119 bytes)</title></rect>
 <rect width="7.48" height="7.25" x="606.47" y="227.50" class="todo"><title>0x0003e2a8 Func3e2a8 (119 bytes)</title></rect>
 <rect width="7.48" height="7.17" x="606.47" y="237.75" class="named"><title>0x0001a500 GetRoomBounds (118 bytes)</title></rect>
