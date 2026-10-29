@@ -22,6 +22,9 @@
 #define UZI_AMMO_QTY (UZI_AMMO_CLIP * 2)
 #define SHOTGUN_AMMO_QTY (SHOTGUN_AMMO_CLIP * NUM_SG_SHELLS)
 
+#define LARA_LEAN_UNDO (ONE_DEGREE)
+#define LARA_TURN_UNDO (2 * ONE_DEGREE)
+
 #define LARA_RAD 100
 #define LARA_HITE 762
 #define UW_RADIUS 300
@@ -193,6 +196,8 @@ enum lara_meshes
 };
 
 extern void (*effect_routines[])(ITEM_INFO *item);
+extern void (*lara_control_routines[])(ITEM_INFO *item, COLL_INFO *coll);
+extern void (*lara_collision_routines[])(ITEM_INFO *item, COLL_INFO *coll);
 extern OBJECT_VECTOR *sound_effects;
 extern int number_sound_effects;
 extern int health_bar_timer;
@@ -222,6 +227,9 @@ void GetDemoInput(void);
 sint16 DoBloodSplat(sint32 x, sint32 y, sint32 z, sint16 speed, PHD_ANGLE direction, sint16 room_num);
 sint32 DrawPhaseCinematic(void);
 void LaraControl(sint16 item_num);
+void LaraAboveWater(ITEM_INFO *item, COLL_INFO *coll);
+void AnimateLara(ITEM_INFO *item);
+void LaraGun(void);
 void InGameCinematicCamera(void);
 int SwitchTrigger(sint16 item_num, sint16 timer);
 int KeyTrigger(sint16 item_num);

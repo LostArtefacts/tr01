@@ -294,7 +294,7 @@ address,size,name,symbol
 0x00024db8,111,CreateEffect,CreateEffect_
 0x00024e28,192,KillEffect,KillEffect_
 0x00024ee8,155,EffectNewRoom,EffectNewRoom_
-0x00024f90,458,Func24f90,
+0x00024f90,458,LaraAboveWater,LaraAboveWater_
 0x0002515c,141,Func2515c,
 0x000251ec,265,Func251ec,
 0x000252f8,411,Func252f8,
@@ -397,7 +397,7 @@ address,size,name,symbol
 0x00028300,169,Func28300,
 0x000283b0,1018,LaraControl,LaraControl_
 0x000287ac,65,LaraSwapMeshExtra,LaraSwapMeshExtra_
-0x00028820,732,Func28820,
+0x00028820,732,AnimateLara,AnimateLara_
 0x00028afc,508,UseItem,UseItem_
 0x00028cf8,28,Func28cf8,
 0x00028d14,34,Func28d14,
@@ -429,7 +429,7 @@ address,size,name,symbol
 0x0002a188,19,Func2a188,
 0x0002a19c,224,Func2a19c,
 0x0002a27c,453,Func2a27c,
-0x0002a460,904,Func2a460,
+0x0002a460,904,LaraGun,LaraGun_
 0x0002a7e8,216,Func2a7e8,
 0x0002a8c0,405,Func2a8c0,
 0x0002aa58,449,Func2aa58,
@@ -1886,6 +1886,8 @@ address,size,name,symbol
 0x000c3888,32,cheat_code,_cheat_code
 0x000c38a8,4,level_items,_level_items
 0x000c38ac,4,health_bar_timer,_health_bar_timer
+0x000c38b4,224,lara_control_routines,_lara_control_routines
+0x000c3994,224,lara_collision_routines,_lara_collision_routines
 0x000c3b68,4,sound_active,_sound_active
 0x000c3bc4,4,detail_level,_detail_level
 0x000c3e38,4,number_cameras,_number_cameras
