@@ -52,6 +52,9 @@ extern int level_complete;
 extern int number_draw_rooms;
 extern sint16 draw_rooms[];
 extern sint16 number_rooms;
+extern sint16 next_item_active;
+extern FX_INFO *effects;
+extern sint16 next_fx_active;
 extern ROOM_INFO *room;
 extern OBJECT_INFO objects[];
 

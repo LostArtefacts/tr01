@@ -4,7 +4,9 @@
 #include "types.h"
 
 extern char *bckscrn;
+extern sint32 input;
 
+void S_UpdateInput(void);
 char *GetFullPath(char *filename);
 void S_CDVolume(sint16 volume);
 void S_CDStop(void);

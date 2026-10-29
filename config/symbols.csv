@@ -51,7 +51,7 @@ address,size,name,symbol
 0x00014ae0,279,StartCinematic,StartCinematic_
 0x00014bf8,128,InitCinematicRooms,InitCinematicRooms_
 0x00014c78,238,DoCinematic,DoCinematic_
-0x00014d68,335,Func14d68,
+0x00014d68,335,CalculateCinematicCamera,CalculateCinematicCamera_
 0x00014eb8,66,Func14eb8,
 0x00014efc,28,Func14efc,
 0x00014f18,168,Func14f18,
@@ -239,7 +239,7 @@ address,size,name,symbol
 0x00020ef4,105,Func20ef4,
 0x00020f60,97,Func20f60,
 0x00020fd0,333,Func20fd0,
-0x00021120,683,Func21120,
+0x00021120,683,S_UpdateInput,S_UpdateInput_
 0x00021498,4461,Func21498,
 0x00022608,300,Func22608,
 0x00022734,152,Func22734,
@@ -1741,6 +1741,7 @@ address,size,name,symbol
 0x000c17a4,60,shadowman,_shadowman
 0x000c17e4,16,bat_bite,_bat_bite
 0x000c17f4,16,bear_head_bite,_bear_head_bite
+0x000c1804,4,cinematic_animation_rate,_cinematic_animation_rate
 0x000c1810,4,chunky_flag,_chunky_flag
 0x000c1888,4,bckscrn,_bckscrn
 0x000c1988,4,CurrentLevel,_CurrentLevel
@@ -1763,6 +1764,7 @@ address,size,name,symbol
 0x000cb2a8,93,camera,_camera
 0x000cb31e,2,cinematic_level,_cinematic_level
 0x000cb320,2,cine_frame,_cine_frame
+0x000cb322,2,num_cine_frames,_num_cine_frames
 0x000cb3d0,4,items,_items
 0x000cb3d4,4,flip_status,_flip_status
 0x000cbf88,200,draw_rooms,_draw_rooms
@@ -1770,7 +1772,11 @@ address,size,name,symbol
 0x000cc08c,4,number_draw_rooms,_number_draw_rooms
 0x000cc090,9550,objects,_objects
 0x000ce5de,2,number_rooms,_number_rooms
+0x000ce95c,4,input,_input
 0x000ce960,34,inv_colours,_inv_colours
+0x000ce984,4,effects,_effects
+0x000ce988,2,next_fx_active,_next_fx_active
+0x000ce98e,2,next_item_active,_next_item_active
 0x000ce990,4,lara_item,_lara_item
 0x000ce994,236,lara,_lara
 0x000d4744,48000,vbuf,_vbuf
