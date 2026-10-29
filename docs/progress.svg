@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">39.79% (310)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">60.21% (469)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">39.92% (311)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">60.08% (468)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="297.27" height="6" x="0" y="0" class="named"/>
-<rect width="449.73" height="6" x="297.27" y="0" class="todo"/>
+<rect width="298.22" height="6" x="0" y="0" class="named"/>
+<rect width="448.78" height="6" x="298.22" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -378,7 +378,7 @@
 <rect width="12" height="12" x="120" y="90" class="named"><title>0x00025798 lara_as_splat (1 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="90" class="named"><title>0x00025798 lara_as_land (0 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="90" class="named"><title>0x0002579c lara_as_compress (258 bytes)</title></rect>
-<rect width="12" height="12" x="165" y="90" class="todo"><title>0x000258a0 lara_as_back (135 bytes)</title></rect>
+<rect width="12" height="12" x="165" y="90" class="named"><title>0x000258a0 lara_as_back (135 bytes)</title></rect>
 <rect width="12" height="12" x="180" y="90" class="todo"><title>0x00025928 Func25928 (76 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="90" class="todo"><title>0x00025974 Func25974 (120 bytes)</title></rect>
 <rect width="12" height="12" x="210" y="90" class="todo"><title>0x000259ec Func259ec (120 bytes)</title></rect>
@@ -850,10 +850,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">40.86%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">59.14%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">40.92%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">59.08%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="305.21" height="6" x="0" y="0" class="named"/>
-<rect width="441.79" height="6" x="305.21" y="0" class="todo"/>
+<rect width="305.71" height="6" x="0" y="0" class="named"/>
+<rect width="441.29" height="6" x="305.71" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1218,7 +1218,7 @@
 <rect width="7.76" height="8.30" x="592.37" y="164.91" class="named"><title>0x0001628c EffectHit (136 bytes)</title></rect>
 <rect width="7.76" height="8.30" x="592.37" y="176.20" class="named"><title>0x00024b3c AddActiveItem (136 bytes)</title></rect>
 <rect width="7.76" height="8.22" x="592.37" y="187.50" class="named"><title>0x000255bc lara_as_turn_r (135 bytes)</title></rect>
-<rect width="7.76" height="8.22" x="592.37" y="198.72" class="todo"><title>0x000258a0 lara_as_back (135 bytes)</title></rect>
+<rect width="7.76" height="8.22" x="592.37" y="198.72" class="named"><title>0x000258a0 lara_as_back (135 bytes)</title></rect>
 <rect width="7.76" height="8.13" x="592.37" y="209.93" class="named"><title>0x0001dcb4 ControlSplash1 (134 bytes)</title></rect>
 <rect width="7.76" height="7.97" x="592.37" y="221.07" class="named"><title>0x00011b18 UpdateLOT (132 bytes)</title></rect>
 <rect width="7.76" height="7.97" x="592.37" y="232.03" class="named"><title>0x0001e23c draw_right_gun (132 bytes)</title></rect>
