@@ -400,3 +400,23 @@ void Stairs2SlopeFX(ITEM_INFO *item)
     }
     fliptimer++;
 }
+
+void SandFX(ITEM_INFO *item)
+{
+    PHD_3DPOS pos;
+
+    if (fliptimer > 30 * 4)
+        flipeffect = -1;
+    else
+    {
+        if (fliptimer == 0)
+            SoundEffect(161, NULL, NULL);
+
+        pos.x_pos = camera.target.x;
+        pos.y_pos = camera.target.y + fliptimer * 100;
+        pos.z_pos = camera.target.z;
+
+        SoundEffect(118, &pos, NULL);
+    }
+    fliptimer++;
+}
