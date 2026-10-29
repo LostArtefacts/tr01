@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">73.70% (594)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">26.30% (212)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">73.82% (595)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">26.18% (211)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="550.52" height="6" x="0" y="0" class="named"/>
-<rect width="196.48" height="6" x="550.52" y="0" class="todo"/>
+<rect width="551.45" height="6" x="0" y="0" class="named"/>
+<rect width="195.55" height="6" x="551.45" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -662,7 +662,7 @@
 <rect width="12" height="12" x="630" y="165" class="named"><title>0x0003667c CheckSumValid (34 bytes)</title></rect>
 <rect width="12" height="12" x="645" y="165" class="named"><title>0x000366a0 InitialiseLevel (208 bytes)</title></rect>
 <rect width="12" height="12" x="660" y="165" class="named"><title>0x00036770 InitialiseGameFlags (113 bytes)</title></rect>
-<rect width="12" height="12" x="675" y="165" class="todo"><title>0x000367e4 InitialiseLevelFlags (34 bytes)</title></rect>
+<rect width="12" height="12" x="675" y="165" class="named"><title>0x000367e4 InitialiseLevelFlags (34 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="165" class="todo"><title>0x00036808 Func36808 (3805 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="165" class="todo"><title>0x000376e8 Func376e8 (1012 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="165" class="todo"><title>0x00037adc Func37adc (2329 bytes)</title></rect>
@@ -877,10 +877,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">70.60%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">29.40%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">70.62%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">29.38%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="527.39" height="6" x="0" y="0" class="named"/>
-<rect width="219.61" height="6" x="527.39" y="0" class="todo"/>
+<rect width="527.51" height="6" x="0" y="0" class="named"/>
+<rect width="219.49" height="6" x="527.51" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="51.02" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1559,7 +1559,7 @@
 <rect width="2.29" height="2.79" x="739.43" y="209.28" class="named"><title>0x00028d14 InitialiseLaraLoad (34 bytes)</title></rect>
 <rect width="2.29" height="2.79" x="744.71" y="209.28" class="named"><title>0x0002ffd8 BridgeTilt2Floor (34 bytes)</title></rect>
 <rect width="2.46" height="2.60" x="707.10" y="215.07" class="named"><title>0x0003667c CheckSumValid (34 bytes)</title></rect>
-<rect width="2.46" height="2.60" x="712.56" y="215.07" class="todo"><title>0x000367e4 InitialiseLevelFlags (34 bytes)</title></rect>
+<rect width="2.46" height="2.60" x="712.56" y="215.07" class="named"><title>0x000367e4 InitialiseLevelFlags (34 bytes)</title></rect>
 <rect width="2.46" height="2.60" x="718.02" y="215.07" class="todo"><title>0x00039560 T_InitPrint (34 bytes)</title></rect>
 <rect width="2.46" height="2.60" x="723.49" y="215.07" class="todo"><title>0x000398c8 Func398c8 (34 bytes)</title></rect>
 <rect width="2.30" height="2.60" x="728.95" y="215.07" class="named"><title>0x0001f4a4 GetFullPath (33 bytes)</title></rect>

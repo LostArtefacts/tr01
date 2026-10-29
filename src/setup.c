@@ -87,3 +87,11 @@ void InitialiseGameFlags(void)
     flipeffect = -1;
     pierre_item = NO_ITEM;
 }
+
+void InitialiseLevelFlags(void)
+{
+    savegame.secrets = 0;
+    savegame.timer = 0;
+    savegame.pickups = 0;
+    savegame.kills = 0;
+}
