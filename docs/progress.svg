@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">63.43% (503)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">36.57% (290)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">63.56% (504)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">36.44% (289)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="473.82" height="6" x="0" y="0" class="named"/>
-<rect width="273.18" height="6" x="473.82" y="0" class="todo"/>
+<rect width="474.76" height="6" x="0" y="0" class="named"/>
+<rect width="272.24" height="6" x="474.76" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -571,7 +571,7 @@
 <rect width="12" height="12" x="15" y="150" class="named"><title>0x0002eea0 TestBlockMovable (74 bytes)</title></rect>
 <rect width="12" height="12" x="30" y="150" class="named"><title>0x0002eefc TestBlockPush (254 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="150" class="named"><title>0x0002f00c TestBlockPull (599 bytes)</title></rect>
-<rect width="12" height="12" x="60" y="150" class="todo"><title>0x0002f264 Func2f264 (33 bytes)</title></rect>
+<rect width="12" height="12" x="60" y="150" class="named"><title>0x0002f264 InitialiseRollingBlock (33 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="150" class="todo"><title>0x0002f288 Func2f288 (247 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="150" class="todo"><title>0x0002f380 AlterFloorHeight (186 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="150" class="todo"><title>0x0002f43c Func2f43c (124 bytes)</title></rect>
@@ -864,10 +864,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">58.86%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">41.14%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">58.87%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">41.13%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="439.67" height="6" x="0" y="0" class="named"/>
-<rect width="307.33" height="6" x="439.67" y="0" class="todo"/>
+<rect width="439.79" height="6" x="0" y="0" class="named"/>
+<rect width="307.21" height="6" x="439.79" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.01" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1539,7 +1539,7 @@
 <rect width="2.19" height="2.75" x="705.24" y="209.33" class="todo"><title>0x00039560 T_InitPrint (34 bytes)</title></rect>
 <rect width="2.19" height="2.75" x="705.24" y="215.08" class="todo"><title>0x000398c8 Func398c8 (34 bytes)</title></rect>
 <rect width="2.19" height="2.58" x="705.24" y="220.83" class="named"><title>0x0001f4a4 GetFullPath (33 bytes)</title></rect>
-<rect width="2.19" height="2.58" x="705.24" y="226.42" class="todo"><title>0x0002f264 Func2f264 (33 bytes)</title></rect>
+<rect width="2.19" height="2.58" x="705.24" y="226.42" class="named"><title>0x0002f264 InitialiseRollingBlock (33 bytes)</title></rect>
 <rect width="2.19" height="2.58" x="705.24" y="232" class="todo"><title>0x00039908 T_DrawText (33 bytes)</title></rect>
 <rect width="2.19" height="2.41" x="705.24" y="237.59" class="named"><title>0x00010064 S_InitialiseScreen (32 bytes)</title></rect>
 <rect width="1.88" height="2.76" x="710.44" y="203.58" class="named"><title>0x00022c10 GetDebouncedInput (32 bytes)</title></rect>

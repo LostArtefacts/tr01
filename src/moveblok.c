@@ -309,3 +309,11 @@ int TestBlockPull(ITEM_INFO *item, int blokhite, uint16 quadrant)
 
     return 1;
 }
+
+void InitialiseRollingBlock(sint16 item_num)
+{
+    ITEM_INFO *item;
+
+    item = &items[item_num];
+    AlterFloorHeight(item, -2048);
+}
