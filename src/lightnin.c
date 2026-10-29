@@ -139,3 +139,22 @@ void DrawLightning(ITEM_INFO *item)
     }
     phd_PopMatrix();
 }
+
+void InitialiseLightning(sint16 item_num)
+{
+    struct lightning *l;
+
+    items[item_num].data = l = (struct lightning *)game_malloc(sizeof(struct lightning), 0);
+
+    if (objects[items[item_num].object_number].nmeshes > 1)
+    {
+        items[item_num].mesh_bits = 1;
+        l->notarget = 0;
+    }
+    else
+        l->notarget = 1;
+
+    l->onstate = 0;
+    l->count = 1;
+    l->zapped = 0;
+}
