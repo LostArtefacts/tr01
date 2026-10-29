@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">48.98% (385)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">51.02% (401)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">49.11% (386)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">50.89% (400)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="365.90" height="6" x="0" y="0" class="named"/>
-<rect width="381.10" height="6" x="365.90" y="0" class="todo"/>
+<rect width="366.85" height="6" x="0" y="0" class="named"/>
+<rect width="380.15" height="6" x="366.85" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -451,7 +451,7 @@
 <rect width="12" height="12" x="465" y="105" class="named"><title>0x00027214 lara_col_special (1 bytes)</title></rect>
 <rect width="12" height="12" x="480" y="105" class="named"><title>0x00027218 lara_col_usemidas (49 bytes)</title></rect>
 <rect width="12" height="12" x="495" y="105" class="named"><title>0x0002724c lara_col_diemidas (49 bytes)</title></rect>
-<rect width="12" height="12" x="510" y="105" class="todo"><title>0x00027280 Func27280 (129 bytes)</title></rect>
+<rect width="12" height="12" x="510" y="105" class="named"><title>0x00027280 lara_col_swandive (129 bytes)</title></rect>
 <rect width="12" height="12" x="525" y="105" class="todo"><title>0x00027304 Func27304 (146 bytes)</title></rect>
 <rect width="12" height="12" x="540" y="105" class="todo"><title>0x00027398 Func27398 (49 bytes)</title></rect>
 <rect width="12" height="12" x="555" y="105" class="todo"><title>0x000273cc Func273cc (49 bytes)</title></rect>
@@ -857,10 +857,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">44.12%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">55.88%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">44.18%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">55.82%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="329.57" height="6" x="0" y="0" class="named"/>
-<rect width="417.43" height="6" x="329.57" y="0" class="todo"/>
+<rect width="330.04" height="6" x="0" y="0" class="named"/>
+<rect width="416.96" height="6" x="330.04" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1234,7 +1234,7 @@
 <rect width="7.71" height="7.93" x="624.65" y="96.03" class="todo"><title>0x000326cc Func326cc (131 bytes)</title></rect>
 <rect width="7.71" height="7.93" x="635.36" y="96.03" class="todo"><title>0x00045cb0 Func45cb0 (131 bytes)</title></rect>
 <rect width="7.63" height="7.93" x="646.07" y="96.03" class="named"><title>0x000208a0 S_LoadGame (130 bytes)</title></rect>
-<rect width="7.55" height="7.93" x="656.70" y="96.03" class="todo"><title>0x00027280 Func27280 (129 bytes)</title></rect>
+<rect width="7.55" height="7.93" x="656.70" y="96.03" class="named"><title>0x00027280 lara_col_swandive (129 bytes)</title></rect>
 <rect width="7.47" height="7.93" x="667.25" y="96.03" class="named"><title>0x00014bf8 InitCinematicRooms (128 bytes)</title></rect>
 <rect width="7.47" height="7.93" x="677.72" y="96.03" class="named"><title>0x000204b0 GetValidLevelsList (128 bytes)</title></rect>
 <rect width="7.47" height="7.93" x="688.18" y="96.03" class="named"><title>0x00024678 Inv_RingMotionItemDeselect (128 bytes)</title></rect>
