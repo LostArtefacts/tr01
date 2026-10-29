@@ -362,3 +362,29 @@ void RollingBlock(sint16 item_number)
         item->pos.z_pos += WALL_L / 2;
     }
 }
+
+void AlterFloorHeight(ITEM_INFO *item, int height)
+{
+    FLOOR_INFO *floor, *ceiling;
+    sint16 room_num;
+
+    room_num = item->room_number;
+    floor = GetFloor(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, &room_num);
+    ceiling = GetFloor(item->pos.x_pos, item->pos.y_pos + height - WALL_L, item->pos.z_pos, &room_num);
+    if (floor->floor == NO_HEIGHT / 256)
+        floor->floor = ceiling->ceiling + height / 256;
+    else
+    {
+        floor->floor += height / 256;
+        if (floor->floor == ceiling->ceiling)
+            floor->floor = NO_HEIGHT / 256;
+    }
+
+    if (boxes[floor->box].overlap_index & BLOCKABLE)
+    {
+        if (height < 0)
+            boxes[floor->box].overlap_index |= BLOCKED;
+        else
+            boxes[floor->box].overlap_index &= (~BLOCKED);
+    }
+}

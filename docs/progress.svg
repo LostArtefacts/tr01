@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">63.68% (505)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">36.32% (288)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">63.81% (506)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">36.19% (287)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="475.71" height="6" x="0" y="0" class="named"/>
-<rect width="271.29" height="6" x="475.71" y="0" class="todo"/>
+<rect width="476.65" height="6" x="0" y="0" class="named"/>
+<rect width="270.35" height="6" x="476.65" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -573,7 +573,7 @@
 <rect width="12" height="12" x="45" y="150" class="named"><title>0x0002f00c TestBlockPull (599 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="150" class="named"><title>0x0002f264 InitialiseRollingBlock (33 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="150" class="named"><title>0x0002f288 RollingBlock (247 bytes)</title></rect>
-<rect width="12" height="12" x="90" y="150" class="todo"><title>0x0002f380 AlterFloorHeight (186 bytes)</title></rect>
+<rect width="12" height="12" x="90" y="150" class="named"><title>0x0002f380 AlterFloorHeight (186 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="150" class="todo"><title>0x0002f43c Func2f43c (124 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="150" class="todo"><title>0x0002f4b8 Func2f4b8 (102 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="150" class="todo"><title>0x0002f520 Func2f520 (77 bytes)</title></rect>
@@ -864,10 +864,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">58.99%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">41.01%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">59.08%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">40.92%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="440.68" height="6" x="0" y="0" class="named"/>
-<rect width="306.32" height="6" x="440.68" y="0" class="todo"/>
+<rect width="441.35" height="6" x="0" y="0" class="named"/>
+<rect width="305.65" height="6" x="441.35" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.01" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1158,7 +1158,7 @@
 <rect width="10.06" height="9.52" x="607.55" y="59.16" class="named"><title>0x00020d30 S_InitialiseSystem (186 bytes)</title></rect>
 <rect width="10.06" height="9.52" x="620.60" y="59.16" class="named"><title>0x00026484 lara_col_forwardjump (186 bytes)</title></rect>
 <rect width="10.06" height="9.52" x="633.66" y="59.16" class="named"><title>0x00026b4c lara_col_stepright (186 bytes)</title></rect>
-<rect width="10.06" height="9.52" x="646.72" y="59.16" class="todo"><title>0x0002f380 AlterFloorHeight (186 bytes)</title></rect>
+<rect width="10.06" height="9.52" x="646.72" y="59.16" class="named"><title>0x0002f380 AlterFloorHeight (186 bytes)</title></rect>
 <rect width="9.99" height="9.52" x="659.78" y="59.16" class="named"><title>0x000133c0 CreatureTurn (185 bytes)</title></rect>
 <rect width="9.99" height="9.52" x="672.77" y="59.16" class="named"><title>0x0001dbf8 Splash (185 bytes)</title></rect>
 <rect width="9.92" height="9.52" x="685.76" y="59.16" class="named"><title>0x00011d2c EscapeBox (184 bytes)</title></rect>
