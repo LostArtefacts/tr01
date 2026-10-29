@@ -574,7 +574,7 @@ address,size,name,symbol
 0x00034bc0,74,KeyTrigger,KeyTrigger_
 0x00034c0c,64,PickupTrigger,PickupTrigger_
 0x00034c4c,188,PickUpSaveGameCollision,PickUpSaveGameCollision_
-0x00034d08,26,Func34d08,
+0x00034d08,26,InitialiseSavegameItem,InitialiseSavegameItem_
 0x00034d24,28,Func34d24,
 0x00035020,696,Func35020,
 0x000352e0,6,Func352e0,

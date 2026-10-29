@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">71.61% (575)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">28.39% (228)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">71.73% (576)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">28.27% (227)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="534.90" height="6" x="0" y="0" class="named"/>
-<rect width="212.10" height="6" x="534.90" y="0" class="todo"/>
+<rect width="535.83" height="6" x="0" y="0" class="named"/>
+<rect width="211.17" height="6" x="535.83" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -642,7 +642,7 @@
 <rect width="12" height="12" x="330" y="165" class="named"><title>0x00034bc0 KeyTrigger (74 bytes)</title></rect>
 <rect width="12" height="12" x="345" y="165" class="named"><title>0x00034c0c PickupTrigger (64 bytes)</title></rect>
 <rect width="12" height="12" x="360" y="165" class="named"><title>0x00034c4c PickUpSaveGameCollision (188 bytes)</title></rect>
-<rect width="12" height="12" x="375" y="165" class="todo"><title>0x00034d08 Func34d08 (26 bytes)</title></rect>
+<rect width="12" height="12" x="375" y="165" class="named"><title>0x00034d08 InitialiseSavegameItem (26 bytes)</title></rect>
 <rect width="12" height="12" x="390" y="165" class="todo"><title>0x00034d24 Func34d24 (28 bytes)</title></rect>
 <rect width="12" height="12" x="405" y="165" class="todo"><title>0x00035020 Func35020 (696 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="165" class="todo"><title>0x000352e0 Func352e0 (6 bytes)</title></rect>
@@ -874,10 +874,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">68.90%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">31.10%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">68.92%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">31.08%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="514.71" height="6" x="0" y="0" class="named"/>
-<rect width="232.29" height="6" x="514.71" y="0" class="todo"/>
+<rect width="514.80" height="6" x="0" y="0" class="named"/>
+<rect width="232.20" height="6" x="514.80" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="51.21" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1583,7 +1583,7 @@
 <rect width="1.61" height="2.29" x="740.79" y="220.65" class="todo"><title>0x00039768 T_AddOutline (27 bytes)</title></rect>
 <rect width="1.61" height="2.29" x="745.39" y="220.65" class="todo"><title>0x000456d0 Func456d0 (27 bytes)</title></rect>
 <rect width="2.07" height="1.81" x="717.25" y="225.94" class="todo"><title>0x00046974 Func46974 (27 bytes)</title></rect>
-<rect width="2.07" height="1.63" x="717.25" y="230.75" class="todo"><title>0x00034d08 Func34d08 (26 bytes)</title></rect>
+<rect width="2.07" height="1.63" x="717.25" y="230.75" class="named"><title>0x00034d08 InitialiseSavegameItem (26 bytes)</title></rect>
 <rect width="2.07" height="1.63" x="717.25" y="235.38" class="todo"><title>0x000398ec Func398ec (26 bytes)</title></rect>
 <rect width="2.07" height="1.63" x="717.25" y="240.01" class="todo"><title>0x0003f044 Func3f044 (26 bytes)</title></rect>
 <rect width="2.07" height="1.45" x="717.25" y="244.64" class="named"><title>0x00026d0c lara_col_leftjump (25 bytes)</title></rect>

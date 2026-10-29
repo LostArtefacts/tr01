@@ -668,3 +668,8 @@ void PickUpSaveGameCollision(sint16 item_num, ITEM_INFO *laraitem, COLL_INFO *co
             item->status = ACTIVE;
     }
 }
+
+void InitialiseSavegameItem(sint16 item_num)
+{
+    items[item_num].status = INVISIBLE;
+}
