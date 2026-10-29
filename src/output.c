@@ -15,6 +15,10 @@ extern uint8 game_palette[256 * 3];
 #define AirBarY 6
 #define AirBarW 100
 
+#define ANIMATED_TEXTURE 10
+
+sint16 *aranges;
+
 static sint16 shadowman[] = {
     0, 0, 0,
     32767,
@@ -346,5 +350,28 @@ void S_DrawAirBar(int percent)
         Insert2DLine(x, y + 4, x + w, y + 4, -400, 32);
         Insert2DLine(x, y + 5, x + w, y + 5, -400, 19);
         Insert2DLine(x, y + 6, x + w, y + 6, -400, 21);
+    }
+}
+
+void AnimateTextures(int nframes)
+{
+    int i, j;
+    sint16 *ptr;
+    PHDTEXTURESTRUCT temp;
+    static int frame_comp = 0;
+
+    frame_comp += nframes;
+    while (frame_comp > ANIMATED_TEXTURE)
+    {
+        ptr = aranges;
+        for (i = (int)*(ptr++); i > 0; i--, ptr++)
+        {
+            j = (int)*(ptr++);
+            temp = phdtextinfo[*(ptr)];
+            for (; j > 0; j--, ptr++)
+                phdtextinfo[*(ptr)] = phdtextinfo[*(ptr + 1)];
+            phdtextinfo[*(ptr)] = temp;
+        }
+        frame_comp -= ANIMATED_TEXTURE;
     }
 }

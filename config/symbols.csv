@@ -10,7 +10,7 @@ address,size,name,symbol
 0x0001063c,41,S_CalculateStaticLight,S_CalculateStaticLight_
 0x00010668,465,S_DrawHealthBar,S_DrawHealthBar_
 0x0001083c,450,S_DrawAirBar,S_DrawAirBar_
-0x00010a00,161,Func10a00,
+0x00010a00,161,AnimateTextures,AnimateTextures_
 0x00010aa4,74,Func10aa4,
 0x00010af0,16,Func10af0,
 0x00010b00,37,S_AnimateTextures,S_AnimateTextures_
@@ -1740,8 +1740,10 @@ address,size,name,symbol
 0x000c1988,4,CurrentLevel,_CurrentLevel
 0x000c2090,24,game_setup,_game_setup
 0x000cac70,768,game_palette,_game_palette
+0x000cb274,4,aranges,_aranges
 0x000cc088,4,room,_room
 0x000d4744,48000,vbuf,_vbuf
+0x000e02c4,40960,phdtextinfo,_phdtextinfo
 0x0012f3c0,4,phd_bottom,_phd_bottom
 0x0012f3c4,4,phd_left,_phd_left
 0x0012f3d0,4,phd_persp,_phd_persp

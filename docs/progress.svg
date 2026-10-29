@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">1.43% (11)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">98.57% (759)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">1.56% (12)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">98.44% (758)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="10.67" height="6" x="0" y="0" class="named"/>
-<rect width="736.33" height="6" x="10.67" y="0" class="todo"/>
+<rect width="11.64" height="6" x="0" y="0" class="named"/>
+<rect width="735.36" height="6" x="11.64" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -78,7 +78,7 @@
 <rect width="12" height="12" x="120" y="0" class="named"><title>0x0001063c S_CalculateStaticLight (41 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="0" class="named"><title>0x00010668 S_DrawHealthBar (465 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="0" class="named"><title>0x0001083c S_DrawAirBar (450 bytes)</title></rect>
-<rect width="12" height="12" x="165" y="0" class="todo"><title>0x00010a00 Func10a00 (161 bytes)</title></rect>
+<rect width="12" height="12" x="165" y="0" class="named"><title>0x00010a00 AnimateTextures (161 bytes)</title></rect>
 <rect width="12" height="12" x="180" y="0" class="todo"><title>0x00010aa4 Func10aa4 (74 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="0" class="todo"><title>0x00010af0 Func10af0 (16 bytes)</title></rect>
 <rect width="12" height="12" x="210" y="0" class="todo"><title>0x00010b00 S_AnimateTextures (37 bytes)</title></rect>
@@ -841,10 +841,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">1.26%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">98.74%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">1.34%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">98.66%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="9.39" height="6" x="0" y="0" class="named"/>
-<rect width="737.61" height="6" x="9.39" y="0" class="todo"/>
+<rect width="9.99" height="6" x="0" y="0" class="named"/>
+<rect width="737.01" height="6" x="9.99" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="54.96" height="67.43" x="0" y="0" class="todo"><title>0x0001bc98 Func1bc98 (4489 bytes)</title></rect>
@@ -1162,7 +1162,7 @@
 <rect width="9.32" height="9.03" x="593.23" y="72.74" class="todo"><title>0x000183c0 Func183c0 (163 bytes)</title></rect>
 <rect width="9.32" height="9.03" x="605.56" y="72.74" class="todo"><title>0x0003dbc0 Func3dbc0 (163 bytes)</title></rect>
 <rect width="9.32" height="9.03" x="617.88" y="72.74" class="todo"><title>0x0003dc64 phd_RotY (163 bytes)</title></rect>
-<rect width="9.17" height="9.03" x="630.20" y="72.74" class="todo"><title>0x00010a00 Func10a00 (161 bytes)</title></rect>
+<rect width="9.17" height="9.03" x="630.20" y="72.74" class="named"><title>0x00010a00 AnimateTextures (161 bytes)</title></rect>
 <rect width="9.09" height="9.03" x="642.37" y="72.74" class="todo"><title>0x00016020 Func16020 (160 bytes)</title></rect>
 <rect width="9.09" height="9.03" x="654.46" y="72.74" class="todo"><title>0x00024c60 Func24c60 (160 bytes)</title></rect>
 <rect width="9.09" height="9.03" x="666.55" y="72.74" class="todo"><title>0x00026d28 Func26d28 (160 bytes)</title></rect>

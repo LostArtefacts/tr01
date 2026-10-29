@@ -3,6 +3,8 @@
 
 #include "types.h"
 
+#define WIBBLE_SIZE 32
+
 enum msoff
 {
     M00, M01, M02, M03,
@@ -23,6 +25,16 @@ typedef struct
     uint16 u, v;
 } PHD_VBUF;
 
+typedef struct
+{
+    uint16 drawtype;
+    uint16 tpage;
+    uint16 u1, v1;
+    uint16 u2, v2;
+    uint16 u3, v3;
+    uint16 u4, v4;
+} PHDTEXTURESTRUCT;
+
 #define phd_PopMatrix() phd_mxptr -= 12
 
 extern sint32 ls_adder;
@@ -41,7 +53,12 @@ extern sint32 phd_zfar;
 extern sint32 phd_persp;
 extern sint32 *phd_mxptr;
 
+extern sint32 wibble_offset;
+extern sint32 water_effect;
+extern sint32 shade_effect;
+
 extern PHD_VBUF vbuf[];
+extern PHDTEXTURESTRUCT phdtextinfo[];
 
 void phd_GetVectorAngles(sint32 x, sint32 y, sint32 z, PHD_ANGLE *dest);
 void phd_PushMatrix(void);
