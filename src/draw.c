@@ -423,3 +423,10 @@ void phd_PopMatrix_I(void)
     phd_PopMatrix();
     IMptr -= 12;
 }
+
+void phd_PushMatrix_I(void)
+{
+    phd_PushMatrix();
+    memcpy(IMptr + 12, IMptr, 12 * 4);
+    IMptr += 12;
+}
