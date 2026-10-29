@@ -82,13 +82,13 @@ address,size,name,symbol
 0x000172b8,154,GetChange,GetChange_
 0x00017354,101,TranslateItem,TranslateItem_
 0x000173bc,434,GetFloor,GetFloor_
-0x00017570,248,Func17570,
+0x00017570,248,GetWaterHeight,GetWaterHeight_
 0x0001767c,653,GetHeight,GetHeight_
 0x0001790c,230,Func1790c,
 0x00017a40,1568,Func17a40,
 0x00018060,115,Func18060,
 0x000180e8,641,GetCeiling,GetCeiling_
-0x0001836c,82,Func1836c,
+0x0001836c,82,GetDoor,GetDoor_
 0x000183c0,163,LOS,LOS_
 0x00018464,747,Func18464,
 0x00018750,741,Func18750,
