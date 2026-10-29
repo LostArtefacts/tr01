@@ -42,11 +42,11 @@ address,size,name,symbol
 0x00013978,295,ShiftCamera,ShiftCamera_
 0x00013aa0,79,BadPosition,BadPosition_
 0x00013af0,1123,SmartShift,SmartShift_
-0x00013f54,267,Func13f54,
-0x00014060,402,Func14060,
-0x000141f4,317,Func141f4,
-0x00014334,510,Func14334,
-0x00014534,146,Func14534,
+0x00013f54,267,ChaseCamera,ChaseCamera_
+0x00014060,402,ShiftClamp,ShiftClamp_
+0x000141f4,317,CombatCamera,CombatCamera_
+0x00014334,510,LookCamera,LookCamera_
+0x00014534,146,FixedCamera,FixedCamera_
 0x000145c8,1276,CalculateCamera,CalculateCamera_
 0x00014ae0,279,Func14ae0,
 0x00014bf8,128,Func14bf8,

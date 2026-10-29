@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">4.93% (38)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">95.07% (733)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">5.06% (39)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">94.94% (732)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="36.82" height="6" x="0" y="0" class="named"/>
-<rect width="710.18" height="6" x="36.82" y="0" class="todo"/>
+<rect width="37.79" height="6" x="0" y="0" class="named"/>
+<rect width="709.21" height="6" x="37.79" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -110,11 +110,11 @@
 <rect width="12" height="12" x="600" y="0" class="named"><title>0x00013978 ShiftCamera (295 bytes)</title></rect>
 <rect width="12" height="12" x="615" y="0" class="named"><title>0x00013aa0 BadPosition (79 bytes)</title></rect>
 <rect width="12" height="12" x="630" y="0" class="named"><title>0x00013af0 SmartShift (1123 bytes)</title></rect>
-<rect width="12" height="12" x="645" y="0" class="todo"><title>0x00013f54 Func13f54 (267 bytes)</title></rect>
-<rect width="12" height="12" x="660" y="0" class="todo"><title>0x00014060 Func14060 (402 bytes)</title></rect>
-<rect width="12" height="12" x="675" y="0" class="todo"><title>0x000141f4 Func141f4 (317 bytes)</title></rect>
-<rect width="12" height="12" x="690" y="0" class="todo"><title>0x00014334 Func14334 (510 bytes)</title></rect>
-<rect width="12" height="12" x="705" y="0" class="todo"><title>0x00014534 Func14534 (146 bytes)</title></rect>
+<rect width="12" height="12" x="645" y="0" class="named"><title>0x00013f54 ChaseCamera (267 bytes)</title></rect>
+<rect width="12" height="12" x="660" y="0" class="todo"><title>0x00014060 ShiftClamp (402 bytes)</title></rect>
+<rect width="12" height="12" x="675" y="0" class="todo"><title>0x000141f4 CombatCamera (317 bytes)</title></rect>
+<rect width="12" height="12" x="690" y="0" class="todo"><title>0x00014334 LookCamera (510 bytes)</title></rect>
+<rect width="12" height="12" x="705" y="0" class="todo"><title>0x00014534 FixedCamera (146 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="0" class="todo"><title>0x000145c8 CalculateCamera (1276 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="0" class="todo"><title>0x00014ae0 Func14ae0 (279 bytes)</title></rect>
 <rect width="12" height="12" x="0" y="15" class="todo"><title>0x00014bf8 Func14bf8 (128 bytes)</title></rect>
@@ -842,10 +842,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">6.37%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">93.63%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">6.51%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">93.49%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="47.62" height="6" x="0" y="0" class="named"/>
-<rect width="699.38" height="6" x="47.62" y="0" class="todo"/>
+<rect width="48.61" height="6" x="0" y="0" class="named"/>
+<rect width="698.39" height="6" x="48.61" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="54.65" height="67.43" x="0" y="0" class="todo"><title>0x0001bc98 Func1bc98 (4489 bytes)</title></rect>
@@ -945,7 +945,7 @@
 <rect width="19.13" height="18.42" x="370.94" y="221.58" class="todo"><title>0x0002b910 Func2b910 (524 bytes)</title></rect>
 <rect width="17.37" height="20.04" x="393.06" y="0" class="todo"><title>0x00027b44 Func27b44 (519 bytes)</title></rect>
 <rect width="17.37" height="19.82" x="393.06" y="23.04" class="todo"><title>0x00029bc0 Func29bc0 (514 bytes)</title></rect>
-<rect width="17.37" height="19.64" x="393.06" y="45.86" class="todo"><title>0x00014334 Func14334 (510 bytes)</title></rect>
+<rect width="17.37" height="19.64" x="393.06" y="45.86" class="todo"><title>0x00014334 LookCamera (510 bytes)</title></rect>
 <rect width="17.37" height="19.55" x="393.06" y="68.50" class="todo"><title>0x00028afc Func28afc (508 bytes)</title></rect>
 <rect width="17.37" height="19.42" x="393.06" y="91.05" class="todo"><title>0x0003df90 Func3df90 (505 bytes)</title></rect>
 <rect width="17.37" height="19.15" x="393.06" y="113.47" class="todo"><title>0x00038460 Func38460 (499 bytes)</title></rect>
@@ -987,7 +987,7 @@
 <rect width="16.69" height="15.61" x="453.88" y="113.99" class="todo"><title>0x00027d4c Func27d4c (405 bytes)</title></rect>
 <rect width="16.69" height="15.61" x="453.88" y="132.60" class="todo"><title>0x0002a8c0 Func2a8c0 (405 bytes)</title></rect>
 <rect width="16.69" height="15.56" x="453.88" y="151.20" class="todo"><title>0x000364a4 Func364a4 (404 bytes)</title></rect>
-<rect width="16.69" height="15.47" x="453.88" y="169.76" class="todo"><title>0x00014060 Func14060 (402 bytes)</title></rect>
+<rect width="16.69" height="15.47" x="453.88" y="169.76" class="todo"><title>0x00014060 ShiftClamp (402 bytes)</title></rect>
 <rect width="16.69" height="15.42" x="453.88" y="188.23" class="named"><title>0x000104a8 S_CalculateLight (401 bytes)</title></rect>
 <rect width="16.69" height="15.19" x="453.88" y="206.66" class="todo"><title>0x0003afd0 Func3afd0 (396 bytes)</title></rect>
 <rect width="16.69" height="15.15" x="453.88" y="224.85" class="todo"><title>0x00030184 Func30184 (395 bytes)</title></rect>
@@ -1022,7 +1022,7 @@
 <rect width="14.55" height="13.55" x="527.48" y="0" class="todo"><title>0x0002e940 Func2e940 (321 bytes)</title></rect>
 <rect width="14.49" height="13.55" x="545.03" y="0" class="todo"><title>0x0003a2ac Func3a2ac (320 bytes)</title></rect>
 <rect width="14.44" height="13.55" x="562.52" y="0" class="todo"><title>0x00018ce8 Func18ce8 (319 bytes)</title></rect>
-<rect width="14.33" height="13.55" x="579.96" y="0" class="todo"><title>0x000141f4 Func141f4 (317 bytes)</title></rect>
+<rect width="14.33" height="13.55" x="579.96" y="0" class="todo"><title>0x000141f4 CombatCamera (317 bytes)</title></rect>
 <rect width="14.27" height="13.55" x="597.28" y="0" class="todo"><title>0x00035438 Func35438 (316 bytes)</title></rect>
 <rect width="14.11" height="13.55" x="614.56" y="0" class="named"><title>0x00011060 BatControl (313 bytes)</title></rect>
 <rect width="14.05" height="13.55" x="631.66" y="0" class="todo"><title>0x0001dac0 Func1dac0 (312 bytes)</title></rect>
@@ -1056,7 +1056,7 @@
 <rect width="12.96" height="12.30" x="639.67" y="16.55" class="todo"><title>0x0001ab1c Func1ab1c (270 bytes)</title></rect>
 <rect width="12.96" height="12.30" x="655.62" y="16.55" class="todo"><title>0x000298d4 Func298d4 (270 bytes)</title></rect>
 <rect width="12.90" height="12.30" x="671.58" y="16.55" class="todo"><title>0x00020790 Func20790 (269 bytes)</title></rect>
-<rect width="12.78" height="12.30" x="687.48" y="16.55" class="todo"><title>0x00013f54 Func13f54 (267 bytes)</title></rect>
+<rect width="12.78" height="12.30" x="687.48" y="16.55" class="named"><title>0x00013f54 ChaseCamera (267 bytes)</title></rect>
 <rect width="12.66" height="12.30" x="703.25" y="16.55" class="todo"><title>0x0001ed10 Func1ed10 (265 bytes)</title></rect>
 <rect width="12.66" height="12.30" x="718.92" y="16.55" class="todo"><title>0x000251ec Func251ec (265 bytes)</title></rect>
 <rect width="12.42" height="12.30" x="734.58" y="16.55" class="todo"><title>0x00032f8c Func32f8c (261 bytes)</title></rect>
@@ -1186,7 +1186,7 @@
 <rect width="9" height="8.15" x="580.90" y="198.61" class="todo"><title>0x00045f6c Func45f6c (148 bytes)</title></rect>
 <rect width="9" height="8.15" x="580.90" y="209.76" class="todo"><title>0x00046847 Func46847 (148 bytes)</title></rect>
 <rect width="9" height="8.08" x="580.90" y="220.92" class="todo"><title>0x000462e4 Func462e4 (147 bytes)</title></rect>
-<rect width="9" height="8" x="580.90" y="232" class="todo"><title>0x00014534 Func14534 (146 bytes)</title></rect>
+<rect width="9" height="8" x="580.90" y="232" class="todo"><title>0x00014534 FixedCamera (146 bytes)</title></rect>
 <rect width="8.49" height="8.49" x="592.90" y="84.73" class="todo"><title>0x00027304 Func27304 (146 bytes)</title></rect>
 <rect width="8.41" height="8.49" x="604.39" y="84.73" class="todo"><title>0x0001a20c Func1a20c (145 bytes)</title></rect>
 <rect width="8.41" height="8.49" x="615.81" y="84.73" class="todo"><title>0x0001d4e0 Func1d4e0 (145 bytes)</title></rect>
