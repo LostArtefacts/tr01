@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">66.58% (528)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">33.42% (265)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">66.71% (529)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">33.29% (264)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="497.37" height="6" x="0" y="0" class="named"/>
-<rect width="249.63" height="6" x="497.37" y="0" class="todo"/>
+<rect width="498.31" height="6" x="0" y="0" class="named"/>
+<rect width="248.69" height="6" x="498.31" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -596,7 +596,7 @@
 <rect width="12" height="12" x="390" y="150" class="named"><title>0x00030114 BoatControl (82 bytes)</title></rect>
 <rect width="12" height="12" x="405" y="150" class="named"><title>0x00030168 ScionControl (28 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="150" class="named"><title>0x00030184 Scion3Control (395 bytes)</title></rect>
-<rect width="12" height="12" x="435" y="150" class="todo"><title>0x00030310 Func30310 (105 bytes)</title></rect>
+<rect width="12" height="12" x="435" y="150" class="named"><title>0x00030310 EarthQuake (105 bytes)</title></rect>
 <rect width="12" height="12" x="450" y="150" class="todo"><title>0x00030380 do_inventory_options (373 bytes)</title></rect>
 <rect width="12" height="12" x="465" y="150" class="todo"><title>0x000304f8 Func304f8 (1412 bytes)</title></rect>
 <rect width="12" height="12" x="480" y="150" class="todo"><title>0x00030a7c Func30a7c (256 bytes)</title></rect>
@@ -864,10 +864,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">61.54%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">38.46%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">61.59%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">38.41%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="459.73" height="6" x="0" y="0" class="named"/>
-<rect width="287.27" height="6" x="459.73" y="0" class="todo"/>
+<rect width="460.11" height="6" x="0" y="0" class="named"/>
+<rect width="286.89" height="6" x="460.11" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.01" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1300,7 +1300,7 @@
 <rect width="6.55" height="6.75" x="712.06" y="116.05" class="named"><title>0x000278d0 LaraDeflectEdge (106 bytes)</title></rect>
 <rect width="6.46" height="6.75" x="721.61" y="116.05" class="named"><title>0x00020ef4 CalculateWibbleTable (105 bytes)</title></rect>
 <rect width="6.46" height="6.75" x="731.08" y="116.05" class="named"><title>0x000227cc AnimateInventoryItem (105 bytes)</title></rect>
-<rect width="6.46" height="6.75" x="740.54" y="116.05" class="todo"><title>0x00030310 Func30310 (105 bytes)</title></rect>
+<rect width="6.46" height="6.75" x="740.54" y="116.05" class="named"><title>0x00030310 EarthQuake (105 bytes)</title></rect>
 <rect width="6.06" height="7.08" x="623.92" y="125.80" class="named"><title>0x0001e450 LoadTexturePages (104 bytes)</title></rect>
 <rect width="6.06" height="6.98" x="623.92" y="135.88" class="named"><title>0x00015fb8 UpdateLaraRoom (103 bytes)</title></rect>
 <rect width="6.06" height="6.89" x="623.92" y="145.87" class="named"><title>0x0002f4b8 DrawUnclippedItem (102 bytes)</title></rect>

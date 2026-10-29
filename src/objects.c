@@ -338,3 +338,24 @@ void Scion3Control(sint16 item_number)
         AnimateItem(item);
     }
 }
+
+void EarthQuake(sint16 item_number)
+{
+    int random;
+
+    if (TriggerActive(&items[item_number]))
+    {
+        random = GetRandomDraw();
+
+        if (random < 0x100)
+        {
+            camera.bounce = -150;
+            SoundEffect(147, NULL, NULL);
+        }
+        else if (GetRandomControl() < 0x400)
+        {
+            camera.bounce = 50;
+            SoundEffect(70, NULL, NULL);
+        }
+    }
+}
