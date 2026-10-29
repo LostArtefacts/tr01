@@ -440,6 +440,58 @@ extern void mn_update_sound_effects(void)
     }
 }
 
+MN_SFX_PLAY_INFO *mn_get_sound_params(MN_SFX_PLAY_INFO *sndslot)
+{
+    PHD_3DPOS *pos;
+    SAMPLE_INFO *s;
+    sint32 x, y, z;
+    uint32 distance;
+    sint32 volume;
+    sint16 angle;
+
+    s = sample_infos + sample_lut[sndslot->fxnum];
+
+    pos = sndslot->pos;
+
+    x = (pos->x_pos - camera.target.x);
+    y = (pos->y_pos - camera.target.y);
+    z = (pos->z_pos - camera.target.z);
+
+    if (x < -SOUND_RADIUS || x > SOUND_RADIUS || y < -SOUND_RADIUS || y > SOUND_RADIUS || z < -SOUND_RADIUS || z > SOUND_RADIUS)
+    {
+        sndslot->volume = 0;
+        return sndslot;
+    }
+
+    distance = (uint32)(x * x + y * y + z * z);
+
+    volume = (sint32)s->volume - (sint32)((uint32)phd_sqrt(distance) * SOUND_RANGE_MULT_CONSTANT);
+
+    if (volume < 0)
+    {
+        sndslot->volume = 0;
+        return sndslot;
+    }
+
+    if (volume > 0x7fff)
+        volume = 0x7fff;
+
+    sndslot->volume = (sint16)volume;
+
+    if (distance == 0 || (s->flags & NO_PAN))
+    {
+        sndslot->pan = 0;
+        return sndslot;
+    }
+
+    angle = (sint16)phd_atan(pos->z_pos - lara_item->pos.z_pos, pos->x_pos - lara_item->pos.x_pos);
+    angle -= (lara_item->pos.y_rot + lara.torso_y_rot + lara.head_y_rot);
+
+    sndslot->pan = angle;
+
+    return sndslot;
+}
+
 void mn_clear_fx_slot(MN_SFX_PLAY_INFO *slot)
 {
     slot->handle = -1;
