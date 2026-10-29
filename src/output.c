@@ -569,3 +569,56 @@ void S_DisplayPicture(char *filename)
 
     decomp_pcx(&pic, pcx);
 }
+
+int decomp_pcx(PIC *pic, uint8 *file_buf)
+{
+    PCX_HEADER *pcx = (PCX_HEADER *)file_buf;
+    int i, sz;
+    uint8 *src = file_buf + 128, *dest, c;
+
+    if (pcx->zsoft_flag != 10 || pcx->version < 5 || pcx->bits != 8 || pcx->encoding != 1 || pcx->planes != 1)
+    {
+        return 0;
+    }
+
+    pic->w = pcx->xmax + 1 - pcx->xmin;
+    pic->h = pcx->ymax + 1 - pcx->ymin;
+
+    if (pic->w == 0 || pic->h == 0)
+    {
+        return 0;
+    }
+
+    dest = (uint8 *)game_setup.scrn_ptr;
+    sz = pic->w * pic->h;
+
+    while (sz > 1)
+    {
+        if ((*src & 0xc0) == 0xc0)
+        {
+            i = *src++;
+            i &= 0x3f;
+            c = *src++;
+
+            while (i--)
+            {
+                *dest++ = c;
+                sz--;
+            }
+        }
+        else
+        {
+            *dest++ = *src++;
+            sz--;
+        }
+    }
+
+    src = file_buf + file_len - 768;
+
+    for (i = 0; i < 256 * 3; i++)
+    {
+        game_palette[i] = (*src++) / 4;
+    }
+
+    return 1;
+}

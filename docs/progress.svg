@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">2.21% (17)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">97.79% (753)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">2.34% (18)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">97.66% (752)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="16.49" height="6" x="0" y="0" class="named"/>
-<rect width="730.51" height="6" x="16.49" y="0" class="todo"/>
+<rect width="17.46" height="6" x="0" y="0" class="named"/>
+<rect width="729.54" height="6" x="17.46" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -84,7 +84,7 @@
 <rect width="12" height="12" x="210" y="0" class="named"><title>0x00010b00 S_AnimateTextures (37 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="0" class="named"><title>0x00010b28 S_DrawLighteningSegment (936 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="0" class="named"><title>0x00010ed0 S_DisplayPicture (138 bytes)</title></rect>
-<rect width="12" height="12" x="255" y="0" class="todo"><title>0x00010f5c decomp_pcx (246 bytes)</title></rect>
+<rect width="12" height="12" x="255" y="0" class="named"><title>0x00010f5c decomp_pcx (246 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="0" class="todo"><title>0x00011060 Func11060 (313 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="0" class="todo"><title>0x00011630 Func11630 (67 bytes)</title></rect>
 <rect width="12" height="12" x="300" y="0" class="todo"><title>0x00011674 Func11674 (634 bytes)</title></rect>
@@ -841,10 +841,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">1.94%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">98.06%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">2.06%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">97.94%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="14.47" height="6" x="0" y="0" class="named"/>
-<rect width="732.53" height="6" x="14.47" y="0" class="todo"/>
+<rect width="15.38" height="6" x="0" y="0" class="named"/>
+<rect width="731.62" height="6" x="15.38" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="54.96" height="67.43" x="0" y="0" class="todo"><title>0x0001bc98 Func1bc98 (4489 bytes)</title></rect>
@@ -1069,7 +1069,7 @@
 <rect width="12.08" height="11.96" x="525.87" y="139.63" class="todo"><title>0x00017570 Func17570 (248 bytes)</title></rect>
 <rect width="12.08" height="11.90" x="525.87" y="154.58" class="todo"><title>0x0002cf08 Func2cf08 (247 bytes)</title></rect>
 <rect width="12.08" height="11.90" x="525.87" y="169.48" class="todo"><title>0x0002f288 Func2f288 (247 bytes)</title></rect>
-<rect width="12.08" height="11.84" x="525.87" y="184.38" class="todo"><title>0x00010f5c decomp_pcx (246 bytes)</title></rect>
+<rect width="12.08" height="11.84" x="525.87" y="184.38" class="named"><title>0x00010f5c decomp_pcx (246 bytes)</title></rect>
 <rect width="12.08" height="11.78" x="525.87" y="199.21" class="todo"><title>0x0003411c Func3411c (245 bytes)</title></rect>
 <rect width="12.08" height="11.53" x="525.87" y="213.99" class="todo"><title>0x0001f6d0 Func1f6d0 (241 bytes)</title></rect>
 <rect width="12.08" height="11.47" x="525.87" y="228.53" class="todo"><title>0x00026a28 Func26a28 (240 bytes)</title></rect>
