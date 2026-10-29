@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">11.54% (89)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">88.46% (682)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">11.67% (90)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">88.33% (681)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="86.23" height="6" x="0" y="0" class="named"/>
-<rect width="660.77" height="6" x="86.23" y="0" class="todo"/>
+<rect width="87.20" height="6" x="0" y="0" class="named"/>
+<rect width="659.80" height="6" x="87.20" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -103,7 +103,7 @@
 <rect width="12" height="12" x="495" y="0" class="named"><title>0x000133c0 CreatureTurn (185 bytes)</title></rect>
 <rect width="12" height="12" x="510" y="0" class="named"><title>0x0001347c CreatureTilt (44 bytes)</title></rect>
 <rect width="12" height="12" x="525" y="0" class="named"><title>0x000134a8 CreatureHead (86 bytes)</title></rect>
-<rect width="12" height="12" x="540" y="0" class="todo"><title>0x00013500 CreatureEffect (82 bytes)</title></rect>
+<rect width="12" height="12" x="540" y="0" class="named"><title>0x00013500 CreatureEffect (82 bytes)</title></rect>
 <rect width="12" height="12" x="555" y="0" class="named"><title>0x00013560 InitialiseCamera (168 bytes)</title></rect>
 <rect width="12" height="12" x="570" y="0" class="named"><title>0x00013608 MoveCamera (715 bytes)</title></rect>
 <rect width="12" height="12" x="585" y="0" class="named"><title>0x000138d4 ClipCamera (164 bytes)</title></rect>
@@ -656,7 +656,7 @@
 <rect width="12" height="12" x="540" y="165" class="todo"><title>0x00038f14 S_CDVolume (6 bytes)</title></rect>
 <rect width="12" height="12" x="555" y="165" class="todo"><title>0x00038f20 TestCollision (383 bytes)</title></rect>
 <rect width="12" height="12" x="570" y="165" class="todo"><title>0x000390a0 Func390a0 (681 bytes)</title></rect>
-<rect width="12" height="12" x="585" y="165" class="todo"><title>0x0003934c Func3934c (445 bytes)</title></rect>
+<rect width="12" height="12" x="585" y="165" class="todo"><title>0x0003934c GetJointAbsPosition (445 bytes)</title></rect>
 <rect width="12" height="12" x="600" y="165" class="todo"><title>0x0003950c Func3950c (81 bytes)</title></rect>
 <rect width="12" height="12" x="615" y="165" class="todo"><title>0x00039560 Func39560 (34 bytes)</title></rect>
 <rect width="12" height="12" x="630" y="165" class="todo"><title>0x00039584 Func39584 (281 bytes)</title></rect>
@@ -842,10 +842,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">15.13%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">84.87%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">15.17%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">84.83%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="113" height="6" x="0" y="0" class="named"/>
-<rect width="634" height="6" x="113" y="0" class="todo"/>
+<rect width="113.30" height="6" x="0" y="0" class="named"/>
+<rect width="633.70" height="6" x="113.30" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="54.65" height="67.43" x="0" y="0" class="todo"><title>0x0001bc98 Func1bc98 (4489 bytes)</title></rect>
@@ -972,7 +972,7 @@
 <rect width="16.77" height="17.54" x="434.11" y="61.91" class="todo"><title>0x0002aa58 Func2aa58 (449 bytes)</title></rect>
 <rect width="16.77" height="17.50" x="434.11" y="82.45" class="todo"><title>0x000430fc Func430fc (448 bytes)</title></rect>
 <rect width="16.77" height="17.41" x="434.11" y="102.95" class="todo"><title>0x00024870 Func24870 (446 bytes)</title></rect>
-<rect width="16.77" height="17.36" x="434.11" y="123.35" class="todo"><title>0x0003934c Func3934c (445 bytes)</title></rect>
+<rect width="16.77" height="17.36" x="434.11" y="123.35" class="todo"><title>0x0003934c GetJointAbsPosition (445 bytes)</title></rect>
 <rect width="16.77" height="17.18" x="434.11" y="143.71" class="todo"><title>0x0001ee1c Func1ee1c (441 bytes)</title></rect>
 <rect width="16.77" height="16.86" x="434.11" y="163.89" class="named"><title>0x000173bc GetFloor (434 bytes)</title></rect>
 <rect width="16.77" height="16.81" x="434.11" y="183.75" class="todo"><title>0x0003c740 Func3c740 (433 bytes)</title></rect>
@@ -1327,7 +1327,7 @@
 <rect width="5.73" height="5.70" x="706.87" y="136.26" class="named"><title>0x00016450 TrapCollision (84 bytes)</title></rect>
 <rect width="5.73" height="5.70" x="715.60" y="136.26" class="todo"><title>0x00020a24 Func20a24 (84 bytes)</title></rect>
 <rect width="5.63" height="5.70" x="724.33" y="136.26" class="todo"><title>0x00024700 Func24700 (83 bytes)</title></rect>
-<rect width="5.52" height="5.70" x="732.95" y="136.26" class="todo"><title>0x00013500 CreatureEffect (82 bytes)</title></rect>
+<rect width="5.52" height="5.70" x="732.95" y="136.26" class="named"><title>0x00013500 CreatureEffect (82 bytes)</title></rect>
 <rect width="5.52" height="5.70" x="741.48" y="136.26" class="named"><title>0x00016388 ObjectCollision (82 bytes)</title></rect>
 <rect width="5.14" height="6.12" x="643.36" y="144.96" class="named"><title>0x0001836c GetDoor (82 bytes)</title></rect>
 <rect width="5.14" height="6.12" x="643.36" y="154.07" class="todo"><title>0x0001fb10 Func1fb10 (82 bytes)</title></rect>

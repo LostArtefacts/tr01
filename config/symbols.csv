@@ -588,7 +588,7 @@ address,size,name,symbol
 0x00038f14,6,S_CDVolume,S_CDVolume_
 0x00038f20,383,TestCollision,TestCollision_
 0x000390a0,681,Func390a0,
-0x0003934c,445,Func3934c,
+0x0003934c,445,GetJointAbsPosition,GetJointAbsPosition_
 0x0003950c,81,Func3950c,
 0x00039560,34,Func39560,
 0x00039584,281,Func39584,
