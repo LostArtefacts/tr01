@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">56.46% (446)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">43.54% (344)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">56.58% (447)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">43.42% (343)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="421.72" height="6" x="0" y="0" class="named"/>
-<rect width="325.28" height="6" x="421.72" y="0" class="todo"/>
+<rect width="422.67" height="6" x="0" y="0" class="named"/>
+<rect width="324.33" height="6" x="422.67" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -514,7 +514,7 @@
 <rect width="12" height="12" x="660" y="120" class="named"><title>0x0002a8c0 LaraTargetInfo (405 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="120" class="named"><title>0x0002aa58 LaraGetNewTarget (449 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="120" class="named"><title>0x0002ac1c find_target_point (203 bytes)</title></rect>
-<rect width="12" height="12" x="705" y="120" class="todo"><title>0x0002ace8 AimWeapon (183 bytes)</title></rect>
+<rect width="12" height="12" x="705" y="120" class="named"><title>0x0002ace8 AimWeapon (183 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="120" class="todo"><title>0x0002ada0 FireWeapon (911 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="120" class="todo"><title>0x0002b130 HitTarget (206 bytes)</title></rect>
 <rect width="12" height="12" x="0" y="135" class="todo"><title>0x0002b200 draw_shotgun (164 bytes)</title></rect>
@@ -861,10 +861,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">51.28%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">48.72%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">51.37%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">48.63%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="383.05" height="6" x="0" y="0" class="named"/>
-<rect width="363.95" height="6" x="383.05" y="0" class="todo"/>
+<rect width="383.72" height="6" x="0" y="0" class="named"/>
+<rect width="363.28" height="6" x="383.72" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1156,7 +1156,7 @@
 <rect width="10.13" height="9.59" x="607.36" y="60.01" class="named"><title>0x000133c0 CreatureTurn (185 bytes)</title></rect>
 <rect width="10.13" height="9.59" x="620.49" y="60.01" class="named"><title>0x0001dbf8 Splash (185 bytes)</title></rect>
 <rect width="10.06" height="9.59" x="633.62" y="60.01" class="named"><title>0x00011d2c EscapeBox (184 bytes)</title></rect>
-<rect width="9.99" height="9.59" x="646.67" y="60.01" class="todo"><title>0x0002ace8 AimWeapon (183 bytes)</title></rect>
+<rect width="9.99" height="9.59" x="646.67" y="60.01" class="named"><title>0x0002ace8 AimWeapon (183 bytes)</title></rect>
 <rect width="9.99" height="9.59" x="659.66" y="60.01" class="todo"><title>0x0003d504 Func3d504 (183 bytes)</title></rect>
 <rect width="9.99" height="9.59" x="672.65" y="60.01" class="todo"><title>0x00046c71 Func46c71 (183 bytes)</title></rect>
 <rect width="9.92" height="9.59" x="685.63" y="60.01" class="named"><title>0x00026618 lara_col_turn_r (182 bytes)</title></rect>

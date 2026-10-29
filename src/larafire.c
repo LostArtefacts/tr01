@@ -408,3 +408,39 @@ void find_target_point(ITEM_INFO *item, GAME_VECTOR *target)
     target->z = item->pos.z_pos + ((c * z - s * x) >> W2V_SHIFT);
     target->room_number = item->room_number;
 }
+
+void AimWeapon(WEAPON_INFO *winfo, LARA_ARM *arm)
+{
+    PHD_ANGLE curr, speed;
+    PHD_ANGLE destx, desty;
+
+    speed = winfo->aim_speed;
+
+    if (arm->lock)
+    {
+        desty = lara.target_angles[0];
+        destx = lara.target_angles[1];
+    }
+    else
+        desty = destx = 0;
+
+    curr = arm->y_rot;
+    if (curr >= desty - speed && curr <= desty + speed)
+        curr = desty;
+    else if (curr < desty)
+        curr += speed;
+    else
+        curr -= speed;
+    arm->y_rot = curr;
+
+    curr = arm->x_rot;
+    if (curr >= destx - speed && curr <= destx + speed)
+        curr = destx;
+    else if (curr < destx)
+        curr += speed;
+    else
+        curr -= speed;
+    arm->x_rot = curr;
+
+    arm->z_rot = 0;
+}
