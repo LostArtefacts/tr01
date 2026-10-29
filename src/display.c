@@ -165,3 +165,8 @@ void S_CopyBufferToScreen(void)
             *(dest++) = 0;
     }
 }
+
+void S_NoFade(void)
+{
+    fade_limit = fade_value = 16 << 16;
+}
