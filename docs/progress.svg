@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">23.48% (182)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">76.52% (593)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">23.61% (183)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">76.39% (592)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="175.42" height="6" x="0" y="0" class="named"/>
-<rect width="571.58" height="6" x="175.42" y="0" class="todo"/>
+<rect width="176.39" height="6" x="0" y="0" class="named"/>
+<rect width="570.61" height="6" x="176.39" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -251,7 +251,7 @@
 <rect width="12" height="12" x="465" y="45" class="named"><title>0x0001e450 LoadTexturePages (104 bytes)</title></rect>
 <rect width="12" height="12" x="480" y="45" class="named"><title>0x0001e4b8 LoadRooms (1041 bytes)</title></rect>
 <rect width="12" height="12" x="495" y="45" class="named"><title>0x0001e8cc LoadObjects (1090 bytes)</title></rect>
-<rect width="12" height="12" x="510" y="45" class="todo"><title>0x0001ed10 LoadSprites (265 bytes)</title></rect>
+<rect width="12" height="12" x="510" y="45" class="named"><title>0x0001ed10 LoadSprites (265 bytes)</title></rect>
 <rect width="12" height="12" x="525" y="45" class="todo"><title>0x0001ee1c LoadItems (441 bytes)</title></rect>
 <rect width="12" height="12" x="540" y="45" class="todo"><title>0x0001efd8 LoadDepthQ (107 bytes)</title></rect>
 <rect width="12" height="12" x="555" y="45" class="todo"><title>0x0001f044 LoadPalette (137 bytes)</title></rect>
@@ -846,10 +846,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">27.83%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">72.17%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">27.96%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">72.04%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="207.92" height="6" x="0" y="0" class="named"/>
-<rect width="539.08" height="6" x="207.92" y="0" class="todo"/>
+<rect width="208.89" height="6" x="0" y="0" class="named"/>
+<rect width="538.11" height="6" x="208.89" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1064,7 +1064,7 @@
 <rect width="12.79" height="12.28" x="702.86" y="16.53" class="todo"><title>0x000298d4 Func298d4 (270 bytes)</title></rect>
 <rect width="12.73" height="12.28" x="718.65" y="16.53" class="todo"><title>0x00020790 S_SaveGame (269 bytes)</title></rect>
 <rect width="12.62" height="12.28" x="734.38" y="16.53" class="named"><title>0x00013f54 ChaseCamera (267 bytes)</title></rect>
-<rect width="12.15" height="12.64" x="525.29" y="31.81" class="todo"><title>0x0001ed10 LoadSprites (265 bytes)</title></rect>
+<rect width="12.15" height="12.64" x="525.29" y="31.81" class="named"><title>0x0001ed10 LoadSprites (265 bytes)</title></rect>
 <rect width="12.15" height="12.64" x="525.29" y="47.45" class="todo"><title>0x000251ec Func251ec (265 bytes)</title></rect>
 <rect width="12.15" height="12.40" x="525.29" y="63.08" class="todo"><title>0x00032f8c Func32f8c (261 bytes)</title></rect>
 <rect width="12.15" height="12.28" x="525.29" y="78.48" class="named"><title>0x00018a38 ClipTarget (259 bytes)</title></rect>

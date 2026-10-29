@@ -315,3 +315,33 @@ int LoadObjects(FILE *file)
 
     return 1;
 }
+
+int LoadSprites(FILE *file)
+{
+    int i, j;
+    int number;
+
+    fread(&number, sizeof(sint32), 1, file);
+    fread(phdsprinfo, sizeof(PHDSPRITESTRUCT), number, file);
+
+    fread(&number, sizeof(sint32), 1, file);
+
+    for (i = 0; i < number; i++)
+    {
+        fread(&j, sizeof(sint32), 1, file);
+
+        if (j < NUMBER_OBJECTS)
+        {
+            fread(&objects[j].nmeshes, sizeof(sint16), 1, file);
+            fread(&objects[j].mesh_index, sizeof(sint16), 1, file);
+            objects[j].loaded = 1;
+        }
+        else
+        {
+            j -= NUMBER_OBJECTS;
+            fseek(file, sizeof(sint16), SEEK_CUR);
+            fread(&static_objects[j].mesh_number, sizeof(sint16), 1, file);
+        }
+    }
+    return 1;
+}

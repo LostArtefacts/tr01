@@ -2,6 +2,7 @@
 #define _3DGLODEF_H
 
 #define MAX_TEXTURES 2048
+#define MAX_SPRITES 512
 
 #include "types.h"
 
@@ -40,6 +41,18 @@ typedef struct
     uint16 u3, v3;
     uint16 u4, v4;
 } PHDTEXTURESTRUCT;
+
+typedef struct
+{
+    uint16 tpage;
+    uint16 offset;
+    uint16 width;
+    uint16 height;
+    sint16 x1;
+    sint16 y1;
+    sint16 x2;
+    sint16 y2;
+} PHDSPRITESTRUCT;
 
 typedef struct
 {
@@ -93,6 +106,7 @@ extern uint8 depthq_table[32][256];
 extern VERTEX_INFO v_buffer[];
 extern PHD_VBUF vbuf[];
 extern PHDTEXTURESTRUCT phdtextinfo[];
+extern PHDSPRITESTRUCT phdsprinfo[];
 
 void AlterFOV(PHD_ANGLE fov);
 void phd_LookAt(sint32 xsrc, sint32 ysrc, sint32 zsrc, sint32 xtar, sint32 ytar, sint32 ztar, PHD_ANGLE roll);
