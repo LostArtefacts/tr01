@@ -1562,3 +1562,22 @@ void lara_slide_slope(ITEM_INFO *item, COLL_INFO *coll)
     if ((ABS(coll->tilt_x)) <= 2 && (ABS(coll->tilt_z)) <= 2)
         item->goal_anim_state = AS_STOP;
 }
+
+int LaraHitCeiling(ITEM_INFO *item, COLL_INFO *coll)
+{
+    if (coll->coll_type == COLL_TOP || coll->coll_type == COLL_CLAMP)
+    {
+        item->pos.x_pos = coll->old.x;
+        item->pos.y_pos = coll->old.y;
+        item->pos.z_pos = coll->old.z;
+        item->goal_anim_state = AS_STOP;
+        item->current_anim_state = AS_STOP;
+        item->frame_number = STOP_F;
+        item->anim_number = STOP_A;
+        item->speed = 0;
+        item->fallspeed = 0;
+        item->gravity_status = 0;
+        return 1;
+    }
+    return 0;
+}

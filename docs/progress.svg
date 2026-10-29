@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">49.75% (391)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">50.25% (395)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">49.87% (392)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">50.13% (394)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="371.60" height="6" x="0" y="0" class="named"/>
-<rect width="375.40" height="6" x="371.60" y="0" class="todo"/>
+<rect width="372.55" height="6" x="0" y="0" class="named"/>
+<rect width="374.45" height="6" x="372.55" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -459,7 +459,7 @@
 <rect width="12" height="12" x="585" y="105" class="named"><title>0x0002745c lara_col_jumper (143 bytes)</title></rect>
 <rect width="12" height="12" x="600" y="105" class="named"><title>0x000274ec GetLaraCollisionInfo (48 bytes)</title></rect>
 <rect width="12" height="12" x="615" y="105" class="named"><title>0x0002751c lara_slide_slope (257 bytes)</title></rect>
-<rect width="12" height="12" x="630" y="105" class="todo"><title>0x00027620 LaraHitCeiling (91 bytes)</title></rect>
+<rect width="12" height="12" x="630" y="105" class="named"><title>0x00027620 LaraHitCeiling (91 bytes)</title></rect>
 <rect width="12" height="12" x="645" y="105" class="todo"><title>0x0002769c LaraHangTest (549 bytes)</title></rect>
 <rect width="12" height="12" x="660" y="105" class="todo"><title>0x000278d0 LaraDeflectEdge (106 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="105" class="todo"><title>0x0002793c LaraDeflectEdgeJump (309 bytes)</title></rect>
@@ -857,10 +857,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">44.50%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">55.50%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">44.54%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">55.46%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="332.40" height="6" x="0" y="0" class="named"/>
-<rect width="414.60" height="6" x="332.40" y="0" class="todo"/>
+<rect width="332.73" height="6" x="0" y="0" class="named"/>
+<rect width="414.27" height="6" x="332.73" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1330,7 +1330,7 @@
 <rect width="6.24" height="5.80" x="633.40" y="198.98" class="named"><title>0x00019f0c DecreaseScreenSize (91 bytes)</title></rect>
 <rect width="6.24" height="5.80" x="633.40" y="207.78" class="named"><title>0x00020cd4 AddDisplayPickup (91 bytes)</title></rect>
 <rect width="6.24" height="5.80" x="633.40" y="216.59" class="named"><title>0x00027400 lara_default_col (91 bytes)</title></rect>
-<rect width="6.24" height="5.80" x="633.40" y="225.39" class="todo"><title>0x00027620 LaraHitCeiling (91 bytes)</title></rect>
+<rect width="6.24" height="5.80" x="633.40" y="225.39" class="named"><title>0x00027620 LaraHitCeiling (91 bytes)</title></rect>
 <rect width="6.24" height="5.80" x="633.40" y="234.20" class="todo"><title>0x000293d4 Func293d4 (91 bytes)</title></rect>
 <rect width="5.76" height="6.28" x="642.64" y="135.90" class="todo"><title>0x0003d98c phd_LookAt (91 bytes)</title></rect>
 <rect width="5.76" height="6.18" x="642.64" y="145.18" class="named"><title>0x00019eb0 IncreaseScreenSize (90 bytes)</title></rect>
