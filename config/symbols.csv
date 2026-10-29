@@ -588,7 +588,7 @@ address,size,name,symbol
 0x00036414,24,ResetSG,ResetSG_
 0x0003642c,77,WriteSG,WriteSG_
 0x0003647c,39,ReadSG,ReadSG_
-0x000364a4,404,Func364a4,
+0x000364a4,404,ConfirmSave,ConfirmSave_
 0x00036638,14,Func36638,
 0x0003667c,34,Func3667c,
 0x000366a0,208,InitialiseLevel,InitialiseLevel_
@@ -1855,7 +1855,10 @@ address,size,name,symbol
 0x000c1fe4,8,str_pickups,_str_pickups
 0x000c1fec,6,str_kills,_str_kills
 0x000c1ff2,3,str_of,_str_of
+0x000c201d,4,sav_mess3,_sav_mess3
+0x000c2021,3,sav_mess4,_sav_mess4
 0x000c2042,11,sav_mess7,_sav_mess7
+0x000c204d,11,sav_mess8,_sav_mess8
 0x000c2058,12,str_volume,_str_volume
 0x000c2064,14,str_detail,_str_detail
 0x000c2072,5,str_high,_str_high

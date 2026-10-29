@@ -1,5 +1,10 @@
 #include "game.h"
 
+extern SG_COL req_sel_gour2[];
+extern char sav_mess3[];
+extern char sav_mess4[];
+extern char sav_mess8[];
+
 extern sint16 *mesh_base;
 
 SAVEGAME_INFO savegame;
@@ -271,4 +276,64 @@ void ReadSG(void *pointer, int size)
 
     for (; size > 0; size--)
         *(data++) = *(SGpoint++);
+}
+
+int ConfirmSave(int fade)
+{
+    int nframes;
+    int status = 1;
+    TEXTSTRING *text[3];
+
+    T_InitPrint();
+    if (fade)
+        S_FadeInInventory(1);
+    text[0] = T_Print(0, 0, 0, sav_mess8);
+    T_CentreH(text[0], 1);
+    T_CentreV(text[0], 1);
+
+    text[1] = T_Print(-26, 20, 0, sav_mess3);
+    T_CentreH(text[1], 1);
+    T_CentreV(text[1], 1);
+    T_AddOutline(text[1], 1, C_ORANGE, req_sel_gour2, NULL);
+
+    text[2] = T_Print(30, 20, 0, sav_mess4);
+    T_CentreH(text[2], 1);
+    T_CentreV(text[2], 1);
+
+    while (input & IN_SELECT)
+        S_UpdateInput();
+
+    do
+    {
+        S_UpdateInput();
+        S_InitialisePolyList();
+        S_CopyBufferToScreen();
+        if (input & IN_LEFT && status == 0)
+        {
+            T_AddOutline(text[1], 1, C_ORANGE, req_sel_gour2, NULL);
+            T_RemoveOutline(text[2]);
+            status = 1;
+        }
+        if (input & IN_RIGHT && status == 1)
+        {
+            T_RemoveOutline(text[1]);
+            T_AddOutline(text[2], 1, C_ORANGE, req_sel_gour2, NULL);
+            status = 0;
+        }
+
+        T_DrawText();
+        S_OutputPolyList();
+        nframes = S_DumpScreen();
+    } while (!(input & IN_SELECT));
+
+    input = 0;
+
+    while (input & IN_SELECT)
+        S_UpdateInput();
+
+    T_RemovePrint(text[0]);
+    T_RemovePrint(text[1]);
+    T_RemovePrint(text[2]);
+
+    return status;
 }
