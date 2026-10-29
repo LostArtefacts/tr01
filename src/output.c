@@ -394,3 +394,9 @@ void S_SetupBelowWater(int underwater)
 
     shade_effect = 1;
 }
+
+void S_SetupAboveWater(int underwater)
+{
+    water_effect = underwater;
+    shade_effect = 0;
+}

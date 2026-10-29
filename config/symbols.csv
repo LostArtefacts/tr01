@@ -12,7 +12,7 @@ address,size,name,symbol
 0x0001083c,450,S_DrawAirBar,S_DrawAirBar_
 0x00010a00,161,AnimateTextures,AnimateTextures_
 0x00010aa4,74,S_SetupBelowWater,S_SetupBelowWater_
-0x00010af0,16,Func10af0,
+0x00010af0,16,S_SetupAboveWater,S_SetupAboveWater_
 0x00010b00,37,S_AnimateTextures,S_AnimateTextures_
 0x00010b28,936,Func10b28,
 0x00010ed0,138,Func10ed0,
