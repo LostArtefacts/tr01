@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">7.52% (58)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">92.48% (713)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">7.65% (59)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">92.35% (712)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="56.19" height="6" x="0" y="0" class="named"/>
-<rect width="690.81" height="6" x="56.19" y="0" class="todo"/>
+<rect width="57.16" height="6" x="0" y="0" class="named"/>
+<rect width="689.84" height="6" x="57.16" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -130,7 +130,7 @@
 <rect width="12" height="12" x="150" y="15" class="named"><title>0x000158a8 CollideStaticObjects (1445 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="15" class="named"><title>0x00015e50 GetNearByRooms (215 bytes)</title></rect>
 <rect width="12" height="12" x="180" y="15" class="named"><title>0x00015f28 GetNewRoom (91 bytes)</title></rect>
-<rect width="12" height="12" x="195" y="15" class="todo"><title>0x00015f84 ShiftItem (51 bytes)</title></rect>
+<rect width="12" height="12" x="195" y="15" class="named"><title>0x00015f84 ShiftItem (51 bytes)</title></rect>
 <rect width="12" height="12" x="210" y="15" class="todo"><title>0x00015fb8 UpdateLaraRoom (103 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="15" class="todo"><title>0x00016020 GetTiltType (160 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="15" class="todo"><title>0x000160c0 LaraBaddieCollision (457 bytes)</title></rect>
@@ -842,10 +842,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">10.40%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">89.60%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">10.42%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">89.58%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="77.65" height="6" x="0" y="0" class="named"/>
-<rect width="669.35" height="6" x="77.65" y="0" class="todo"/>
+<rect width="77.84" height="6" x="0" y="0" class="named"/>
+<rect width="669.16" height="6" x="77.84" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="54.65" height="67.43" x="0" y="0" class="todo"><title>0x0001bc98 Func1bc98 (4489 bytes)</title></rect>
@@ -1409,7 +1409,7 @@
 <rect width="3.74" height="4.11" x="736.65" y="160.85" class="todo"><title>0x0003a430 Func3a430 (53 bytes)</title></rect>
 <rect width="3.61" height="4.11" x="743.39" y="160.85" class="todo"><title>0x0001fad8 S_FadeToBlack (52 bytes)</title></rect>
 <rect width="3.64" height="4.08" x="674.35" y="167.96" class="todo"><title>0x0003d5bc Func3d5bc (52 bytes)</title></rect>
-<rect width="3.64" height="3.95" x="674.35" y="175.05" class="todo"><title>0x00015f84 ShiftItem (51 bytes)</title></rect>
+<rect width="3.64" height="3.95" x="674.35" y="175.05" class="named"><title>0x00015f84 ShiftItem (51 bytes)</title></rect>
 <rect width="3.64" height="3.95" x="674.35" y="181.99" class="todo"><title>0x0001a2b4 S_FadeInInventory (51 bytes)</title></rect>
 <rect width="3.64" height="3.95" x="674.35" y="188.94" class="todo"><title>0x0002fe88 Func2fe88 (51 bytes)</title></rect>
 <rect width="3.64" height="3.95" x="674.35" y="195.88" class="todo"><title>0x00031f08 Func31f08 (51 bytes)</title></rect>

@@ -463,3 +463,11 @@ void GetNewRoom(sint32 x, sint32 y, sint32 z, sint16 room_number)
     if (i == number_draw_rooms)
         draw_rooms[number_draw_rooms++] = room_number;
 }
+
+void ShiftItem(ITEM_INFO *item, COLL_INFO *coll)
+{
+    item->pos.x_pos += coll->shift.x;
+    item->pos.y_pos += coll->shift.y;
+    item->pos.z_pos += coll->shift.z;
+    coll->shift.x = coll->shift.y = coll->shift.z = 0;
+}
