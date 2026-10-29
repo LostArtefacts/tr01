@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">57.59% (455)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">42.41% (335)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">57.72% (456)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">42.28% (334)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="430.23" height="6" x="0" y="0" class="named"/>
-<rect width="316.77" height="6" x="430.23" y="0" class="todo"/>
+<rect width="431.18" height="6" x="0" y="0" class="named"/>
+<rect width="315.82" height="6" x="431.18" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -523,7 +523,7 @@
 <rect width="12" height="12" x="45" y="135" class="named"><title>0x0002b464 undraw_shotgun_meshes (55 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="135" class="named"><title>0x0002b49c ready_shotgun (141 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="135" class="named"><title>0x0002b52c RifleHandler (145 bytes)</title></rect>
-<rect width="12" height="12" x="90" y="135" class="todo"><title>0x0002b5c0 AnimateShotgun (532 bytes)</title></rect>
+<rect width="12" height="12" x="90" y="135" class="named"><title>0x0002b5c0 AnimateShotgun (532 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="135" class="todo"><title>0x0002b7d4 FireShotgun (201 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="135" class="todo"><title>0x0002b8a0 draw_pistols (111 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="135" class="todo"><title>0x0002b910 undraw_pistols (524 bytes)</title></rect>
@@ -861,10 +861,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">52.38%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">47.62%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">52.64%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">47.36%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="391.30" height="6" x="0" y="0" class="named"/>
-<rect width="355.70" height="6" x="391.30" y="0" class="todo"/>
+<rect width="393.25" height="6" x="0" y="0" class="named"/>
+<rect width="353.75" height="6" x="393.25" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -961,7 +961,7 @@
 <rect width="19.53" height="18.70" x="368.99" y="157.31" class="todo"><title>0x0002ec7c Func2ec7c (547 bytes)</title></rect>
 <rect width="19.53" height="18.50" x="368.99" y="179.01" class="named"><title>0x000291b4 ControlEvilLara (542 bytes)</title></rect>
 <rect width="19.53" height="18.38" x="368.99" y="200.51" class="todo"><title>0x0003875c CheckCheatMode (539 bytes)</title></rect>
-<rect width="19.53" height="18.11" x="368.99" y="221.89" class="todo"><title>0x0002b5c0 AnimateShotgun (532 bytes)</title></rect>
+<rect width="19.53" height="18.11" x="368.99" y="221.89" class="named"><title>0x0002b5c0 AnimateShotgun (532 bytes)</title></rect>
 <rect width="17.63" height="19.91" x="391.51" y="0" class="todo"><title>0x0002be38 AnimatePistols (529 bytes)</title></rect>
 <rect width="17.63" height="19.74" x="391.51" y="22.91" class="todo"><title>0x00042448 Func42448 (525 bytes)</title></rect>
 <rect width="17.63" height="19.70" x="391.51" y="45.65" class="todo"><title>0x0002b910 undraw_pistols (524 bytes)</title></rect>

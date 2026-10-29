@@ -136,3 +136,82 @@ void RifleHandler(int weapon_type)
 
     AnimateShotgun();
 }
+
+void AnimateShotgun(void)
+{
+    sint16 ani;
+
+    ani = lara.left_arm.frame_number;
+    if (lara.left_arm.lock)
+    {
+        if (ani >= SG_AIM_F && ani < SG_DRAW_F)
+        {
+            ani++;
+            if (ani == SG_DRAW_F)
+                ani = SG_RECOIL_F;
+        }
+        else if (ani == SG_RECOIL_F)
+        {
+            if (input & IN_ACTION)
+            {
+                FireShotgun();
+                ani++;
+            }
+        }
+        else if (ani > SG_RECOIL_F && ani < SG_UNDRAW_F)
+        {
+            ani++;
+            if (ani == SG_UNDRAW_F)
+                ani = SG_RECOIL_F;
+            else if (ani == SG_RECOIL_F + 10)
+                SoundEffect(9, &lara_item->pos, NULL);
+        }
+        else if (ani >= SG_UNAIM_F && ani < SG_END_F)
+        {
+            ani++;
+            if (ani == SG_END_F)
+                ani = SG_AIM_F;
+        }
+    }
+    else
+    {
+        if (ani == SG_AIM_F && input & IN_ACTION)
+            ani++;
+        else if (ani > SG_AIM_F && ani < SG_DRAW_F)
+        {
+            ani++;
+            if (ani == SG_DRAW_F)
+                if (input & IN_ACTION)
+                    ani = SG_RECOIL_F;
+                else
+                    ani = SG_UNAIM_F;
+        }
+        else if (ani == SG_RECOIL_F)
+        {
+            if (input & IN_ACTION)
+            {
+                FireShotgun();
+                ani++;
+            }
+            else
+                ani = SG_UNAIM_F;
+        }
+        else if (ani > SG_RECOIL_F && ani < SG_UNDRAW_F)
+        {
+            ani++;
+            if (ani == SG_RECOIL_F + 12 + 1)
+                ani = SG_AIM_F;
+            else if (ani == SG_UNDRAW_F)
+                ani = SG_UNAIM_F;
+            else if (ani == SG_RECOIL_F + 10)
+                SoundEffect(9, &lara_item->pos, NULL);
+        }
+        else if (ani >= SG_UNAIM_F && ani < SG_END_F)
+        {
+            ani++;
+            if (ani == SG_END_F)
+                ani = SG_AIM_F;
+        }
+    }
+    lara.left_arm.frame_number = lara.right_arm.frame_number = ani;
+}
