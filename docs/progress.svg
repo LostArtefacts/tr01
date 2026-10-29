@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">69.92% (558)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">30.08% (240)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">70.05% (559)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">29.95% (239)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="522.34" height="6" x="0" y="0" class="named"/>
-<rect width="224.66" height="6" x="522.34" y="0" class="todo"/>
+<rect width="523.27" height="6" x="0" y="0" class="named"/>
+<rect width="223.73" height="6" x="523.27" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -625,7 +625,7 @@
 <rect width="12" height="12" x="75" y="165" class="named"><title>0x000330b8 ApeControl (849 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="165" class="named"><title>0x0003340c InitialiseSkateKid (35 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="165" class="named"><title>0x00033444 SkateKidControl (664 bytes)</title></rect>
-<rect width="12" height="12" x="120" y="165" class="todo"><title>0x000336dc Func336dc (114 bytes)</title></rect>
+<rect width="12" height="12" x="120" y="165" class="named"><title>0x000336dc DrawSkateKid (114 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="165" class="todo"><title>0x00033ac4 Func33ac4 (35 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="165" class="todo"><title>0x00033df0 Func33df0 (484 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="165" class="todo"><title>0x00033fd4 Func33fd4 (328 bytes)</title></rect>
@@ -869,10 +869,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">67.37%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">32.63%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">67.42%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">32.58%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="503.23" height="6" x="0" y="0" class="named"/>
-<rect width="243.77" height="6" x="503.23" y="0" class="todo"/>
+<rect width="503.63" height="6" x="0" y="0" class="named"/>
+<rect width="243.37" height="6" x="503.63" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="52.06" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1289,7 +1289,7 @@
 <rect width="6.72" height="7.22" x="711.27" y="105" class="named"><title>0x00018060 TriggerActive (115 bytes)</title></rect>
 <rect width="6.72" height="7.22" x="721" y="105" class="named"><title>0x0002828c LaraFloorFront (115 bytes)</title></rect>
 <rect width="6.64" height="7.22" x="730.72" y="105" class="named"><title>0x00024ac8 RemoveDrawnItem (114 bytes)</title></rect>
-<rect width="6.64" height="7.22" x="740.36" y="105" class="todo"><title>0x000336dc Func336dc (114 bytes)</title></rect>
+<rect width="6.64" height="7.22" x="740.36" y="105" class="named"><title>0x000336dc DrawSkateKid (114 bytes)</title></rect>
 <rect width="6.76" height="7" x="621.56" y="115.21" class="named"><title>0x00016314 CreatureCollision (113 bytes)</title></rect>
 <rect width="6.76" height="7" x="621.56" y="125.21" class="named"><title>0x00029dc4 lara_as_surfswim (113 bytes)</title></rect>
 <rect width="6.76" height="7" x="621.56" y="135.21" class="todo"><title>0x00036770 Func36770 (113 bytes)</title></rect>

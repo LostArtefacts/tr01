@@ -915,3 +915,19 @@ void SkateKidControl(sint16 item_number)
 
     CreatureAnimation(item_number, angle, 0);
 }
+
+void DrawSkateKid(ITEM_INFO *item)
+{
+    sint16 frame, anim;
+
+    DrawAnimatingItem(item);
+    frame = item->frame_number;
+    anim = item->anim_number;
+    item->anim_number = objects[SKATEBOARD].anim_index + (item->anim_number - objects[MERCENARY1].anim_index);
+    item->frame_number = anims[item->anim_number].frame_base + (item->frame_number - anims[item->anim_number].frame_base);
+    item->object_number = SKATEBOARD;
+    DrawAnimatingItem(item);
+    item->frame_number = frame;
+    item->anim_number = anim;
+    item->object_number = MERCENARY1;
+}

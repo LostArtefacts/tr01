@@ -557,7 +557,7 @@ address,size,name,symbol
 0x000330b8,849,ApeControl,ApeControl_
 0x0003340c,35,InitialiseSkateKid,InitialiseSkateKid_
 0x00033444,664,SkateKidControl,SkateKidControl_
-0x000336dc,114,Func336dc,
+0x000336dc,114,DrawSkateKid,DrawSkateKid_
 0x00033ac4,35,Func33ac4,
 0x00033df0,484,Func33df0,
 0x00033fd4,328,Func33fd4,
