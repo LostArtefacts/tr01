@@ -682,3 +682,78 @@ int Inv_GetCount(void)
     }
     return qty;
 }
+
+int Inv_GetItemOption(int itemNum)
+{
+    switch (itemNum)
+    {
+    case GUN_ITEM:
+    case GUN_OPTION:
+        return GUN_OPTION;
+    case SHOTGUN_ITEM:
+    case SHOTGUN_OPTION:
+        return SHOTGUN_OPTION;
+    case MAGNUM_ITEM:
+    case MAGNUM_OPTION:
+        return MAGNUM_OPTION;
+    case UZI_ITEM:
+    case UZI_OPTION:
+        return UZI_OPTION;
+    case SG_AMMO_ITEM:
+    case SG_AMMO_OPTION:
+        return SG_AMMO_OPTION;
+    case MAG_AMMO_ITEM:
+    case MAG_AMMO_OPTION:
+        return MAG_AMMO_OPTION;
+    case UZI_AMMO_ITEM:
+    case UZI_AMMO_OPTION:
+        return UZI_AMMO_OPTION;
+    case EXPLOSIVE_ITEM:
+    case EXPLOSIVE_OPTION:
+        return EXPLOSIVE_OPTION;
+    case MEDI_ITEM:
+    case MEDI_OPTION:
+        return MEDI_OPTION;
+    case BIGMEDI_ITEM:
+    case BIGMEDI_OPTION:
+        return BIGMEDI_OPTION;
+    case LEADBAR_ITEM:
+    case LEADBAR_OPTION:
+        return LEADBAR_OPTION;
+    case PICKUP_ITEM1:
+    case PICKUP_OPTION1:
+        return PICKUP_OPTION1;
+    case PICKUP_ITEM2:
+    case PICKUP_OPTION2:
+        return PICKUP_OPTION2;
+    case SCION_ITEM:
+    case SCION_ITEM2:
+    case SCION_OPTION:
+        return SCION_OPTION;
+    case PUZZLE_ITEM1:
+    case PUZZLE_OPTION1:
+        return PUZZLE_OPTION1;
+    case PUZZLE_ITEM2:
+    case PUZZLE_OPTION2:
+        return PUZZLE_OPTION2;
+    case PUZZLE_ITEM3:
+    case PUZZLE_OPTION3:
+        return PUZZLE_OPTION3;
+    case PUZZLE_ITEM4:
+    case PUZZLE_OPTION4:
+        return PUZZLE_OPTION4;
+    case KEY_ITEM1:
+    case KEY_OPTION1:
+        return KEY_OPTION1;
+    case KEY_ITEM2:
+    case KEY_OPTION2:
+        return KEY_OPTION2;
+    case KEY_ITEM3:
+    case KEY_OPTION3:
+        return KEY_OPTION3;
+    case KEY_ITEM4:
+    case KEY_OPTION4:
+        return KEY_OPTION4;
+    }
+    return -1;
+}
