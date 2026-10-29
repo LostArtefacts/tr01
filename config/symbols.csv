@@ -4,7 +4,7 @@ address,size,name,symbol
 0x0001005c,,S_ClearScreen,S_ClearScreen_
 0x00010064,32,S_InitialiseScreen,S_InitialiseScreen_
 0x00010084,10,S_OutputPolyList,S_OutputPolyList_
-0x00010090,639,Func10090,
+0x00010090,639,S_GetObjectBounds,S_GetObjectBounds_
 0x00010310,406,Func10310,
 0x000104a8,401,Func104a8,
 0x0001063c,41,Func1063c,
@@ -1738,5 +1738,17 @@ address,size,name,symbol
 0x0008fa3b,3,Func8fa3b,
 0x000c1988,4,CurrentLevel,_CurrentLevel
 0x000cac70,768,game_palette,_game_palette
+0x0012f3c0,4,phd_bottom,_phd_bottom
+0x0012f3c4,4,phd_left,_phd_left
+0x0012f3d0,4,phd_persp,_phd_persp
+0x0012f3e4,4,phd_winymax,_phd_winymax
+0x0012f3e8,4,phd_winxmax,_phd_winxmax
+0x0012f3ec,4,phd_centerx,_phd_centerx
+0x0012f3f0,4,phd_centery,_phd_centery
+0x0012f3f4,4,phd_mxptr,_phd_mxptr
+0x0012f3f8,4,phd_top,_phd_top
+0x0012f3fc,4,phd_zfar,_phd_zfar
+0x0012f400,4,phd_right,_phd_right
+0x0012f404,4,phd_znear,_phd_znear
 0x0012f63c,4,old_clock_ticks,_old_clock_ticks
 0x0012f644,4,clock_ticks,_clock_ticks
