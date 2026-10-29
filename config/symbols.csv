@@ -860,7 +860,7 @@ address,size,name,symbol
 0x000488fc,88,Func488fc,
 0x00048954,220,SoundPlaySample,SoundPlaySample_
 0x00048a30,333,SoundPlaySampleLooped,SoundPlaySampleLooped_
-0x00048b80,50,Func48b80,
+0x00048b80,50,SoundStopAllSamples,SoundStopAllSamples_
 0x00048bb4,35,Func48bb4,
 0x00048bd8,90,Func48bd8,
 0x00048c34,42,Func48c34,
