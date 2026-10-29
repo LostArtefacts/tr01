@@ -16,6 +16,9 @@
 #define ROTATE_LEFT IN_LEFT
 #define EXIT_INVENTORY IN_OPTION
 
+#define PASSPORT_2FRONT IN_LEFT
+#define PASSPORT_2BACK IN_RIGHT
+
 typedef enum pass_pages
 {
     PSPINE = 1,
