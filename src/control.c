@@ -1211,3 +1211,28 @@ void    RemoveRoomFlipItems( ROOM_INFO *r )
         }
     }
 }
+
+void    AddRoomFlipItems( ROOM_INFO *r )
+{
+    ITEM_INFO   *item;
+    sint16      item_num;
+
+    for ( item_num=r->item_number ;item_num!=NO_ITEM; item_num=items[item_num].next_item )
+    {
+        item = &items[item_num];
+
+        switch ( item->object_number )
+        {
+            case MOVABLE_BLOCK:
+            case MOVABLE_BLOCK2:
+            case MOVABLE_BLOCK3:
+            case MOVABLE_BLOCK4:
+                AlterFloorHeight( item,-1024 );
+            break;
+
+            case ROLLING_BLOCK:
+                AlterFloorHeight( item,-2048 );
+            break;
+        }
+    }
+}

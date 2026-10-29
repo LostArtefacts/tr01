@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">12.32% (95)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">87.68% (676)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">12.45% (96)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">87.55% (675)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="92.04" height="6" x="0" y="0" class="named"/>
-<rect width="654.96" height="6" x="92.04" y="0" class="todo"/>
+<rect width="93.01" height="6" x="0" y="0" class="named"/>
+<rect width="653.99" height="6" x="93.01" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -163,7 +163,7 @@
 <rect width="12" height="12" x="645" y="15" class="named"><title>0x00018a38 ClipTarget (259 bytes)</title></rect>
 <rect width="12" height="12" x="660" y="15" class="named"><title>0x00018b3c FlipMap (227 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="15" class="named"><title>0x00018c20 RemoveRoomFlipItems (97 bytes)</title></rect>
-<rect width="12" height="12" x="690" y="15" class="todo"><title>0x00018c84 AddRoomFlipItems (97 bytes)</title></rect>
+<rect width="12" height="12" x="690" y="15" class="named"><title>0x00018c84 AddRoomFlipItems (97 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="15" class="todo"><title>0x00018ce8 TriggerCDTrack (319 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="15" class="todo"><title>0x00018e28 Func18e28 (141 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="15" class="todo"><title>0x00018ec0 Func18ec0 (800 bytes)</title></rect>
@@ -842,10 +842,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">16.20%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">83.80%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">16.24%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">83.76%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="120.98" height="6" x="0" y="0" class="named"/>
-<rect width="626.02" height="6" x="120.98" y="0" class="todo"/>
+<rect width="121.34" height="6" x="0" y="0" class="named"/>
+<rect width="625.66" height="6" x="121.34" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="54.65" height="67.43" x="0" y="0" class="todo"><title>0x0001bc98 Func1bc98 (4489 bytes)</title></rect>
@@ -1290,7 +1290,7 @@
 <rect width="6.19" height="6.65" x="624.54" y="195.07" class="todo"><title>0x00029f00 Func29f00 (98 bytes)</title></rect>
 <rect width="6.19" height="6.65" x="624.54" y="204.71" class="todo"><title>0x00046912 Func46912 (98 bytes)</title></rect>
 <rect width="6.19" height="6.55" x="624.54" y="214.36" class="named"><title>0x00018c20 RemoveRoomFlipItems (97 bytes)</title></rect>
-<rect width="6.19" height="6.55" x="624.54" y="223.91" class="todo"><title>0x00018c84 AddRoomFlipItems (97 bytes)</title></rect>
+<rect width="6.19" height="6.55" x="624.54" y="223.91" class="named"><title>0x00018c84 AddRoomFlipItems (97 bytes)</title></rect>
 <rect width="6.19" height="6.55" x="624.54" y="233.45" class="todo"><title>0x00020f60 Func20f60 (97 bytes)</title></rect>
 <rect width="6.63" height="6.11" x="633.72" y="126.96" class="todo"><title>0x0003d4a0 Insert2DLine (97 bytes)</title></rect>
 <rect width="6.63" height="6.11" x="633.72" y="136.07" class="todo"><title>0x00044700 Func44700 (97 bytes)</title></rect>
