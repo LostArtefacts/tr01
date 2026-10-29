@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">52.72% (416)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">47.28% (373)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">52.85% (417)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">47.15% (372)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="393.86" height="6" x="0" y="0" class="named"/>
-<rect width="353.14" height="6" x="393.86" y="0" class="todo"/>
+<rect width="394.80" height="6" x="0" y="0" class="named"/>
+<rect width="352.20" height="6" x="394.80" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -484,7 +484,7 @@
 <rect width="12" height="12" x="210" y="120" class="named"><title>0x000291b4 ControlEvilLara (542 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="120" class="named"><title>0x000293d4 DrawEvilLara (91 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="120" class="named"><title>0x00029430 LaraUnderWater (454 bytes)</title></rect>
-<rect width="12" height="12" x="255" y="120" class="todo"><title>0x000295f8 lara_as_swim (170 bytes)</title></rect>
+<rect width="12" height="12" x="255" y="120" class="named"><title>0x000295f8 lara_as_swim (170 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="120" class="todo"><title>0x000296a4 lara_as_glide (182 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="120" class="todo"><title>0x0002975c lara_as_tread (168 bytes)</title></rect>
 <rect width="12" height="12" x="300" y="120" class="todo"><title>0x00029804 lara_as_dive (16 bytes)</title></rect>
@@ -860,10 +860,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">48.44%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">51.56%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">48.52%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">51.48%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="361.81" height="6" x="0" y="0" class="named"/>
-<rect width="385.19" height="6" x="361.81" y="0" class="todo"/>
+<rect width="362.44" height="6" x="0" y="0" class="named"/>
+<rect width="384.56" height="6" x="362.44" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1170,7 +1170,7 @@
 <rect width="9.62" height="9.26" x="567.76" y="122.91" class="named"><title>0x00026978 lara_col_compress (173 bytes)</title></rect>
 <rect width="9.62" height="9.26" x="567.76" y="135.17" class="todo"><title>0x00038978 S_SaveSettings (173 bytes)</title></rect>
 <rect width="9.62" height="9.12" x="567.76" y="147.42" class="named"><title>0x0002686c lara_col_reach (171 bytes)</title></rect>
-<rect width="9.62" height="9.04" x="567.76" y="159.54" class="todo"><title>0x000295f8 lara_as_swim (170 bytes)</title></rect>
+<rect width="9.62" height="9.04" x="567.76" y="159.54" class="named"><title>0x000295f8 lara_as_swim (170 bytes)</title></rect>
 <rect width="9.62" height="8.97" x="567.76" y="171.58" class="named"><title>0x00028300 LaraLandedBad (169 bytes)</title></rect>
 <rect width="9.62" height="8.90" x="567.76" y="183.56" class="named"><title>0x00013560 InitialiseCamera (168 bytes)</title></rect>
 <rect width="9.62" height="8.90" x="567.76" y="195.46" class="named"><title>0x00014f18 InitialisePlayer1 (168 bytes)</title></rect>
