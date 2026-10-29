@@ -494,3 +494,10 @@ void lara_as_slide(ITEM_INFO *item, COLL_INFO *coll)
     if (input & IN_JUMP)
         item->goal_anim_state = AS_FORWARDJUMP;
 }
+
+void lara_as_backjump(ITEM_INFO *item, COLL_INFO *coll)
+{
+    camera.target_angle = ONE_DEGREE * 135;
+    if (item->fallspeed > LARA_FASTFALL_SPEED)
+        item->goal_anim_state = AS_FASTFALL;
+}
