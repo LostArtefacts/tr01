@@ -87,3 +87,18 @@ void ControlBlood1(sint16 fx_num)
             KillEffect(fx_num);
     }
 }
+
+void ControlExplosion1(sint16 fx_num)
+{
+    FX_INFO *fx;
+
+    fx = &effects[fx_num];
+    fx->counter++;
+    if (fx->counter == 2)
+    {
+        fx->counter = 0;
+        fx->frame_number--;
+        if (fx->frame_number <= objects[fx->object_number].nmeshes)
+            KillEffect(fx_num);
+    }
+}
