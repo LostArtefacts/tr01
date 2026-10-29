@@ -166,3 +166,133 @@ void AlligatorControl(sint16 item_number)
 
     CreatureAnimation(item_number, angle, 0);
 }
+
+void CrocControl(sint16 item_number)
+{
+    ITEM_INFO *item;
+    CREATURE_INFO *croc;
+    sint16 head, angle;
+    AI_INFO info;
+
+    item = &items[item_number];
+    if (item->status == INVISIBLE)
+    {
+        if (!EnableBaddieAI(item_number, 0))
+            return;
+
+        item->status = ACTIVE;
+    }
+
+    croc = (CREATURE_INFO*)item->data;
+    head = angle = 0;
+
+    if (item->hit_points <= 0)
+    {
+        if (item->current_anim_state != CROC_DEATH)
+        {
+            item->anim_number = objects[CROCODILE].anim_index + CROC_DIE_ANIM;
+            item->frame_number = anims[item->anim_number].frame_base;
+            item->current_anim_state = CROC_DEATH;
+        }
+    }
+    else
+    {
+        CreatureAIInfo(item, &info);
+
+        if (info.ahead)
+            head = info.angle;
+
+        CreatureMood(item, &info, VIOLENT);
+
+        if (item->current_anim_state == CROC_FASTTURN)
+            item->pos.y_rot += CROC_FASTTURN_TURN;
+        else
+            angle = CreatureTurn(item, CROC_TURN);
+
+        switch (item->current_anim_state)
+        {
+        case CROC_STOP:
+            if (info.bite && info.distance < CROC_BITE_RANGE)
+                item->goal_anim_state = CROC_ATTACK1;
+            else if (croc->mood == ESCAPE_MOOD)
+                item->goal_anim_state = CROC_RUN;
+            else if (croc->mood == ATTACK_MOOD)
+            {
+                if ((info.angle < -CROC_FASTTURN_ANGLE || info.angle > CROC_FASTTURN_ANGLE) && info.distance > CROC_FASTTURN_RANGE)
+                    item->goal_anim_state = CROC_FASTTURN;
+                else
+                    item->goal_anim_state = CROC_RUN;
+            }
+            else if (croc->mood == STALK_MOOD)
+                item->goal_anim_state = CROC_WALK;
+
+            break;
+
+        case CROC_WALK:
+            if (info.ahead && (item->touch_bits & CROC_TOUCH))
+                item->goal_anim_state = CROC_STOP;
+            else if (croc->mood == ATTACK_MOOD || croc->mood == ESCAPE_MOOD)
+                item->goal_anim_state = CROC_RUN;
+            else if (croc->mood == BORED_MOOD)
+                item->goal_anim_state = CROC_STOP;
+
+            break;
+
+        case CROC_FASTTURN:
+            if (info.angle > -CROC_FASTTURN_ANGLE && info.angle < CROC_FASTTURN_ANGLE)
+                item->goal_anim_state = CROC_WALK;
+
+            break;
+
+        case CROC_RUN:
+            if (info.ahead && (item->touch_bits & CROC_TOUCH))
+                item->goal_anim_state = CROC_STOP;
+            else if (croc->mood == STALK_MOOD)
+                item->goal_anim_state = CROC_WALK;
+            else if (croc->mood == BORED_MOOD)
+                item->goal_anim_state = CROC_STOP;
+            else if (croc->mood == ATTACK_MOOD && info.distance > CROC_FASTTURN_RANGE && (info.angle < -CROC_FASTTURN_ANGLE ||
+                    info.angle > CROC_FASTTURN_ANGLE))
+            {
+                item->goal_anim_state = CROC_STOP;
+            }
+
+            break;
+
+        case CROC_ATTACK1:
+            if (!item->required_anim_state)
+            {
+                CreatureEffect(item, &croc_bite, DoBloodSplat);
+
+                lara_item->hit_points -= CROC_BITE_DAMAGE;
+                lara_item->hit_status = 1;
+
+                item->required_anim_state = CROC_STOP;
+            }
+
+            break;
+        }
+    }
+
+    if (croc)
+        CreatureHead(item, head);
+
+    if (room[item->room_number].flags & UNDERWATER)
+    {
+        item->object_number = ALLIGATOR;
+        item->anim_number = objects[ALLIGATOR].anim_index;
+        item->frame_number = anims[item->anim_number].frame_base;
+        item->current_anim_state = item->goal_anim_state = anims[item->anim_number].current_anim_state;
+        if (croc)
+        {
+            croc->LOT.step = WALL_L * 20;
+            croc->LOT.drop = -WALL_L * 20;
+            croc->LOT.fly = STEP_L / 16;
+        }
+    }
+
+    if (croc)
+        CreatureAnimation(item_number, angle, 0);
+    else
+        AnimateItem(item);
+}

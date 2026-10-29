@@ -99,6 +99,7 @@ address,size,name,symbol
 0x00018ce8,319,TriggerCDTrack,TriggerCDTrack_
 0x00018e28,141,TriggerNormalCDTrack,TriggerNormalCDTrack_
 0x00018ec0,800,AlligatorControl,AlligatorControl_
+0x000191f4,800,CrocControl,CrocControl_
 0x00019520,335,Func19520,
 0x00019670,150,Func19670,
 0x00019708,55,GetDemoInput,GetDemoInput_
