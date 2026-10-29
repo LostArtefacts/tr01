@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">5.32% (41)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">94.68% (730)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">5.45% (42)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">94.55% (729)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="39.72" height="6" x="0" y="0" class="named"/>
-<rect width="707.28" height="6" x="39.72" y="0" class="todo"/>
+<rect width="40.69" height="6" x="0" y="0" class="named"/>
+<rect width="706.31" height="6" x="40.69" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -113,7 +113,7 @@
 <rect width="12" height="12" x="645" y="0" class="named"><title>0x00013f54 ChaseCamera (267 bytes)</title></rect>
 <rect width="12" height="12" x="660" y="0" class="named"><title>0x00014060 ShiftClamp (402 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="0" class="named"><title>0x000141f4 CombatCamera (317 bytes)</title></rect>
-<rect width="12" height="12" x="690" y="0" class="todo"><title>0x00014334 LookCamera (510 bytes)</title></rect>
+<rect width="12" height="12" x="690" y="0" class="named"><title>0x00014334 LookCamera (510 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="0" class="todo"><title>0x00014534 FixedCamera (146 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="0" class="todo"><title>0x000145c8 CalculateCamera (1276 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="0" class="todo"><title>0x00014ae0 Func14ae0 (279 bytes)</title></rect>
@@ -842,10 +842,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">6.86%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">93.14%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">7.12%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">92.88%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="51.27" height="6" x="0" y="0" class="named"/>
-<rect width="695.73" height="6" x="51.27" y="0" class="todo"/>
+<rect width="53.16" height="6" x="0" y="0" class="named"/>
+<rect width="693.84" height="6" x="53.16" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="54.65" height="67.43" x="0" y="0" class="todo"><title>0x0001bc98 Func1bc98 (4489 bytes)</title></rect>
@@ -945,7 +945,7 @@
 <rect width="19.13" height="18.42" x="370.94" y="221.58" class="todo"><title>0x0002b910 Func2b910 (524 bytes)</title></rect>
 <rect width="17.37" height="20.04" x="393.06" y="0" class="todo"><title>0x00027b44 Func27b44 (519 bytes)</title></rect>
 <rect width="17.37" height="19.82" x="393.06" y="23.04" class="todo"><title>0x00029bc0 Func29bc0 (514 bytes)</title></rect>
-<rect width="17.37" height="19.64" x="393.06" y="45.86" class="todo"><title>0x00014334 LookCamera (510 bytes)</title></rect>
+<rect width="17.37" height="19.64" x="393.06" y="45.86" class="named"><title>0x00014334 LookCamera (510 bytes)</title></rect>
 <rect width="17.37" height="19.55" x="393.06" y="68.50" class="todo"><title>0x00028afc Func28afc (508 bytes)</title></rect>
 <rect width="17.37" height="19.42" x="393.06" y="91.05" class="todo"><title>0x0003df90 Func3df90 (505 bytes)</title></rect>
 <rect width="17.37" height="19.15" x="393.06" y="113.47" class="todo"><title>0x00038460 Func38460 (499 bytes)</title></rect>
