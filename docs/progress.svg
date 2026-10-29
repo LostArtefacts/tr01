@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">72.55% (584)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">27.45% (221)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">72.80% (586)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">27.20% (219)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="541.92" height="6" x="0" y="0" class="named"/>
-<rect width="205.08" height="6" x="541.92" y="0" class="todo"/>
+<rect width="543.78" height="6" x="0" y="0" class="named"/>
+<rect width="203.22" height="6" x="543.78" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -651,10 +651,10 @@
 <rect width="12" height="12" x="465" y="165" class="named"><title>0x000352e8 InitialiseStartInfo (78 bytes)</title></rect>
 <rect width="12" height="12" x="480" y="165" class="named"><title>0x00035338 ModifyStartInfo (255 bytes)</title></rect>
 <rect width="12" height="12" x="495" y="165" class="named"><title>0x00035438 CreateStartInfo (316 bytes)</title></rect>
-<rect width="12" height="12" x="510" y="165" class="todo"><title>0x00035574 CreateSaveGameInfo (1098 bytes)</title></rect>
+<rect width="12" height="12" x="510" y="165" class="named"><title>0x00035574 CreateSaveGameInfo (1098 bytes)</title></rect>
 <rect width="12" height="12" x="525" y="165" class="todo"><title>0x000359c0 Func359c0 (2643 bytes)</title></rect>
-<rect width="12" height="12" x="540" y="165" class="todo"><title>0x00036414 Func36414 (24 bytes)</title></rect>
-<rect width="12" height="12" x="555" y="165" class="todo"><title>0x0003642c Func3642c (77 bytes)</title></rect>
+<rect width="12" height="12" x="540" y="165" class="named"><title>0x00036414 ResetSG (24 bytes)</title></rect>
+<rect width="12" height="12" x="555" y="165" class="todo"><title>0x0003642c WriteSG (77 bytes)</title></rect>
 <rect width="12" height="12" x="570" y="165" class="todo"><title>0x0003647c Func3647c (39 bytes)</title></rect>
 <rect width="12" height="12" x="585" y="165" class="todo"><title>0x000364a4 Func364a4 (404 bytes)</title></rect>
 <rect width="12" height="12" x="600" y="165" class="todo"><title>0x00036638 Func36638 (14 bytes)</title></rect>
@@ -876,10 +876,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">69.66%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">30.34%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">70.18%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">29.82%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="520.35" height="6" x="0" y="0" class="named"/>
-<rect width="226.65" height="6" x="520.35" y="0" class="todo"/>
+<rect width="524.25" height="6" x="0" y="0" class="named"/>
+<rect width="222.75" height="6" x="524.25" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="51.03" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -916,7 +916,7 @@
 <rect width="30.93" height="26.79" x="172.11" y="228.21" class="named"><title>0x00013af0 SmartShift (1123 bytes)</title></rect>
 <rect width="27.55" height="29.99" x="206.04" y="0" class="named"><title>0x000122fc CalculateTarget (1120 bytes)</title></rect>
 <rect width="27.55" height="29.61" x="206.04" y="32.99" class="todo"><title>0x0003e7c8 Func3e7c8 (1107 bytes)</title></rect>
-<rect width="27.55" height="29.34" x="206.04" y="65.60" class="todo"><title>0x00035574 CreateSaveGameInfo (1098 bytes)</title></rect>
+<rect width="27.55" height="29.34" x="206.04" y="65.60" class="named"><title>0x00035574 CreateSaveGameInfo (1098 bytes)</title></rect>
 <rect width="27.55" height="29.28" x="206.04" y="97.94" class="named"><title>0x00011eb4 CreatureMood (1096 bytes)</title></rect>
 <rect width="27.55" height="29.17" x="206.04" y="130.22" class="todo"><title>0x0003fb5c Func3fb5c (1092 bytes)</title></rect>
 <rect width="27.55" height="29.11" x="206.04" y="162.39" class="named"><title>0x0001e8cc LoadObjects (1090 bytes)</title></rect>
@@ -1391,7 +1391,7 @@
 <rect width="5.72" height="5.05" x="645.15" y="210.42" class="todo"><title>0x00045c60 Func45c60 (78 bytes)</title></rect>
 <rect width="5.72" height="4.95" x="645.15" y="218.47" class="named"><title>0x00025728 lara_as_hang (77 bytes)</title></rect>
 <rect width="5.72" height="4.95" x="645.15" y="226.42" class="named"><title>0x0002f520 ShutThatDoor (77 bytes)</title></rect>
-<rect width="5.72" height="4.95" x="645.15" y="234.37" class="todo"><title>0x0003642c Func3642c (77 bytes)</title></rect>
+<rect width="5.72" height="4.95" x="645.15" y="234.37" class="todo"><title>0x0003642c WriteSG (77 bytes)</title></rect>
 <rect width="5.72" height="4.84" x="645.15" y="242.31" class="named"><title>0x0001f360 LoadAnimatedTextures (76 bytes)</title></rect>
 <rect width="5.72" height="4.84" x="645.15" y="250.16" class="named"><title>0x00020464 LevelIsValid (76 bytes)</title></rect>
 <rect width="5.20" height="5.34" x="653.87" y="160.78" class="named"><title>0x00025928 lara_as_fastturn (76 bytes)</title></rect>
@@ -1595,7 +1595,7 @@
 <rect width="2.05" height="1.45" x="717.60" y="253.55" class="todo"><title>0x0003f02b phd_sin (25 bytes)</title></rect>
 <rect width="1.78" height="1.71" x="722.65" y="226.31" class="todo"><title>0x0004698f Func4698f (25 bytes)</title></rect>
 <rect width="1.59" height="1.71" x="727.43" y="226.31" class="named"><title>0x0002dd48 mn_start_sound_fade (24 bytes)</title></rect>
-<rect width="1.59" height="1.71" x="732.02" y="226.31" class="todo"><title>0x00036414 Func36414 (24 bytes)</title></rect>
+<rect width="1.59" height="1.71" x="732.02" y="226.31" class="named"><title>0x00036414 ResetSG (24 bytes)</title></rect>
 <rect width="1.59" height="1.71" x="736.61" y="226.31" class="todo"><title>0x000467f1 ScreenDump (24 bytes)</title></rect>
 <rect width="1.59" height="1.71" x="741.20" y="226.31" class="todo"><title>0x00046809 ScreenPartialDump (24 bytes)</title></rect>
 <rect width="1.21" height="1.71" x="745.79" y="226.31" class="named"><title>0x00020bf4 InitialisePickUpDisplay (22 bytes)</title></rect>

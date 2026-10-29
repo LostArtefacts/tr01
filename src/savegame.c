@@ -1,5 +1,7 @@
 #include "game.h"
 
+extern sint16 *mesh_base;
+
 SAVEGAME_INFO savegame;
 
 int SGcount;
@@ -139,4 +141,108 @@ void CreateStartInfo(int level_number)
         start->gun_status = LG_READY;
     else
         start->gun_status = LG_ARMLESS;
+}
+
+void CreateSaveGameInfo(void)
+{
+    int i;
+    OBJECT_INFO *obj;
+    ITEM_INFO *item;
+    sint16 flags;
+    char tflag;
+    CREATURE_INFO *creature;
+
+    savegame.current_level = (sint16)CurrentLevel;
+
+    CreateStartInfo(CURRENT);
+
+    savegame.num_pickup1 = Inv_RequestItem(PICKUP_ITEM1);
+    savegame.num_pickup2 = Inv_RequestItem(PICKUP_ITEM2);
+    savegame.num_puzzle1 = Inv_RequestItem(PUZZLE_ITEM1);
+    savegame.num_puzzle2 = Inv_RequestItem(PUZZLE_ITEM2);
+    savegame.num_puzzle3 = Inv_RequestItem(PUZZLE_ITEM3);
+    savegame.num_puzzle4 = Inv_RequestItem(PUZZLE_ITEM4);
+    savegame.num_key1 = Inv_RequestItem(KEY_ITEM1);
+    savegame.num_key2 = Inv_RequestItem(KEY_ITEM2);
+    savegame.num_key3 = Inv_RequestItem(KEY_ITEM3);
+    savegame.num_key4 = Inv_RequestItem(KEY_ITEM4);
+    savegame.num_leadbar = Inv_RequestItem(LEADBAR_ITEM);
+
+    ResetSG();
+
+    for (i = 0; i < MAX_SAVEGAME_BUFFER; i++)
+        savegame.buffer[i] = 0;
+
+    WriteSG(&flip_status, sizeof(int));
+
+    for (i = 0; i < MAX_FLIPMAPS; i++)
+    {
+        tflag = (flipmap[i] >> 8);
+        WriteSG(&tflag, sizeof(char));
+    }
+
+    for (i = 0; i < number_cameras; i++)
+        WriteSG(&camera.fixed[i].flags, sizeof(sint16));
+
+    for (i = 0, item = items; i < level_items; i++, item++)
+    {
+        obj = &objects[item->object_number];
+        if (obj->save_position)
+        {
+            WriteSG(&item->pos, sizeof(PHD_3DPOS));
+            WriteSG(&item->room_number, sizeof(sint16));
+            WriteSG(&item->speed, sizeof(sint16));
+            WriteSG(&item->fallspeed, sizeof(sint16));
+        }
+
+        if (obj->save_anim)
+        {
+            WriteSG(&item->current_anim_state, sizeof(sint16));
+            WriteSG(&item->goal_anim_state, sizeof(sint16));
+            WriteSG(&item->required_anim_state, sizeof(sint16));
+            WriteSG(&item->anim_number, sizeof(sint16));
+            WriteSG(&item->frame_number, sizeof(sint16));
+        }
+
+        if (obj->save_hitpoints)
+            WriteSG(&item->hit_points, sizeof(sint16));
+
+        if (obj->save_flags)
+        {
+            flags = item->flags + item->active + (item->status << 1) + (item->gravity_status << 3) + (item->collidable << 4);
+            WriteSG(&flags, sizeof(sint16));
+
+            WriteSG(&item->timer, sizeof(sint16));
+            if (obj->intelligent)
+            {
+                creature = (CREATURE_INFO *)item->data;
+                WriteSG(&creature->head_rotation, sizeof(sint16));
+                WriteSG(&creature->neck_rotation, sizeof(sint16));
+                WriteSG(&creature->maximum_turn, sizeof(sint16));
+                WriteSG(&creature->flags, sizeof(sint16));
+                WriteSG(&creature->mood, sizeof(MOOD_TYPE));
+            }
+        }
+    }
+
+    for (i = 0; i < 15; i++)
+        lara.mesh_ptrs[i] = (sint16 *)((long)lara.mesh_ptrs[i] - (long)mesh_base);
+    lara.left_arm.frame_base = (sint16 *)((long)lara.left_arm.frame_base - (long)frames);
+    lara.right_arm.frame_base = (sint16 *)((long)lara.right_arm.frame_base - (long)frames);
+
+    WriteSG(&lara, sizeof(LARA_INFO));
+
+    for (i = 0; i < 15; i++)
+        lara.mesh_ptrs[i] = (sint16 *)((long)lara.mesh_ptrs[i] + (long)mesh_base);
+    lara.left_arm.frame_base = (sint16 *)((long)lara.left_arm.frame_base + (long)frames);
+    lara.right_arm.frame_base = (sint16 *)((long)lara.right_arm.frame_base + (long)frames);
+
+    WriteSG(&flipeffect, sizeof(int));
+    WriteSG(&fliptimer, sizeof(int));
+}
+
+void ResetSG()
+{
+    SGcount = 0;
+    SGpoint = savegame.buffer;
 }
