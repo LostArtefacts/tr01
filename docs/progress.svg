@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">72.42% (583)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">27.58% (222)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">72.55% (584)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">27.45% (221)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="541" height="6" x="0" y="0" class="named"/>
-<rect width="206" height="6" x="541" y="0" class="todo"/>
+<rect width="541.92" height="6" x="0" y="0" class="named"/>
+<rect width="205.08" height="6" x="541.92" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -650,7 +650,7 @@
 <rect width="12" height="12" x="450" y="165" class="named"><title>0x000352e0 LoadSaveGameInfo (6 bytes)</title></rect>
 <rect width="12" height="12" x="465" y="165" class="named"><title>0x000352e8 InitialiseStartInfo (78 bytes)</title></rect>
 <rect width="12" height="12" x="480" y="165" class="named"><title>0x00035338 ModifyStartInfo (255 bytes)</title></rect>
-<rect width="12" height="12" x="495" y="165" class="todo"><title>0x00035438 CreateStartInfo (316 bytes)</title></rect>
+<rect width="12" height="12" x="495" y="165" class="named"><title>0x00035438 CreateStartInfo (316 bytes)</title></rect>
 <rect width="12" height="12" x="510" y="165" class="todo"><title>0x00035574 CreateSaveGameInfo (1098 bytes)</title></rect>
 <rect width="12" height="12" x="525" y="165" class="todo"><title>0x000359c0 Func359c0 (2643 bytes)</title></rect>
 <rect width="12" height="12" x="540" y="165" class="todo"><title>0x00036414 Func36414 (24 bytes)</title></rect>
@@ -876,10 +876,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">69.51%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">30.49%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">69.66%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">30.34%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="519.25" height="6" x="0" y="0" class="named"/>
-<rect width="227.75" height="6" x="519.25" y="0" class="todo"/>
+<rect width="520.35" height="6" x="0" y="0" class="named"/>
+<rect width="226.65" height="6" x="520.35" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="51.03" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1073,7 +1073,7 @@
 <rect width="14.28" height="13.67" x="496.37" y="208.20" class="todo"><title>0x0003a2ac Func3a2ac (320 bytes)</title></rect>
 <rect width="14.28" height="13.62" x="496.37" y="224.87" class="named"><title>0x00018ce8 TriggerCDTrack (319 bytes)</title></rect>
 <rect width="14.28" height="13.51" x="496.37" y="241.49" class="named"><title>0x000141f4 CombatCamera (317 bytes)</title></rect>
-<rect width="14.39" height="13.35" x="513.65" y="18.26" class="todo"><title>0x00035438 CreateStartInfo (316 bytes)</title></rect>
+<rect width="14.39" height="13.35" x="513.65" y="18.26" class="named"><title>0x00035438 CreateStartInfo (316 bytes)</title></rect>
 <rect width="14.22" height="13.35" x="531.04" y="18.26" class="named"><title>0x00011060 BatControl (313 bytes)</title></rect>
 <rect width="14.17" height="13.35" x="548.26" y="18.26" class="named"><title>0x0001dac0 ControlBubble1 (312 bytes)</title></rect>
 <rect width="14.17" height="13.35" x="565.43" y="18.26" class="named"><title>0x0002dc00 mn_stop_sound_effect (312 bytes)</title></rect>

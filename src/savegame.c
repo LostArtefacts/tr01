@@ -77,3 +77,66 @@ void ModifyStartInfo(int level_number)
         start->gun_type = LG_UZIS;
     }
 }
+
+void CreateStartInfo(int level_number)
+{
+    START_INFO *start;
+
+    start = &savegame.start[level_number];
+    start->available = 1;
+    start->costume = 0;
+
+    if (Inv_RequestItem(GUN_ITEM))
+    {
+        start->pistol_ammo = 1000;
+        start->got_pistols = 1;
+    }
+    else
+    {
+        start->pistol_ammo = 1000;
+        start->got_pistols = 0;
+    }
+
+    if (Inv_RequestItem(MAGNUM_ITEM))
+    {
+        start->magnum_ammo = lara.magnums.ammo;
+        start->got_magnums = 1;
+    }
+    else
+    {
+        start->magnum_ammo = Inv_RequestItem(MAG_AMMO_ITEM) * MAGNUM_AMMO_QTY;
+        start->got_magnums = 0;
+    }
+
+    if (Inv_RequestItem(UZI_ITEM))
+    {
+        start->uzi_ammo = lara.uzis.ammo;
+        start->got_uzis = 1;
+    }
+    else
+    {
+        start->uzi_ammo = Inv_RequestItem(UZI_AMMO_ITEM) * UZI_AMMO_QTY;
+        start->got_uzis = 0;
+    }
+
+    if (Inv_RequestItem(SHOTGUN_ITEM))
+    {
+        start->shotgun_ammo = lara.shotgun.ammo;
+        start->got_shotgun = 1;
+    }
+    else
+    {
+        start->shotgun_ammo = Inv_RequestItem(SG_AMMO_ITEM) * SHOTGUN_AMMO_QTY;
+        start->got_shotgun = 0;
+    }
+
+    start->num_medis = Inv_RequestItem(MEDI_ITEM);
+    start->num_big_medis = Inv_RequestItem(BIGMEDI_ITEM);
+    start->num_scions = Inv_RequestItem(SCION_ITEM);
+
+    start->gun_type = (sint8)lara.gun_type;
+    if (lara.gun_status == LG_READY)
+        start->gun_status = LG_READY;
+    else
+        start->gun_status = LG_ARMLESS;
+}
