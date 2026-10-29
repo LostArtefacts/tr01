@@ -61,3 +61,27 @@ void setup_screen_size(void)
             S_ExitSystem("ERROR: Could not allocate enough memory to run (0)");
     }
 }
+
+void switch_resolution(void)
+{
+    if (hires_flag)
+    {
+        hires_flag = 0;
+        game_setup.sc_width = 320;
+        game_setup.sc_height = 200;
+    }
+    else
+    {
+        hires_flag = 1;
+        game_setup.sc_width = 640;
+        game_setup.sc_height = 480;
+    }
+    game_setup.col_mode = 0;
+    SwitchVideoMode(&game_setup);
+    setup_screen_size();
+
+    if (wet)
+        FadeToPal(1, water_palette);
+    else
+        FadeToPal(1, game_palette);
+}
