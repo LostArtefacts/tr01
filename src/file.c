@@ -449,3 +449,17 @@ int LoadCameras(FILE *file)
 
     return 1;
 }
+
+int LoadSoundEffects(FILE *file)
+{
+    fread(&number_sound_effects, sizeof(sint32), 1, file);
+    if (number_sound_effects == 0)
+        return 1;
+
+    sound_effects = (OBJECT_VECTOR *)game_malloc(sizeof(OBJECT_VECTOR) * number_sound_effects, SOUND_FX);
+    if (sound_effects == NULL)
+        return 0;
+    fread(sound_effects, sizeof(OBJECT_VECTOR), number_sound_effects, file);
+
+    return 1;
+}

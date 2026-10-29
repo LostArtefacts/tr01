@@ -181,6 +181,8 @@ enum lara_meshes
 };
 
 extern void (*effect_routines[])(ITEM_INFO *item);
+extern OBJECT_VECTOR *sound_effects;
+extern int number_sound_effects;
 extern int health_bar_timer;
 extern int overlay_flag;
 extern LARA_INFO lara;
