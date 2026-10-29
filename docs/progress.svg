@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">75.34% (611)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">24.66% (200)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">75.46% (612)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">24.54% (199)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="562.78" height="6" x="0" y="0" class="named"/>
-<rect width="184.22" height="6" x="562.78" y="0" class="todo"/>
+<rect width="563.70" height="6" x="0" y="0" class="named"/>
+<rect width="183.30" height="6" x="563.70" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -679,7 +679,7 @@
 <rect width="12" height="12" x="135" y="180" class="named"><title>0x00038ba4 S_SoundSampleIsPlaying (11 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="180" class="named"><title>0x00038bb0 S_SoundStopAllSamples (14 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="180" class="named"><title>0x00038bc0 S_SoundStopSample (18 bytes)</title></rect>
-<rect width="12" height="12" x="180" y="180" class="todo"><title>0x00038bd4 S_SoundSetPanAndVolume (60 bytes)</title></rect>
+<rect width="12" height="12" x="180" y="180" class="named"><title>0x00038bd4 S_SoundSetPanAndVolume (60 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="180" class="todo"><title>0x00038cb8 S_CDStop (65 bytes)</title></rect>
 <rect width="12" height="12" x="210" y="180" class="todo"><title>0x00038cfc Func38cfc (54 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="180" class="todo"><title>0x00038d34 Func38d34 (32 bytes)</title></rect>
@@ -882,10 +882,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">73.38%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">26.62%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">73.41%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">26.59%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="548.17" height="6" x="0" y="0" class="named"/>
-<rect width="198.83" height="6" x="548.17" y="0" class="todo"/>
+<rect width="548.37" height="6" x="0" y="0" class="named"/>
+<rect width="198.63" height="6" x="548.37" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.96" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1445,7 +1445,7 @@
 <rect width="4.38" height="4.41" x="707.14" y="169.24" class="named"><title>0x000324c0 ControlGunShot (62 bytes)</title></rect>
 <rect width="4.14" height="4.41" x="714.52" y="169.24" class="named"><title>0x00020530 GetSavedGamesList (60 bytes)</title></rect>
 <rect width="4.14" height="4.41" x="721.66" y="169.24" class="named"><title>0x00026038 lara_as_fastdive (60 bytes)</title></rect>
-<rect width="4.14" height="4.41" x="728.81" y="169.24" class="todo"><title>0x00038bd4 S_SoundSetPanAndVolume (60 bytes)</title></rect>
+<rect width="4.14" height="4.41" x="728.81" y="169.24" class="named"><title>0x00038bd4 S_SoundSetPanAndVolume (60 bytes)</title></rect>
 <rect width="4.02" height="4.41" x="735.95" y="169.24" class="named"><title>0x000235d4 RingActive (59 bytes)</title></rect>
 <rect width="4.02" height="4.41" x="742.98" y="169.24" class="todo"><title>0x000396a0 T_ChangeText (59 bytes)</title></rect>
 <rect width="3.96" height="4.36" x="669.16" y="176.65" class="named"><title>0x0001ce24 InitInterpolate (58 bytes)</title></rect>

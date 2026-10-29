@@ -863,10 +863,10 @@ address,size,name,symbol
 0x00048b80,50,SoundStopAllSamples,SoundStopAllSamples_
 0x00048bb4,35,SoundStopSample,SoundStopSample_
 0x00048bd8,90,Func48bd8,
-0x00048c34,42,Func48c34,
+0x00048c34,42,SoundSetSampleVolume,SoundSetSampleVolume_
 0x00048c60,66,Func48c60,
 0x00048ca4,41,Func48ca4,
-0x00048cd0,43,Func48cd0,
+0x00048cd0,43,SoundSetPan,SoundSetPan_
 0x00048cfc,41,Func48cfc,
 0x00048d28,52,SoundSampleIsPlaying,SoundSampleIsPlaying_
 0x00048d60,90,Func48d60,
