@@ -346,6 +346,10 @@ void DrawSpriteItem(ITEM_INFO *item)
     S_DrawSpriteAbs(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, objects[item->object_number].mesh_index - item->frame_number, item->shade);
 }
 
+void DrawDummyItem(ITEM_INFO *item)
+{
+}
+
 sint16 null_rotations[] = {
     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 };

@@ -124,7 +124,8 @@ address,size,name,symbol
 0x0001a578,990,SetRoomBounds,SetRoomBounds_
 0x0001a958,452,PrintRooms,PrintRooms_
 0x0001ab1c,270,DrawEffect,DrawEffect_
-0x0001ac2c,69,DrawSpriteItem,DrawSpriteItem_
+0x0001ac2c,68,DrawSpriteItem,DrawSpriteItem_
+0x0001ac70,1,DrawDummyItem,DrawDummyItem_
 0x0001ac74,1417,DrawAnimatingItem,DrawAnimatingItem_
 0x0001b224,2294,DrawLara,DrawLara_
 0x0001bb1c,124,DrawGunFlash,DrawGunFlash_
