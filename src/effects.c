@@ -332,3 +332,22 @@ void lara_normal_effect(ITEM_INFO *item)
     camera.type = CHASE_CAMERA;
     AlterFOV(GAME_FOV * ONE_DEGREE);
 }
+
+void EarthQuakeFX(ITEM_INFO *item)
+{
+    if (fliptimer == 0)
+    {
+        SoundEffect(99, NULL, NULL);
+        camera.bounce = -250;
+    }
+    else if (fliptimer == 3)
+        SoundEffect(147, NULL, NULL);
+    else if (fliptimer == 35)
+        SoundEffect(99, NULL, NULL);
+    else if (fliptimer == 20 || fliptimer == 50 || fliptimer == 70)
+        SoundEffect(70, NULL, NULL);
+
+    fliptimer++;
+    if (fliptimer == 105)
+        flipeffect = -1;
+}

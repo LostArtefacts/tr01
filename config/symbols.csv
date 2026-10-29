@@ -165,7 +165,7 @@ address,size,name,symbol
 0x0001de64,5,turn180_effect,turn180_effect_
 0x0001de6c,178,dino_stomp_effect,dino_stomp_effect_
 0x0001df20,42,lara_normal_effect,lara_normal_effect_
-0x0001df4c,120,Func1df4c,
+0x0001df4c,120,EarthQuakeFX,EarthQuakeFX_
 0x0001dfc4,127,Func1dfc4,
 0x0001e044,29,Func1e044,
 0x0001e064,72,Func1e064,
