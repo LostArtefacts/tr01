@@ -241,7 +241,8 @@ address,size,name,symbol
 0x00020e54,109,game_malloc,game_malloc_
 0x00020ec4,47,game_free,game_free_
 0x00020ef4,105,CalculateWibbleTable,CalculateWibbleTable_
-0x00020f60,97,S_SeedRandom,S_SeedRandom_
+0x00020f60,94,S_SeedRandom,S_SeedRandom_
+0x00020fc0,1,CheckSellByDate,CheckSellByDate_
 0x00020fd0,333,Func20fd0,
 0x00021120,683,S_UpdateInput,S_UpdateInput_
 0x00021498,4461,Display_Inventory,Display_Inventory_
@@ -885,7 +886,7 @@ address,size,name,symbol
 0x00049f84,448,fwrite,fwrite_
 0x0004a144,47,time,time_
 0x0004a173,81,_localtime,_localtime_
-0x0004a1c4,13,Func4a1c4,
+0x0004a1c4,13,localtime,localtime_
 0x0004a1d4,57,Func4a1d4,
 0x0004a20d,189,Func4a20d,
 0x0004a2ca,161,Func4a2ca,

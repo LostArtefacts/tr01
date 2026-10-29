@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 #include "game.h"
 
 SETUP game_setup = {320, 200, 25, 25, 50, 0, 0};
@@ -137,4 +138,19 @@ void CalculateWibbleTable(void)
         shade_table[i] = phd_sin(angle) * MAX_SHADE >> W2V_SHIFT;
         rand_table[i] = (GetRandomDraw() >> 5) - 0x01ff;
     }
+}
+
+void S_SeedRandom(void)
+{
+    struct tm *tptr;
+    time_t lt;
+
+    lt = time(NULL);
+    tptr = localtime(&lt);
+    SeedRandomControl(tptr->tm_sec + (tptr->tm_min * 57) + (tptr->tm_hour * 3543));
+    SeedRandomDraw(tptr->tm_sec + (tptr->tm_min * 43) + (tptr->tm_hour * 3477));
+}
+
+void CheckSellByDate(void)
+{
 }
