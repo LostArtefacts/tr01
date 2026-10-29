@@ -145,3 +145,25 @@ void S_DrawScreenBox(sint32 sx, sint32 sy, sint32 z, sint32 w, sint32 h, sint32 
     S_DrawScreenLine(sx - 1, sy + h, z, 0, -h - 1, B_YELLOW, NULL, flags);
     S_DrawScreenLine(sx, sy + h, z, 0, -h, B_ORANGE, NULL, flags);
 }
+
+void S_DrawScreenFBox(sint32 sx, sint32 sy, sint32 z, sint32 w, sint32 h, sint32 col, uint16 *grdptr, uint16 flags)
+{
+    *(sort3dptr) = (sint32)(info3dptr);
+    *(sort3dptr + 1) = z << 3;
+    sort3dptr += 2;
+
+    *(info3dptr) = DRAW_POLY_TRANS;
+    *(info3dptr + 1) = 24;
+    *(info3dptr + 2) = 4;
+    *(info3dptr + 3) = (sint16)sx;
+    *(info3dptr + 4) = (sint16)sy;
+    *(info3dptr + 5) = (sint16)(sx + w);
+    *(info3dptr + 6) = (sint16)sy;
+    *(info3dptr + 7) = (sint16)(sx + w);
+    *(info3dptr + 8) = (sint16)(sy + h);
+    *(info3dptr + 9) = (sint16)sx;
+    *(info3dptr + 10) = (sint16)(sy + h);
+    info3dptr += 11;
+
+    surfacenum++;
+}

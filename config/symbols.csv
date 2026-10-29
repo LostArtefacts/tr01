@@ -205,7 +205,7 @@ address,size,name,symbol
 0x0001f7c4,255,S_DrawScreenSprite,S_DrawScreenSprite_
 0x0001f8c4,98,S_DrawScreenLine,S_DrawScreenLine_
 0x0001f928,290,S_DrawScreenBox,S_DrawScreenBox_
-0x0001fa4c,120,Func1fa4c,
+0x0001fa4c,120,S_DrawScreenFBox,S_DrawScreenFBox_
 0x0001fac4,18,Func1fac4,
 0x0001fad8,52,S_FadeToBlack,S_FadeToBlack_
 0x0001fb0c,1,Func1fb0c,
