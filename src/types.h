@@ -80,6 +80,9 @@ enum game_levels
 
 #define DONT_TARGET (-16384)
 
+#define GRAVITY 6
+#define FASTFALL_SPEED 128
+
 #define NOT_ACTIVE 0
 #define ACTIVE 1
 #define DEACTIVATED 2
@@ -324,6 +327,49 @@ typedef struct
     uint16 save_flags:1;
     uint16 save_anim:1;
 } OBJECT_INFO;
+
+typedef struct
+{
+    sint16 *frame_ptr;
+    sint16 interpolation;
+    sint16 current_anim_state;
+    sint32 velocity;
+    sint32 acceleration;
+    sint16 frame_base;
+    sint16 frame_end;
+    sint16 jump_anim_num;
+    sint16 jump_frame_num;
+    sint16 number_changes;
+    sint16 change_index;
+    sint16 number_commands;
+    sint16 command_index;
+} ANIM_STRUCT;
+
+typedef struct
+{
+    sint16 goal_anim_state;
+    sint16 number_ranges;
+    sint16 range_index;
+} CHANGE_STRUCT;
+
+typedef struct
+{
+    sint16 start_frame;
+    sint16 end_frame;
+    sint16 link_anim_num;
+    sint16 link_frame_num;
+} RANGE_STRUCT;
+
+enum command_types
+{
+    COMMAND_NULL = 0,
+    COMMAND_MOVE_ORIGIN,
+    COMMAND_JUMP_VELOCITY,
+    COMMAND_ATTACK_READY,
+    COMMAND_DEACTIVATE,
+    COMMAND_SOUND_FX,
+    COMMAND_EFFECT
+};
 
 typedef struct
 {

@@ -79,8 +79,8 @@ address,size,name,symbol
 0x00016bb4,349,Move3DPosTo3DPos,Move3DPosTo3DPos_
 0x00016d20,673,ControlPhase,ControlPhase_
 0x00016ff4,707,AnimateItem,AnimateItem_
-0x000172b8,154,Func172b8,
-0x00017354,101,Func17354,
+0x000172b8,154,GetChange,GetChange_
+0x00017354,101,TranslateItem,TranslateItem_
 0x000173bc,434,GetFloor,GetFloor_
 0x00017570,248,Func17570,
 0x0001767c,653,GetHeight,GetHeight_
@@ -1751,6 +1751,7 @@ address,size,name,symbol
 0x000c1824,4,flipeffect,_flipeffect
 0x000c1828,4,fliptimer,_fliptimer
 0x000c1888,4,bckscrn,_bckscrn
+0x000c18b8,,effect_routines,_effect_routines
 0x000c1988,4,CurrentLevel,_CurrentLevel
 0x000c198c,4,level_complete,_level_complete
 0x000c2084,4,overlay_flag,_overlay_flag
@@ -1783,7 +1784,9 @@ address,size,name,symbol
 0x000cb3d4,4,flip_status,_flip_status
 0x000cba10,1400,static_objects,_static_objects
 0x000cbf88,200,draw_rooms,_draw_rooms
+0x000cc06c,4,anims,_anims
 0x000cc074,4,meshes,_meshes
+0x000cc078,4,commands,_commands
 0x000cc088,4,room,_room
 0x000cc08c,4,number_draw_rooms,_number_draw_rooms
 0x000cc090,9550,objects,_objects

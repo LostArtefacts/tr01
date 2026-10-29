@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">9.60% (74)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">90.40% (697)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">9.73% (75)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">90.27% (696)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="71.70" height="6" x="0" y="0" class="named"/>
-<rect width="675.30" height="6" x="71.70" y="0" class="todo"/>
+<rect width="72.67" height="6" x="0" y="0" class="named"/>
+<rect width="674.33" height="6" x="72.67" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -146,9 +146,9 @@
 <rect width="12" height="12" x="390" y="15" class="named"><title>0x00016acc MoveLaraPosition (229 bytes)</title></rect>
 <rect width="12" height="12" x="405" y="15" class="named"><title>0x00016bb4 Move3DPosTo3DPos (349 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="15" class="named"><title>0x00016d20 ControlPhase (673 bytes)</title></rect>
-<rect width="12" height="12" x="435" y="15" class="todo"><title>0x00016ff4 AnimateItem (707 bytes)</title></rect>
-<rect width="12" height="12" x="450" y="15" class="todo"><title>0x000172b8 Func172b8 (154 bytes)</title></rect>
-<rect width="12" height="12" x="465" y="15" class="todo"><title>0x00017354 Func17354 (101 bytes)</title></rect>
+<rect width="12" height="12" x="435" y="15" class="named"><title>0x00016ff4 AnimateItem (707 bytes)</title></rect>
+<rect width="12" height="12" x="450" y="15" class="todo"><title>0x000172b8 GetChange (154 bytes)</title></rect>
+<rect width="12" height="12" x="465" y="15" class="todo"><title>0x00017354 TranslateItem (101 bytes)</title></rect>
 <rect width="12" height="12" x="480" y="15" class="todo"><title>0x000173bc GetFloor (434 bytes)</title></rect>
 <rect width="12" height="12" x="495" y="15" class="todo"><title>0x00017570 Func17570 (248 bytes)</title></rect>
 <rect width="12" height="12" x="510" y="15" class="todo"><title>0x0001767c GetHeight (653 bytes)</title></rect>
@@ -842,10 +842,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">12.44%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">87.56%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">12.79%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">87.21%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="92.94" height="6" x="0" y="0" class="named"/>
-<rect width="654.06" height="6" x="92.94" y="0" class="todo"/>
+<rect width="95.56" height="6" x="0" y="0" class="named"/>
+<rect width="651.44" height="6" x="95.56" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="54.65" height="67.43" x="0" y="0" class="todo"><title>0x0001bc98 Func1bc98 (4489 bytes)</title></rect>
@@ -911,7 +911,7 @@
 <rect width="21.80" height="23.91" x="297.76" y="137.54" class="todo"><title>0x00046000 Func46000 (738 bytes)</title></rect>
 <rect width="21.80" height="23.69" x="297.76" y="164.46" class="todo"><title>0x00028820 Func28820 (732 bytes)</title></rect>
 <rect width="21.80" height="23.07" x="297.76" y="191.15" class="named"><title>0x00013608 MoveCamera (715 bytes)</title></rect>
-<rect width="21.80" height="22.78" x="297.76" y="217.22" class="todo"><title>0x00016ff4 AnimateItem (707 bytes)</title></rect>
+<rect width="21.80" height="22.78" x="297.76" y="217.22" class="named"><title>0x00016ff4 AnimateItem (707 bytes)</title></rect>
 <rect width="22.35" height="21.83" x="322.57" y="0" class="todo"><title>0x00035020 Func35020 (696 bytes)</title></rect>
 <rect width="22.35" height="21.80" x="322.57" y="24.83" class="todo"><title>0x00042658 Func42658 (695 bytes)</title></rect>
 <rect width="22.35" height="21.58" x="322.57" y="49.63" class="todo"><title>0x00030b7c Func30b7c (689 bytes)</title></rect>
@@ -1174,7 +1174,7 @@
 <rect width="8.81" height="9.02" x="726.37" y="72.71" class="todo"><title>0x0001d650 Func1d650 (157 bytes)</title></rect>
 <rect width="8.81" height="9.02" x="738.19" y="72.71" class="todo"><title>0x00046db1 Func46db1 (157 bytes)</title></rect>
 <rect width="9" height="8.68" x="580.90" y="84.73" class="todo"><title>0x00024ee8 Func24ee8 (155 bytes)</title></rect>
-<rect width="9" height="8.61" x="580.90" y="96.41" class="todo"><title>0x000172b8 Func172b8 (154 bytes)</title></rect>
+<rect width="9" height="8.61" x="580.90" y="96.41" class="todo"><title>0x000172b8 GetChange (154 bytes)</title></rect>
 <rect width="9" height="8.53" x="580.90" y="108.02" class="todo"><title>0x00024bc4 ItemNewRoom (153 bytes)</title></rect>
 <rect width="9" height="8.46" x="580.90" y="119.55" class="todo"><title>0x00022734 Func22734 (152 bytes)</title></rect>
 <rect width="9" height="8.38" x="580.90" y="131.01" class="todo"><title>0x00024a30 RemoveActiveItem (151 bytes)</title></rect>
@@ -1277,7 +1277,7 @@
 <rect width="6.60" height="6.70" x="693.23" y="117.26" class="named"><title>0x00015fb8 UpdateLaraRoom (103 bytes)</title></rect>
 <rect width="6.51" height="6.70" x="702.83" y="117.26" class="todo"><title>0x0002f4b8 Func2f4b8 (102 bytes)</title></rect>
 <rect width="6.51" height="6.70" x="712.34" y="117.26" class="todo"><title>0x0003e240 phd_TranslateAbs (102 bytes)</title></rect>
-<rect width="6.41" height="6.70" x="721.85" y="117.26" class="todo"><title>0x00017354 Func17354 (101 bytes)</title></rect>
+<rect width="6.41" height="6.70" x="721.85" y="117.26" class="todo"><title>0x00017354 TranslateItem (101 bytes)</title></rect>
 <rect width="6.41" height="6.70" x="731.26" y="117.26" class="todo"><title>0x0003d9e8 phd_GetVectorAngles (101 bytes)</title></rect>
 <rect width="6.32" height="6.70" x="740.68" y="117.26" class="todo"><title>0x0001d84c Func1d84c (100 bytes)</title></rect>
 <rect width="6.19" height="6.84" x="624.54" y="126.96" class="todo"><title>0x0001e154 Func1e154 (100 bytes)</title></rect>

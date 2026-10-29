@@ -91,6 +91,7 @@ enum lara_meshes
     HEAD
 };
 
+extern void (*effect_routines[])(ITEM_INFO *item);
 extern int health_bar_timer;
 extern int overlay_flag;
 extern LARA_INFO lara;
