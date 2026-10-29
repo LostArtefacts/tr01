@@ -71,6 +71,7 @@ enum game_levels
 #define END_BIT 0x8000
 
 #define DATA_TYPE 0x00ff
+#define VALUE_BITS 0x03ff
 
 #define WALL_SHIFT 10
 #define WALL_L 1024

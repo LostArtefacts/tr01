@@ -207,4 +207,32 @@ enum floor_types
     LAVA_TYPE
 };
 
+enum trigger_types
+{
+    TRIGGER,
+    PAD,
+    SWITCH,
+    KEY,
+    PICKUP,
+    HEAVY,
+    ANTIPAD,
+    COMBAT,
+    DUMMY
+};
+
+enum trigobj_types
+{
+    TO_OBJECT,
+    TO_CAMERA,
+    TO_SINK,
+    TO_FLIPMAP,
+    TO_FLIPON,
+    TO_FLIPOFF,
+    TO_TARGET,
+    TO_FINISH,
+    TO_CD,
+    TO_FLIPEFFECT,
+    TO_SECRET
+};
+
 #endif

@@ -5,6 +5,8 @@
 
 #define WIBBLE_SIZE 32
 
+#define ABS(x) (((x) < 0) ? (-(x)) : (x))
+
 enum msoff
 {
     M00, M01, M02, M03,

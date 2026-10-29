@@ -232,7 +232,7 @@ address,size,name,symbol
 0x00020c0c,199,Func20c0c,
 0x00020cd4,91,Func20cd4,
 0x00020d30,186,Func20d30,
-0x00020dec,70,Func20dec,
+0x00020dec,70,S_ExitSystem,S_ExitSystem_
 0x00020e34,31,Func20e34,
 0x00020e54,109,Func20e54,
 0x00020ec4,47,Func20ec4,

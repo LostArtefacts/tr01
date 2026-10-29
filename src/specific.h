@@ -6,6 +6,7 @@
 extern char *bckscrn;
 extern sint32 input;
 
+void S_ExitSystem(char *exit_message);
 void S_UpdateInput(void);
 int S_SaveGame(void *data, int size, int slot);
 void CheckCheatMode(void);
