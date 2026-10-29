@@ -46,7 +46,9 @@ sint32 Sync(void);
 
 void CDLoop(void);
 uint8 *FileLoad(char *name, void *where, uint32 flags);
+int SwitchVideoMode(SETUP *pSetup);
 void ScreenClear(void);
+void ScreenDump(void);
 void ScreenPartialDump(void);
 void TempVideoRemove(void);
 void FadeToPal(int count, uint8 *pal);
