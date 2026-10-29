@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">33.16% (258)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">66.84% (520)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">33.29% (259)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">66.71% (519)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="247.72" height="6" x="0" y="0" class="named"/>
-<rect width="499.28" height="6" x="247.72" y="0" class="todo"/>
+<rect width="248.68" height="6" x="0" y="0" class="named"/>
+<rect width="498.32" height="6" x="248.68" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -326,7 +326,7 @@
 <rect width="12" height="12" x="90" y="75" class="named"><title>0x00022ef0 RingNotActive (1763 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="75" class="named"><title>0x000235d4 RingActive (59 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="75" class="named"><title>0x0002371c Inv_AddItem (1057 bytes)</title></rect>
-<rect width="12" height="12" x="135" y="75" class="todo"><title>0x00023b40 Inv_InsertItem (383 bytes)</title></rect>
+<rect width="12" height="12" x="135" y="75" class="named"><title>0x00023b40 Inv_InsertItem (383 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="75" class="todo"><title>0x00023cc0 Inv_RequestItem (124 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="75" class="todo"><title>0x00023d3c Inv_RemoveAllItems (40 bytes)</title></rect>
 <rect width="12" height="12" x="180" y="75" class="todo"><title>0x00023d64 Inv_RemoveItem (327 bytes)</title></rect>
@@ -849,10 +849,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">37.35%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">62.65%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">37.54%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">62.46%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="279.03" height="6" x="0" y="0" class="named"/>
-<rect width="467.97" height="6" x="279.03" y="0" class="todo"/>
+<rect width="280.44" height="6" x="0" y="0" class="named"/>
+<rect width="466.56" height="6" x="280.44" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1006,7 +1006,7 @@
 <rect width="15.51" height="15.68" x="472.44" y="95.31" class="todo"><title>0x00026234 Func26234 (387 bytes)</title></rect>
 <rect width="15.51" height="15.68" x="472.44" y="113.99" class="todo"><title>0x00038d58 LoadSamples (387 bytes)</title></rect>
 <rect width="15.51" height="15.54" x="472.44" y="132.68" class="todo"><title>0x00044895 Func44895 (384 bytes)</title></rect>
-<rect width="15.51" height="15.49" x="472.44" y="151.22" class="todo"><title>0x00023b40 Inv_InsertItem (383 bytes)</title></rect>
+<rect width="15.51" height="15.49" x="472.44" y="151.22" class="named"><title>0x00023b40 Inv_InsertItem (383 bytes)</title></rect>
 <rect width="15.51" height="15.49" x="472.44" y="169.71" class="todo"><title>0x00038f20 TestCollision (383 bytes)</title></rect>
 <rect width="15.51" height="15.40" x="472.44" y="188.20" class="todo"><title>0x00024304 Inv_RingDoMotions (381 bytes)</title></rect>
 <rect width="15.51" height="15.25" x="472.44" y="206.60" class="todo"><title>0x000456ec ShellInit (378 bytes)</title></rect>
