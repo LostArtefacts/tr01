@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">65.20% (517)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">34.80% (276)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">65.32% (518)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">34.68% (275)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="487.01" height="6" x="0" y="0" class="named"/>
-<rect width="259.99" height="6" x="487.01" y="0" class="todo"/>
+<rect width="487.95" height="6" x="0" y="0" class="named"/>
+<rect width="259.05" height="6" x="487.95" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -586,7 +586,7 @@
 <rect width="12" height="12" x="240" y="150" class="named"><title>0x0002fef0 DrawBridgeCollision (39 bytes)</title></rect>
 <rect width="12" height="12" x="255" y="150" class="named"><title>0x0002ff18 BridgeFlatFloor (19 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="150" class="named"><title>0x0002ff2c BridgeFlatCeiling (21 bytes)</title></rect>
-<rect width="12" height="12" x="285" y="150" class="todo"><title>0x0002ff44 Func2ff44 (71 bytes)</title></rect>
+<rect width="12" height="12" x="285" y="150" class="named"><title>0x0002ff44 GetOffset (71 bytes)</title></rect>
 <rect width="12" height="12" x="300" y="150" class="todo"><title>0x0002ff8c Func2ff8c (35 bytes)</title></rect>
 <rect width="12" height="12" x="315" y="150" class="todo"><title>0x0002ffb0 Func2ffb0 (37 bytes)</title></rect>
 <rect width="12" height="12" x="330" y="150" class="todo"><title>0x0002ffd8 Func2ffd8 (34 bytes)</title></rect>
@@ -864,10 +864,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">59.76%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">40.24%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">59.80%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">40.20%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="446.43" height="6" x="0" y="0" class="named"/>
-<rect width="300.57" height="6" x="446.43" y="0" class="todo"/>
+<rect width="446.68" height="6" x="0" y="0" class="named"/>
+<rect width="300.32" height="6" x="446.68" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.01" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1384,7 +1384,7 @@
 <rect width="5.19" height="4.83" x="717.70" y="144.07" class="todo"><title>0x0003ef8c AlterFOV (73 bytes)</title></rect>
 <rect width="5.08" height="4.83" x="725.89" y="144.07" class="named"><title>0x0001a1c4 S_CopyScreenToBuffer (72 bytes)</title></rect>
 <rect width="5.08" height="4.83" x="733.96" y="144.07" class="named"><title>0x0001e064 ChainBlockFX (72 bytes)</title></rect>
-<rect width="4.96" height="4.83" x="742.04" y="144.07" class="todo"><title>0x0002ff44 Func2ff44 (71 bytes)</title></rect>
+<rect width="4.96" height="4.83" x="742.04" y="144.07" class="named"><title>0x0002ff44 GetOffset (71 bytes)</title></rect>
 <rect width="4.78" height="5.02" x="659.15" y="151.91" class="todo"><title>0x0004671b Func4671b (71 bytes)</title></rect>
 <rect width="4.67" height="5.02" x="666.93" y="151.91" class="named"><title>0x00020dec S_ExitSystem (70 bytes)</title></rect>
 <rect width="4.67" height="5.02" x="674.60" y="151.91" class="todo"><title>0x0003ed00 Func3ed00 (70 bytes)</title></rect>
