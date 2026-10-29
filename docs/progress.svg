@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">37.02% (288)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">62.98% (490)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">37.15% (289)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">62.85% (489)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="276.52" height="6" x="0" y="0" class="named"/>
-<rect width="470.48" height="6" x="276.52" y="0" class="todo"/>
+<rect width="277.48" height="6" x="0" y="0" class="named"/>
+<rect width="469.52" height="6" x="277.48" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -356,7 +356,7 @@
 <rect width="12" height="12" x="540" y="75" class="named"><title>0x00024ac8 RemoveDrawnItem (114 bytes)</title></rect>
 <rect width="12" height="12" x="555" y="75" class="named"><title>0x00024b3c AddActiveItem (136 bytes)</title></rect>
 <rect width="12" height="12" x="570" y="75" class="named"><title>0x00024bc4 ItemNewRoom (153 bytes)</title></rect>
-<rect width="12" height="12" x="585" y="75" class="todo"><title>0x00024c60 Func24c60 (160 bytes)</title></rect>
+<rect width="12" height="12" x="585" y="75" class="named"><title>0x00024c60 SpawnItem (160 bytes)</title></rect>
 <rect width="12" height="12" x="600" y="75" class="todo"><title>0x00024d00 GlobalItemReplace (127 bytes)</title></rect>
 <rect width="12" height="12" x="615" y="75" class="todo"><title>0x00024d80 Func24d80 (56 bytes)</title></rect>
 <rect width="12" height="12" x="630" y="75" class="todo"><title>0x00024db8 CreateEffect (111 bytes)</title></rect>
@@ -849,10 +849,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">39.35%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">60.65%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">39.42%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">60.58%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="293.91" height="6" x="0" y="0" class="named"/>
-<rect width="453.09" height="6" x="293.91" y="0" class="todo"/>
+<rect width="294.49" height="6" x="0" y="0" class="named"/>
+<rect width="452.51" height="6" x="294.49" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1176,7 +1176,7 @@
 <rect width="9.17" height="8.97" x="666.22" y="72.61" class="todo"><title>0x0003dc64 phd_RotY (163 bytes)</title></rect>
 <rect width="9.02" height="8.97" x="678.39" y="72.61" class="named"><title>0x00010a00 AnimateTextures (161 bytes)</title></rect>
 <rect width="8.95" height="8.97" x="690.41" y="72.61" class="named"><title>0x00016020 GetTiltType (160 bytes)</title></rect>
-<rect width="8.95" height="8.97" x="702.36" y="72.61" class="todo"><title>0x00024c60 Func24c60 (160 bytes)</title></rect>
+<rect width="8.95" height="8.97" x="702.36" y="72.61" class="named"><title>0x00024c60 SpawnItem (160 bytes)</title></rect>
 <rect width="8.95" height="8.97" x="714.31" y="72.61" class="todo"><title>0x00026d28 Func26d28 (160 bytes)</title></rect>
 <rect width="8.95" height="8.97" x="726.25" y="72.61" class="todo"><title>0x0003dd08 phd_RotZ (160 bytes)</title></rect>
 <rect width="8.80" height="8.97" x="738.20" y="72.61" class="named"><title>0x00023ff0 Inv_GetItemOption (158 bytes)</title></rect>

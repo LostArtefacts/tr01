@@ -288,7 +288,7 @@ address,size,name,symbol
 0x00024ac8,114,RemoveDrawnItem,RemoveDrawnItem_
 0x00024b3c,136,AddActiveItem,AddActiveItem_
 0x00024bc4,153,ItemNewRoom,ItemNewRoom_
-0x00024c60,160,Func24c60,
+0x00024c60,160,SpawnItem,SpawnItem_
 0x00024d00,127,GlobalItemReplace,GlobalItemReplace_
 0x00024d80,56,Func24d80,
 0x00024db8,111,CreateEffect,CreateEffect_

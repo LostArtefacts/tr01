@@ -1,4 +1,5 @@
 #include "game.h"
+#include <string.h>
 
 sint16 next_item_free;
 sint16 next_item_active;
@@ -225,4 +226,25 @@ void ItemNewRoom(sint16 item_num, sint16 room_number)
     r = &room[room_number];
     item->next_item = r->item_number;
     r->item_number = item_num;
+}
+
+sint16 SpawnItem(ITEM_INFO *item, int object_number)
+{
+    ITEM_INFO *spawn;
+    sint16 spawn_num;
+
+    spawn_num = CreateItem();
+    if (spawn_num != NO_ITEM)
+    {
+        spawn = &items[spawn_num];
+
+        spawn->object_number = object_number;
+        spawn->room_number = item->room_number;
+        memcpy(&spawn->pos, &item->pos, sizeof(PHD_3DPOS));
+        InitialiseItem(spawn_num);
+        spawn->status = NOT_ACTIVE;
+        spawn->shade = 16 * 256;
+    }
+
+    return spawn_num;
 }
