@@ -813,6 +813,7 @@ address,size,name,symbol
 0x000482c1,1,Func482c1,
 0x000482c2,24,exit,exit_
 0x000482da,22,_exit,_exit_
+0x000482f0,,remove,remove_
 0x00048300,280,Func48300,
 0x00048418,215,Func48418,
 0x000484f0,69,Func484f0,

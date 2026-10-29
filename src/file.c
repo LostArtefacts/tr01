@@ -592,3 +592,27 @@ void FindCdDrive(void)
     printf("\nERROR: Please insert the TombRaider CD\n");
     exit(0);
 }
+
+int TestCdDrive(void)
+{
+    FILE *test;
+    char *path, testname[16];
+    int i, val;
+
+    for (i = 0; i < 8; i++)
+    {
+        val = (GetRandomDraw() * 26) / 32768;
+        testname[i] = val + 'A';
+    }
+    testname[8] = 0;
+
+    path = GetFullPath(testname);
+    test = fopen(path, "wb");
+    if (test != NULL)
+    {
+        fclose(test);
+        remove(path);
+        return 0;
+    }
+    return 1;
+}
