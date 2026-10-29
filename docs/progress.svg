@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">5.58% (43)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">94.42% (728)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">5.71% (44)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">94.29% (727)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="41.66" height="6" x="0" y="0" class="named"/>
-<rect width="705.34" height="6" x="41.66" y="0" class="todo"/>
+<rect width="42.63" height="6" x="0" y="0" class="named"/>
+<rect width="704.37" height="6" x="42.63" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -115,7 +115,7 @@
 <rect width="12" height="12" x="675" y="0" class="named"><title>0x000141f4 CombatCamera (317 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="0" class="named"><title>0x00014334 LookCamera (510 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="0" class="named"><title>0x00014534 FixedCamera (146 bytes)</title></rect>
-<rect width="12" height="12" x="720" y="0" class="todo"><title>0x000145c8 CalculateCamera (1276 bytes)</title></rect>
+<rect width="12" height="12" x="720" y="0" class="named"><title>0x000145c8 CalculateCamera (1276 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="0" class="todo"><title>0x00014ae0 Func14ae0 (279 bytes)</title></rect>
 <rect width="12" height="12" x="0" y="15" class="todo"><title>0x00014bf8 Func14bf8 (128 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="15" class="todo"><title>0x00014c78 Func14c78 (238 bytes)</title></rect>
@@ -124,7 +124,7 @@
 <rect width="12" height="12" x="60" y="15" class="todo"><title>0x00014efc Func14efc (28 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="15" class="todo"><title>0x00014f18 Func14f18 (168 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="15" class="todo"><title>0x00014fc0 Func14fc0 (35 bytes)</title></rect>
-<rect width="12" height="12" x="105" y="15" class="todo"><title>0x00014fe4 Func14fe4 (409 bytes)</title></rect>
+<rect width="12" height="12" x="105" y="15" class="todo"><title>0x00014fe4 InGameCinematicCamera (409 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="15" class="todo"><title>0x000151c0 Func151c0 (1702 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="15" class="todo"><title>0x00015868 Func15868 (45 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="15" class="todo"><title>0x000158a8 Func158a8 (1445 bytes)</title></rect>
@@ -530,13 +530,13 @@
 <rect width="12" height="12" x="150" y="135" class="todo"><title>0x0002d11c InitialiseLOT (39 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="135" class="todo"><title>0x0002d144 Func2d144 (87 bytes)</title></rect>
 <rect width="12" height="12" x="180" y="135" class="todo"><title>0x0002d1a0 Func2d1a0 (273 bytes)</title></rect>
-<rect width="12" height="12" x="195" y="135" class="todo"><title>0x0002d2b4 Func2d2b4 (1336 bytes)</title></rect>
+<rect width="12" height="12" x="195" y="135" class="todo"><title>0x0002d2b4 SoundEffect (1336 bytes)</title></rect>
 <rect width="12" height="12" x="210" y="135" class="todo"><title>0x0002d7ec Func2d7ec (181 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="135" class="todo"><title>0x0002d8a4 Func2d8a4 (56 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="135" class="todo"><title>0x0002d8dc Func2d8dc (94 bytes)</title></rect>
 <rect width="12" height="12" x="255" y="135" class="todo"><title>0x0002d93c Func2d93c (414 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="135" class="todo"><title>0x0002dadc Func2dadc (292 bytes)</title></rect>
-<rect width="12" height="12" x="285" y="135" class="todo"><title>0x0002dc00 Func2dc00 (312 bytes)</title></rect>
+<rect width="12" height="12" x="285" y="135" class="todo"><title>0x0002dc00 mn_stop_sound_effect (312 bytes)</title></rect>
 <rect width="12" height="12" x="300" y="135" class="todo"><title>0x0002dd38 Func2dd38 (14 bytes)</title></rect>
 <rect width="12" height="12" x="315" y="135" class="todo"><title>0x0002dd48 Func2dd48 (24 bytes)</title></rect>
 <rect width="12" height="12" x="330" y="135" class="todo"><title>0x0002dd60 Func2dd60 (6 bytes)</title></rect>
@@ -653,7 +653,7 @@
 <rect width="12" height="12" x="495" y="165" class="todo"><title>0x00038d58 Func38d58 (387 bytes)</title></rect>
 <rect width="12" height="12" x="510" y="165" class="todo"><title>0x00038edc Func38edc (4 bytes)</title></rect>
 <rect width="12" height="12" x="525" y="165" class="todo"><title>0x00038ee0 Func38ee0 (218 bytes)</title></rect>
-<rect width="12" height="12" x="540" y="165" class="todo"><title>0x00038f14 Func38f14 (6 bytes)</title></rect>
+<rect width="12" height="12" x="540" y="165" class="todo"><title>0x00038f14 S_CDVolume (6 bytes)</title></rect>
 <rect width="12" height="12" x="555" y="165" class="todo"><title>0x00038f20 Func38f20 (383 bytes)</title></rect>
 <rect width="12" height="12" x="570" y="165" class="todo"><title>0x000390a0 Func390a0 (681 bytes)</title></rect>
 <rect width="12" height="12" x="585" y="165" class="todo"><title>0x0003934c Func3934c (445 bytes)</title></rect>
@@ -842,10 +842,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">7.19%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">92.81%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">7.82%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">92.18%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="53.71" height="6" x="0" y="0" class="named"/>
-<rect width="693.29" height="6" x="53.71" y="0" class="todo"/>
+<rect width="58.44" height="6" x="0" y="0" class="named"/>
+<rect width="688.56" height="6" x="58.44" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="54.65" height="67.43" x="0" y="0" class="todo"><title>0x0001bc98 Func1bc98 (4489 bytes)</title></rect>
@@ -868,11 +868,11 @@
 <rect width="32.78" height="32.82" x="141.84" y="36.30" class="todo"><title>0x0001ac74 Func1ac74 (1417 bytes)</title></rect>
 <rect width="32.78" height="32.69" x="141.84" y="72.12" class="todo"><title>0x000304f8 Func304f8 (1412 bytes)</title></rect>
 <rect width="32.78" height="32.24" x="141.84" y="107.81" class="todo"><title>0x0002f5bc Func2f5bc (1394 bytes)</title></rect>
-<rect width="32.78" height="30.77" x="141.84" y="143.05" class="todo"><title>0x0002d2b4 Func2d2b4 (1336 bytes)</title></rect>
+<rect width="32.78" height="30.77" x="141.84" y="143.05" class="todo"><title>0x0002d2b4 SoundEffect (1336 bytes)</title></rect>
 <rect width="32.78" height="30.27" x="141.84" y="176.82" class="todo"><title>0x0002c050 Func2c050 (1316 bytes)</title></rect>
 <rect width="32.78" height="29.91" x="141.84" y="210.09" class="todo"><title>0x000406c8 Func406c8 (1302 bytes)</title></rect>
 <rect width="28.31" height="34.55" x="177.62" y="0" class="todo"><title>0x0004130c Func4130c (1300 bytes)</title></rect>
-<rect width="28.31" height="33.86" x="177.62" y="37.55" class="todo"><title>0x000145c8 CalculateCamera (1276 bytes)</title></rect>
+<rect width="28.31" height="33.86" x="177.62" y="37.55" class="named"><title>0x000145c8 CalculateCamera (1276 bytes)</title></rect>
 <rect width="28.31" height="33.40" x="177.62" y="74.41" class="todo"><title>0x00030e30 Func30e30 (1260 bytes)</title></rect>
 <rect width="28.31" height="31.12" x="177.62" y="110.81" class="todo"><title>0x000319ec Func319ec (1181 bytes)</title></rect>
 <rect width="28.31" height="30.28" x="177.62" y="144.93" class="todo"><title>0x00031fcc Func31fcc (1152 bytes)</title></rect>
@@ -982,7 +982,7 @@
 <rect width="16.69" height="16.02" x="453.88" y="19.62" class="todo"><title>0x0002d93c Func2d93c (414 bytes)</title></rect>
 <rect width="16.69" height="16.02" x="453.88" y="38.64" class="todo"><title>0x0003abf0 Func3abf0 (414 bytes)</title></rect>
 <rect width="16.69" height="15.88" x="453.88" y="57.66" class="todo"><title>0x000252f8 Func252f8 (411 bytes)</title></rect>
-<rect width="16.69" height="15.79" x="453.88" y="76.54" class="todo"><title>0x00014fe4 Func14fe4 (409 bytes)</title></rect>
+<rect width="16.69" height="15.79" x="453.88" y="76.54" class="todo"><title>0x00014fe4 InGameCinematicCamera (409 bytes)</title></rect>
 <rect width="16.69" height="15.65" x="453.88" y="95.33" class="named"><title>0x00010310 S_PrintShadow (406 bytes)</title></rect>
 <rect width="16.69" height="15.61" x="453.88" y="113.99" class="todo"><title>0x00027d4c Func27d4c (405 bytes)</title></rect>
 <rect width="16.69" height="15.61" x="453.88" y="132.60" class="todo"><title>0x0002a8c0 Func2a8c0 (405 bytes)</title></rect>
@@ -1026,7 +1026,7 @@
 <rect width="14.27" height="13.55" x="597.28" y="0" class="todo"><title>0x00035438 Func35438 (316 bytes)</title></rect>
 <rect width="14.11" height="13.55" x="614.56" y="0" class="named"><title>0x00011060 BatControl (313 bytes)</title></rect>
 <rect width="14.05" height="13.55" x="631.66" y="0" class="todo"><title>0x0001dac0 Func1dac0 (312 bytes)</title></rect>
-<rect width="14.05" height="13.55" x="648.72" y="0" class="todo"><title>0x0002dc00 Func2dc00 (312 bytes)</title></rect>
+<rect width="14.05" height="13.55" x="648.72" y="0" class="todo"><title>0x0002dc00 mn_stop_sound_effect (312 bytes)</title></rect>
 <rect width="14" height="13.55" x="665.77" y="0" class="todo"><title>0x0003b3fc Func3b3fc (311 bytes)</title></rect>
 <rect width="13.89" height="13.55" x="682.77" y="0" class="todo"><title>0x0002793c Func2793c (309 bytes)</title></rect>
 <rect width="13.83" height="13.55" x="699.66" y="0" class="todo"><title>0x00044761 Func44761 (308 bytes)</title></rect>
@@ -1598,7 +1598,7 @@
 <rect width="0.10" height="0.10" x="745.44" y="233.38" class="todo"><title>0x0002045c Func2045c (6 bytes)</title></rect>
 <rect width="0.10" height="0.10" x="747.72" y="233.38" class="todo"><title>0x0002dd60 Func2dd60 (6 bytes)</title></rect>
 <rect width="0.10" height="0.10" x="740.51" y="235.76" class="todo"><title>0x000352e0 Func352e0 (6 bytes)</title></rect>
-<rect width="0.10" height="0.10" x="740.51" y="238.31" class="todo"><title>0x00038f14 Func38f14 (6 bytes)</title></rect>
+<rect width="0.10" height="0.10" x="740.51" y="238.31" class="todo"><title>0x00038f14 S_CDVolume (6 bytes)</title></rect>
 <rect width="0.10" height="0.10" x="740.51" y="240.87" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
 <rect width="0.10" height="0.10" x="742.63" y="235.76" class="named"><title>0x0001005c S_ClearScreen (5 bytes)</title></rect>
 <rect width="0.10" height="0.10" x="742.63" y="238.17" class="todo"><title>0x0001de64 Func1de64 (5 bytes)</title></rect>

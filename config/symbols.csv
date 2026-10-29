@@ -56,7 +56,7 @@ address,size,name,symbol
 0x00014efc,28,Func14efc,
 0x00014f18,168,Func14f18,
 0x00014fc0,35,Func14fc0,
-0x00014fe4,409,Func14fe4,
+0x00014fe4,409,InGameCinematicCamera,InGameCinematicCamera_
 0x000151c0,1702,Func151c0,
 0x00015868,45,Func15868,
 0x000158a8,1445,Func158a8,
@@ -462,13 +462,13 @@ address,size,name,symbol
 0x0002d11c,39,InitialiseLOT,InitialiseLOT_
 0x0002d144,87,Func2d144,
 0x0002d1a0,273,Func2d1a0,
-0x0002d2b4,1336,Func2d2b4,
+0x0002d2b4,1336,SoundEffect,SoundEffect_
 0x0002d7ec,181,Func2d7ec,
 0x0002d8a4,56,Func2d8a4,
 0x0002d8dc,94,Func2d8dc,
 0x0002d93c,414,Func2d93c,
 0x0002dadc,292,Func2dadc,
-0x0002dc00,312,Func2dc00,
+0x0002dc00,312,mn_stop_sound_effect,mn_stop_sound_effect_
 0x0002dd38,14,Func2dd38,
 0x0002dd48,24,Func2dd48,
 0x0002dd60,6,Func2dd60,
@@ -585,7 +585,7 @@ address,size,name,symbol
 0x00038d58,387,Func38d58,
 0x00038edc,4,Func38edc,
 0x00038ee0,218,Func38ee0,
-0x00038f14,6,Func38f14,
+0x00038f14,6,S_CDVolume,S_CDVolume_
 0x00038f20,383,Func38f20,
 0x000390a0,681,Func390a0,
 0x0003934c,445,Func3934c,
@@ -1745,6 +1745,7 @@ address,size,name,symbol
 0x000c1888,4,bckscrn,_bckscrn
 0x000c1988,4,CurrentLevel,_CurrentLevel
 0x000c2090,24,game_setup,_game_setup
+0x000c384c,2,Option_Music_Volume,_Option_Music_Volume
 0x000c409c,4,wibble_offset,_wibble_offset
 0x000c40a0,4,water_effect,_water_effect
 0x000c40a4,4,shade_effect,_shade_effect

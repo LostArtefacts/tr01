@@ -111,6 +111,9 @@ typedef struct
     sint8 ceiling;
 } FLOOR_INFO;
 
+#define UNDERWATER 1
+#define SFX_ALWAYS 2
+
 typedef struct
 {
     sint32 x;
@@ -207,6 +210,10 @@ typedef struct
 } OBJECT_INFO;
 
 #define NO_CAMERA -1
+
+#define FOLLOW_CENTRE 1
+#define NO_CHUNKY 2
+#define CHASE_OBJECT 3
 
 typedef enum
 {

@@ -6,5 +6,6 @@
 extern char *bckscrn;
 
 char *GetFullPath(char *filename);
+void S_CDVolume(sint16 volume);
 
 #endif

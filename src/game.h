@@ -7,6 +7,9 @@
 #include "lara.h"
 #include "control.h"
 #include "3dglodef.h"
+#include "inventry.h"
+#include "mn_sinfo.h"
+#include "specific.h"
 
 #define TITLE 20
 
