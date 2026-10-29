@@ -377,3 +377,16 @@ void RaisingBlockFX(ITEM_INFO *item)
     SoundEffect(117, NULL, NULL);
     flipeffect = -1;
 }
+
+void ChainBlockFX(ITEM_INFO *item)
+{
+    if (fliptimer == 0)
+        SoundEffect(173, NULL, NULL);
+
+    fliptimer++;
+    if (fliptimer == 55)
+    {
+        SoundEffect(33, NULL, NULL);
+        flipeffect = -1;
+    }
+}
