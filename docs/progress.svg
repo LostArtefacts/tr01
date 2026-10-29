@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">16.80% (130)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">83.20% (644)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">16.93% (131)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">83.07% (643)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="125.47" height="6" x="0" y="0" class="named"/>
-<rect width="621.53" height="6" x="125.47" y="0" class="todo"/>
+<rect width="126.43" height="6" x="0" y="0" class="named"/>
+<rect width="620.57" height="6" x="126.43" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -201,7 +201,7 @@
 <rect width="12" height="12" x="465" y="30" class="named"><title>0x0001ce24 InitInterpolate (58 bytes)</title></rect>
 <rect width="12" height="12" x="480" y="30" class="named"><title>0x0001ce60 phd_PopMatrix_I (35 bytes)</title></rect>
 <rect width="12" height="12" x="495" y="30" class="named"><title>0x0001ce84 phd_PushMatrix_I (49 bytes)</title></rect>
-<rect width="12" height="12" x="510" y="30" class="todo"><title>0x0001ceb8 phd_RotY_I (44 bytes)</title></rect>
+<rect width="12" height="12" x="510" y="30" class="named"><title>0x0001ceb8 phd_RotY_I (44 bytes)</title></rect>
 <rect width="12" height="12" x="525" y="30" class="todo"><title>0x0001cee4 phd_RotX_I (44 bytes)</title></rect>
 <rect width="12" height="12" x="540" y="30" class="todo"><title>0x0001cf10 phd_RotZ_I (44 bytes)</title></rect>
 <rect width="12" height="12" x="555" y="30" class="todo"><title>0x0001cf3c phd_TranslateRel_I (53 bytes)</title></rect>
@@ -845,10 +845,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">20.18%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">79.82%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">20.20%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">79.80%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="150.76" height="6" x="0" y="0" class="named"/>
-<rect width="596.24" height="6" x="150.76" y="0" class="todo"/>
+<rect width="150.92" height="6" x="0" y="0" class="named"/>
+<rect width="596.08" height="6" x="150.92" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="todo"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1462,7 +1462,7 @@
 <rect width="3.42" height="3.27" x="687.20" y="218.34" class="todo"><title>0x00042fb8 Func42fb8 (45 bytes)</title></rect>
 <rect width="3.42" height="3.13" x="687.20" y="224.61" class="named"><title>0x0001347c CreatureTilt (44 bytes)</title></rect>
 <rect width="3.42" height="3.13" x="687.20" y="230.74" class="named"><title>0x0001a2e8 S_FadeOutInventory (44 bytes)</title></rect>
-<rect width="3.42" height="3.13" x="687.20" y="236.87" class="todo"><title>0x0001ceb8 phd_RotY_I (44 bytes)</title></rect>
+<rect width="3.42" height="3.13" x="687.20" y="236.87" class="named"><title>0x0001ceb8 phd_RotY_I (44 bytes)</title></rect>
 <rect width="3.39" height="3.15" x="693.61" y="180.73" class="todo"><title>0x0001cee4 phd_RotX_I (44 bytes)</title></rect>
 <rect width="3.39" height="3.15" x="700.01" y="180.73" class="todo"><title>0x0001cf10 phd_RotZ_I (44 bytes)</title></rect>
 <rect width="3.39" height="3.15" x="706.40" y="180.73" class="todo"><title>0x0001e0ac Stairs2SlopeFX (44 bytes)</title></rect>
