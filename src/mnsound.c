@@ -545,6 +545,12 @@ extern void mn_stop_sound_effect(int sfx_num, PHD_3DPOS *pos)
     }
 }
 
+void mn_adjust_master_volume(int newVol)
+{
+    mn_sound_master_vol_default = newVol & 63;
+    mn_sound_master_volume = mn_sound_master_vol_default;
+}
+
 void mn_clear_fx_slot(MN_SFX_PLAY_INFO *slot)
 {
     slot->handle = -1;
