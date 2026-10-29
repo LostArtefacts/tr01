@@ -14,6 +14,9 @@ sint32 TitleSequence(void);
 char exit_message[128] = "TombRaider";
 int title_loaded = 0;
 
+int cheat_mode = 0, cheat_turn;
+sint16 as, cheat_angle;
+
 void main(int argc, char **argv, char **envp)
 {
     sint32 option, level_number;
@@ -138,4 +141,91 @@ sint32 TitleSequence(void)
         }
     }
     return EXITGAME;
+}
+
+void CheckCheatMode(void)
+{
+    if (CurrentLevel == GYM)
+        return;
+
+    as = lara_item->current_anim_state;
+    switch (cheat_mode)
+    {
+    case 0:
+        if (as == AS_WALK)
+            cheat_mode = 1;
+        break;
+    case 1:
+        if (as != AS_WALK)
+            cheat_mode = (as == AS_STOP) ? 2 : 0;
+        break;
+    case 2:
+        if (as != AS_STOP)
+            cheat_mode = (as == AS_BACK) ? 3 : 0;
+        break;
+    case 3:
+        if (as != AS_BACK)
+            cheat_mode = (as == AS_STOP) ? 4 : 0;
+        break;
+    case 4:
+        if (as != AS_STOP)
+        {
+            cheat_angle = lara_item->pos.y_rot;
+            cheat_turn = 0;
+            if (as == AS_TURN_L)
+                cheat_mode = 5;
+            else if (as == AS_TURN_R)
+                cheat_mode = 6;
+            else
+                cheat_mode = 0;
+        }
+        break;
+    case 5:
+        if (as != AS_TURN_L && as != AS_FASTTURN)
+            cheat_mode = (cheat_turn < -0x17000) ? 7 : 0;
+        else
+        {
+            cheat_turn += (sint16)(lara_item->pos.y_rot - cheat_angle);
+            cheat_angle = lara_item->pos.y_rot;
+        }
+        break;
+    case 6:
+        if (as != AS_TURN_R && as != AS_FASTTURN)
+            cheat_mode = (cheat_turn > 0x17000) ? 7 : 0;
+        else
+        {
+            cheat_turn += (sint16)(lara_item->pos.y_rot - cheat_angle);
+            cheat_angle = lara_item->pos.y_rot;
+        }
+        break;
+    case 7:
+        if (as != AS_STOP)
+        {
+            if (as == AS_COMPRESS)
+                cheat_mode = 8;
+            else
+                cheat_mode = 0;
+        }
+        break;
+    case 8:
+        if (lara_item->fallspeed > 0)
+        {
+            if (as == AS_FORWARDJUMP)
+                level_complete = 1;
+            else if (as == AS_BACKJUMP)
+            {
+                Inv_AddItem(SHOTGUN_ITEM);
+                Inv_AddItem(MAGNUM_ITEM);
+                Inv_AddItem(UZI_ITEM);
+                lara.shotgun.ammo = 500;
+                lara.magnums.ammo = 500;
+                lara.uzis.ammo = 5000;
+                SoundEffect(7, NULL, SFX_ALWAYS);
+            }
+            cheat_mode = 0;
+        }
+        break;
+    default:
+        cheat_mode = 0;
+    }
 }

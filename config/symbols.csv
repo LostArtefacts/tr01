@@ -2023,6 +2023,7 @@ address,size,name,symbol
 0x000c3e3c,44,level_music,_level_music
 0x000c3e68,128,exit_message,_exit_message
 0x000c3ee8,4,title_loaded,_title_loaded
+0x000c3eec,4,cheat_mode,_cheat_mode
 0x000c409c,4,wibble_offset,_wibble_offset
 0x000c40a0,4,water_effect,_water_effect
 0x000c40a4,4,shade_effect,_shade_effect
@@ -2110,6 +2111,9 @@ address,size,name,symbol
 0x000cee8c,4,SGcount,_SGcount
 0x000cee90,4,SGpoint,_SGpoint
 0x000cee94,10596,savegame,_savegame
+0x000d17f8,4,cheat_turn,_cheat_turn
+0x000d17fc,2,as,_as
+0x000d17fe,2,cheat_angle,_cheat_angle
 0x000d2744,8192,phdsprinfo,_phdsprinfo
 0x000d4744,48000,vbuf,_vbuf
 0x000e02c4,40960,phdtextinfo,_phdtextinfo
