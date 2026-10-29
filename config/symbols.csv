@@ -230,7 +230,7 @@ address,size,name,symbol
 0x00020980,38,DrawGameInfo,DrawGameInfo_
 0x000209a8,124,DrawHealthBar,DrawHealthBar_
 0x00020a24,84,DrawAirBar,DrawAirBar_
-0x00020a78,56,Func20a78,
+0x00020a78,56,MakeAmmoString,MakeAmmoString_
 0x00020ac0,306,DrawAmmoInfo,DrawAmmoInfo_
 0x00020bf4,22,Func20bf4,
 0x00020c0c,199,DrawPickups,DrawPickups_
@@ -1793,6 +1793,7 @@ address,size,name,symbol
 0x000c1ff2,3,str_of,_str_of
 0x000c2042,11,sav_mess7,_sav_mess7
 0x000c2084,4,overlay_flag,_overlay_flag
+0x000c208c,4,ammotext,_ammotext
 0x000c2090,24,game_setup,_game_setup
 0x000c20a8,4,malloc_buffer,_malloc_buffer
 0x000c352c,,Load_Game_Requester,_Load_Game_Requester

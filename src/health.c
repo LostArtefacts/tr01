@@ -51,3 +51,20 @@ void DrawAirBar(void)
 
     S_DrawAirBar((air * 100) / LARA_AIR);
 }
+
+TEXTSTRING *ammotext = NULL;
+
+void MakeAmmoString(char *string)
+{
+    char *c;
+
+    for (c = string; *c != 0; c++)
+    {
+        if (*c == 32)
+            continue;
+        else if (*c - 'A' >= 0)
+            *c += 12 - 'A';
+        else
+            *c += 1 - '0';
+    }
+}

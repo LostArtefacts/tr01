@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">29.55% (229)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">70.45% (546)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">29.68% (230)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">70.32% (545)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="220.73" height="6" x="0" y="0" class="named"/>
-<rect width="526.27" height="6" x="220.73" y="0" class="todo"/>
+<rect width="221.69" height="6" x="0" y="0" class="named"/>
+<rect width="525.31" height="6" x="221.69" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -298,7 +298,7 @@
 <rect width="12" height="12" x="420" y="60" class="named"><title>0x00020980 DrawGameInfo (38 bytes)</title></rect>
 <rect width="12" height="12" x="435" y="60" class="named"><title>0x000209a8 DrawHealthBar (124 bytes)</title></rect>
 <rect width="12" height="12" x="450" y="60" class="named"><title>0x00020a24 DrawAirBar (84 bytes)</title></rect>
-<rect width="12" height="12" x="465" y="60" class="todo"><title>0x00020a78 Func20a78 (56 bytes)</title></rect>
+<rect width="12" height="12" x="465" y="60" class="named"><title>0x00020a78 MakeAmmoString (56 bytes)</title></rect>
 <rect width="12" height="12" x="480" y="60" class="todo"><title>0x00020ac0 DrawAmmoInfo (306 bytes)</title></rect>
 <rect width="12" height="12" x="495" y="60" class="todo"><title>0x00020bf4 Func20bf4 (22 bytes)</title></rect>
 <rect width="12" height="12" x="510" y="60" class="todo"><title>0x00020c0c DrawPickups (199 bytes)</title></rect>
@@ -846,10 +846,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">31.37%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">68.63%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">31.39%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">68.61%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="234.30" height="6" x="0" y="0" class="named"/>
-<rect width="512.70" height="6" x="234.30" y="0" class="todo"/>
+<rect width="234.50" height="6" x="0" y="0" class="named"/>
+<rect width="512.50" height="6" x="234.50" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1399,7 +1399,7 @@
 <rect width="3.91" height="4.50" x="667.30" y="198.90" class="todo"><title>0x00024284 Func24284 (58 bytes)</title></rect>
 <rect width="3.91" height="4.50" x="667.30" y="206.40" class="todo"><title>0x00039724 T_AddBackground (58 bytes)</title></rect>
 <rect width="3.91" height="4.37" x="667.30" y="213.90" class="todo"><title>0x000469a8 Func469a8 (57 bytes)</title></rect>
-<rect width="3.91" height="4.24" x="667.30" y="221.27" class="todo"><title>0x00020a78 Func20a78 (56 bytes)</title></rect>
+<rect width="3.91" height="4.24" x="667.30" y="221.27" class="named"><title>0x00020a78 MakeAmmoString (56 bytes)</title></rect>
 <rect width="3.91" height="4.24" x="667.30" y="228.51" class="todo"><title>0x00024d80 Func24d80 (56 bytes)</title></rect>
 <rect width="3.91" height="4.24" x="667.30" y="235.76" class="todo"><title>0x0002d8a4 mn_reset_ambient_loudness (56 bytes)</title></rect>
 <rect width="3.95" height="4.08" x="674.21" y="160.61" class="named"><title>0x00019708 GetDemoInput (55 bytes)</title></rect>
