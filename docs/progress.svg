@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">67.76% (538)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">32.24% (256)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">67.88% (539)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">32.12% (255)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="506.15" height="6" x="0" y="0" class="named"/>
-<rect width="240.85" height="6" x="506.15" y="0" class="todo"/>
+<rect width="507.09" height="6" x="0" y="0" class="named"/>
+<rect width="239.91" height="6" x="507.09" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -605,7 +605,7 @@
 <rect width="12" height="12" x="525" y="150" class="named"><title>0x00030e30 do_sound_option (1260 bytes)</title></rect>
 <rect width="12" height="12" x="540" y="150" class="named"><title>0x0003131c do_compass_option (27 bytes)</title></rect>
 <rect width="12" height="12" x="555" y="150" class="named"><title>0x00031338 FlashConflicts (117 bytes)</title></rect>
-<rect width="12" height="12" x="570" y="150" class="todo"><title>0x000313b0 Func313b0 (81 bytes)</title></rect>
+<rect width="12" height="12" x="570" y="150" class="named"><title>0x000313b0 DefaultConflict (81 bytes)</title></rect>
 <rect width="12" height="12" x="585" y="150" class="todo"><title>0x00031414 do_control_option (1496 bytes)</title></rect>
 <rect width="12" height="12" x="600" y="150" class="todo"><title>0x000319ec Func319ec (1181 bytes)</title></rect>
 <rect width="12" height="12" x="615" y="150" class="todo"><title>0x00031e8c Func31e8c (124 bytes)</title></rect>
@@ -865,10 +865,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">63.61%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">36.39%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">63.65%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">36.35%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="475.17" height="6" x="0" y="0" class="named"/>
-<rect width="271.83" height="6" x="475.17" y="0" class="todo"/>
+<rect width="475.46" height="6" x="0" y="0" class="named"/>
+<rect width="271.54" height="6" x="475.46" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.01" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1362,7 +1362,7 @@
 <rect width="5.17" height="5.82" x="717.43" y="135.25" class="named"><title>0x0001fb10 S_Wait (82 bytes)</title></rect>
 <rect width="5.17" height="5.82" x="725.59" y="135.25" class="named"><title>0x0001fd50 S_PlayFMV (82 bytes)</title></rect>
 <rect width="5.17" height="5.82" x="733.76" y="135.25" class="named"><title>0x00030114 BoatControl (82 bytes)</title></rect>
-<rect width="5.07" height="5.82" x="741.93" y="135.25" class="todo"><title>0x000313b0 Func313b0 (81 bytes)</title></rect>
+<rect width="5.07" height="5.82" x="741.93" y="135.25" class="named"><title>0x000313b0 DefaultConflict (81 bytes)</title></rect>
 <rect width="5.27" height="5.61" x="650.88" y="144.07" class="todo"><title>0x0003950c Func3950c (81 bytes)</title></rect>
 <rect width="5.27" height="5.50" x="650.88" y="152.68" class="named"><title>0x0001d7fc Twinkle (80 bytes)</title></rect>
 <rect width="5.27" height="5.39" x="650.88" y="161.18" class="named"><title>0x00013aa0 BadPosition (79 bytes)</title></rect>

@@ -537,7 +537,7 @@ address,size,name,symbol
 0x00030e30,1260,do_sound_option,do_sound_option_
 0x0003131c,27,do_compass_option,do_compass_option_
 0x00031338,117,FlashConflicts,FlashConflicts_
-0x000313b0,81,Func313b0,
+0x000313b0,81,DefaultConflict,DefaultConflict_
 0x00031414,1496,do_control_option,do_control_option_
 0x000319ec,1181,Func319ec,
 0x00031e8c,124,Func31e8c,

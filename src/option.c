@@ -641,6 +641,28 @@ void FlashConflicts(void)
     }
 }
 
+void DefaultConflict(void)
+{
+    int i, j;
+    sint16 key;
+
+    for (i = 0; i < 13; i++)
+    {
+        key = layout[0][i];
+
+        conflict[i] = 0;
+
+        for (j = 0; j < 13; j++)
+        {
+            if (key == layout[1][j])
+            {
+                conflict[i] = 1;
+                break;
+            }
+        }
+    }
+}
+
 void Init_Requester(REQUEST_INFO *req)
 {
     int n;
