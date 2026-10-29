@@ -111,3 +111,19 @@ void S_DrawScreenSprite(sint32 sx, sint32 sy, sint32 z, sint32 scaleH, sint32 sc
 
     surfacenum++;
 }
+
+void S_DrawScreenLine(sint32 sx, sint32 sy, sint32 z, sint32 w, sint32 h, sint32 col, uint16 *grdptr, uint16 flags)
+{
+    *(sort3dptr) = (sint32)(info3dptr);
+    *(sort3dptr + 1) = z << 3;
+    sort3dptr += 2;
+
+    *(info3dptr) = DRAW_POLY_LINE;
+    *(info3dptr + 1) = (sint16)sx;
+    *(info3dptr + 2) = (sint16)sy;
+    *(info3dptr + 3) = (sint16)(sx + w);
+    *(info3dptr + 4) = (sint16)(sy + h);
+    *(info3dptr + 5) = (sint16)col;
+    info3dptr += 6;
+    surfacenum++;
+}
