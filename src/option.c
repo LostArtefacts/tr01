@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "game.h"
 #include "invdata.h"
+#include <string.h>
 
 int keychange = 0, select_key = 0;
 int iconfig = 0;
@@ -1000,4 +1001,144 @@ void Remove_Requester(REQUEST_INFO *req)
         T_RemovePrint(req->texts[n]);
         req->texts[n] = NULL;
     }
+}
+
+sint32 Display_Requester(REQUEST_INFO *req)
+{
+    int n;
+    int linesheight;
+    int lineoneoff;
+    int lineqty;
+
+    if (hires_flag)
+    {
+        req->ypos = -80;
+        req->vis_lines = 10;
+    }
+    else
+    {
+        req->ypos = -20;
+        req->vis_lines = 5;
+    }
+
+    linesheight = (req->vis_lines * req->line_height) + 10;
+    lineoneoff = req->ypos - linesheight;
+    lineqty = req->vis_lines;
+
+    if (req->items < req->vis_lines)
+        lineqty = req->items;
+
+    if (!req->heading)
+    {
+        req->heading = T_Print(req->xpos, lineoneoff - req->line_height - 10, req->zpos, req->headingtext);
+        T_CentreH(req->heading, 1);
+        T_BottomAlign(req->heading, 1);
+        T_AddBackground(req->heading, req->pixwidth - 4, 0, 0, 0, 8, C_BLACK, req_main_gour1, D_TRANS2);
+        T_AddOutline(req->heading, 1, C_ORANGE, req_main_gour2, NULL);
+    }
+    if (!req->background)
+    {
+        req->background = T_Print(req->xpos, lineoneoff - req->line_height - 12, 0, " ");
+        T_CentreH(req->background, 1);
+        T_BottomAlign(req->background, 1);
+        T_AddBackground(req->background, req->pixwidth, linesheight + req->line_height + 12, 0, 0, 48, C_BLACK, req_bgnd_gour1, D_TRANS1);
+        T_AddOutline(req->background, 1, C_BLUE, req_bgnd_gour2, NULL);
+    }
+
+    if (req->line_offset)
+    {
+        if (!req->moreup)
+        {
+            req->moreup = T_Print(req->xpos, lineoneoff - req->line_height, 0, " ");
+            T_CentreH(req->moreup, 1);
+            T_BottomAlign(req->moreup, 1);
+            T_AddBackground(req->moreup, 16, 6, 0, 8, 8, C_BLACK, req_bgnd_moreup, D_TRANS1);
+        }
+    }
+    else
+    {
+        T_RemovePrint(req->moreup);
+        req->moreup = NULL;
+    }
+
+    if (req->items > (req->line_offset + req->vis_lines))
+    {
+        if (!req->moredown)
+        {
+            req->moredown = T_Print(req->xpos, req->ypos - 8, 0, " ");
+            T_CentreH(req->moredown, 1);
+            T_BottomAlign(req->moredown, 1);
+            T_AddBackground(req->moredown, 16, 6, 0, 0, 8, C_BLACK, req_bgnd_moredown, D_TRANS1);
+        }
+    }
+    else
+    {
+        T_RemovePrint(req->moredown);
+        req->moredown = NULL;
+    }
+
+    for (n = 0; n < lineqty; n++)
+    {
+        if (!req->texts[n])
+        {
+            req->texts[n] = T_Print(0, lineoneoff + (n * req->line_height), 0, req->itemtexts + ((n + req->line_offset) * req->itemtextlen));
+            T_CentreH(req->texts[n], 1);
+            T_BottomAlign(req->texts[n], 1);
+        }
+        if ((n + req->line_offset) == req->selected)
+        {
+            T_AddBackground(req->texts[n], req->pixwidth - 12, 0, 0, 0, 16, C_BLACK, req_unsel_gour1, D_TRANS1);
+            T_AddOutline(req->texts[n], 1, C_ORANGE, req_sel_gour2, NULL);
+        }
+        else
+        {
+            T_RemoveBackground(req->texts[n]);
+            T_RemoveOutline(req->texts[n]);
+        }
+    }
+    if (req->line_offset != req->line_oldoffset)
+    {
+        for (n = 0; n < lineqty; n++)
+        {
+            if (req->texts[n])
+                T_ChangeText(req->texts[n], req->itemtexts + ((n + req->line_offset) * req->itemtextlen));
+        }
+    }
+
+    if (inputDB & IN_BACK)
+    {
+        if (req->selected < (req->items - 1))
+            req->selected++;
+        req->line_oldoffset = req->line_offset;
+        if (req->selected > (req->line_offset + req->vis_lines - 1))
+            req->line_offset++;
+    }
+    else if (inputDB & IN_FORWARD)
+    {
+        if (req->selected > 0)
+            req->selected--;
+        req->line_oldoffset = req->line_offset;
+        if (req->selected < req->line_offset)
+        {
+            req->line_offset--;
+        }
+    }
+    else if (inputDB & SELECT_ITEM)
+    {
+        if (!strncmp(req->texts[req->selected - req->line_offset]->string, "- EMPTY SLOT", 12) && !strcmp(passport_text1->string, passport_load_game))
+        {
+            input = 0;
+            return 0;
+        }
+
+        Remove_Requester(req);
+        return req->selected + 1;
+    }
+    else if (inputDB & DESELECT_ITEM)
+    {
+        Remove_Requester(req);
+        return -1;
+    }
+
+    return 0;
 }

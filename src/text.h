@@ -49,6 +49,15 @@ enum T_flags
     T_OUTLINE = (1 << 10)
 };
 
+enum D_flags
+{
+    D_TRANS1 = 1,
+    D_TRANS2 = 2,
+    D_TRANS3 = 3,
+    D_TRANS4 = 4,
+    D_NEXT = (1 << 3)
+};
+
 void T_InitPrint(void);
 TEXTSTRING *T_Print(sint16 xpos, sint16 ypos, sint16 zpos, char *string);
 void T_ChangeText(TEXTSTRING *textString, char *string);

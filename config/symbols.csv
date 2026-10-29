@@ -1859,6 +1859,14 @@ address,size,name,symbol
 0x000c214c,52,layout,_layout
 0x000c2180,1088,kname,_kname
 0x000c25c0,4,inv_nframes,_inv_nframes
+0x000c25c4,32,req_bgnd_moreup,_req_bgnd_moreup
+0x000c25e4,32,req_bgnd_moredown,_req_bgnd_moredown
+0x000c2604,32,req_bgnd_gour1,_req_bgnd_gour1
+0x000c2624,18,req_bgnd_gour2,_req_bgnd_gour2
+0x000c2636,32,req_main_gour1,_req_main_gour1
+0x000c2656,18,req_main_gour2,_req_main_gour2
+0x000c2688,18,req_sel_gour2,_req_sel_gour2
+0x000c269a,32,req_unsel_gour1,_req_unsel_gour1
 0x000c271c,220,is_gamma_level,_is_gamma_level
 0x000c27f8,8,is_gamma_list,_is_gamma_list
 0x000c28e4,198,is_sound_muslevel,_is_sound_muslevel

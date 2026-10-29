@@ -196,6 +196,15 @@ typedef struct request_info
 
 extern REQUEST_INFO Load_Game_Requester;
 
+extern SG_COL req_bgnd_moreup[];
+extern SG_COL req_bgnd_moredown[];
+extern SG_COL req_bgnd_gour1[];
+extern SG_COL req_bgnd_gour2[];
+extern SG_COL req_main_gour1[];
+extern SG_COL req_main_gour2[];
+extern SG_COL req_sel_gour2[];
+extern SG_COL req_unsel_gour1[];
+
 extern INVENTORY_SPRITE is_gamma_level[];
 extern INVENTORY_SPRITE *is_gamma_list[];
 extern INVENTORY_SPRITE is_sound_muslevel[];
