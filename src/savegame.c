@@ -356,3 +356,18 @@ void CreateCheckSum(void)
         csum += *ptr;
     savegame.checksum = -csum;
 }
+
+int CheckSumValid(SAVEGAME_INFO *buffer)
+{
+    int i;
+    signed char *ptr, csum;
+
+    csum = 0;
+    ptr = (signed char *)buffer;
+    for (i = 0; i < sizeof(SAVEGAME_INFO); i++, ptr++)
+        csum += *ptr;
+    if (!csum)
+        return 1;
+
+    return 0;
+}

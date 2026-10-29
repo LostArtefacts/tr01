@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">73.33% (591)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">26.67% (215)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">73.45% (592)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">26.55% (214)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="547.74" height="6" x="0" y="0" class="named"/>
-<rect width="199.26" height="6" x="547.74" y="0" class="todo"/>
+<rect width="548.67" height="6" x="0" y="0" class="named"/>
+<rect width="198.33" height="6" x="548.67" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -659,7 +659,7 @@
 <rect width="12" height="12" x="585" y="165" class="named"><title>0x000364a4 ConfirmSave (404 bytes)</title></rect>
 <rect width="12" height="12" x="600" y="165" class="named"><title>0x00036638 CompleteSave (14 bytes)</title></rect>
 <rect width="12" height="12" x="615" y="165" class="named"><title>0x00036648 CreateCheckSum (51 bytes)</title></rect>
-<rect width="12" height="12" x="630" y="165" class="todo"><title>0x0003667c Func3667c (34 bytes)</title></rect>
+<rect width="12" height="12" x="630" y="165" class="named"><title>0x0003667c CheckSumValid (34 bytes)</title></rect>
 <rect width="12" height="12" x="645" y="165" class="todo"><title>0x000366a0 InitialiseLevel (208 bytes)</title></rect>
 <rect width="12" height="12" x="660" y="165" class="todo"><title>0x00036770 Func36770 (113 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="165" class="todo"><title>0x000367e4 InitialiseLevelFlags (34 bytes)</title></rect>
@@ -877,10 +877,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">70.44%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">29.56%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">70.45%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">29.55%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="526.15" height="6" x="0" y="0" class="named"/>
-<rect width="220.85" height="6" x="526.15" y="0" class="todo"/>
+<rect width="526.27" height="6" x="0" y="0" class="named"/>
+<rect width="220.73" height="6" x="526.27" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="51.02" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1558,7 +1558,7 @@
 <rect width="2.29" height="2.79" x="734.14" y="209.28" class="named"><title>0x00026014 lara_as_swandive (34 bytes)</title></rect>
 <rect width="2.29" height="2.79" x="739.43" y="209.28" class="named"><title>0x00028d14 InitialiseLaraLoad (34 bytes)</title></rect>
 <rect width="2.29" height="2.79" x="744.71" y="209.28" class="named"><title>0x0002ffd8 BridgeTilt2Floor (34 bytes)</title></rect>
-<rect width="2.46" height="2.60" x="707.10" y="215.07" class="todo"><title>0x0003667c Func3667c (34 bytes)</title></rect>
+<rect width="2.46" height="2.60" x="707.10" y="215.07" class="named"><title>0x0003667c CheckSumValid (34 bytes)</title></rect>
 <rect width="2.46" height="2.60" x="712.56" y="215.07" class="todo"><title>0x000367e4 InitialiseLevelFlags (34 bytes)</title></rect>
 <rect width="2.46" height="2.60" x="718.02" y="215.07" class="todo"><title>0x00039560 T_InitPrint (34 bytes)</title></rect>
 <rect width="2.46" height="2.60" x="723.49" y="215.07" class="todo"><title>0x000398c8 Func398c8 (34 bytes)</title></rect>
