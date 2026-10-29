@@ -1,5 +1,10 @@
 #include "game.h"
 
+sint16 pierre_item;
+
+#define PIERRE_RUN_HITPOINTS 40
+#define PIERRE_DISAPPEAR 10
+
 #define PEOPLE_SHOT_DAMAGE 50
 
 #define PEOPLE_SHOOT_RANGE SQUARE(WALL_L * 7)
@@ -45,8 +50,13 @@ enum people_anims
 #define PEOPLE_WALK_RANGE SQUARE(WALL_L * 3)
 
 #define LARSON_DIE_ANIM 15
+#define PIERRE_DIE_ANIM 12
+#define PIERRE_WIMP_CHANCE 0x2000
 
 BITE_INFO larson_gun = {-60, 170, 0, 14};
+
+BITE_INFO pierre_gun1 = {60, 200, 0, 11};
+BITE_INFO pierre_gun2 = {-57, 200, 0, 14};
 
 int Targetable(ITEM_INFO *item, AI_INFO *info)
 {
@@ -296,4 +306,212 @@ void PeopleControl(sint16 item_number)
     CreatureHead(item, head);
 
     CreatureAnimation(item_number, angle, 0);
+}
+
+void PierreControl(sint16 item_number)
+{
+    ITEM_INFO *item;
+    CREATURE_INFO *people;
+    sint16 angle, head, tilt;
+    AI_INFO info;
+    GAME_VECTOR start, end;
+
+    item = &items[item_number];
+
+    if (pierre_item != NO_ITEM)
+    {
+        if (pierre_item != item_number)
+        {
+            if (item->flags & ONESHOT)
+                KillItem(pierre_item);
+            else
+                KillItem(item_number);
+        }
+    }
+    else
+        pierre_item = item_number;
+
+    if (item->status == INVISIBLE)
+    {
+        if (!EnableBaddieAI(item_number, 0))
+            return;
+        item->status = ACTIVE;
+    }
+    people = (CREATURE_INFO *)item->data;
+    head = angle = tilt = 0;
+
+    if (item->hit_points <= PIERRE_RUN_HITPOINTS && !(item->flags & ONESHOT))
+    {
+        item->hit_points = PIERRE_RUN_HITPOINTS;
+        people->flags++;
+    }
+
+    if (item->hit_points <= 0)
+    {
+        if (item->current_anim_state != PEOPLE_DEATH)
+        {
+            item->anim_number = objects[PIERRE].anim_index + PIERRE_DIE_ANIM;
+            item->frame_number = anims[item->anim_number].frame_base;
+            item->current_anim_state = PEOPLE_DEATH;
+            SpawnItem(item, MAGNUM_ITEM);
+            SpawnItem(item, SCION_ITEM2);
+            SpawnItem(item, KEY_ITEM1);
+        }
+    }
+    else
+    {
+        CreatureAIInfo(item, &info);
+
+        if (info.ahead)
+            head = info.angle;
+
+        if (people->flags)
+        {
+            info.enemy_zone = -1;
+            item->hit_status = 1;
+        }
+        CreatureMood(item, &info, TIMID);
+
+        angle = CreatureTurn(item, people->maximum_turn);
+
+        switch (item->current_anim_state)
+        {
+        case PEOPLE_STOP:
+            if (item->required_anim_state)
+                item->goal_anim_state = item->required_anim_state;
+            else if (people->mood == BORED_MOOD)
+                item->goal_anim_state = (GetRandomControl() < PEOPLE_POSE_CHANCE) ? PEOPLE_POSE : PEOPLE_WALK;
+            else if (people->mood == ESCAPE_MOOD)
+                item->goal_anim_state = PEOPLE_RUN;
+            else
+                item->goal_anim_state = PEOPLE_WALK;
+            break;
+
+        case PEOPLE_POSE:
+            if (people->mood != BORED_MOOD)
+                item->goal_anim_state = PEOPLE_STOP;
+            else if (GetRandomControl() < PEOPLE_POSE_CHANCE)
+            {
+                item->required_anim_state = PEOPLE_WALK;
+                item->goal_anim_state = PEOPLE_STOP;
+            }
+            break;
+
+        case PEOPLE_WALK:
+            people->maximum_turn = PEOPLE_WALK_TURN;
+
+            if (people->mood == BORED_MOOD && GetRandomControl() < PEOPLE_POSE_CHANCE)
+            {
+                item->required_anim_state = PEOPLE_POSE;
+                item->goal_anim_state = PEOPLE_STOP;
+            }
+            else if (people->mood == ESCAPE_MOOD)
+            {
+                item->required_anim_state = PEOPLE_RUN;
+                item->goal_anim_state = PEOPLE_STOP;
+            }
+            else if (Targetable(item, &info))
+            {
+                item->required_anim_state = PEOPLE_AIM;
+                item->goal_anim_state = PEOPLE_STOP;
+            }
+            else if (!info.ahead || info.distance > PEOPLE_WALK_RANGE)
+            {
+                item->required_anim_state = PEOPLE_RUN;
+                item->goal_anim_state = PEOPLE_STOP;
+            }
+            break;
+
+        case PEOPLE_RUN:
+            people->maximum_turn = PEOPLE_RUN_TURN;
+            tilt = angle / 2;
+
+            if (people->mood == BORED_MOOD && GetRandomControl() < PEOPLE_POSE_CHANCE)
+            {
+                item->required_anim_state = PEOPLE_POSE;
+                item->goal_anim_state = PEOPLE_STOP;
+            }
+            else if (Targetable(item, &info))
+            {
+                item->required_anim_state = PEOPLE_AIM;
+                item->goal_anim_state = PEOPLE_STOP;
+            }
+            else if (info.ahead && info.distance < PEOPLE_WALK_RANGE)
+            {
+                item->required_anim_state = PEOPLE_WALK;
+                item->goal_anim_state = PEOPLE_STOP;
+            }
+            break;
+
+        case PEOPLE_AIM:
+            if (item->required_anim_state)
+                item->goal_anim_state = item->required_anim_state;
+            else if (Targetable(item, &info))
+                item->goal_anim_state = PEOPLE_SHOOT;
+            else
+                item->goal_anim_state = PEOPLE_STOP;
+            break;
+
+        case PEOPLE_SHOOT:
+
+            if (!item->required_anim_state)
+            {
+                if (ShotLara(item, info.distance, &pierre_gun1, head))
+                {
+                    lara_item->hit_points -= PEOPLE_SHOT_DAMAGE / 2;
+                    lara_item->hit_status = 1;
+                }
+
+                if (ShotLara(item, info.distance, &pierre_gun2, head))
+                {
+                    lara_item->hit_points -= PEOPLE_SHOT_DAMAGE / 2;
+                    lara_item->hit_status = 1;
+                }
+
+                item->required_anim_state = PEOPLE_AIM;
+            }
+
+            if (people->mood == ESCAPE_MOOD && PIERRE_WIMP_CHANCE < GetRandomControl())
+                item->required_anim_state = PEOPLE_STOP;
+            break;
+        }
+    }
+
+    CreatureTilt(item, tilt);
+    CreatureHead(item, head);
+
+    CreatureAnimation(item_number, angle, 0);
+
+    if (people->flags)
+    {
+        start.x = item->pos.x_pos;
+        start.y = item->pos.y_pos - WALL_L;
+        start.z = item->pos.z_pos;
+
+        end.x = camera.pos.x;
+        end.y = camera.pos.y;
+        end.z = camera.pos.z;
+        end.room_number = camera.pos.room_number;
+
+        if (!LOS(&end, &start))
+        {
+            if (people->flags > PIERRE_DISAPPEAR)
+            {
+                item->hit_points = DONT_TARGET;
+                DisableBaddieAI(item_number);
+                KillItem(item_number);
+                pierre_item = NO_ITEM;
+            }
+        }
+        else
+            people->flags = 1;
+    }
+
+    if (GetWaterHeight(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, item->room_number) != NO_HEIGHT)
+    {
+        item->hit_points = DONT_TARGET;
+        DisableBaddieAI(item_number);
+        KillItem(item_number);
+        pierre_item = NO_ITEM;
+    }
 }

@@ -552,6 +552,7 @@ address,size,name,symbol
 0x00032634,150,GunMiss,GunMiss_
 0x000326cc,131,ShotLara,ShotLara_
 0x0003276c,819,PeopleControl,PeopleControl_
+0x00032abc,1229,PierreControl,PierreControl_
 0x00032f8c,261,Func32f8c,
 0x0003340c,35,Func3340c,
 0x000336dc,114,Func336dc,
@@ -1975,6 +1976,8 @@ address,size,name,symbol
 0x000c3c64,8,control_text,_control_text
 0x000c3c6c,16,baldy_gun,_baldy_gun
 0x000c3c7c,16,larson_gun,_larson_gun
+0x000c3c8c,16,pierre_gun1,_pierre_gun1
+0x000c3c9c,16,pierre_gun2,_pierre_gun2
 0x000c3e38,4,number_cameras,_number_cameras
 0x000c3e68,128,exit_message,_exit_message
 0x000c3ee8,4,title_loaded,_title_loaded
@@ -2058,6 +2061,7 @@ address,size,name,symbol
 0x000cec74,512,sample_lut,_sample_lut
 0x000cee74,4,sample_infos,_sample_infos
 0x000cee78,4,num_samples,_num_samples
+0x000cee7c,2,pierre_item,_pierre_item
 0x000cee94,10596,savegame,_savegame
 0x000d2744,8192,phdsprinfo,_phdsprinfo
 0x000d4744,48000,vbuf,_vbuf
