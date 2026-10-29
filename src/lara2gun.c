@@ -185,3 +185,77 @@ void PistolHandler(int weapon_type)
 
     AnimatePistols(weapon_type);
 }
+
+void AnimatePistols(int weapon_type)
+{
+    sint16 ani;
+    PHD_ANGLE angles[2];
+    WEAPON_INFO *winfo;
+
+    winfo = &weapons[weapon_type];
+    ani = lara.right_arm.frame_number;
+
+    if (lara.right_arm.lock || (input & IN_ACTION && !lara.target))
+    {
+        if (ani >= 0 && ani < DRAW1_F - 1)
+            ani++;
+        else if ((input & IN_ACTION) && ani == (DRAW1_F - 1))
+        {
+            angles[0] = lara.right_arm.y_rot + lara_item->pos.y_rot;
+            angles[1] = lara.right_arm.x_rot;
+            if (FireWeapon(weapon_type, lara.target, lara_item, angles))
+            {
+                lara.right_arm.flash_gun = winfo->flash_time;
+                SoundEffect(winfo->sample_num, &lara_item->pos, NULL);
+            }
+            ani = RECOIL_F;
+        }
+        else if (ani >= RECOIL_F)
+        {
+            ani++;
+            if (ani == RECOIL_F + winfo->recoil_frame)
+                ani = DRAW1_F - 1;
+        }
+    }
+    else
+    {
+        if (ani >= RECOIL_F)
+            ani = DRAW1_F - 1;
+        else if (ani > 0 && ani <= DRAW1_F - 1)
+            ani--;
+    }
+    lara.right_arm.frame_number = ani;
+
+    ani = lara.left_arm.frame_number;
+
+    if (lara.left_arm.lock || (input & IN_ACTION && !lara.target))
+    {
+        if (ani >= 0 && ani < DRAW1_F - 1)
+            ani++;
+        else if ((input & IN_ACTION) && ani == (DRAW1_F - 1))
+        {
+            angles[0] = lara.left_arm.y_rot + lara_item->pos.y_rot;
+            angles[1] = lara.left_arm.x_rot;
+            if (FireWeapon(weapon_type, lara.target, lara_item, angles))
+            {
+                lara.left_arm.flash_gun = winfo->flash_time;
+                SoundEffect(winfo->sample_num, &lara_item->pos, NULL);
+            }
+            ani = RECOIL_F;
+        }
+        else if (ani >= RECOIL_F)
+        {
+            ani++;
+            if (ani == RECOIL_F + winfo->recoil_frame)
+                ani = DRAW1_F - 1;
+        }
+    }
+    else
+    {
+        if (ani >= RECOIL_F)
+            ani = DRAW1_F - 1;
+        else if (ani > 0 && ani <= DRAW1_F - 1)
+            ani--;
+    }
+    lara.left_arm.frame_number = ani;
+}

@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">58.73% (464)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">41.27% (326)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">58.86% (465)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">41.14% (325)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="438.74" height="6" x="0" y="0" class="named"/>
-<rect width="308.26" height="6" x="438.74" y="0" class="todo"/>
+<rect width="439.69" height="6" x="0" y="0" class="named"/>
+<rect width="307.31" height="6" x="439.69" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -532,7 +532,7 @@
 <rect width="12" height="12" x="180" y="135" class="named"><title>0x0002bc18 undraw_pistol_mesh_left (94 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="135" class="named"><title>0x0002bc78 undraw_pistol_mesh_right (94 bytes)</title></rect>
 <rect width="12" height="12" x="210" y="135" class="named"><title>0x0002bcd8 PistolHandler (352 bytes)</title></rect>
-<rect width="12" height="12" x="225" y="135" class="todo"><title>0x0002be38 AnimatePistols (529 bytes)</title></rect>
+<rect width="12" height="12" x="225" y="135" class="named"><title>0x0002be38 AnimatePistols (529 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="135" class="todo"><title>0x0002c050 Func2c050 (1316 bytes)</title></rect>
 <rect width="12" height="12" x="255" y="135" class="todo"><title>0x0002c574 Func2c574 (125 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="135" class="todo"><title>0x0002c5f4 Func2c5f4 (671 bytes)</title></rect>
@@ -861,10 +861,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">53.44%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">46.56%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">53.70%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">46.30%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="399.21" height="6" x="0" y="0" class="named"/>
-<rect width="347.79" height="6" x="399.21" y="0" class="todo"/>
+<rect width="401.14" height="6" x="0" y="0" class="named"/>
+<rect width="345.86" height="6" x="401.14" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -962,7 +962,7 @@
 <rect width="19.53" height="18.50" x="368.99" y="179.01" class="named"><title>0x000291b4 ControlEvilLara (542 bytes)</title></rect>
 <rect width="19.53" height="18.38" x="368.99" y="200.51" class="todo"><title>0x0003875c CheckCheatMode (539 bytes)</title></rect>
 <rect width="19.53" height="18.11" x="368.99" y="221.89" class="named"><title>0x0002b5c0 AnimateShotgun (532 bytes)</title></rect>
-<rect width="17.63" height="19.91" x="391.51" y="0" class="todo"><title>0x0002be38 AnimatePistols (529 bytes)</title></rect>
+<rect width="17.63" height="19.91" x="391.51" y="0" class="named"><title>0x0002be38 AnimatePistols (529 bytes)</title></rect>
 <rect width="17.63" height="19.74" x="391.51" y="22.91" class="todo"><title>0x00042448 Func42448 (525 bytes)</title></rect>
 <rect width="17.63" height="19.70" x="391.51" y="45.65" class="named"><title>0x0002b910 undraw_pistols (524 bytes)</title></rect>
 <rect width="17.63" height="19.48" x="391.51" y="68.35" class="named"><title>0x00027b44 TestLaraVault (519 bytes)</title></rect>
