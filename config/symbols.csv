@@ -330,7 +330,7 @@ address,size,name,symbol
 0x00025bfc,42,lara_as_pickup,lara_as_pickup_
 0x00025c28,42,lara_as_switchon,lara_as_switchon_
 0x00025c54,42,lara_as_switchoff,lara_as_switchoff_
-0x00025c80,42,Func25c80,
+0x00025c80,42,lara_as_usekey,lara_as_usekey_
 0x00025cac,44,Func25cac,
 0x00025cd8,1,Func25cd8,
 0x00025cdc,38,Func25cdc,
