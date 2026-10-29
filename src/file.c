@@ -616,3 +616,8 @@ int TestCdDrive(void)
     }
     return 1;
 }
+
+int __far disk_error_handler(unsigned deverror, unsigned errcode, unsigned __far *devhdr)
+{
+    return 0;
+}
