@@ -212,3 +212,41 @@ void LaraBubbles(ITEM_INFO *item)
         }
     }
 }
+
+void ControlBubble1(sint16 fx_num)
+{
+    FX_INFO *fx;
+    OBJECT_INFO *object;
+    FLOOR_INFO *floor;
+    sint32 x, y, z, h;
+    sint16 roomy;
+
+    fx = &effects[fx_num];
+    object = &objects[fx->object_number];
+
+    fx->pos.y_rot += 9 * ONE_DEGREE;
+    fx->pos.x_rot += 13 * ONE_DEGREE;
+    x = fx->pos.x_pos + ((phd_sin(fx->pos.y_rot) * 11) >> W2V_SHIFT);
+    y = fx->pos.y_pos - fx->speed;
+    z = fx->pos.z_pos + ((phd_cos(fx->pos.x_rot) * 8) >> W2V_SHIFT);
+    roomy = fx->room_number;
+
+    floor = GetFloor(x, y, z, &roomy);
+    if (!floor || !(room[roomy].flags & 1))
+    {
+        KillEffect(fx_num);
+        return;
+    }
+    h = GetCeiling(floor, x, y, z);
+    if (h == NO_HEIGHT || y <= h)
+    {
+        KillEffect(fx_num);
+        return;
+    }
+
+    if (fx->room_number != roomy)
+        EffectNewRoom(fx_num, roomy);
+    fx->pos.x_pos = x;
+    fx->pos.y_pos = y;
+    fx->pos.z_pos = z;
+}

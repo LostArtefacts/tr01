@@ -194,6 +194,7 @@ int ItemNearLara(PHD_3DPOS *pos, sint32 distance);
 void SoundEffects(void);
 void KillEffect(sint16 fx_num);
 sint16 CreateEffect(sint16 room_num);
+void EffectNewRoom(sint16 fx_num, sint16 room_number);
 void LoadLaraDemoPos(void);
 void GetDemoInput(void);
 sint16 DoBloodSplat(sint32 x, sint32 y, sint32 z, sint16 speed, PHD_ANGLE direction, sint16 room_num);

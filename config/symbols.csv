@@ -157,7 +157,7 @@ address,size,name,symbol
 0x0001d84c,100,ControlTwinkle,ControlTwinkle_
 0x0001d8b0,302,ItemSparkle,ItemSparkle_
 0x0001d9e0,221,LaraBubbles,LaraBubbles_
-0x0001dac0,312,Func1dac0,
+0x0001dac0,312,ControlBubble1,ControlBubble1_
 0x0001dbf8,185,Func1dbf8,
 0x0001dcb4,134,Func1dcb4,
 0x0001dd3c,281,Func1dd3c,
@@ -290,7 +290,7 @@ address,size,name,symbol
 0x00024d80,56,Func24d80,
 0x00024db8,111,CreateEffect,CreateEffect_
 0x00024e28,192,KillEffect,KillEffect_
-0x00024ee8,155,Func24ee8,
+0x00024ee8,155,EffectNewRoom,EffectNewRoom_
 0x00024f90,458,Func24f90,
 0x0002515c,141,Func2515c,
 0x000251ec,265,Func251ec,
