@@ -196,3 +196,27 @@ void PickUpScionCollision(sint16 item_num, ITEM_INFO *laraitem, COLL_INFO *coll)
         memcpy(&cinematic_pos, &laraitem->pos, sizeof(PHD_3DPOS));
     }
 }
+
+void PickUpScion4Collision(sint16 item_num, ITEM_INFO *laraitem, COLL_INFO *coll)
+{
+    ITEM_INFO *item;
+
+    item = &items[item_num];
+    item->pos.y_rot = laraitem->pos.y_rot;
+    item->pos.z_rot = item->pos.x_rot = 0;
+    if (!TestLaraPosition(PickUpScion4Bounds, item, laraitem))
+        return;
+    if (input & IN_ACTION && lara.gun_status == LG_ARMLESS && !laraitem->gravity_status && laraitem->current_anim_state == AS_STOP)
+    {
+        AlignLaraPosition(&PickUpScion4Position, item, laraitem);
+        laraitem->anim_number = objects[LARA_EXTRA].anim_index;
+        laraitem->frame_number = anims[laraitem->anim_number].frame_base;
+        lara.gun_status = LG_HANDSBUSY;
+        laraitem->current_anim_state = AS_PICKUP;
+        laraitem->goal_anim_state = AS_PICKUP;
+        camera.type = CINEMATIC_CAMERA;
+        cine_frame = 0;
+        memcpy(&cinematic_pos, &laraitem->pos, sizeof(PHD_3DPOS));
+        cinematic_pos.y_rot -= 16384;
+    }
+}
