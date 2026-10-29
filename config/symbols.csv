@@ -295,7 +295,7 @@ address,size,name,symbol
 0x00024e28,192,KillEffect,KillEffect_
 0x00024ee8,155,EffectNewRoom,EffectNewRoom_
 0x00024f90,458,LaraAboveWater,LaraAboveWater_
-0x0002515c,141,Func2515c,
+0x0002515c,141,lara_as_walk,lara_as_walk_
 0x000251ec,265,Func251ec,
 0x000252f8,411,Func252f8,
 0x00025494,196,Func25494,
