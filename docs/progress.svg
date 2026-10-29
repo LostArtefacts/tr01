@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">37.66% (293)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">62.34% (485)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">37.79% (294)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">62.21% (484)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="281.33" height="6" x="0" y="0" class="named"/>
-<rect width="465.67" height="6" x="281.33" y="0" class="todo"/>
+<rect width="282.29" height="6" x="0" y="0" class="named"/>
+<rect width="464.71" height="6" x="282.29" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -361,7 +361,7 @@
 <rect width="12" height="12" x="615" y="75" class="named"><title>0x00024d80 InitialiseFXArray (56 bytes)</title></rect>
 <rect width="12" height="12" x="630" y="75" class="named"><title>0x00024db8 CreateEffect (111 bytes)</title></rect>
 <rect width="12" height="12" x="645" y="75" class="named"><title>0x00024e28 KillEffect (192 bytes)</title></rect>
-<rect width="12" height="12" x="660" y="75" class="todo"><title>0x00024ee8 EffectNewRoom (155 bytes)</title></rect>
+<rect width="12" height="12" x="660" y="75" class="named"><title>0x00024ee8 EffectNewRoom (155 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="75" class="todo"><title>0x00024f90 Func24f90 (458 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="75" class="todo"><title>0x0002515c Func2515c (141 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="75" class="todo"><title>0x000251ec Func251ec (265 bytes)</title></rect>
@@ -849,10 +849,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">39.66%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">60.34%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">39.74%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">60.26%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="296.27" height="6" x="0" y="0" class="named"/>
-<rect width="450.73" height="6" x="296.27" y="0" class="todo"/>
+<rect width="296.84" height="6" x="0" y="0" class="named"/>
+<rect width="450.16" height="6" x="296.84" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1183,7 +1183,7 @@
 <rect width="9.02" height="8.68" x="580.35" y="84.58" class="named"><title>0x00011de4 ValidBox (157 bytes)</title></rect>
 <rect width="9.02" height="8.68" x="580.35" y="96.26" class="named"><title>0x0001d650 ControlBlood1 (157 bytes)</title></rect>
 <rect width="9.02" height="8.68" x="580.35" y="107.93" class="todo"><title>0x00046db1 Func46db1 (157 bytes)</title></rect>
-<rect width="9.02" height="8.53" x="580.35" y="119.61" class="todo"><title>0x00024ee8 EffectNewRoom (155 bytes)</title></rect>
+<rect width="9.02" height="8.53" x="580.35" y="119.61" class="named"><title>0x00024ee8 EffectNewRoom (155 bytes)</title></rect>
 <rect width="9.02" height="8.45" x="580.35" y="131.14" class="named"><title>0x000172b8 GetChange (154 bytes)</title></rect>
 <rect width="9.02" height="8.38" x="580.35" y="142.59" class="named"><title>0x00024bc4 ItemNewRoom (153 bytes)</title></rect>
 <rect width="9.02" height="8.31" x="580.35" y="153.97" class="named"><title>0x00022734 SelectMeshes (152 bytes)</title></rect>
