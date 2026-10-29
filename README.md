@@ -30,8 +30,9 @@ releases ship as `TOMBRAID/TOMBno3Dfx.EXE`:
   zero-initialized
 
 The game code comes first, at `0x10010`–`0x46e00`, one module after the
-other in alphabetical order of the source files (`CAMERA`, `DRAW`,
-`EFFECTS`, ..., `WOLF`, then the PC-specific `3D_GEN` and on). The
+other, starting with `OUTPUT`. Within a module the functions are in the
+reference source's order. Modules are aligned to 16 bytes with zeros,
+functions to 4 bytes with `lea eax,[eax+0]`, `mov eax,eax` or `nop`. The
 Watcom C library, the Escape FMV player (`RPL*.C`, `124*.ASM`, `$Id`
 strings by MFC and MDV), the VGA and VESA code and the HMI sound
 library follow.
@@ -80,7 +81,8 @@ Everything runs headless. `just` lists the recipes.
    callee pops, everything but `eax` preserved) and the new ones are
    added to `config/symbols.csv` as `FuncXXXXX`. Library functions are
    named from the Watcom libraries.
-2. Write C for a function in `src/`. `just decompile [ADDR...]` writes
+2. Write C89 for a function in `src/`, four-space indented and without
+   comments, one file per module of the original. `just decompile [ADDR...]` writes
    Ghidra's pseudocode to `build/decomp/<address>.c`.
 3. Record the function and every function and global it uses in
    [`config/symbols.csv`](config/symbols.csv): address, size, name and

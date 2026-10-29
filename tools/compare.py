@@ -79,9 +79,7 @@ def compare_module(mod, orig, by_symbol):
         if bases.setdefault(si, want) != want:
             r.errors.append(f"{seg.name} is placed at {bases[si]:#x} by an earlier function, "
                             f"this one puts it at {want:#x}")
-        ours = bytearray(seg.data[start:end])
-        if end == seg.size or not any(p for p in seg.publics if p[0] == end):
-            ours = bytearray(strip_padding(bytes(ours)))
+        ours = bytearray(strip_padding(bytes(seg.data[start:end])))
         try:
             theirs = orig.read(addr, len(ours))
         except ValueError as e:

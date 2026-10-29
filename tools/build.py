@@ -50,6 +50,11 @@ def main():
     os.makedirs("build/obj", exist_ok=True)
     srcs = sys.argv[1:] or sorted(glob.glob("src/*.c"))
     headers = max((os.path.getmtime(h) for h in glob.glob("src/*.h")), default=0)
+    if not sys.argv[1:]:
+        names = {os.path.splitext(os.path.basename(s))[0] for s in srcs}
+        for obj in glob.glob("build/obj/*.obj"):
+            if os.path.splitext(os.path.basename(obj))[0] not in names:
+                os.remove(obj)
     built = 0
     for src in srcs:
         obj = os.path.join("build/obj", os.path.splitext(os.path.basename(src))[0] + ".obj")
