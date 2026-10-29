@@ -3,6 +3,7 @@
 #define Sm_get_volume(a) ((a * mn_sound_master_volume) >> 6)
 
 sint32 SoundPlaySample(sint32 sample, uint16 volume, uint16 pitch, uint16 pan);
+sint32 SoundPlaySampleLooped(sint32 sample, uint16 volume, uint16 pitch, uint16 pan, int loops, int loop_start, int loop_end);
 
 uint16 S_get_pan(sint16 angle)
 {
@@ -20,4 +21,12 @@ sint32 S_SoundPlaySample(sint32 dwSample, uint16 wVol, uint16 wPitch, sint16 wPa
         return 0;
 
     return SoundPlaySample(dwSample, Sm_get_volume(wVol), wPitch, S_get_pan(wPan));
+}
+
+sint32 S_SoundPlaySampleLooped(sint32 dwSample, uint16 wVol, uint16 wPitch, sint16 dwPan)
+{
+    if (!sound_active)
+        return 0;
+
+    return SoundPlaySampleLooped(dwSample, Sm_get_volume(wVol), wPitch, S_get_pan(dwPan), -1, 0, -1);
 }
