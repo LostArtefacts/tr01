@@ -1126,6 +1126,28 @@ void lara_col_land(ITEM_INFO *item, COLL_INFO *coll)
     lara_col_stop(item, coll);
 }
 
+void lara_col_compress(ITEM_INFO *item, COLL_INFO *coll)
+{
+    item->gravity_status = item->fallspeed = 0;
+    coll->bad_pos = NO_BAD_POS;
+    coll->bad_neg = NO_BAD_NEG;
+    coll->bad_ceiling = 0;
+    GetLaraCollisionInfo(item, coll);
+    if (coll->mid_ceiling > -100)
+    {
+        item->goal_anim_state = AS_STOP;
+        item->current_anim_state = AS_STOP;
+        item->anim_number = STOP_A;
+        item->frame_number = STOP_F;
+        item->speed = 0;
+        item->fallspeed = 0;
+        item->gravity_status = 0;
+        item->pos.x_pos = coll->old.x;
+        item->pos.y_pos = coll->old.y;
+        item->pos.z_pos = coll->old.z;
+    }
+}
+
 void GetLaraCollisionInfo(ITEM_INFO *item, COLL_INFO *coll)
 {
     coll->facing = lara.move_angle;
