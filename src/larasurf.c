@@ -149,3 +149,64 @@ void lara_as_surfright(ITEM_INFO *item, COLL_INFO *coll)
     if (item->fallspeed > SURF_MAXSPEED)
         item->fallspeed = SURF_MAXSPEED;
 }
+
+void lara_as_surftread(ITEM_INFO *item, COLL_INFO *coll)
+{
+    item->fallspeed -= 4;
+    if (item->fallspeed < 0)
+        item->fallspeed = 0;
+
+    if (item->hit_points <= 0)
+    {
+        item->goal_anim_state = AS_UWDEATH;
+        return;
+    }
+
+    if (input & IN_LOOK)
+    {
+        camera.type = LOOK_CAMERA;
+        if (input & IN_LEFT && lara.head_y_rot > -MAX_HEAD_ROTATION_SURF)
+            lara.head_y_rot -= HEAD_TURN_SURF;
+        else if (input & IN_RIGHT && lara.head_y_rot < MAX_HEAD_ROTATION_SURF)
+            lara.head_y_rot += HEAD_TURN_SURF;
+        lara.torso_y_rot = lara.head_y_rot / 2;
+        if (input & IN_FORWARD && lara.head_x_rot > MIN_HEAD_TILT_SURF)
+            lara.head_x_rot -= HEAD_TURN_SURF;
+        else if (input & IN_BACK && lara.head_x_rot < MAX_HEAD_TILT_SURF)
+            lara.head_x_rot += HEAD_TURN_SURF;
+        lara.torso_x_rot = 0;
+        return;
+    }
+    else if (camera.type == LOOK_CAMERA)
+        camera.type = CHASE_CAMERA;
+
+    if (input & IN_LEFT)
+        item->pos.y_rot -= LARA_SLOW_TURN;
+    else if (input & IN_RIGHT)
+        item->pos.y_rot += LARA_SLOW_TURN;
+    if (input & IN_FORWARD)
+        item->goal_anim_state = AS_SURFSWIM;
+    else if (input & IN_BACK)
+        item->goal_anim_state = AS_SURFBACK;
+    if (input & IN_STEPL)
+        item->goal_anim_state = AS_SURFLEFT;
+    else if (input & IN_STEPR)
+        item->goal_anim_state = AS_SURFRIGHT;
+
+    if (input & IN_JUMP)
+    {
+        lara.dive_count++;
+        if (lara.dive_count == DIVE_COUNT)
+        {
+            item->goal_anim_state = AS_SWIM;
+            item->current_anim_state = AS_DIVE;
+            item->anim_number = SURFDIVE_A;
+            item->frame_number = SURFDIVE_F;
+            item->pos.x_rot = -45 * ONE_DEGREE;
+            item->fallspeed = 20 * 4;
+            lara.water_status = LARA_UNDERWATER;
+        }
+    }
+    else
+        lara.dive_count = 0;
+}
