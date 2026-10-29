@@ -322,3 +322,13 @@ void dino_stomp_effect(ITEM_INFO *item)
         camera.bounce = ((WALL_L * WALL_L - dist) * MAX_BOUNCE) / (WALL_L * WALL_L);
     }
 }
+
+void lara_normal_effect(ITEM_INFO *item)
+{
+    item->current_anim_state = AS_STOP;
+    item->goal_anim_state = AS_STOP;
+    item->frame_number = STOP_F;
+    item->anim_number = STOP_A;
+    camera.type = CHASE_CAMERA;
+    AlterFOV(GAME_FOV * ONE_DEGREE);
+}

@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">21.06% (163)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">78.94% (611)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">21.19% (164)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">78.81% (610)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="157.31" height="6" x="0" y="0" class="named"/>
-<rect width="589.69" height="6" x="157.31" y="0" class="todo"/>
+<rect width="158.28" height="6" x="0" y="0" class="named"/>
+<rect width="588.72" height="6" x="158.28" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -232,7 +232,7 @@
 <rect width="12" height="12" x="180" y="45" class="named"><title>0x0001de58 finish_level_effect (11 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="45" class="named"><title>0x0001de64 turn180_effect (5 bytes)</title></rect>
 <rect width="12" height="12" x="210" y="45" class="named"><title>0x0001de6c dino_stomp_effect (178 bytes)</title></rect>
-<rect width="12" height="12" x="225" y="45" class="todo"><title>0x0001df20 Func1df20 (42 bytes)</title></rect>
+<rect width="12" height="12" x="225" y="45" class="named"><title>0x0001df20 lara_normal_effect (42 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="45" class="todo"><title>0x0001df4c Func1df4c (120 bytes)</title></rect>
 <rect width="12" height="12" x="255" y="45" class="todo"><title>0x0001dfc4 Func1dfc4 (127 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="45" class="todo"><title>0x0001e044 Func1e044 (29 bytes)</title></rect>
@@ -845,10 +845,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">26.10%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">73.90%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">26.12%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">73.88%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="194.96" height="6" x="0" y="0" class="named"/>
-<rect width="552.04" height="6" x="194.96" y="0" class="todo"/>
+<rect width="195.12" height="6" x="0" y="0" class="named"/>
+<rect width="551.88" height="6" x="195.12" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1468,7 +1468,7 @@
 <rect width="3.39" height="3.15" x="706.40" y="180.73" class="todo"><title>0x0001e0ac Stairs2SlopeFX (44 bytes)</title></rect>
 <rect width="3.39" height="3.15" x="712.79" y="180.73" class="todo"><title>0x00025cac Func25cac (44 bytes)</title></rect>
 <rect width="3.39" height="3.15" x="719.19" y="180.73" class="todo"><title>0x00045672 Func45672 (44 bytes)</title></rect>
-<rect width="3.10" height="3.15" x="725.58" y="180.73" class="todo"><title>0x0001df20 Func1df20 (42 bytes)</title></rect>
+<rect width="3.10" height="3.15" x="725.58" y="180.73" class="named"><title>0x0001df20 lara_normal_effect (42 bytes)</title></rect>
 <rect width="3.10" height="3.15" x="731.69" y="180.73" class="todo"><title>0x00024090 Func24090 (42 bytes)</title></rect>
 <rect width="3.10" height="3.15" x="737.79" y="180.73" class="todo"><title>0x00025b80 Func25b80 (42 bytes)</title></rect>
 <rect width="3.10" height="3.15" x="743.90" y="180.73" class="todo"><title>0x00025bac Func25bac (42 bytes)</title></rect>

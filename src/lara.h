@@ -15,6 +15,9 @@
 
 #define STEPUP_HEIGHT ((STEP_L * 3) / 2)
 
+#define STOP_A 11
+#define STOP_F 185
+
 #define HIT_FORWARD_A 125
 #define HIT_BACK_A 126
 #define HIT_RIGHT_A 127
