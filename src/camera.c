@@ -190,3 +190,117 @@ int BadPosition(sint32 x, sint32 y, sint32 z, sint16 room_number)
 
     return 0;
 }
+
+void SmartShift(GAME_VECTOR *ideal, void (*shift)(sint32 *x, sint32 *y, sint32 target_x, sint32 target_y, sint32 left, sint32 top, sint32 right, sint32 bottom))
+{
+    int noclip;
+    ROOM_INFO *r;
+    sint16 item_box, camera_box;
+    BOX_INFO *box;
+    int x_floor, y_floor;
+    sint32 left, right, top, bottom;
+    int bad_left, bad_right, bad_top, bad_bottom;
+
+    LOS(&camera.target, ideal);
+
+    r = &room[camera.target.room_number];
+    x_floor = (camera.target.z - r->z) >> WALL_SHIFT;
+    y_floor = (camera.target.x - r->x) >> WALL_SHIFT;
+    item_box = r->floor[x_floor + y_floor * r->x_size].box;
+
+    box = &boxes[item_box];
+
+    r = &room[ideal->room_number];
+    x_floor = (ideal->z - r->z) >> WALL_SHIFT;
+    y_floor = (ideal->x - r->x) >> WALL_SHIFT;
+    camera_box = r->floor[x_floor + y_floor * r->x_size].box;
+
+    if (camera_box != NO_BOX && (ideal->z < box->left || ideal->z > box->right || ideal->x < box->top ||
+        ideal->x > box->bottom))
+    {
+        box = &boxes[camera_box];
+    }
+
+    left = box->left;
+    right = box->right;
+    top = box->top;
+    bottom = box->bottom;
+
+    bad_left = BadPosition(ideal->x, ideal->y, (ideal->z - WALL_L) | (WALL_L - 1), ideal->room_number);
+    if (!bad_left)
+    {
+        camera_box = r->floor[x_floor - 1 + y_floor * r->x_size].box;
+        if (camera_box != NO_ITEM && boxes[camera_box].left < left)
+            left = boxes[camera_box].left;
+    }
+
+    bad_right = BadPosition(ideal->x, ideal->y, (ideal->z + WALL_L) & ~(WALL_L - 1), ideal->room_number);
+    if (!bad_right)
+    {
+        camera_box = r->floor[x_floor + 1 + y_floor * r->x_size].box;
+        if (camera_box != NO_ITEM && boxes[camera_box].right > right)
+            right = boxes[camera_box].right;
+    }
+
+    bad_top = BadPosition((ideal->x - WALL_L) | (WALL_L - 1), ideal->y, ideal->z, ideal->room_number);
+    if (!bad_top)
+    {
+        camera_box = r->floor[x_floor + (y_floor - 1) * r->x_size].box;
+        if (camera_box != NO_ITEM && boxes[camera_box].top < top)
+            top = boxes[camera_box].top;
+    }
+
+    bad_bottom = BadPosition((ideal->x + WALL_L) & ~(WALL_L - 1), ideal->y, ideal->z, ideal->room_number);
+    if (!bad_bottom)
+    {
+        camera_box = r->floor[x_floor + (y_floor + 1) * r->x_size].box;
+        if (camera_box != NO_ITEM && boxes[camera_box].bottom > bottom)
+            bottom = boxes[camera_box].bottom;
+    }
+
+    left += STEP_L;
+    right -= STEP_L;
+    top += STEP_L;
+    bottom -= STEP_L;
+
+    noclip = 1;
+    if (ideal->z < left && bad_left)
+    {
+        noclip = 0;
+        if (ideal->x < camera.target.x)
+            (*shift)(&ideal->z, &ideal->x, camera.target.z, camera.target.x, left, top, right, bottom);
+        else
+            (*shift)(&ideal->z, &ideal->x, camera.target.z, camera.target.x, left, bottom, right, top);
+    }
+    else if (ideal->z > right && bad_right)
+    {
+        noclip = 0;
+        if (ideal->x < camera.target.x)
+            (*shift)(&ideal->z, &ideal->x, camera.target.z, camera.target.x, right, top, left, bottom);
+        else
+            (*shift)(&ideal->z, &ideal->x, camera.target.z, camera.target.x, right, bottom, left, top);
+    }
+
+    if (noclip)
+    {
+        if (ideal->x < top && bad_top)
+        {
+            noclip = 0;
+            if (ideal->z < camera.target.z)
+                (*shift)(&ideal->x, &ideal->z, camera.target.x, camera.target.z, top, left, bottom, right);
+            else
+                (*shift)(&ideal->x, &ideal->z, camera.target.x, camera.target.z, top, right, bottom, left);
+        }
+        else if (ideal->x > bottom && bad_bottom)
+        {
+            noclip = 0;
+            if (ideal->z < camera.target.z)
+                (*shift)(&ideal->x, &ideal->z, camera.target.x, camera.target.z, bottom, left, top, right);
+            else
+                (*shift)(&ideal->x, &ideal->z, camera.target.x, camera.target.z, bottom, right, top, left);
+        }
+    }
+
+    if (!noclip)
+        GetFloor(ideal->x, ideal->y, ideal->z, &ideal->room_number);
+}

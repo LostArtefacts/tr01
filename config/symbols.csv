@@ -41,7 +41,7 @@ address,size,name,symbol
 0x000138d4,164,ClipCamera,ClipCamera_
 0x00013978,295,ShiftCamera,ShiftCamera_
 0x00013aa0,79,BadPosition,BadPosition_
-0x00013af0,1123,Func13af0,
+0x00013af0,1123,SmartShift,SmartShift_
 0x00013f54,267,Func13f54,
 0x00014060,402,Func14060,
 0x000141f4,317,Func141f4,
