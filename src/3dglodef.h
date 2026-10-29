@@ -7,6 +7,8 @@
 #include "types.h"
 
 #define WIBBLE_SIZE 32
+#define MAX_WIBBLE 2
+#define MAX_SHADE 0x300
 
 #define DPQ_END 20480
 
@@ -103,6 +105,9 @@ extern sint32 *sort3dptr;
 extern sint32 wibble_offset;
 extern sint32 water_effect;
 extern sint32 shade_effect;
+extern sint32 wibble_table[WIBBLE_SIZE];
+extern sint32 shade_table[WIBBLE_SIZE];
+extern sint32 rand_table[WIBBLE_SIZE];
 extern uint8 depthq_table[32][256];
 extern uint8 gouraud_table[256][32];
 

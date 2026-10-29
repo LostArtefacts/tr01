@@ -1885,6 +1885,9 @@ address,size,name,symbol
 0x0012aa84,8192,gouraud_table,_gouraud_table
 0x0012ca84,8192,depthq_table,_depthq_table
 0x0012ea84,48,w2v_matrix,_w2v_matrix
+0x0012f234,128,shade_table,_shade_table
+0x0012f2b4,128,rand_table,_rand_table
+0x0012f334,128,wibble_table,_wibble_table
 0x0012f3b4,4,sort3dptr,_sort3dptr
 0x0012f3c0,4,phd_bottom,_phd_bottom
 0x0012f3c4,4,phd_left,_phd_left
