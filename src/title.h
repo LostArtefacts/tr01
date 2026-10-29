@@ -14,4 +14,19 @@ typedef enum title_options
     TITLE_DESELECT = 8 << 6
 } TITLE_OPTIONS;
 
+enum fmv_sequence
+{
+    FMV_INTRO,
+    FMV_GYM,
+    FMV_SNOW,
+    FMV_LIFT,
+    FMV_VISION,
+    FMV_CANYON,
+    FMV_PYRAMID,
+    FMV_PRISON,
+    FMV_ENDSEQ,
+    FMV_CORE,
+    FMV_ESCAPE
+};
+
 #endif

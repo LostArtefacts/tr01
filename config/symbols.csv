@@ -212,7 +212,7 @@ address,size,name,symbol
 0x0001fb10,82,S_Wait,S_Wait_
 0x0001fb64,491,EscapeFMV,EscapeFMV_
 0x0001fd50,82,S_PlayFMV,S_PlayFMV_
-0x0001fdf0,298,Func1fdf0,
+0x0001fdf0,298,StartGame,StartGame_
 0x0001ff1c,96,GameLoop,GameLoop_
 0x0001ffcc,328,LevelCompleteSequence,LevelCompleteSequence_
 0x00020114,766,Func20114,
@@ -226,7 +226,7 @@ address,size,name,symbol
 0x0002056c,220,DisplayCredits,DisplayCredits_
 0x00020648,326,Func20648,
 0x00020790,269,S_SaveGame,S_SaveGame_
-0x000208a0,130,Func208a0,
+0x000208a0,130,S_LoadGame,S_LoadGame_
 0x00020980,38,DrawGameInfo,DrawGameInfo_
 0x000209a8,124,Func209a8,
 0x00020a24,84,Func20a24,
@@ -564,7 +564,7 @@ address,size,name,symbol
 0x0003667c,34,Func3667c,
 0x000366a0,208,InitialiseLevel,InitialiseLevel_
 0x00036770,113,Func36770,
-0x000367e4,34,Func367e4,
+0x000367e4,34,InitialiseLevelFlags,InitialiseLevelFlags_
 0x00036808,3805,Func36808,
 0x000376e8,1012,Func376e8,
 0x00037adc,2329,Func37adc,
@@ -1776,6 +1776,11 @@ address,size,name,symbol
 0x000c1984,4,StartLevel,_StartLevel
 0x000c1988,4,CurrentLevel,_CurrentLevel
 0x000c198c,4,level_complete,_level_complete
+0x000c1990,4,save_counter,_save_counter
+0x000c1994,2,number_saved,_number_saved
+0x000c1996,44,saved_levels,_saved_levels
+0x000c19c2,2,number_valid,_number_valid
+0x000c19c4,46,valid_levels,_valid_levels
 0x000c1ba4,10,demomode_text,_demomode_text
 0x000c2084,4,overlay_flag,_overlay_flag
 0x000c2090,24,game_setup,_game_setup

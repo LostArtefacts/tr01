@@ -99,6 +99,7 @@ void InitialisePlayer1(sint16 item_num);
 void InitialiseGenPlayer(sint16 item_num);
 
 int InitialiseLevel(int level_number);
+void InitialiseLevelFlags(void);
 void InitialiseObjects(void);
 
 void InitialiseCamera(void);
