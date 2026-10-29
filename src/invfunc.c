@@ -975,6 +975,18 @@ void Inv_RingMotionInit(RING_INFO *ring, sint16 frames, sint16 status, sint16 st
     imo->misc = 0;
 }
 
+void Inv_RingMotionSetup(RING_INFO *ring, sint16 status, sint16 status_target, sint16 frames)
+{
+    IMOTION_INFO *imo;
+
+    imo = ring->imo;
+    imo->count = frames;
+    imo->status = status;
+    imo->status_target = status_target;
+    imo->radius_rate = 0;
+    imo->camera_yrate = 0;
+}
+
 void Inv_RingMotionRadius(RING_INFO *ring, sint16 target)
 {
     IMOTION_INFO *imo;
