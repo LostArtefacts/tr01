@@ -601,3 +601,31 @@ void InterpolateArmMatrix(void)
         *(mptr + M23) += ((*(iptr + M23) - *(mptr + M23)) * frac) / rate;
     }
 }
+
+int GetFrames(ITEM_INFO *item, sint16 *frmptr[], int *rate)
+{
+    ANIM_STRUCT *anim;
+    int frm;
+    int first, second;
+    int frame_size;
+    int interp, rat;
+
+    frm = item->frame_number;
+    anim = &anims[item->anim_number];
+    frmptr[0] = frmptr[1] = anim->frame_ptr;
+    rat = *rate = anim->interpolation;
+    frame_size = objects[item->object_number].nmeshes * 2 + 10;
+    frm -= anim->frame_base;
+    first = frm / rat;
+    interp = frm % rat;
+    frmptr[0] += first * frame_size;
+    frmptr[1] = frmptr[0] + frame_size;
+    if (interp == 0)
+        return 0;
+
+    second = first * rat + rat;
+    if (second > anim->frame_end)
+        *rate = anim->frame_end - (second - rat);
+
+    return interp;
+}
