@@ -186,6 +186,7 @@ void RemoveActiveItem(sint16 item_num);
 void ItemNewRoom(sint16 item_number, sint16 room_number);
 sint16 *GetBoundsAccurate(ITEM_INFO *item);
 sint16 *GetBestFrame(ITEM_INFO *item);
+int ItemNearLara(PHD_3DPOS *pos, sint32 distance);
 void SoundEffects(void);
 void LoadLaraDemoPos(void);
 void GetDemoInput(void);

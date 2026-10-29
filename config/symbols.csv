@@ -146,7 +146,7 @@ address,size,name,symbol
 0x0001d370,195,GetFrames,GetFrames_
 0x0001d434,116,GetBoundsAccurate,GetBoundsAccurate_
 0x0001d4a8,50,GetBestFrame,GetBestFrame_
-0x0001d4e0,145,Func1d4e0,
+0x0001d4e0,145,ItemNearLara,ItemNearLara_
 0x0001d574,110,SoundEffects,SoundEffects_
 0x0001d5e4,106,DoBloodSplat,DoBloodSplat_
 0x0001d650,157,Func1d650,

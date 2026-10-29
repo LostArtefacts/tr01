@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">18.86% (146)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">81.14% (628)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">18.99% (147)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">81.01% (627)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="140.91" height="6" x="0" y="0" class="named"/>
-<rect width="606.09" height="6" x="140.91" y="0" class="todo"/>
+<rect width="141.87" height="6" x="0" y="0" class="named"/>
+<rect width="605.13" height="6" x="141.87" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -214,7 +214,7 @@
 <rect width="12" height="12" x="660" y="30" class="named"><title>0x0001d370 GetFrames (195 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="30" class="named"><title>0x0001d434 GetBoundsAccurate (116 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="30" class="named"><title>0x0001d4a8 GetBestFrame (50 bytes)</title></rect>
-<rect width="12" height="12" x="705" y="30" class="todo"><title>0x0001d4e0 Func1d4e0 (145 bytes)</title></rect>
+<rect width="12" height="12" x="705" y="30" class="named"><title>0x0001d4e0 ItemNearLara (145 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="30" class="todo"><title>0x0001d574 SoundEffects (110 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="30" class="todo"><title>0x0001d5e4 DoBloodSplat (106 bytes)</title></rect>
 <rect width="12" height="12" x="0" y="45" class="todo"><title>0x0001d650 Func1d650 (157 bytes)</title></rect>
@@ -845,10 +845,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">24.97%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">75.03%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">25.04%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">74.96%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="186.50" height="6" x="0" y="0" class="named"/>
-<rect width="560.50" height="6" x="186.50" y="0" class="todo"/>
+<rect width="187.03" height="6" x="0" y="0" class="named"/>
+<rect width="559.97" height="6" x="187.03" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1195,7 +1195,7 @@
 <rect width="8.40" height="8.45" x="615.43" y="84.60" class="named"><title>0x00014534 FixedCamera (146 bytes)</title></rect>
 <rect width="8.40" height="8.45" x="626.83" y="84.60" class="todo"><title>0x00027304 Func27304 (146 bytes)</title></rect>
 <rect width="8.32" height="8.45" x="638.22" y="84.60" class="named"><title>0x0001a20c S_CopyBufferToScreen (145 bytes)</title></rect>
-<rect width="8.32" height="8.45" x="649.54" y="84.60" class="todo"><title>0x0001d4e0 Func1d4e0 (145 bytes)</title></rect>
+<rect width="8.32" height="8.45" x="649.54" y="84.60" class="named"><title>0x0001d4e0 ItemNearLara (145 bytes)</title></rect>
 <rect width="8.32" height="8.45" x="660.86" y="84.60" class="todo"><title>0x00025644 Func25644 (145 bytes)</title></rect>
 <rect width="8.32" height="8.45" x="672.18" y="84.60" class="todo"><title>0x0002b52c Func2b52c (145 bytes)</title></rect>
 <rect width="8.24" height="8.45" x="683.50" y="84.60" class="named"><title>0x0001a050 switch_resolution (144 bytes)</title></rect>
