@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">13.08% (101)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">86.92% (671)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">13.21% (102)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">86.79% (670)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="97.73" height="6" x="0" y="0" class="named"/>
-<rect width="649.27" height="6" x="97.73" y="0" class="todo"/>
+<rect width="98.70" height="6" x="0" y="0" class="named"/>
+<rect width="648.30" height="6" x="98.70" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -169,7 +169,7 @@
 <rect width="12" height="12" x="735" y="15" class="named"><title>0x00018ec0 AlligatorControl (800 bytes)</title></rect>
 <rect width="12" height="12" x="0" y="30" class="named"><title>0x000191f4 CrocControl (800 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="30" class="named"><title>0x00019520 StartDemo (335 bytes)</title></rect>
-<rect width="12" height="12" x="30" y="30" class="todo"><title>0x00019670 LoadLaraDemoPos (150 bytes)</title></rect>
+<rect width="12" height="12" x="30" y="30" class="named"><title>0x00019670 LoadLaraDemoPos (150 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="30" class="todo"><title>0x00019708 GetDemoInput (55 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="30" class="todo"><title>0x00019dc4 Func19dc4 (229 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="30" class="todo"><title>0x00019eb0 Func19eb0 (90 bytes)</title></rect>
@@ -843,10 +843,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">17.36%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">82.64%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">17.44%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">82.56%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="129.71" height="6" x="0" y="0" class="named"/>
-<rect width="617.29" height="6" x="129.71" y="0" class="todo"/>
+<rect width="130.26" height="6" x="0" y="0" class="named"/>
+<rect width="616.74" height="6" x="130.26" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="54.42" height="67.43" x="0" y="0" class="todo"><title>0x0001bc98 Func1bc98 (4489 bytes)</title></rect>
@@ -1180,7 +1180,7 @@
 <rect width="9.01" height="8.47" x="580.72" y="119.64" class="todo"><title>0x00024bc4 ItemNewRoom (153 bytes)</title></rect>
 <rect width="9.01" height="8.40" x="580.72" y="131.11" class="todo"><title>0x00022734 Func22734 (152 bytes)</title></rect>
 <rect width="9.01" height="8.32" x="580.72" y="142.51" class="todo"><title>0x00024a30 RemoveActiveItem (151 bytes)</title></rect>
-<rect width="9.01" height="8.25" x="580.72" y="153.83" class="todo"><title>0x00019670 LoadLaraDemoPos (150 bytes)</title></rect>
+<rect width="9.01" height="8.25" x="580.72" y="153.83" class="named"><title>0x00019670 LoadLaraDemoPos (150 bytes)</title></rect>
 <rect width="9.01" height="8.25" x="580.72" y="165.08" class="todo"><title>0x00026dc8 Func26dc8 (150 bytes)</title></rect>
 <rect width="9.01" height="8.25" x="580.72" y="176.33" class="todo"><title>0x00032634 Func32634 (150 bytes)</title></rect>
 <rect width="9.01" height="8.10" x="580.72" y="187.58" class="named"><title>0x00011b9c TargetBox (148 bytes)</title></rect>
