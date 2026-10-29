@@ -14,6 +14,9 @@
 #include "title.h"
 #include "savegame.h"
 #include "traps.h"
+#include "text.h"
+#include "gametext.h"
+#include "main.h"
 
 #define NO_ACTION 0
 #define GAME_ACTION 1

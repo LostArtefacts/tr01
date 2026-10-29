@@ -5,6 +5,7 @@
 
 extern char *bckscrn;
 extern sint32 input;
+extern int title_loaded;
 
 void S_ExitSystem(char *exit_message);
 void S_UpdateInput(void);
@@ -17,5 +18,6 @@ void S_CDPlay(sint16 track);
 void S_CDStop(void);
 void S_StartSyncedAudio(int num);
 void S_FadeInInventory(int fade);
+void S_FadeToBlack(void);
 
 #endif
