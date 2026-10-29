@@ -672,3 +672,13 @@ int Inv_RemoveItem(int itemNum)
     }
     return 0;
 }
+
+int Inv_GetCount(void)
+{
+    int n, qty = 0;
+    for (n = 0; n < inv_main_objects; n++)
+    {
+        qty += inv_main_qtys[n];
+    }
+    return qty;
+}
