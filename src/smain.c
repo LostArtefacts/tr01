@@ -248,3 +248,26 @@ void S_SaveSettings(void)
         fclose(file);
     }
 }
+
+void S_LoadSettings(void)
+{
+    FILE *file;
+
+    file = fopen("settings.dat", "rb");
+    if (file)
+    {
+        fread(&Option_Music_Volume, sizeof(Option_Music_Volume), 1, file);
+        fread(&Option_SoundFX_Volume, sizeof(Option_SoundFX_Volume), 1, file);
+        fread(layout[1], sizeof(sint16), 13, file);
+        fread(&detail_level, sizeof(detail_level), 1, file);
+        fread(&game_hires, sizeof(game_hires), 1, file);
+        fread(&game_sizer, sizeof(game_sizer), 1, file);
+
+        if (Option_Music_Volume)
+            S_CDVolume(Option_Music_Volume * 25 + 5);
+        else
+            S_CDVolume(0);
+
+        fclose(file);
+    }
+}

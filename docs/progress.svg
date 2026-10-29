@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">74.38% (604)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">25.62% (208)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">74.51% (605)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">25.49% (207)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="555.65" height="6" x="0" y="0" class="named"/>
-<rect width="191.35" height="6" x="555.65" y="0" class="todo"/>
+<rect width="556.57" height="6" x="0" y="0" class="named"/>
+<rect width="190.43" height="6" x="556.57" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -672,7 +672,7 @@
 <rect width="12" height="12" x="30" y="180" class="named"><title>0x00038654 TitleSequence (228 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="180" class="named"><title>0x0003875c CheckCheatMode (539 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="180" class="named"><title>0x00038978 S_SaveSettings (173 bytes)</title></rect>
-<rect width="12" height="12" x="75" y="180" class="todo"><title>0x00038a28 S_LoadSettings (207 bytes)</title></rect>
+<rect width="12" height="12" x="75" y="180" class="named"><title>0x00038a28 S_LoadSettings (207 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="180" class="todo"><title>0x00038b00 Func38b00 (14 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="180" class="todo"><title>0x00038b0c Func38b0c (2 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="180" class="todo"><title>0x00038b10 S_SoundPlaySample (69 bytes)</title></rect>
@@ -883,10 +883,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">73.18%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">26.82%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">73.27%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">26.73%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="546.64" height="6" x="0" y="0" class="named"/>
-<rect width="200.36" height="6" x="546.64" y="0" class="todo"/>
+<rect width="547.35" height="6" x="0" y="0" class="named"/>
+<rect width="199.65" height="6" x="547.35" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.95" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1169,7 +1169,7 @@
 <rect width="11.08" height="10.03" x="558.34" y="64.31" class="named"><title>0x00027a74 LaraSlideEdgeJump (208 bytes)</title></rect>
 <rect width="11.08" height="10.03" x="572.41" y="64.31" class="named"><title>0x000366a0 InitialiseLevel (208 bytes)</title></rect>
 <rect width="11.01" height="10.03" x="586.49" y="64.31" class="named"><title>0x00027070 lara_col_roll (207 bytes)</title></rect>
-<rect width="11.01" height="10.03" x="600.50" y="64.31" class="todo"><title>0x00038a28 S_LoadSettings (207 bytes)</title></rect>
+<rect width="11.01" height="10.03" x="600.50" y="64.31" class="named"><title>0x00038a28 S_LoadSettings (207 bytes)</title></rect>
 <rect width="10.94" height="10.03" x="614.51" y="64.31" class="named"><title>0x0002b130 HitTarget (206 bytes)</title></rect>
 <rect width="10.81" height="10.03" x="628.45" y="64.31" class="named"><title>0x000263b8 lara_col_stop (204 bytes)</title></rect>
 <rect width="10.74" height="10.03" x="642.26" y="64.31" class="named"><title>0x0002ac1c find_target_point (203 bytes)</title></rect>
