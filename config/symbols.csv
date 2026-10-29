@@ -1761,6 +1761,10 @@ address,size,name,symbol
 0x000c1878,8,screen_sizer,_screen_sizer
 0x000c1880,8,game_sizer,_game_sizer
 0x000c1888,4,bckscrn,_bckscrn
+0x000c188c,4,bckscrnsize,_bckscrnsize
+0x000c1890,4,fade_value,_fade_value
+0x000c1894,4,fade_limit,_fade_limit
+0x000c1898,4,fade_adder,_fade_adder
 0x000c189c,4,mode_lock,_mode_lock
 0x000c18b8,,effect_routines,_effect_routines
 0x000c1988,4,CurrentLevel,_CurrentLevel

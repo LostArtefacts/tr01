@@ -14,6 +14,8 @@ typedef uint16 SG_COL;
 
 #define W2V_SHIFT 14
 
+#define GAME_FOV 80
+
 #define IN_FORWARD 1
 #define IN_BACK (1 << 1)
 #define IN_LEFT (1 << 2)

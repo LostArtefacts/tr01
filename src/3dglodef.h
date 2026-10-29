@@ -5,6 +5,8 @@
 
 #define WIBBLE_SIZE 32
 
+#define DPQ_END 20480
+
 #define ABS(x) (((x) < 0) ? (-(x)) : (x))
 
 enum msoff
