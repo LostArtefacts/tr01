@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">31.88% (248)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">68.12% (530)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">32.01% (249)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">67.99% (529)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="238.12" height="6" x="0" y="0" class="named"/>
-<rect width="508.88" height="6" x="238.12" y="0" class="todo"/>
+<rect width="239.08" height="6" x="0" y="0" class="named"/>
+<rect width="507.92" height="6" x="239.08" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -315,7 +315,7 @@
 <rect width="12" height="12" x="675" y="60" class="named"><title>0x00020fd0 Key (333 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="60" class="named"><title>0x00021120 S_UpdateInput (683 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="60" class="named"><title>0x00021498 Display_Inventory (4461 bytes)</title></rect>
-<rect width="12" height="12" x="720" y="60" class="todo"><title>0x00022608 Construct_Inventory (300 bytes)</title></rect>
+<rect width="12" height="12" x="720" y="60" class="named"><title>0x00022608 Construct_Inventory (300 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="60" class="todo"><title>0x00022734 SelectMeshes (152 bytes)</title></rect>
 <rect width="12" height="12" x="0" y="75" class="todo"><title>0x000227cc AnimateInventoryItem (105 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="75" class="todo"><title>0x00022848 DrawInventoryItem (968 bytes)</title></rect>
@@ -849,10 +849,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">34.85%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">65.15%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">35%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">65%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="260.34" height="6" x="0" y="0" class="named"/>
-<rect width="486.66" height="6" x="260.34" y="0" class="todo"/>
+<rect width="261.43" height="6" x="0" y="0" class="named"/>
+<rect width="485.57" height="6" x="261.43" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1044,7 +1044,7 @@
 <rect width="13.42" height="13.66" x="508.89" y="50.01" class="named"><title>0x00020ac0 DrawAmmoInfo (306 bytes)</title></rect>
 <rect width="13.42" height="13.60" x="508.89" y="66.67" class="todo"><title>0x0003ad90 Func3ad90 (305 bytes)</title></rect>
 <rect width="13.42" height="13.44" x="508.89" y="83.27" class="named"><title>0x0001d8b0 ItemSparkle (302 bytes)</title></rect>
-<rect width="13.42" height="13.33" x="508.89" y="99.71" class="todo"><title>0x00022608 Construct_Inventory (300 bytes)</title></rect>
+<rect width="13.42" height="13.33" x="508.89" y="99.71" class="named"><title>0x00022608 Construct_Inventory (300 bytes)</title></rect>
 <rect width="13.42" height="13.22" x="508.89" y="116.05" class="named"><title>0x0001fdf0 StartGame (298 bytes)</title></rect>
 <rect width="13.42" height="13.11" x="508.89" y="132.27" class="todo"><title>0x0002eb34 Func2eb34 (296 bytes)</title></rect>
 <rect width="13.42" height="13.06" x="508.89" y="148.38" class="named"><title>0x00013978 ShiftCamera (295 bytes)</title></rect>

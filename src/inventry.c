@@ -620,6 +620,60 @@ sint32 Display_Inventory(sint32 inventory_mode)
     return 0;
 }
 
+void Construct_Inventory(void)
+{
+    int n;
+    INVENTORY_ITEM *inv_item;
+
+    S_SetupAboveWater(0);
+
+    if (Inventory_Mode != INV_TITLE_MODE)
+        TempVideoAdjust(hires_flag, 1.0);
+
+    phd_left = 0;
+    phd_top = 0;
+    phd_right = phd_winxmax;
+    phd_bottom = phd_winymax;
+
+    Inventory_Displaying = 1;
+    Inventory_Chosen = 0;
+    for (n = 0; n < 8; n++)
+    {
+        Inventory_ExtraData[n] = 0;
+    }
+    if (Inventory_Mode == INV_TITLE_MODE)
+        inv_option_objects = TITLE_RING_OBJECTS;
+    else
+        inv_option_objects = OPTION_RING_OBJECTS;
+
+    for (n = 0; n < inv_main_objects; n++)
+    {
+        inv_item = inv_main_list[n];
+        inv_item->drawn_meshes = inv_item->which_meshes;
+        if (inv_item->object_number == MAP_OPTION && Compass_Status)
+        {
+            inv_item->current_frame = inv_item->open_frame;
+            inv_item->drawn_meshes = 0xffffffff;
+        }
+        else
+            inv_item->current_frame = 0;
+        inv_item->goal_frame = inv_item->current_frame;
+        inv_item->anim_count = 0;
+        inv_item->y_rot = 0;
+    }
+    for (n = 0; n < inv_option_objects; n++)
+    {
+        inv_item = inv_option_list[n];
+        inv_item->current_frame = 0;
+        inv_item->goal_frame = inv_item->current_frame;
+        inv_item->anim_count = 0;
+        inv_item->y_rot = 0;
+    }
+    inv_main_current = 0;
+    inv_option_current = 0;
+    item_data = 0;
+}
+
 sint32 GetDebouncedInput(sint32 input)
 {
     if (input && !oldInputDB)
