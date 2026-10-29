@@ -411,7 +411,7 @@ address,size,name,symbol
 0x00028d14,34,InitialiseLaraLoad,InitialiseLaraLoad_
 0x00028d38,355,InitialiseLara,InitialiseLara_
 0x00028e9c,468,InitialiseLaraInventory,InitialiseLaraInventory_
-0x00029070,280,Func29070,
+0x00029070,280,LaraInitialiseMeshes,LaraInitialiseMeshes_
 0x00029188,41,Func29188,
 0x000291b4,542,Func291b4,
 0x000293d4,91,Func293d4,
@@ -441,7 +441,7 @@ address,size,name,symbol
 0x0002a19c,224,Func2a19c,
 0x0002a27c,453,Func2a27c,
 0x0002a460,904,LaraGun,LaraGun_
-0x0002a7e8,216,Func2a7e8,
+0x0002a7e8,216,InitialiseNewWeapon,InitialiseNewWeapon_
 0x0002a8c0,405,Func2a8c0,
 0x0002aa58,449,Func2aa58,
 0x0002ac1c,203,Func2ac1c,

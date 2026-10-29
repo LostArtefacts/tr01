@@ -14,8 +14,8 @@ typedef struct
     uint8 num_medis;
     uint8 num_big_medis;
     uint8 num_scions;
-    sint8 gun_status;
-    sint8 gun_type;
+    uint8 gun_status;
+    uint8 gun_type;
     uint16 available:1;
     uint16 got_pistols:1;
     uint16 got_magnums:1;

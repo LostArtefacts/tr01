@@ -392,6 +392,76 @@ void InitialiseLara(void)
     InitialiseLaraInventory(CurrentLevel);
 }
 
+void InitialiseLaraInventory(int level_number)
+{
+    int i, ammo;
+    START_INFO *start;
+
+    Inv_RemoveAllItems();
+
+    start = &savegame.start[level_number];
+
+    lara.pistols.ammo = 1000;
+    if (start->got_pistols)
+        Inv_AddItem(GUN_ITEM);
+
+    if (start->got_magnums)
+    {
+        Inv_AddItem(MAGNUM_ITEM);
+        lara.magnums.ammo = start->magnum_ammo;
+        GlobalItemReplace(MAGNUM_ITEM, MAG_AMMO_ITEM);
+    }
+    else
+    {
+        ammo = start->magnum_ammo / MAGNUM_AMMO_QTY;
+        for (i = 0; i < ammo; i++)
+            Inv_AddItem(MAG_AMMO_ITEM);
+        lara.magnums.ammo = 0;
+    }
+
+    if (start->got_uzis)
+    {
+        Inv_AddItem(UZI_ITEM);
+        lara.uzis.ammo = start->uzi_ammo;
+        GlobalItemReplace(UZI_ITEM, UZI_AMMO_ITEM);
+    }
+    else
+    {
+        ammo = start->uzi_ammo / UZI_AMMO_QTY;
+        for (i = 0; i < ammo; i++)
+            Inv_AddItem(UZI_AMMO_ITEM);
+        lara.uzis.ammo = 0;
+    }
+
+    if (start->got_shotgun)
+    {
+        Inv_AddItem(SHOTGUN_ITEM);
+        lara.shotgun.ammo = start->shotgun_ammo;
+        GlobalItemReplace(SHOTGUN_ITEM, SG_AMMO_ITEM);
+    }
+    else
+    {
+        ammo = start->shotgun_ammo / SHOTGUN_AMMO_QTY;
+        for (i = 0; i < ammo; i++)
+            Inv_AddItem(SG_AMMO_ITEM);
+        lara.shotgun.ammo = 0;
+    }
+
+    for (i = start->num_scions; i > 0; i--)
+        Inv_AddItem(SCION_ITEM);
+
+    for (i = start->num_medis; i > 0; i--)
+        Inv_AddItem(MEDI_ITEM);
+
+    for (i = start->num_big_medis; i > 0; i--)
+        Inv_AddItem(BIGMEDI_ITEM);
+
+    lara.gun_status = start->gun_status;
+    lara.request_gun_type = lara.gun_type = start->gun_type;
+    LaraInitialiseMeshes(level_number);
+    InitialiseNewWeapon();
+}
+
 void lara_as_walk(ITEM_INFO *item, COLL_INFO *coll);
 void lara_as_run(ITEM_INFO *item, COLL_INFO *coll);
 void lara_as_stop(ITEM_INFO *item, COLL_INFO *coll);
