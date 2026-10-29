@@ -626,3 +626,49 @@ void Inv_RemoveAllItems(void)
     inv_keys_objects = 0;
     inv_keys_current = 0;
 }
+
+int Inv_RemoveItem(int itemNum)
+{
+    int n, m;
+    int itemNumOption;
+    INVENTORY_ITEM *inv_item;
+
+    itemNumOption = Inv_GetItemOption(itemNum);
+    for (n = 0; n < inv_main_objects; n++)
+    {
+        inv_item = inv_main_list[n];
+        if (inv_item->object_number == itemNumOption)
+        {
+            inv_main_qtys[n]--;
+            if (inv_main_qtys[n] <= 0)
+            {
+                inv_main_objects--;
+                for (m = n; m < inv_main_objects; m++)
+                {
+                    inv_main_list[m] = inv_main_list[m + 1];
+                    inv_main_qtys[m] = inv_main_qtys[m + 1];
+                }
+            }
+            return 1;
+        }
+    }
+    for (n = 0; n < inv_keys_objects; n++)
+    {
+        inv_item = inv_keys_list[n];
+        if (inv_item->object_number == itemNumOption)
+        {
+            inv_keys_qtys[n]--;
+            if (inv_keys_qtys[n] <= 0)
+            {
+                inv_keys_objects--;
+                for (m = n; m < inv_keys_objects; m++)
+                {
+                    inv_keys_list[m] = inv_keys_list[m + 1];
+                    inv_keys_qtys[m] = inv_keys_qtys[m + 1];
+                }
+            }
+            return 1;
+        }
+    }
+    return 0;
+}
