@@ -15,6 +15,11 @@
 
 #define STEPUP_HEIGHT ((STEP_L * 3) / 2)
 
+#define HIT_FORWARD_A 125
+#define HIT_BACK_A 126
+#define HIT_RIGHT_A 127
+#define HIT_LEFT_A 128
+
 typedef struct lara_arm
 {
     sint16 *frame_base;
