@@ -51,5 +51,7 @@ extern SAVEGAME_INFO savegame;
 extern int number_cameras;
 
 void CreateSaveGameInfo(void);
+void ModifyStartInfo(int level_number);
+void CreateStartInfo(int level_number);
 
 #endif

@@ -49,10 +49,12 @@ enum T_flags
     T_OUTLINE = (1 << 10)
 };
 
+void T_InitPrint(void);
 TEXTSTRING *T_Print(sint16 xpos, sint16 ypos, sint16 zpos, char *string);
 void T_FlashText(TEXTSTRING *textString, sint16 i_bool, sint16 rate);
 void T_CentreH(TEXTSTRING *textString, sint16 i_bool);
 void T_CentreV(TEXTSTRING *textString, sint16 i_bool);
 int T_RemovePrint(TEXTSTRING *tString);
+void T_DrawText(void);
 
 #endif

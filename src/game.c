@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "game.h"
 
 uint32 StartLevel = LEVEL1;
@@ -218,4 +219,113 @@ sint32 LevelCompleteSequence(int level_number)
         return EXIT_TO_TITLE;
     }
     return EXIT_TO_TITLE;
+}
+
+char secret_totals[] = {
+    0,
+    3,
+    3,
+    5,
+    3,
+    4,
+    3,
+    3,
+    3,
+    2,
+    3,
+    3,
+    1,
+    3,
+    3,
+    3
+};
+
+void LevelStats(int level_number)
+{
+    int n, numsecrets;
+    int hours, minutes, seconds;
+    TEXTSTRING *heading, *time, *kills, *secrets, *pickups;
+    char string[100];
+
+    TempVideoAdjust(hires_flag, 1.0);
+    FadeToPal(60, game_palette);
+    T_InitPrint();
+
+    sprintf(string, "%s", Level_Strings[level_number]);
+    heading = T_Print(0, -50, 0, string);
+    T_CentreH(heading, 1);
+    T_CentreV(heading, 1);
+
+    seconds = savegame.timer / 30;
+    hours = seconds / 3600;
+    minutes = (seconds / 60) % 60;
+    seconds = seconds % 60;
+
+    if (hours)
+        sprintf(string, "%s %d:%d%d:%d%d", str_timetaken, hours, minutes / 10, minutes % 10, seconds / 10, seconds % 10);
+    else
+        sprintf(string, "%s %d:%d%d", str_timetaken, minutes, seconds / 10, seconds % 10);
+    time = T_Print(0, 70, 0, string);
+    T_CentreH(time, 1);
+    T_CentreV(time, 1);
+
+    numsecrets = 0;
+    for (n = 0; n < MAX_SECRETS; n++)
+    {
+        if (savegame.secrets & 1)
+            numsecrets++;
+        savegame.secrets >>= 1;
+    }
+    sprintf(string, "%s %d %s %d", str_secrets, numsecrets, str_of, (int)secret_totals[level_number]);
+    secrets = T_Print(0, 40, 0, string);
+    T_CentreH(secrets, 1);
+    T_CentreV(secrets, 1);
+
+    sprintf(string, "%s %d", str_pickups, savegame.pickups);
+    pickups = T_Print(0, 10, 0, string);
+    T_CentreH(pickups, 1);
+    T_CentreV(pickups, 1);
+
+    sprintf(string, "%s %d", str_kills, (int)savegame.kills);
+    kills = T_Print(0, -20, 0, string);
+    T_CentreH(kills, 1);
+    T_CentreV(kills, 1);
+
+    while (input & IN_SELECT)
+        S_UpdateInput();
+
+    for (;;)
+    {
+        S_InitialisePolyList();
+        S_CopyBufferToScreen();
+
+        S_UpdateInput();
+
+        T_DrawText();
+        S_OutputPolyList();
+        S_DumpScreen();
+
+        if (input & IN_SELECT || reset_flag)
+            break;
+    }
+
+    if (level_number != LEVEL10C)
+    {
+        CreateStartInfo(level_number + 1);
+        ModifyStartInfo(level_number + 1);
+
+        savegame.current_level = level_number + 1;
+    }
+    else
+    {
+        savegame.bonus_flag = 1;
+        for (n = LEVEL1; n <= LEVEL10C; n++)
+            ModifyStartInfo(n);
+        savegame.current_level = LEVEL1;
+    }
+
+    savegame.start[CURRENT].available = 0;
+
+    S_FadeToBlack();
+    TempVideoRemove();
 }

@@ -552,8 +552,8 @@ address,size,name,symbol
 0x00035020,696,Func35020,
 0x000352e0,6,Func352e0,
 0x000352e8,78,Func352e8,
-0x00035338,255,Func35338,
-0x00035438,316,Func35438,
+0x00035338,255,ModifyStartInfo,ModifyStartInfo_
+0x00035438,316,CreateStartInfo,CreateStartInfo_
 0x00035574,1098,CreateSaveGameInfo,CreateSaveGameInfo_
 0x000359c0,2643,Func359c0,
 0x00036414,24,Func36414,
@@ -594,7 +594,7 @@ address,size,name,symbol
 0x000390a0,681,GetSpheres,GetSpheres_
 0x0003934c,445,GetJointAbsPosition,GetJointAbsPosition_
 0x0003950c,81,Func3950c,
-0x00039560,34,Func39560,
+0x00039560,34,T_InitPrint,T_InitPrint_
 0x00039584,281,T_Print,T_Print_
 0x000396a0,59,Func396a0,
 0x000396dc,3,Func396dc,
@@ -616,7 +616,7 @@ address,size,name,symbol
 0x00039898,45,T_RemovePrint,T_RemovePrint_
 0x000398c8,34,Func398c8,
 0x000398ec,26,Func398ec,
-0x00039908,33,Func39908,
+0x00039908,33,T_DrawText,T_DrawText_
 0x0003992c,1069,Func3992c,
 0x00039d60,69,Func39d60,
 0x00039da8,616,Func39da8,
@@ -1781,7 +1781,14 @@ address,size,name,symbol
 0x000c1996,44,saved_levels,_saved_levels
 0x000c19c2,2,number_valid,_number_valid
 0x000c19c4,46,valid_levels,_valid_levels
+0x000c19f2,16,secret_totals,_secret_totals
+0x000c1a98,88,Level_Strings,_Level_Strings
 0x000c1ba4,10,demomode_text,_demomode_text
+0x000c1fd1,11,str_timetaken,_str_timetaken
+0x000c1fdc,8,str_secrets,_str_secrets
+0x000c1fe4,8,str_pickups,_str_pickups
+0x000c1fec,6,str_kills,_str_kills
+0x000c1ff2,3,str_of,_str_of
 0x000c2084,4,overlay_flag,_overlay_flag
 0x000c2090,24,game_setup,_game_setup
 0x000c20a8,4,malloc_buffer,_malloc_buffer
