@@ -1782,6 +1782,7 @@ address,size,name,symbol
 0x000c19c2,2,number_valid,_number_valid
 0x000c19c4,46,valid_levels,_valid_levels
 0x000c19f2,16,secret_totals,_secret_totals
+0x000c1a04,4,rand_1,_rand_1
 0x000c1a98,88,Level_Strings,_Level_Strings
 0x000c1ba4,10,demomode_text,_demomode_text
 0x000c1fd1,11,str_timetaken,_str_timetaken
