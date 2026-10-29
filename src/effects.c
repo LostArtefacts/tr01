@@ -280,3 +280,19 @@ void Splash(ITEM_INFO *item)
         }
     }
 }
+
+void ControlSplash1(sint16 fx_num)
+{
+    FX_INFO *fx;
+
+    fx = &effects[fx_num];
+    fx->frame_number--;
+    if (fx->frame_number <= objects[fx->object_number].nmeshes)
+    {
+        KillEffect(fx_num);
+        return;
+    }
+
+    fx->pos.z_pos += fx->speed * phd_cos(fx->pos.y_rot) >> W2V_SHIFT;
+    fx->pos.x_pos += fx->speed * phd_sin(fx->pos.y_rot) >> W2V_SHIFT;
+}
