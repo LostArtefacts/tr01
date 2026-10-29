@@ -368,7 +368,7 @@ address,size,name,symbol
 0x00026d28,160,lara_col_upjump,lara_col_upjump_
 0x00026dc8,150,lara_col_fallback,lara_col_fallback_
 0x00026e60,45,lara_col_hangleft,lara_col_hangleft_
-0x00026e90,39,Func26e90,
+0x00026e90,39,lara_col_hangright,lara_col_hangright_
 0x00026eb8,22,Func26eb8,
 0x00026ed0,49,Func26ed0,
 0x00026f04,49,Func26f04,
