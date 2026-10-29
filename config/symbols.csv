@@ -353,7 +353,7 @@ address,size,name,symbol
 0x0002674c,177,lara_col_fastfall,lara_col_fastfall_
 0x00026800,108,lara_col_hang,lara_col_hang_
 0x0002686c,171,lara_col_reach,lara_col_reach_
-0x00026918,95,Func26918,
+0x00026918,95,lara_col_splat,lara_col_splat_
 0x00026978,173,Func26978,
 0x00026a28,240,Func26a28,
 0x00026b18,49,Func26b18,

@@ -1109,6 +1109,18 @@ void lara_col_reach(ITEM_INFO *item, COLL_INFO *coll)
     }
 }
 
+void lara_col_splat(ITEM_INFO *item, COLL_INFO *coll)
+{
+    lara.move_angle = item->pos.y_rot;
+    coll->bad_pos = STEPUP_HEIGHT;
+    coll->bad_neg = -STEPUP_HEIGHT;
+    coll->bad_ceiling = 0;
+    coll->slopes_are_pits = 1;
+    coll->slopes_are_walls = 1;
+    GetLaraCollisionInfo(item, coll);
+    ShiftItem(item, coll);
+}
+
 void GetLaraCollisionInfo(ITEM_INFO *item, COLL_INFO *coll)
 {
     coll->facing = lara.move_angle;
