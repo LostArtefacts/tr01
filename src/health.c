@@ -35,3 +35,19 @@ void DrawHealthBar(void)
     if (health_bar_timer > 0 || hitpoints <= 0 || lara.gun_status == LG_READY)
         S_DrawHealthBar(hitpoints / 10);
 }
+
+void DrawAirBar(void)
+{
+    int air;
+
+    if (lara.water_status != LARA_UNDERWATER && lara.water_status != LARA_SURFACE)
+        return;
+
+    air = (int)lara.air;
+    if (air < 0)
+        air = 0;
+    else if (air > LARA_AIR)
+        air = LARA_AIR;
+
+    S_DrawAirBar((air * 100) / LARA_AIR);
+}
