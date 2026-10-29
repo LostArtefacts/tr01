@@ -343,7 +343,7 @@ address,size,name,symbol
 0x00026074,15,lara_as_waterout,lara_as_waterout_
 0x00026084,429,lara_col_walk,lara_col_walk_
 0x00026234,387,lara_col_run,lara_col_run_
-0x000263b8,204,Func263b8,
+0x000263b8,204,lara_col_stop,lara_col_stop_
 0x00026484,186,Func26484,
 0x00026540,213,Func26540,
 0x00026618,182,Func26618,
