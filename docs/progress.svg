@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">28.13% (218)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">71.87% (557)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">28.26% (219)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">71.74% (556)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="210.12" height="6" x="0" y="0" class="named"/>
-<rect width="536.88" height="6" x="210.12" y="0" class="todo"/>
+<rect width="211.09" height="6" x="0" y="0" class="named"/>
+<rect width="535.91" height="6" x="211.09" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -287,7 +287,7 @@
 <rect width="12" height="12" x="255" y="60" class="named"><title>0x00020414 GetRandomControl (29 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="60" class="named"><title>0x00020434 SeedRandomControl (6 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="60" class="named"><title>0x0002043c GetRandomDraw (29 bytes)</title></rect>
-<rect width="12" height="12" x="300" y="60" class="todo"><title>0x0002045c SeedRandomDraw (6 bytes)</title></rect>
+<rect width="12" height="12" x="300" y="60" class="named"><title>0x0002045c SeedRandomDraw (6 bytes)</title></rect>
 <rect width="12" height="12" x="315" y="60" class="todo"><title>0x00020464 Func20464 (76 bytes)</title></rect>
 <rect width="12" height="12" x="330" y="60" class="todo"><title>0x000204b0 Func204b0 (128 bytes)</title></rect>
 <rect width="12" height="12" x="345" y="60" class="todo"><title>0x00020530 Func20530 (60 bytes)</title></rect>
@@ -848,8 +848,8 @@
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
 <text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">30.65%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">69.35%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="228.94" height="6" x="0" y="0" class="named"/>
-<rect width="518.06" height="6" x="228.94" y="0" class="todo"/>
+<rect width="228.97" height="6" x="0" y="0" class="named"/>
+<rect width="518.03" height="6" x="228.97" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1602,7 +1602,7 @@
 <rect width="0.10" height="0.10" x="737.45" y="240.74" class="todo"><title>0x0004566b phd_PushUnitMatrix (7 bytes)</title></rect>
 <rect width="0.10" height="0.10" x="740.22" y="233.32" class="todo"><title>0x00046703 Func46703 (7 bytes)</title></rect>
 <rect width="0.10" height="0.10" x="740.22" y="236.03" class="named"><title>0x00020434 SeedRandomControl (6 bytes)</title></rect>
-<rect width="0.10" height="0.10" x="740.22" y="238.35" class="todo"><title>0x0002045c SeedRandomDraw (6 bytes)</title></rect>
+<rect width="0.10" height="0.10" x="740.22" y="238.35" class="named"><title>0x0002045c SeedRandomDraw (6 bytes)</title></rect>
 <rect width="0.10" height="0.10" x="740.22" y="240.68" class="todo"><title>0x0002dd60 Func2dd60 (6 bytes)</title></rect>
 <rect width="0.10" height="0.10" x="742.52" y="233.32" class="todo"><title>0x000352e0 Func352e0 (6 bytes)</title></rect>
 <rect width="0.10" height="0.10" x="745.16" y="233.32" class="todo"><title>0x00038f14 S_CDVolume (6 bytes)</title></rect>
