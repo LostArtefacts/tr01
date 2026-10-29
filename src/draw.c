@@ -485,3 +485,14 @@ void phd_TranslateRel_ID(sint32 x, sint32 y, sint32 z, sint32 x2, sint32 y2, sin
     phd_TranslateRel(x2, y2, z2);
     phd_mxptr = oldm;
 }
+
+void phd_RotYXZ_I(sint16 y, sint16 x, sint16 z)
+{
+    sint32 *oldm;
+
+    phd_RotYXZ(y, x, z);
+    oldm = phd_mxptr;
+    phd_mxptr = IMptr;
+    phd_RotYXZ(y, x, z);
+    phd_mxptr = oldm;
+}
