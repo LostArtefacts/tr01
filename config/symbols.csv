@@ -579,7 +579,7 @@ address,size,name,symbol
 0x00034d40,5,DrawSavegameItem,DrawSavegameItem_
 0x00034d68,693,RatControl,RatControl_
 0x00035020,696,VoleControl,VoleControl_
-0x000352e0,6,Func352e0,
+0x000352e0,6,LoadSaveGameInfo,LoadSaveGameInfo_
 0x000352e8,78,Func352e8,
 0x00035338,255,ModifyStartInfo,ModifyStartInfo_
 0x00035438,316,CreateStartInfo,CreateStartInfo_
@@ -2096,6 +2096,8 @@ address,size,name,symbol
 0x000cee80,4,pup_x,_pup_x
 0x000cee84,4,pup_y,_pup_y
 0x000cee88,4,pup_z,_pup_z
+0x000cee8c,4,SGcount,_SGcount
+0x000cee90,4,SGpoint,_SGpoint
 0x000cee94,10596,savegame,_savegame
 0x000d2744,8192,phdsprinfo,_phdsprinfo
 0x000d4744,48000,vbuf,_vbuf
