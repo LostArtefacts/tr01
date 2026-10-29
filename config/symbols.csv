@@ -500,7 +500,7 @@ address,size,name,symbol
 0x0002eb00,49,InitialiseMovingBlock,InitialiseMovingBlock_
 0x0002eb34,296,MovableBlock,MovableBlock_
 0x0002ec7c,547,MovableBlockCollision,MovableBlockCollision_
-0x0002eea0,74,Func2eea0,
+0x0002eea0,74,TestBlockMovable,TestBlockMovable_
 0x0002eefc,254,TestBlockPush,TestBlockPush_
 0x0002f00c,599,TestBlockPull,TestBlockPull_
 0x0002f264,33,Func2f264,
