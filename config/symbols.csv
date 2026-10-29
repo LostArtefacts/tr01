@@ -490,7 +490,7 @@ address,size,name,symbol
 0x0002dc00,312,mn_stop_sound_effect,mn_stop_sound_effect_
 0x0002dd38,14,mn_adjust_master_volume,mn_adjust_master_volume_
 0x0002dd48,24,mn_start_sound_fade,mn_start_sound_fade_
-0x0002dd60,6,Func2dd60,
+0x0002dd60,6,mn_set_sound_fade_rate,mn_set_sound_fade_rate_
 0x0002dd68,45,mn_clear_fx_slot,mn_clear_fx_slot_
 0x0002dd98,49,mn_clear_handles,mn_clear_handles_
 0x0002e940,321,Func2e940,

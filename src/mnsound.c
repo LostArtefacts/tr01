@@ -557,6 +557,11 @@ void mn_start_sound_fade(void)
     mn_sound_fade_counter = 0;
 }
 
+void mn_set_sound_fade_rate(int rate)
+{
+    mn_sound_fade_rate = rate;
+}
+
 void mn_clear_fx_slot(MN_SFX_PLAY_INFO *slot)
 {
     slot->handle = -1;
