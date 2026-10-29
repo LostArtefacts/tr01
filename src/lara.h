@@ -10,6 +10,9 @@
 
 #define NUMBER_ITEMS 256
 
+#define LARA_AIR (2 * 30 * 30)
+#define LARA_HITPOINTS 1000
+
 #define LARA_RAD 100
 #define LARA_HITE 762
 #define UW_RADIUS 300
