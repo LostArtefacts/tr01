@@ -31,5 +31,8 @@ void FlipMap(void);
 void TriggerCDTrack(sint16 value, sint16 flags, sint16 type);
 sint16 GetDoor(FLOOR_INFO *floor);
 int LOS(GAME_VECTOR *start, GAME_VECTOR *target);
+int zLOS(GAME_VECTOR *start, GAME_VECTOR *target);
+int xLOS(GAME_VECTOR *start, GAME_VECTOR *target);
+int ClipTarget(GAME_VECTOR *start, GAME_VECTOR *target, FLOOR_INFO *floor);
 
 #endif

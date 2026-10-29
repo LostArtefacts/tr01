@@ -90,9 +90,9 @@ address,size,name,symbol
 0x000180e8,641,GetCeiling,GetCeiling_
 0x0001836c,82,GetDoor,GetDoor_
 0x000183c0,163,LOS,LOS_
-0x00018464,747,Func18464,
-0x00018750,741,Func18750,
-0x00018a38,259,Func18a38,
+0x00018464,747,zLOS,zLOS_
+0x00018750,741,xLOS,xLOS_
+0x00018a38,259,ClipTarget,ClipTarget_
 0x00018b3c,227,FlipMap,FlipMap_
 0x00018c20,97,Func18c20,
 0x00018c84,97,Func18c84,
