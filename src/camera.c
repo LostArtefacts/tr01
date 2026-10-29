@@ -373,3 +373,36 @@ int ShiftClamp(GAME_VECTOR *pos, sint32 clamp)
 
     return shift;
 }
+
+void CombatCamera(ITEM_INFO *item)
+{
+    sint32 distance;
+    GAME_VECTOR ideal;
+
+    camera.target.z = item->pos.z_pos;
+    camera.target.x = item->pos.x_pos;
+
+    if (lara.target)
+    {
+        camera.target_angle = item->pos.y_rot + lara.target_angles[0];
+        camera.target_elevation = item->pos.x_rot + lara.target_angles[1];
+    }
+    else
+    {
+        camera.target_angle = item->pos.y_rot + lara.head_y_rot + lara.torso_y_rot;
+        camera.target_elevation = item->pos.x_rot + lara.head_x_rot + lara.torso_x_rot;
+    }
+
+    camera.target_distance = COMBAT_DISTANCE;
+
+    distance = camera.target_distance * phd_cos(camera.target_elevation) >> W2V_SHIFT;
+
+    ideal.x = camera.target.x - (distance * phd_sin(camera.target_angle) >> W2V_SHIFT);
+    ideal.y = camera.target.y + (camera.target_distance * phd_sin(camera.target_elevation) >> W2V_SHIFT);
+    ideal.z = camera.target.z - (distance * phd_cos(camera.target_angle) >> W2V_SHIFT);
+    ideal.room_number = camera.pos.room_number;
+
+    SmartShift(&ideal, ShiftCamera);
+
+    MoveCamera(&ideal, camera.speed);
+}
