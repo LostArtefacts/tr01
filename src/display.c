@@ -121,3 +121,18 @@ void TempVideoRemove(void)
     else
         setup_screen_size();
 }
+
+void S_CopyScreenToBuffer(void)
+{
+    int i;
+    char *src, *dest;
+    int size;
+
+    if (bckscrn == NULL || bckscrnsize == 0)
+        return;
+    src = (char *)game_setup.scrn_ptr;
+    dest = bckscrn;
+    size = (int)game_setup.sc_width * game_setup.sc_height;
+    for (i = size; i > 0; i--)
+        *(dest++) = *(src++);
+}
