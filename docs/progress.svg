@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">15.50% (120)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">84.50% (654)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">15.63% (121)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">84.37% (653)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="115.81" height="6" x="0" y="0" class="named"/>
-<rect width="631.19" height="6" x="115.81" y="0" class="todo"/>
+<rect width="116.78" height="6" x="0" y="0" class="named"/>
+<rect width="630.22" height="6" x="116.78" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -188,7 +188,7 @@
 <rect width="12" height="12" x="270" y="30" class="named"><title>0x0001a320 DrawPhaseCinematic (148 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="30" class="named"><title>0x0001a3b4 DrawPhaseGame (49 bytes)</title></rect>
 <rect width="12" height="12" x="300" y="30" class="named"><title>0x0001a3e8 DrawRooms (278 bytes)</title></rect>
-<rect width="12" height="12" x="315" y="30" class="todo"><title>0x0001a500 GetRoomBounds (118 bytes)</title></rect>
+<rect width="12" height="12" x="315" y="30" class="named"><title>0x0001a500 GetRoomBounds (118 bytes)</title></rect>
 <rect width="12" height="12" x="330" y="30" class="todo"><title>0x0001a578 SetRoomBounds (990 bytes)</title></rect>
 <rect width="12" height="12" x="345" y="30" class="todo"><title>0x0001a958 PrintRooms (452 bytes)</title></rect>
 <rect width="12" height="12" x="360" y="30" class="todo"><title>0x0001ab1c DrawEffect (270 bytes)</title></rect>
@@ -845,10 +845,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">19.01%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">80.99%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">19.06%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">80.94%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="141.98" height="6" x="0" y="0" class="named"/>
-<rect width="605.02" height="6" x="141.98" y="0" class="todo"/>
+<rect width="142.41" height="6" x="0" y="0" class="named"/>
+<rect width="604.59" height="6" x="142.41" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="todo"><title>0x0001bc98 Func1bc98 (4489 bytes)</title></rect>
@@ -1250,7 +1250,7 @@
 <rect width="7.06" height="7.66" x="613.64" y="138.96" class="todo"><title>0x00034b48 SwitchTrigger (120 bytes)</title></rect>
 <rect width="7.06" height="7.57" x="613.64" y="149.62" class="todo"><title>0x0001d754 Func1d754 (119 bytes)</title></rect>
 <rect width="7.06" height="7.57" x="613.64" y="160.20" class="todo"><title>0x0003e2a8 Func3e2a8 (119 bytes)</title></rect>
-<rect width="7.06" height="7.48" x="613.64" y="170.77" class="todo"><title>0x0001a500 GetRoomBounds (118 bytes)</title></rect>
+<rect width="7.06" height="7.48" x="613.64" y="170.77" class="named"><title>0x0001a500 GetRoomBounds (118 bytes)</title></rect>
 <rect width="7.06" height="7.39" x="613.64" y="181.25" class="todo"><title>0x00031338 Func31338 (117 bytes)</title></rect>
 <rect width="7.06" height="7.31" x="613.64" y="191.65" class="named"><title>0x000163dc DoorCollision (116 bytes)</title></rect>
 <rect width="7.06" height="7.31" x="613.64" y="201.95" class="named"><title>0x0001a150 TempVideoRemove (116 bytes)</title></rect>

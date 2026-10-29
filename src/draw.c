@@ -90,3 +90,25 @@ void DrawRooms(sint16 current_room)
     for (i = 0; i < number_draw_rooms; i++)
         PrintRooms(draw_rooms[i]);
 }
+
+void GetRoomBounds(sint16 room_number)
+{
+    int i;
+    sint16 *door;
+    ROOM_INFO *r;
+
+    phd_PushMatrix();
+    r = &room[room_number];
+    phd_TranslateAbs(r->x, r->y, r->z);
+    if ((door = r->door))
+    {
+        for (i = *(door++); i > 0; i--, door += 15)
+        {
+            room_number = *(door++);
+            if (SetRoomBounds(door, room_number, r))
+                GetRoomBounds(room_number);
+        }
+    }
+
+    phd_PopMatrix();
+}
