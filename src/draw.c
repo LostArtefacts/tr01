@@ -507,3 +507,11 @@ void phd_RotYXZpack_I(sint32 r1, sint32 r2)
     phd_RotYXZpack(r2);
     phd_mxptr = oldm;
 }
+
+void phd_PutPolygons_I(sint16 *ptr, int clip)
+{
+    phd_PushMatrix();
+    InterpolateMatrix();
+    phd_PutPolygons(ptr, clip);
+    phd_PopMatrix();
+}

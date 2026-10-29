@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">17.70% (137)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">82.30% (637)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">17.83% (138)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">82.17% (636)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="132.22" height="6" x="0" y="0" class="named"/>
-<rect width="614.78" height="6" x="132.22" y="0" class="todo"/>
+<rect width="133.19" height="6" x="0" y="0" class="named"/>
+<rect width="613.81" height="6" x="133.19" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -208,7 +208,7 @@
 <rect width="12" height="12" x="570" y="30" class="named"><title>0x0001cf74 phd_TranslateRel_ID (47 bytes)</title></rect>
 <rect width="12" height="12" x="585" y="30" class="named"><title>0x0001cfa4 phd_RotYXZ_I (62 bytes)</title></rect>
 <rect width="12" height="12" x="600" y="30" class="named"><title>0x0001cfe4 phd_RotYXZpack_I (37 bytes)</title></rect>
-<rect width="12" height="12" x="615" y="30" class="todo"><title>0x0001d00c phd_PutPolygons_I (29 bytes)</title></rect>
+<rect width="12" height="12" x="615" y="30" class="named"><title>0x0001d00c phd_PutPolygons_I (29 bytes)</title></rect>
 <rect width="12" height="12" x="630" y="30" class="todo"><title>0x0001d02c InterpolateMatrix (558 bytes)</title></rect>
 <rect width="12" height="12" x="645" y="30" class="todo"><title>0x0001d25c InterpolateArmMatrix (276 bytes)</title></rect>
 <rect width="12" height="12" x="660" y="30" class="todo"><title>0x0001d370 GetFrames (195 bytes)</title></rect>
@@ -845,10 +845,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">20.34%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">79.66%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">20.36%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">79.64%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="151.98" height="6" x="0" y="0" class="named"/>
-<rect width="595.02" height="6" x="151.98" y="0" class="todo"/>
+<rect width="152.08" height="6" x="0" y="0" class="named"/>
+<rect width="594.92" height="6" x="152.08" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="todo"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1527,7 +1527,7 @@
 <rect width="2.64" height="1.91" x="722.69" y="204" class="todo"><title>0x00020e34 Func20e34 (31 bytes)</title></rect>
 <rect width="2.64" height="1.91" x="728.34" y="204" class="todo"><title>0x000245a8 Func245a8 (31 bytes)</title></rect>
 <rect width="2.46" height="1.91" x="733.98" y="204" class="todo"><title>0x0004564d phd_PushMatrix (30 bytes)</title></rect>
-<rect width="2.28" height="1.91" x="739.44" y="204" class="todo"><title>0x0001d00c phd_PutPolygons_I (29 bytes)</title></rect>
+<rect width="2.28" height="1.91" x="739.44" y="204" class="named"><title>0x0001d00c phd_PutPolygons_I (29 bytes)</title></rect>
 <rect width="2.28" height="1.91" x="744.72" y="204" class="todo"><title>0x0001e044 Func1e044 (29 bytes)</title></rect>
 <rect width="2.22" height="1.97" x="711.04" y="208.91" class="todo"><title>0x00020414 GetRandomControl (29 bytes)</title></rect>
 <rect width="2.22" height="1.97" x="711.04" y="213.87" class="todo"><title>0x0002043c GetRandomDraw (29 bytes)</title></rect>
