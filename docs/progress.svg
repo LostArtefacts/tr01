@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">67.51% (536)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">32.49% (258)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">67.63% (537)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">32.37% (257)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="504.27" height="6" x="0" y="0" class="named"/>
-<rect width="242.73" height="6" x="504.27" y="0" class="todo"/>
+<rect width="505.21" height="6" x="0" y="0" class="named"/>
+<rect width="241.79" height="6" x="505.21" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -602,7 +602,7 @@
 <rect width="12" height="12" x="480" y="150" class="named"><title>0x000304f8 do_passport_option (1412 bytes)</title></rect>
 <rect width="12" height="12" x="495" y="150" class="named"><title>0x00030a7c do_gamma_option (256 bytes)</title></rect>
 <rect width="12" height="12" x="510" y="150" class="named"><title>0x00030b7c do_detail_option (689 bytes)</title></rect>
-<rect width="12" height="12" x="525" y="150" class="todo"><title>0x00030e30 do_sound_option (1260 bytes)</title></rect>
+<rect width="12" height="12" x="525" y="150" class="named"><title>0x00030e30 do_sound_option (1260 bytes)</title></rect>
 <rect width="12" height="12" x="540" y="150" class="named"><title>0x0003131c do_compass_option (27 bytes)</title></rect>
 <rect width="12" height="12" x="555" y="150" class="todo"><title>0x00031338 Func31338 (117 bytes)</title></rect>
 <rect width="12" height="12" x="570" y="150" class="todo"><title>0x000313b0 Func313b0 (81 bytes)</title></rect>
@@ -865,10 +865,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">62.95%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">37.05%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">63.55%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">36.45%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="470.21" height="6" x="0" y="0" class="named"/>
-<rect width="276.79" height="6" x="470.21" y="0" class="todo"/>
+<rect width="474.75" height="6" x="0" y="0" class="named"/>
+<rect width="272.25" height="6" x="474.75" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.01" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -897,7 +897,7 @@
 <rect width="28.37" height="33.47" x="173.71" y="0" class="todo"><title>0x000406c8 Func406c8 (1302 bytes)</title></rect>
 <rect width="28.37" height="33.41" x="173.71" y="36.47" class="todo"><title>0x0004130c Func4130c (1300 bytes)</title></rect>
 <rect width="28.37" height="32.74" x="173.71" y="72.88" class="named"><title>0x000145c8 CalculateCamera (1276 bytes)</title></rect>
-<rect width="28.37" height="32.29" x="173.71" y="108.62" class="todo"><title>0x00030e30 do_sound_option (1260 bytes)</title></rect>
+<rect width="28.37" height="32.29" x="173.71" y="108.62" class="named"><title>0x00030e30 do_sound_option (1260 bytes)</title></rect>
 <rect width="28.37" height="30.75" x="173.71" y="143.91" class="named"><title>0x0002ddfc TorsoControl (1205 bytes)</title></rect>
 <rect width="28.37" height="30.08" x="173.71" y="177.66" class="todo"><title>0x000319ec Func319ec (1181 bytes)</title></rect>
 <rect width="28.37" height="29.27" x="173.71" y="210.73" class="todo"><title>0x00031fcc Display_Requester (1152 bytes)</title></rect>

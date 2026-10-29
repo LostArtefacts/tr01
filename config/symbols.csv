@@ -1830,6 +1830,7 @@ address,size,name,symbol
 0x000c1fec,6,str_kills,_str_kills
 0x000c1ff2,3,str_of,_str_of
 0x000c2042,11,sav_mess7,_sav_mess7
+0x000c2058,12,str_volume,_str_volume
 0x000c2064,14,str_detail,_str_detail
 0x000c2072,5,str_high,_str_high
 0x000c2077,7,str_medium,_str_medium
@@ -1844,6 +1845,10 @@ address,size,name,symbol
 0x000c25c0,4,inv_nframes,_inv_nframes
 0x000c271c,220,is_gamma_level,_is_gamma_level
 0x000c27f8,8,is_gamma_list,_is_gamma_list
+0x000c28e4,198,is_sound_muslevel,_is_sound_muslevel
+0x000c29ac,198,is_sound_sfxlevel,_is_sound_sfxlevel
+0x000c2a74,198,is_sound_muslevellow,_is_sound_muslevellow
+0x000c2b3c,198,is_sound_sfxlevellow,_is_sound_sfxlevellow
 0x000c2c58,62,icompass_option,_icompass_option
 0x000c2c98,62,igun_option,_igun_option
 0x000c2cd8,62,ishotgun_option,_ishotgun_option
@@ -1941,6 +1946,7 @@ address,size,name,symbol
 0x000c3c3c,2,sam_num,_sam_num
 0x000c3c3e,2,normal_pitch,_normal_pitch
 0x000c3c40,20,dtext,_dtext
+0x000c3c54,16,sa_text,_sa_text
 0x000c3e38,4,number_cameras,_number_cameras
 0x000c3e68,128,exit_message,_exit_message
 0x000c3ee8,4,title_loaded,_title_loaded

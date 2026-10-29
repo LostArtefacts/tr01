@@ -28,6 +28,7 @@ extern char str_secrets[];
 extern char str_pickups[];
 extern char str_kills[];
 extern char sav_mess7[];
+extern char str_volume[];
 extern char str_detail[];
 extern char str_high[];
 extern char str_medium[];

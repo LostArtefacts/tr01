@@ -21,6 +21,8 @@
 
 #define DEC_HBAR IN_LEFT
 #define INC_HBAR IN_RIGHT
+#define PREV_HBAR IN_FORWARD
+#define NEXT_HBAR IN_BACK
 
 typedef enum pass_pages
 {
@@ -196,6 +198,10 @@ extern REQUEST_INFO Load_Game_Requester;
 
 extern INVENTORY_SPRITE is_gamma_level[];
 extern INVENTORY_SPRITE *is_gamma_list[];
+extern INVENTORY_SPRITE is_sound_muslevel[];
+extern INVENTORY_SPRITE is_sound_sfxlevel[];
+extern INVENTORY_SPRITE is_sound_muslevellow[];
+extern INVENTORY_SPRITE is_sound_sfxlevellow[];
 
 extern sint32 inv_nframes;
 

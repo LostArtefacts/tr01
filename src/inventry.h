@@ -45,9 +45,11 @@ enum inventory_colours
 
 extern SG_COL inv_colours[];
 extern sint32 Inventory_Mode;
+extern sint16 Option_SoundFX_Volume;
 extern sint16 Option_Music_Volume;
 extern sint16 Inventory_Chosen;
 extern sint32 Inventory_ExtraData[];
+extern sint16 item_data;
 
 sint32 Display_Inventory(sint32 inventory_mode);
 int Inv_AddItem(int itemNum);
