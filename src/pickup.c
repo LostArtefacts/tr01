@@ -617,3 +617,16 @@ int SwitchTrigger(sint16 item_num, sint16 timer)
     }
     return 0;
 }
+
+int KeyTrigger(sint16 item_num)
+{
+    ITEM_INFO *item;
+
+    item = &items[item_num];
+    if (item->status == ACTIVE && lara.gun_status == LG_ARMLESS)
+    {
+        item->status = DEACTIVATED;
+        return 1;
+    }
+    return 0;
+}
