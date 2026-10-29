@@ -149,7 +149,7 @@ address,size,name,symbol
 0x0001d4e0,145,ItemNearLara,ItemNearLara_
 0x0001d574,110,SoundEffects,SoundEffects_
 0x0001d5e4,106,DoBloodSplat,DoBloodSplat_
-0x0001d650,157,Func1d650,
+0x0001d650,157,ControlBlood1,ControlBlood1_
 0x0001d6f0,99,Func1d6f0,
 0x0001d754,119,Func1d754,
 0x0001d7cc,46,Func1d7cc,

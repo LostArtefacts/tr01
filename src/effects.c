@@ -70,3 +70,20 @@ sint16 DoBloodSplat(sint32 x, sint32 y, sint32 z, sint16 speed, PHD_ANGLE direct
     }
     return fx_num;
 }
+
+void ControlBlood1(sint16 fx_num)
+{
+    FX_INFO *fx;
+
+    fx = &effects[fx_num];
+    fx->pos.x_pos += (phd_sin(fx->pos.y_rot) * fx->speed) >> W2V_SHIFT;
+    fx->pos.z_pos += (phd_cos(fx->pos.y_rot) * fx->speed) >> W2V_SHIFT;
+    fx->counter++;
+    if (fx->counter == 4)
+    {
+        fx->counter = 0;
+        fx->frame_number--;
+        if (fx->frame_number <= objects[fx->object_number].nmeshes)
+            KillEffect(fx_num);
+    }
+}
