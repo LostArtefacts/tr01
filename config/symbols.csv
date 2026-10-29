@@ -7,7 +7,7 @@ address,size,name,symbol
 0x00010090,639,S_GetObjectBounds,S_GetObjectBounds_
 0x00010310,406,S_PrintShadow,S_PrintShadow_
 0x000104a8,401,S_CalculateLight,S_CalculateLight_
-0x0001063c,41,Func1063c,
+0x0001063c,41,S_CalculateStaticLight,S_CalculateStaticLight_
 0x00010668,465,Func10668,
 0x0001083c,450,Func1083c,
 0x00010a00,161,Func10a00,

@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">1.04% (8)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">98.96% (762)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">1.17% (9)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">98.83% (761)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="7.76" height="6" x="0" y="0" class="named"/>
-<rect width="739.24" height="6" x="7.76" y="0" class="todo"/>
+<rect width="8.73" height="6" x="0" y="0" class="named"/>
+<rect width="738.27" height="6" x="8.73" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -75,7 +75,7 @@
 <rect width="12" height="12" x="75" y="0" class="named"><title>0x00010090 S_GetObjectBounds (639 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="0" class="named"><title>0x00010310 S_PrintShadow (406 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="0" class="named"><title>0x000104a8 S_CalculateLight (401 bytes)</title></rect>
-<rect width="12" height="12" x="120" y="0" class="todo"><title>0x0001063c Func1063c (41 bytes)</title></rect>
+<rect width="12" height="12" x="120" y="0" class="named"><title>0x0001063c S_CalculateStaticLight (41 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="0" class="todo"><title>0x00010668 Func10668 (465 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="0" class="todo"><title>0x0001083c Func1083c (450 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="0" class="todo"><title>0x00010a00 Func10a00 (161 bytes)</title></rect>
@@ -841,10 +841,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">0.78%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">99.22%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">0.80%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">99.20%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="5.83" height="6" x="0" y="0" class="named"/>
-<rect width="741.17" height="6" x="5.83" y="0" class="todo"/>
+<rect width="5.98" height="6" x="0" y="0" class="named"/>
+<rect width="741.02" height="6" x="5.98" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="54.96" height="67.43" x="0" y="0" class="todo"><title>0x0001bc98 Func1bc98 (4489 bytes)</title></rect>
@@ -1468,7 +1468,7 @@
 <rect width="3.14" height="3.22" x="731.59" y="181.54" class="todo"><title>0x00025c28 Func25c28 (42 bytes)</title></rect>
 <rect width="3.14" height="3.22" x="737.73" y="181.54" class="todo"><title>0x00025c54 Func25c54 (42 bytes)</title></rect>
 <rect width="3.14" height="3.22" x="743.86" y="181.54" class="todo"><title>0x00025c80 Func25c80 (42 bytes)</title></rect>
-<rect width="2.94" height="3.27" x="694.47" y="187.76" class="todo"><title>0x0001063c Func1063c (41 bytes)</title></rect>
+<rect width="2.94" height="3.27" x="694.47" y="187.76" class="named"><title>0x0001063c S_CalculateStaticLight (41 bytes)</title></rect>
 <rect width="2.94" height="3.27" x="694.47" y="194.04" class="todo"><title>0x0001e1b8 Func1e1b8 (41 bytes)</title></rect>
 <rect width="2.94" height="3.27" x="694.47" y="200.31" class="todo"><title>0x00029188 Func29188 (41 bytes)</title></rect>
 <rect width="2.94" height="3.27" x="694.47" y="206.58" class="todo"><title>0x00046762 ScreenClear (41 bytes)</title></rect>

@@ -269,3 +269,13 @@ void S_CalculateLight(sint32 x, sint32 y, sint32 z, sint16 room_number)
             ls_adder = 0x1fff;
     }
 }
+
+void S_CalculateStaticLight(sint16 adder)
+{
+    sint32 zdist;
+
+    ls_adder = adder - (16 * 256);
+    zdist = *(phd_mxptr + M23) >> W2V_SHIFT;
+    if (zdist > DEPTHQ_START)
+        ls_adder += zdist - DEPTHQ_START;
+}
