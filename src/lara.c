@@ -547,3 +547,9 @@ void lara_as_hangright(ITEM_INFO *item, COLL_INFO *coll)
     if (!(input & IN_RIGHT) && !(input & IN_STEPR))
         item->goal_anim_state = AS_HANG;
 }
+
+void lara_as_slideback(ITEM_INFO *item, COLL_INFO *coll)
+{
+    if (input & IN_JUMP)
+        item->goal_anim_state = AS_BACKJUMP;
+}
