@@ -351,3 +351,23 @@ void EarthQuakeFX(ITEM_INFO *item)
     if (fliptimer == 105)
         flipeffect = -1;
 }
+
+void FloodFX(ITEM_INFO *item)
+{
+    PHD_3DPOS pos;
+
+    if (fliptimer > 30 * 4)
+        flipeffect = -1;
+    else
+    {
+        pos.x_pos = lara_item->pos.x_pos;
+        if (fliptimer < 30)
+            pos.y_pos = camera.target.y + (30 - fliptimer) * 100;
+        else
+            pos.y_pos = camera.target.y + (fliptimer - 30) * 100;
+        pos.z_pos = lara_item->pos.z_pos;
+
+        SoundEffect(81, &pos, NULL);
+    }
+    fliptimer++;
+}

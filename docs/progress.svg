@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">21.32% (165)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">78.68% (609)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">21.45% (166)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">78.55% (608)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="159.24" height="6" x="0" y="0" class="named"/>
-<rect width="587.76" height="6" x="159.24" y="0" class="todo"/>
+<rect width="160.21" height="6" x="0" y="0" class="named"/>
+<rect width="586.79" height="6" x="160.21" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -234,7 +234,7 @@
 <rect width="12" height="12" x="210" y="45" class="named"><title>0x0001de6c dino_stomp_effect (178 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="45" class="named"><title>0x0001df20 lara_normal_effect (42 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="45" class="named"><title>0x0001df4c EarthQuakeFX (120 bytes)</title></rect>
-<rect width="12" height="12" x="255" y="45" class="todo"><title>0x0001dfc4 Func1dfc4 (127 bytes)</title></rect>
+<rect width="12" height="12" x="255" y="45" class="named"><title>0x0001dfc4 FloodFX (127 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="45" class="todo"><title>0x0001e044 Func1e044 (29 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="45" class="todo"><title>0x0001e064 Func1e064 (72 bytes)</title></rect>
 <rect width="12" height="12" x="300" y="45" class="todo"><title>0x0001e0ac Stairs2SlopeFX (44 bytes)</title></rect>
@@ -845,10 +845,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">26.18%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">73.82%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">26.24%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">73.76%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="195.55" height="6" x="0" y="0" class="named"/>
-<rect width="551.45" height="6" x="195.55" y="0" class="todo"/>
+<rect width="196.02" height="6" x="0" y="0" class="named"/>
+<rect width="550.98" height="6" x="196.02" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1226,7 +1226,7 @@
 <rect width="7.47" height="7.93" x="667.26" y="96.05" class="named"><title>0x00014bf8 InitCinematicRooms (128 bytes)</title></rect>
 <rect width="7.47" height="7.93" x="677.73" y="96.05" class="todo"><title>0x000204b0 Func204b0 (128 bytes)</title></rect>
 <rect width="7.47" height="7.93" x="688.19" y="96.05" class="todo"><title>0x00024678 Func24678 (128 bytes)</title></rect>
-<rect width="7.38" height="7.93" x="698.66" y="96.05" class="todo"><title>0x0001dfc4 Func1dfc4 (127 bytes)</title></rect>
+<rect width="7.38" height="7.93" x="698.66" y="96.05" class="named"><title>0x0001dfc4 FloodFX (127 bytes)</title></rect>
 <rect width="7.38" height="7.93" x="709.04" y="96.05" class="todo"><title>0x00024d00 Func24d00 (127 bytes)</title></rect>
 <rect width="7.22" height="7.93" x="719.42" y="96.05" class="todo"><title>0x0002c574 Func2c574 (125 bytes)</title></rect>
 <rect width="7.22" height="7.93" x="729.64" y="96.05" class="todo"><title>0x0002c8ec Func2c8ec (125 bytes)</title></rect>
