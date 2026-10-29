@@ -444,3 +444,102 @@ void AimWeapon(WEAPON_INFO *winfo, LARA_ARM *arm)
 
     arm->z_rot = 0;
 }
+
+int FireWeapon(int weapon_type, ITEM_INFO *target, ITEM_INFO *src, PHD_ANGLE *angles)
+{
+    int r, i, nums, bestdist, best;
+    AMMO_INFO *ammo;
+    WEAPON_INFO *winfo;
+    PHD_3DPOS view;
+    SPHERE *sptr, slist[33];
+    GAME_VECTOR vsrc, vdest;
+
+    switch (weapon_type)
+    {
+    default:
+        ammo = &lara.pistols;
+        ammo->ammo = 1000;
+        break;
+
+    case LG_MAGNUMS:
+        ammo = &lara.magnums;
+        if (savegame.bonus_flag)
+            ammo->ammo = 1000;
+        break;
+
+    case LG_UZIS:
+        ammo = &lara.uzis;
+        if (savegame.bonus_flag)
+            ammo->ammo = 1000;
+        break;
+
+    case LG_SHOTGUN:
+        ammo = &lara.shotgun;
+        if (savegame.bonus_flag)
+            ammo->ammo = 1000;
+        break;
+    }
+
+    if (ammo->ammo > 0)
+    {
+        ammo->ammo--;
+        winfo = &weapons[weapon_type];
+        view.x_pos = src->pos.x_pos;
+        view.y_pos = src->pos.y_pos - winfo->gun_height;
+        view.z_pos = src->pos.z_pos;
+        r = (int)((GetRandomControl() - 16384) * winfo->shot_accuracy) / 65536;
+        view.x_rot = *(angles + 1) + (sint16)r;
+        r = (int)((GetRandomControl() - 16384) * winfo->shot_accuracy) / 65536;
+        view.y_rot = *(angles + 0) + (sint16)r;
+        view.z_rot = 0;
+        phd_GenerateW2V(&view);
+        nums = GetSpheres(target, slist, 0);
+
+        sptr = &slist[0];
+        best = -1;
+        bestdist = 0x7fffffff;
+        for (i = 0; i < nums; i++, sptr++)
+        {
+            r = sptr->r;
+            if ((ABS(sptr->x)) < r && (ABS(sptr->y)) < r && sptr->z > r && (sptr->x * sptr->x) + (sptr->y * sptr->y) <= (r * r))
+            {
+                if (sptr->z - r < bestdist)
+                {
+                    bestdist = sptr->z - r;
+                    best = i;
+                }
+            }
+        }
+
+        vsrc.x = view.x_pos;
+        vsrc.y = view.y_pos;
+        vsrc.z = view.z_pos;
+        vsrc.room_number = src->room_number;
+        if (best >= 0)
+        {
+            ammo->hit++;
+            vdest.x = vsrc.x + ((*(phd_mxptr + M20) * bestdist) >> W2V_SHIFT);
+            vdest.y = vsrc.y + ((*(phd_mxptr + M21) * bestdist) >> W2V_SHIFT);
+            vdest.z = vsrc.z + ((*(phd_mxptr + M22) * bestdist) >> W2V_SHIFT);
+            HitTarget(target, &vdest, winfo->damage);
+            return 1;
+        }
+        else
+        {
+            ammo->miss++;
+            vdest.x = vsrc.x + *(phd_mxptr + M20);
+            vdest.y = vsrc.y + *(phd_mxptr + M21);
+            vdest.z = vsrc.z + *(phd_mxptr + M22);
+            LOS(&vsrc, &vdest);
+            Richochet(&vdest);
+            return -1;
+        }
+    }
+    else
+    {
+        ammo->ammo = 0;
+        SoundEffect(48, &src->pos, NULL);
+        lara.request_gun_type = LG_PISTOLS;
+        return 0;
+    }
+}

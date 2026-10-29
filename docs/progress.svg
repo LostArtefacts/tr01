@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">56.58% (447)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">43.42% (343)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">56.71% (448)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">43.29% (342)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="422.67" height="6" x="0" y="0" class="named"/>
-<rect width="324.33" height="6" x="422.67" y="0" class="todo"/>
+<rect width="423.62" height="6" x="0" y="0" class="named"/>
+<rect width="323.38" height="6" x="423.62" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -515,7 +515,7 @@
 <rect width="12" height="12" x="675" y="120" class="named"><title>0x0002aa58 LaraGetNewTarget (449 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="120" class="named"><title>0x0002ac1c find_target_point (203 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="120" class="named"><title>0x0002ace8 AimWeapon (183 bytes)</title></rect>
-<rect width="12" height="12" x="720" y="120" class="todo"><title>0x0002ada0 FireWeapon (911 bytes)</title></rect>
+<rect width="12" height="12" x="720" y="120" class="named"><title>0x0002ada0 FireWeapon (911 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="120" class="todo"><title>0x0002b130 HitTarget (206 bytes)</title></rect>
 <rect width="12" height="12" x="0" y="135" class="todo"><title>0x0002b200 draw_shotgun (164 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="135" class="todo"><title>0x0002b2a4 undraw_shotgun (390 bytes)</title></rect>
@@ -861,10 +861,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">51.37%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">48.63%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">51.82%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">48.18%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="383.72" height="6" x="0" y="0" class="named"/>
-<rect width="363.28" height="6" x="383.72" y="0" class="todo"/>
+<rect width="387.06" height="6" x="0" y="0" class="named"/>
+<rect width="359.94" height="6" x="387.06" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -913,7 +913,7 @@
 <rect width="25.72" height="26.13" x="238.44" y="156.49" class="named"><title>0x00010b28 S_DrawLighteningSegment (936 bytes)</title></rect>
 <rect width="25.72" height="26" x="238.44" y="185.62" class="todo"><title>0x0003c39c Func3c39c (932 bytes)</title></rect>
 <rect width="25.72" height="25.38" x="238.44" y="214.62" class="named"><title>0x00019760 RaptorControl (912 bytes)</title></rect>
-<rect width="24.72" height="26.37" x="267.16" y="0" class="todo"><title>0x0002ada0 FireWeapon (911 bytes)</title></rect>
+<rect width="24.72" height="26.37" x="267.16" y="0" class="named"><title>0x0002ada0 FireWeapon (911 bytes)</title></rect>
 <rect width="24.72" height="26.34" x="267.16" y="29.37" class="todo"><title>0x00041820 Func41820 (910 bytes)</title></rect>
 <rect width="24.72" height="26.15" x="267.16" y="58.71" class="named"><title>0x0002a460 LaraGun (904 bytes)</title></rect>
 <rect width="24.72" height="23.86" x="267.16" y="87.86" class="todo"><title>0x00044d12 Func44d12 (833 bytes)</title></rect>
