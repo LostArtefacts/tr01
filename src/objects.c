@@ -282,3 +282,8 @@ void BoatControl(sint16 item_number)
 
     AnimateItem(item);
 }
+
+void ScionControl(sint16 item_number)
+{
+    AnimateItem(&items[item_number]);
+}

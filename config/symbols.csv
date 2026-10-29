@@ -526,7 +526,7 @@ address,size,name,symbol
 0x00030020,111,CogControl,CogControl_
 0x00030090,131,CabinControl,CabinControl_
 0x00030114,82,BoatControl,BoatControl_
-0x00030168,28,Func30168,
+0x00030168,28,ScionControl,ScionControl_
 0x00030184,395,Func30184,
 0x00030310,105,Func30310,
 0x00030380,373,do_inventory_options,do_inventory_options_

@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">66.20% (525)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">33.80% (268)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">66.33% (526)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">33.67% (267)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="494.55" height="6" x="0" y="0" class="named"/>
-<rect width="252.45" height="6" x="494.55" y="0" class="todo"/>
+<rect width="495.49" height="6" x="0" y="0" class="named"/>
+<rect width="251.51" height="6" x="495.49" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -594,7 +594,7 @@
 <rect width="12" height="12" x="360" y="150" class="named"><title>0x00030020 CogControl (111 bytes)</title></rect>
 <rect width="12" height="12" x="375" y="150" class="named"><title>0x00030090 CabinControl (131 bytes)</title></rect>
 <rect width="12" height="12" x="390" y="150" class="named"><title>0x00030114 BoatControl (82 bytes)</title></rect>
-<rect width="12" height="12" x="405" y="150" class="todo"><title>0x00030168 Func30168 (28 bytes)</title></rect>
+<rect width="12" height="12" x="405" y="150" class="named"><title>0x00030168 ScionControl (28 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="150" class="todo"><title>0x00030184 Func30184 (395 bytes)</title></rect>
 <rect width="12" height="12" x="435" y="150" class="todo"><title>0x00030310 Func30310 (105 bytes)</title></rect>
 <rect width="12" height="12" x="450" y="150" class="todo"><title>0x00030380 do_inventory_options (373 bytes)</title></rect>
@@ -864,10 +864,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">60.02%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">39.98%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">60.04%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">39.96%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="448.36" height="6" x="0" y="0" class="named"/>
-<rect width="298.64" height="6" x="448.36" y="0" class="todo"/>
+<rect width="448.46" height="6" x="0" y="0" class="named"/>
+<rect width="298.54" height="6" x="448.46" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.01" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1556,7 +1556,7 @@
 <rect width="2" height="2.09" x="735.33" y="203.58" class="named"><title>0x000245ec Inv_RingMotionCameraPitch (29 bytes)</title></rect>
 <rect width="1.83" height="2.09" x="740.34" y="203.58" class="named"><title>0x00014efc ControlCinematicPlayer4 (28 bytes)</title></rect>
 <rect width="1.83" height="2.09" x="745.17" y="203.58" class="named"><title>0x00028cf8 ControlLaraExtra (28 bytes)</title></rect>
-<rect width="1.91" height="2.01" x="715.32" y="208.67" class="todo"><title>0x00030168 Func30168 (28 bytes)</title></rect>
+<rect width="1.91" height="2.01" x="715.32" y="208.67" class="named"><title>0x00030168 ScionControl (28 bytes)</title></rect>
 <rect width="1.91" height="2.01" x="715.32" y="213.68" class="todo"><title>0x00034d24 Func34d24 (28 bytes)</title></rect>
 <rect width="1.91" height="2.01" x="715.32" y="218.68" class="todo"><title>0x000469e1 Func469e1 (28 bytes)</title></rect>
 <rect width="1.91" height="1.83" x="715.32" y="223.69" class="named"><title>0x00024564 Inv_RingMotionSetup (27 bytes)</title></rect>
