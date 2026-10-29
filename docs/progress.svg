@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">73.89% (600)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">26.11% (212)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">74.01% (601)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">25.99% (211)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="551.97" height="6" x="0" y="0" class="named"/>
-<rect width="195.03" height="6" x="551.97" y="0" class="todo"/>
+<rect width="552.89" height="6" x="0" y="0" class="named"/>
+<rect width="194.11" height="6" x="552.89" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -668,11 +668,11 @@
 <rect width="12" height="12" x="720" y="165" class="named"><title>0x000376e8 TrapObjects (1012 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="165" class="named"><title>0x00037adc ObjectObjects (2329 bytes)</title></rect>
 <rect width="12" height="12" x="0" y="180" class="named"><title>0x000383f8 InitialiseObjects (94 bytes)</title></rect>
-<rect width="12" height="12" x="15" y="180" class="todo"><title>0x00038460 Func38460 (499 bytes)</title></rect>
-<rect width="12" height="12" x="30" y="180" class="todo"><title>0x00038654 Func38654 (228 bytes)</title></rect>
+<rect width="12" height="12" x="15" y="180" class="named"><title>0x00038460 main (499 bytes)</title></rect>
+<rect width="12" height="12" x="30" y="180" class="todo"><title>0x00038654 TitleSequence (228 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="180" class="todo"><title>0x0003875c CheckCheatMode (539 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="180" class="todo"><title>0x00038978 S_SaveSettings (173 bytes)</title></rect>
-<rect width="12" height="12" x="75" y="180" class="todo"><title>0x00038a28 Func38a28 (207 bytes)</title></rect>
+<rect width="12" height="12" x="75" y="180" class="todo"><title>0x00038a28 S_LoadSettings (207 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="180" class="todo"><title>0x00038b00 Func38b00 (14 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="180" class="todo"><title>0x00038b0c Func38b0c (2 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="180" class="todo"><title>0x00038b10 S_SoundPlaySample (69 bytes)</title></rect>
@@ -883,10 +883,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">72.52%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">27.48%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">72.75%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">27.25%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="541.74" height="6" x="0" y="0" class="named"/>
-<rect width="205.26" height="6" x="541.74" y="0" class="todo"/>
+<rect width="543.44" height="6" x="0" y="0" class="named"/>
+<rect width="203.56" height="6" x="543.44" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.95" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1009,7 +1009,7 @@
 <rect width="17.82" height="18.60" x="415.84" y="110.47" class="named"><title>0x00014334 LookCamera (510 bytes)</title></rect>
 <rect width="17.82" height="18.52" x="415.84" y="132.07" class="named"><title>0x00028afc UseItem (508 bytes)</title></rect>
 <rect width="17.82" height="18.39" x="415.84" y="153.59" class="todo"><title>0x0003df90 phd_RotYXZpack (505 bytes)</title></rect>
-<rect width="17.82" height="18.14" x="415.84" y="174.98" class="todo"><title>0x00038460 Func38460 (499 bytes)</title></rect>
+<rect width="17.82" height="18.14" x="415.84" y="174.98" class="named"><title>0x00038460 main (499 bytes)</title></rect>
 <rect width="17.82" height="17.80" x="415.84" y="196.12" class="named"><title>0x0001fb64 EscapeFMV (491 bytes)</title></rect>
 <rect width="17.82" height="17.59" x="415.84" y="216.91" class="todo"><title>0x0003dda8 phd_RotYXZ (486 bytes)</title></rect>
 <rect width="17.82" height="17.50" x="415.84" y="237.50" class="named"><title>0x00033df0 PickUpCollision (484 bytes)</title></rect>
@@ -1145,7 +1145,7 @@
 <rect width="10.70" height="11.74" x="613.83" y="49.57" class="named"><title>0x00019dc4 LaraDinoDeath (229 bytes)</title></rect>
 <rect width="10.70" height="11.74" x="627.53" y="49.57" class="named"><title>0x00019f68 setup_screen_size (229 bytes)</title></rect>
 <rect width="10.70" height="11.74" x="641.23" y="49.57" class="todo"><title>0x0003c918 InitialisePod (229 bytes)</title></rect>
-<rect width="10.64" height="11.74" x="654.93" y="49.57" class="todo"><title>0x00038654 Func38654 (228 bytes)</title></rect>
+<rect width="10.64" height="11.74" x="654.93" y="49.57" class="todo"><title>0x00038654 TitleSequence (228 bytes)</title></rect>
 <rect width="10.64" height="11.74" x="668.57" y="49.57" class="todo"><title>0x0003ab0c DamoclesSwordCollision (228 bytes)</title></rect>
 <rect width="10.64" height="11.74" x="682.21" y="49.57" class="todo"><title>0x0003cbfc StatueControl (228 bytes)</title></rect>
 <rect width="10.58" height="11.74" x="695.86" y="49.57" class="named"><title>0x00018b3c FlipMap (227 bytes)</title></rect>
@@ -1169,7 +1169,7 @@
 <rect width="11.08" height="10.03" x="558.34" y="64.31" class="named"><title>0x00027a74 LaraSlideEdgeJump (208 bytes)</title></rect>
 <rect width="11.08" height="10.03" x="572.41" y="64.31" class="named"><title>0x000366a0 InitialiseLevel (208 bytes)</title></rect>
 <rect width="11.01" height="10.03" x="586.49" y="64.31" class="named"><title>0x00027070 lara_col_roll (207 bytes)</title></rect>
-<rect width="11.01" height="10.03" x="600.50" y="64.31" class="todo"><title>0x00038a28 Func38a28 (207 bytes)</title></rect>
+<rect width="11.01" height="10.03" x="600.50" y="64.31" class="todo"><title>0x00038a28 S_LoadSettings (207 bytes)</title></rect>
 <rect width="10.94" height="10.03" x="614.51" y="64.31" class="named"><title>0x0002b130 HitTarget (206 bytes)</title></rect>
 <rect width="10.81" height="10.03" x="628.45" y="64.31" class="named"><title>0x000263b8 lara_col_stop (204 bytes)</title></rect>
 <rect width="10.74" height="10.03" x="642.26" y="64.31" class="named"><title>0x0002ac1c find_target_point (203 bytes)</title></rect>

@@ -600,11 +600,11 @@ address,size,name,symbol
 0x000376e8,1012,TrapObjects,TrapObjects_
 0x00037adc,2329,ObjectObjects,ObjectObjects_
 0x000383f8,94,InitialiseObjects,InitialiseObjects_
-0x00038460,499,Func38460,
-0x00038654,228,Func38654,
+0x00038460,499,main,main_
+0x00038654,228,TitleSequence,TitleSequence_
 0x0003875c,539,CheckCheatMode,CheckCheatMode_
 0x00038978,173,S_SaveSettings,S_SaveSettings_
-0x00038a28,207,Func38a28,
+0x00038a28,207,S_LoadSettings,S_LoadSettings_
 0x00038b00,14,Func38b00,
 0x00038b0c,2,Func38b0c,
 0x00038b10,69,S_SoundPlaySample,S_SoundPlaySample_
