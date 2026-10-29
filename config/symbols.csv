@@ -555,7 +555,7 @@ address,size,name,symbol
 0x00032abc,1229,PierreControl,PierreControl_
 0x00032f8c,261,ApeVault,ApeVault_
 0x000330b8,849,ApeControl,ApeControl_
-0x0003340c,35,Func3340c,
+0x0003340c,35,InitialiseSkateKid,InitialiseSkateKid_
 0x000336dc,114,Func336dc,
 0x00033ac4,35,Func33ac4,
 0x00033df0,484,Func33df0,

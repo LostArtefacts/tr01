@@ -104,6 +104,27 @@ BITE_INFO ape_bite = {0, -19, 75, 15};
 
 #define APE_SHIFT 75
 
+enum kid_anims
+{
+    KID_STOP,
+    KID_SHOOT,
+    KID_SKATE,
+    KID_PUSH,
+    KID_SHOOT2,
+    KID_DEATH
+};
+
+#define KID_STOP_RANGE SQUARE(WALL_L * 4)
+#define KID_DONT_STOP_RANGE SQUARE(WALL_L * 5 / 2)
+#define KID_TOO_CLOSE SQUARE(WALL_L)
+
+#define KID_SKATE_TURN (ONE_DEGREE * 4)
+
+#define KID_PUSH_CHANCE 0x200
+#define KID_SKATE_CHANCE 0x400
+
+#define KID_DIE_ANIM 13
+
 int Targetable(ITEM_INFO *item, AI_INFO *info)
 {
     GAME_VECTOR start, target;
@@ -785,4 +806,10 @@ void ApeControl(sint16 item_number)
         ApeVault(item_number, angle);
     else
         CreatureAnimation(item_number, angle, 0);
+}
+
+void InitialiseSkateKid(sint16 item_number)
+{
+    InitialiseCreature(item_number);
+    items[item_number].current_anim_state = KID_SKATE;
 }

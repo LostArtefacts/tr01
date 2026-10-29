@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">69.76% (556)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">30.24% (241)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">69.89% (557)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">30.11% (240)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="521.12" height="6" x="0" y="0" class="named"/>
-<rect width="225.88" height="6" x="521.12" y="0" class="todo"/>
+<rect width="522.06" height="6" x="0" y="0" class="named"/>
+<rect width="224.94" height="6" x="522.06" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -623,7 +623,7 @@
 <rect width="12" height="12" x="45" y="165" class="named"><title>0x00032abc PierreControl (1229 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="165" class="named"><title>0x00032f8c ApeVault (261 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="165" class="named"><title>0x000330b8 ApeControl (849 bytes)</title></rect>
-<rect width="12" height="12" x="90" y="165" class="todo"><title>0x0003340c Func3340c (35 bytes)</title></rect>
+<rect width="12" height="12" x="90" y="165" class="named"><title>0x0003340c InitialiseSkateKid (35 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="165" class="todo"><title>0x000336dc Func336dc (114 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="165" class="todo"><title>0x00033ac4 Func33ac4 (35 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="165" class="todo"><title>0x00033df0 Func33df0 (484 bytes)</title></rect>
@@ -868,10 +868,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">67.25%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">32.75%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">67.26%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">32.74%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="502.34" height="6" x="0" y="0" class="named"/>
-<rect width="244.66" height="6" x="502.34" y="0" class="todo"/>
+<rect width="502.46" height="6" x="0" y="0" class="named"/>
+<rect width="244.54" height="6" x="502.46" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="52.24" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1534,7 +1534,7 @@
 <rect width="2.72" height="2.30" x="704.56" y="197.46" class="named"><title>0x0001ce60 phd_PopMatrix_I (35 bytes)</title></rect>
 <rect width="2.72" height="2.30" x="710.28" y="197.46" class="named"><title>0x00025a64 lara_as_slide (35 bytes)</title></rect>
 <rect width="2.72" height="2.30" x="716" y="197.46" class="named"><title>0x0002ff8c BridgeTilt1Floor (35 bytes)</title></rect>
-<rect width="2.72" height="2.30" x="721.72" y="197.46" class="todo"><title>0x0003340c Func3340c (35 bytes)</title></rect>
+<rect width="2.72" height="2.30" x="721.72" y="197.46" class="named"><title>0x0003340c InitialiseSkateKid (35 bytes)</title></rect>
 <rect width="2.72" height="2.30" x="727.44" y="197.46" class="todo"><title>0x00033ac4 Func33ac4 (35 bytes)</title></rect>
 <rect width="2.72" height="2.30" x="733.16" y="197.46" class="todo"><title>0x0003cce0 Func3cce0 (35 bytes)</title></rect>
 <rect width="2.56" height="2.30" x="738.88" y="197.46" class="named"><title>0x000245c8 Inv_RingMotionCameraPos (34 bytes)</title></rect>
