@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">7.39% (57)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">92.61% (714)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">7.52% (58)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">92.48% (713)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="55.23" height="6" x="0" y="0" class="named"/>
-<rect width="691.77" height="6" x="55.23" y="0" class="todo"/>
+<rect width="56.19" height="6" x="0" y="0" class="named"/>
+<rect width="690.81" height="6" x="56.19" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -129,7 +129,7 @@
 <rect width="12" height="12" x="135" y="15" class="named"><title>0x00015868 FindGridShift (45 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="15" class="named"><title>0x000158a8 CollideStaticObjects (1445 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="15" class="named"><title>0x00015e50 GetNearByRooms (215 bytes)</title></rect>
-<rect width="12" height="12" x="180" y="15" class="todo"><title>0x00015f28 GetNewRoom (91 bytes)</title></rect>
+<rect width="12" height="12" x="180" y="15" class="named"><title>0x00015f28 GetNewRoom (91 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="15" class="todo"><title>0x00015f84 ShiftItem (51 bytes)</title></rect>
 <rect width="12" height="12" x="210" y="15" class="todo"><title>0x00015fb8 UpdateLaraRoom (103 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="15" class="todo"><title>0x00016020 GetTiltType (160 bytes)</title></rect>
@@ -842,10 +842,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">10.35%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">89.65%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">10.40%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">89.60%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="77.32" height="6" x="0" y="0" class="named"/>
-<rect width="669.68" height="6" x="77.32" y="0" class="todo"/>
+<rect width="77.65" height="6" x="0" y="0" class="named"/>
+<rect width="669.35" height="6" x="77.65" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="54.65" height="67.43" x="0" y="0" class="todo"><title>0x0001bc98 Func1bc98 (4489 bytes)</title></rect>
@@ -1308,7 +1308,7 @@
 <rect width="6.15" height="6.30" x="643.36" y="126.96" class="todo"><title>0x000383f8 Func383f8 (94 bytes)</title></rect>
 <rect width="6.05" height="6.30" x="652.50" y="126.96" class="todo"><title>0x0002555c Func2555c (93 bytes)</title></rect>
 <rect width="5.95" height="6.30" x="661.55" y="126.96" class="todo"><title>0x0003e3e4 Func3e3e4 (92 bytes)</title></rect>
-<rect width="5.85" height="6.30" x="670.51" y="126.96" class="todo"><title>0x00015f28 GetNewRoom (91 bytes)</title></rect>
+<rect width="5.85" height="6.30" x="670.51" y="126.96" class="named"><title>0x00015f28 GetNewRoom (91 bytes)</title></rect>
 <rect width="5.85" height="6.30" x="679.36" y="126.96" class="todo"><title>0x00019f0c Func19f0c (91 bytes)</title></rect>
 <rect width="5.85" height="6.30" x="688.21" y="126.96" class="todo"><title>0x00020cd4 Func20cd4 (91 bytes)</title></rect>
 <rect width="5.85" height="6.30" x="697.07" y="126.96" class="todo"><title>0x00027400 Func27400 (91 bytes)</title></rect>
