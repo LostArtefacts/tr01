@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">57.97% (458)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">42.03% (332)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">58.10% (459)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">41.90% (331)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="433.07" height="6" x="0" y="0" class="named"/>
-<rect width="313.93" height="6" x="433.07" y="0" class="todo"/>
+<rect width="434.02" height="6" x="0" y="0" class="named"/>
+<rect width="312.98" height="6" x="434.02" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -526,7 +526,7 @@
 <rect width="12" height="12" x="90" y="135" class="named"><title>0x0002b5c0 AnimateShotgun (532 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="135" class="named"><title>0x0002b7d4 FireShotgun (201 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="135" class="named"><title>0x0002b8a0 draw_pistols (111 bytes)</title></rect>
-<rect width="12" height="12" x="135" y="135" class="todo"><title>0x0002b910 undraw_pistols (524 bytes)</title></rect>
+<rect width="12" height="12" x="135" y="135" class="named"><title>0x0002b910 undraw_pistols (524 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="135" class="todo"><title>0x0002bb1c ready_pistols (140 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="135" class="todo"><title>0x0002bba8 draw_pistol_meshes (111 bytes)</title></rect>
 <rect width="12" height="12" x="180" y="135" class="todo"><title>0x0002bc18 undraw_pistol_mesh_left (94 bytes)</title></rect>
@@ -861,10 +861,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">52.80%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">47.20%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">53.05%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">46.95%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="394.39" height="6" x="0" y="0" class="named"/>
-<rect width="352.61" height="6" x="394.39" y="0" class="todo"/>
+<rect width="396.31" height="6" x="0" y="0" class="named"/>
+<rect width="350.69" height="6" x="396.31" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -964,7 +964,7 @@
 <rect width="19.53" height="18.11" x="368.99" y="221.89" class="named"><title>0x0002b5c0 AnimateShotgun (532 bytes)</title></rect>
 <rect width="17.63" height="19.91" x="391.51" y="0" class="todo"><title>0x0002be38 AnimatePistols (529 bytes)</title></rect>
 <rect width="17.63" height="19.74" x="391.51" y="22.91" class="todo"><title>0x00042448 Func42448 (525 bytes)</title></rect>
-<rect width="17.63" height="19.70" x="391.51" y="45.65" class="todo"><title>0x0002b910 undraw_pistols (524 bytes)</title></rect>
+<rect width="17.63" height="19.70" x="391.51" y="45.65" class="named"><title>0x0002b910 undraw_pistols (524 bytes)</title></rect>
 <rect width="17.63" height="19.48" x="391.51" y="68.35" class="named"><title>0x00027b44 TestLaraVault (519 bytes)</title></rect>
 <rect width="17.63" height="19.26" x="391.51" y="90.83" class="named"><title>0x00029bc0 LaraSurface (514 bytes)</title></rect>
 <rect width="17.63" height="19.09" x="391.51" y="113.10" class="named"><title>0x00014334 LookCamera (510 bytes)</title></rect>

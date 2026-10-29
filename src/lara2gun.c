@@ -31,3 +31,68 @@ void draw_pistols(int weapon_type)
     }
     lara.right_arm.frame_number = lara.left_arm.frame_number = ani;
 }
+
+void undraw_pistols(int weapon_type)
+{
+    sint16 anil, anir;
+
+    anil = lara.left_arm.frame_number;
+    if (anil >= RECOIL_F)
+        anil = DRAW1_F - 1;
+    else if (anil > 0 && anil < DRAW1_F)
+    {
+        lara.left_arm.x_rot -= lara.left_arm.x_rot / anil;
+        lara.left_arm.y_rot -= lara.left_arm.y_rot / anil;
+        anil--;
+    }
+    else if (anil == 0)
+    {
+        lara.left_arm.x_rot = lara.left_arm.y_rot = lara.left_arm.z_rot = 0;
+        anil = RECOIL_F - 1;
+    }
+    else if (anil > DRAW1_F && anil < RECOIL_F)
+    {
+        anil--;
+        if (anil == DRAW2_F - 1)
+        {
+            undraw_pistol_mesh_left(weapon_type);
+            SoundEffect(7, &lara_item->pos, NULL);
+        }
+    }
+    lara.left_arm.frame_number = anil;
+
+    anir = lara.right_arm.frame_number;
+    if (anir >= RECOIL_F)
+        anir = DRAW1_F - 1;
+    else if (anir > 0 && anir < DRAW1_F)
+    {
+        lara.right_arm.x_rot -= lara.right_arm.x_rot / anir;
+        lara.right_arm.y_rot -= lara.right_arm.y_rot / anir;
+        anir--;
+    }
+    else if (anir == 0)
+    {
+        lara.right_arm.x_rot = lara.right_arm.y_rot = lara.right_arm.z_rot = 0;
+        anir = RECOIL_F - 1;
+    }
+    else if (anir > DRAW1_F && anir < RECOIL_F)
+    {
+        anir--;
+        if (anir == DRAW2_F - 1)
+        {
+            undraw_pistol_mesh_right(weapon_type);
+            SoundEffect(7, &lara_item->pos, NULL);
+        }
+    }
+    lara.right_arm.frame_number = anir;
+
+    if (anil == DRAW1_F && anir == DRAW1_F)
+    {
+        lara.gun_status = LG_ARMLESS;
+        lara.right_arm.frame_number = lara.left_arm.frame_number = 0;
+        lara.target = NULL;
+        lara.left_arm.lock = lara.right_arm.lock = NULL;
+    }
+    lara.torso_y_rot = lara.head_y_rot = (lara.left_arm.y_rot + lara.right_arm.y_rot) / 4;
+    lara.torso_x_rot = lara.head_x_rot = (lara.left_arm.x_rot + lara.right_arm.x_rot) / 4;
+}
