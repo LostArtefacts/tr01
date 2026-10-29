@@ -392,7 +392,7 @@ address,size,name,symbol
 0x000274ec,48,GetLaraCollisionInfo,GetLaraCollisionInfo_
 0x0002751c,257,lara_slide_slope,lara_slide_slope_
 0x00027620,91,LaraHitCeiling,LaraHitCeiling_
-0x0002769c,549,LaraHangTest,LaraHangTest_
+0x0002769c,563,LaraHangTest,LaraHangTest_
 0x000278d0,106,LaraDeflectEdge,LaraDeflectEdge_
 0x0002793c,309,LaraDeflectEdgeJump,LaraDeflectEdgeJump_
 0x00027a74,208,LaraSlideEdgeJump,LaraSlideEdgeJump_

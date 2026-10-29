@@ -16,6 +16,8 @@ int health_bar_timer = 0;
 #define MIN_HEAD_TILT (-42 * ONE_DEGREE)
 #define HEAD_TURN (2 * ONE_DEGREE)
 
+#define SLOPE_DIF 60
+
 #define BAD_JUMP_CEILING ((STEP_L * 3) / 4)
 
 void LaraAboveWater(ITEM_INFO *item, COLL_INFO *coll)
@@ -1580,4 +1582,94 @@ int LaraHitCeiling(ITEM_INFO *item, COLL_INFO *coll)
         return 1;
     }
     return 0;
+}
+
+void LaraHangTest(ITEM_INFO *item, COLL_INFO *coll)
+{
+    PHD_ANGLE angle;
+    sint16 *bounds;
+    int flag = 0;
+    int hdif;
+
+    coll->bad_pos = NO_BAD_POS;
+    coll->bad_neg = NO_BAD_NEG;
+    coll->bad_ceiling = 0;
+    GetLaraCollisionInfo(item, coll);
+    if (coll->front_floor < 200)
+        flag = 1;
+
+    item->gravity_status = item->fallspeed = 0;
+    lara.move_angle = item->pos.y_rot;
+    angle = (uint16)(item->pos.y_rot + 0x2000) / 0x4000;
+    switch (angle)
+    {
+    case NORTH:
+        item->pos.z_pos += 2;
+        break;
+
+    case WEST:
+        item->pos.x_pos -= 2;
+        break;
+
+    case SOUTH:
+        item->pos.z_pos -= 2;
+        break;
+
+    case EAST:
+        item->pos.x_pos += 2;
+        break;
+    }
+
+    coll->bad_pos = NO_BAD_POS;
+    coll->bad_neg = -STEPUP_HEIGHT;
+    coll->bad_ceiling = 0;
+    GetLaraCollisionInfo(item, coll);
+
+    if (!(input & IN_ACTION) || item->hit_points <= 0)
+    {
+        item->goal_anim_state = AS_UPJUMP;
+        item->current_anim_state = AS_UPJUMP;
+        item->anim_number = STOPHANG_A;
+        item->frame_number = STOPHANG_F;
+        bounds = GetBoundsAccurate(item);
+        item->pos.y_pos += coll->front_floor - bounds[2] + 2;
+        item->pos.x_pos += coll->shift.x;
+        item->pos.z_pos += coll->shift.z;
+        item->gravity_status = 1;
+        item->speed = 2;
+        item->fallspeed = 1;
+        lara.gun_status = LG_ARMLESS;
+        return;
+    }
+    if ((ABS(coll->left_floor - coll->right_floor)) >= SLOPE_DIF || coll->mid_ceiling >= 0 || coll->coll_type != COLL_FRONT || flag)
+    {
+        item->pos.x_pos = coll->old.x;
+        item->pos.y_pos = coll->old.y;
+        item->pos.z_pos = coll->old.z;
+        if (item->current_anim_state == AS_HANGLEFT || item->current_anim_state == AS_HANGRIGHT)
+        {
+            item->goal_anim_state = AS_HANG;
+            item->current_anim_state = AS_HANG;
+            item->frame_number = HANG_F;
+            item->anim_number = HANG_A;
+        }
+        return;
+    }
+
+    switch (angle)
+    {
+    case NORTH:
+    case SOUTH:
+        item->pos.z_pos += coll->shift.z;
+        break;
+
+    case WEST:
+    case EAST:
+        item->pos.x_pos += coll->shift.x;
+        break;
+    }
+    bounds = GetBoundsAccurate(item);
+    hdif = coll->front_floor - bounds[2];
+    if (hdif >= -STEP_L && hdif <= STEP_L)
+        item->pos.y_pos += hdif;
 }
