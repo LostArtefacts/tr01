@@ -28,4 +28,6 @@ typedef struct request_info
     TEXTSTRING *texts[MAX_REQLINES];
 } REQUEST_INFO;
 
+extern REQUEST_INFO Load_Game_Requester;
+
 #endif

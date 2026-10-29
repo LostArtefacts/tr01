@@ -4,11 +4,12 @@
 
 uint32 StartLevel = LEVEL1;
 int CurrentLevel = LEVEL1;
-int level_complete = 0, save_counter = 0;
+int level_complete = 0, SavedGames, save_counter = 0;
 
 sint16 number_saved = 0;
 sint16 saved_levels[NUMBER_OF_LEVELS] = {-1};
 
+char Save_Game_Strings[NUMBER_OF_LEVELS][LEVLEN];
 sint16 number_valid = 0;
 sint16 valid_levels[] = {
     GYM,
@@ -452,4 +453,48 @@ void DisplayCredits(void)
     S_FadeToBlack();
 
     S_NoFade();
+}
+
+int S_FrontEndCheck(void *data, int size)
+{
+    int i, count;
+    FILE *file;
+    char filename[80];
+    REQUEST_INFO *req;
+
+    req = &Load_Game_Requester;
+
+    req->items = 0;
+    SavedGames = 0;
+    for (i = 0; i < SAVEGAME_SLOTS; i++)
+    {
+        sprintf(filename, "savegame.%d", i);
+
+        file = fopen(filename, "rb");
+        if (file)
+        {
+            fread(filename, 1, 75, file);
+            fread(&count, sizeof(sint32), 1, file);
+            fclose(file);
+
+            sprintf(req->itemtexts + (req->items * req->itemtextlen), "%s %d", filename, count);
+            if (count > save_counter)
+            {
+                save_counter = count;
+                req->selected = i;
+            }
+
+            saved_levels[i] = 1;
+            SavedGames++;
+        }
+        else
+        {
+            sprintf(req->itemtexts + (req->items * req->itemtextlen), "- EMPTY SLOT %d -", i + 1);
+            saved_levels[i] = 0;
+        }
+        req->items++;
+    }
+    save_counter++;
+
+    return 1;
 }

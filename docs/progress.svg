@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">28.77% (223)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">71.23% (552)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">28.90% (224)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">71.10% (551)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="214.94" height="6" x="0" y="0" class="named"/>
-<rect width="532.06" height="6" x="214.94" y="0" class="todo"/>
+<rect width="215.91" height="6" x="0" y="0" class="named"/>
+<rect width="531.09" height="6" x="215.91" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -292,7 +292,7 @@
 <rect width="12" height="12" x="330" y="60" class="named"><title>0x000204b0 GetValidLevelsList (128 bytes)</title></rect>
 <rect width="12" height="12" x="345" y="60" class="named"><title>0x00020530 GetSavedGamesList (60 bytes)</title></rect>
 <rect width="12" height="12" x="360" y="60" class="named"><title>0x0002056c DisplayCredits (220 bytes)</title></rect>
-<rect width="12" height="12" x="375" y="60" class="todo"><title>0x00020648 Func20648 (326 bytes)</title></rect>
+<rect width="12" height="12" x="375" y="60" class="named"><title>0x00020648 S_FrontEndCheck (326 bytes)</title></rect>
 <rect width="12" height="12" x="390" y="60" class="todo"><title>0x00020790 S_SaveGame (269 bytes)</title></rect>
 <rect width="12" height="12" x="405" y="60" class="todo"><title>0x000208a0 S_LoadGame (130 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="60" class="todo"><title>0x00020980 DrawGameInfo (38 bytes)</title></rect>
@@ -846,10 +846,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">30.89%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">69.11%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">31.05%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">68.95%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="230.74" height="6" x="0" y="0" class="named"/>
-<rect width="516.26" height="6" x="230.74" y="0" class="todo"/>
+<rect width="231.93" height="6" x="0" y="0" class="named"/>
+<rect width="515.07" height="6" x="231.93" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1025,7 +1025,7 @@
 <rect width="14.74" height="13.53" x="508.87" y="0" class="named"><title>0x0001ffcc LevelCompleteSequence (328 bytes)</title></rect>
 <rect width="14.74" height="13.53" x="526.61" y="0" class="todo"><title>0x00033fd4 Func33fd4 (328 bytes)</title></rect>
 <rect width="14.68" height="13.53" x="544.35" y="0" class="todo"><title>0x00023d64 Func23d64 (327 bytes)</title></rect>
-<rect width="14.63" height="13.53" x="562.03" y="0" class="todo"><title>0x00020648 Func20648 (326 bytes)</title></rect>
+<rect width="14.63" height="13.53" x="562.03" y="0" class="named"><title>0x00020648 S_FrontEndCheck (326 bytes)</title></rect>
 <rect width="14.36" height="13.53" x="579.66" y="0" class="todo"><title>0x0002e940 Func2e940 (321 bytes)</title></rect>
 <rect width="14.30" height="13.53" x="597.02" y="0" class="todo"><title>0x0003a2ac Func3a2ac (320 bytes)</title></rect>
 <rect width="14.25" height="13.53" x="614.32" y="0" class="named"><title>0x00018ce8 TriggerCDTrack (319 bytes)</title></rect>

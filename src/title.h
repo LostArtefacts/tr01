@@ -14,6 +14,11 @@ typedef enum title_options
     TITLE_DESELECT = 8 << 6
 } TITLE_OPTIONS;
 
+extern int SavedGames;
+
+#define SAVEGAME_SLOTS 16
+#define LEVLEN 30
+
 enum fmv_sequence
 {
     FMV_INTRO,

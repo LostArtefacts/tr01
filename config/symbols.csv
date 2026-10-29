@@ -224,7 +224,7 @@ address,size,name,symbol
 0x000204b0,128,GetValidLevelsList,GetValidLevelsList_
 0x00020530,60,GetSavedGamesList,GetSavedGamesList_
 0x0002056c,220,DisplayCredits,DisplayCredits_
-0x00020648,326,Func20648,
+0x00020648,326,S_FrontEndCheck,S_FrontEndCheck_
 0x00020790,269,S_SaveGame,S_SaveGame_
 0x000208a0,130,S_LoadGame,S_LoadGame_
 0x00020980,38,DrawGameInfo,DrawGameInfo_
@@ -1795,6 +1795,7 @@ address,size,name,symbol
 0x000c2084,4,overlay_flag,_overlay_flag
 0x000c2090,24,game_setup,_game_setup
 0x000c20a8,4,malloc_buffer,_malloc_buffer
+0x000c352c,,Load_Game_Requester,_Load_Game_Requester
 0x000c3822,2,Inventory_Chosen,_Inventory_Chosen
 0x000c3824,,Inventory_ExtraData,_Inventory_ExtraData
 0x000c3844,4,Inventory_Mode,_Inventory_Mode
@@ -1862,6 +1863,8 @@ address,size,name,symbol
 0x000ce5f0,4,sprite_base,_sprite_base
 0x000ce5f4,4,mesh_base,_mesh_base
 0x000ce5f8,4,floor_data,_floor_data
+0x000ce67c,660,Save_Game_Strings,_Save_Game_Strings
+0x000ce910,4,SavedGames,_SavedGames
 0x000ce95c,4,input,_input
 0x000ce960,34,inv_colours,_inv_colours
 0x000ce984,4,effects,_effects
