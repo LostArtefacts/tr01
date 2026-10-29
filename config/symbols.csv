@@ -508,7 +508,7 @@ address,size,name,symbol
 0x0002f380,186,AlterFloorHeight,AlterFloorHeight_
 0x0002f43c,124,DrawMovableBlock,DrawMovableBlock_
 0x0002f4b8,102,DrawUnclippedItem,DrawUnclippedItem_
-0x0002f520,77,Func2f520,
+0x0002f520,77,ShutThatDoor,ShutThatDoor_
 0x0002f570,76,Func2f570,
 0x0002f5bc,1394,Func2f5bc,
 0x0002fb30,673,Func2fb30,
