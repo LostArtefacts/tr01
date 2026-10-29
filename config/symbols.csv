@@ -356,7 +356,7 @@ address,size,name,symbol
 0x0002686c,171,lara_col_reach,lara_col_reach_
 0x00026918,95,lara_col_splat,lara_col_splat_
 0x00026978,173,lara_col_compress,lara_col_compress_
-0x00026a28,240,Func26a28,
+0x00026a28,240,lara_col_back,lara_col_back_
 0x00026b18,49,Func26b18,
 0x00026b4c,186,Func26b4c,
 0x00026c08,189,Func26c08,
