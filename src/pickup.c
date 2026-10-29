@@ -279,3 +279,55 @@ void MidasCollision(sint16 item_num, ITEM_INFO *laraitem, COLL_INFO *coll)
         lara.gun_status = LG_HANDSBUSY;
     }
 }
+
+enum switch_states
+{
+    SS_OFF,
+    SS_ON,
+    SS_LINK
+};
+
+void SwitchCollision(sint16 item_num, ITEM_INFO *laraitem, COLL_INFO *coll)
+{
+    ITEM_INFO *item;
+
+    item = &items[item_num];
+    if (!(input & IN_ACTION) || item->status != NOT_ACTIVE || lara.gun_status != LG_ARMLESS || laraitem->gravity_status)
+        return;
+
+    if (laraitem->current_anim_state == AS_STOP)
+    {
+        if (!TestLaraPosition(Switch1Bounds, item, laraitem))
+            return;
+        laraitem->pos.y_rot = item->pos.y_rot;
+        if (item->current_anim_state == SS_ON)
+        {
+            laraitem->goal_anim_state = AS_SWITCHON;
+            do
+            {
+                AnimateLara(laraitem);
+            } while (laraitem->current_anim_state != AS_SWITCHON);
+            laraitem->goal_anim_state = AS_STOP;
+            lara.gun_status = LG_HANDSBUSY;
+            item->status = ACTIVE;
+            item->goal_anim_state = SS_OFF;
+            AddActiveItem(item_num);
+            AnimateItem(item);
+            return;
+        }
+        else if (item->current_anim_state == SS_OFF)
+        {
+            laraitem->goal_anim_state = AS_SWITCHOFF;
+            do
+            {
+                AnimateLara(laraitem);
+            } while (laraitem->current_anim_state != AS_SWITCHOFF);
+            laraitem->goal_anim_state = AS_STOP;
+            lara.gun_status = LG_HANDSBUSY;
+            item->status = ACTIVE;
+            item->goal_anim_state = SS_ON;
+            AddActiveItem(item_num);
+            AnimateItem(item);
+        }
+    }
+}

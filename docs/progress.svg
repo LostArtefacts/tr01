@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">70.66% (566)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">29.34% (235)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">70.79% (567)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">29.21% (234)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="527.84" height="6" x="0" y="0" class="named"/>
-<rect width="219.16" height="6" x="527.84" y="0" class="todo"/>
+<rect width="528.78" height="6" x="0" y="0" class="named"/>
+<rect width="218.22" height="6" x="528.78" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -633,7 +633,7 @@
 <rect width="12" height="12" x="195" y="165" class="named"><title>0x00033fd4 PickUpScionCollision (328 bytes)</title></rect>
 <rect width="12" height="12" x="210" y="165" class="named"><title>0x0003411c PickUpScion4Collision (245 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="165" class="named"><title>0x00034224 MidasCollision (526 bytes)</title></rect>
-<rect width="12" height="12" x="240" y="165" class="todo"><title>0x00034434 Func34434 (272 bytes)</title></rect>
+<rect width="12" height="12" x="240" y="165" class="named"><title>0x00034434 SwitchCollision (272 bytes)</title></rect>
 <rect width="12" height="12" x="255" y="165" class="todo"><title>0x00034544 Func34544 (224 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="165" class="todo"><title>0x00034b10 Func34b10 (55 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="165" class="todo"><title>0x00034b48 SwitchTrigger (120 bytes)</title></rect>
@@ -872,10 +872,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">68.26%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">31.74%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">68.39%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">31.61%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="509.90" height="6" x="0" y="0" class="named"/>
-<rect width="237.10" height="6" x="509.90" y="0" class="todo"/>
+<rect width="510.85" height="6" x="0" y="0" class="named"/>
+<rect width="236.15" height="6" x="510.85" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="51.51" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1095,7 +1095,7 @@
 <rect width="12.81" height="12.68" x="515.31" y="179.84" class="named"><title>0x0002d1a0 mn_reset_sound_effects (273 bytes)</title></rect>
 <rect width="12.81" height="12.68" x="515.31" y="195.52" class="todo"><title>0x0003ca00 Func3ca00 (273 bytes)</title></rect>
 <rect width="12.81" height="12.68" x="515.31" y="211.20" class="todo"><title>0x00042fe8 Func42fe8 (273 bytes)</title></rect>
-<rect width="12.81" height="12.62" x="515.31" y="226.87" class="todo"><title>0x00034434 Func34434 (272 bytes)</title></rect>
+<rect width="12.81" height="12.62" x="515.31" y="226.87" class="named"><title>0x00034434 SwitchCollision (272 bytes)</title></rect>
 <rect width="12.81" height="12.51" x="515.31" y="242.49" class="named"><title>0x0001ab1c DrawEffect (270 bytes)</title></rect>
 <rect width="13.22" height="12.11" x="531.12" y="34.43" class="named"><title>0x000298d4 lara_col_tread (270 bytes)</title></rect>
 <rect width="13.16" height="12.11" x="547.34" y="34.43" class="named"><title>0x00020790 S_SaveGame (269 bytes)</title></rect>
