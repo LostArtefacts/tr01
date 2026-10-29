@@ -10,6 +10,13 @@ which is worked out from its first use and must be the same for every
 other. The CONST, CONST2 and _DATA bytes of each placed segment must
 then match the original's too.
 
+Watcom puts a function's switch jump tables in the code segment right
+before the function. They are compared with the code they sit in: the
+bytes after a function's last public up to the next, and the bytes of a
+segment before its first public with that first public. A function's
+size, checked against config/symbols.csv, leaves out the jump tables
+at its end.
+
 With SYMBOLs, shows a disassembly diff for each.
 """
 import csv, difflib, glob, os, struct, subprocess, sys, tempfile
@@ -60,11 +67,28 @@ def strip_padding(b):
     return b
 
 
+def jump_tables(seg, si, start, end):
+    """Returns the length of the jump tables at the end of seg.data[start:end]: dwords
+    each under an absolute fixup into the same segment."""
+    at = {f.offset: f for f in seg.fixups if start <= f.offset < end}
+    n = 0
+    while True:
+        f = at.get(end - n - 4)
+        if not f or f.size != 4 or f.rel or f.target != ("seg", si):
+            return n
+        n += 4
+
+
 def compare_module(mod, orig, by_symbol):
     results = []
     bases = {}
     segs = mod.segments
+    first = set()
     for seg, name, start, end in mod.functions():
+        lead = 0
+        if seg not in first:
+            first.add(seg)
+            lead, start = start, 0
         row = by_symbol.get(name)
         if not row:
             r = Result(name, None)
@@ -74,12 +98,14 @@ def compare_module(mod, orig, by_symbol):
         addr = int(row["address"], 16)
         r = Result(row["name"], addr)
         results.append(r)
+        addr -= lead
         si = segs.index(seg)
         want = addr - start
         if bases.setdefault(si, want) != want:
             r.errors.append(f"{seg.name} is placed at {bases[si]:#x} by an earlier function, "
                             f"this one puts it at {want:#x}")
         ours = bytearray(strip_padding(bytes(seg.data[start:end])))
+        tables = jump_tables(seg, si, start, start + len(ours))
         try:
             theirs = orig.read(addr, len(ours))
         except ValueError as e:
@@ -136,10 +162,11 @@ def compare_module(mod, orig, by_symbol):
         diff = [addr + i for i in range(len(ours)) if addr + i not in fixed and ours[i] != theirs[i]]
         if diff:
             r.errors.append(f"{len(diff)} bytes differ, first at {diff[0]:#x}")
+        own = len(strip_padding(bytes(ours[:len(ours) - tables]))) - lead if tables else len(ours) - lead
         size = int(row["size"]) if row["size"] else 0
-        if size and len(ours) != size:
-            r.errors.append(f"{len(ours)} bytes, the original's is {size}")
-        r.ours, r.size = bytes(ours), len(ours)
+        if size and own != size:
+            r.errors.append(f"{own} bytes, the original's is {size}")
+        r.ours, r.size = bytes(ours[lead:]), own
     for si, base in bases.items():
         seg = segs[si]
         if seg.is_code() or seg.cls.upper() == "BSS" or not seg.size:
@@ -179,7 +206,7 @@ def main():
             print(f"         {e}")
         if wanted and r.ours is not None:
             a = disasm(r.ours, r.addr)
-            b = disasm(orig.read(r.addr, max(r.size, 1)), r.addr)
+            b = disasm(orig.read(r.addr, max(len(r.ours), 1)), r.addr)
             sys.stdout.writelines(difflib.unified_diff(b, a, "original", "ours", lineterm="\n", n=3)
                                   if a != b else [])
             for line in difflib.unified_diff(b, a, "original", "ours", lineterm=""):
