@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">69.60% (554)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">30.40% (242)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">69.72% (555)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">30.28% (241)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="519.90" height="6" x="0" y="0" class="named"/>
-<rect width="227.10" height="6" x="519.90" y="0" class="todo"/>
+<rect width="520.84" height="6" x="0" y="0" class="named"/>
+<rect width="226.16" height="6" x="520.84" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -621,7 +621,7 @@
 <rect width="12" height="12" x="15" y="165" class="named"><title>0x000326cc ShotLara (131 bytes)</title></rect>
 <rect width="12" height="12" x="30" y="165" class="named"><title>0x0003276c PeopleControl (819 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="165" class="named"><title>0x00032abc PierreControl (1229 bytes)</title></rect>
-<rect width="12" height="12" x="60" y="165" class="todo"><title>0x00032f8c Func32f8c (261 bytes)</title></rect>
+<rect width="12" height="12" x="60" y="165" class="named"><title>0x00032f8c ApeVault (261 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="165" class="todo"><title>0x0003340c Func3340c (35 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="165" class="todo"><title>0x000336dc Func336dc (114 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="165" class="todo"><title>0x00033ac4 Func33ac4 (35 bytes)</title></rect>
@@ -867,10 +867,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">66.99%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">33.01%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">67.11%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">32.89%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="500.41" height="6" x="0" y="0" class="named"/>
-<rect width="246.59" height="6" x="500.41" y="0" class="todo"/>
+<rect width="501.34" height="6" x="0" y="0" class="named"/>
+<rect width="245.66" height="6" x="501.34" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="52.46" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1092,7 +1092,7 @@
 <rect width="12.16" height="12.33" x="525.72" y="93.87" class="named"><title>0x00013f54 ChaseCamera (267 bytes)</title></rect>
 <rect width="12.16" height="12.21" x="525.72" y="109.20" class="named"><title>0x0001ed10 LoadSprites (265 bytes)</title></rect>
 <rect width="12.16" height="12.21" x="525.72" y="124.41" class="named"><title>0x000251ec lara_as_run (265 bytes)</title></rect>
-<rect width="12.16" height="11.98" x="525.72" y="139.62" class="todo"><title>0x00032f8c Func32f8c (261 bytes)</title></rect>
+<rect width="12.16" height="11.98" x="525.72" y="139.62" class="named"><title>0x00032f8c ApeVault (261 bytes)</title></rect>
 <rect width="12.16" height="11.87" x="525.72" y="154.60" class="named"><title>0x00018a38 ClipTarget (259 bytes)</title></rect>
 <rect width="12.16" height="11.81" x="525.72" y="169.47" class="named"><title>0x0002579c lara_as_compress (258 bytes)</title></rect>
 <rect width="12.16" height="11.75" x="525.72" y="184.28" class="named"><title>0x0002751c lara_slide_slope (257 bytes)</title></rect>

@@ -5,6 +5,8 @@ sint16 pierre_item;
 #define PIERRE_RUN_HITPOINTS 40
 #define PIERRE_DISAPPEAR 10
 
+#define APE_ATTACK_DAMAGE 200
+
 #define PEOPLE_SHOT_DAMAGE 50
 
 #define PEOPLE_SHOOT_RANGE SQUARE(WALL_L * 7)
@@ -57,6 +59,45 @@ BITE_INFO larson_gun = {-60, 170, 0, 14};
 
 BITE_INFO pierre_gun1 = {60, 200, 0, 11};
 BITE_INFO pierre_gun2 = {-57, 200, 0, 14};
+
+#define APE_TOUCH (0xff00)
+
+enum ape_anims
+{
+    APE_EMPTY,
+    APE_STOP,
+    APE_WALK,
+    APE_RUN,
+    APE_ATTACK1,
+    APE_DEATH,
+    APE_WARNING,
+    APE_WARNING2,
+    APE_RUNLEFT,
+    APE_RUNRIGHT,
+    APE_JUMP,
+    APE_VAULT
+};
+
+#define APE_DIE_ANIM 7
+#define APE_VAULT_ANIM 19
+
+#define APE_RUN_TURN (ONE_DEGREE * 5)
+
+#define APE_DISPLAY_ANGLE (ONE_DEGREE * 45)
+
+#define APE_ATTACK_RANGE SQUARE(430)
+#define APE_PANIC_RANGE SQUARE(WALL_L * 2)
+
+#define APE_JUMP_CHANCE 0xa0
+#define APE_WARN1_CHANCE (APE_JUMP_CHANCE + 0xa0)
+#define APE_WARN2_CHANCE (APE_WARN1_CHANCE + 0xa0)
+#define APE_RUNLEFT_CHANCE (APE_WARN2_CHANCE + 0x110)
+
+#define APE_ATTACK_FLAG 1
+#define APE_TURNL_FLAG 2
+#define APE_TURNR_FLAG 4
+
+#define APE_SHIFT 75
 
 int Targetable(ITEM_INFO *item, AI_INFO *info)
 {
@@ -514,4 +555,73 @@ void PierreControl(sint16 item_number)
         KillItem(item_number);
         pierre_item = NO_ITEM;
     }
+}
+
+void ApeVault(sint16 item_number, sint16 angle)
+{
+    ITEM_INFO *item;
+    CREATURE_INFO *ape;
+    sint32 y, xx, yy, x_floor, y_floor;
+    sint16 room_number;
+
+    item = &items[item_number];
+
+    ape = (CREATURE_INFO *)item->data;
+    if (ape->flags & APE_TURNL_FLAG)
+    {
+        item->pos.y_rot -= 0x4000;
+        ape->flags -= APE_TURNL_FLAG;
+    }
+    else if (item->flags & APE_TURNR_FLAG)
+    {
+        item->pos.y_rot += 0x4000;
+        ape->flags -= APE_TURNR_FLAG;
+    }
+
+    xx = item->pos.z_pos >> WALL_SHIFT;
+    yy = item->pos.x_pos >> WALL_SHIFT;
+    y = item->pos.y_pos;
+    room_number = item->room_number;
+
+    CreatureAnimation(item_number, angle, 0);
+
+    if (item->pos.y_pos > y - STEP_L * 3 / 2)
+        return;
+
+    x_floor = item->pos.z_pos >> WALL_SHIFT;
+    y_floor = item->pos.x_pos >> WALL_SHIFT;
+    if (xx == x_floor)
+    {
+        if (yy == y_floor)
+            return;
+
+        if (yy < y_floor)
+        {
+            item->pos.x_pos = (y_floor << WALL_SHIFT) - APE_SHIFT;
+            item->pos.y_rot = 0x4000;
+        }
+        else
+        {
+            item->pos.x_pos = (yy << WALL_SHIFT) + APE_SHIFT;
+            item->pos.y_rot = -0x4000;
+        }
+    }
+    else if (yy == y_floor)
+    {
+        if (xx < x_floor)
+        {
+            item->pos.z_pos = (x_floor << WALL_SHIFT) - APE_SHIFT;
+            item->pos.y_rot = 0;
+        }
+        else
+        {
+            item->pos.z_pos = (xx << WALL_SHIFT) + APE_SHIFT;
+            item->pos.y_rot = -0x8000;
+        }
+    }
+
+    item->pos.y_pos = y;
+    item->anim_number = objects[APE].anim_index + APE_VAULT_ANIM;
+    item->frame_number = anims[item->anim_number].frame_base;
+    item->current_anim_state = APE_VAULT;
 }
