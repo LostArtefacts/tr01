@@ -34,9 +34,67 @@ void draw_shotgun(void)
     lara.right_arm.frame_number = lara.left_arm.frame_number = ani;
 }
 
+void undraw_shotgun(void)
+{
+    sint16 ani;
+
+    ani = lara.left_arm.frame_number;
+    if (ani == SG_AIM_F)
+        ani = SG_UNDRAW_F;
+    else if (ani >= SG_AIM_F && ani < SG_DRAW_F)
+    {
+        ani++;
+        if (ani == SG_DRAW_F)
+            ani = SG_UNAIM_F;
+    }
+    else if (ani == SG_RECOIL_F)
+        ani = SG_UNAIM_F;
+    else if (ani >= SG_RECOIL_F && ani < SG_UNDRAW_F)
+    {
+        ani++;
+        if (ani == SG_RECOIL_F + 12 + 1)
+            ani = SG_AIM_F;
+        else if (ani == SG_UNDRAW_F)
+            ani = SG_UNAIM_F;
+    }
+    else if (ani >= SG_UNAIM_F && ani < SG_END_F)
+    {
+        ani++;
+        if (ani == SG_END_F)
+            ani = SG_UNDRAW_F;
+    }
+    else if (ani >= SG_UNDRAW_F && ani < SG_UNAIM_F)
+    {
+        ani++;
+        if (ani == SG_UNDRAW_F + 21)
+        {
+            undraw_shotgun_meshes();
+            SoundEffect(6, &lara_item->pos, NULL);
+        }
+        else if (ani == SG_UNAIM_F)
+        {
+            ani = 0;
+            lara.gun_status = LG_ARMLESS;
+            lara.target = NULL;
+            lara.left_arm.lock = lara.right_arm.lock = 0;
+        }
+    }
+    lara.left_arm.frame_number = lara.right_arm.frame_number = ani;
+    lara.head_y_rot = lara.head_x_rot = 0;
+    lara.torso_y_rot -= lara.torso_y_rot / 2;
+    lara.torso_x_rot -= lara.torso_x_rot / 2;
+}
+
 void draw_shotgun_meshes(void)
 {
     lara.mesh_ptrs[HAND_L] = meshes[objects[SHOTGUN].mesh_index + HAND_L];
     lara.mesh_ptrs[HAND_R] = meshes[objects[SHOTGUN].mesh_index + HAND_R];
     lara.mesh_ptrs[TORSO] = meshes[objects[LARA].mesh_index + TORSO];
+}
+
+void undraw_shotgun_meshes(void)
+{
+    lara.mesh_ptrs[HAND_L] = meshes[objects[LARA].mesh_index + HAND_L];
+    lara.mesh_ptrs[HAND_R] = meshes[objects[LARA].mesh_index + HAND_R];
+    lara.mesh_ptrs[TORSO] = meshes[objects[SHOTGUN].mesh_index + TORSO];
 }

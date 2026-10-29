@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">57.09% (451)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">42.91% (339)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">57.34% (453)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">42.66% (337)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="426.45" height="6" x="0" y="0" class="named"/>
-<rect width="320.55" height="6" x="426.45" y="0" class="todo"/>
+<rect width="428.34" height="6" x="0" y="0" class="named"/>
+<rect width="318.66" height="6" x="428.34" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -518,9 +518,9 @@
 <rect width="12" height="12" x="720" y="120" class="named"><title>0x0002ada0 FireWeapon (911 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="120" class="named"><title>0x0002b130 HitTarget (206 bytes)</title></rect>
 <rect width="12" height="12" x="0" y="135" class="named"><title>0x0002b200 draw_shotgun (164 bytes)</title></rect>
-<rect width="12" height="12" x="15" y="135" class="todo"><title>0x0002b2a4 undraw_shotgun (390 bytes)</title></rect>
+<rect width="12" height="12" x="15" y="135" class="named"><title>0x0002b2a4 undraw_shotgun (390 bytes)</title></rect>
 <rect width="12" height="12" x="30" y="135" class="named"><title>0x0002b42c draw_shotgun_meshes (55 bytes)</title></rect>
-<rect width="12" height="12" x="45" y="135" class="todo"><title>0x0002b464 undraw_shotgun_meshes (55 bytes)</title></rect>
+<rect width="12" height="12" x="45" y="135" class="named"><title>0x0002b464 undraw_shotgun_meshes (55 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="135" class="todo"><title>0x0002b49c ready_shotgun (141 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="135" class="todo"><title>0x0002b52c RifleHandler (145 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="135" class="todo"><title>0x0002b5c0 AnimateShotgun (532 bytes)</title></rect>
@@ -861,10 +861,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">52.02%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">47.98%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">52.24%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">47.76%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="388.62" height="6" x="0" y="0" class="named"/>
-<rect width="358.38" height="6" x="388.62" y="0" class="todo"/>
+<rect width="390.25" height="6" x="0" y="0" class="named"/>
+<rect width="356.75" height="6" x="390.25" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1014,7 +1014,7 @@
 <rect width="15.51" height="16.12" x="472.48" y="19.36" class="todo"><title>0x0003afd0 Func3afd0 (396 bytes)</title></rect>
 <rect width="15.51" height="16.07" x="472.48" y="38.48" class="todo"><title>0x00030184 Func30184 (395 bytes)</title></rect>
 <rect width="15.51" height="15.93" x="472.48" y="57.55" class="named"><title>0x00027fa0 LaraTestHangJumpUp (392 bytes)</title></rect>
-<rect width="15.51" height="15.83" x="472.48" y="76.48" class="todo"><title>0x0002b2a4 undraw_shotgun (390 bytes)</title></rect>
+<rect width="15.51" height="15.83" x="472.48" y="76.48" class="named"><title>0x0002b2a4 undraw_shotgun (390 bytes)</title></rect>
 <rect width="15.51" height="15.68" x="472.48" y="95.31" class="named"><title>0x00026234 lara_col_run (387 bytes)</title></rect>
 <rect width="15.51" height="15.68" x="472.48" y="113.99" class="todo"><title>0x00038d58 LoadSamples (387 bytes)</title></rect>
 <rect width="15.51" height="15.54" x="472.48" y="132.68" class="todo"><title>0x00044895 Func44895 (384 bytes)</title></rect>
@@ -1421,7 +1421,7 @@
 <rect width="3.95" height="4.08" x="681.16" y="160.58" class="named"><title>0x00023eac Inv_GetCount (55 bytes)</title></rect>
 <rect width="3.95" height="4.08" x="688.10" y="160.58" class="named"><title>0x00024838 CreateItem (55 bytes)</title></rect>
 <rect width="3.95" height="4.08" x="695.05" y="160.58" class="named"><title>0x0002b42c draw_shotgun_meshes (55 bytes)</title></rect>
-<rect width="3.95" height="4.08" x="702" y="160.58" class="todo"><title>0x0002b464 undraw_shotgun_meshes (55 bytes)</title></rect>
+<rect width="3.95" height="4.08" x="702" y="160.58" class="named"><title>0x0002b464 undraw_shotgun_meshes (55 bytes)</title></rect>
 <rect width="3.95" height="4.08" x="708.95" y="160.58" class="todo"><title>0x00034b10 Func34b10 (55 bytes)</title></rect>
 <rect width="3.95" height="4.08" x="715.89" y="160.58" class="todo"><title>0x0003a468 Func3a468 (55 bytes)</title></rect>
 <rect width="3.82" height="4.08" x="722.84" y="160.58" class="named"><title>0x00025b00 lara_as_hangleft (54 bytes)</title></rect>
