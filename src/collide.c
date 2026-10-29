@@ -578,3 +578,24 @@ void LaraBaddieCollision(ITEM_INFO *laraitem, COLL_INFO *coll)
 
     Inventory_Chosen = -1;
 }
+
+void EffectHit(ITEM_INFO *laraitem, COLL_INFO *coll)
+{
+    FX_INFO *fx;
+    sint32 x, z;
+    PHD_ANGLE hitang;
+
+    fx = lara.hit_effect;
+    x = lara.hit_effect->pos.x_pos - laraitem->pos.x_pos;
+    z = lara.hit_effect->pos.z_pos - laraitem->pos.z_pos;
+    hitang = (sint16)(laraitem->pos.y_rot - (32768 + phd_atan(z, x)));
+    lara.hit_direction = (uint16)(hitang + 0x2000) / 0x4000;
+    if (!lara.hit_frame)
+        SoundEffect(27, &laraitem->pos, 0);
+
+    lara.hit_frame++;
+    if (lara.hit_frame > 34)
+        lara.hit_frame = 34;
+
+    lara.hit_effect_count--;
+}
