@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">5.84% (45)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">94.16% (726)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">5.97% (46)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">94.03% (725)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="43.60" height="6" x="0" y="0" class="named"/>
-<rect width="703.40" height="6" x="43.60" y="0" class="todo"/>
+<rect width="44.57" height="6" x="0" y="0" class="named"/>
+<rect width="702.43" height="6" x="44.57" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -117,7 +117,7 @@
 <rect width="12" height="12" x="705" y="0" class="named"><title>0x00014534 FixedCamera (146 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="0" class="named"><title>0x000145c8 CalculateCamera (1276 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="0" class="named"><title>0x00014ae0 StartCinematic (279 bytes)</title></rect>
-<rect width="12" height="12" x="0" y="15" class="todo"><title>0x00014bf8 InitCinematicRooms (128 bytes)</title></rect>
+<rect width="12" height="12" x="0" y="15" class="named"><title>0x00014bf8 InitCinematicRooms (128 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="15" class="todo"><title>0x00014c78 DoCinematic (238 bytes)</title></rect>
 <rect width="12" height="12" x="30" y="15" class="todo"><title>0x00014d68 Func14d68 (335 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="15" class="todo"><title>0x00014eb8 Func14eb8 (66 bytes)</title></rect>
@@ -842,10 +842,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">7.96%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">92.04%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">8.02%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">91.98%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="59.47" height="6" x="0" y="0" class="named"/>
-<rect width="687.53" height="6" x="59.47" y="0" class="todo"/>
+<rect width="59.94" height="6" x="0" y="0" class="named"/>
+<rect width="687.06" height="6" x="59.94" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="54.65" height="67.43" x="0" y="0" class="todo"><title>0x0001bc98 Func1bc98 (4489 bytes)</title></rect>
@@ -1217,7 +1217,7 @@
 <rect width="7.81" height="7.96" x="603.66" y="96.22" class="todo"><title>0x00045cb0 Func45cb0 (131 bytes)</title></rect>
 <rect width="7.72" height="7.96" x="614.46" y="96.22" class="todo"><title>0x000208a0 Func208a0 (130 bytes)</title></rect>
 <rect width="7.64" height="7.96" x="625.19" y="96.22" class="todo"><title>0x00027280 Func27280 (129 bytes)</title></rect>
-<rect width="7.56" height="7.96" x="635.83" y="96.22" class="todo"><title>0x00014bf8 InitCinematicRooms (128 bytes)</title></rect>
+<rect width="7.56" height="7.96" x="635.83" y="96.22" class="named"><title>0x00014bf8 InitCinematicRooms (128 bytes)</title></rect>
 <rect width="7.56" height="7.96" x="646.39" y="96.22" class="todo"><title>0x000204b0 Func204b0 (128 bytes)</title></rect>
 <rect width="7.56" height="7.96" x="656.95" y="96.22" class="todo"><title>0x00024678 Func24678 (128 bytes)</title></rect>
 <rect width="7.48" height="7.96" x="667.51" y="96.22" class="todo"><title>0x0001dfc4 Func1dfc4 (127 bytes)</title></rect>

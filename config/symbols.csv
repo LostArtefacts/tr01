@@ -1765,8 +1765,11 @@ address,size,name,symbol
 0x000cb320,2,cine_frame,_cine_frame
 0x000cb3d0,4,items,_items
 0x000cb3d4,4,flip_status,_flip_status
+0x000cbf88,200,draw_rooms,_draw_rooms
 0x000cc088,4,room,_room
+0x000cc08c,4,number_draw_rooms,_number_draw_rooms
 0x000cc090,9550,objects,_objects
+0x000ce5de,2,number_rooms,_number_rooms
 0x000ce960,34,inv_colours,_inv_colours
 0x000ce990,4,lara_item,_lara_item
 0x000ce994,236,lara,_lara

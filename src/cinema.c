@@ -68,3 +68,21 @@ sint32 StartCinematic(int level_number)
 
     return LEVELCOMPLETE | level_number;
 }
+
+void InitCinematicRooms(void)
+{
+    int i;
+
+    for (i = 0; i < number_rooms; i++)
+    {
+        if (room[i].flipped_room >= 0)
+            room[room[i].flipped_room].bound_active = 1;
+    }
+
+    number_draw_rooms = 0;
+    for (i = 0; i < number_rooms; i++)
+    {
+        if (!room[i].bound_active)
+            draw_rooms[number_draw_rooms++] = i;
+    }
+}
