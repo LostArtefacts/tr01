@@ -13,7 +13,8 @@ config/symbols.csv, limited to the game code; their status from the build:
 - todo:        everything else
 
 It brings the build up to date first, so it never counts the objects
-of a half-finished build.
+of a half-finished build, and prints one line: a bar of the bytes
+matched, and how many functions, bytes and data segments match.
 
     render_progress.py --from-svg OLD [--root DIR] [OUTPUT]
 
@@ -84,12 +85,20 @@ def compare_built(root: str) -> dict[int, bool]:
     with open(os.path.join(root, "config/symbols.csv")) as f:
         by_symbol = {r["symbol"]: r for r in csv.DictReader(f) if r["symbol"]}
     built: dict[int, bool] = {}
+    data = [0, 0]
     for path in sorted(glob.glob(os.path.join(root, "build/obj/*.obj"))):
         for mod in omf.modules(path):
             for r in compare.compare_module(mod, orig, by_symbol)[0]:
-                if r.addr is not None and not r.warning:
+                if getattr(r, "data", False):
+                    data[0] += r.ok()
+                    data[1] += 1
+                elif r.addr is not None and not r.warning:
                     built[r.addr] = built.get(r.addr, True) and r.ok()
+    DATA_STATS[root] = (data[0], data[1])
     return built
+
+
+DATA_STATS: dict[str, tuple[int, int]] = {}
 
 
 def collect_functions(root: str = ROOT, built_svg: dict[int, bool | None] | None = None) -> list[Symbol]:
@@ -784,7 +793,24 @@ class ProgressSVG(Container):
         )
 
 
+def summary(functions: list[Symbol], data: tuple[int, int] | None, width: int) -> str:
+    """One line: a bar of the bytes matched, and the counts."""
+    done = [f for f in functions if f.status in (SymbolStatus.NAMED, SymbolStatus.DECOMPILED)]
+    total = sum(f.size for f in functions) or 1
+    size = sum(f.size for f in done)
+    tail = (f" {100 * size / total:.1f}%  {len(done)}/{len(functions)} functions  "
+            f"{size / 1000:.0f}k/{total / 1000:.0f}k bytes")
+    if data:
+        tail += f"  {data[0]}/{data[1]} data"
+    head = f"{TITLE}  "
+    bar = max(min(20, width - len(head) - len(tail)), 5)
+    full = round(bar * size / total)
+    return head + "\u2588" * full + "\u2591" * (bar - full) + tail
+
+
 def main() -> None:
+    import shutil
+
     args = sys.argv[1:]
     root, built_svg = ROOT, None
     while args[:1] in (["--from-svg"], ["--root"]):
@@ -798,10 +824,7 @@ def main() -> None:
     functions = collect_functions(root, built_svg)
     with open(output, "w") as handle:
         print(ProgressSVG(functions).render(), file=handle)
-    done = [f for f in functions if f.status in (SymbolStatus.NAMED, SymbolStatus.DECOMPILED)]
-    print(f"{len(done)}/{len(functions)} functions, "
-          f"{sum(f.size for f in done)}/{sum(f.size for f in functions)} bytes; wrote {output}")
-
+    print(summary(functions, DATA_STATS.get(root), shutil.get_terminal_size((100, 24)).columns))
 
 if __name__ == "__main__":
     main()

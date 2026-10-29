@@ -20,7 +20,8 @@ differs from the port in many places, and carries none of its comments.
 ![Progress](docs/progress.svg)
 
 `just progress` renders it: every game function, by address and as a
-treemap by size, coloured by whether it is decompiled and matching.
+treemap by size, coloured by whether it is decompiled and matching. It
+also prints a one-line summary.
 
 ## Target
 

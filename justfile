@@ -49,7 +49,7 @@ analyze: _elf
 decompile *addrs:
     tools/ghidra/decompile.sh {{ addrs }}
 
-# Render docs/progress.svg from symbols.csv and the build
+# Render docs/progress.svg from symbols.csv and the build, and print a summary
 progress: build _elf
     python3 tools/render_progress.py
 
