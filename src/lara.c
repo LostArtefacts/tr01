@@ -1673,3 +1673,29 @@ void LaraHangTest(ITEM_INFO *item, COLL_INFO *coll)
     if (hdif >= -STEP_L && hdif <= STEP_L)
         item->pos.y_pos += hdif;
 }
+
+#define LARA_DEF_ADD_EDGE (5 * ONE_DEGREE)
+
+int LaraDeflectEdge(ITEM_INFO *item, COLL_INFO *coll)
+{
+    if (coll->coll_type == COLL_FRONT || coll->coll_type == COLL_TOPFRONT)
+    {
+        ShiftItem(item, coll);
+        item->goal_anim_state = AS_STOP;
+        item->current_anim_state = AS_STOP;
+        item->speed = 0;
+        item->gravity_status = 0;
+        return 1;
+    }
+    else if (coll->coll_type == COLL_LEFT)
+    {
+        ShiftItem(item, coll);
+        item->pos.y_rot += LARA_DEF_ADD_EDGE;
+    }
+    else if (coll->coll_type == COLL_RIGHT)
+    {
+        ShiftItem(item, coll);
+        item->pos.y_rot -= LARA_DEF_ADD_EDGE;
+    }
+    return 0;
+}
