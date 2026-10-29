@@ -1,4 +1,6 @@
+#include <dos.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 #include "game.h"
 
@@ -16,6 +18,8 @@ int LoadAnimatedTextures(FILE *file);
 int LoadCinematic(FILE *file);
 int LoadDemo(FILE *file);
 int LoadSamples(FILE *file);
+int TestCdDrive(void);
+int __far disk_error_handler(unsigned deverror, unsigned errcode, unsigned __far *devhdr);
 
 sint16 *mesh_base;
 char *sprite_base;
@@ -565,4 +569,26 @@ char *GetFullPath(char *filename)
     sprintf(newpath, "%c:\\%s", cd_drive, filename);
 
     return newpath;
+}
+
+void FindCdDrive(void)
+{
+    FILE *test;
+    char testname[32];
+
+    _harderr(disk_error_handler);
+
+    for (cd_drive = 'C'; cd_drive <= 'Z'; cd_drive++)
+    {
+        sprintf(testname, "%c:\\data\\title.phd", cd_drive);
+        test = fopen(testname, "rb");
+        if (test)
+        {
+            fclose(test);
+            if (TestCdDrive())
+                return;
+        }
+    }
+    printf("\nERROR: Please insert the TombRaider CD\n");
+    exit(0);
 }

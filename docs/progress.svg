@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">25.03% (194)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">74.97% (581)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">25.16% (195)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">74.84% (580)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="186.99" height="6" x="0" y="0" class="named"/>
-<rect width="560.01" height="6" x="186.99" y="0" class="todo"/>
+<rect width="187.95" height="6" x="0" y="0" class="named"/>
+<rect width="559.05" height="6" x="187.95" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -263,9 +263,9 @@
 <rect width="12" height="12" x="645" y="45" class="named"><title>0x0001f40c LoadDemo (100 bytes)</title></rect>
 <rect width="12" height="12" x="660" y="45" class="named"><title>0x0001f470 build_ext (49 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="45" class="named"><title>0x0001f4a4 GetFullPath (33 bytes)</title></rect>
-<rect width="12" height="12" x="690" y="45" class="todo"><title>0x0001f4c8 Func1f4c8 (123 bytes)</title></rect>
-<rect width="12" height="12" x="705" y="45" class="todo"><title>0x0001f544 Func1f544 (96 bytes)</title></rect>
-<rect width="12" height="12" x="720" y="45" class="todo"><title>0x0001f5a4 Func1f5a4 (3 bytes)</title></rect>
+<rect width="12" height="12" x="690" y="45" class="named"><title>0x0001f4c8 FindCdDrive (123 bytes)</title></rect>
+<rect width="12" height="12" x="705" y="45" class="todo"><title>0x0001f544 TestCdDrive (96 bytes)</title></rect>
+<rect width="12" height="12" x="720" y="45" class="todo"><title>0x0001f5a4 disk_error_handler (3 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="45" class="todo"><title>0x0001f5b0 Func1f5b0 (140 bytes)</title></rect>
 <rect width="12" height="12" x="0" y="60" class="todo"><title>0x0001f63c Func1f63c (1 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="60" class="todo"><title>0x0001f640 Func1f640 (142 bytes)</title></rect>
@@ -846,10 +846,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">28.79%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">71.21%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">28.85%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">71.15%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="215.07" height="6" x="0" y="0" class="named"/>
-<rect width="531.93" height="6" x="215.07" y="0" class="todo"/>
+<rect width="215.52" height="6" x="0" y="0" class="named"/>
+<rect width="531.48" height="6" x="215.52" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1237,7 +1237,7 @@
 <rect width="7.47" height="7.58" x="603.14" y="128.13" class="todo"><title>0x0002f43c Func2f43c (124 bytes)</title></rect>
 <rect width="7.47" height="7.58" x="603.14" y="138.71" class="todo"><title>0x00031e8c Func31e8c (124 bytes)</title></rect>
 <rect width="7.47" height="7.58" x="603.14" y="149.30" class="todo"><title>0x00032500 Func32500 (124 bytes)</title></rect>
-<rect width="7.47" height="7.50" x="603.14" y="159.88" class="todo"><title>0x0001f4c8 Func1f4c8 (123 bytes)</title></rect>
+<rect width="7.47" height="7.50" x="603.14" y="159.88" class="named"><title>0x0001f4c8 FindCdDrive (123 bytes)</title></rect>
 <rect width="7.47" height="7.41" x="603.14" y="170.38" class="named"><title>0x0001e0d8 SandFX (122 bytes)</title></rect>
 <rect width="7.47" height="7.41" x="603.14" y="180.79" class="todo"><title>0x000244e8 Inv_RingMotionInit (122 bytes)</title></rect>
 <rect width="7.47" height="7.41" x="603.14" y="191.20" class="todo"><title>0x0002ea84 Func2ea84 (122 bytes)</title></rect>
@@ -1301,7 +1301,7 @@
 <rect width="6.08" height="6.54" x="651.57" y="126.38" class="todo"><title>0x00020f60 Func20f60 (97 bytes)</title></rect>
 <rect width="6.08" height="6.54" x="660.65" y="126.38" class="todo"><title>0x0003d4a0 Insert2DLine (97 bytes)</title></rect>
 <rect width="6.08" height="6.54" x="669.74" y="126.38" class="todo"><title>0x00044700 Func44700 (97 bytes)</title></rect>
-<rect width="5.99" height="6.54" x="678.82" y="126.38" class="todo"><title>0x0001f544 Func1f544 (96 bytes)</title></rect>
+<rect width="5.99" height="6.54" x="678.82" y="126.38" class="todo"><title>0x0001f544 TestCdDrive (96 bytes)</title></rect>
 <rect width="5.99" height="6.54" x="687.81" y="126.38" class="todo"><title>0x0001ff1c GameLoop (96 bytes)</title></rect>
 <rect width="5.99" height="6.54" x="696.80" y="126.38" class="todo"><title>0x00024224 Func24224 (96 bytes)</title></rect>
 <rect width="5.90" height="6.54" x="705.79" y="126.38" class="named"><title>0x0001f3ac LoadCinematic (95 bytes)</title></rect>
@@ -1617,7 +1617,7 @@
 <rect width="0.10" height="0.10" x="745.07" y="237.74" class="todo"><title>0x00039784 Func39784 (5 bytes)</title></rect>
 <rect width="0.10" height="0.10" x="747.54" y="237.74" class="todo"><title>0x0003f026 phd_cos (5 bytes)</title></rect>
 <rect width="0.10" height="0.10" x="745.07" y="239.55" class="todo"><title>0x00038edc S_StartSyncedAudio (4 bytes)</title></rect>
-<rect width="0.10" height="0.10" x="745.07" y="241.52" class="todo"><title>0x0001f5a4 Func1f5a4 (3 bytes)</title></rect>
+<rect width="0.10" height="0.10" x="745.07" y="241.52" class="todo"><title>0x0001f5a4 disk_error_handler (3 bytes)</title></rect>
 <rect width="0.10" height="0.10" x="746.89" y="239.55" class="todo"><title>0x000396dc Func396dc (3 bytes)</title></rect>
 <rect width="0.10" height="0.10" x="748.76" y="239.55" class="todo"><title>0x00038b0c Func38b0c (2 bytes)</title></rect>
 <rect width="0.10" height="0.10" x="746.89" y="240.99" class="todo"><title>0x0001f63c Func1f63c (1 bytes)</title></rect>
