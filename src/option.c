@@ -938,6 +938,25 @@ void S_ShowControls(void)
         T_AddBackground(control_text[1], 420, 150, 0, 0, 48, C_BLACK, NULL, NULL);
 }
 
+void S_ChangeCtrlText(void)
+{
+    int i;
+    char str[40];
+    sint16 *key;
+
+    if (iconfig)
+    {
+        sprintf(str, str_heading, iconfig);
+        T_ChangeText(control_text[0], str);
+    }
+    else
+        T_ChangeText(control_text[0], str_default);
+
+    key = layout[iconfig];
+    for (i = 0; i < 13; i++, key++)
+        T_ChangeText(btext[i], kname[*key]);
+}
+
 void Init_Requester(REQUEST_INFO *req)
 {
     int n;
