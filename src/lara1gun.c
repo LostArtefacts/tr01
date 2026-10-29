@@ -215,3 +215,27 @@ void AnimateShotgun(void)
     }
     lara.left_arm.frame_number = lara.right_arm.frame_number = ani;
 }
+
+#define PELLET_SCATTER (20 * ONE_DEGREE)
+
+void FireShotgun(void)
+{
+    int i, r, fired;
+    PHD_ANGLE angles[2];
+    PHD_ANGLE dangles[2];
+
+    angles[0] = lara.left_arm.y_rot + lara_item->pos.y_rot;
+    angles[1] = lara.left_arm.x_rot;
+    fired = 0;
+    for (i = 0; i < SHOTGUN_AMMO_CLIP; i++)
+    {
+        r = (int)((GetRandomControl() - 16384) * PELLET_SCATTER) / 65536;
+        dangles[0] = angles[0] + r;
+        r = (int)((GetRandomControl() - 16384) * PELLET_SCATTER) / 65536;
+        dangles[1] = angles[1] + r;
+        if (FireWeapon(LG_SHOTGUN, lara.target, lara_item, dangles))
+            fired = 1;
+    }
+    if (fired)
+        SoundEffect(weapons[LG_SHOTGUN].sample_num, &lara_item->pos, NULL);
+}
