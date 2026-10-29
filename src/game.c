@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "game.h"
+#include "invdata.h"
 
 uint32 StartLevel = LEVEL1;
 int CurrentLevel = LEVEL1;
@@ -375,4 +376,27 @@ int LevelIsValid(sint16 level_number)
             return 1;
     }
     return 0;
+}
+
+void GetValidLevelsList(REQUEST_INFO *req)
+{
+    int n;
+    sint16 *valids;
+
+    valids = valid_levels;
+    if (*valids < 0)
+    {
+        req->items = 1;
+        sprintf(req->itemtexts, sav_mess7);
+        return;
+    }
+    req->items = 0;
+    for (n = 0; n < NUMBER_OF_LEVELS; n++)
+    {
+        if (*valids < 0)
+            return;
+        req->items++;
+        sprintf(req->itemtexts + (n * req->itemtextlen), Level_Strings[*valids]);
+        valids++;
+    }
 }

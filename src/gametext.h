@@ -8,5 +8,6 @@ extern char str_timetaken[];
 extern char str_secrets[];
 extern char str_pickups[];
 extern char str_kills[];
+extern char sav_mess7[];
 
 #endif
