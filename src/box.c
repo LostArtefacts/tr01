@@ -229,3 +229,22 @@ int StalkBox(ITEM_INFO *item, sint16 box_number)
 
     return 1;
 }
+
+int EscapeBox(ITEM_INFO *item, sint16 box_number)
+{
+    BOX_INFO *box;
+    sint32 x, z;
+
+    box = &boxes[box_number];
+    z = ((box->left + box->right) >> 1) - lara_item->pos.z_pos;
+    x = ((box->top + box->bottom) >> 1) - lara_item->pos.x_pos;
+
+    if (x > -ESCAPE_DIST && x < ESCAPE_DIST && z > -ESCAPE_DIST && z < ESCAPE_DIST)
+        return 0;
+
+    if (((z > 0) ^ (item->pos.z_pos > lara_item->pos.z_pos)) &&
+        ((x > 0) ^ (item->pos.x_pos > lara_item->pos.x_pos)))
+        return 0;
+
+    return 1;
+}
