@@ -192,3 +192,20 @@ void S_FadeToBlack(void)
 void S_LoadingScreen(int level_number)
 {
 }
+
+void S_Wait(int frames)
+{
+    while (input)
+        S_UpdateInput();
+
+    while (frames > 0)
+    {
+        S_UpdateInput();
+        if (keydata->keys_held)
+            return;
+
+        while (!Sync())
+            ;
+        frames--;
+    }
+}

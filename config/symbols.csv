@@ -209,7 +209,7 @@ address,size,name,symbol
 0x0001fac4,18,S_FinishInventory,S_FinishInventory_
 0x0001fad8,52,S_FadeToBlack,S_FadeToBlack_
 0x0001fb0c,1,S_LoadingScreen,S_LoadingScreen_
-0x0001fb10,82,Func1fb10,
+0x0001fb10,82,S_Wait,S_Wait_
 0x0001fb64,491,Func1fb64,
 0x0001fd50,82,Func1fd50,
 0x0001fdf0,298,Func1fdf0,
