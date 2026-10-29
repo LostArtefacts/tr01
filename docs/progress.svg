@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">72.30% (582)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">27.70% (223)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">72.42% (583)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">27.58% (222)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="540.07" height="6" x="0" y="0" class="named"/>
-<rect width="206.93" height="6" x="540.07" y="0" class="todo"/>
+<rect width="541" height="6" x="0" y="0" class="named"/>
+<rect width="206" height="6" x="541" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -649,7 +649,7 @@
 <rect width="12" height="12" x="435" y="165" class="named"><title>0x00035020 VoleControl (696 bytes)</title></rect>
 <rect width="12" height="12" x="450" y="165" class="named"><title>0x000352e0 LoadSaveGameInfo (6 bytes)</title></rect>
 <rect width="12" height="12" x="465" y="165" class="named"><title>0x000352e8 InitialiseStartInfo (78 bytes)</title></rect>
-<rect width="12" height="12" x="480" y="165" class="todo"><title>0x00035338 ModifyStartInfo (255 bytes)</title></rect>
+<rect width="12" height="12" x="480" y="165" class="named"><title>0x00035338 ModifyStartInfo (255 bytes)</title></rect>
 <rect width="12" height="12" x="495" y="165" class="todo"><title>0x00035438 CreateStartInfo (316 bytes)</title></rect>
 <rect width="12" height="12" x="510" y="165" class="todo"><title>0x00035574 CreateSaveGameInfo (1098 bytes)</title></rect>
 <rect width="12" height="12" x="525" y="165" class="todo"><title>0x000359c0 Func359c0 (2643 bytes)</title></rect>
@@ -876,10 +876,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">69.39%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">30.61%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">69.51%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">30.49%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="518.37" height="6" x="0" y="0" class="named"/>
-<rect width="228.63" height="6" x="518.37" y="0" class="todo"/>
+<rect width="519.25" height="6" x="0" y="0" class="named"/>
+<rect width="227.75" height="6" x="519.25" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="51.03" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1115,7 +1115,7 @@
 <rect width="12.32" height="12.10" x="704.21" y="34.61" class="named"><title>0x0002751c lara_slide_slope (257 bytes)</title></rect>
 <rect width="12.26" height="12.10" x="719.53" y="34.61" class="named"><title>0x00030a7c do_gamma_option (256 bytes)</title></rect>
 <rect width="12.20" height="12.10" x="734.80" y="34.61" class="named"><title>0x0001f7c4 S_DrawScreenSprite (255 bytes)</title></rect>
-<rect width="11.75" height="12.56" x="529.59" y="49.71" class="todo"><title>0x00035338 ModifyStartInfo (255 bytes)</title></rect>
+<rect width="11.75" height="12.56" x="529.59" y="49.71" class="named"><title>0x00035338 ModifyStartInfo (255 bytes)</title></rect>
 <rect width="11.75" height="12.50" x="529.59" y="65.26" class="named"><title>0x0002eefc TestBlockPush (254 bytes)</title></rect>
 <rect width="11.75" height="12.37" x="529.59" y="80.76" class="named"><title>0x00011c30 StalkBox (252 bytes)</title></rect>
 <rect width="11.75" height="12.13" x="529.59" y="96.14" class="named"><title>0x00017570 GetWaterHeight (248 bytes)</title></rect>
