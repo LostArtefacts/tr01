@@ -299,6 +299,50 @@ int SoundEffect(int sfx_num, PHD_3DPOS *pos, int flags)
     return 1;
 }
 
+MN_SFX_PLAY_INFO *mn_get_fx_slot(sint32 sfx_num, uint32 loudness, PHD_3DPOS *pos, sint16 mode)
+{
+    MN_SFX_PLAY_INFO *retslot, *lastfreeSlot = NULL;
+    int i;
+
+    switch (mode)
+    {
+    case WAIT_SOUND:
+    case RESTART_SOUND:
+        for (retslot = (sfx_playing + mn_ambient_lookup_indx); retslot < (sfx_playing + MAX_PLAYING_FX); retslot++)
+        {
+            if ((retslot->mn_flags & MN_FX_USED) && (retslot->fxnum == sfx_num) && (retslot->pos == pos))
+            {
+                retslot->mn_flags |= MN_FX_RESTARTED;
+                return retslot;
+            }
+            else
+            {
+                if (retslot->mn_flags == MN_FX_UNUSED)
+                    lastfreeSlot = retslot;
+            }
+        }
+        break;
+
+    case AMBIENT_SOUND:
+        for (i = 0; i < MAX_AMBIENT_FX; i++)
+        {
+            if (mn_amb_lookup[i] == sfx_num)
+            {
+                retslot = sfx_playing + i;
+
+                if ((retslot->mn_flags == MN_FX_UNUSED) || (retslot->loudness > loudness))
+                    return retslot;
+                else
+                    return NULL;
+            }
+        }
+
+        return NULL;
+        break;
+    }
+    return lastfreeSlot;
+}
+
 void mn_clear_fx_slot(MN_SFX_PLAY_INFO *slot)
 {
     slot->handle = -1;

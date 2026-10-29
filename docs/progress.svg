@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">61.19% (484)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">38.81% (307)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">61.31% (485)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">38.69% (306)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="457.08" height="6" x="0" y="0" class="named"/>
-<rect width="289.92" height="6" x="457.08" y="0" class="todo"/>
+<rect width="458.02" height="6" x="0" y="0" class="named"/>
+<rect width="288.98" height="6" x="458.02" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -550,7 +550,7 @@
 <rect width="12" height="12" x="450" y="135" class="named"><title>0x0002d144 ClearLOT (87 bytes)</title></rect>
 <rect width="12" height="12" x="465" y="135" class="named"><title>0x0002d1a0 mn_reset_sound_effects (273 bytes)</title></rect>
 <rect width="12" height="12" x="480" y="135" class="named"><title>0x0002d2b4 SoundEffect (1336 bytes)</title></rect>
-<rect width="12" height="12" x="495" y="135" class="todo"><title>0x0002d7ec mn_get_fx_slot (181 bytes)</title></rect>
+<rect width="12" height="12" x="495" y="135" class="named"><title>0x0002d7ec mn_get_fx_slot (181 bytes)</title></rect>
 <rect width="12" height="12" x="510" y="135" class="todo"><title>0x0002d8a4 mn_reset_ambient_loudness (56 bytes)</title></rect>
 <rect width="12" height="12" x="525" y="135" class="todo"><title>0x0002d8dc mn_stop_ambient_samples (94 bytes)</title></rect>
 <rect width="12" height="12" x="540" y="135" class="todo"><title>0x0002d93c mn_update_sound_effects (414 bytes)</title></rect>
@@ -862,10 +862,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">56.50%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">43.50%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">56.59%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">43.41%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="422.08" height="6" x="0" y="0" class="named"/>
-<rect width="324.92" height="6" x="422.08" y="0" class="todo"/>
+<rect width="422.74" height="6" x="0" y="0" class="named"/>
+<rect width="324.26" height="6" x="422.74" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.78" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1164,7 +1164,7 @@
 <rect width="9.91" height="9.56" x="698.44" y="60.02" class="named"><title>0x00026618 lara_col_turn_r (182 bytes)</title></rect>
 <rect width="9.91" height="9.56" x="711.35" y="60.02" class="named"><title>0x000296a4 lara_as_glide (182 bytes)</title></rect>
 <rect width="9.91" height="9.56" x="724.25" y="60.02" class="todo"><title>0x0003257c Func3257c (182 bytes)</title></rect>
-<rect width="9.84" height="9.56" x="737.16" y="60.02" class="todo"><title>0x0002d7ec mn_get_fx_slot (181 bytes)</title></rect>
+<rect width="9.84" height="9.56" x="737.16" y="60.02" class="named"><title>0x0002d7ec mn_get_fx_slot (181 bytes)</title></rect>
 <rect width="9.64" height="9.69" x="567.44" y="72.58" class="todo"><title>0x0003e18c phd_TranslateRel (180 bytes)</title></rect>
 <rect width="9.64" height="9.62" x="567.44" y="85.27" class="todo"><title>0x0002fdd4 Func2fdd4 (179 bytes)</title></rect>
 <rect width="9.64" height="9.55" x="567.44" y="97.89" class="named"><title>0x0001de6c dino_stomp_effect (178 bytes)</title></rect>
