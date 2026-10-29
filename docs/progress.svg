@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">3.50% (27)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">96.50% (744)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">3.63% (28)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">96.37% (743)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="26.16" height="6" x="0" y="0" class="named"/>
-<rect width="720.84" height="6" x="26.16" y="0" class="todo"/>
+<rect width="27.13" height="6" x="0" y="0" class="named"/>
+<rect width="719.87" height="6" x="27.13" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -94,7 +94,7 @@
 <rect width="12" height="12" x="360" y="0" class="named"><title>0x00011b9c TargetBox (148 bytes)</title></rect>
 <rect width="12" height="12" x="375" y="0" class="named"><title>0x00011c30 StalkBox (252 bytes)</title></rect>
 <rect width="12" height="12" x="390" y="0" class="named"><title>0x00011d2c EscapeBox (184 bytes)</title></rect>
-<rect width="12" height="12" x="405" y="0" class="todo"><title>0x00011de4 Func11de4 (157 bytes)</title></rect>
+<rect width="12" height="12" x="405" y="0" class="named"><title>0x00011de4 ValidBox (157 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="0" class="todo"><title>0x00011eb4 CreatureMood (1096 bytes)</title></rect>
 <rect width="12" height="12" x="435" y="0" class="todo"><title>0x000122fc Func122fc (1120 bytes)</title></rect>
 <rect width="12" height="12" x="450" y="0" class="todo"><title>0x0001275c Func1275c (224 bytes)</title></rect>
@@ -842,10 +842,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">3.72%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">96.28%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">3.80%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">96.20%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="27.78" height="6" x="0" y="0" class="named"/>
-<rect width="719.22" height="6" x="27.78" y="0" class="todo"/>
+<rect width="28.36" height="6" x="0" y="0" class="named"/>
+<rect width="718.64" height="6" x="28.36" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="54.65" height="67.43" x="0" y="0" class="todo"><title>0x0001bc98 Func1bc98 (4489 bytes)</title></rect>
@@ -1170,7 +1170,7 @@
 <rect width="9.04" height="9.02" x="678.58" y="72.71" class="todo"><title>0x00026d28 Func26d28 (160 bytes)</title></rect>
 <rect width="9.04" height="9.02" x="690.62" y="72.71" class="todo"><title>0x0003dd08 Func3dd08 (160 bytes)</title></rect>
 <rect width="8.89" height="9.02" x="702.66" y="72.71" class="todo"><title>0x00023ff0 Inv_GetItemOption (158 bytes)</title></rect>
-<rect width="8.81" height="9.02" x="714.56" y="72.71" class="todo"><title>0x00011de4 Func11de4 (157 bytes)</title></rect>
+<rect width="8.81" height="9.02" x="714.56" y="72.71" class="named"><title>0x00011de4 ValidBox (157 bytes)</title></rect>
 <rect width="8.81" height="9.02" x="726.37" y="72.71" class="todo"><title>0x0001d650 Func1d650 (157 bytes)</title></rect>
 <rect width="8.81" height="9.02" x="738.19" y="72.71" class="todo"><title>0x00046db1 Func46db1 (157 bytes)</title></rect>
 <rect width="9" height="8.68" x="580.90" y="84.73" class="todo"><title>0x00024ee8 Func24ee8 (155 bytes)</title></rect>

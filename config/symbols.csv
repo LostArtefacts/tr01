@@ -26,7 +26,7 @@ address,size,name,symbol
 0x00011b9c,148,TargetBox,TargetBox_
 0x00011c30,252,StalkBox,StalkBox_
 0x00011d2c,184,EscapeBox,EscapeBox_
-0x00011de4,157,Func11de4,
+0x00011de4,157,ValidBox,ValidBox_
 0x00011eb4,1096,CreatureMood,CreatureMood_
 0x000122fc,1120,Func122fc,
 0x0001275c,224,Func1275c,

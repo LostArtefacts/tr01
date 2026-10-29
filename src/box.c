@@ -248,3 +248,29 @@ int EscapeBox(ITEM_INFO *item, sint16 box_number)
 
     return 1;
 }
+
+int ValidBox(ITEM_INFO *item, sint16 zone_number, sint16 box_number)
+{
+    BOX_INFO *box;
+    CREATURE_INFO *creature;
+    sint16 *zone;
+
+    creature = (CREATURE_INFO *)item->data;
+    if (creature->LOT.fly == NO_FLYING)
+        zone = (creature->LOT.step == STEP_L) ? ground_zone[flip_status] : ground_zone2[flip_status];
+    else
+        zone = fly_zone[flip_status];
+
+    if (zone[box_number] != zone_number)
+        return 0;
+
+    box = &boxes[box_number];
+    if (box->overlap_index & creature->LOT.block_mask)
+        return 0;
+
+    if (item->pos.z_pos > box->left && item->pos.z_pos < box->right &&
+        item->pos.x_pos > box->top && item->pos.x_pos < box->bottom)
+        return 0;
+
+    return 1;
+}
