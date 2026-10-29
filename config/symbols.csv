@@ -282,7 +282,7 @@ address,size,name,symbol
 0x00024678,128,Inv_RingMotionItemDeselect,Inv_RingMotionItemDeselect_
 0x00024700,83,InitialiseItemArray,InitialiseItemArray_
 0x00024754,226,KillItem,KillItem_
-0x00024838,55,Func24838,
+0x00024838,55,CreateItem,CreateItem_
 0x00024870,446,InitialiseItem,InitialiseItem_
 0x00024a30,151,RemoveActiveItem,RemoveActiveItem_
 0x00024ac8,114,Func24ac8,
