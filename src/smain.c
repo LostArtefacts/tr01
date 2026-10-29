@@ -93,3 +93,49 @@ void main(int argc, char **argv, char **envp)
         }
     }
 }
+
+sint32 TitleSequence(void)
+{
+    T_InitPrint();
+    TempVideoAdjust(1, 1.0);
+    S_DisplayPicture("data\\titleh");
+
+    noinput_count = 0;
+    if (!title_loaded)
+    {
+        if (!InitialiseLevel(TITLE))
+            return EXITGAME;
+        title_loaded = 1;
+    }
+    else
+        S_CDPlay(2);
+
+    Display_Inventory(INV_TITLE_MODE);
+
+    S_FadeToBlack();
+    S_CDStop();
+
+    if (reset_flag)
+    {
+        reset_flag = 0;
+        return STARTDEMO;
+    }
+
+    if (Inventory_Chosen == PHOTO_OPTION)
+        return STARTGAME | GYM;
+
+    if (Inventory_Chosen == PASSPORT_OPTION)
+    {
+        if (Inventory_ExtraData[0] == 0)
+        {
+            S_LoadGame(&savegame, sizeof(SAVEGAME_INFO), Inventory_ExtraData[1]);
+            return STARTGAME | CURRENT;
+        }
+        else if (Inventory_ExtraData[0] == 1)
+        {
+            InitialiseStartInfo();
+            return STARTGAME | LEVEL1;
+        }
+    }
+    return EXITGAME;
+}
