@@ -97,7 +97,7 @@ address,size,name,symbol
 0x00018c20,97,RemoveRoomFlipItems,RemoveRoomFlipItems_
 0x00018c84,97,AddRoomFlipItems,AddRoomFlipItems_
 0x00018ce8,319,TriggerCDTrack,TriggerCDTrack_
-0x00018e28,141,Func18e28,
+0x00018e28,141,TriggerNormalCDTrack,TriggerNormalCDTrack_
 0x00018ec0,800,Func18ec0,
 0x00019520,335,Func19520,
 0x00019670,150,Func19670,
@@ -1779,6 +1779,7 @@ address,size,name,symbol
 0x000cb31e,2,cinematic_level,_cinematic_level
 0x000cb320,2,cine_frame,_cine_frame
 0x000cb322,2,num_cine_frames,_num_cine_frames
+0x000cb324,128,cd_flags,_cd_flags
 0x000cb3a4,40,flipmap,_flipmap
 0x000cb3cc,4,trigger_index,_trigger_index
 0x000cb3d0,4,items,_items

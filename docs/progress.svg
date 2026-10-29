@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">12.45% (96)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">87.55% (675)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">12.58% (97)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">87.42% (674)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="93.01" height="6" x="0" y="0" class="named"/>
-<rect width="653.99" height="6" x="93.01" y="0" class="todo"/>
+<rect width="93.98" height="6" x="0" y="0" class="named"/>
+<rect width="653.02" height="6" x="93.98" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -164,8 +164,8 @@
 <rect width="12" height="12" x="660" y="15" class="named"><title>0x00018b3c FlipMap (227 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="15" class="named"><title>0x00018c20 RemoveRoomFlipItems (97 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="15" class="named"><title>0x00018c84 AddRoomFlipItems (97 bytes)</title></rect>
-<rect width="12" height="12" x="705" y="15" class="todo"><title>0x00018ce8 TriggerCDTrack (319 bytes)</title></rect>
-<rect width="12" height="12" x="720" y="15" class="todo"><title>0x00018e28 Func18e28 (141 bytes)</title></rect>
+<rect width="12" height="12" x="705" y="15" class="named"><title>0x00018ce8 TriggerCDTrack (319 bytes)</title></rect>
+<rect width="12" height="12" x="720" y="15" class="todo"><title>0x00018e28 TriggerNormalCDTrack (141 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="15" class="todo"><title>0x00018ec0 Func18ec0 (800 bytes)</title></rect>
 <rect width="12" height="12" x="0" y="30" class="todo"><title>0x00019520 Func19520 (335 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="30" class="todo"><title>0x00019670 Func19670 (150 bytes)</title></rect>
@@ -842,10 +842,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">16.24%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">83.76%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">16.40%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">83.60%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="121.34" height="6" x="0" y="0" class="named"/>
-<rect width="625.66" height="6" x="121.34" y="0" class="todo"/>
+<rect width="122.52" height="6" x="0" y="0" class="named"/>
+<rect width="624.48" height="6" x="122.52" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="54.65" height="67.43" x="0" y="0" class="todo"><title>0x0001bc98 Func1bc98 (4489 bytes)</title></rect>
@@ -1021,7 +1021,7 @@
 <rect width="14.82" height="13.55" x="509.67" y="0" class="todo"><title>0x00020648 Func20648 (326 bytes)</title></rect>
 <rect width="14.55" height="13.55" x="527.48" y="0" class="todo"><title>0x0002e940 Func2e940 (321 bytes)</title></rect>
 <rect width="14.49" height="13.55" x="545.03" y="0" class="todo"><title>0x0003a2ac Func3a2ac (320 bytes)</title></rect>
-<rect width="14.44" height="13.55" x="562.52" y="0" class="todo"><title>0x00018ce8 TriggerCDTrack (319 bytes)</title></rect>
+<rect width="14.44" height="13.55" x="562.52" y="0" class="named"><title>0x00018ce8 TriggerCDTrack (319 bytes)</title></rect>
 <rect width="14.33" height="13.55" x="579.96" y="0" class="named"><title>0x000141f4 CombatCamera (317 bytes)</title></rect>
 <rect width="14.27" height="13.55" x="597.28" y="0" class="todo"><title>0x00035438 Func35438 (316 bytes)</title></rect>
 <rect width="14.11" height="13.55" x="614.56" y="0" class="named"><title>0x00011060 BatControl (313 bytes)</title></rect>
@@ -1195,7 +1195,7 @@
 <rect width="8.33" height="8.49" x="650.04" y="84.73" class="todo"><title>0x0001a050 Func1a050 (144 bytes)</title></rect>
 <rect width="8.25" height="8.49" x="661.38" y="84.73" class="todo"><title>0x0002745c Func2745c (143 bytes)</title></rect>
 <rect width="8.18" height="8.49" x="672.63" y="84.73" class="todo"><title>0x0001f640 Func1f640 (142 bytes)</title></rect>
-<rect width="8.10" height="8.49" x="683.81" y="84.73" class="todo"><title>0x00018e28 Func18e28 (141 bytes)</title></rect>
+<rect width="8.10" height="8.49" x="683.81" y="84.73" class="todo"><title>0x00018e28 TriggerNormalCDTrack (141 bytes)</title></rect>
 <rect width="8.10" height="8.49" x="694.91" y="84.73" class="todo"><title>0x0002515c Func2515c (141 bytes)</title></rect>
 <rect width="8.10" height="8.49" x="706" y="84.73" class="todo"><title>0x0002b49c Func2b49c (141 bytes)</title></rect>
 <rect width="8.02" height="8.49" x="717.10" y="84.73" class="todo"><title>0x0001f5b0 Func1f5b0 (140 bytes)</title></rect>

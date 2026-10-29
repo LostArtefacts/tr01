@@ -1236,3 +1236,60 @@ void    AddRoomFlipItems( ROOM_INFO *r )
         }
     }
 }
+
+void TriggerCDTrack(sint16 value, sint16 flags, sint16 type)
+{
+    if (value <= 1 || value >= MAX_CD_TRACKS)
+        return;
+
+    switch (value)
+    {
+    case 28:
+        if (cd_flags[value] & ONESHOT)
+        {
+            if (lara_item->current_anim_state == AS_UPJUMP)
+                value = 29;
+        }
+        break;
+
+    case 37:
+        if (lara_item->current_anim_state != AS_HANG)
+            return;
+        break;
+
+    case 41:
+        if (lara_item->current_anim_state != AS_HANG)
+            return;
+        break;
+
+    case 42:
+        if (cd_flags[value] & ONESHOT)
+        {
+            if (lara_item->current_anim_state == AS_HANG)
+                value = 43;
+        }
+        break;
+
+    case 49:
+        if (lara_item->current_anim_state != AS_SURFTREAD)
+            return;
+        break;
+
+    case 50:
+        if (cd_flags[value] & ONESHOT)
+        {
+            static sint16 counter = 0;
+
+            counter++;
+            if (counter == 30 * 4)
+            {
+                level_complete = 1;
+                counter = 0;
+            }
+        }
+        else if (lara_item->current_anim_state != AS_WATEROUT)
+            return;
+        break;
+    }
+    TriggerNormalCDTrack(value, flags, type);
+}

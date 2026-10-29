@@ -31,6 +31,7 @@ void FlipMap(void);
 void RemoveRoomFlipItems(ROOM_INFO *r);
 void AddRoomFlipItems(ROOM_INFO *r);
 void TriggerCDTrack(sint16 value, sint16 flags, sint16 type);
+void TriggerNormalCDTrack(sint16 value, sint16 flags, sint16 type);
 sint16 GetDoor(FLOOR_INFO *floor);
 int LOS(GAME_VECTOR *start, GAME_VECTOR *target);
 int zLOS(GAME_VECTOR *start, GAME_VECTOR *target);
