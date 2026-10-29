@@ -314,3 +314,9 @@ void lara_as_turn_l(ITEM_INFO *item, COLL_INFO *coll)
     else if (!(input & IN_LEFT))
         item->goal_anim_state = AS_STOP;
 }
+
+void lara_as_death(ITEM_INFO *item, COLL_INFO *coll)
+{
+    coll->enable_hit = 0;
+    coll->enable_baddie_push = 0;
+}
