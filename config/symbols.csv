@@ -349,7 +349,7 @@ address,size,name,symbol
 0x00026540,213,lara_col_fastback,lara_col_fastback_
 0x00026618,182,lara_col_turn_r,lara_col_turn_r_
 0x00026618,0,lara_col_turn_l,lara_col_turn_l_
-0x000266d0,121,Func266d0,
+0x000266d0,121,lara_col_death,lara_col_death_
 0x0002674c,177,Func2674c,
 0x00026800,108,Func26800,
 0x0002686c,171,Func2686c,
