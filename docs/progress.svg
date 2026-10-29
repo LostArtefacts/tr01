@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">36.12% (281)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">63.88% (497)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">36.25% (282)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">63.75% (496)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="269.80" height="6" x="0" y="0" class="named"/>
-<rect width="477.20" height="6" x="269.80" y="0" class="todo"/>
+<rect width="270.76" height="6" x="0" y="0" class="named"/>
+<rect width="476.24" height="6" x="270.76" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -349,7 +349,7 @@
 <rect width="12" height="12" x="435" y="75" class="named"><title>0x0002460c Inv_RingMotionItemSelect (106 bytes)</title></rect>
 <rect width="12" height="12" x="450" y="75" class="named"><title>0x00024678 Inv_RingMotionItemDeselect (128 bytes)</title></rect>
 <rect width="12" height="12" x="465" y="75" class="named"><title>0x00024700 InitialiseItemArray (83 bytes)</title></rect>
-<rect width="12" height="12" x="480" y="75" class="todo"><title>0x00024754 Func24754 (226 bytes)</title></rect>
+<rect width="12" height="12" x="480" y="75" class="named"><title>0x00024754 KillItem (226 bytes)</title></rect>
 <rect width="12" height="12" x="495" y="75" class="todo"><title>0x00024838 Func24838 (55 bytes)</title></rect>
 <rect width="12" height="12" x="510" y="75" class="todo"><title>0x00024870 InitialiseItem (446 bytes)</title></rect>
 <rect width="12" height="12" x="525" y="75" class="todo"><title>0x00024a30 RemoveActiveItem (151 bytes)</title></rect>
@@ -849,10 +849,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">38.72%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">61.28%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">38.83%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">61.17%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="289.21" height="6" x="0" y="0" class="named"/>
-<rect width="457.79" height="6" x="289.21" y="0" class="todo"/>
+<rect width="290.04" height="6" x="0" y="0" class="named"/>
+<rect width="456.96" height="6" x="290.04" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1098,7 +1098,7 @@
 <rect width="10.60" height="11.98" x="736.40" y="31.80" class="todo"><title>0x0003cbfc Func3cbfc (228 bytes)</title></rect>
 <rect width="11.18" height="11.31" x="540.45" y="46.78" class="named"><title>0x00018b3c FlipMap (227 bytes)</title></rect>
 <rect width="11.18" height="11.31" x="540.45" y="61.09" class="todo"><title>0x0003ec1c phd_RotateLight (227 bytes)</title></rect>
-<rect width="11.18" height="11.25" x="540.45" y="75.40" class="todo"><title>0x00024754 Func24754 (226 bytes)</title></rect>
+<rect width="11.18" height="11.25" x="540.45" y="75.40" class="named"><title>0x00024754 KillItem (226 bytes)</title></rect>
 <rect width="11.18" height="11.18" x="540.45" y="89.64" class="named"><title>0x00022c30 InitColours (225 bytes)</title></rect>
 <rect width="11.18" height="11.12" x="540.45" y="103.83" class="named"><title>0x0001275c CreatureCreature (224 bytes)</title></rect>
 <rect width="11.18" height="11.12" x="540.45" y="117.95" class="todo"><title>0x0002a19c Func2a19c (224 bytes)</title></rect>
