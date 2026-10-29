@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">11.67% (90)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">88.33% (681)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">11.80% (91)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">88.20% (680)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="87.20" height="6" x="0" y="0" class="named"/>
-<rect width="659.80" height="6" x="87.20" y="0" class="todo"/>
+<rect width="88.17" height="6" x="0" y="0" class="named"/>
+<rect width="658.83" height="6" x="88.17" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -158,7 +158,7 @@
 <rect width="12" height="12" x="570" y="15" class="named"><title>0x000180e8 GetCeiling (641 bytes)</title></rect>
 <rect width="12" height="12" x="585" y="15" class="named"><title>0x0001836c GetDoor (82 bytes)</title></rect>
 <rect width="12" height="12" x="600" y="15" class="named"><title>0x000183c0 LOS (163 bytes)</title></rect>
-<rect width="12" height="12" x="615" y="15" class="todo"><title>0x00018464 zLOS (747 bytes)</title></rect>
+<rect width="12" height="12" x="615" y="15" class="named"><title>0x00018464 zLOS (747 bytes)</title></rect>
 <rect width="12" height="12" x="630" y="15" class="todo"><title>0x00018750 xLOS (741 bytes)</title></rect>
 <rect width="12" height="12" x="645" y="15" class="todo"><title>0x00018a38 ClipTarget (259 bytes)</title></rect>
 <rect width="12" height="12" x="660" y="15" class="todo"><title>0x00018b3c FlipMap (227 bytes)</title></rect>
@@ -842,10 +842,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">15.17%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">84.83%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">15.54%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">84.46%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="113.30" height="6" x="0" y="0" class="named"/>
-<rect width="633.70" height="6" x="113.30" y="0" class="todo"/>
+<rect width="116.07" height="6" x="0" y="0" class="named"/>
+<rect width="630.93" height="6" x="116.07" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="54.65" height="67.43" x="0" y="0" class="todo"><title>0x0001bc98 Func1bc98 (4489 bytes)</title></rect>
@@ -906,7 +906,7 @@
 <rect width="21.80" height="24.93" x="297.76" y="0" class="todo"><title>0x00020114 Func20114 (766 bytes)</title></rect>
 <rect width="21.80" height="24.90" x="297.76" y="27.93" class="todo"><title>0x00044a15 Func44a15 (765 bytes)</title></rect>
 <rect width="21.80" height="24.46" x="297.76" y="55.83" class="todo"><title>0x00046404 Func46404 (753 bytes)</title></rect>
-<rect width="21.80" height="24.24" x="297.76" y="83.29" class="todo"><title>0x00018464 zLOS (747 bytes)</title></rect>
+<rect width="21.80" height="24.24" x="297.76" y="83.29" class="named"><title>0x00018464 zLOS (747 bytes)</title></rect>
 <rect width="21.80" height="24.02" x="297.76" y="110.52" class="todo"><title>0x00018750 xLOS (741 bytes)</title></rect>
 <rect width="21.80" height="23.91" x="297.76" y="137.54" class="todo"><title>0x00046000 Func46000 (738 bytes)</title></rect>
 <rect width="21.80" height="23.69" x="297.76" y="164.46" class="todo"><title>0x00028820 Func28820 (732 bytes)</title></rect>
