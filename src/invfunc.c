@@ -363,3 +363,175 @@ void RingActive(void)
         Inv_itemText[IT_QTY] = NULL;
     }
 }
+
+int Inv_AddItem(int itemNum)
+{
+    int n, m, found = 0;
+    int itemNumOption = 0;
+    INVENTORY_ITEM *inv_item;
+
+    itemNumOption = Inv_GetItemOption(itemNum);
+
+    for (n = 0; n < inv_main_objects; n++)
+    {
+        inv_item = inv_main_list[n];
+        if (inv_item->object_number == itemNumOption)
+        {
+            found = 1;
+            break;
+        }
+    }
+    for (m = 0; m < inv_keys_objects; m++)
+    {
+        inv_item = inv_keys_list[m];
+        if (inv_item->object_number == itemNumOption)
+        {
+            found = 2;
+            break;
+        }
+    }
+
+    if (found == 1)
+    {
+        inv_main_qtys[n]++;
+        return 1;
+    }
+    else if (found == 2)
+    {
+        inv_keys_qtys[m]++;
+        return 1;
+    }
+    else
+    {
+        switch (itemNum)
+        {
+        case GUN_ITEM:
+        case GUN_OPTION:
+            Inv_InsertItem(&igun_option);
+            return 1;
+        case SHOTGUN_ITEM:
+        case SHOTGUN_OPTION:
+            if ((found = Inv_RequestItem(SG_AMMO_ITEM)))
+            {
+                for (n = 0; n < found; n++)
+                {
+                    Inv_RemoveItem(SG_AMMO_ITEM);
+                    lara.shotgun.ammo += SHOTGUN_AMMO_QTY;
+                }
+            }
+            lara.shotgun.ammo += SHOTGUN_AMMO_QTY;
+            Inv_InsertItem(&ishotgun_option);
+            GlobalItemReplace(SHOTGUN_ITEM, SG_AMMO_ITEM);
+            break;
+        case MAGNUM_ITEM:
+        case MAGNUM_OPTION:
+            if ((found = Inv_RequestItem(MAG_AMMO_ITEM)))
+            {
+                for (n = 0; n < found; n++)
+                {
+                    Inv_RemoveItem(MAG_AMMO_ITEM);
+                    lara.magnums.ammo += MAGNUM_AMMO_QTY;
+                }
+            }
+            GlobalItemReplace(MAGNUM_ITEM, MAG_AMMO_ITEM);
+            lara.magnums.ammo += MAGNUM_AMMO_QTY;
+            Inv_InsertItem(&imagnum_option);
+            break;
+        case UZI_ITEM:
+        case UZI_OPTION:
+            if ((found = Inv_RequestItem(UZI_AMMO_ITEM)))
+            {
+                for (n = 0; n < found; n++)
+                {
+                    Inv_RemoveItem(UZI_AMMO_ITEM);
+                    lara.uzis.ammo += UZI_AMMO_QTY;
+                }
+            }
+            GlobalItemReplace(UZI_ITEM, UZI_AMMO_ITEM);
+            lara.uzis.ammo += UZI_AMMO_QTY;
+            Inv_InsertItem(&iuzi_option);
+            break;
+        case SG_AMMO_ITEM:
+        case SG_AMMO_OPTION:
+            if (Inv_RequestItem(SHOTGUN_ITEM))
+                lara.shotgun.ammo += SHOTGUN_AMMO_QTY;
+            else
+                Inv_InsertItem(&isgunammo_option);
+            break;
+        case MAG_AMMO_ITEM:
+        case MAG_AMMO_OPTION:
+            if (Inv_RequestItem(MAGNUM_ITEM))
+                lara.magnums.ammo += MAGNUM_AMMO_QTY;
+            else
+                Inv_InsertItem(&imagammo_option);
+            break;
+        case UZI_AMMO_ITEM:
+        case UZI_AMMO_OPTION:
+            if (Inv_RequestItem(UZI_ITEM))
+                lara.uzis.ammo += UZI_AMMO_QTY;
+            else
+                Inv_InsertItem(&iuziammo_option);
+            break;
+        case MEDI_ITEM:
+        case MEDI_OPTION:
+            Inv_InsertItem(&imedi_option);
+            return 1;
+        case BIGMEDI_ITEM:
+        case BIGMEDI_OPTION:
+            Inv_InsertItem(&ibigmedi_option);
+            return 1;
+        case LEADBAR_ITEM:
+        case LEADBAR_OPTION:
+            Inv_InsertItem(&ileadbar_option);
+            return 1;
+        case PICKUP_ITEM1:
+        case PICKUP_OPTION1:
+            Inv_InsertItem(&ipickup1_option);
+            return 1;
+        case PICKUP_ITEM2:
+        case PICKUP_OPTION2:
+            Inv_InsertItem(&ipickup2_option);
+            return 1;
+        case SCION_ITEM:
+        case SCION_ITEM2:
+        case SCION_OPTION:
+            Inv_InsertItem(&iscion_option);
+            return 1;
+        case PUZZLE_ITEM1:
+        case PUZZLE_OPTION1:
+            Inv_InsertItem(&ipuzzle1_option);
+            return 1;
+        case PUZZLE_ITEM2:
+        case PUZZLE_OPTION2:
+            Inv_InsertItem(&ipuzzle2_option);
+            return 1;
+        case PUZZLE_ITEM3:
+        case PUZZLE_OPTION3:
+            Inv_InsertItem(&ipuzzle3_option);
+            return 1;
+        case PUZZLE_ITEM4:
+        case PUZZLE_OPTION4:
+            Inv_InsertItem(&ipuzzle4_option);
+            return 1;
+        case KEY_ITEM1:
+        case KEY_OPTION1:
+            Inv_InsertItem(&ikey1_option);
+            return 1;
+        case KEY_ITEM2:
+        case KEY_OPTION2:
+            Inv_InsertItem(&ikey2_option);
+            return 1;
+        case KEY_ITEM3:
+        case KEY_OPTION3:
+            Inv_InsertItem(&ikey3_option);
+            return 1;
+        case KEY_ITEM4:
+        case KEY_OPTION4:
+            Inv_InsertItem(&ikey4_option);
+            return 1;
+        default:
+            return 0;
+        }
+    }
+    return 0;
+}

@@ -186,6 +186,37 @@ extern REQUEST_INFO Load_Game_Requester;
 
 extern sint32 inv_nframes;
 
+extern INVENTORY_ITEM icompass_option;
+extern INVENTORY_ITEM igun_option;
+extern INVENTORY_ITEM ishotgun_option;
+extern INVENTORY_ITEM imagnum_option;
+extern INVENTORY_ITEM iuzi_option;
+extern INVENTORY_ITEM igunammo_option;
+extern INVENTORY_ITEM isgunammo_option;
+extern INVENTORY_ITEM imagammo_option;
+extern INVENTORY_ITEM iuziammo_option;
+extern INVENTORY_ITEM iexplosiv_option;
+extern INVENTORY_ITEM imedi_option;
+extern INVENTORY_ITEM ibigmedi_option;
+extern INVENTORY_ITEM ileadbar_option;
+extern INVENTORY_ITEM ipickup1_option;
+extern INVENTORY_ITEM ipickup2_option;
+extern INVENTORY_ITEM iscion_option;
+extern INVENTORY_ITEM ipuzzle1_option;
+extern INVENTORY_ITEM ipuzzle2_option;
+extern INVENTORY_ITEM ipuzzle3_option;
+extern INVENTORY_ITEM ipuzzle4_option;
+extern INVENTORY_ITEM ikey1_option;
+extern INVENTORY_ITEM ikey2_option;
+extern INVENTORY_ITEM ikey3_option;
+extern INVENTORY_ITEM ikey4_option;
+extern INVENTORY_ITEM ipassport_option;
+extern INVENTORY_ITEM idetail_option;
+extern INVENTORY_ITEM isound_option;
+extern INVENTORY_ITEM icontrol_option;
+extern INVENTORY_ITEM igamma_option;
+extern INVENTORY_ITEM iphoto_option;
+
 extern sint16 inv_main_objects;
 extern sint16 inv_main_current;
 extern INVENTORY_ITEM *inv_main_list[];

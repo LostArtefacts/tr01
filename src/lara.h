@@ -14,7 +14,12 @@
 #define LARA_HITPOINTS 1000
 
 #define NUM_SG_SHELLS 2
+#define MAGNUM_AMMO_CLIP 25
+#define UZI_AMMO_CLIP 50
 #define SHOTGUN_AMMO_CLIP 6
+#define MAGNUM_AMMO_QTY (MAGNUM_AMMO_CLIP * 2)
+#define UZI_AMMO_QTY (UZI_AMMO_CLIP * 2)
+#define SHOTGUN_AMMO_QTY (SHOTGUN_AMMO_CLIP * NUM_SG_SHELLS)
 
 #define LARA_RAD 100
 #define LARA_HITE 762
@@ -246,6 +251,7 @@ void DisableBaddieAI(sint16 item_num);
 int EnableBaddieAI(sint16 item_number, int Always);
 void AlterFloorHeight(ITEM_INFO *item, int height);
 void LaraSwapMeshExtra(void);
+int GlobalItemReplace(int in_objnum, int out_objnum);
 void DrawHealthBar(void);
 void DrawAirBar(void);
 void MakeAmmoString(char *string);
