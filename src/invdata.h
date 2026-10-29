@@ -27,6 +27,13 @@ typedef enum pass_pages
     PPAGE1 = 64
 } PASS_PAGES;
 
+typedef enum inv_text
+{
+    IT_NAME,
+    IT_QTY,
+    IT_NUMBEROF
+} INV_TEXT;
+
 #define OPEN_FRAMES 32
 #define CLOSE_FRAMES 32
 #define OPEN_ROTATION -0x8000
@@ -191,6 +198,7 @@ extern sint16 inv_option_objects;
 extern sint16 inv_option_current;
 extern INVENTORY_ITEM *inv_option_list[];
 
+extern TEXTSTRING *Inv_itemText[];
 extern TEXTSTRING *Inv_ringText;
 extern TEXTSTRING *Inv_upArrow1;
 extern TEXTSTRING *Inv_upArrow2;

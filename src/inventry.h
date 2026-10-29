@@ -50,6 +50,12 @@ extern sint16 Inventory_Chosen;
 extern sint32 Inventory_ExtraData[];
 
 sint32 Display_Inventory(sint32 inventory_mode);
+int Inv_AddItem(int itemNum);
+int Inv_RequestItem(int itemNum);
+void Inv_RemoveAllItems(void);
+int Inv_RemoveItem(int itemNum);
+int Inv_GetCount(void);
+int Inv_GetItemOption(int itemNum);
 void DrawGameInfo(void);
 
 #endif
