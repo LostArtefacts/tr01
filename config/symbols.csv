@@ -126,7 +126,7 @@ address,size,name,symbol
 0x0001ab1c,270,DrawEffect,DrawEffect_
 0x0001ac2c,69,Func1ac2c,
 0x0001ac74,1417,Func1ac74,
-0x0001b224,2294,Func1b224,
+0x0001b224,2294,DrawLara,DrawLara_
 0x0001bb1c,124,Func1bb1c,
 0x0001bb98,233,Func1bb98,
 0x0001bc98,4489,Func1bc98,

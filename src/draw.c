@@ -55,3 +55,38 @@ sint32 DrawPhaseGame(void)
     S_AnimateTextures(camera.number_frames);
     return camera.number_frames;
 }
+
+void DrawRooms(sint16 current_room)
+{
+    int i;
+    ROOM_INFO *r;
+
+    r = &room[current_room];
+    phd_left = r->left = 0;
+    phd_top = r->top = 0;
+    phd_right = r->right = (sint16)phd_winxmax;
+    phd_bottom = r->bottom = (sint16)phd_winymax;
+    r->bound_active = 1;
+
+    camera_underwater = r->flags & UNDERWATER;
+
+    number_draw_rooms = 0;
+    draw_rooms[number_draw_rooms++] = current_room;
+
+    GetRoomBounds(current_room);
+
+    S_ClearScreen();
+
+    if (objects[LARA].loaded)
+    {
+        if (room[lara_item->room_number].flags & UNDERWATER)
+            S_SetupBelowWater(camera_underwater);
+        else
+            S_SetupAboveWater(camera_underwater);
+
+        DrawLara(lara_item);
+    }
+
+    for (i = 0; i < number_draw_rooms; i++)
+        PrintRooms(draw_rooms[i]);
+}
