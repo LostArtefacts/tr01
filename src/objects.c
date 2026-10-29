@@ -171,3 +171,12 @@ sint32 GetOffset(ITEM_INFO *item, sint32 x, sint32 z)
         return z & (WALL_L - 1);
     return (WALL_L - z) & (WALL_L - 1);
 }
+
+void BridgeTilt1Floor(ITEM_INFO *item, sint32 x, sint32 y, sint32 z, sint16 *height)
+{
+    sint32 level;
+
+    level = item->pos.y_pos + (GetOffset(item, x, z) >> 2);
+    if (y <= level)
+        *height = (sint16)level;
+}

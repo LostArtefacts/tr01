@@ -519,7 +519,7 @@ address,size,name,symbol
 0x0002ff18,19,BridgeFlatFloor,BridgeFlatFloor_
 0x0002ff2c,21,BridgeFlatCeiling,BridgeFlatCeiling_
 0x0002ff44,71,GetOffset,GetOffset_
-0x0002ff8c,35,Func2ff8c,
+0x0002ff8c,35,BridgeTilt1Floor,BridgeTilt1Floor_
 0x0002ffb0,37,Func2ffb0,
 0x0002ffd8,34,Func2ffd8,
 0x0002fffc,36,Func2fffc,
