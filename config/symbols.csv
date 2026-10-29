@@ -306,8 +306,9 @@ address,size,name,symbol
 0x000256d8,5,lara_as_death,lara_as_death_
 0x000256e0,69,lara_as_fastfall,lara_as_fastfall_
 0x00025728,77,lara_as_hang,lara_as_hang_
-0x00025778,32,Func25778,
-0x00025798,1,Func25798,
+0x00025778,31,lara_as_reach,lara_as_reach_
+0x00025798,1,lara_as_splat,lara_as_splat_
+0x00025798,0,lara_as_land,lara_as_land_
 0x0002579c,258,Func2579c,
 0x000258a0,135,lara_as_back,lara_as_back_
 0x00025928,76,Func25928,
