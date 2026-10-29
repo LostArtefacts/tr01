@@ -1255,6 +1255,12 @@ void lara_col_backjump(ITEM_INFO *item, COLL_INFO *coll)
     lara_col_jumper(item, coll);
 }
 
+void lara_col_rightjump(ITEM_INFO *item, COLL_INFO *coll)
+{
+    lara.move_angle = item->pos.y_rot + 16384;
+    lara_col_jumper(item, coll);
+}
+
 void lara_default_col(ITEM_INFO *item, COLL_INFO *coll)
 {
     lara.move_angle = item->pos.y_rot;
