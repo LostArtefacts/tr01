@@ -172,6 +172,21 @@ typedef struct lara_info
     LOT_INFO LOT;
 } LARA_INFO;
 
+typedef struct weapon_info
+{
+    PHD_ANGLE lock_angles[4];
+    PHD_ANGLE left_angles[4];
+    PHD_ANGLE right_angles[4];
+    PHD_ANGLE aim_speed;
+    PHD_ANGLE shot_accuracy;
+    int gun_height;
+    int damage;
+    int target_dist;
+    sint16 recoil_frame;
+    sint16 flash_time;
+    sint16 sample_num;
+} WEAPON_INFO;
+
 enum lara_states
 {
     AS_WALK = 0,
@@ -291,6 +306,7 @@ extern sint16 *cine;
 extern sint16 num_cine_frames;
 extern sint16 cine_frame;
 extern PHD_3DPOS cinematic_pos;
+extern WEAPON_INFO weapons[];
 
 void AddActiveItem(sint16 item_num);
 void RemoveActiveItem(sint16 item_num);
@@ -313,6 +329,7 @@ void LaraControl(sint16 item_num);
 void LaraAboveWater(ITEM_INFO *item, COLL_INFO *coll);
 void AnimateLara(ITEM_INFO *item);
 void LaraGun(void);
+void InitialiseNewWeapon(void);
 void lara_as_back(ITEM_INFO *item, COLL_INFO *coll);
 void GetLaraCollisionInfo(ITEM_INFO *item, COLL_INFO *info);
 int LaraHitCeiling(ITEM_INFO *item, COLL_INFO *coll);
