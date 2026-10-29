@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">54.18% (428)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">45.82% (362)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">54.30% (429)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">45.70% (361)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="404.70" height="6" x="0" y="0" class="named"/>
-<rect width="342.30" height="6" x="404.70" y="0" class="todo"/>
+<rect width="405.65" height="6" x="0" y="0" class="named"/>
+<rect width="341.35" height="6" x="405.65" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -496,7 +496,7 @@
 <rect width="12" height="12" x="390" y="120" class="named"><title>0x000298d4 lara_col_glide (0 bytes)</title></rect>
 <rect width="12" height="12" x="405" y="120" class="named"><title>0x000298d4 lara_col_dive (0 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="120" class="named"><title>0x000299e4 LaraWaterCurrent (471 bytes)</title></rect>
-<rect width="12" height="12" x="435" y="120" class="todo"><title>0x00029bc0 LaraSurface (514 bytes)</title></rect>
+<rect width="12" height="12" x="435" y="120" class="named"><title>0x00029bc0 LaraSurface (514 bytes)</title></rect>
 <rect width="12" height="12" x="450" y="120" class="todo"><title>0x00029dc4 lara_as_surfswim (113 bytes)</title></rect>
 <rect width="12" height="12" x="465" y="120" class="todo"><title>0x00029e38 lara_as_surfback (98 bytes)</title></rect>
 <rect width="12" height="12" x="480" y="120" class="todo"><title>0x00029e9c lara_as_surfleft (98 bytes)</title></rect>
@@ -861,10 +861,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">49.15%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">50.85%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">49.41%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">50.59%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="367.18" height="6" x="0" y="0" class="named"/>
-<rect width="379.82" height="6" x="367.18" y="0" class="todo"/>
+<rect width="369.06" height="6" x="0" y="0" class="named"/>
+<rect width="377.94" height="6" x="369.06" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -966,7 +966,7 @@
 <rect width="17.63" height="19.74" x="391.51" y="22.91" class="todo"><title>0x00042448 Func42448 (525 bytes)</title></rect>
 <rect width="17.63" height="19.70" x="391.51" y="45.65" class="todo"><title>0x0002b910 Func2b910 (524 bytes)</title></rect>
 <rect width="17.63" height="19.48" x="391.51" y="68.35" class="named"><title>0x00027b44 TestLaraVault (519 bytes)</title></rect>
-<rect width="17.63" height="19.26" x="391.51" y="90.83" class="todo"><title>0x00029bc0 LaraSurface (514 bytes)</title></rect>
+<rect width="17.63" height="19.26" x="391.51" y="90.83" class="named"><title>0x00029bc0 LaraSurface (514 bytes)</title></rect>
 <rect width="17.63" height="19.09" x="391.51" y="113.10" class="named"><title>0x00014334 LookCamera (510 bytes)</title></rect>
 <rect width="17.63" height="19" x="391.51" y="135.19" class="named"><title>0x00028afc UseItem (508 bytes)</title></rect>
 <rect width="17.63" height="18.87" x="391.51" y="157.19" class="todo"><title>0x0003df90 phd_RotYXZpack (505 bytes)</title></rect>

@@ -1,0 +1,69 @@
+#include "game.h"
+
+#define SURF_MAXSPEED (15 * 4)
+#define SURF_RADIUS 100
+#define SURF_HITE 700
+
+#define MAX_HEAD_ROTATION_SURF (50 * ONE_DEGREE)
+#define MAX_HEAD_TILT_SURF (40 * ONE_DEGREE)
+#define MIN_HEAD_TILT_SURF (-40 * ONE_DEGREE)
+#define HEAD_TURN_SURF (3 * ONE_DEGREE)
+
+void LaraSurface(ITEM_INFO *item, COLL_INFO *coll)
+{
+    camera.target_elevation = -22 * ONE_DEGREE;
+
+    coll->bad_pos = NO_BAD_POS;
+    coll->bad_neg = -100;
+    coll->bad_ceiling = 100;
+    coll->old.x = item->pos.x_pos;
+    coll->old.y = item->pos.y_pos;
+    coll->old.z = item->pos.z_pos;
+    coll->radius = SURF_RADIUS;
+    coll->trigger = NULL;
+    coll->slopes_are_walls = 0;
+    coll->slopes_are_pits = 0;
+    coll->lava_is_pit = 0;
+    coll->enable_hit = 0;
+    coll->enable_baddie_push = 0;
+
+    (*lara_control_routines[item->current_anim_state])(item, coll);
+
+    if (item->pos.z_rot >= -(2 * LARA_LEAN_UNDO) && item->pos.z_rot <= 2 * LARA_LEAN_UNDO)
+        item->pos.z_rot = 0;
+    else if (item->pos.z_rot < 0)
+        item->pos.z_rot += 2 * LARA_LEAN_UNDO;
+    else
+        item->pos.z_rot -= 2 * LARA_LEAN_UNDO;
+
+    if (camera.type != LOOK_CAMERA)
+    {
+        if (lara.head_y_rot > -HEAD_TURN_SURF && lara.head_y_rot < HEAD_TURN_SURF)
+            lara.head_y_rot = 0;
+        else
+            lara.head_y_rot -= lara.head_y_rot / 8;
+        lara.torso_y_rot = lara.head_y_rot / 2;
+        if (lara.head_x_rot > -HEAD_TURN_SURF && lara.head_x_rot < HEAD_TURN_SURF)
+            lara.head_x_rot = 0;
+        else
+            lara.head_x_rot -= lara.head_x_rot / 8;
+        lara.torso_x_rot = 0;
+    }
+
+    if (lara.current_active && lara.water_status != LARA_CHEAT)
+        LaraWaterCurrent(coll);
+
+    AnimateLara(item);
+    item->pos.x_pos += ((phd_sin(lara.move_angle) * item->fallspeed) >> (W2V_SHIFT + 2));
+    item->pos.z_pos += ((phd_cos(lara.move_angle) * item->fallspeed) >> (W2V_SHIFT + 2));
+
+    LaraBaddieCollision(item, coll);
+
+    (*lara_collision_routines[item->current_anim_state])(item, coll);
+
+    UpdateLaraRoom(item, 100);
+
+    LaraGun();
+
+    TestTriggers(coll->trigger, 0);
+}
