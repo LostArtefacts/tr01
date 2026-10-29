@@ -160,7 +160,7 @@ address,size,name,symbol
 0x0001dac0,312,ControlBubble1,ControlBubble1_
 0x0001dbf8,185,Splash,Splash_
 0x0001dcb4,134,ControlSplash1,ControlSplash1_
-0x0001dd3c,281,Func1dd3c,
+0x0001dd3c,281,WaterFall,WaterFall_
 0x0001de58,11,Func1de58,
 0x0001de64,5,Func1de64,
 0x0001de6c,178,Func1de6c,
