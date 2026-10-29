@@ -1835,3 +1835,59 @@ int TestLaraVault(ITEM_INFO *item, COLL_INFO *coll)
     ShiftItem(item, coll);
     return 1;
 }
+
+#define HANG_ANGLE (35 * ONE_DEGREE)
+
+int LaraTestHangJump(ITEM_INFO *item, COLL_INFO *coll)
+{
+    int hdif;
+    PHD_ANGLE angle;
+    sint16 *bounds;
+
+    if (coll->coll_type != COLL_FRONT || !(input & IN_ACTION) || lara.gun_status != LG_ARMLESS || (ABS(coll->left_floor - coll->right_floor)) >= SLOPE_DIF)
+        return 0;
+
+    if (coll->front_ceiling > 0 || coll->mid_ceiling > -STEPUP_HEIGHT || coll->mid_floor < 200)
+        return 0;
+
+    bounds = GetBoundsAccurate(item);
+    hdif = coll->front_floor - bounds[2];
+    if ((hdif < 0 && hdif + item->fallspeed < 0) || (hdif > 0 && hdif + item->fallspeed > 0))
+        return 0;
+
+    angle = item->pos.y_rot;
+    if (angle >= 0 - HANG_ANGLE && angle <= 0 + HANG_ANGLE)
+        angle = 0;
+    else if (angle >= 16384 - HANG_ANGLE && angle <= 16384 + HANG_ANGLE)
+        angle = 16384;
+    else if (angle >= 32767 - HANG_ANGLE || angle <= -32767 + HANG_ANGLE)
+        angle = -32768;
+    else if (angle >= -16384 - HANG_ANGLE && angle <= -16384 + HANG_ANGLE)
+        angle = -16384;
+
+    if (angle & 0x3fff)
+        return 0;
+
+    if (TestHangSwingIn(item, angle))
+    {
+        item->anim_number = GRABLEDGEIN_A;
+        item->frame_number = GRABLEDGEIN_F;
+    }
+    else
+    {
+        item->anim_number = GRABLEDGE_A;
+        item->frame_number = GRABLEDGE_F;
+    }
+    item->current_anim_state = AS_HANG;
+    item->goal_anim_state = AS_HANG;
+    bounds = GetBoundsAccurate(item);
+    item->pos.y_pos += hdif;
+    item->pos.x_pos += coll->shift.x;
+    item->pos.z_pos += coll->shift.z;
+    item->pos.y_rot = angle;
+    item->gravity_status = 0;
+    item->speed = 0;
+    item->fallspeed = 0;
+    lara.gun_status = LG_HANDSBUSY;
+    return 1;
+}

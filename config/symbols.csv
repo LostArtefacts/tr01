@@ -398,7 +398,7 @@ address,size,name,symbol
 0x00027a74,208,LaraSlideEdgeJump,LaraSlideEdgeJump_
 0x00027b44,519,TestLaraVault,TestLaraVault_
 0x00027d4c,405,LaraTestHangJump,LaraTestHangJump_
-0x00027ee4,187,Func27ee4,
+0x00027ee4,187,TestHangSwingIn,TestHangSwingIn_
 0x00027fa0,392,LaraTestHangJumpUp,LaraTestHangJumpUp_
 0x00028128,356,TestLaraSlide,TestLaraSlide_
 0x0002828c,115,LaraFloorFront,LaraFloorFront_
