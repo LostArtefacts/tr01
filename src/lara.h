@@ -5,6 +5,15 @@
 #include "box.h"
 
 #define ONE_DEGREE 182
+#define NO_BAD_POS (-NO_HEIGHT)
+#define NO_BAD_NEG NO_HEIGHT
+
+#define LARA_RAD 100
+#define LARA_HITE 762
+#define UW_RADIUS 300
+#define UW_HITE 400
+
+#define STEPUP_HEIGHT ((STEP_L * 3) / 2)
 
 typedef struct lara_arm
 {
