@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">52.22% (412)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">47.78% (377)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">52.34% (413)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">47.66% (376)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="390.07" height="6" x="0" y="0" class="named"/>
-<rect width="356.93" height="6" x="390.07" y="0" class="todo"/>
+<rect width="391.02" height="6" x="0" y="0" class="named"/>
+<rect width="355.98" height="6" x="391.02" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -480,7 +480,7 @@
 <rect width="12" height="12" x="150" y="120" class="named"><title>0x00028d38 InitialiseLara (355 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="120" class="named"><title>0x00028e9c InitialiseLaraInventory (468 bytes)</title></rect>
 <rect width="12" height="12" x="180" y="120" class="named"><title>0x00029070 LaraInitialiseMeshes (280 bytes)</title></rect>
-<rect width="12" height="12" x="195" y="120" class="todo"><title>0x00029188 Func29188 (41 bytes)</title></rect>
+<rect width="12" height="12" x="195" y="120" class="named"><title>0x00029188 InitialiseEvilLara (41 bytes)</title></rect>
 <rect width="12" height="12" x="210" y="120" class="todo"><title>0x000291b4 Func291b4 (542 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="120" class="todo"><title>0x000293d4 Func293d4 (91 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="120" class="todo"><title>0x00029430 LaraUnderWater (454 bytes)</title></rect>
@@ -860,10 +860,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">47.88%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">52.12%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">47.90%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">52.10%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="357.68" height="6" x="0" y="0" class="named"/>
-<rect width="389.32" height="6" x="357.68" y="0" class="todo"/>
+<rect width="357.83" height="6" x="0" y="0" class="named"/>
+<rect width="389.17" height="6" x="357.83" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1493,7 +1493,7 @@
 <rect width="2.90" height="3.21" x="693.56" y="205.87" class="named"><title>0x0001063c S_CalculateStaticLight (41 bytes)</title></rect>
 <rect width="2.90" height="3.21" x="693.56" y="212.08" class="named"><title>0x0001e1b8 ExplosionFX (41 bytes)</title></rect>
 <rect width="2.90" height="3.21" x="693.56" y="218.30" class="named"><title>0x00025cac lara_as_usepuzzle (41 bytes)</title></rect>
-<rect width="2.90" height="3.21" x="693.56" y="224.51" class="todo"><title>0x00029188 Func29188 (41 bytes)</title></rect>
+<rect width="2.90" height="3.21" x="693.56" y="224.51" class="named"><title>0x00029188 InitialiseEvilLara (41 bytes)</title></rect>
 <rect width="2.90" height="3.21" x="693.56" y="230.72" class="todo"><title>0x00046762 ScreenClear (41 bytes)</title></rect>
 <rect width="2.90" height="3.06" x="693.56" y="236.94" class="named"><title>0x00023d3c Inv_RemoveAllItems (40 bytes)</title></rect>
 <rect width="2.78" height="3.19" x="699.45" y="186.77" class="named"><title>0x00025ad8 lara_as_fallback (40 bytes)</title></rect>

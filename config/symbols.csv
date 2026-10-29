@@ -412,7 +412,7 @@ address,size,name,symbol
 0x00028d38,355,InitialiseLara,InitialiseLara_
 0x00028e9c,468,InitialiseLaraInventory,InitialiseLaraInventory_
 0x00029070,280,LaraInitialiseMeshes,LaraInitialiseMeshes_
-0x00029188,41,Func29188,
+0x00029188,41,InitialiseEvilLara,InitialiseEvilLara_
 0x000291b4,542,Func291b4,
 0x000293d4,91,Func293d4,
 0x00029430,454,LaraUnderWater,LaraUnderWater_

@@ -509,6 +509,12 @@ void LaraInitialiseMeshes(int level_number)
         lara.mesh_ptrs[TORSO] = meshes[(&objects[SHOTGUN])->mesh_index + TORSO];
 }
 
+void InitialiseEvilLara(sint16 item_num)
+{
+    objects[EVIL_LARA].frame_base = objects[LARA].frame_base;
+    items[item_num].data = NULL;
+}
+
 void lara_as_walk(ITEM_INFO *item, COLL_INFO *coll);
 void lara_as_run(ITEM_INFO *item, COLL_INFO *coll);
 void lara_as_stop(ITEM_INFO *item, COLL_INFO *coll);
