@@ -395,3 +395,14 @@ void ThorsHandleControl(sint16 item_number)
     headitem->frame_number = anims[headitem->anim_number].frame_base + frm;
     headitem->current_anim_state = item->current_anim_state;
 }
+
+void ThorsHandleCollision(sint16 item_num, ITEM_INFO *laraitem, COLL_INFO *coll)
+{
+    ITEM_INFO *item;
+
+    item = &items[item_num];
+    if (!TestBoundsCollide(item, laraitem, coll->radius))
+        return;
+    if (coll->enable_baddie_push)
+        ItemPushLara(item, laraitem, coll, 0, 1);
+}

@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">59.54% (471)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">40.46% (320)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">59.67% (472)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">40.33% (319)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="444.80" height="6" x="0" y="0" class="named"/>
-<rect width="302.20" height="6" x="444.80" y="0" class="todo"/>
+<rect width="445.74" height="6" x="0" y="0" class="named"/>
+<rect width="301.26" height="6" x="445.74" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -539,7 +539,7 @@
 <rect width="12" height="12" x="285" y="135" class="named"><title>0x0002c894 LightningCollision (88 bytes)</title></rect>
 <rect width="12" height="12" x="300" y="135" class="named"><title>0x0002c8ec InitialiseThorsHandle (125 bytes)</title></rect>
 <rect width="12" height="12" x="315" y="135" class="named"><title>0x0002c97c ThorsHandleControl (666 bytes)</title></rect>
-<rect width="12" height="12" x="330" y="135" class="todo"><title>0x0002cc18 ThorsHandleCollision (69 bytes)</title></rect>
+<rect width="12" height="12" x="330" y="135" class="named"><title>0x0002cc18 ThorsHandleCollision (69 bytes)</title></rect>
 <rect width="12" height="12" x="345" y="135" class="todo"><title>0x0002cc60 ThorsHeadCollision (76 bytes)</title></rect>
 <rect width="12" height="12" x="360" y="135" class="todo"><title>0x0002ccb0 Func2ccb0 (75 bytes)</title></rect>
 <rect width="12" height="12" x="375" y="135" class="todo"><title>0x0002ccfc DisableBaddieAI (49 bytes)</title></rect>
@@ -862,10 +862,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">54.99%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">45.01%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">55.02%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">44.98%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="410.76" height="6" x="0" y="0" class="named"/>
-<rect width="336.24" height="6" x="410.76" y="0" class="todo"/>
+<rect width="411.01" height="6" x="0" y="0" class="named"/>
+<rect width="335.99" height="6" x="411.01" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.78" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1387,7 +1387,7 @@
 <rect width="5.03" height="4.76" x="659.37" y="152.50" class="todo"><title>0x0003efe0 phd_atan (70 bytes)</title></rect>
 <rect width="5.03" height="4.65" x="659.37" y="160.26" class="named"><title>0x0001ac2c DrawSpriteItem (69 bytes)</title></rect>
 <rect width="5.03" height="4.65" x="659.37" y="167.92" class="named"><title>0x000256e0 lara_as_fastfall (69 bytes)</title></rect>
-<rect width="5.03" height="4.65" x="659.37" y="175.57" class="todo"><title>0x0002cc18 ThorsHandleCollision (69 bytes)</title></rect>
+<rect width="5.03" height="4.65" x="659.37" y="175.57" class="named"><title>0x0002cc18 ThorsHandleCollision (69 bytes)</title></rect>
 <rect width="5.03" height="4.65" x="659.37" y="183.22" class="todo"><title>0x00038b10 Func38b10 (69 bytes)</title></rect>
 <rect width="5.03" height="4.65" x="659.37" y="190.87" class="todo"><title>0x00039d60 Func39d60 (69 bytes)</title></rect>
 <rect width="5.03" height="4.65" x="659.37" y="198.53" class="todo"><title>0x0003a970 Func3a970 (69 bytes)</title></rect>
