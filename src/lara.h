@@ -63,6 +63,14 @@ enum lara_water_states
     LARA_CHEAT
 };
 
+enum headings
+{
+    NORTH = 0,
+    EAST,
+    SOUTH,
+    WEST
+};
+
 enum lara_meshes
 {
     HIPS,

@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">7.13% (55)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">92.87% (716)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">7.26% (56)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">92.74% (715)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="53.29" height="6" x="0" y="0" class="named"/>
-<rect width="693.71" height="6" x="53.29" y="0" class="todo"/>
+<rect width="54.26" height="6" x="0" y="0" class="named"/>
+<rect width="692.74" height="6" x="54.26" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -127,7 +127,7 @@
 <rect width="12" height="12" x="105" y="15" class="named"><title>0x00014fe4 InGameCinematicCamera (409 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="15" class="named"><title>0x000151c0 GetCollisionInfo (1702 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="15" class="named"><title>0x00015868 FindGridShift (45 bytes)</title></rect>
-<rect width="12" height="12" x="150" y="15" class="todo"><title>0x000158a8 CollideStaticObjects (1445 bytes)</title></rect>
+<rect width="12" height="12" x="150" y="15" class="named"><title>0x000158a8 CollideStaticObjects (1445 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="15" class="todo"><title>0x00015e50 GetNearByRooms (215 bytes)</title></rect>
 <rect width="12" height="12" x="180" y="15" class="todo"><title>0x00015f28 GetNewRoom (91 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="15" class="todo"><title>0x00015f84 ShiftItem (51 bytes)</title></rect>
@@ -842,10 +842,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">9.53%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">90.47%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">10.24%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">89.76%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="71.16" height="6" x="0" y="0" class="named"/>
-<rect width="675.84" height="6" x="71.16" y="0" class="todo"/>
+<rect width="76.52" height="6" x="0" y="0" class="named"/>
+<rect width="670.48" height="6" x="76.52" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="54.65" height="67.43" x="0" y="0" class="todo"><title>0x0001bc98 Func1bc98 (4489 bytes)</title></rect>
@@ -863,7 +863,7 @@
 <rect width="33.45" height="39.23" x="105.39" y="88.90" class="named"><title>0x000151c0 GetCollisionInfo (1702 bytes)</title></rect>
 <rect width="33.45" height="35.90" x="105.39" y="131.13" class="todo"><title>0x00017a40 Func17a40 (1568 bytes)</title></rect>
 <rect width="33.45" height="34.12" x="105.39" y="170.03" class="todo"><title>0x00031414 Func31414 (1496 bytes)</title></rect>
-<rect width="33.45" height="32.85" x="105.39" y="207.15" class="todo"><title>0x000158a8 CollideStaticObjects (1445 bytes)</title></rect>
+<rect width="33.45" height="32.85" x="105.39" y="207.15" class="named"><title>0x000158a8 CollideStaticObjects (1445 bytes)</title></rect>
 <rect width="32.78" height="33.30" x="141.84" y="0" class="todo"><title>0x00042910 ins_poly_trans8 (1436 bytes)</title></rect>
 <rect width="32.78" height="32.82" x="141.84" y="36.30" class="todo"><title>0x0001ac74 Func1ac74 (1417 bytes)</title></rect>
 <rect width="32.78" height="32.69" x="141.84" y="72.12" class="todo"><title>0x000304f8 Func304f8 (1412 bytes)</title></rect>

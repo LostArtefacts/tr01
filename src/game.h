@@ -58,6 +58,7 @@ extern sint16 next_fx_active;
 extern ROOM_INFO *room;
 extern OBJECT_INFO objects[];
 extern sint16 **meshes;
+extern STATIC_INFO static_objects[];
 
 sint32 GetRandomControl(void);
 

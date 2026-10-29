@@ -293,6 +293,24 @@ typedef struct
     uint16 save_anim:1;
 } OBJECT_INFO;
 
+typedef struct
+{
+    sint16 mesh_number;
+    sint16 flags;
+    sint16 x_minp;
+    sint16 x_maxp;
+    sint16 y_minp;
+    sint16 y_maxp;
+    sint16 z_minp;
+    sint16 z_maxp;
+    sint16 x_minc;
+    sint16 x_maxc;
+    sint16 y_minc;
+    sint16 y_maxc;
+    sint16 z_minc;
+    sint16 z_maxc;
+} STATIC_INFO;
+
 #define NO_CAMERA -1
 
 #define FOLLOW_CENTRE 1

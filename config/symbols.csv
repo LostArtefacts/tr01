@@ -1771,6 +1771,7 @@ address,size,name,symbol
 0x000cb3cc,4,trigger_index,_trigger_index
 0x000cb3d0,4,items,_items
 0x000cb3d4,4,flip_status,_flip_status
+0x000cba10,1400,static_objects,_static_objects
 0x000cbf88,200,draw_rooms,_draw_rooms
 0x000cc074,4,meshes,_meshes
 0x000cc088,4,room,_room
