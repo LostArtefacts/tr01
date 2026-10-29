@@ -125,6 +125,7 @@ void S_DrawScreenSprite(sint32 sx, sint32 sy, sint32 z, sint32 scaleH, sint32 sc
 void S_DrawScreenLine(sint32 sx, sint32 sy, sint32 z, sint32 w, sint32 h, sint32 col, uint16 *grdptr, uint16 flags);
 void S_DrawScreenBox(sint32 sx, sint32 sy, sint32 z, sint32 w, sint32 h, sint32 col, uint16 *grdptr, uint16 flags);
 void S_DrawScreenFBox(sint32 sx, sint32 sy, sint32 z, sint32 w, sint32 h, sint32 col, uint16 *grdptr, uint16 flags);
+void S_SetBackgroundGamma(sint16 gamma);
 void S_SetGamma(sint16 gamma);
 int S_PlayFMV(int sequence, int mode);
 void S_DrawPickup(sint32 x, sint32 y, sint32 scale, sint16 sprnum, sint16 shade, uint16 flags);

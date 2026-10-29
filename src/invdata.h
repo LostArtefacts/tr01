@@ -19,6 +19,9 @@
 #define PASSPORT_2FRONT IN_LEFT
 #define PASSPORT_2BACK IN_RIGHT
 
+#define DEC_HBAR IN_LEFT
+#define INC_HBAR IN_RIGHT
+
 typedef enum pass_pages
 {
     PSPINE = 1,
@@ -161,6 +164,10 @@ typedef struct ring_info
     IMOTION_INFO *imo;
 } RING_INFO;
 
+#define GAMMA_MODIFIER 8
+#define MIN_GAMMA_LEVEL -127
+#define MAX_GAMMA_LEVEL 127
+
 #define MAX_REQLINES 16
 
 typedef struct request_info
@@ -186,6 +193,9 @@ typedef struct request_info
 } REQUEST_INFO;
 
 extern REQUEST_INFO Load_Game_Requester;
+
+extern INVENTORY_SPRITE is_gamma_level[];
+extern INVENTORY_SPRITE *is_gamma_list[];
 
 extern sint32 inv_nframes;
 
@@ -242,6 +252,9 @@ extern TEXTSTRING *Inv_downArrow2;
 sint32 GetDebouncedInput(sint32 input);
 extern sint32 inputDB;
 extern sint32 oldInputDB;
+
+extern sint16 Option_Gamma_Level;
+extern sint32 idelay, idcount;
 
 void Inv_InsertItem(INVENTORY_ITEM *inv_item);
 void RingIsOpen(RING_INFO *ring);

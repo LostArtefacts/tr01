@@ -355,6 +355,45 @@ void do_passport_option(INVENTORY_ITEM *inv_item)
     }
 }
 
+void do_gamma_option(INVENTORY_ITEM *inv_item)
+{
+    int gamma;
+
+    if (input & DEC_HBAR)
+    {
+        idelay = 1;
+        idcount = 10;
+        Option_Gamma_Level -= GAMMA_MODIFIER;
+        if (Option_Gamma_Level < MIN_GAMMA_LEVEL)
+            Option_Gamma_Level = MIN_GAMMA_LEVEL;
+    }
+    if (input & INC_HBAR)
+    {
+        idelay = 1;
+        idcount = 10;
+        Option_Gamma_Level += GAMMA_MODIFIER;
+        if (Option_Gamma_Level > MAX_GAMMA_LEVEL)
+            Option_Gamma_Level = MAX_GAMMA_LEVEL;
+    }
+    inv_item->sprlist = is_gamma_list;
+    is_gamma_level[6].param1 = Option_Gamma_Level / 2 + 63;
+    S_SetGamma(Option_Gamma_Level);
+
+    if ((inputDB & SELECT_ITEM))
+    {
+        inv_item->goal_frame = 0;
+        inv_item->anim_direction = -1;
+    }
+    if ((inputDB & DESELECT_ITEM))
+    {
+        gamma = Option_Gamma_Level - 64;
+        if (gamma < -255)
+            gamma = -255;
+        if (Inventory_Mode != INV_TITLE_MODE)
+            S_SetBackgroundGamma(gamma);
+    }
+}
+
 void do_compass_option(INVENTORY_ITEM *inv_item)
 {
     if (inputDB & (DESELECT_ITEM | SELECT_ITEM))

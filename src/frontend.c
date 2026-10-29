@@ -167,6 +167,10 @@ void S_DrawScreenFBox(sint32 sx, sint32 sy, sint32 z, sint32 w, sint32 h, sint32
     surfacenum++;
 }
 
+void S_SetBackgroundGamma(sint16 gamma)
+{
+}
+
 void S_SetGamma(sint16 gamma)
 {
 }

@@ -201,6 +201,7 @@ address,size,name,symbol
 0x0001f5a4,3,disk_error_handler,disk_error_handler_
 0x0001f5b0,140,S_COLOUR,S_COLOUR_
 0x0001f63c,1,S_SetGamma,S_SetGamma_
+0x0001f63c,0,S_SetBackgroundGamma,S_SetBackgroundGamma_
 0x0001f640,142,S_DrawSpriteSize,S_DrawSpriteSize_
 0x0001f6d0,241,S_DrawScreenSprite2d,S_DrawScreenSprite2d_
 0x0001f7c4,255,S_DrawScreenSprite,S_DrawScreenSprite_
@@ -1837,6 +1838,8 @@ address,size,name,symbol
 0x000c2148,4,record_demo,_record_demo
 0x000c214c,52,layout,_layout
 0x000c25c0,4,inv_nframes,_inv_nframes
+0x000c271c,220,is_gamma_level,_is_gamma_level
+0x000c27f8,8,is_gamma_list,_is_gamma_list
 0x000c2c58,62,icompass_option,_icompass_option
 0x000c2c98,62,igun_option,_igun_option
 0x000c2cd8,62,ishotgun_option,_ishotgun_option
