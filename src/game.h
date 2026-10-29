@@ -86,7 +86,6 @@ extern CAMERA_INFO camera;
 extern sint16 *cine;
 extern sint16 num_cine_frames;
 extern sint16 cine_frame;
-extern sint16 cinematic_level;
 extern PHD_3DPOS cinematic_pos;
 
 sint32 StartCinematic(int level_number);
