@@ -52,6 +52,7 @@ extern sint16 next_item_active;
 extern FX_INFO *effects;
 extern sint16 next_fx_active;
 extern sint16 *floor_data;
+extern TEXTSTRING *ammotext;
 
 sint32 DrawPhaseCinematic(void);
 sint32 DrawPhaseGame(void);

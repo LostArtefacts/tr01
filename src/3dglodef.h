@@ -129,6 +129,7 @@ void phd_RotZ(PHD_ANGLE rz);
 void phd_RotYXZpack(sint32 rots);
 void phd_TranslateRel(sint32 x, sint32 y, sint32 z);
 void phd_TranslateAbs(sint32 x, sint32 y, sint32 z);
+void phd_GenerateW2V(PHD_3DPOS *viewpos);
 void phd_RotateLight(PHD_ANGLE pitch, PHD_ANGLE yaw);
 sint16 *calc_object_vertices(sint16 *objptr);
 int ins_poly_trans8(PHD_VBUF *v, sint16 shade);
