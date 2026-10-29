@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">56.33% (445)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">43.67% (345)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">56.46% (446)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">43.54% (344)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="420.78" height="6" x="0" y="0" class="named"/>
-<rect width="326.22" height="6" x="420.78" y="0" class="todo"/>
+<rect width="421.72" height="6" x="0" y="0" class="named"/>
+<rect width="325.28" height="6" x="421.72" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -513,7 +513,7 @@
 <rect width="12" height="12" x="645" y="120" class="named"><title>0x0002a7e8 InitialiseNewWeapon (216 bytes)</title></rect>
 <rect width="12" height="12" x="660" y="120" class="named"><title>0x0002a8c0 LaraTargetInfo (405 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="120" class="named"><title>0x0002aa58 LaraGetNewTarget (449 bytes)</title></rect>
-<rect width="12" height="12" x="690" y="120" class="todo"><title>0x0002ac1c find_target_point (203 bytes)</title></rect>
+<rect width="12" height="12" x="690" y="120" class="named"><title>0x0002ac1c find_target_point (203 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="120" class="todo"><title>0x0002ace8 AimWeapon (183 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="120" class="todo"><title>0x0002ada0 FireWeapon (911 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="120" class="todo"><title>0x0002b130 HitTarget (206 bytes)</title></rect>
@@ -861,10 +861,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">51.18%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">48.82%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">51.28%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">48.72%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="382.31" height="6" x="0" y="0" class="named"/>
-<rect width="364.69" height="6" x="382.31" y="0" class="todo"/>
+<rect width="383.05" height="6" x="0" y="0" class="named"/>
+<rect width="363.95" height="6" x="383.05" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1132,7 +1132,7 @@
 <rect width="10.99" height="10.22" x="653.96" y="46.79" class="todo"><title>0x00038a28 Func38a28 (207 bytes)</title></rect>
 <rect width="10.92" height="10.22" x="667.95" y="46.79" class="todo"><title>0x0002b130 HitTarget (206 bytes)</title></rect>
 <rect width="10.79" height="10.22" x="681.87" y="46.79" class="named"><title>0x000263b8 lara_col_stop (204 bytes)</title></rect>
-<rect width="10.72" height="10.22" x="695.66" y="46.79" class="todo"><title>0x0002ac1c find_target_point (203 bytes)</title></rect>
+<rect width="10.72" height="10.22" x="695.66" y="46.79" class="named"><title>0x0002ac1c find_target_point (203 bytes)</title></rect>
 <rect width="10.59" height="10.22" x="709.38" y="46.79" class="todo"><title>0x0002b7d4 FireShotgun (201 bytes)</title></rect>
 <rect width="10.59" height="10.22" x="722.96" y="46.79" class="todo"><title>0x000397cc Func397cc (201 bytes)</title></rect>
 <rect width="10.45" height="10.22" x="736.55" y="46.79" class="named"><title>0x00020c0c DrawPickups (199 bytes)</title></rect>
