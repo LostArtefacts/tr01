@@ -619,3 +619,18 @@ void CreatureCollision(sint16 item_num, ITEM_INFO *laraitem, COLL_INFO *coll)
             ItemPushLara(item, laraitem, coll, coll->enable_hit, 0);
     }
 }
+
+void ObjectCollision(sint16 item_num, ITEM_INFO *laraitem, COLL_INFO *coll)
+{
+    ITEM_INFO *item;
+
+    item = &items[item_num];
+    if (!TestBoundsCollide(item, laraitem, coll->radius))
+        return;
+
+    if (!TestCollision(item, laraitem))
+        return;
+
+    if (coll->enable_baddie_push)
+        ItemPushLara(item, laraitem, coll, 0, 1);
+}
