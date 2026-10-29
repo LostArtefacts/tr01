@@ -1826,6 +1826,7 @@ address,size,name,symbol
 0x000cee94,10596,savegame,_savegame
 0x000d4744,48000,vbuf,_vbuf
 0x000e02c4,40960,phdtextinfo,_phdtextinfo
+0x0012ca84,8192,depthq_table,_depthq_table
 0x0012f3b4,4,sort3dptr,_sort3dptr
 0x0012f3c0,4,phd_bottom,_phd_bottom
 0x0012f3c4,4,phd_left,_phd_left

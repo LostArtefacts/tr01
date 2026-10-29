@@ -1,3 +1,4 @@
+#include <string.h>
 #include <stdlib.h>
 #include "game.h"
 
@@ -135,4 +136,32 @@ void S_CopyScreenToBuffer(void)
     size = (int)game_setup.sc_width * game_setup.sc_height;
     for (i = size; i > 0; i--)
         *(dest++) = *(src++);
+}
+
+void S_CopyBufferToScreen(void)
+{
+    int depth;
+    char *src, *dest;
+    int size;
+
+    if (fade_value != fade_limit)
+        fade_value += fade_adder;
+    depth = fade_value >> 16;
+    dest = (char *)game_setup.scrn_ptr;
+    size = (int)game_setup.sc_height * game_setup.sc_width;
+    if ((src = bckscrn) != NULL)
+    {
+        if (depth != 16)
+        {
+            for (; size > 0; size--)
+                *(dest++) = depthq_table[depth][*(src++)];
+        }
+        else
+            memcpy(dest, src, size);
+    }
+    else
+    {
+        for (; size > 0; size--)
+            *(dest++) = 0;
+    }
 }

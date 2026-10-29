@@ -84,6 +84,7 @@ extern sint32 *sort3dptr;
 extern sint32 wibble_offset;
 extern sint32 water_effect;
 extern sint32 shade_effect;
+extern uint8 depthq_table[32][256];
 
 extern VERTEX_INFO v_buffer[];
 extern PHD_VBUF vbuf[];
