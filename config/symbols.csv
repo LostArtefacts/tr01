@@ -372,7 +372,7 @@ address,size,name,symbol
 0x00026eb8,22,lara_col_slideback,lara_col_slideback_
 0x00026ed0,49,lara_col_pushblock,lara_col_pushblock_
 0x00026f04,49,lara_col_pullblock,lara_col_pullblock_
-0x00026f38,49,Func26f38,
+0x00026f38,49,lara_col_ppready,lara_col_ppready_
 0x00026f6c,49,Func26f6c,
 0x00026fa0,49,Func26fa0,
 0x00026fd4,49,Func26fd4,
