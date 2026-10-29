@@ -96,3 +96,58 @@ int EnableBaddieAI(sint16 item_number, int Always)
     }
     return 0;
 }
+
+void InitialiseSlot(sint16 item_number, int slot)
+{
+    CREATURE_INFO *creature;
+    ITEM_INFO *item;
+
+    creature = &baddie_slots[slot];
+    item = &items[item_number];
+    item->data = (void *)creature;
+    creature->item_num = item_number;
+    creature->mood = BORED_MOOD;
+    creature->head_rotation = creature->neck_rotation = 0;
+    creature->maximum_turn = ONE_DEGREE;
+    creature->flags = 0;
+
+    creature->LOT.step = STEP_L;
+    creature->LOT.drop = -STEP_L;
+    creature->LOT.block_mask = BLOCKED;
+    creature->LOT.fly = NO_FLYING;
+
+    switch (item->object_number)
+    {
+    case BAT:
+    case ALLIGATOR:
+    case FISH:
+        creature->LOT.step = WALL_L * 20;
+        creature->LOT.drop = -WALL_L * 20;
+        creature->LOT.fly = STEP_L / 16;
+        break;
+
+    case DINOSAUR:
+    case WARRIOR1:
+    case CENTAUR:
+        creature->LOT.block_mask = BLOCKABLE;
+        break;
+
+    case WOLF:
+    case LION:
+    case LIONESS:
+    case PUMA:
+        creature->LOT.drop = -WALL_L;
+        break;
+
+    case APE:
+        creature->LOT.step = STEP_L * 2;
+        creature->LOT.drop = -WALL_L;
+        break;
+    }
+
+    ClearLOT(&creature->LOT);
+
+    CreateZone(item);
+
+    slots_used++;
+}
