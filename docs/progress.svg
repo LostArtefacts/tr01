@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">71.73% (576)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">28.27% (227)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">71.86% (577)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">28.14% (226)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="535.83" height="6" x="0" y="0" class="named"/>
-<rect width="211.17" height="6" x="535.83" y="0" class="todo"/>
+<rect width="536.76" height="6" x="0" y="0" class="named"/>
+<rect width="210.24" height="6" x="536.76" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -643,7 +643,7 @@
 <rect width="12" height="12" x="345" y="165" class="named"><title>0x00034c0c PickupTrigger (64 bytes)</title></rect>
 <rect width="12" height="12" x="360" y="165" class="named"><title>0x00034c4c PickUpSaveGameCollision (188 bytes)</title></rect>
 <rect width="12" height="12" x="375" y="165" class="named"><title>0x00034d08 InitialiseSavegameItem (26 bytes)</title></rect>
-<rect width="12" height="12" x="390" y="165" class="todo"><title>0x00034d24 Func34d24 (28 bytes)</title></rect>
+<rect width="12" height="12" x="390" y="165" class="named"><title>0x00034d24 ControlSavegameItem (28 bytes)</title></rect>
 <rect width="12" height="12" x="405" y="165" class="todo"><title>0x00035020 Func35020 (696 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="165" class="todo"><title>0x000352e0 Func352e0 (6 bytes)</title></rect>
 <rect width="12" height="12" x="435" y="165" class="todo"><title>0x000352e8 Func352e8 (78 bytes)</title></rect>
@@ -874,10 +874,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">68.92%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">31.08%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">68.93%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">31.07%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="514.80" height="6" x="0" y="0" class="named"/>
-<rect width="232.20" height="6" x="514.80" y="0" class="todo"/>
+<rect width="514.90" height="6" x="0" y="0" class="named"/>
+<rect width="232.10" height="6" x="514.90" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="51.21" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1576,7 +1576,7 @@
 <rect width="1.86" height="2.20" x="712.39" y="247.59" class="named"><title>0x00014efc ControlCinematicPlayer4 (28 bytes)</title></rect>
 <rect width="1.86" height="2.20" x="712.39" y="252.80" class="named"><title>0x00028cf8 ControlLaraExtra (28 bytes)</title></rect>
 <rect width="1.78" height="2.29" x="717.25" y="220.65" class="named"><title>0x00030168 ScionControl (28 bytes)</title></rect>
-<rect width="1.78" height="2.29" x="722.02" y="220.65" class="todo"><title>0x00034d24 Func34d24 (28 bytes)</title></rect>
+<rect width="1.78" height="2.29" x="722.02" y="220.65" class="named"><title>0x00034d24 ControlSavegameItem (28 bytes)</title></rect>
 <rect width="1.78" height="2.29" x="726.80" y="220.65" class="todo"><title>0x000469e1 Func469e1 (28 bytes)</title></rect>
 <rect width="1.61" height="2.29" x="731.58" y="220.65" class="named"><title>0x00024564 Inv_RingMotionSetup (27 bytes)</title></rect>
 <rect width="1.61" height="2.29" x="736.18" y="220.65" class="named"><title>0x0003131c do_compass_option (27 bytes)</title></rect>

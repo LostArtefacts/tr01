@@ -673,3 +673,8 @@ void InitialiseSavegameItem(sint16 item_num)
 {
     items[item_num].status = INVISIBLE;
 }
+
+void ControlSavegameItem(sint16 item_num)
+{
+    AnimateItem(&items[item_num]);
+}
