@@ -110,6 +110,8 @@ sint32 phd_sqrt(sint32 n);
 sint32 phd_sin(sint32 angle);
 sint32 phd_atan(sint32 x, sint32 y);
 void phd_SortPolyList(void);
+void phd_PutPolygons(sint16 *objptr, int clip);
+void S_InsertRoom(sint16 *objptr);
 void phd_InitWindow(int x, int y, int width, int height, int nearz, int farz, int view_angle, int scrwidth, int scrheight, uint8 *scrptr);
 void phd_PrintPolyList(void);
 

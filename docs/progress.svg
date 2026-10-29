@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">15.76% (122)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">84.24% (652)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">15.89% (123)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">84.11% (651)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="117.74" height="6" x="0" y="0" class="named"/>
-<rect width="629.26" height="6" x="117.74" y="0" class="todo"/>
+<rect width="118.71" height="6" x="0" y="0" class="named"/>
+<rect width="628.29" height="6" x="118.71" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -190,7 +190,7 @@
 <rect width="12" height="12" x="300" y="30" class="named"><title>0x0001a3e8 DrawRooms (278 bytes)</title></rect>
 <rect width="12" height="12" x="315" y="30" class="named"><title>0x0001a500 GetRoomBounds (118 bytes)</title></rect>
 <rect width="12" height="12" x="330" y="30" class="named"><title>0x0001a578 SetRoomBounds (990 bytes)</title></rect>
-<rect width="12" height="12" x="345" y="30" class="todo"><title>0x0001a958 PrintRooms (452 bytes)</title></rect>
+<rect width="12" height="12" x="345" y="30" class="named"><title>0x0001a958 PrintRooms (452 bytes)</title></rect>
 <rect width="12" height="12" x="360" y="30" class="todo"><title>0x0001ab1c DrawEffect (270 bytes)</title></rect>
 <rect width="12" height="12" x="375" y="30" class="todo"><title>0x0001ac2c Func1ac2c (69 bytes)</title></rect>
 <rect width="12" height="12" x="390" y="30" class="todo"><title>0x0001ac74 Func1ac74 (1417 bytes)</title></rect>
@@ -742,8 +742,8 @@
 <rect width="12" height="12" x="330" y="195" class="todo"><title>0x0003e18c Func3e18c (180 bytes)</title></rect>
 <rect width="12" height="12" x="345" y="195" class="todo"><title>0x0003e240 phd_TranslateAbs (102 bytes)</title></rect>
 <rect width="12" height="12" x="360" y="195" class="todo"><title>0x0003e2a8 Func3e2a8 (119 bytes)</title></rect>
-<rect width="12" height="12" x="375" y="195" class="todo"><title>0x0003e320 Func3e320 (196 bytes)</title></rect>
-<rect width="12" height="12" x="390" y="195" class="todo"><title>0x0003e3e4 Func3e3e4 (92 bytes)</title></rect>
+<rect width="12" height="12" x="375" y="195" class="todo"><title>0x0003e320 phd_PutPolygons (196 bytes)</title></rect>
+<rect width="12" height="12" x="390" y="195" class="todo"><title>0x0003e3e4 S_InsertRoom (92 bytes)</title></rect>
 <rect width="12" height="12" x="405" y="195" class="todo"><title>0x0003e440 calc_object_vertices (468 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="195" class="todo"><title>0x0003e614 Func3e614 (433 bytes)</title></rect>
 <rect width="12" height="12" x="435" y="195" class="todo"><title>0x0003e7c8 Func3e7c8 (1107 bytes)</title></rect>
@@ -845,10 +845,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">19.55%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">80.45%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">19.77%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">80.23%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="146.04" height="6" x="0" y="0" class="named"/>
-<rect width="600.96" height="6" x="146.04" y="0" class="todo"/>
+<rect width="147.69" height="6" x="0" y="0" class="named"/>
+<rect width="599.31" height="6" x="147.69" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="todo"><title>0x0001bc98 Func1bc98 (4489 bytes)</title></rect>
@@ -972,7 +972,7 @@
 <rect width="16.79" height="17.64" x="432.82" y="0" class="named"><title>0x000160c0 LaraBaddieCollision (457 bytes)</title></rect>
 <rect width="16.79" height="17.51" x="432.82" y="20.64" class="todo"><title>0x00029430 Func29430 (454 bytes)</title></rect>
 <rect width="16.79" height="17.46" x="432.82" y="41.15" class="todo"><title>0x0002a27c Func2a27c (453 bytes)</title></rect>
-<rect width="16.79" height="17.42" x="432.82" y="61.61" class="todo"><title>0x0001a958 PrintRooms (452 bytes)</title></rect>
+<rect width="16.79" height="17.42" x="432.82" y="61.61" class="named"><title>0x0001a958 PrintRooms (452 bytes)</title></rect>
 <rect width="16.79" height="17.37" x="432.82" y="82.02" class="todo"><title>0x00029f64 Func29f64 (451 bytes)</title></rect>
 <rect width="16.79" height="17.33" x="432.82" y="102.39" class="named"><title>0x0001083c S_DrawAirBar (450 bytes)</title></rect>
 <rect width="16.79" height="17.28" x="432.82" y="122.72" class="todo"><title>0x0002aa58 Func2aa58 (449 bytes)</title></rect>
@@ -1123,7 +1123,7 @@
 <rect width="10.10" height="10.58" x="554.63" y="60.03" class="todo"><title>0x0003edb4 Func3edb4 (199 bytes)</title></rect>
 <rect width="10.10" height="10.51" x="554.63" y="73.60" class="named"><title>0x00016a04 AlignLaraPosition (198 bytes)</title></rect>
 <rect width="10.10" height="10.37" x="554.63" y="87.11" class="todo"><title>0x00025494 Func25494 (196 bytes)</title></rect>
-<rect width="10.10" height="10.37" x="554.63" y="100.48" class="todo"><title>0x0003e320 Func3e320 (196 bytes)</title></rect>
+<rect width="10.10" height="10.37" x="554.63" y="100.48" class="todo"><title>0x0003e320 phd_PutPolygons (196 bytes)</title></rect>
 <rect width="10.10" height="10.30" x="554.63" y="113.85" class="todo"><title>0x0001d370 Func1d370 (195 bytes)</title></rect>
 <rect width="10.10" height="10.10" x="554.63" y="127.16" class="todo"><title>0x00024e28 Func24e28 (192 bytes)</title></rect>
 <rect width="10.10" height="10.03" x="554.63" y="140.26" class="todo"><title>0x0003b218 Func3b218 (191 bytes)</title></rect>
@@ -1313,7 +1313,7 @@
 <rect width="6.24" height="6.09" x="633.42" y="154.12" class="todo"><title>0x00031f6c Remove_Requester (94 bytes)</title></rect>
 <rect width="6.24" height="6.09" x="633.42" y="163.21" class="todo"><title>0x000383f8 Func383f8 (94 bytes)</title></rect>
 <rect width="6.24" height="5.99" x="633.42" y="172.31" class="todo"><title>0x0002555c Func2555c (93 bytes)</title></rect>
-<rect width="6.24" height="5.90" x="633.42" y="181.30" class="todo"><title>0x0003e3e4 Func3e3e4 (92 bytes)</title></rect>
+<rect width="6.24" height="5.90" x="633.42" y="181.30" class="todo"><title>0x0003e3e4 S_InsertRoom (92 bytes)</title></rect>
 <rect width="6.24" height="5.80" x="633.42" y="190.20" class="named"><title>0x00015f28 GetNewRoom (91 bytes)</title></rect>
 <rect width="6.24" height="5.80" x="633.42" y="199" class="named"><title>0x00019f0c DecreaseScreenSize (91 bytes)</title></rect>
 <rect width="6.24" height="5.80" x="633.42" y="207.80" class="todo"><title>0x00020cd4 Func20cd4 (91 bytes)</title></rect>

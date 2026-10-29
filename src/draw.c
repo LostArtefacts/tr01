@@ -243,3 +243,63 @@ int SetRoomBounds(sint16 *objptr, sint16 room_number, ROOM_INFO *parent)
 
     return 1;
 }
+
+void PrintRooms(sint16 room_number)
+{
+    sint16 i, item_num, clip;
+    ROOM_INFO *r;
+    MESH_INFO *mesh;
+    ITEM_INFO *item;
+
+    r = &room[room_number];
+    if (r->flags & UNDERWATER)
+        S_SetupBelowWater(camera_underwater);
+    else
+        S_SetupAboveWater(camera_underwater);
+
+    r->bound_active = 0;
+
+    phd_PushMatrix();
+    phd_TranslateAbs(r->x, r->y, r->z);
+
+    phd_left = r->left;
+    phd_right = r->right;
+    phd_top = r->top;
+    phd_bottom = r->bottom;
+
+    S_InsertRoom(r->data);
+
+    for (item_num = r->item_number; item_num != NO_ITEM; item_num = items[item_num].next_item)
+    {
+        item = &items[item_num];
+        if (item->status != INVISIBLE)
+            (*objects[item->object_number].draw_routine)(item);
+    }
+
+    mesh = r->mesh;
+    for (i = r->num_meshes; i > 0; i--, mesh++)
+    {
+        if ((static_objects[mesh->static_number].flags & 2))
+        {
+            phd_PushMatrix();
+            phd_TranslateAbs(mesh->x, mesh->y, mesh->z);
+            phd_RotY(mesh->y_rot);
+            if ((clip = S_GetObjectBounds(&static_objects[mesh->static_number].x_minp)))
+            {
+                S_CalculateStaticLight(mesh->shade);
+                phd_PutPolygons(meshes[static_objects[mesh->static_number].mesh_number], clip);
+            }
+
+            phd_PopMatrix();
+        }
+    }
+
+    for (item_num = r->fx_number; item_num != NO_ITEM; item_num = effects[item_num].next_fx)
+        DrawEffect(item_num);
+
+    phd_PopMatrix();
+
+    r->left = (sint16)phd_winxmax;
+    r->top = (sint16)phd_winymax;
+    r->right = r->bottom = 0;
+}

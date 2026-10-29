@@ -674,8 +674,8 @@ address,size,name,symbol
 0x0003e18c,180,Func3e18c,
 0x0003e240,102,phd_TranslateAbs,phd_TranslateAbs_
 0x0003e2a8,119,Func3e2a8,
-0x0003e320,196,Func3e320,
-0x0003e3e4,92,Func3e3e4,
+0x0003e320,196,phd_PutPolygons,phd_PutPolygons_
+0x0003e3e4,92,S_InsertRoom,S_InsertRoom_
 0x0003e440,468,calc_object_vertices,calc_object_vertices_
 0x0003e614,433,Func3e614,
 0x0003e7c8,1107,Func3e7c8,
