@@ -462,6 +462,53 @@ void InitialiseLaraInventory(int level_number)
     InitialiseNewWeapon();
 }
 
+void LaraInitialiseMeshes(int level_number)
+{
+    int i, meshtype;
+    START_INFO *start;
+
+    start = &savegame.start[level_number];
+
+    if (start->costume)
+    {
+        for (i = 0; i < 15; i++)
+            lara.mesh_ptrs[i] = meshes[(&objects[LARA_EXTRA])->mesh_index + i];
+        lara.mesh_ptrs[HEAD] = meshes[(&objects[LARA])->mesh_index + HEAD];
+        return;
+    }
+
+    for (i = 0; i < 15; i++)
+        lara.mesh_ptrs[i] = meshes[(&objects[LARA])->mesh_index + i];
+
+    meshtype = start->gun_type;
+    if (meshtype == LG_SHOTGUN)
+    {
+        if (start->got_uzis || start->got_magnums || start->got_pistols)
+            meshtype = LG_PISTOLS;
+        else
+            meshtype = LG_UNARMED;
+    }
+    switch (meshtype)
+    {
+    case LG_PISTOLS:
+        lara.mesh_ptrs[THIGH_L] = meshes[(&objects[PISTOLS])->mesh_index + THIGH_L];
+        lara.mesh_ptrs[THIGH_R] = meshes[(&objects[PISTOLS])->mesh_index + THIGH_R];
+        break;
+
+    case LG_MAGNUMS:
+        lara.mesh_ptrs[THIGH_L] = meshes[(&objects[MAGNUM])->mesh_index + THIGH_L];
+        lara.mesh_ptrs[THIGH_R] = meshes[(&objects[MAGNUM])->mesh_index + THIGH_R];
+        break;
+
+    case LG_UZIS:
+        lara.mesh_ptrs[THIGH_L] = meshes[(&objects[UZI])->mesh_index + THIGH_L];
+        lara.mesh_ptrs[THIGH_R] = meshes[(&objects[UZI])->mesh_index + THIGH_R];
+        break;
+    }
+    if (start->got_shotgun)
+        lara.mesh_ptrs[TORSO] = meshes[(&objects[SHOTGUN])->mesh_index + TORSO];
+}
+
 void lara_as_walk(ITEM_INFO *item, COLL_INFO *coll);
 void lara_as_run(ITEM_INFO *item, COLL_INFO *coll);
 void lara_as_stop(ITEM_INFO *item, COLL_INFO *coll);
