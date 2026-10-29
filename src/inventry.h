@@ -3,6 +3,14 @@
 
 #include "types.h"
 
+enum shapes
+{
+    SHAPE_SPRITE = 1,
+    SHAPE_LINE,
+    SHAPE_BOX,
+    SHAPE_FBOX
+};
+
 enum inv_modes
 {
     INV_GAME_MODE = 0,

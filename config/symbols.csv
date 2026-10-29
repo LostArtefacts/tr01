@@ -696,7 +696,7 @@ address,size,name,symbol
 0x0003f044,26,Func3f044,
 0x0003f05e,46,phd_sqrt,phd_sqrt_
 0x0003f090,559,S_DrawSpriteAbs,S_DrawSpriteAbs_
-0x0003f2c0,460,Func3f2c0,
+0x0003f2c0,460,S_DrawSpriteRel,S_DrawSpriteRel_
 0x0003f48c,223,S_DrawPickup,S_DrawPickup_
 0x0003f56c,376,Func3f56c,
 0x0003f6e4,551,Func3f6e4,
@@ -1829,6 +1829,9 @@ address,size,name,symbol
 0x000c3858,4,idelay,_idelay
 0x000c385c,4,idcount,_idcount
 0x000c3860,2,item_data,_item_data
+0x000c3864,4,cheat_count,_cheat_count
+0x000c3868,32,cheat_buff,_cheat_buff
+0x000c3888,32,cheat_code,_cheat_code
 0x000c38a8,4,level_items,_level_items
 0x000c38ac,4,health_bar_timer,_health_bar_timer
 0x000c3b68,4,sound_active,_sound_active

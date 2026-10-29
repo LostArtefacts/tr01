@@ -742,6 +742,125 @@ sint32 AnimateInventoryItem(INVENTORY_ITEM *inv_item)
     return 0;
 }
 
+void DrawInventoryItem(INVENTORY_ITEM *inv_item)
+{
+    int clip, i, poppush, mesh, mesh_num;
+    OBJECT_INFO *object;
+    sint32 *bone;
+    sint32 *packed_rotation;
+    sint16 *frame;
+    INVENTORY_SPRITE *isprite, **isprite_list;
+    sint32 xv, yv, zv, zp;
+    sint32 sx, sy;
+
+    phd_TranslateRel(0, inv_item->ytrans, inv_item->ztrans);
+    phd_RotYXZ(inv_item->y_rot, inv_item->x_rot, 0);
+
+    object = &objects[inv_item->object_number];
+
+    if (object->nmeshes < 0)
+    {
+        mesh = object->mesh_index;
+        S_DrawSpriteRel(0, 0, 0, mesh, 16 * 256);
+        return;
+    }
+    if ((isprite_list = inv_item->sprlist))
+    {
+        zv = *(phd_mxptr + M23);
+        xv = *(phd_mxptr + M03);
+        yv = *(phd_mxptr + M13);
+
+        zp = zv / phd_persp;
+        sx = (sint32)(xv / zp + phd_centerx);
+        sy = (sint32)(yv / zp + phd_centery);
+
+        while ((isprite = *isprite_list++))
+        {
+            if (zv < phd_znear || zv > phd_zfar)
+                break;
+            while (isprite->shape)
+            {
+                switch (isprite->shape)
+                {
+                case SHAPE_SPRITE:
+                    S_DrawScreenSprite(sx + isprite->x, sy + isprite->y, isprite->z, isprite->param1, isprite->param2, static_objects[ALPHABET].mesh_number + isprite->sprnum, 16 * 256, NULL);
+                    break;
+                case SHAPE_LINE:
+                    S_DrawScreenLine(sx + isprite->x, sy + isprite->y, isprite->z, isprite->param1, isprite->param2, isprite->sprnum, isprite->grdptr, NULL);
+                    break;
+                case SHAPE_BOX:
+                    S_DrawScreenBox(sx + isprite->x, sy + isprite->y, isprite->z, isprite->param1, isprite->param2, isprite->sprnum, isprite->grdptr, NULL);
+                    break;
+                case SHAPE_FBOX:
+                    S_DrawScreenFBox(sx + isprite->x, sy + isprite->y, isprite->z, isprite->param1, isprite->param2, isprite->sprnum, isprite->grdptr, NULL);
+                    break;
+                default:
+                    break;
+                }
+                isprite++;
+            }
+        }
+    }
+
+    frame = object->frame_base + inv_item->current_frame * (object->nmeshes * 2 + 10);
+
+    phd_PushMatrix();
+
+    if ((clip = S_GetObjectBounds(frame)))
+    {
+                phd_TranslateRel((sint32)*(frame + 6), (sint32)*(frame + 7), (sint32)*(frame + 8));
+                packed_rotation = (sint32 *)(frame + 10);
+        phd_RotYXZpack(*(packed_rotation++));
+
+        mesh = object->mesh_index;
+        bone = bones + object->bone_index;
+
+        mesh_num = 1;
+                if (mesh_num & inv_item->drawn_meshes)
+            phd_PutPolygons(meshes[mesh], clip);
+
+        for (i = object->nmeshes - 1; i > 0; i--)
+        {
+            mesh++;
+            mesh_num <<= 1;
+
+            poppush = *(bone++);
+            if (poppush & 1)
+                phd_PopMatrix();
+            if (poppush & 2)
+                phd_PushMatrix();
+
+            phd_TranslateRel(*(bone), *(bone + 1), *(bone + 2));
+            phd_RotYXZpack(*(packed_rotation++));
+
+            if (inv_item->object_number == MAP_OPTION && i == 3)
+            {
+                Compass_Speed = Compass_Speed * 19 / 20 + (sint16)(-inv_item->y_rot - lara_item->pos.y_rot - Compass_Needle) / 50;
+                Compass_Needle += Compass_Speed;
+                phd_RotY(Compass_Needle);
+            }
+
+            if (mesh_num & inv_item->drawn_meshes)
+                phd_PutPolygons(meshes[mesh], clip);
+            bone += 3;
+        }
+    }
+    phd_PopMatrix();
+}
+
+sint32 cheat_count = 0;
+sint32 cheat_buff[8] = {0};
+sint32 cheat_code[] = {
+    IN_STEPR,
+    IN_LOOK,
+    IN_STEPR,
+    IN_LOOK,
+    IN_STEPL,
+    IN_STEPL,
+    IN_STEPL,
+    IN_OPTION
+};
+
 sint32 GetDebouncedInput(sint32 input)
 {
     if (input && !oldInputDB)

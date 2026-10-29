@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">32.26% (251)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">67.74% (527)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">32.39% (252)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">67.61% (526)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="241" height="6" x="0" y="0" class="named"/>
-<rect width="506" height="6" x="241" y="0" class="todo"/>
+<rect width="241.96" height="6" x="0" y="0" class="named"/>
+<rect width="505.04" height="6" x="241.96" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -318,7 +318,7 @@
 <rect width="12" height="12" x="720" y="60" class="named"><title>0x00022608 Construct_Inventory (300 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="60" class="named"><title>0x00022734 SelectMeshes (152 bytes)</title></rect>
 <rect width="12" height="12" x="0" y="75" class="named"><title>0x000227cc AnimateInventoryItem (105 bytes)</title></rect>
-<rect width="12" height="12" x="15" y="75" class="todo"><title>0x00022848 DrawInventoryItem (968 bytes)</title></rect>
+<rect width="12" height="12" x="15" y="75" class="named"><title>0x00022848 DrawInventoryItem (968 bytes)</title></rect>
 <rect width="12" height="12" x="30" y="75" class="named"><title>0x00022c10 GetDebouncedInput (32 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="75" class="todo"><title>0x00022c30 InitColours (225 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="75" class="todo"><title>0x00022d14 RingIsOpen (363 bytes)</title></rect>
@@ -764,7 +764,7 @@
 <rect width="12" height="12" x="660" y="195" class="todo"><title>0x0003f044 Func3f044 (26 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="195" class="todo"><title>0x0003f05e phd_sqrt (46 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="195" class="todo"><title>0x0003f090 S_DrawSpriteAbs (559 bytes)</title></rect>
-<rect width="12" height="12" x="705" y="195" class="todo"><title>0x0003f2c0 Func3f2c0 (460 bytes)</title></rect>
+<rect width="12" height="12" x="705" y="195" class="todo"><title>0x0003f2c0 S_DrawSpriteRel (460 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="195" class="todo"><title>0x0003f48c S_DrawPickup (223 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="195" class="todo"><title>0x0003f56c Func3f56c (376 bytes)</title></rect>
 <rect width="12" height="12" x="0" y="210" class="todo"><title>0x0003f6e4 Func3f6e4 (551 bytes)</title></rect>
@@ -849,10 +849,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">35.12%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">64.88%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">35.60%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">64.40%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="262.38" height="6" x="0" y="0" class="named"/>
-<rect width="484.62" height="6" x="262.38" y="0" class="todo"/>
+<rect width="265.92" height="6" x="0" y="0" class="named"/>
+<rect width="481.08" height="6" x="265.92" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -897,7 +897,7 @@
 <rect width="25.72" height="28.68" x="238.45" y="32.39" class="todo"><title>0x000283b0 LaraControl (1018 bytes)</title></rect>
 <rect width="25.72" height="28.49" x="238.45" y="64.07" class="todo"><title>0x000376e8 Func376e8 (1012 bytes)</title></rect>
 <rect width="25.72" height="27.81" x="238.45" y="95.56" class="named"><title>0x0001a578 SetRoomBounds (990 bytes)</title></rect>
-<rect width="25.72" height="27.12" x="238.45" y="126.37" class="todo"><title>0x00022848 DrawInventoryItem (968 bytes)</title></rect>
+<rect width="25.72" height="27.12" x="238.45" y="126.37" class="named"><title>0x00022848 DrawInventoryItem (968 bytes)</title></rect>
 <rect width="25.72" height="26.13" x="238.45" y="156.49" class="named"><title>0x00010b28 S_DrawLighteningSegment (936 bytes)</title></rect>
 <rect width="25.72" height="26" x="238.45" y="185.62" class="todo"><title>0x0003c39c Func3c39c (932 bytes)</title></rect>
 <rect width="25.72" height="25.38" x="238.45" y="214.62" class="named"><title>0x00019760 RaptorControl (912 bytes)</title></rect>
@@ -970,7 +970,7 @@
 <rect width="17.72" height="17.19" x="412.11" y="123.14" class="todo"><title>0x00028e9c Func28e9c (468 bytes)</title></rect>
 <rect width="17.72" height="17.19" x="412.11" y="143.33" class="todo"><title>0x0003e440 calc_object_vertices (468 bytes)</title></rect>
 <rect width="17.72" height="17.06" x="412.11" y="163.52" class="named"><title>0x00010668 S_DrawHealthBar (465 bytes)</title></rect>
-<rect width="17.72" height="16.85" x="412.11" y="183.59" class="todo"><title>0x0003f2c0 Func3f2c0 (460 bytes)</title></rect>
+<rect width="17.72" height="16.85" x="412.11" y="183.59" class="todo"><title>0x0003f2c0 S_DrawSpriteRel (460 bytes)</title></rect>
 <rect width="17.72" height="16.80" x="412.11" y="203.43" class="todo"><title>0x00045d34 SwitchVideoMode (459 bytes)</title></rect>
 <rect width="17.72" height="16.76" x="412.11" y="223.24" class="todo"><title>0x00024f90 Func24f90 (458 bytes)</title></rect>
 <rect width="16.79" height="17.64" x="432.82" y="0" class="named"><title>0x000160c0 LaraBaddieCollision (457 bytes)</title></rect>
