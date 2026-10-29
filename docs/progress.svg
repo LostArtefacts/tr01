@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">36.89% (287)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">63.11% (491)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">37.02% (288)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">62.98% (490)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="275.56" height="6" x="0" y="0" class="named"/>
-<rect width="471.44" height="6" x="275.56" y="0" class="todo"/>
+<rect width="276.52" height="6" x="0" y="0" class="named"/>
+<rect width="470.48" height="6" x="276.52" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -355,7 +355,7 @@
 <rect width="12" height="12" x="525" y="75" class="named"><title>0x00024a30 RemoveActiveItem (151 bytes)</title></rect>
 <rect width="12" height="12" x="540" y="75" class="named"><title>0x00024ac8 RemoveDrawnItem (114 bytes)</title></rect>
 <rect width="12" height="12" x="555" y="75" class="named"><title>0x00024b3c AddActiveItem (136 bytes)</title></rect>
-<rect width="12" height="12" x="570" y="75" class="todo"><title>0x00024bc4 ItemNewRoom (153 bytes)</title></rect>
+<rect width="12" height="12" x="570" y="75" class="named"><title>0x00024bc4 ItemNewRoom (153 bytes)</title></rect>
 <rect width="12" height="12" x="585" y="75" class="todo"><title>0x00024c60 Func24c60 (160 bytes)</title></rect>
 <rect width="12" height="12" x="600" y="75" class="todo"><title>0x00024d00 GlobalItemReplace (127 bytes)</title></rect>
 <rect width="12" height="12" x="615" y="75" class="todo"><title>0x00024d80 Func24d80 (56 bytes)</title></rect>
@@ -849,10 +849,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">39.27%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">60.73%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">39.35%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">60.65%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="293.35" height="6" x="0" y="0" class="named"/>
-<rect width="453.65" height="6" x="293.35" y="0" class="todo"/>
+<rect width="293.91" height="6" x="0" y="0" class="named"/>
+<rect width="453.09" height="6" x="293.91" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1185,7 +1185,7 @@
 <rect width="9.02" height="8.68" x="580.35" y="107.93" class="todo"><title>0x00046db1 Func46db1 (157 bytes)</title></rect>
 <rect width="9.02" height="8.53" x="580.35" y="119.61" class="todo"><title>0x00024ee8 EffectNewRoom (155 bytes)</title></rect>
 <rect width="9.02" height="8.45" x="580.35" y="131.14" class="named"><title>0x000172b8 GetChange (154 bytes)</title></rect>
-<rect width="9.02" height="8.38" x="580.35" y="142.59" class="todo"><title>0x00024bc4 ItemNewRoom (153 bytes)</title></rect>
+<rect width="9.02" height="8.38" x="580.35" y="142.59" class="named"><title>0x00024bc4 ItemNewRoom (153 bytes)</title></rect>
 <rect width="9.02" height="8.31" x="580.35" y="153.97" class="named"><title>0x00022734 SelectMeshes (152 bytes)</title></rect>
 <rect width="9.02" height="8.23" x="580.35" y="165.28" class="named"><title>0x00024a30 RemoveActiveItem (151 bytes)</title></rect>
 <rect width="9.02" height="8.16" x="580.35" y="176.51" class="named"><title>0x00019670 LoadLaraDemoPos (150 bytes)</title></rect>
