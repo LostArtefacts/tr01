@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">54.30% (429)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">45.70% (361)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">54.43% (430)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">45.57% (360)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="405.65" height="6" x="0" y="0" class="named"/>
-<rect width="341.35" height="6" x="405.65" y="0" class="todo"/>
+<rect width="406.59" height="6" x="0" y="0" class="named"/>
+<rect width="340.41" height="6" x="406.59" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -497,7 +497,7 @@
 <rect width="12" height="12" x="405" y="120" class="named"><title>0x000298d4 lara_col_dive (0 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="120" class="named"><title>0x000299e4 LaraWaterCurrent (471 bytes)</title></rect>
 <rect width="12" height="12" x="435" y="120" class="named"><title>0x00029bc0 LaraSurface (514 bytes)</title></rect>
-<rect width="12" height="12" x="450" y="120" class="todo"><title>0x00029dc4 lara_as_surfswim (113 bytes)</title></rect>
+<rect width="12" height="12" x="450" y="120" class="named"><title>0x00029dc4 lara_as_surfswim (113 bytes)</title></rect>
 <rect width="12" height="12" x="465" y="120" class="todo"><title>0x00029e38 lara_as_surfback (98 bytes)</title></rect>
 <rect width="12" height="12" x="480" y="120" class="todo"><title>0x00029e9c lara_as_surfleft (98 bytes)</title></rect>
 <rect width="12" height="12" x="495" y="120" class="todo"><title>0x00029f00 lara_as_surfright (98 bytes)</title></rect>
@@ -861,10 +861,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">49.41%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">50.59%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">49.46%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">50.54%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="369.06" height="6" x="0" y="0" class="named"/>
-<rect width="377.94" height="6" x="369.06" y="0" class="todo"/>
+<rect width="369.48" height="6" x="0" y="0" class="named"/>
+<rect width="377.52" height="6" x="369.48" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1276,7 +1276,7 @@
 <rect width="6.90" height="7.29" x="623.68" y="106.96" class="named"><title>0x00024ac8 RemoveDrawnItem (114 bytes)</title></rect>
 <rect width="6.90" height="7.29" x="633.58" y="106.96" class="todo"><title>0x000336dc Func336dc (114 bytes)</title></rect>
 <rect width="6.81" height="7.29" x="643.48" y="106.96" class="named"><title>0x00016314 CreatureCollision (113 bytes)</title></rect>
-<rect width="6.81" height="7.29" x="653.29" y="106.96" class="todo"><title>0x00029dc4 lara_as_surfswim (113 bytes)</title></rect>
+<rect width="6.81" height="7.29" x="653.29" y="106.96" class="named"><title>0x00029dc4 lara_as_surfswim (113 bytes)</title></rect>
 <rect width="6.81" height="7.29" x="663.10" y="106.96" class="todo"><title>0x00036770 Func36770 (113 bytes)</title></rect>
 <rect width="6.72" height="7.29" x="672.91" y="106.96" class="named"><title>0x0001a0e0 TempVideoAdjust (112 bytes)</title></rect>
 <rect width="6.72" height="7.29" x="682.63" y="106.96" class="named"><title>0x00022e80 RingIsNotOpen (112 bytes)</title></rect>
