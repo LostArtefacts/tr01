@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">68.39% (543)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">31.61% (251)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">68.51% (544)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">31.49% (250)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="510.86" height="6" x="0" y="0" class="named"/>
-<rect width="236.14" height="6" x="510.86" y="0" class="todo"/>
+<rect width="511.80" height="6" x="0" y="0" class="named"/>
+<rect width="235.20" height="6" x="511.80" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -611,7 +611,7 @@
 <rect width="12" height="12" x="615" y="150" class="named"><title>0x00031e8c S_ChangeCtrlText (124 bytes)</title></rect>
 <rect width="12" height="12" x="630" y="150" class="named"><title>0x00031f08 S_RemoveCtrlText (51 bytes)</title></rect>
 <rect width="12" height="12" x="645" y="150" class="named"><title>0x00031f3c Init_Requester (48 bytes)</title></rect>
-<rect width="12" height="12" x="660" y="150" class="todo"><title>0x00031f6c Remove_Requester (94 bytes)</title></rect>
+<rect width="12" height="12" x="660" y="150" class="named"><title>0x00031f6c Remove_Requester (94 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="150" class="todo"><title>0x00031fcc Display_Requester (1152 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="150" class="todo"><title>0x00032450 Targetable (110 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="150" class="todo"><title>0x000324c0 Func324c0 (62 bytes)</title></rect>
@@ -865,10 +865,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">65.02%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">34.98%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">65.07%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">34.93%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="485.74" height="6" x="0" y="0" class="named"/>
-<rect width="261.26" height="6" x="485.74" y="0" class="todo"/>
+<rect width="486.07" height="6" x="0" y="0" class="named"/>
+<rect width="260.93" height="6" x="486.07" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.01" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1333,7 +1333,7 @@
 <rect width="6.13" height="6.05" x="632.99" y="162.40" class="named"><title>0x0002bc18 undraw_pistol_mesh_left (94 bytes)</title></rect>
 <rect width="6.13" height="6.05" x="632.99" y="171.46" class="named"><title>0x0002bc78 undraw_pistol_mesh_right (94 bytes)</title></rect>
 <rect width="6.13" height="6.05" x="632.99" y="180.51" class="named"><title>0x0002d8dc mn_stop_ambient_samples (94 bytes)</title></rect>
-<rect width="6.13" height="6.05" x="632.99" y="189.56" class="todo"><title>0x00031f6c Remove_Requester (94 bytes)</title></rect>
+<rect width="6.13" height="6.05" x="632.99" y="189.56" class="named"><title>0x00031f6c Remove_Requester (94 bytes)</title></rect>
 <rect width="6.13" height="6.05" x="632.99" y="198.61" class="todo"><title>0x000383f8 InitialiseObjects (94 bytes)</title></rect>
 <rect width="6.13" height="5.96" x="632.99" y="207.66" class="named"><title>0x0002555c lara_as_fastback (93 bytes)</title></rect>
 <rect width="6.13" height="5.86" x="632.99" y="216.62" class="todo"><title>0x0003e3e4 S_InsertRoom (92 bytes)</title></rect>

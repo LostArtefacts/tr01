@@ -982,3 +982,22 @@ void Init_Requester(REQUEST_INFO *req)
         req->texts[n] = NULL;
     }
 }
+
+void Remove_Requester(REQUEST_INFO *req)
+{
+    int n;
+
+    T_RemovePrint(req->heading);
+    req->heading = NULL;
+    T_RemovePrint(req->background);
+    req->background = NULL;
+    T_RemovePrint(req->moreup);
+    req->moreup = NULL;
+    T_RemovePrint(req->moredown);
+    req->moredown = NULL;
+    for (n = 0; n < MAX_REQLINES; n++)
+    {
+        T_RemovePrint(req->texts[n]);
+        req->texts[n] = NULL;
+    }
+}
