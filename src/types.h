@@ -16,6 +16,8 @@ typedef sint16 SG_COL;
 
 #define UNIT_SHADOW 256
 
+#define END_BIT 0x8000
+
 #define WALL_SHIFT 10
 #define WALL_L 1024
 #define STEP_L (WALL_L / 4)

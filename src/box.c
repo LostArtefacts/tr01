@@ -64,3 +64,86 @@ void CreatureAIInfo(ITEM_INFO *item, AI_INFO *info)
     info->ahead = (info->angle > -FRONT_ARC && info->angle < FRONT_ARC);
     info->bite = (info->ahead && lara_item->pos.y_pos > item->pos.y_pos - STEP_L && lara_item->pos.y_pos < item->pos.y_pos + STEP_L);
 }
+
+int SearchLOT(LOT_INFO *LOT, int expansion)
+{
+    int i, index, done, change, box_number;
+    BOX_NODE *node, *expand;
+    BOX_INFO *box;
+    sint16 *zone, search_zone;
+
+    if (LOT->fly == NO_FLYING)
+        zone = (LOT->step == STEP_L) ? ground_zone[flip_status] : ground_zone2[flip_status];
+    else
+        zone = fly_zone[flip_status];
+
+    search_zone = zone[LOT->head];
+
+    for (i = 0; i < expansion; i++)
+    {
+        if (LOT->head == NO_BOX)
+            return 0;
+
+        node = &LOT->node[LOT->head];
+        box = &boxes[LOT->head];
+
+        index = box->overlap_index & OVERLAP_INDEX;
+        done = 0;
+        do
+        {
+            box_number = overlap[index++];
+            if (box_number & END_BIT)
+            {
+                done = 1;
+                box_number &= BOX_NUMBER;
+            }
+
+            if (search_zone != zone[box_number])
+                continue;
+
+            change = boxes[box_number].height - box->height;
+            if (change > LOT->step || change < LOT->drop)
+                continue;
+
+            expand = &LOT->node[box_number];
+
+            if ((node->search_number & SEARCH_NUMBER) < (expand->search_number & SEARCH_NUMBER))
+                continue;
+
+            if (node->search_number & BLOCKED_SEARCH)
+            {
+                if ((node->search_number & SEARCH_NUMBER) == (expand->search_number & SEARCH_NUMBER))
+                    continue;
+
+                expand->search_number = node->search_number;
+            }
+            else
+            {
+                if ((node->search_number & SEARCH_NUMBER) == (expand->search_number & SEARCH_NUMBER) &&
+                    !(expand->search_number & BLOCKED_SEARCH))
+                    continue;
+
+                if (boxes[box_number].overlap_index & LOT->block_mask)
+                {
+                    expand->search_number = node->search_number | BLOCKED_SEARCH;
+                }
+                else
+                {
+                    expand->search_number = node->search_number;
+                    expand->exit_box = LOT->head;
+                }
+            }
+
+            if (expand->next_expansion == NO_BOX && box_number != LOT->tail)
+            {
+                LOT->node[LOT->tail].next_expansion = box_number;
+                LOT->tail = box_number;
+            }
+        } while (!done);
+
+        LOT->head = node->next_expansion;
+        node->next_expansion = NO_BOX;
+    }
+
+    return 1;
+}

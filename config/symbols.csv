@@ -21,7 +21,7 @@ address,size,name,symbol
 0x000111e8,1087,BearControl,BearControl_
 0x00011630,67,InitialiseCreature,InitialiseCreature_
 0x00011674,634,CreatureAIInfo,CreatureAIInfo_
-0x000118f0,549,Func118f0,
+0x000118f0,549,SearchLOT,SearchLOT_
 0x00011b18,132,Func11b18,
 0x00011b9c,148,Func11b9c,
 0x00011c30,252,Func11c30,
@@ -1754,6 +1754,7 @@ address,size,name,symbol
 0x000cb284,8,fly_zone,_fly_zone
 0x000cb28c,8,ground_zone,_ground_zone
 0x000cb294,8,ground_zone2,_ground_zone2
+0x000cb29c,4,overlap,_overlap
 0x000cb2a0,4,boxes,_boxes
 0x000cb3d0,4,items,_items
 0x000cb3d4,4,flip_status,_flip_status
