@@ -303,7 +303,8 @@ address,size,name,symbol
 0x0002555c,93,lara_as_fastback,lara_as_fastback_
 0x000255bc,135,lara_as_turn_r,lara_as_turn_r_
 0x00025644,145,lara_as_turn_l,lara_as_turn_l_
-0x000256d8,5,lara_as_death,lara_as_death_
+0x000256d8,0,lara_as_death,lara_as_death_
+0x000256d8,5,lara_as_null,lara_as_null_
 0x000256e0,69,lara_as_fastfall,lara_as_fastfall_
 0x00025728,77,lara_as_hang,lara_as_hang_
 0x00025778,31,lara_as_reach,lara_as_reach_

@@ -412,3 +412,9 @@ void lara_as_back(ITEM_INFO *item, COLL_INFO *coll)
             lara.turn_rate = LARA_SLOW_TURN;
     }
 }
+
+void lara_as_null(ITEM_INFO *item, COLL_INFO *coll)
+{
+    coll->enable_hit = 0;
+    coll->enable_baddie_push = 0;
+}
