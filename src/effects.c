@@ -120,3 +120,10 @@ void Richochet(GAME_VECTOR *pos)
         SoundEffect(10, &fx->pos, NULL);
     }
 }
+
+void ControlRichochet1(sint16 fx_num)
+{
+    effects[fx_num].counter--;
+    if (!effects[fx_num].counter)
+        KillEffect(fx_num);
+}

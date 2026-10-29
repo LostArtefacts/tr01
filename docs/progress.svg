@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">19.64% (152)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">80.36% (622)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">19.77% (153)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">80.23% (621)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="146.70" height="6" x="0" y="0" class="named"/>
-<rect width="600.30" height="6" x="146.70" y="0" class="todo"/>
+<rect width="147.66" height="6" x="0" y="0" class="named"/>
+<rect width="599.34" height="6" x="147.66" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -220,7 +220,7 @@
 <rect width="12" height="12" x="0" y="45" class="named"><title>0x0001d650 ControlBlood1 (157 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="45" class="named"><title>0x0001d6f0 ControlExplosion1 (99 bytes)</title></rect>
 <rect width="12" height="12" x="30" y="45" class="named"><title>0x0001d754 Richochet (119 bytes)</title></rect>
-<rect width="12" height="12" x="45" y="45" class="todo"><title>0x0001d7cc Func1d7cc (46 bytes)</title></rect>
+<rect width="12" height="12" x="45" y="45" class="named"><title>0x0001d7cc ControlRichochet1 (46 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="45" class="todo"><title>0x0001d7fc Func1d7fc (80 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="45" class="todo"><title>0x0001d84c Func1d84c (100 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="45" class="todo"><title>0x0001d8b0 Func1d8b0 (302 bytes)</title></rect>
@@ -845,10 +845,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">25.33%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">74.67%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">25.35%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">74.65%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="189.20" height="6" x="0" y="0" class="named"/>
-<rect width="557.80" height="6" x="189.20" y="0" class="todo"/>
+<rect width="189.36" height="6" x="0" y="0" class="named"/>
+<rect width="557.64" height="6" x="189.36" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1449,7 +1449,7 @@
 <rect width="3.43" height="3.67" x="706.48" y="174.05" class="todo"><title>0x0003ee7c phd_PrintPolyList (48 bytes)</title></rect>
 <rect width="3.29" height="3.67" x="712.91" y="174.05" class="named"><title>0x0001cf74 phd_TranslateRel_ID (47 bytes)</title></rect>
 <rect width="3.29" height="3.67" x="719.20" y="174.05" class="todo"><title>0x00020ec4 Func20ec4 (47 bytes)</title></rect>
-<rect width="3.16" height="3.67" x="725.49" y="174.05" class="todo"><title>0x0001d7cc Func1d7cc (46 bytes)</title></rect>
+<rect width="3.16" height="3.67" x="725.49" y="174.05" class="named"><title>0x0001d7cc ControlRichochet1 (46 bytes)</title></rect>
 <rect width="3.16" height="3.67" x="731.65" y="174.05" class="todo"><title>0x00024484 Func24484 (46 bytes)</title></rect>
 <rect width="3.16" height="3.67" x="737.81" y="174.05" class="todo"><title>0x0003f05e phd_sqrt (46 bytes)</title></rect>
 <rect width="3.03" height="3.67" x="743.97" y="174.05" class="named"><title>0x00015868 FindGridShift (45 bytes)</title></rect>
