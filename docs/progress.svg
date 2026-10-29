@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">65.83% (522)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">34.17% (271)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">65.95% (523)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">34.05% (270)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="491.72" height="6" x="0" y="0" class="named"/>
-<rect width="255.28" height="6" x="491.72" y="0" class="todo"/>
+<rect width="492.66" height="6" x="0" y="0" class="named"/>
+<rect width="254.34" height="6" x="492.66" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -591,7 +591,7 @@
 <rect width="12" height="12" x="315" y="150" class="named"><title>0x0002ffb0 BridgeTilt1Ceiling (37 bytes)</title></rect>
 <rect width="12" height="12" x="330" y="150" class="named"><title>0x0002ffd8 BridgeTilt2Floor (34 bytes)</title></rect>
 <rect width="12" height="12" x="345" y="150" class="named"><title>0x0002fffc BridgeTilt2Ceiling (36 bytes)</title></rect>
-<rect width="12" height="12" x="360" y="150" class="todo"><title>0x00030020 Func30020 (111 bytes)</title></rect>
+<rect width="12" height="12" x="360" y="150" class="named"><title>0x00030020 CogControl (111 bytes)</title></rect>
 <rect width="12" height="12" x="375" y="150" class="todo"><title>0x00030090 Func30090 (131 bytes)</title></rect>
 <rect width="12" height="12" x="390" y="150" class="todo"><title>0x00030114 Func30114 (82 bytes)</title></rect>
 <rect width="12" height="12" x="405" y="150" class="todo"><title>0x00030168 Func30168 (28 bytes)</title></rect>
@@ -864,10 +864,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">59.87%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">40.13%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">59.92%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">40.08%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="447.20" height="6" x="0" y="0" class="named"/>
-<rect width="299.80" height="6" x="447.20" y="0" class="todo"/>
+<rect width="447.59" height="6" x="0" y="0" class="named"/>
+<rect width="299.41" height="6" x="447.59" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.01" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1289,7 +1289,7 @@
 <rect width="7.21" height="6.55" x="613.72" y="223.89" class="named"><title>0x00024db8 CreateEffect (111 bytes)</title></rect>
 <rect width="7.21" height="6.55" x="613.72" y="233.45" class="named"><title>0x0002b8a0 draw_pistols (111 bytes)</title></rect>
 <rect width="7" height="6.75" x="623.92" y="116.05" class="named"><title>0x0002bba8 draw_pistol_meshes (111 bytes)</title></rect>
-<rect width="7" height="6.75" x="633.93" y="116.05" class="todo"><title>0x00030020 Func30020 (111 bytes)</title></rect>
+<rect width="7" height="6.75" x="633.93" y="116.05" class="named"><title>0x00030020 CogControl (111 bytes)</title></rect>
 <rect width="6.91" height="6.75" x="643.93" y="116.05" class="named"><title>0x0001d574 SoundEffects (110 bytes)</title></rect>
 <rect width="6.91" height="6.75" x="653.84" y="116.05" class="todo"><title>0x00032450 Targetable (110 bytes)</title></rect>
 <rect width="6.82" height="6.75" x="663.76" y="116.05" class="named"><title>0x00020e54 game_malloc (109 bytes)</title></rect>
