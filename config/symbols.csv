@@ -103,7 +103,9 @@ address,size,name,symbol
 0x00019520,335,StartDemo,StartDemo_
 0x00019670,150,LoadLaraDemoPos,LoadLaraDemoPos_
 0x00019708,55,GetDemoInput,GetDemoInput_
-0x00019dc4,229,Func19dc4,
+0x00019760,912,RaptorControl,RaptorControl_
+0x00019b0c,694,DinoControl,DinoControl_
+0x00019dc4,229,LaraDinoDeath,LaraDinoDeath_
 0x00019eb0,90,Func19eb0,
 0x00019f0c,91,Func19f0c,
 0x00019f68,229,Func19f68,
@@ -1753,7 +1755,8 @@ address,size,name,symbol
 0x000c1828,4,fliptimer,_fliptimer
 0x000c1834,16,croc_bite,_croc_bite
 0x000c1844,4,demo_level,_demo_level
-0x000c1848,20,valid_demos,_valid_demos
+0x000c1848,16,valid_demos,_valid_demos
+0x000c1858,16,raptor_bite,_raptor_bite
 0x000c1888,4,bckscrn,_bckscrn
 0x000c18b8,,effect_routines,_effect_routines
 0x000c1988,4,CurrentLevel,_CurrentLevel

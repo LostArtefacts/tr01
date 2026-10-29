@@ -6,7 +6,7 @@ int democount;
 int demo_level = LEVEL1;
 
 char valid_demos[] = {
-    0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+    0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 };
 
 sint32 StartDemo(void)
