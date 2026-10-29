@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">22.09% (171)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">77.91% (603)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">22.22% (172)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">77.78% (602)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="165.03" height="6" x="0" y="0" class="named"/>
-<rect width="581.97" height="6" x="165.03" y="0" class="todo"/>
+<rect width="166" height="6" x="0" y="0" class="named"/>
+<rect width="581" height="6" x="166" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -240,7 +240,7 @@
 <rect width="12" height="12" x="300" y="45" class="named"><title>0x0001e0ac Stairs2SlopeFX (44 bytes)</title></rect>
 <rect width="12" height="12" x="315" y="45" class="named"><title>0x0001e0d8 SandFX (122 bytes)</title></rect>
 <rect width="12" height="12" x="330" y="45" class="named"><title>0x0001e154 PowerUpFX (100 bytes)</title></rect>
-<rect width="12" height="12" x="345" y="45" class="todo"><title>0x0001e1b8 Func1e1b8 (41 bytes)</title></rect>
+<rect width="12" height="12" x="345" y="45" class="named"><title>0x0001e1b8 ExplosionFX (41 bytes)</title></rect>
 <rect width="12" height="12" x="360" y="45" class="todo"><title>0x0001e1e4 Func1e1e4 (65 bytes)</title></rect>
 <rect width="12" height="12" x="375" y="45" class="todo"><title>0x0001e228 Func1e228 (12 bytes)</title></rect>
 <rect width="12" height="12" x="390" y="45" class="todo"><title>0x0001e23c Func1e23c (132 bytes)</title></rect>
@@ -845,10 +845,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">26.42%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">73.58%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">26.44%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">73.56%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="197.36" height="6" x="0" y="0" class="named"/>
-<rect width="549.64" height="6" x="197.36" y="0" class="todo"/>
+<rect width="197.51" height="6" x="0" y="0" class="named"/>
+<rect width="549.49" height="6" x="197.51" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1477,7 +1477,7 @@
 <rect width="2.92" height="3.34" x="693.61" y="199.55" class="todo"><title>0x00025c54 Func25c54 (42 bytes)</title></rect>
 <rect width="2.92" height="3.34" x="693.61" y="205.89" class="todo"><title>0x00025c80 Func25c80 (42 bytes)</title></rect>
 <rect width="2.92" height="3.19" x="693.61" y="212.22" class="named"><title>0x0001063c S_CalculateStaticLight (41 bytes)</title></rect>
-<rect width="2.92" height="3.19" x="693.61" y="218.41" class="todo"><title>0x0001e1b8 Func1e1b8 (41 bytes)</title></rect>
+<rect width="2.92" height="3.19" x="693.61" y="218.41" class="named"><title>0x0001e1b8 ExplosionFX (41 bytes)</title></rect>
 <rect width="2.92" height="3.19" x="693.61" y="224.59" class="todo"><title>0x00029188 Func29188 (41 bytes)</title></rect>
 <rect width="2.92" height="3.19" x="693.61" y="230.78" class="todo"><title>0x00046762 ScreenClear (41 bytes)</title></rect>
 <rect width="2.92" height="3.03" x="693.61" y="236.97" class="todo"><title>0x00023d3c Func23d3c (40 bytes)</title></rect>

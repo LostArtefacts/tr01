@@ -437,3 +437,10 @@ void PowerUpFX(ITEM_INFO *item)
     }
     fliptimer++;
 }
+
+void ExplosionFX(ITEM_INFO *item)
+{
+    SoundEffect(170, NULL, NULL);
+    camera.bounce = -75;
+    flipeffect = -1;
+}
