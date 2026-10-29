@@ -14,6 +14,14 @@ typedef sint16 SG_COL;
 
 #define UNIT_SHADOW 256
 
+#define WALL_L 1024
+#define STEP_L (WALL_L / 4)
+
+#define NOT_ACTIVE 0
+#define ACTIVE 1
+#define DEACTIVATED 2
+#define INVISIBLE 3
+
 typedef sint16 PHD_ANGLE;
 
 typedef struct
@@ -120,6 +128,14 @@ typedef struct
     sint16 flipped_room;
     uint16 flags;
 } ROOM_INFO;
+
+typedef struct
+{
+    sint32 x;
+    sint32 y;
+    sint32 z;
+    sint32 mesh_num;
+} BITE_INFO;
 
 #define SQUARE(A) ((A) * (A))
 
