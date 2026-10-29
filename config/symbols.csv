@@ -337,7 +337,7 @@ address,size,name,symbol
 0x00025cdc,38,lara_as_special,lara_as_special_
 0x00025d04,14,lara_as_usemidas,lara_as_usemidas_
 0x00025d14,767,lara_as_diemidas,lara_as_diemidas_
-0x00026014,34,Func26014,
+0x00026014,34,lara_as_swandive,lara_as_swandive_
 0x00026038,60,Func26038,
 0x00026074,15,Func26074,
 0x00026084,429,Func26084,

@@ -730,3 +730,11 @@ void lara_as_diemidas(ITEM_INFO *item, COLL_INFO *coll)
     }
     ItemSparkle(item, lara.mesh_effects);
 }
+
+void lara_as_swandive(ITEM_INFO *item, COLL_INFO *coll)
+{
+    coll->enable_hit = 0;
+    coll->enable_baddie_push = 1;
+    if (item->fallspeed > LARA_FASTFALL_SPEED)
+        item->goal_anim_state = AS_FASTDIVE;
+}
