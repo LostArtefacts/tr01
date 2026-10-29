@@ -758,3 +758,86 @@ void lara_as_waterout(ITEM_INFO *item, COLL_INFO *coll)
     coll->enable_baddie_push = 0;
     camera.flags = FOLLOW_CENTRE;
 }
+
+void lara_col_walk(ITEM_INFO *item, COLL_INFO *coll)
+{
+    item->gravity_status = item->fallspeed = 0;
+    lara.move_angle = item->pos.y_rot;
+    coll->bad_pos = STEPUP_HEIGHT;
+    coll->bad_neg = -STEPUP_HEIGHT;
+    coll->bad_ceiling = 0;
+    coll->slopes_are_pits = 1;
+    coll->slopes_are_walls = 1;
+    coll->lava_is_pit = 1;
+    GetLaraCollisionInfo(item, coll);
+
+    if (LaraHitCeiling(item, coll))
+        return;
+    if (TestLaraVault(item, coll))
+        return;
+
+    if (LaraDeflectEdge(item, coll))
+    {
+        if (item->frame_number >= 22 + 7 && item->frame_number <= 22 + 25)
+        {
+            item->anim_number = STOP_RIGHT_A;
+            item->frame_number = STOP_RIGHT_F;
+        }
+        else if ((item->frame_number >= 22 && item->frame_number <= 22 + 6) || (item->frame_number >= 22 + 26 && item->frame_number <= 22 + 35))
+        {
+            item->anim_number = STOP_LEFT_A;
+            item->frame_number = STOP_LEFT_F;
+        }
+        else
+        {
+            item->anim_number = STOP_A;
+            item->frame_number = STOP_F;
+        }
+    }
+
+    if (coll->mid_floor > STEPUP_HEIGHT)
+    {
+        item->anim_number = FALLDOWN_A;
+        item->frame_number = FALLDOWN_F;
+        item->current_anim_state = AS_FORWARDJUMP;
+        item->goal_anim_state = AS_FORWARDJUMP;
+        item->fallspeed = 0;
+        item->gravity_status = 1;
+        return;
+    }
+    if (coll->mid_floor > STEP_L / 2)
+    {
+        if (item->frame_number >= 28 && item->frame_number <= 45)
+        {
+            item->anim_number = WALKSTEPD_RIGHT_A;
+            item->frame_number = WALKSTEPD_RIGHT_F;
+        }
+        else
+        {
+            item->anim_number = WALKSTEPD_LEFT_A;
+            item->frame_number = WALKSTEPD_LEFT_F;
+        }
+    }
+    if (coll->mid_floor >= -STEPUP_HEIGHT && coll->mid_floor < -STEP_L / 2)
+    {
+        if (item->frame_number >= 27 && item->frame_number <= 44)
+        {
+            item->anim_number = WALKSTEPUP_RIGHT_A;
+            item->frame_number = WALKSTEPUP_RIGHT_F;
+        }
+        else
+        {
+            item->anim_number = WALKSTEPUP_LEFT_A;
+            item->frame_number = WALKSTEPUP_LEFT_F;
+        }
+    }
+    if (TestLaraSlide(item, coll))
+        return;
+    item->pos.y_pos += coll->mid_floor;
+}
+
+void GetLaraCollisionInfo(ITEM_INFO *item, COLL_INFO *coll)
+{
+    coll->facing = lara.move_angle;
+    GetCollisionInfo(coll, item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, item->room_number, LARA_HITE);
+}
