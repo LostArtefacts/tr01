@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">34.83% (271)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">65.17% (507)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">34.96% (272)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">65.04% (506)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="260.20" height="6" x="0" y="0" class="named"/>
-<rect width="486.80" height="6" x="260.20" y="0" class="todo"/>
+<rect width="261.16" height="6" x="0" y="0" class="named"/>
+<rect width="485.84" height="6" x="261.16" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -336,7 +336,7 @@
 <rect width="12" height="12" x="240" y="75" class="named"><title>0x000240bc Inv_RingInit (358 bytes)</title></rect>
 <rect width="12" height="12" x="255" y="75" class="named"><title>0x00024224 Inv_RingGetView (96 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="75" class="named"><title>0x00024284 Inv_RingLight (58 bytes)</title></rect>
-<rect width="12" height="12" x="285" y="75" class="todo"><title>0x000242c0 Inv_RingCalcAdders (65 bytes)</title></rect>
+<rect width="12" height="12" x="285" y="75" class="named"><title>0x000242c0 Inv_RingCalcAdders (65 bytes)</title></rect>
 <rect width="12" height="12" x="300" y="75" class="todo"><title>0x00024304 Inv_RingDoMotions (381 bytes)</title></rect>
 <rect width="12" height="12" x="315" y="75" class="todo"><title>0x00024484 Inv_RingRotateLeft (46 bytes)</title></rect>
 <rect width="12" height="12" x="330" y="75" class="todo"><title>0x000244b4 Inv_RingRotateRight (49 bytes)</title></rect>
@@ -849,10 +849,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">38.21%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">61.79%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">38.24%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">61.76%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="285.42" height="6" x="0" y="0" class="named"/>
-<rect width="461.58" height="6" x="285.42" y="0" class="todo"/>
+<rect width="285.66" height="6" x="0" y="0" class="named"/>
+<rect width="461.34" height="6" x="285.66" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1384,7 +1384,7 @@
 <rect width="4.35" height="5.03" x="735.41" y="152.54" class="todo"><title>0x00045f28 Func45f28 (66 bytes)</title></rect>
 <rect width="4.24" height="5.03" x="742.76" y="152.54" class="named"><title>0x00010018 S_DumpScreen (65 bytes)</title></rect>
 <rect width="4.59" height="4.65" x="659.68" y="160.57" class="named"><title>0x0001e1e4 FlickerFX (65 bytes)</title></rect>
-<rect width="4.59" height="4.65" x="659.68" y="168.22" class="todo"><title>0x000242c0 Inv_RingCalcAdders (65 bytes)</title></rect>
+<rect width="4.59" height="4.65" x="659.68" y="168.22" class="named"><title>0x000242c0 Inv_RingCalcAdders (65 bytes)</title></rect>
 <rect width="4.59" height="4.65" x="659.68" y="175.88" class="todo"><title>0x000287ac LaraSwapMeshExtra (65 bytes)</title></rect>
 <rect width="4.59" height="4.65" x="659.68" y="183.53" class="todo"><title>0x00038cb8 S_CDStop (65 bytes)</title></rect>
 <rect width="4.59" height="4.65" x="659.68" y="191.19" class="todo"><title>0x0003ed70 phd_SortPolyList (65 bytes)</title></rect>
