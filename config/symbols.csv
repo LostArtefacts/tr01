@@ -516,7 +516,7 @@ address,size,name,symbol
 0x0002fe88,51,DrawBridgeFloor,DrawBridgeFloor_
 0x0002febc,49,DrawBridgeCeiling,DrawBridgeCeiling_
 0x0002fef0,39,DrawBridgeCollision,DrawBridgeCollision_
-0x0002ff18,19,Func2ff18,
+0x0002ff18,19,BridgeFlatFloor,BridgeFlatFloor_
 0x0002ff2c,21,Func2ff2c,
 0x0002ff44,71,Func2ff44,
 0x0002ff8c,35,Func2ff8c,

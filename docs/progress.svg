@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">64.94% (515)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">35.06% (278)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">65.07% (516)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">34.93% (277)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="485.13" height="6" x="0" y="0" class="named"/>
-<rect width="261.87" height="6" x="485.13" y="0" class="todo"/>
+<rect width="486.07" height="6" x="0" y="0" class="named"/>
+<rect width="260.93" height="6" x="486.07" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -584,7 +584,7 @@
 <rect width="12" height="12" x="210" y="150" class="named"><title>0x0002fe88 DrawBridgeFloor (51 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="150" class="named"><title>0x0002febc DrawBridgeCeiling (49 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="150" class="named"><title>0x0002fef0 DrawBridgeCollision (39 bytes)</title></rect>
-<rect width="12" height="12" x="255" y="150" class="todo"><title>0x0002ff18 Func2ff18 (19 bytes)</title></rect>
+<rect width="12" height="12" x="255" y="150" class="named"><title>0x0002ff18 BridgeFlatFloor (19 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="150" class="todo"><title>0x0002ff2c Func2ff2c (21 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="150" class="todo"><title>0x0002ff44 Func2ff44 (71 bytes)</title></rect>
 <rect width="12" height="12" x="300" y="150" class="todo"><title>0x0002ff8c Func2ff8c (35 bytes)</title></rect>
@@ -864,10 +864,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">59.74%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">40.26%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">59.75%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">40.25%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="446.28" height="6" x="0" y="0" class="named"/>
-<rect width="300.72" height="6" x="446.28" y="0" class="todo"/>
+<rect width="446.35" height="6" x="0" y="0" class="named"/>
+<rect width="300.65" height="6" x="446.35" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.01" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1589,7 +1589,7 @@
 <rect width="1.37" height="0.82" x="724.57" y="239.18" class="named"><title>0x00026cc8 lara_col_slide (19 bytes)</title></rect>
 <rect width="1.21" height="0.96" x="728.95" y="217.88" class="named"><title>0x0002a128 lara_col_surfswim (19 bytes)</title></rect>
 <rect width="1.21" height="0.96" x="733.16" y="217.88" class="named"><title>0x0002a188 lara_col_surftread (19 bytes)</title></rect>
-<rect width="1.21" height="0.96" x="737.37" y="217.88" class="todo"><title>0x0002ff18 Func2ff18 (19 bytes)</title></rect>
+<rect width="1.21" height="0.96" x="737.37" y="217.88" class="named"><title>0x0002ff18 BridgeFlatFloor (19 bytes)</title></rect>
 <rect width="1.21" height="0.96" x="741.58" y="217.88" class="todo"><title>0x00045c00 FadeWait (19 bytes)</title></rect>
 <rect width="1.21" height="0.96" x="745.79" y="217.88" class="todo"><title>0x00046c2e Func46c2e (19 bytes)</title></rect>
 <rect width="1.31" height="0.67" x="728.95" y="221.84" class="named"><title>0x0001e2c0 S_LoadTitle (18 bytes)</title></rect>

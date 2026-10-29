@@ -148,3 +148,9 @@ void DrawBridgeCollision(sint16 item_num, ITEM_INFO *laraitem, COLL_INFO *coll)
     if (item->current_anim_state == DOOR_CLOSED)
         DoorCollision(item_num, laraitem, coll);
 }
+
+void BridgeFlatFloor(ITEM_INFO *item, sint32 x, sint32 y, sint32 z, sint16 *height)
+{
+    if (y <= item->pos.y_pos)
+        *height = (sint16)item->pos.y_pos;
+}
