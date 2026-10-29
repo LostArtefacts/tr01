@@ -81,3 +81,33 @@ void S_DrawScreenSprite2d(sint32 sx, sint32 sy, sint32 z, sint32 scaleH, sint32 
 
     surfacenum++;
 }
+
+void S_DrawScreenSprite(sint32 sx, sint32 sy, sint32 z, sint32 scaleH, sint32 scaleV, sint16 sprnum, sint16 shade, uint16 flags)
+{
+    PHDSPRITESTRUCT *sptr;
+    sint16 x1, y1, x2, y2;
+
+    sptr = &phdsprinfo[sprnum];
+    x1 = (sint16)((((sptr->x1 >> 3) * scaleH) >> 16) + sx);
+    x2 = (sint16)((((sptr->x2 >> 3) * scaleH) >> 16) + sx);
+    y1 = (sint16)((((sptr->y1 >> 3) * scaleV) >> 16) + sy);
+    y2 = (sint16)((((sptr->y2 >> 3) * scaleV) >> 16) + sy);
+
+    if (x2 < 0 || y2 < 0 || x1 >= phd_winwidth || y1 >= phd_winheight)
+        return;
+
+    *(sort3dptr) = (sint32)(info3dptr);
+    *(sort3dptr + 1) = z << 3;
+    sort3dptr += 2;
+
+    *(info3dptr) = DRAW_SCALED_SPRITE;
+    *(info3dptr + 1) = x1;
+    *(info3dptr + 2) = y1;
+    *(info3dptr + 3) = x2;
+    *(info3dptr + 4) = y2;
+    *(info3dptr + 5) = sprnum;
+    *(info3dptr + 6) = shade;
+    info3dptr += 7;
+
+    surfacenum++;
+}

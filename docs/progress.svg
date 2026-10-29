@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">25.94% (201)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">74.06% (574)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">26.06% (202)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">73.94% (573)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="193.74" height="6" x="0" y="0" class="named"/>
-<rect width="553.26" height="6" x="193.74" y="0" class="todo"/>
+<rect width="194.70" height="6" x="0" y="0" class="named"/>
+<rect width="552.30" height="6" x="194.70" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -270,7 +270,7 @@
 <rect width="12" height="12" x="0" y="60" class="named"><title>0x0001f63c S_SetGamma (1 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="60" class="named"><title>0x0001f640 S_DrawSpriteSize (142 bytes)</title></rect>
 <rect width="12" height="12" x="30" y="60" class="named"><title>0x0001f6d0 S_DrawScreenSprite2d (241 bytes)</title></rect>
-<rect width="12" height="12" x="45" y="60" class="todo"><title>0x0001f7c4 Func1f7c4 (255 bytes)</title></rect>
+<rect width="12" height="12" x="45" y="60" class="named"><title>0x0001f7c4 S_DrawScreenSprite (255 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="60" class="todo"><title>0x0001f8c4 Func1f8c4 (98 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="60" class="todo"><title>0x0001f928 Func1f928 (290 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="60" class="todo"><title>0x0001fa4c Func1fa4c (120 bytes)</title></rect>
@@ -846,10 +846,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">29.16%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">70.84%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">29.28%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">70.72%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="217.80" height="6" x="0" y="0" class="named"/>
-<rect width="529.20" height="6" x="217.80" y="0" class="todo"/>
+<rect width="218.74" height="6" x="0" y="0" class="named"/>
+<rect width="528.26" height="6" x="218.74" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1071,7 +1071,7 @@
 <rect width="12.15" height="12.22" x="525.29" y="93.77" class="todo"><title>0x0002579c Func2579c (258 bytes)</title></rect>
 <rect width="12.15" height="12.17" x="525.29" y="108.99" class="todo"><title>0x0002751c Func2751c (257 bytes)</title></rect>
 <rect width="12.15" height="12.11" x="525.29" y="124.16" class="todo"><title>0x00030a7c Func30a7c (256 bytes)</title></rect>
-<rect width="12.15" height="12.05" x="525.29" y="139.26" class="todo"><title>0x0001f7c4 Func1f7c4 (255 bytes)</title></rect>
+<rect width="12.15" height="12.05" x="525.29" y="139.26" class="named"><title>0x0001f7c4 S_DrawScreenSprite (255 bytes)</title></rect>
 <rect width="12.15" height="12.05" x="525.29" y="154.31" class="todo"><title>0x00035338 Func35338 (255 bytes)</title></rect>
 <rect width="12.15" height="11.99" x="525.29" y="169.36" class="todo"><title>0x0002eefc Func2eefc (254 bytes)</title></rect>
 <rect width="12.15" height="11.87" x="525.29" y="184.35" class="named"><title>0x00011c30 StalkBox (252 bytes)</title></rect>

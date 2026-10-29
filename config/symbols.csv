@@ -202,7 +202,7 @@ address,size,name,symbol
 0x0001f63c,1,S_SetGamma,S_SetGamma_
 0x0001f640,142,S_DrawSpriteSize,S_DrawSpriteSize_
 0x0001f6d0,241,S_DrawScreenSprite2d,S_DrawScreenSprite2d_
-0x0001f7c4,255,Func1f7c4,
+0x0001f7c4,255,S_DrawScreenSprite,S_DrawScreenSprite_
 0x0001f8c4,98,Func1f8c4,
 0x0001f928,290,Func1f928,
 0x0001fa4c,120,Func1fa4c,
