@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">30.41% (236)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">69.59% (540)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">30.54% (237)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">69.46% (539)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="227.18" height="6" x="0" y="0" class="named"/>
-<rect width="519.82" height="6" x="227.18" y="0" class="todo"/>
+<rect width="228.14" height="6" x="0" y="0" class="named"/>
+<rect width="518.86" height="6" x="228.14" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -305,7 +305,7 @@
 <rect width="12" height="12" x="525" y="60" class="named"><title>0x00020cd4 AddDisplayPickup (91 bytes)</title></rect>
 <rect width="12" height="12" x="540" y="60" class="named"><title>0x00020d30 S_InitialiseSystem (186 bytes)</title></rect>
 <rect width="12" height="12" x="555" y="60" class="named"><title>0x00020dec S_ExitSystem (70 bytes)</title></rect>
-<rect width="12" height="12" x="570" y="60" class="todo"><title>0x00020e34 init_game_malloc (31 bytes)</title></rect>
+<rect width="12" height="12" x="570" y="60" class="named"><title>0x00020e34 init_game_malloc (31 bytes)</title></rect>
 <rect width="12" height="12" x="585" y="60" class="todo"><title>0x00020e54 game_malloc (109 bytes)</title></rect>
 <rect width="12" height="12" x="600" y="60" class="todo"><title>0x00020ec4 Func20ec4 (47 bytes)</title></rect>
 <rect width="12" height="12" x="615" y="60" class="todo"><title>0x00020ef4 CalculateWibbleTable (105 bytes)</title></rect>
@@ -847,10 +847,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">31.82%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">68.18%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">31.84%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">68.16%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="237.71" height="6" x="0" y="0" class="named"/>
-<rect width="509.29" height="6" x="237.71" y="0" class="todo"/>
+<rect width="237.82" height="6" x="0" y="0" class="named"/>
+<rect width="509.18" height="6" x="237.82" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1526,7 +1526,7 @@
 <rect width="2.24" height="2.46" x="705.64" y="237.54" class="todo"><title>0x00025778 Func25778 (32 bytes)</title></rect>
 <rect width="2.56" height="2.14" x="710.88" y="203.93" class="todo"><title>0x00025a88 Func25a88 (32 bytes)</title></rect>
 <rect width="2.56" height="2.14" x="710.88" y="209.08" class="todo"><title>0x00038d34 Func38d34 (32 bytes)</title></rect>
-<rect width="2.56" height="1.98" x="710.88" y="214.22" class="todo"><title>0x00020e34 init_game_malloc (31 bytes)</title></rect>
+<rect width="2.56" height="1.98" x="710.88" y="214.22" class="named"><title>0x00020e34 init_game_malloc (31 bytes)</title></rect>
 <rect width="2.56" height="1.98" x="710.88" y="219.21" class="todo"><title>0x000245a8 Func245a8 (31 bytes)</title></rect>
 <rect width="2.56" height="1.82" x="710.88" y="224.19" class="todo"><title>0x0004564d phd_PushMatrix (30 bytes)</title></rect>
 <rect width="2.56" height="1.66" x="710.88" y="229.01" class="named"><title>0x0001d00c phd_PutPolygons_I (29 bytes)</title></rect>

@@ -49,3 +49,10 @@ void S_ExitSystem(char *exit_message)
 
     ShellExit("\n\nTomb Raider (c) Core Design. %s %s \n%s\n%s\n", "Oct 30 1996", "16:24:55", " ", exit_message);
 }
+
+void init_game_malloc(void)
+{
+    malloc_ptr = malloc_buffer;
+    malloc_free = malloc_size;
+    malloc_used = 0;
+}
