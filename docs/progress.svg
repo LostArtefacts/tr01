@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">75.22% (610)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">24.78% (201)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">75.34% (611)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">24.66% (200)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="561.86" height="6" x="0" y="0" class="named"/>
-<rect width="185.14" height="6" x="561.86" y="0" class="todo"/>
+<rect width="562.78" height="6" x="0" y="0" class="named"/>
+<rect width="184.22" height="6" x="562.78" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -678,7 +678,7 @@
 <rect width="12" height="12" x="120" y="180" class="named"><title>0x00038b58 S_SoundPlaySampleLooped (75 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="180" class="named"><title>0x00038ba4 S_SoundSampleIsPlaying (11 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="180" class="named"><title>0x00038bb0 S_SoundStopAllSamples (14 bytes)</title></rect>
-<rect width="12" height="12" x="165" y="180" class="todo"><title>0x00038bc0 S_SoundStopSample (18 bytes)</title></rect>
+<rect width="12" height="12" x="165" y="180" class="named"><title>0x00038bc0 S_SoundStopSample (18 bytes)</title></rect>
 <rect width="12" height="12" x="180" y="180" class="todo"><title>0x00038bd4 S_SoundSetPanAndVolume (60 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="180" class="todo"><title>0x00038cb8 S_CDStop (65 bytes)</title></rect>
 <rect width="12" height="12" x="210" y="180" class="todo"><title>0x00038cfc Func38cfc (54 bytes)</title></rect>
@@ -882,10 +882,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">73.37%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">26.63%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">73.38%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">26.62%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="548.11" height="6" x="0" y="0" class="named"/>
-<rect width="198.89" height="6" x="548.11" y="0" class="todo"/>
+<rect width="548.17" height="6" x="0" y="0" class="named"/>
+<rect width="198.83" height="6" x="548.17" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.96" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1627,7 +1627,7 @@
 <rect width="1.19" height="1" x="730.14" y="233.97" class="todo"><title>0x00046c2e Func46c2e (19 bytes)</title></rect>
 <rect width="0.97" height="1" x="734.33" y="233.97" class="named"><title>0x0001e2c0 S_LoadTitle (18 bytes)</title></rect>
 <rect width="0.97" height="1" x="738.30" y="233.97" class="named"><title>0x0001fac4 S_FinishInventory (18 bytes)</title></rect>
-<rect width="0.97" height="1" x="742.28" y="233.97" class="todo"><title>0x00038bc0 S_SoundStopSample (18 bytes)</title></rect>
+<rect width="0.97" height="1" x="742.28" y="233.97" class="named"><title>0x00038bc0 S_SoundStopSample (18 bytes)</title></rect>
 <rect width="0.75" height="1" x="746.25" y="233.97" class="todo"><title>0x000452d0 Func452d0 (17 bytes)</title></rect>
 <rect width="1.22" height="0.55" x="730.14" y="237.97" class="todo"><title>0x0004670a Func4670a (17 bytes)</title></rect>
 <rect width="0.97" height="0.55" x="734.36" y="237.97" class="named"><title>0x00010af0 S_SetupAboveWater (16 bytes)</title></rect>

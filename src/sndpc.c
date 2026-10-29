@@ -6,6 +6,7 @@ sint32 SoundPlaySample(sint32 sample, uint16 volume, uint16 pitch, uint16 pan);
 sint32 SoundPlaySampleLooped(sint32 sample, uint16 volume, uint16 pitch, uint16 pan, int loops, int loop_start, int loop_end);
 sint32 SoundSampleIsPlaying(sint32 handle);
 void SoundStopAllSamples(void);
+void SoundStopSample(sint32 handle);
 
 uint16 S_get_pan(sint16 angle)
 {
@@ -47,4 +48,15 @@ void S_SoundStopAllSamples(void)
         return;
 
     SoundStopAllSamples();
+}
+
+void S_SoundStopSample(sint32 handle)
+{
+    if (!sound_active)
+        return;
+
+    if (handle < 0)
+        return;
+
+    SoundStopSample(handle);
 }
