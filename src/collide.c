@@ -654,3 +654,20 @@ void DoorCollision(sint16 item_num, ITEM_INFO *laraitem, COLL_INFO *coll)
             ItemPushLara(item, laraitem, coll, 0, 1);
     }
 }
+
+void TrapCollision(sint16 item_num, ITEM_INFO *laraitem, COLL_INFO *coll)
+{
+    ITEM_INFO *item;
+
+    item = &items[item_num];
+
+    if (item->status == ACTIVE)
+    {
+        if (!TestBoundsCollide(item, laraitem, coll->radius))
+            return;
+
+        TestCollision(item, laraitem);
+    }
+    else if (item->status != INVISIBLE)
+        ObjectCollision(item_num, laraitem, coll);
+}
