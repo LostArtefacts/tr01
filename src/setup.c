@@ -38,6 +38,42 @@ void InitialisePod(sint16 item_number);
 void PodControl(sint16 item_number);
 void InitialiseStatue(sint16 item_number);
 void StatueControl(sint16 item_number);
+void FallingBlock(sint16 item_number);
+void FallingBlockFloor(ITEM_INFO *item, sint32 x, sint32 y, sint32 z, sint16 *height);
+void FallingBlockCeiling(ITEM_INFO *item, sint32 x, sint32 y, sint32 z, sint16 *height);
+void Pendulum(sint16 item_number);
+void TeethTrap(sint16 item_number);
+void InitialiseRollingBall(sint16 item_number);
+void RollingBallControl(sint16 item_number);
+void RollingBallCollision(sint16 item_num, ITEM_INFO *litem, COLL_INFO *coll);
+void SpikeCollision(sint16 item_num, ITEM_INFO *litem, COLL_INFO *coll);
+void FallingCeiling(sint16 item_number);
+void InitialiseDamoclesSword(sint16 item_number);
+void DamoclesSwordControl(sint16 item_number);
+void DamoclesSwordCollision(sint16 item_num, ITEM_INFO *laraitem, COLL_INFO *coll);
+void InitialiseMovingBlock(sint16 item_num);
+void MovableBlock(sint16 item_number);
+void MovableBlockCollision(sint16 item_num, ITEM_INFO *laraitem, COLL_INFO *coll);
+void DrawMovableBlock(ITEM_INFO *item);
+void InitialiseRollingBlock(sint16 item_num);
+void RollingBlock(sint16 item_number);
+void InitialiseLightning(sint16 item_num);
+void LightningControl(sint16 item_number);
+void DrawLightning(ITEM_INFO *item);
+void LightningCollision(sint16 item_num, ITEM_INFO *laraitem, COLL_INFO *coll);
+void InitialiseThorsHandle(sint16 item_num);
+void ThorsHandleControl(sint16 item_number);
+void ThorsHandleCollision(sint16 item_num, ITEM_INFO *laraitem, COLL_INFO *coll);
+void ThorsHeadCollision(sint16 item_num, ITEM_INFO *laraitem, COLL_INFO *coll);
+void MidasCollision(sint16 item_num, ITEM_INFO *laraitem, COLL_INFO *coll);
+void DartEmitterControl(sint16 item_num);
+void DartsControl(sint16 item_num);
+void DartEffectControl(sint16 item_num);
+void FlameEmitterControl(sint16 item_number);
+void FlameControl(sint16 fx_number);
+void LavaSpray(sint16 item_number);
+void ControlLavaBlob(sint16 fx_number);
+void LavaWedge(sint16 item_number);
 
 extern sint16 pierre_item;
 
@@ -638,4 +674,125 @@ void BaddyObjects(void)
         obj->collision = ObjectCollision;
         obj->save_anim = obj->save_flags = 1;
     }
+}
+
+#define INIT_MOVBLOCK(a) \
+    obj = &objects[a]; \
+    obj->initialise = InitialiseMovingBlock; \
+    obj->control = MovableBlock; \
+    obj->collision = MovableBlockCollision; \
+    obj->draw_routine = DrawMovableBlock; \
+    obj->save_position = obj->save_anim = obj->save_flags = 1
+
+void TrapObjects(void)
+{
+    OBJECT_INFO *obj;
+
+    obj = &objects[FALLING_BLOCK];
+    obj->control = FallingBlock;
+    obj->floor = FallingBlockFloor;
+    obj->ceiling = FallingBlockCeiling;
+    obj->save_position = obj->save_anim = 1;
+    obj->save_flags = 1;
+
+    obj = &objects[PENDULUM];
+    obj->shadow_size = UNIT_SHADOW / 2;
+    obj->control = Pendulum;
+    obj->collision = TrapCollision;
+    obj->save_flags = 1;
+    obj->save_anim = 1;
+
+    obj = &objects[TEETH_TRAP];
+    obj->collision = TrapCollision;
+    obj->control = TeethTrap;
+    obj->save_flags = 1;
+    obj->save_anim = 1;
+
+    obj = &objects[ROLLING_BALL];
+    obj->collision = RollingBallCollision;
+    obj->control = RollingBallControl;
+    obj->initialise = InitialiseRollingBall;
+    obj->save_position = obj->save_flags = 1;
+    obj->save_anim = 1;
+
+    obj = &objects[SPIKES];
+    obj->collision = SpikeCollision;
+
+    obj = &objects[FALLING_CEILING1];
+    obj->control = FallingCeiling;
+    obj->collision = TrapCollision;
+    obj->save_position = obj->save_anim = 1;
+    obj->save_flags = 1;
+    obj = &objects[FALLING_CEILING2];
+    obj->control = FallingCeiling;
+    obj->collision = TrapCollision;
+    obj->save_position = obj->save_anim = 1;
+    obj->save_flags = 1;
+
+    obj = &objects[DAMOCLES_SWORD];
+    obj->initialise = InitialiseDamoclesSword;
+    obj->control = DamoclesSwordControl;
+    obj->collision = DamoclesSwordCollision;
+    obj->shadow_size = UNIT_SHADOW;
+    obj->save_position = obj->save_flags = 1;
+    obj->save_anim = 1;
+
+    INIT_MOVBLOCK(MOVABLE_BLOCK);
+    INIT_MOVBLOCK(MOVABLE_BLOCK2);
+    INIT_MOVBLOCK(MOVABLE_BLOCK3);
+    INIT_MOVBLOCK(MOVABLE_BLOCK4);
+    obj = &objects[ROLLING_BLOCK];
+    obj->initialise = InitialiseRollingBlock;
+    obj->control = RollingBlock;
+    obj->save_position = obj->save_flags = obj->save_anim = 1;
+
+    obj = &objects[LIGHTNING_EMITTER];
+    obj->initialise = InitialiseLightning;
+    obj->control = LightningControl;
+    obj->draw_routine = DrawLightning;
+    obj->collision = LightningCollision;
+    obj->save_flags = 1;
+
+    obj = &objects[THORS_HANDLE];
+    obj->initialise = InitialiseThorsHandle;
+    obj->control = ThorsHandleControl;
+    obj->collision = ThorsHandleCollision;
+    obj->draw_routine = DrawUnclippedItem;
+    obj->save_anim = 1;
+    obj->save_flags = 1;
+    obj = &objects[THORS_HEAD];
+    obj->collision = ThorsHeadCollision;
+    obj->draw_routine = DrawUnclippedItem;
+    obj->save_anim = 1;
+    obj->save_flags = 1;
+
+    obj = &objects[MIDAS_TOUCH];
+    obj->collision = MidasCollision;
+    obj->draw_routine = DrawDummyItem;
+
+    objects[DART_EMITTER].control = DartEmitterControl;
+    obj = &objects[DARTS];
+    obj->control = DartsControl;
+    obj->collision = ObjectCollision;
+    obj->shadow_size = UNIT_SHADOW / 2;
+    obj->save_flags = 1;
+
+    obj = &objects[DART_EFFECT];
+    obj->control = DartEffectControl;
+    obj->draw_routine = DrawSpriteItem;
+
+    objects[FLAME_EMITTER].control = FlameEmitterControl;
+    objects[FLAME_EMITTER].draw_routine = DrawDummyItem;
+    objects[FLAME].control = FlameControl;
+
+    objects[LAVA_EMITTER].control = LavaSpray;
+    objects[LAVA_EMITTER].collision = ObjectCollision;
+    objects[LAVA_EMITTER].draw_routine = DrawDummyItem;
+    objects[LAVA].control = ControlLavaBlob;
+
+    obj = &objects[LAVA_WEDGE];
+    obj->control = LavaWedge;
+    obj->collision = CreatureCollision;
+    obj->save_position = obj->save_flags = 1;
+    obj->save_anim = 1;
 }

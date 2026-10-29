@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">73.52% (597)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">26.48% (215)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">73.65% (598)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">26.35% (214)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="549.21" height="6" x="0" y="0" class="named"/>
-<rect width="197.79" height="6" x="549.21" y="0" class="todo"/>
+<rect width="550.13" height="6" x="0" y="0" class="named"/>
+<rect width="196.87" height="6" x="550.13" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -665,7 +665,7 @@
 <rect width="12" height="12" x="675" y="165" class="named"><title>0x00036770 InitialiseGameFlags (113 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="165" class="named"><title>0x000367e4 InitialiseLevelFlags (34 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="165" class="named"><title>0x00036808 BaddyObjects (3805 bytes)</title></rect>
-<rect width="12" height="12" x="720" y="165" class="todo"><title>0x000376e8 Func376e8 (1012 bytes)</title></rect>
+<rect width="12" height="12" x="720" y="165" class="named"><title>0x000376e8 TrapObjects (1012 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="165" class="todo"><title>0x00037adc Func37adc (2329 bytes)</title></rect>
 <rect width="12" height="12" x="0" y="180" class="todo"><title>0x000383f8 InitialiseObjects (94 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="180" class="todo"><title>0x00038460 Func38460 (499 bytes)</title></rect>
@@ -717,32 +717,32 @@
 <rect width="12" height="12" x="705" y="180" class="todo"><title>0x000398ec Func398ec (26 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="180" class="todo"><title>0x00039908 T_DrawText (33 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="180" class="todo"><title>0x0003992c Func3992c (1069 bytes)</title></rect>
-<rect width="12" height="12" x="0" y="195" class="todo"><title>0x00039d60 Func39d60 (69 bytes)</title></rect>
-<rect width="12" height="12" x="15" y="195" class="todo"><title>0x00039da8 Func39da8 (616 bytes)</title></rect>
-<rect width="12" height="12" x="30" y="195" class="todo"><title>0x0003a010 Func3a010 (666 bytes)</title></rect>
-<rect width="12" height="12" x="45" y="195" class="todo"><title>0x0003a2ac Func3a2ac (320 bytes)</title></rect>
+<rect width="12" height="12" x="0" y="195" class="todo"><title>0x00039d60 InitialiseRollingBall (69 bytes)</title></rect>
+<rect width="12" height="12" x="15" y="195" class="todo"><title>0x00039da8 RollingBallControl (616 bytes)</title></rect>
+<rect width="12" height="12" x="30" y="195" class="todo"><title>0x0003a010 RollingBallCollision (666 bytes)</title></rect>
+<rect width="12" height="12" x="45" y="195" class="todo"><title>0x0003a2ac SpikeCollision (320 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="195" class="todo"><title>0x0003a3ec Func3a3ec (67 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="195" class="todo"><title>0x0003a430 Func3a430 (53 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="195" class="todo"><title>0x0003a468 Func3a468 (55 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="195" class="todo"><title>0x0003a4a0 Func3a4a0 (165 bytes)</title></rect>
-<rect width="12" height="12" x="120" y="195" class="todo"><title>0x0003a548 Func3a548 (336 bytes)</title></rect>
-<rect width="12" height="12" x="135" y="195" class="todo"><title>0x0003a698 Func3a698 (285 bytes)</title></rect>
-<rect width="12" height="12" x="150" y="195" class="todo"><title>0x0003a7b8 Func3a7b8 (48 bytes)</title></rect>
-<rect width="12" height="12" x="165" y="195" class="todo"><title>0x0003a7e8 Func3a7e8 (48 bytes)</title></rect>
-<rect width="12" height="12" x="180" y="195" class="todo"><title>0x0003a818 Func3a818 (176 bytes)</title></rect>
-<rect width="12" height="12" x="195" y="195" class="todo"><title>0x0003a8c8 Func3a8c8 (168 bytes)</title></rect>
-<rect width="12" height="12" x="210" y="195" class="todo"><title>0x0003a970 Func3a970 (69 bytes)</title></rect>
-<rect width="12" height="12" x="225" y="195" class="todo"><title>0x0003a9b8 Func3a9b8 (338 bytes)</title></rect>
-<rect width="12" height="12" x="240" y="195" class="todo"><title>0x0003ab0c Func3ab0c (228 bytes)</title></rect>
-<rect width="12" height="12" x="255" y="195" class="todo"><title>0x0003abf0 Func3abf0 (414 bytes)</title></rect>
-<rect width="12" height="12" x="270" y="195" class="todo"><title>0x0003ad90 Func3ad90 (305 bytes)</title></rect>
-<rect width="12" height="12" x="285" y="195" class="todo"><title>0x0003aec4 Func3aec4 (99 bytes)</title></rect>
-<rect width="12" height="12" x="300" y="195" class="todo"><title>0x0003af28 Func3af28 (167 bytes)</title></rect>
-<rect width="12" height="12" x="315" y="195" class="todo"><title>0x0003afd0 Func3afd0 (396 bytes)</title></rect>
+<rect width="12" height="12" x="120" y="195" class="todo"><title>0x0003a548 Pendulum (336 bytes)</title></rect>
+<rect width="12" height="12" x="135" y="195" class="todo"><title>0x0003a698 FallingBlock (285 bytes)</title></rect>
+<rect width="12" height="12" x="150" y="195" class="todo"><title>0x0003a7b8 FallingBlockFloor (48 bytes)</title></rect>
+<rect width="12" height="12" x="165" y="195" class="todo"><title>0x0003a7e8 FallingBlockCeiling (48 bytes)</title></rect>
+<rect width="12" height="12" x="180" y="195" class="todo"><title>0x0003a818 TeethTrap (176 bytes)</title></rect>
+<rect width="12" height="12" x="195" y="195" class="todo"><title>0x0003a8c8 FallingCeiling (168 bytes)</title></rect>
+<rect width="12" height="12" x="210" y="195" class="todo"><title>0x0003a970 InitialiseDamoclesSword (69 bytes)</title></rect>
+<rect width="12" height="12" x="225" y="195" class="todo"><title>0x0003a9b8 DamoclesSwordControl (338 bytes)</title></rect>
+<rect width="12" height="12" x="240" y="195" class="todo"><title>0x0003ab0c DamoclesSwordCollision (228 bytes)</title></rect>
+<rect width="12" height="12" x="255" y="195" class="todo"><title>0x0003abf0 DartEmitterControl (414 bytes)</title></rect>
+<rect width="12" height="12" x="270" y="195" class="todo"><title>0x0003ad90 DartsControl (305 bytes)</title></rect>
+<rect width="12" height="12" x="285" y="195" class="todo"><title>0x0003aec4 DartEffectControl (99 bytes)</title></rect>
+<rect width="12" height="12" x="300" y="195" class="todo"><title>0x0003af28 FlameEmitterControl (167 bytes)</title></rect>
+<rect width="12" height="12" x="315" y="195" class="todo"><title>0x0003afd0 FlameControl (396 bytes)</title></rect>
 <rect width="12" height="12" x="330" y="195" class="todo"><title>0x0003b15c LavaBurn (188 bytes)</title></rect>
-<rect width="12" height="12" x="345" y="195" class="todo"><title>0x0003b218 Func3b218 (191 bytes)</title></rect>
-<rect width="12" height="12" x="360" y="195" class="todo"><title>0x0003b2d8 Func3b2d8 (292 bytes)</title></rect>
-<rect width="12" height="12" x="375" y="195" class="todo"><title>0x0003b3fc Func3b3fc (311 bytes)</title></rect>
+<rect width="12" height="12" x="345" y="195" class="todo"><title>0x0003b218 LavaSpray (191 bytes)</title></rect>
+<rect width="12" height="12" x="360" y="195" class="todo"><title>0x0003b2d8 ControlLavaBlob (292 bytes)</title></rect>
+<rect width="12" height="12" x="375" y="195" class="todo"><title>0x0003b3fc LavaWedge (311 bytes)</title></rect>
 <rect width="12" height="12" x="390" y="195" class="todo"><title>0x0003b558 CentaurControl (674 bytes)</title></rect>
 <rect width="12" height="12" x="405" y="195" class="todo"><title>0x0003b7fc InitialiseWarrior2 (36 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="195" class="todo"><title>0x0003b854 FlyerControl (1563 bytes)</title></rect>
@@ -883,10 +883,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">70.96%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">29.04%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">71.42%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">28.58%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="530.05" height="6" x="0" y="0" class="named"/>
-<rect width="216.95" height="6" x="530.05" y="0" class="todo"/>
+<rect width="533.49" height="6" x="0" y="0" class="named"/>
+<rect width="213.51" height="6" x="533.49" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.95" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -934,7 +934,7 @@
 <rect width="28.31" height="26.77" x="233.55" y="60.22" class="named"><title>0x0002371c Inv_AddItem (1057 bytes)</title></rect>
 <rect width="28.31" height="26.32" x="233.55" y="89.99" class="named"><title>0x0001e4b8 LoadRooms (1041 bytes)</title></rect>
 <rect width="28.31" height="25.67" x="233.55" y="119.31" class="named"><title>0x000283b0 LaraControl (1018 bytes)</title></rect>
-<rect width="28.31" height="25.50" x="233.55" y="147.98" class="todo"><title>0x000376e8 Func376e8 (1012 bytes)</title></rect>
+<rect width="28.31" height="25.50" x="233.55" y="147.98" class="named"><title>0x000376e8 TrapObjects (1012 bytes)</title></rect>
 <rect width="28.31" height="24.88" x="233.55" y="176.49" class="named"><title>0x0001a578 SetRoomBounds (990 bytes)</title></rect>
 <rect width="28.31" height="24.26" x="233.55" y="204.37" class="named"><title>0x00022848 DrawInventoryItem (968 bytes)</title></rect>
 <rect width="28.31" height="23.36" x="233.55" y="231.64" class="named"><title>0x00010b28 S_DrawLighteningSegment (936 bytes)</title></rect>
@@ -979,7 +979,7 @@
 <rect width="22.58" height="20.13" x="343.66" y="211.83" class="named"><title>0x0002c5f4 LightningControl (671 bytes)</title></rect>
 <rect width="22.58" height="20.03" x="343.66" y="234.97" class="named"><title>0x00034874 PuzzleHoleCollision (668 bytes)</title></rect>
 <rect width="21.05" height="21.42" x="369.24" y="0" class="named"><title>0x0002c97c ThorsHandleControl (666 bytes)</title></rect>
-<rect width="21.05" height="21.42" x="369.24" y="24.42" class="todo"><title>0x0003a010 Func3a010 (666 bytes)</title></rect>
+<rect width="21.05" height="21.42" x="369.24" y="24.42" class="todo"><title>0x0003a010 RollingBallCollision (666 bytes)</title></rect>
 <rect width="21.05" height="21.35" x="369.24" y="48.85" class="named"><title>0x00033444 SkateKidControl (664 bytes)</title></rect>
 <rect width="21.05" height="20.95" x="369.24" y="73.20" class="named"><title>0x0001767c GetHeight (653 bytes)</title></rect>
 <rect width="21.05" height="20.51" x="369.24" y="97.15" class="named"><title>0x000180e8 GetCeiling (641 bytes)</title></rect>
@@ -987,7 +987,7 @@
 <rect width="21.05" height="20.25" x="369.24" y="144.09" class="named"><title>0x00011674 CreatureAIInfo (634 bytes)</title></rect>
 <rect width="21.05" height="20.10" x="369.24" y="167.34" class="todo"><title>0x000421d0 Func421d0 (630 bytes)</title></rect>
 <rect width="21.05" height="19.99" x="369.24" y="190.45" class="todo"><title>0x0003be70 Func3be70 (627 bytes)</title></rect>
-<rect width="21.05" height="19.59" x="369.24" y="213.44" class="todo"><title>0x00039da8 Func39da8 (616 bytes)</title></rect>
+<rect width="21.05" height="19.59" x="369.24" y="213.44" class="todo"><title>0x00039da8 RollingBallControl (616 bytes)</title></rect>
 <rect width="21.05" height="18.97" x="369.24" y="236.03" class="named"><title>0x0002f00c TestBlockPull (599 bytes)</title></rect>
 <rect width="19.56" height="19.91" x="393.29" y="0" class="todo"><title>0x0003f910 Func3f910 (586 bytes)</title></rect>
 <rect width="19.56" height="19.01" x="393.29" y="22.91" class="named"><title>0x0002769c LaraHangTest (563 bytes)</title></rect>
@@ -1041,7 +1041,7 @@
 <rect width="16.70" height="16.20" x="457.38" y="238.80" class="named"><title>0x00026084 lara_col_walk (429 bytes)</title></rect>
 <rect width="16.42" height="16.39" x="477.08" y="0" class="todo"><title>0x0003d7e0 phd_GenerateW2V (427 bytes)</title></rect>
 <rect width="16.42" height="15.80" x="477.08" y="19.39" class="named"><title>0x0002d93c mn_update_sound_effects (414 bytes)</title></rect>
-<rect width="16.42" height="15.80" x="477.08" y="38.19" class="todo"><title>0x0003abf0 Func3abf0 (414 bytes)</title></rect>
+<rect width="16.42" height="15.80" x="477.08" y="38.19" class="todo"><title>0x0003abf0 DartEmitterControl (414 bytes)</title></rect>
 <rect width="16.42" height="15.67" x="477.08" y="57" class="named"><title>0x000252f8 lara_as_stop (411 bytes)</title></rect>
 <rect width="16.42" height="15.57" x="477.08" y="75.66" class="named"><title>0x00014fe4 InGameCinematicCamera (409 bytes)</title></rect>
 <rect width="16.42" height="15.44" x="477.08" y="94.24" class="named"><title>0x00010310 S_PrintShadow (406 bytes)</title></rect>
@@ -1050,7 +1050,7 @@
 <rect width="16.42" height="15.35" x="477.08" y="149.46" class="named"><title>0x000364a4 ConfirmSave (404 bytes)</title></rect>
 <rect width="16.42" height="15.26" x="477.08" y="167.81" class="named"><title>0x00014060 ShiftClamp (402 bytes)</title></rect>
 <rect width="16.42" height="15.21" x="477.08" y="186.06" class="named"><title>0x000104a8 S_CalculateLight (401 bytes)</title></rect>
-<rect width="16.42" height="14.98" x="477.08" y="204.27" class="todo"><title>0x0003afd0 Func3afd0 (396 bytes)</title></rect>
+<rect width="16.42" height="14.98" x="477.08" y="204.27" class="todo"><title>0x0003afd0 FlameControl (396 bytes)</title></rect>
 <rect width="16.42" height="14.94" x="477.08" y="222.26" class="named"><title>0x00030184 Scion3Control (395 bytes)</title></rect>
 <rect width="16.42" height="14.80" x="477.08" y="240.20" class="named"><title>0x00027fa0 LaraTestHangJumpUp (392 bytes)</title></rect>
 <rect width="15.82" height="15.28" x="496.50" y="0" class="named"><title>0x0002b2a4 undraw_shotgun (390 bytes)</title></rect>
@@ -1071,8 +1071,8 @@
 <rect width="14.30" height="14.95" x="496.50" y="36.33" class="named"><title>0x0002bcd8 PistolHandler (352 bytes)</title></rect>
 <rect width="14.30" height="14.80" x="496.50" y="54.28" class="named"><title>0x00016bb4 Move3DPosTo3DPos (349 bytes)</title></rect>
 <rect width="14.30" height="14.29" x="496.50" y="72.08" class="named"><title>0x000168b0 TestLaraPosition (339 bytes)</title></rect>
-<rect width="14.30" height="14.24" x="496.50" y="89.36" class="todo"><title>0x0003a9b8 Func3a9b8 (338 bytes)</title></rect>
-<rect width="14.30" height="14.13" x="496.50" y="106.60" class="todo"><title>0x0003a548 Func3a548 (336 bytes)</title></rect>
+<rect width="14.30" height="14.24" x="496.50" y="89.36" class="todo"><title>0x0003a9b8 DamoclesSwordControl (338 bytes)</title></rect>
+<rect width="14.30" height="14.13" x="496.50" y="106.60" class="todo"><title>0x0003a548 Pendulum (336 bytes)</title></rect>
 <rect width="14.30" height="14.08" x="496.50" y="123.73" class="named"><title>0x00014d68 CalculateCinematicCamera (335 bytes)</title></rect>
 <rect width="14.30" height="14.08" x="496.50" y="140.82" class="named"><title>0x00019520 StartDemo (335 bytes)</title></rect>
 <rect width="14.30" height="13.98" x="496.50" y="157.90" class="named"><title>0x00020fd0 Key (333 bytes)</title></rect>
@@ -1081,28 +1081,28 @@
 <rect width="14.30" height="13.67" x="496.50" y="208.33" class="named"><title>0x00023d64 Inv_RemoveItem (327 bytes)</title></rect>
 <rect width="14.30" height="13.62" x="496.50" y="225.01" class="named"><title>0x00020648 S_FrontEndCheck (326 bytes)</title></rect>
 <rect width="14.30" height="13.37" x="496.50" y="241.63" class="named"><title>0x0002e940 ControlNatlaGun (321 bytes)</title></rect>
-<rect width="14.35" height="13.27" x="513.80" y="18.28" class="todo"><title>0x0003a2ac Func3a2ac (320 bytes)</title></rect>
+<rect width="14.35" height="13.27" x="513.80" y="18.28" class="todo"><title>0x0003a2ac SpikeCollision (320 bytes)</title></rect>
 <rect width="14.29" height="13.27" x="531.15" y="18.28" class="named"><title>0x00018ce8 TriggerCDTrack (319 bytes)</title></rect>
 <rect width="14.19" height="13.27" x="548.44" y="18.28" class="named"><title>0x000141f4 CombatCamera (317 bytes)</title></rect>
 <rect width="14.13" height="13.27" x="565.62" y="18.28" class="named"><title>0x00035438 CreateStartInfo (316 bytes)</title></rect>
 <rect width="13.97" height="13.27" x="582.76" y="18.28" class="named"><title>0x00011060 BatControl (313 bytes)</title></rect>
 <rect width="13.91" height="13.27" x="599.72" y="18.28" class="named"><title>0x0001dac0 ControlBubble1 (312 bytes)</title></rect>
 <rect width="13.91" height="13.27" x="616.64" y="18.28" class="named"><title>0x0002dc00 mn_stop_sound_effect (312 bytes)</title></rect>
-<rect width="13.86" height="13.27" x="633.55" y="18.28" class="todo"><title>0x0003b3fc Func3b3fc (311 bytes)</title></rect>
+<rect width="13.86" height="13.27" x="633.55" y="18.28" class="todo"><title>0x0003b3fc LavaWedge (311 bytes)</title></rect>
 <rect width="13.75" height="13.27" x="650.41" y="18.28" class="named"><title>0x0002793c LaraDeflectEdgeJump (309 bytes)</title></rect>
 <rect width="13.70" height="13.27" x="667.16" y="18.28" class="todo"><title>0x00044761 Func44761 (308 bytes)</title></rect>
 <rect width="13.64" height="13.27" x="683.86" y="18.28" class="todo"><title>0x00045868 Func45868 (307 bytes)</title></rect>
 <rect width="13.59" height="13.27" x="700.50" y="18.28" class="named"><title>0x00020ac0 DrawAmmoInfo (306 bytes)</title></rect>
-<rect width="13.53" height="13.27" x="717.09" y="18.28" class="todo"><title>0x0003ad90 Func3ad90 (305 bytes)</title></rect>
+<rect width="13.53" height="13.27" x="717.09" y="18.28" class="todo"><title>0x0003ad90 DartsControl (305 bytes)</title></rect>
 <rect width="13.37" height="13.27" x="733.63" y="18.28" class="named"><title>0x0001d8b0 ItemSparkle (302 bytes)</title></rect>
 <rect width="12.90" height="13.64" x="513.80" y="34.55" class="named"><title>0x00022608 Construct_Inventory (300 bytes)</title></rect>
 <rect width="12.90" height="13.53" x="513.80" y="51.19" class="named"><title>0x0001fdf0 StartGame (298 bytes)</title></rect>
 <rect width="12.90" height="13.42" x="513.80" y="67.71" class="named"><title>0x0002eb34 MovableBlock (296 bytes)</title></rect>
 <rect width="12.90" height="13.36" x="513.80" y="84.13" class="named"><title>0x00013978 ShiftCamera (295 bytes)</title></rect>
 <rect width="12.90" height="13.19" x="513.80" y="100.49" class="named"><title>0x0002dadc mn_get_sound_params (292 bytes)</title></rect>
-<rect width="12.90" height="13.19" x="513.80" y="116.69" class="todo"><title>0x0003b2d8 Func3b2d8 (292 bytes)</title></rect>
+<rect width="12.90" height="13.19" x="513.80" y="116.69" class="todo"><title>0x0003b2d8 ControlLavaBlob (292 bytes)</title></rect>
 <rect width="12.90" height="13.08" x="513.80" y="132.88" class="named"><title>0x0001f928 S_DrawScreenBox (290 bytes)</title></rect>
-<rect width="12.90" height="12.81" x="513.80" y="148.96" class="todo"><title>0x0003a698 Func3a698 (285 bytes)</title></rect>
+<rect width="12.90" height="12.81" x="513.80" y="148.96" class="todo"><title>0x0003a698 FallingBlock (285 bytes)</title></rect>
 <rect width="12.90" height="12.75" x="513.80" y="164.77" class="named"><title>0x0002d000 CreateZone (284 bytes)</title></rect>
 <rect width="12.90" height="12.58" x="513.80" y="180.52" class="todo"><title>0x00039584 T_Print (281 bytes)</title></rect>
 <rect width="12.90" height="12.53" x="513.80" y="196.11" class="named"><title>0x00029070 LaraInitialiseMeshes (280 bytes)</title></rect>
@@ -1146,7 +1146,7 @@
 <rect width="10.70" height="11.74" x="627.53" y="49.57" class="named"><title>0x00019f68 setup_screen_size (229 bytes)</title></rect>
 <rect width="10.70" height="11.74" x="641.23" y="49.57" class="todo"><title>0x0003c918 InitialisePod (229 bytes)</title></rect>
 <rect width="10.64" height="11.74" x="654.93" y="49.57" class="todo"><title>0x00038654 Func38654 (228 bytes)</title></rect>
-<rect width="10.64" height="11.74" x="668.57" y="49.57" class="todo"><title>0x0003ab0c Func3ab0c (228 bytes)</title></rect>
+<rect width="10.64" height="11.74" x="668.57" y="49.57" class="todo"><title>0x0003ab0c DamoclesSwordCollision (228 bytes)</title></rect>
 <rect width="10.64" height="11.74" x="682.21" y="49.57" class="todo"><title>0x0003cbfc StatueControl (228 bytes)</title></rect>
 <rect width="10.58" height="11.74" x="695.86" y="49.57" class="named"><title>0x00018b3c FlipMap (227 bytes)</title></rect>
 <rect width="10.58" height="11.74" x="709.44" y="49.57" class="todo"><title>0x0003ec1c phd_RotateLight (227 bytes)</title></rect>
@@ -1182,7 +1182,7 @@
 <rect width="10.20" height="10.03" x="736.80" y="64.31" class="named"><title>0x0001d370 GetFrames (195 bytes)</title></rect>
 <rect width="9.86" height="10.30" x="558.34" y="77.34" class="named"><title>0x00025494 lara_as_forwardjump (194 bytes)</title></rect>
 <rect width="9.86" height="10.16" x="558.34" y="90.64" class="named"><title>0x00024e28 KillEffect (192 bytes)</title></rect>
-<rect width="9.86" height="10.10" x="558.34" y="103.81" class="todo"><title>0x0003b218 Func3b218 (191 bytes)</title></rect>
+<rect width="9.86" height="10.10" x="558.34" y="103.81" class="todo"><title>0x0003b218 LavaSpray (191 bytes)</title></rect>
 <rect width="9.86" height="10.03" x="558.34" y="116.90" class="todo"><title>0x00045a4c FileLoad (190 bytes)</title></rect>
 <rect width="9.86" height="9.96" x="558.34" y="129.93" class="named"><title>0x00026c08 lara_col_stepleft (189 bytes)</title></rect>
 <rect width="9.86" height="9.89" x="558.34" y="142.89" class="named"><title>0x00034c4c PickUpSaveGameCollision (188 bytes)</title></rect>
@@ -1207,7 +1207,7 @@
 <rect width="9.63" height="9.50" x="699.92" y="77.34" class="named"><title>0x0002fdd4 OnDrawBridge (179 bytes)</title></rect>
 <rect width="9.55" height="9.50" x="712.55" y="77.34" class="named"><title>0x0001de6c dino_stomp_effect (178 bytes)</title></rect>
 <rect width="9.48" height="9.50" x="725.10" y="77.34" class="named"><title>0x0002674c lara_col_fastfall (177 bytes)</title></rect>
-<rect width="9.41" height="9.50" x="737.59" y="77.34" class="todo"><title>0x0003a818 Func3a818 (176 bytes)</title></rect>
+<rect width="9.41" height="9.50" x="737.59" y="77.34" class="todo"><title>0x0003a818 TeethTrap (176 bytes)</title></rect>
 <rect width="9.35" height="9.35" x="571.20" y="89.85" class="named"><title>0x00026978 lara_col_compress (173 bytes)</title></rect>
 <rect width="9.35" height="9.35" x="571.20" y="102.20" class="todo"><title>0x00038978 S_SaveSettings (173 bytes)</title></rect>
 <rect width="9.35" height="9.21" x="571.20" y="114.55" class="named"><title>0x0002686c lara_col_reach (171 bytes)</title></rect>
@@ -1216,8 +1216,8 @@
 <rect width="9.35" height="9" x="571.20" y="150.97" class="named"><title>0x00013560 InitialiseCamera (168 bytes)</title></rect>
 <rect width="9.35" height="9" x="571.20" y="162.96" class="named"><title>0x00014f18 InitialisePlayer1 (168 bytes)</title></rect>
 <rect width="9.35" height="9" x="571.20" y="174.96" class="named"><title>0x0002975c lara_as_tread (168 bytes)</title></rect>
-<rect width="9.35" height="9" x="571.20" y="186.95" class="todo"><title>0x0003a8c8 Func3a8c8 (168 bytes)</title></rect>
-<rect width="9.35" height="8.92" x="571.20" y="198.95" class="todo"><title>0x0003af28 Func3af28 (167 bytes)</title></rect>
+<rect width="9.35" height="9" x="571.20" y="186.95" class="todo"><title>0x0003a8c8 FallingCeiling (168 bytes)</title></rect>
+<rect width="9.35" height="8.92" x="571.20" y="198.95" class="todo"><title>0x0003af28 FlameEmitterControl (167 bytes)</title></rect>
 <rect width="9.35" height="8.85" x="571.20" y="210.87" class="todo"><title>0x000459a4 ShellExit (166 bytes)</title></rect>
 <rect width="9.35" height="8.78" x="571.20" y="222.73" class="todo"><title>0x0003a4a0 Func3a4a0 (165 bytes)</title></rect>
 <rect width="9.35" height="8.78" x="571.20" y="234.51" class="todo"><title>0x0003c2f4 MummyControl (165 bytes)</title></rect>
@@ -1345,7 +1345,7 @@
 <rect width="6.22" height="6.57" x="740.78" y="133.78" class="named"><title>0x0001e154 PowerUpFX (100 bytes)</title></rect>
 <rect width="6.05" height="6.75" x="626.47" y="143.35" class="named"><title>0x0001f40c LoadDemo (100 bytes)</title></rect>
 <rect width="6.05" height="6.65" x="626.47" y="153.10" class="named"><title>0x0001d6f0 ControlExplosion1 (99 bytes)</title></rect>
-<rect width="6.05" height="6.65" x="626.47" y="162.75" class="todo"><title>0x0003aec4 Func3aec4 (99 bytes)</title></rect>
+<rect width="6.05" height="6.65" x="626.47" y="162.75" class="todo"><title>0x0003aec4 DartEffectControl (99 bytes)</title></rect>
 <rect width="6.05" height="6.55" x="626.47" y="172.40" class="named"><title>0x0001f8c4 S_DrawScreenLine (98 bytes)</title></rect>
 <rect width="6.05" height="6.55" x="626.47" y="181.96" class="named"><title>0x00029e38 lara_as_surfback (98 bytes)</title></rect>
 <rect width="6.05" height="6.55" x="626.47" y="191.51" class="named"><title>0x00029e9c lara_as_surfleft (98 bytes)</title></rect>
@@ -1426,8 +1426,8 @@
 <rect width="4.92" height="4.69" x="718.33" y="161.52" class="named"><title>0x000256e0 lara_as_fastfall (69 bytes)</title></rect>
 <rect width="4.92" height="4.69" x="726.25" y="161.52" class="named"><title>0x0002cc18 ThorsHandleCollision (69 bytes)</title></rect>
 <rect width="4.92" height="4.69" x="734.17" y="161.52" class="todo"><title>0x00038b10 S_SoundPlaySample (69 bytes)</title></rect>
-<rect width="4.92" height="4.69" x="742.08" y="161.52" class="todo"><title>0x00039d60 Func39d60 (69 bytes)</title></rect>
-<rect width="4.70" height="4.91" x="661.43" y="169.21" class="todo"><title>0x0003a970 Func3a970 (69 bytes)</title></rect>
+<rect width="4.92" height="4.69" x="742.08" y="161.52" class="todo"><title>0x00039d60 InitialiseRollingBall (69 bytes)</title></rect>
+<rect width="4.70" height="4.91" x="661.43" y="169.21" class="todo"><title>0x0003a970 InitialiseDamoclesSword (69 bytes)</title></rect>
 <rect width="4.59" height="4.91" x="669.12" y="169.21" class="named"><title>0x0001ac2c DrawSpriteItem (68 bytes)</title></rect>
 <rect width="4.47" height="4.91" x="676.71" y="169.21" class="named"><title>0x00011630 InitialiseCreature (67 bytes)</title></rect>
 <rect width="4.47" height="4.91" x="684.18" y="169.21" class="todo"><title>0x0003a3ec Func3a3ec (67 bytes)</title></rect>
@@ -1500,8 +1500,8 @@
 <rect width="3.33" height="3.82" x="682.58" y="211.08" class="named"><title>0x0002febc DrawBridgeCeiling (49 bytes)</title></rect>
 <rect width="3.33" height="3.68" x="682.58" y="217.90" class="named"><title>0x000274ec GetLaraCollisionInfo (48 bytes)</title></rect>
 <rect width="3.33" height="3.68" x="682.58" y="224.58" class="named"><title>0x00031f3c Init_Requester (48 bytes)</title></rect>
-<rect width="3.33" height="3.68" x="682.58" y="231.27" class="todo"><title>0x0003a7b8 Func3a7b8 (48 bytes)</title></rect>
-<rect width="3.33" height="3.68" x="682.58" y="237.95" class="todo"><title>0x0003a7e8 Func3a7e8 (48 bytes)</title></rect>
+<rect width="3.33" height="3.68" x="682.58" y="231.27" class="todo"><title>0x0003a7b8 FallingBlockFloor (48 bytes)</title></rect>
+<rect width="3.33" height="3.68" x="682.58" y="237.95" class="todo"><title>0x0003a7e8 FallingBlockCeiling (48 bytes)</title></rect>
 <rect width="3.33" height="3.68" x="682.58" y="244.63" class="todo"><title>0x0003dad4 Func3dad4 (48 bytes)</title></rect>
 <rect width="3.33" height="3.68" x="682.58" y="251.32" class="todo"><title>0x0003ee7c phd_PrintPolyList (48 bytes)</title></rect>
 <rect width="3.28" height="3.60" x="688.92" y="190.61" class="named"><title>0x0001cf74 phd_TranslateRel_ID (47 bytes)</title></rect>
