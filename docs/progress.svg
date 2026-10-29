@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">60.05% (475)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">39.95% (316)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">60.18% (476)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">39.82% (315)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="448.58" height="6" x="0" y="0" class="named"/>
-<rect width="298.42" height="6" x="448.58" y="0" class="todo"/>
+<rect width="449.52" height="6" x="0" y="0" class="named"/>
+<rect width="297.48" height="6" x="449.52" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -543,8 +543,8 @@
 <rect width="12" height="12" x="345" y="135" class="named"><title>0x0002cc60 ThorsHeadCollision (76 bytes)</title></rect>
 <rect width="12" height="12" x="360" y="135" class="named"><title>0x0002ccb0 InitialiseLOTarray (75 bytes)</title></rect>
 <rect width="12" height="12" x="375" y="135" class="named"><title>0x0002ccfc DisableBaddieAI (49 bytes)</title></rect>
-<rect width="12" height="12" x="390" y="135" class="todo"><title>0x0002cd30 EnableBaddieAI (472 bytes)</title></rect>
-<rect width="12" height="12" x="405" y="135" class="todo"><title>0x0002cf08 Func2cf08 (247 bytes)</title></rect>
+<rect width="12" height="12" x="390" y="135" class="named"><title>0x0002cd30 EnableBaddieAI (472 bytes)</title></rect>
+<rect width="12" height="12" x="405" y="135" class="todo"><title>0x0002cf08 InitialiseSlot (247 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="135" class="todo"><title>0x0002d000 Func2d000 (284 bytes)</title></rect>
 <rect width="12" height="12" x="435" y="135" class="todo"><title>0x0002d11c InitialiseLOT (39 bytes)</title></rect>
 <rect width="12" height="12" x="450" y="135" class="todo"><title>0x0002d144 Func2d144 (87 bytes)</title></rect>
@@ -862,10 +862,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">55.12%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">44.88%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">55.35%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">44.65%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="411.74" height="6" x="0" y="0" class="named"/>
-<rect width="335.26" height="6" x="411.74" y="0" class="todo"/>
+<rect width="413.46" height="6" x="0" y="0" class="named"/>
+<rect width="333.54" height="6" x="413.46" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.78" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -978,7 +978,7 @@
 <rect width="17.75" height="17.78" x="411.47" y="20.87" class="todo"><title>0x00033df0 Func33df0 (484 bytes)</title></rect>
 <rect width="17.75" height="17.78" x="411.47" y="41.64" class="todo"><title>0x0003d5f0 Func3d5f0 (484 bytes)</title></rect>
 <rect width="17.75" height="17.35" x="411.47" y="62.42" class="todo"><title>0x00046a54 Func46a54 (474 bytes)</title></rect>
-<rect width="17.75" height="17.26" x="411.47" y="82.77" class="todo"><title>0x0002cd30 EnableBaddieAI (472 bytes)</title></rect>
+<rect width="17.75" height="17.26" x="411.47" y="82.77" class="named"><title>0x0002cd30 EnableBaddieAI (472 bytes)</title></rect>
 <rect width="17.75" height="17.22" x="411.47" y="103.04" class="named"><title>0x000299e4 LaraWaterCurrent (471 bytes)</title></rect>
 <rect width="17.75" height="17.14" x="411.47" y="123.26" class="named"><title>0x0001f188 LoadBoxes (469 bytes)</title></rect>
 <rect width="17.75" height="17.09" x="411.47" y="143.40" class="named"><title>0x00028e9c InitialiseLaraInventory (468 bytes)</title></rect>
@@ -1093,7 +1093,7 @@
 <rect width="12.18" height="11.91" x="524.95" y="184.26" class="todo"><title>0x0002eefc Func2eefc (254 bytes)</title></rect>
 <rect width="12.18" height="11.79" x="524.95" y="199.16" class="named"><title>0x00011c30 StalkBox (252 bytes)</title></rect>
 <rect width="12.18" height="11.55" x="524.95" y="213.95" class="named"><title>0x00017570 GetWaterHeight (248 bytes)</title></rect>
-<rect width="12.18" height="11.49" x="524.95" y="228.51" class="todo"><title>0x0002cf08 Func2cf08 (247 bytes)</title></rect>
+<rect width="12.18" height="11.49" x="524.95" y="228.51" class="todo"><title>0x0002cf08 InitialiseSlot (247 bytes)</title></rect>
 <rect width="11.68" height="11.99" x="540.14" y="31.80" class="todo"><title>0x0002f288 Func2f288 (247 bytes)</title></rect>
 <rect width="11.62" height="11.99" x="554.82" y="31.80" class="named"><title>0x00010f5c decomp_pcx (246 bytes)</title></rect>
 <rect width="11.56" height="11.99" x="569.44" y="31.80" class="todo"><title>0x0003411c Func3411c (245 bytes)</title></rect>

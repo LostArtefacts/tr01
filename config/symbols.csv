@@ -476,7 +476,7 @@ address,size,name,symbol
 0x0002ccb0,75,InitialiseLOTarray,InitialiseLOTarray_
 0x0002ccfc,49,DisableBaddieAI,DisableBaddieAI_
 0x0002cd30,472,EnableBaddieAI,EnableBaddieAI_
-0x0002cf08,247,Func2cf08,
+0x0002cf08,247,InitialiseSlot,InitialiseSlot_
 0x0002d000,284,Func2d000,
 0x0002d11c,39,InitialiseLOT,InitialiseLOT_
 0x0002d144,87,Func2d144,
