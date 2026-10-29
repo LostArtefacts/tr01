@@ -473,7 +473,7 @@ address,size,name,symbol
 0x0002c97c,666,ThorsHandleControl,ThorsHandleControl_
 0x0002cc18,69,ThorsHandleCollision,ThorsHandleCollision_
 0x0002cc60,76,ThorsHeadCollision,ThorsHeadCollision_
-0x0002ccb0,75,Func2ccb0,
+0x0002ccb0,75,InitialiseLOTarray,InitialiseLOTarray_
 0x0002ccfc,49,DisableBaddieAI,DisableBaddieAI_
 0x0002cd30,472,EnableBaddieAI,EnableBaddieAI_
 0x0002cf08,247,Func2cf08,
@@ -1902,6 +1902,7 @@ address,size,name,symbol
 0x000c38b4,224,lara_control_routines,_lara_control_routines
 0x000c3994,224,lara_collision_routines,_lara_collision_routines
 0x000c3a74,230,weapons,_weapons
+0x000c3b5c,4,slots_used,_slots_used
 0x000c3b68,4,sound_active,_sound_active
 0x000c3bc4,4,detail_level,_detail_level
 0x000c3e38,4,number_cameras,_number_cameras
@@ -1981,6 +1982,7 @@ address,size,name,symbol
 0x000ce98e,2,next_item_active,_next_item_active
 0x000ce990,4,lara_item,_lara_item
 0x000ce994,236,lara,_lara
+0x000cea80,4,baddie_slots,_baddie_slots
 0x000cee94,10596,savegame,_savegame
 0x000d2744,8192,phdsprinfo,_phdsprinfo
 0x000d4744,48000,vbuf,_vbuf
