@@ -1823,6 +1823,7 @@ address,size,name,symbol
 0x000cc074,4,meshes,_meshes
 0x000cc078,4,commands,_commands
 0x000cc07c,4,ranges,_ranges
+0x000cc080,4,frames,_frames
 0x000cc084,4,changes,_changes
 0x000cc088,4,room,_room
 0x000cc08c,4,number_draw_rooms,_number_draw_rooms
