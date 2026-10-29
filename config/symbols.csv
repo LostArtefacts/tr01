@@ -178,7 +178,7 @@ address,size,name,symbol
 0x0001e234,5,flip_map_effect,flip_map_effect_
 0x0001e23c,132,draw_right_gun,draw_right_gun_
 0x0001e2c0,18,S_LoadTitle,S_LoadTitle_
-0x0001e2d4,21,Func1e2d4,
+0x0001e2d4,21,S_LoadLevel,S_LoadLevel_
 0x0001e2ec,354,LoadLevel,LoadLevel_
 0x0001e450,104,Func1e450,
 0x0001e4b8,1041,Func1e4b8,

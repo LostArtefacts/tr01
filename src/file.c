@@ -29,3 +29,8 @@ int S_LoadTitle(void)
 {
     return LoadLevel(levelnames[TITLE], TITLE);
 }
+
+int S_LoadLevel(int level_number)
+{
+    return LoadLevel(levelnames[level_number], level_number);
+}
