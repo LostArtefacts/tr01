@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">8.95% (69)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">91.05% (702)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">9.08% (70)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">90.92% (701)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="66.85" height="6" x="0" y="0" class="named"/>
-<rect width="680.15" height="6" x="66.85" y="0" class="todo"/>
+<rect width="67.82" height="6" x="0" y="0" class="named"/>
+<rect width="679.18" height="6" x="67.82" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -141,7 +141,7 @@
 <rect width="12" height="12" x="315" y="15" class="named"><title>0x00016450 TrapCollision (84 bytes)</title></rect>
 <rect width="12" height="12" x="330" y="15" class="named"><title>0x000164a4 ItemPushLara (798 bytes)</title></rect>
 <rect width="12" height="12" x="345" y="15" class="named"><title>0x000167c4 TestBoundsCollide (236 bytes)</title></rect>
-<rect width="12" height="12" x="360" y="15" class="todo"><title>0x000168b0 TestLaraPosition (339 bytes)</title></rect>
+<rect width="12" height="12" x="360" y="15" class="named"><title>0x000168b0 TestLaraPosition (339 bytes)</title></rect>
 <rect width="12" height="12" x="375" y="15" class="todo"><title>0x00016a04 Func16a04 (198 bytes)</title></rect>
 <rect width="12" height="12" x="390" y="15" class="todo"><title>0x00016acc Func16acc (229 bytes)</title></rect>
 <rect width="12" height="12" x="405" y="15" class="todo"><title>0x00016bb4 Func16bb4 (349 bytes)</title></rect>
@@ -734,7 +734,7 @@
 <rect width="12" height="12" x="210" y="195" class="todo"><title>0x0003dbc0 Func3dbc0 (163 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="195" class="todo"><title>0x0003dc64 phd_RotY (163 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="195" class="todo"><title>0x0003dd08 Func3dd08 (160 bytes)</title></rect>
-<rect width="12" height="12" x="255" y="195" class="todo"><title>0x0003dda8 Func3dda8 (486 bytes)</title></rect>
+<rect width="12" height="12" x="255" y="195" class="todo"><title>0x0003dda8 phd_RotYXZ (486 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="195" class="todo"><title>0x0003df90 Func3df90 (505 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="195" class="todo"><title>0x0003e18c Func3e18c (180 bytes)</title></rect>
 <rect width="12" height="12" x="300" y="195" class="todo"><title>0x0003e240 phd_TranslateAbs (102 bytes)</title></rect>
@@ -795,7 +795,7 @@
 <rect width="12" height="12" x="375" y="210" class="todo"><title>0x00044d12 Func44d12 (833 bytes)</title></rect>
 <rect width="12" height="12" x="390" y="210" class="todo"><title>0x000452d0 Func452d0 (17 bytes)</title></rect>
 <rect width="12" height="12" x="405" y="210" class="todo"><title>0x0004564d phd_PushMatrix (30 bytes)</title></rect>
-<rect width="12" height="12" x="420" y="210" class="todo"><title>0x0004566b Func4566b (7 bytes)</title></rect>
+<rect width="12" height="12" x="420" y="210" class="todo"><title>0x0004566b phd_PushUnitMatrix (7 bytes)</title></rect>
 <rect width="12" height="12" x="435" y="210" class="todo"><title>0x00045672 Func45672 (44 bytes)</title></rect>
 <rect width="12" height="12" x="450" y="210" class="todo"><title>0x000456d0 Func456d0 (27 bytes)</title></rect>
 <rect width="12" height="12" x="465" y="210" class="todo"><title>0x000456ec Func456ec (378 bytes)</title></rect>
@@ -842,10 +842,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">11.55%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">88.45%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">11.72%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">88.28%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="86.31" height="6" x="0" y="0" class="named"/>
-<rect width="660.69" height="6" x="86.31" y="0" class="todo"/>
+<rect width="87.57" height="6" x="0" y="0" class="named"/>
+<rect width="659.43" height="6" x="87.57" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="54.65" height="67.43" x="0" y="0" class="todo"><title>0x0001bc98 Func1bc98 (4489 bytes)</title></rect>
@@ -950,7 +950,7 @@
 <rect width="17.37" height="19.42" x="393.06" y="91.05" class="todo"><title>0x0003df90 Func3df90 (505 bytes)</title></rect>
 <rect width="17.37" height="19.15" x="393.06" y="113.47" class="todo"><title>0x00038460 Func38460 (499 bytes)</title></rect>
 <rect width="17.37" height="18.80" x="393.06" y="135.62" class="todo"><title>0x0001fb64 Func1fb64 (491 bytes)</title></rect>
-<rect width="17.37" height="18.57" x="393.06" y="157.41" class="todo"><title>0x0003dda8 Func3dda8 (486 bytes)</title></rect>
+<rect width="17.37" height="18.57" x="393.06" y="157.41" class="todo"><title>0x0003dda8 phd_RotYXZ (486 bytes)</title></rect>
 <rect width="17.37" height="18.49" x="393.06" y="178.99" class="todo"><title>0x00033df0 Func33df0 (484 bytes)</title></rect>
 <rect width="17.37" height="18.49" x="393.06" y="200.47" class="todo"><title>0x0003d5f0 Func3d5f0 (484 bytes)</title></rect>
 <rect width="17.37" height="18.04" x="393.06" y="221.96" class="todo"><title>0x00046a54 Func46a54 (474 bytes)</title></rect>
@@ -1009,7 +1009,7 @@
 <rect width="14.74" height="15.05" x="491.93" y="36.26" class="todo"><title>0x0001e2ec Func1e2ec (354 bytes)</title></rect>
 <rect width="14.74" height="14.95" x="491.93" y="54.31" class="todo"><title>0x0002bcd8 Func2bcd8 (352 bytes)</title></rect>
 <rect width="14.74" height="14.80" x="491.93" y="72.26" class="todo"><title>0x00016bb4 Func16bb4 (349 bytes)</title></rect>
-<rect width="14.74" height="14.29" x="491.93" y="90.06" class="todo"><title>0x000168b0 TestLaraPosition (339 bytes)</title></rect>
+<rect width="14.74" height="14.29" x="491.93" y="90.06" class="named"><title>0x000168b0 TestLaraPosition (339 bytes)</title></rect>
 <rect width="14.74" height="14.24" x="491.93" y="107.35" class="todo"><title>0x0003a9b8 Func3a9b8 (338 bytes)</title></rect>
 <rect width="14.74" height="14.13" x="491.93" y="124.59" class="todo"><title>0x0003a548 Func3a548 (336 bytes)</title></rect>
 <rect width="14.74" height="14.08" x="491.93" y="141.72" class="named"><title>0x00014d68 CalculateCinematicCamera (335 bytes)</title></rect>
@@ -1592,7 +1592,7 @@
 <rect width="0.10" height="0.10" x="740.51" y="230.52" class="todo"><title>0x000396f8 Func396f8 (8 bytes)</title></rect>
 <rect width="0.10" height="0.10" x="743.04" y="230.52" class="todo"><title>0x00039700 Func39700 (8 bytes)</title></rect>
 <rect width="0.10" height="0.10" x="745.57" y="230.52" class="todo"><title>0x000396f0 Func396f0 (7 bytes)</title></rect>
-<rect width="0.10" height="0.10" x="747.79" y="230.52" class="todo"><title>0x0004566b Func4566b (7 bytes)</title></rect>
+<rect width="0.10" height="0.10" x="747.79" y="230.52" class="todo"><title>0x0004566b phd_PushUnitMatrix (7 bytes)</title></rect>
 <rect width="0.10" height="0.10" x="740.51" y="233.38" class="todo"><title>0x00046703 Func46703 (7 bytes)</title></rect>
 <rect width="0.10" height="0.10" x="743.17" y="233.38" class="todo"><title>0x00020434 Func20434 (6 bytes)</title></rect>
 <rect width="0.10" height="0.10" x="745.44" y="233.38" class="todo"><title>0x0002045c Func2045c (6 bytes)</title></rect>

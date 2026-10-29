@@ -89,6 +89,8 @@ void AlterFOV(PHD_ANGLE fov);
 void phd_LookAt(sint32 xsrc, sint32 ysrc, sint32 zsrc, sint32 xtar, sint32 ytar, sint32 ztar, PHD_ANGLE roll);
 void phd_GetVectorAngles(sint32 x, sint32 y, sint32 z, PHD_ANGLE *dest);
 void phd_PushMatrix(void);
+void phd_PushUnitMatrix(void);
+void phd_RotYXZ(PHD_ANGLE ry, PHD_ANGLE rx, PHD_ANGLE rz);
 void phd_RotY(PHD_ANGLE ry);
 void phd_TranslateAbs(sint32 x, sint32 y, sint32 z);
 void phd_RotateLight(PHD_ANGLE pitch, PHD_ANGLE yaw);

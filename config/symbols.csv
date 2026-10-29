@@ -666,7 +666,7 @@ address,size,name,symbol
 0x0003dbc0,163,Func3dbc0,
 0x0003dc64,163,phd_RotY,phd_RotY_
 0x0003dd08,160,Func3dd08,
-0x0003dda8,486,Func3dda8,
+0x0003dda8,486,phd_RotYXZ,phd_RotYXZ_
 0x0003df90,505,Func3df90,
 0x0003e18c,180,Func3e18c,
 0x0003e240,102,phd_TranslateAbs,phd_TranslateAbs_
@@ -727,7 +727,7 @@ address,size,name,symbol
 0x00044d12,833,Func44d12,
 0x000452d0,17,Func452d0,
 0x0004564d,30,phd_PushMatrix,phd_PushMatrix_
-0x0004566b,7,Func4566b,
+0x0004566b,7,phd_PushUnitMatrix,phd_PushUnitMatrix_
 0x00045672,44,Func45672,
 0x000456d0,27,Func456d0,
 0x000456ec,378,Func456ec,
