@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include <stdlib.h>
 #include "game.h"
 
@@ -55,4 +56,64 @@ void init_game_malloc(void)
     malloc_ptr = malloc_buffer;
     malloc_free = malloc_size;
     malloc_used = 0;
+}
+
+char *game_malloc_strings[] = {
+    "Sprite Textures",
+    "Object Textures",
+    "Mesh Pointers",
+    "Meshes",
+    "Anims",
+    "Structs",
+    "Ranges",
+    "Commands",
+    "Bones",
+    "Frames",
+    "Room Textures",
+    "Room Infos",
+    "Room Mesh",
+    "Room Door",
+    "Room Floor",
+    "Room Lights",
+    "Room Static Mesh Infos",
+    "Floor Data",
+    "ITEMS!!",
+    "Cameras",
+    "Sound FX",
+    "Boxes",
+    "Overlaps",
+    "GroundZone",
+    "FlyZone",
+    "Animating Texture Ranges",
+    "Cinematic Frames",
+    "LoadDemo Buffer",
+    "SaveDemo Buffer",
+    "Cinematic Effects",
+    "Mummy Head Turn",
+    "Extra Door stuff",
+    "Effects_Array",
+    "Creature Data",
+    "Creature LOT",
+    "Sample Infos",
+    "Samples",
+    "Sample Offsets",
+    "Rolling Ball Stuff",
+};
+
+char *game_malloc(int size, int type)
+{
+    char *ptr;
+
+    size = (size + 3) & 0xfffffffc;
+    if (size <= malloc_free)
+    {
+        ptr = malloc_ptr;
+        malloc_free -= size;
+        malloc_used += size;
+        malloc_ptr += size;
+        return ptr;
+    }
+    sprintf(exit_message, "game_malloc(): OUT OF MEMORY %s %d", game_malloc_strings[type], size);
+    S_ExitSystem(exit_message);
+    return NULL;
 }

@@ -1797,6 +1797,7 @@ address,size,name,symbol
 0x000c208c,4,ammotext,_ammotext
 0x000c2090,24,game_setup,_game_setup
 0x000c20a8,4,malloc_buffer,_malloc_buffer
+0x000c20ac,156,game_malloc_strings,_game_malloc_strings
 0x000c352c,,Load_Game_Requester,_Load_Game_Requester
 0x000c3822,2,Inventory_Chosen,_Inventory_Chosen
 0x000c3824,,Inventory_ExtraData,_Inventory_ExtraData
