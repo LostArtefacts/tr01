@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">65.57% (520)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">34.43% (273)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">65.70% (521)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">34.30% (272)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="489.84" height="6" x="0" y="0" class="named"/>
-<rect width="257.16" height="6" x="489.84" y="0" class="todo"/>
+<rect width="490.78" height="6" x="0" y="0" class="named"/>
+<rect width="256.22" height="6" x="490.78" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -589,7 +589,7 @@
 <rect width="12" height="12" x="285" y="150" class="named"><title>0x0002ff44 GetOffset (71 bytes)</title></rect>
 <rect width="12" height="12" x="300" y="150" class="named"><title>0x0002ff8c BridgeTilt1Floor (35 bytes)</title></rect>
 <rect width="12" height="12" x="315" y="150" class="named"><title>0x0002ffb0 BridgeTilt1Ceiling (37 bytes)</title></rect>
-<rect width="12" height="12" x="330" y="150" class="todo"><title>0x0002ffd8 Func2ffd8 (34 bytes)</title></rect>
+<rect width="12" height="12" x="330" y="150" class="named"><title>0x0002ffd8 BridgeTilt2Floor (34 bytes)</title></rect>
 <rect width="12" height="12" x="345" y="150" class="todo"><title>0x0002fffc Func2fffc (36 bytes)</title></rect>
 <rect width="12" height="12" x="360" y="150" class="todo"><title>0x00030020 Func30020 (111 bytes)</title></rect>
 <rect width="12" height="12" x="375" y="150" class="todo"><title>0x00030090 Func30090 (131 bytes)</title></rect>
@@ -864,10 +864,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">59.83%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">40.17%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">59.85%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">40.15%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="446.94" height="6" x="0" y="0" class="named"/>
-<rect width="300.06" height="6" x="446.94" y="0" class="todo"/>
+<rect width="447.07" height="6" x="0" y="0" class="named"/>
+<rect width="299.93" height="6" x="447.07" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.01" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1533,7 +1533,7 @@
 <rect width="2.53" height="2.40" x="722.33" y="198.18" class="named"><title>0x000245c8 Inv_RingMotionCameraPos (34 bytes)</title></rect>
 <rect width="2.53" height="2.40" x="727.87" y="198.18" class="named"><title>0x00026014 lara_as_swandive (34 bytes)</title></rect>
 <rect width="2.53" height="2.40" x="733.40" y="198.18" class="named"><title>0x00028d14 InitialiseLaraLoad (34 bytes)</title></rect>
-<rect width="2.53" height="2.40" x="738.93" y="198.18" class="todo"><title>0x0002ffd8 Func2ffd8 (34 bytes)</title></rect>
+<rect width="2.53" height="2.40" x="738.93" y="198.18" class="named"><title>0x0002ffd8 BridgeTilt2Floor (34 bytes)</title></rect>
 <rect width="2.53" height="2.40" x="744.47" y="198.18" class="todo"><title>0x0003667c Func3667c (34 bytes)</title></rect>
 <rect width="2.19" height="2.75" x="705.24" y="203.58" class="todo"><title>0x000367e4 InitialiseLevelFlags (34 bytes)</title></rect>
 <rect width="2.19" height="2.75" x="705.24" y="209.33" class="todo"><title>0x00039560 T_InitPrint (34 bytes)</title></rect>

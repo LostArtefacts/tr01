@@ -521,7 +521,7 @@ address,size,name,symbol
 0x0002ff44,71,GetOffset,GetOffset_
 0x0002ff8c,35,BridgeTilt1Floor,BridgeTilt1Floor_
 0x0002ffb0,37,BridgeTilt1Ceiling,BridgeTilt1Ceiling_
-0x0002ffd8,34,Func2ffd8,
+0x0002ffd8,34,BridgeTilt2Floor,BridgeTilt2Floor_
 0x0002fffc,36,Func2fffc,
 0x00030020,111,Func30020,
 0x00030090,131,Func30090,
