@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">10.38% (80)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">89.62% (691)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">10.51% (81)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">89.49% (690)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="77.51" height="6" x="0" y="0" class="named"/>
-<rect width="669.49" height="6" x="77.51" y="0" class="todo"/>
+<rect width="78.48" height="6" x="0" y="0" class="named"/>
+<rect width="668.52" height="6" x="78.48" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -152,9 +152,9 @@
 <rect width="12" height="12" x="480" y="15" class="named"><title>0x000173bc GetFloor (434 bytes)</title></rect>
 <rect width="12" height="12" x="495" y="15" class="named"><title>0x00017570 GetWaterHeight (248 bytes)</title></rect>
 <rect width="12" height="12" x="510" y="15" class="named"><title>0x0001767c GetHeight (653 bytes)</title></rect>
-<rect width="12" height="12" x="525" y="15" class="todo"><title>0x0001790c Func1790c (230 bytes)</title></rect>
-<rect width="12" height="12" x="540" y="15" class="todo"><title>0x00017a40 Func17a40 (1568 bytes)</title></rect>
-<rect width="12" height="12" x="555" y="15" class="todo"><title>0x00018060 Func18060 (115 bytes)</title></rect>
+<rect width="12" height="12" x="525" y="15" class="named"><title>0x0001790c RefreshCamera (230 bytes)</title></rect>
+<rect width="12" height="12" x="540" y="15" class="todo"><title>0x00017a40 TestTriggers (1568 bytes)</title></rect>
+<rect width="12" height="12" x="555" y="15" class="todo"><title>0x00018060 TriggerActive (115 bytes)</title></rect>
 <rect width="12" height="12" x="570" y="15" class="todo"><title>0x000180e8 GetCeiling (641 bytes)</title></rect>
 <rect width="12" height="12" x="585" y="15" class="todo"><title>0x0001836c GetDoor (82 bytes)</title></rect>
 <rect width="12" height="12" x="600" y="15" class="todo"><title>0x000183c0 LOS (163 bytes)</title></rect>
@@ -842,10 +842,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">13.58%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">86.42%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">13.70%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">86.30%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="101.46" height="6" x="0" y="0" class="named"/>
-<rect width="645.54" height="6" x="101.46" y="0" class="todo"/>
+<rect width="102.31" height="6" x="0" y="0" class="named"/>
+<rect width="644.69" height="6" x="102.31" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="54.65" height="67.43" x="0" y="0" class="todo"><title>0x0001bc98 Func1bc98 (4489 bytes)</title></rect>
@@ -861,7 +861,7 @@
 <rect width="33.45" height="42.16" x="105.39" y="0" class="todo"><title>0x00043fe4 Func43fe4 (1820 bytes)</title></rect>
 <rect width="33.45" height="40.74" x="105.39" y="45.16" class="todo"><title>0x00022ef0 Func22ef0 (1763 bytes)</title></rect>
 <rect width="33.45" height="39.23" x="105.39" y="88.90" class="named"><title>0x000151c0 GetCollisionInfo (1702 bytes)</title></rect>
-<rect width="33.45" height="35.90" x="105.39" y="131.13" class="todo"><title>0x00017a40 Func17a40 (1568 bytes)</title></rect>
+<rect width="33.45" height="35.90" x="105.39" y="131.13" class="todo"><title>0x00017a40 TestTriggers (1568 bytes)</title></rect>
 <rect width="33.45" height="34.12" x="105.39" y="170.03" class="todo"><title>0x00031414 Func31414 (1496 bytes)</title></rect>
 <rect width="33.45" height="32.85" x="105.39" y="207.15" class="named"><title>0x000158a8 CollideStaticObjects (1445 bytes)</title></rect>
 <rect width="32.78" height="33.30" x="141.84" y="0" class="todo"><title>0x00042910 ins_poly_trans8 (1436 bytes)</title></rect>
@@ -1079,7 +1079,7 @@
 <rect width="11.25" height="11.98" x="569.91" y="31.85" class="named"><title>0x000167c4 TestBoundsCollide (236 bytes)</title></rect>
 <rect width="11.07" height="11.98" x="584.16" y="31.85" class="todo"><title>0x0001bb98 Func1bb98 (233 bytes)</title></rect>
 <rect width="11.01" height="11.98" x="598.23" y="31.85" class="todo"><title>0x0003cb14 Func3cb14 (232 bytes)</title></rect>
-<rect width="10.89" height="11.98" x="612.25" y="31.85" class="todo"><title>0x0001790c Func1790c (230 bytes)</title></rect>
+<rect width="10.89" height="11.98" x="612.25" y="31.85" class="named"><title>0x0001790c RefreshCamera (230 bytes)</title></rect>
 <rect width="10.83" height="11.98" x="626.14" y="31.85" class="named"><title>0x00016acc MoveLaraPosition (229 bytes)</title></rect>
 <rect width="10.83" height="11.98" x="639.97" y="31.85" class="todo"><title>0x00019dc4 Func19dc4 (229 bytes)</title></rect>
 <rect width="10.83" height="11.98" x="653.80" y="31.85" class="todo"><title>0x00019f68 Func19f68 (229 bytes)</title></rect>
@@ -1249,7 +1249,7 @@
 <rect width="7.42" height="7.07" x="667.46" y="107.19" class="named"><title>0x000163dc DoorCollision (116 bytes)</title></rect>
 <rect width="7.42" height="7.07" x="677.87" y="107.19" class="todo"><title>0x0001a150 TempVideoRemove (116 bytes)</title></rect>
 <rect width="7.42" height="7.07" x="688.29" y="107.19" class="todo"><title>0x0001d434 GetBoundsAccurate (116 bytes)</title></rect>
-<rect width="7.33" height="7.07" x="698.71" y="107.19" class="todo"><title>0x00018060 Func18060 (115 bytes)</title></rect>
+<rect width="7.33" height="7.07" x="698.71" y="107.19" class="todo"><title>0x00018060 TriggerActive (115 bytes)</title></rect>
 <rect width="7.33" height="7.07" x="709.04" y="107.19" class="todo"><title>0x0002828c LaraFloorFront (115 bytes)</title></rect>
 <rect width="7.24" height="7.07" x="719.37" y="107.19" class="todo"><title>0x00024ac8 Func24ac8 (114 bytes)</title></rect>
 <rect width="7.24" height="7.07" x="729.61" y="107.19" class="todo"><title>0x000336dc Func336dc (114 bytes)</title></rect>

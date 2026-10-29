@@ -506,3 +506,48 @@ sint16 GetHeight(FLOOR_INFO *floor, sint32 x, sint32 y, sint32 z)
 
     return height;
 }
+
+void RefreshCamera(sint16 type, sint16 *data)
+{
+    sint16 trigger, value, target_ok;
+
+    target_ok = 2;
+    do
+    {
+        trigger = *(data++);
+        value = trigger & VALUE_BITS;
+
+        switch (TRIG_BITS(trigger))
+        {
+        case TO_CAMERA:
+            data++;
+
+            if (value == camera.last)
+            {
+                camera.number = value;
+
+                if (camera.timer < 0 || camera.type == LOOK_CAMERA || camera.type == COMBAT_CAMERA)
+                {
+                    camera.timer = -1;
+                    target_ok = 0;
+                    break;
+                }
+                camera.type = FIXED_CAMERA;
+                target_ok = 1;
+            }
+            else
+                target_ok = 0;
+            break;
+
+        case TO_TARGET:
+            if (camera.type == LOOK_CAMERA || camera.type == COMBAT_CAMERA)
+                break;
+
+            camera.item = &items[value];
+            break;
+        }
+    } while (!(trigger & END_BIT));
+
+    if (!target_ok || (target_ok == 2 && camera.item->looked_at && camera.item != camera.last_item))
+        camera.item = NULL;
+}
