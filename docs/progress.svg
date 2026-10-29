@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">52.60% (415)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">47.40% (374)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">52.72% (416)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">47.28% (373)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="392.91" height="6" x="0" y="0" class="named"/>
-<rect width="354.09" height="6" x="392.91" y="0" class="todo"/>
+<rect width="393.86" height="6" x="0" y="0" class="named"/>
+<rect width="353.14" height="6" x="393.86" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -483,7 +483,7 @@
 <rect width="12" height="12" x="195" y="120" class="named"><title>0x00029188 InitialiseEvilLara (41 bytes)</title></rect>
 <rect width="12" height="12" x="210" y="120" class="named"><title>0x000291b4 ControlEvilLara (542 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="120" class="named"><title>0x000293d4 DrawEvilLara (91 bytes)</title></rect>
-<rect width="12" height="12" x="240" y="120" class="todo"><title>0x00029430 LaraUnderWater (454 bytes)</title></rect>
+<rect width="12" height="12" x="240" y="120" class="named"><title>0x00029430 LaraUnderWater (454 bytes)</title></rect>
 <rect width="12" height="12" x="255" y="120" class="todo"><title>0x000295f8 lara_as_swim (170 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="120" class="todo"><title>0x000296a4 lara_as_glide (182 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="120" class="todo"><title>0x0002975c lara_as_tread (168 bytes)</title></rect>
@@ -494,7 +494,7 @@
 <rect width="12" height="12" x="360" y="120" class="todo"><title>0x000298d4 lara_col_swim (270 bytes)</title></rect>
 <rect width="12" height="12" x="375" y="120" class="todo"><title>0x000298d4 lara_col_glide (0 bytes)</title></rect>
 <rect width="12" height="12" x="390" y="120" class="todo"><title>0x000298d4 lara_col_dive (0 bytes)</title></rect>
-<rect width="12" height="12" x="405" y="120" class="todo"><title>0x000299e4 Func299e4 (471 bytes)</title></rect>
+<rect width="12" height="12" x="405" y="120" class="todo"><title>0x000299e4 LaraWaterCurrent (471 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="120" class="todo"><title>0x00029bc0 LaraSurface (514 bytes)</title></rect>
 <rect width="12" height="12" x="435" y="120" class="todo"><title>0x00029dc4 lara_as_surfswim (113 bytes)</title></rect>
 <rect width="12" height="12" x="450" y="120" class="todo"><title>0x00029e38 lara_as_surfback (98 bytes)</title></rect>
@@ -860,10 +860,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">48.21%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">51.79%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">48.44%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">51.56%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="360.15" height="6" x="0" y="0" class="named"/>
-<rect width="386.85" height="6" x="360.15" y="0" class="todo"/>
+<rect width="361.81" height="6" x="0" y="0" class="named"/>
+<rect width="385.19" height="6" x="361.81" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -976,7 +976,7 @@
 <rect width="17.71" height="17.88" x="412.15" y="20.88" class="todo"><title>0x0003d5f0 Func3d5f0 (484 bytes)</title></rect>
 <rect width="17.71" height="17.45" x="412.15" y="41.77" class="todo"><title>0x00046a54 Func46a54 (474 bytes)</title></rect>
 <rect width="17.71" height="17.37" x="412.15" y="62.22" class="todo"><title>0x0002cd30 EnableBaddieAI (472 bytes)</title></rect>
-<rect width="17.71" height="17.32" x="412.15" y="82.58" class="todo"><title>0x000299e4 Func299e4 (471 bytes)</title></rect>
+<rect width="17.71" height="17.32" x="412.15" y="82.58" class="todo"><title>0x000299e4 LaraWaterCurrent (471 bytes)</title></rect>
 <rect width="17.71" height="17.24" x="412.15" y="102.90" class="named"><title>0x0001f188 LoadBoxes (469 bytes)</title></rect>
 <rect width="17.71" height="17.19" x="412.15" y="123.14" class="named"><title>0x00028e9c InitialiseLaraInventory (468 bytes)</title></rect>
 <rect width="17.71" height="17.19" x="412.15" y="143.33" class="todo"><title>0x0003e440 calc_object_vertices (468 bytes)</title></rect>
@@ -985,7 +985,7 @@
 <rect width="17.71" height="16.80" x="412.15" y="203.43" class="todo"><title>0x00045d34 SwitchVideoMode (459 bytes)</title></rect>
 <rect width="17.71" height="16.76" x="412.15" y="223.24" class="named"><title>0x00024f90 LaraAboveWater (458 bytes)</title></rect>
 <rect width="16.79" height="17.64" x="432.86" y="0" class="named"><title>0x000160c0 LaraBaddieCollision (457 bytes)</title></rect>
-<rect width="16.79" height="17.51" x="432.86" y="20.64" class="todo"><title>0x00029430 LaraUnderWater (454 bytes)</title></rect>
+<rect width="16.79" height="17.51" x="432.86" y="20.64" class="named"><title>0x00029430 LaraUnderWater (454 bytes)</title></rect>
 <rect width="16.79" height="17.46" x="432.86" y="41.15" class="todo"><title>0x0002a27c Func2a27c (453 bytes)</title></rect>
 <rect width="16.79" height="17.42" x="432.86" y="61.61" class="named"><title>0x0001a958 PrintRooms (452 bytes)</title></rect>
 <rect width="16.79" height="17.37" x="432.86" y="82.02" class="todo"><title>0x00029f64 lara_as_surftread (451 bytes)</title></rect>

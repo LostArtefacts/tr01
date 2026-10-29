@@ -426,7 +426,7 @@ address,size,name,symbol
 0x000298d4,270,lara_col_swim,lara_col_swim_
 0x000298d4,0,lara_col_glide,lara_col_glide_
 0x000298d4,0,lara_col_dive,lara_col_dive_
-0x000299e4,471,Func299e4,
+0x000299e4,471,LaraWaterCurrent,LaraWaterCurrent_
 0x00029bc0,514,LaraSurface,LaraSurface_
 0x00029dc4,113,lara_as_surfswim,lara_as_surfswim_
 0x00029e38,98,lara_as_surfback,lara_as_surfback_
