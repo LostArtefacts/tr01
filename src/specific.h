@@ -7,6 +7,9 @@ extern char *bckscrn;
 extern sint32 input;
 
 void S_UpdateInput(void);
+int S_SaveGame(void *data, int size, int slot);
+void CheckCheatMode(void);
+void S_SaveSettings(void);
 char *GetFullPath(char *filename);
 void S_CDVolume(sint16 volume);
 void S_CDStop(void);

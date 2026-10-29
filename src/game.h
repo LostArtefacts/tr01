@@ -10,34 +10,9 @@
 #include "inventry.h"
 #include "mn_sinfo.h"
 #include "specific.h"
+#include "shell.h"
 #include "title.h"
-
-enum game_levels
-{
-    GYM,
-    LEVEL1,
-    LEVEL2,
-    LEVEL3A,
-    LEVEL3B,
-    LEVEL4,
-    LEVEL5,
-    LEVEL6,
-    LEVEL7A,
-    LEVEL7B,
-    LEVEL8A,
-    LEVEL8B,
-    LEVEL8C,
-    LEVEL10A,
-    LEVEL10B,
-    LEVEL10C,
-    CUTSCENE1,
-    CUTSCENE2,
-    CUTSCENE3,
-    CUTSCENE4,
-    TITLE,
-    CURRENT,
-    NUMBER_OF_LEVELS
-};
+#include "savegame.h"
 
 #define NO_ACTION 0
 #define GAME_ACTION 1

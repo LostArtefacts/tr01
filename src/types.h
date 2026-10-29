@@ -41,6 +41,33 @@ typedef uint16 SG_COL;
 
 #define UNIT_SHADOW 256
 
+enum game_levels
+{
+    GYM,
+    LEVEL1,
+    LEVEL2,
+    LEVEL3A,
+    LEVEL3B,
+    LEVEL4,
+    LEVEL5,
+    LEVEL6,
+    LEVEL7A,
+    LEVEL7B,
+    LEVEL8A,
+    LEVEL8B,
+    LEVEL8C,
+    LEVEL10A,
+    LEVEL10B,
+    LEVEL10C,
+    CUTSCENE1,
+    CUTSCENE2,
+    CUTSCENE3,
+    CUTSCENE4,
+    TITLE,
+    CURRENT,
+    NUMBER_OF_LEVELS
+};
+
 #define END_BIT 0x8000
 
 #define DATA_TYPE 0x00ff
@@ -185,6 +212,9 @@ typedef struct
 } FLOOR_INFO;
 
 #define NO_ROOM 255
+
+#define MAX_FLIPMAPS 10
+#define MAX_CD_TRACKS 64
 
 #define NO_HEIGHT (-0x7f00)
 

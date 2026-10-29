@@ -77,7 +77,7 @@ address,size,name,symbol
 0x00016a04,198,AlignLaraPosition,AlignLaraPosition_
 0x00016acc,229,MoveLaraPosition,MoveLaraPosition_
 0x00016bb4,349,Move3DPosTo3DPos,Move3DPosTo3DPos_
-0x00016d20,673,Func16d20,
+0x00016d20,673,ControlPhase,ControlPhase_
 0x00016ff4,707,AnimateItem,AnimateItem_
 0x000172b8,154,Func172b8,
 0x00017354,101,Func17354,
@@ -101,7 +101,7 @@ address,size,name,symbol
 0x00018ec0,800,Func18ec0,
 0x00019520,335,Func19520,
 0x00019670,150,Func19670,
-0x00019708,55,Func19708,
+0x00019708,55,GetDemoInput,GetDemoInput_
 0x00019dc4,229,Func19dc4,
 0x00019eb0,90,Func19eb0,
 0x00019f0c,91,Func19f0c,
@@ -144,7 +144,7 @@ address,size,name,symbol
 0x0001d434,116,GetBoundsAccurate,GetBoundsAccurate_
 0x0001d4a8,50,GetBestFrame,GetBestFrame_
 0x0001d4e0,145,Func1d4e0,
-0x0001d574,110,Func1d574,
+0x0001d574,110,SoundEffects,SoundEffects_
 0x0001d5e4,106,DoBloodSplat,DoBloodSplat_
 0x0001d650,157,Func1d650,
 0x0001d6f0,99,Func1d6f0,
@@ -221,7 +221,7 @@ address,size,name,symbol
 0x00020530,60,Func20530,
 0x0002056c,220,DisplayCredits,DisplayCredits_
 0x00020648,326,Func20648,
-0x00020790,269,Func20790,
+0x00020790,269,S_SaveGame,S_SaveGame_
 0x000208a0,130,Func208a0,
 0x00020980,38,DrawGameInfo,DrawGameInfo_
 0x000209a8,124,Func209a8,
@@ -240,7 +240,7 @@ address,size,name,symbol
 0x00020f60,97,Func20f60,
 0x00020fd0,333,Func20fd0,
 0x00021120,683,S_UpdateInput,S_UpdateInput_
-0x00021498,4461,Func21498,
+0x00021498,4461,Display_Inventory,Display_Inventory_
 0x00022608,300,Func22608,
 0x00022734,152,Func22734,
 0x000227cc,105,Func227cc,
@@ -389,7 +389,7 @@ address,size,name,symbol
 0x00028128,356,Func28128,
 0x0002828c,115,LaraFloorFront,LaraFloorFront_
 0x00028300,169,Func28300,
-0x000283b0,1018,Func283b0,
+0x000283b0,1018,LaraControl,LaraControl_
 0x000287ac,65,Func287ac,
 0x00028820,732,Func28820,
 0x00028afc,508,Func28afc,
@@ -550,7 +550,7 @@ address,size,name,symbol
 0x000352e8,78,Func352e8,
 0x00035338,255,Func35338,
 0x00035438,316,Func35438,
-0x00035574,1098,Func35574,
+0x00035574,1098,CreateSaveGameInfo,CreateSaveGameInfo_
 0x000359c0,2643,Func359c0,
 0x00036414,24,Func36414,
 0x0003642c,77,Func3642c,
@@ -567,8 +567,8 @@ address,size,name,symbol
 0x000383f8,94,Func383f8,
 0x00038460,499,Func38460,
 0x00038654,228,Func38654,
-0x0003875c,539,Func3875c,
-0x00038978,173,Func38978,
+0x0003875c,539,CheckCheatMode,CheckCheatMode_
+0x00038978,173,S_SaveSettings,S_SaveSettings_
 0x00038a28,207,Func38a28,
 0x00038b00,14,Func38b00,
 0x00038b0c,2,Func38b0c,
@@ -784,7 +784,7 @@ address,size,name,symbol
 0x00047700,41,Func47700,
 0x0004772c,44,Func4772c,
 0x00047758,175,Func47758,
-0x00047808,316,Func47808,
+0x00047808,316,CDLoop,CDLoop_
 0x00047944,121,Func47944,
 0x000479bd,227,malloc,malloc_
 0x00047aa0,209,__open_flags,__open_flags_
@@ -1742,14 +1742,23 @@ address,size,name,symbol
 0x000c17e4,16,bat_bite,_bat_bite
 0x000c17f4,16,bear_head_bite,_bear_head_bite
 0x000c1804,4,cinematic_animation_rate,_cinematic_animation_rate
+0x000c180c,2,cdtrack,_cdtrack
 0x000c1810,4,chunky_flag,_chunky_flag
 0x000c1814,4,height_type,_height_type
+0x000c1818,4,noinput_count,_noinput_count
+0x000c181c,4,reset_flag,_reset_flag
+0x000c1820,4,animation_rate,_animation_rate
+0x000c1824,4,flipeffect,_flipeffect
+0x000c1828,4,fliptimer,_fliptimer
 0x000c1888,4,bckscrn,_bckscrn
 0x000c1988,4,CurrentLevel,_CurrentLevel
 0x000c198c,4,level_complete,_level_complete
+0x000c2084,4,overlay_flag,_overlay_flag
 0x000c2090,24,game_setup,_game_setup
 0x000c3822,2,Inventory_Chosen,_Inventory_Chosen
+0x000c3824,,Inventory_ExtraData,_Inventory_ExtraData
 0x000c384c,2,Option_Music_Volume,_Option_Music_Volume
+0x000c38ac,4,health_bar_timer,_health_bar_timer
 0x000c3b68,4,sound_active,_sound_active
 0x000c409c,4,wibble_offset,_wibble_offset
 0x000c40a0,4,water_effect,_water_effect
@@ -1787,6 +1796,7 @@ address,size,name,symbol
 0x000ce98e,2,next_item_active,_next_item_active
 0x000ce990,4,lara_item,_lara_item
 0x000ce994,236,lara,_lara
+0x000cee94,10596,savegame,_savegame
 0x000d4744,48000,vbuf,_vbuf
 0x000e02c4,40960,phdtextinfo,_phdtextinfo
 0x0012f3b4,4,sort3dptr,_sort3dptr
@@ -1809,3 +1819,4 @@ address,size,name,symbol
 0x0012f430,480,v_buffer,_v_buffer
 0x0012f63c,4,old_clock_ticks,_old_clock_ticks
 0x0012f644,4,clock_ticks,_clock_ticks
+0x0012f658,4,keydata,_keydata

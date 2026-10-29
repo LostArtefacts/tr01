@@ -13,6 +13,23 @@ typedef struct
 } SETUP;
 
 extern SETUP game_setup;
+
+#define SIZE_KEYMAP 256
+#define SIZE_KEYBUF 64
+
+typedef struct
+{
+    uint8 keymap[SIZE_KEYMAP];
+    uint8 keybuf[SIZE_KEYBUF];
+    uint8 bufin;
+    uint8 bufout;
+    uint8 bufchars;
+    uint8 extended;
+    uint8 last_key;
+    uint8 keys_held;
+} KEYSTUFF;
+
+extern KEYSTUFF *keydata;
 extern int file_len;
 
 extern sint32 clock_ticks;
@@ -27,6 +44,7 @@ sint32 Sync(void);
     value [eax] \
     modify [ebx];
 
+void CDLoop(void);
 uint8 *FileLoad(char *name, void *where, uint32 flags);
 void ScreenClear(void);
 void ScreenPartialDump(void);

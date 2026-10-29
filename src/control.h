@@ -3,11 +3,19 @@
 
 #include "types.h"
 
+extern int flipmap[];
 extern int flip_status;
+extern sint16 cd_flags[];
+extern sint16 cdtrack;
+extern int noinput_count;
+extern int reset_flag;
+extern int animation_rate;
+extern int flipeffect, fliptimer;
 extern int chunky_flag;
 extern sint16 *trigger_index;
 extern ITEM_INFO *items;
 
+sint32 ControlPhase(sint32 nframes, int demo_mode);
 void AnimateItem(ITEM_INFO *item);
 FLOOR_INFO *GetFloor(sint32 x, sint32 y, sint32 z, sint16 *room_number);
 sint16 GetTiltType(FLOOR_INFO *floor, sint32 x, sint32 y, sint32 z);

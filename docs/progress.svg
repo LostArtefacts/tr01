@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">9.47% (73)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">90.53% (698)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">9.60% (74)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">90.40% (697)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="70.73" height="6" x="0" y="0" class="named"/>
-<rect width="676.27" height="6" x="70.73" y="0" class="todo"/>
+<rect width="71.70" height="6" x="0" y="0" class="named"/>
+<rect width="675.30" height="6" x="71.70" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -145,7 +145,7 @@
 <rect width="12" height="12" x="375" y="15" class="named"><title>0x00016a04 AlignLaraPosition (198 bytes)</title></rect>
 <rect width="12" height="12" x="390" y="15" class="named"><title>0x00016acc MoveLaraPosition (229 bytes)</title></rect>
 <rect width="12" height="12" x="405" y="15" class="named"><title>0x00016bb4 Move3DPosTo3DPos (349 bytes)</title></rect>
-<rect width="12" height="12" x="420" y="15" class="todo"><title>0x00016d20 Func16d20 (673 bytes)</title></rect>
+<rect width="12" height="12" x="420" y="15" class="named"><title>0x00016d20 ControlPhase (673 bytes)</title></rect>
 <rect width="12" height="12" x="435" y="15" class="todo"><title>0x00016ff4 AnimateItem (707 bytes)</title></rect>
 <rect width="12" height="12" x="450" y="15" class="todo"><title>0x000172b8 Func172b8 (154 bytes)</title></rect>
 <rect width="12" height="12" x="465" y="15" class="todo"><title>0x00017354 Func17354 (101 bytes)</title></rect>
@@ -169,7 +169,7 @@
 <rect width="12" height="12" x="735" y="15" class="todo"><title>0x00018ec0 Func18ec0 (800 bytes)</title></rect>
 <rect width="12" height="12" x="0" y="30" class="todo"><title>0x00019520 Func19520 (335 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="30" class="todo"><title>0x00019670 Func19670 (150 bytes)</title></rect>
-<rect width="12" height="12" x="30" y="30" class="todo"><title>0x00019708 Func19708 (55 bytes)</title></rect>
+<rect width="12" height="12" x="30" y="30" class="todo"><title>0x00019708 GetDemoInput (55 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="30" class="todo"><title>0x00019dc4 Func19dc4 (229 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="30" class="todo"><title>0x00019eb0 Func19eb0 (90 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="30" class="todo"><title>0x00019f0c Func19f0c (91 bytes)</title></rect>
@@ -212,7 +212,7 @@
 <rect width="12" height="12" x="630" y="30" class="todo"><title>0x0001d434 GetBoundsAccurate (116 bytes)</title></rect>
 <rect width="12" height="12" x="645" y="30" class="todo"><title>0x0001d4a8 GetBestFrame (50 bytes)</title></rect>
 <rect width="12" height="12" x="660" y="30" class="todo"><title>0x0001d4e0 Func1d4e0 (145 bytes)</title></rect>
-<rect width="12" height="12" x="675" y="30" class="todo"><title>0x0001d574 Func1d574 (110 bytes)</title></rect>
+<rect width="12" height="12" x="675" y="30" class="todo"><title>0x0001d574 SoundEffects (110 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="30" class="todo"><title>0x0001d5e4 DoBloodSplat (106 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="30" class="todo"><title>0x0001d650 Func1d650 (157 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="30" class="todo"><title>0x0001d6f0 Func1d6f0 (99 bytes)</title></rect>
@@ -289,7 +289,7 @@
 <rect width="12" height="12" x="285" y="60" class="todo"><title>0x00020530 Func20530 (60 bytes)</title></rect>
 <rect width="12" height="12" x="300" y="60" class="todo"><title>0x0002056c DisplayCredits (220 bytes)</title></rect>
 <rect width="12" height="12" x="315" y="60" class="todo"><title>0x00020648 Func20648 (326 bytes)</title></rect>
-<rect width="12" height="12" x="330" y="60" class="todo"><title>0x00020790 Func20790 (269 bytes)</title></rect>
+<rect width="12" height="12" x="330" y="60" class="todo"><title>0x00020790 S_SaveGame (269 bytes)</title></rect>
 <rect width="12" height="12" x="345" y="60" class="todo"><title>0x000208a0 Func208a0 (130 bytes)</title></rect>
 <rect width="12" height="12" x="360" y="60" class="todo"><title>0x00020980 DrawGameInfo (38 bytes)</title></rect>
 <rect width="12" height="12" x="375" y="60" class="todo"><title>0x000209a8 Func209a8 (124 bytes)</title></rect>
@@ -308,7 +308,7 @@
 <rect width="12" height="12" x="570" y="60" class="todo"><title>0x00020f60 Func20f60 (97 bytes)</title></rect>
 <rect width="12" height="12" x="585" y="60" class="todo"><title>0x00020fd0 Func20fd0 (333 bytes)</title></rect>
 <rect width="12" height="12" x="600" y="60" class="todo"><title>0x00021120 S_UpdateInput (683 bytes)</title></rect>
-<rect width="12" height="12" x="615" y="60" class="todo"><title>0x00021498 Func21498 (4461 bytes)</title></rect>
+<rect width="12" height="12" x="615" y="60" class="todo"><title>0x00021498 Display_Inventory (4461 bytes)</title></rect>
 <rect width="12" height="12" x="630" y="60" class="todo"><title>0x00022608 Func22608 (300 bytes)</title></rect>
 <rect width="12" height="12" x="645" y="60" class="todo"><title>0x00022734 Func22734 (152 bytes)</title></rect>
 <rect width="12" height="12" x="660" y="60" class="todo"><title>0x000227cc Func227cc (105 bytes)</title></rect>
@@ -457,7 +457,7 @@
 <rect width="12" height="12" x="555" y="105" class="todo"><title>0x00028128 Func28128 (356 bytes)</title></rect>
 <rect width="12" height="12" x="570" y="105" class="todo"><title>0x0002828c LaraFloorFront (115 bytes)</title></rect>
 <rect width="12" height="12" x="585" y="105" class="todo"><title>0x00028300 Func28300 (169 bytes)</title></rect>
-<rect width="12" height="12" x="600" y="105" class="todo"><title>0x000283b0 Func283b0 (1018 bytes)</title></rect>
+<rect width="12" height="12" x="600" y="105" class="todo"><title>0x000283b0 LaraControl (1018 bytes)</title></rect>
 <rect width="12" height="12" x="615" y="105" class="todo"><title>0x000287ac Func287ac (65 bytes)</title></rect>
 <rect width="12" height="12" x="630" y="105" class="todo"><title>0x00028820 Func28820 (732 bytes)</title></rect>
 <rect width="12" height="12" x="645" y="105" class="todo"><title>0x00028afc Func28afc (508 bytes)</title></rect>
@@ -618,7 +618,7 @@
 <rect width="12" height="12" x="720" y="150" class="todo"><title>0x000352e8 Func352e8 (78 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="150" class="todo"><title>0x00035338 Func35338 (255 bytes)</title></rect>
 <rect width="12" height="12" x="0" y="165" class="todo"><title>0x00035438 Func35438 (316 bytes)</title></rect>
-<rect width="12" height="12" x="15" y="165" class="todo"><title>0x00035574 Func35574 (1098 bytes)</title></rect>
+<rect width="12" height="12" x="15" y="165" class="todo"><title>0x00035574 CreateSaveGameInfo (1098 bytes)</title></rect>
 <rect width="12" height="12" x="30" y="165" class="todo"><title>0x000359c0 Func359c0 (2643 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="165" class="todo"><title>0x00036414 Func36414 (24 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="165" class="todo"><title>0x0003642c Func3642c (77 bytes)</title></rect>
@@ -635,8 +635,8 @@
 <rect width="12" height="12" x="225" y="165" class="todo"><title>0x000383f8 Func383f8 (94 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="165" class="todo"><title>0x00038460 Func38460 (499 bytes)</title></rect>
 <rect width="12" height="12" x="255" y="165" class="todo"><title>0x00038654 Func38654 (228 bytes)</title></rect>
-<rect width="12" height="12" x="270" y="165" class="todo"><title>0x0003875c Func3875c (539 bytes)</title></rect>
-<rect width="12" height="12" x="285" y="165" class="todo"><title>0x00038978 Func38978 (173 bytes)</title></rect>
+<rect width="12" height="12" x="270" y="165" class="todo"><title>0x0003875c CheckCheatMode (539 bytes)</title></rect>
+<rect width="12" height="12" x="285" y="165" class="todo"><title>0x00038978 S_SaveSettings (173 bytes)</title></rect>
 <rect width="12" height="12" x="300" y="165" class="todo"><title>0x00038a28 Func38a28 (207 bytes)</title></rect>
 <rect width="12" height="12" x="315" y="165" class="todo"><title>0x00038b00 Func38b00 (14 bytes)</title></rect>
 <rect width="12" height="12" x="330" y="165" class="todo"><title>0x00038b0c Func38b0c (2 bytes)</title></rect>
@@ -842,14 +842,14 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">12.11%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">87.89%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">12.44%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">87.56%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="90.45" height="6" x="0" y="0" class="named"/>
-<rect width="656.55" height="6" x="90.45" y="0" class="todo"/>
+<rect width="92.94" height="6" x="0" y="0" class="named"/>
+<rect width="654.06" height="6" x="92.94" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="54.65" height="67.43" x="0" y="0" class="todo"><title>0x0001bc98 Func1bc98 (4489 bytes)</title></rect>
-<rect width="54.65" height="66.99" x="0" y="70.43" class="todo"><title>0x00021498 Func21498 (4461 bytes)</title></rect>
+<rect width="54.65" height="66.99" x="0" y="70.43" class="todo"><title>0x00021498 Display_Inventory (4461 bytes)</title></rect>
 <rect width="54.65" height="56.69" x="0" y="140.41" class="todo"><title>0x00036808 Func36808 (3805 bytes)</title></rect>
 <rect width="54.65" height="39.89" x="0" y="200.11" class="todo"><title>0x00012910 CreatureAnimation (2734 bytes)</title></rect>
 <rect width="44.73" height="47.08" x="57.65" y="0" class="todo"><title>0x000359c0 Func359c0 (2643 bytes)</title></rect>
@@ -879,7 +879,7 @@
 <rect width="28.31" height="29.44" x="177.62" y="178.21" class="named"><title>0x00013af0 SmartShift (1123 bytes)</title></rect>
 <rect width="28.31" height="29.35" x="177.62" y="210.65" class="named"><title>0x000122fc CalculateTarget (1120 bytes)</title></rect>
 <rect width="29.37" height="27.93" x="208.93" y="0" class="todo"><title>0x0003e7c8 Func3e7c8 (1107 bytes)</title></rect>
-<rect width="29.37" height="27.68" x="208.93" y="30.93" class="todo"><title>0x00035574 Func35574 (1098 bytes)</title></rect>
+<rect width="29.37" height="27.68" x="208.93" y="30.93" class="todo"><title>0x00035574 CreateSaveGameInfo (1098 bytes)</title></rect>
 <rect width="29.37" height="27.63" x="208.93" y="61.62" class="named"><title>0x00011eb4 CreatureMood (1096 bytes)</title></rect>
 <rect width="29.37" height="27.51" x="208.93" y="92.24" class="todo"><title>0x0003fb5c Func3fb5c (1092 bytes)</title></rect>
 <rect width="29.37" height="27.46" x="208.93" y="122.76" class="todo"><title>0x0001e8cc Func1e8cc (1090 bytes)</title></rect>
@@ -887,7 +887,7 @@
 <rect width="29.37" height="26.87" x="208.93" y="183.59" class="todo"><title>0x0003992c Func3992c (1069 bytes)</title></rect>
 <rect width="29.37" height="26.54" x="208.93" y="213.46" class="todo"><title>0x0002371c Func2371c (1057 bytes)</title></rect>
 <rect width="26.06" height="29.40" x="241.29" y="0" class="todo"><title>0x0001e4b8 Func1e4b8 (1041 bytes)</title></rect>
-<rect width="26.06" height="28.68" x="241.29" y="32.40" class="todo"><title>0x000283b0 Func283b0 (1018 bytes)</title></rect>
+<rect width="26.06" height="28.68" x="241.29" y="32.40" class="todo"><title>0x000283b0 LaraControl (1018 bytes)</title></rect>
 <rect width="26.06" height="28.50" x="241.29" y="64.08" class="todo"><title>0x000376e8 Func376e8 (1012 bytes)</title></rect>
 <rect width="26.06" height="27.81" x="241.29" y="95.58" class="todo"><title>0x0001a578 Func1a578 (990 bytes)</title></rect>
 <rect width="26.06" height="27.13" x="241.29" y="126.39" class="todo"><title>0x00022848 Func22848 (968 bytes)</title></rect>
@@ -918,7 +918,7 @@
 <rect width="22.35" height="21.40" x="322.57" y="74.21" class="todo"><title>0x000432bc Func432bc (684 bytes)</title></rect>
 <rect width="22.35" height="21.37" x="322.57" y="98.61" class="todo"><title>0x00021120 S_UpdateInput (683 bytes)</title></rect>
 <rect width="22.35" height="21.30" x="322.57" y="122.98" class="todo"><title>0x000390a0 Func390a0 (681 bytes)</title></rect>
-<rect width="22.35" height="21.01" x="322.57" y="147.28" class="todo"><title>0x00016d20 Func16d20 (673 bytes)</title></rect>
+<rect width="22.35" height="21.01" x="322.57" y="147.28" class="named"><title>0x00016d20 ControlPhase (673 bytes)</title></rect>
 <rect width="22.35" height="21.01" x="322.57" y="171.29" class="todo"><title>0x0002fb30 Func2fb30 (673 bytes)</title></rect>
 <rect width="22.35" height="20.94" x="322.57" y="195.30" class="todo"><title>0x0002c5f4 Func2c5f4 (671 bytes)</title></rect>
 <rect width="22.35" height="20.76" x="322.57" y="219.24" class="todo"><title>0x0003a010 Func3a010 (666 bytes)</title></rect>
@@ -938,7 +938,7 @@
 <rect width="19.13" height="19.44" x="370.94" y="67.77" class="todo"><title>0x0002769c Func2769c (549 bytes)</title></rect>
 <rect width="19.13" height="19.36" x="370.94" y="90.21" class="todo"><title>0x0002ec7c Func2ec7c (547 bytes)</title></rect>
 <rect width="19.13" height="19.15" x="370.94" y="112.57" class="todo"><title>0x000291b4 Func291b4 (542 bytes)</title></rect>
-<rect width="19.13" height="19.03" x="370.94" y="134.72" class="todo"><title>0x0003875c Func3875c (539 bytes)</title></rect>
+<rect width="19.13" height="19.03" x="370.94" y="134.72" class="todo"><title>0x0003875c CheckCheatMode (539 bytes)</title></rect>
 <rect width="19.13" height="18.75" x="370.94" y="156.75" class="todo"><title>0x0002b5c0 Func2b5c0 (532 bytes)</title></rect>
 <rect width="19.13" height="18.62" x="370.94" y="178.50" class="todo"><title>0x0002be38 Func2be38 (529 bytes)</title></rect>
 <rect width="19.13" height="18.46" x="370.94" y="200.12" class="todo"><title>0x00042448 Func42448 (525 bytes)</title></rect>
@@ -1055,7 +1055,7 @@
 <rect width="13.07" height="12.30" x="623.59" y="16.55" class="todo"><title>0x00034434 Func34434 (272 bytes)</title></rect>
 <rect width="12.96" height="12.30" x="639.67" y="16.55" class="todo"><title>0x0001ab1c Func1ab1c (270 bytes)</title></rect>
 <rect width="12.96" height="12.30" x="655.62" y="16.55" class="todo"><title>0x000298d4 Func298d4 (270 bytes)</title></rect>
-<rect width="12.90" height="12.30" x="671.58" y="16.55" class="todo"><title>0x00020790 Func20790 (269 bytes)</title></rect>
+<rect width="12.90" height="12.30" x="671.58" y="16.55" class="todo"><title>0x00020790 S_SaveGame (269 bytes)</title></rect>
 <rect width="12.78" height="12.30" x="687.48" y="16.55" class="named"><title>0x00013f54 ChaseCamera (267 bytes)</title></rect>
 <rect width="12.66" height="12.30" x="703.25" y="16.55" class="todo"><title>0x0001ed10 Func1ed10 (265 bytes)</title></rect>
 <rect width="12.66" height="12.30" x="718.92" y="16.55" class="todo"><title>0x000251ec Func251ec (265 bytes)</title></rect>
@@ -1148,7 +1148,7 @@
 <rect width="9.61" height="9.62" x="568.29" y="72.71" class="todo"><title>0x0003a818 Func3a818 (176 bytes)</title></rect>
 <rect width="9.61" height="9.48" x="568.29" y="85.33" class="todo"><title>0x0004599c Func4599c (174 bytes)</title></rect>
 <rect width="9.61" height="9.40" x="568.29" y="97.81" class="todo"><title>0x00026978 Func26978 (173 bytes)</title></rect>
-<rect width="9.61" height="9.40" x="568.29" y="110.21" class="todo"><title>0x00038978 Func38978 (173 bytes)</title></rect>
+<rect width="9.61" height="9.40" x="568.29" y="110.21" class="todo"><title>0x00038978 S_SaveSettings (173 bytes)</title></rect>
 <rect width="9.61" height="9.26" x="568.29" y="122.62" class="todo"><title>0x0002686c Func2686c (171 bytes)</title></rect>
 <rect width="9.61" height="9.19" x="568.29" y="134.88" class="todo"><title>0x000295f8 Func295f8 (170 bytes)</title></rect>
 <rect width="9.61" height="9.12" x="568.29" y="147.07" class="todo"><title>0x00028300 Func28300 (169 bytes)</title></rect>
@@ -1262,7 +1262,7 @@
 <rect width="7.34" height="6.71" x="614.19" y="166.31" class="todo"><title>0x0002b8a0 Func2b8a0 (111 bytes)</title></rect>
 <rect width="7.34" height="6.71" x="614.19" y="176.02" class="todo"><title>0x0002bba8 Func2bba8 (111 bytes)</title></rect>
 <rect width="7.34" height="6.71" x="614.19" y="185.72" class="todo"><title>0x00030020 Func30020 (111 bytes)</title></rect>
-<rect width="7.34" height="6.62" x="614.19" y="195.43" class="todo"><title>0x0001d574 Func1d574 (110 bytes)</title></rect>
+<rect width="7.34" height="6.62" x="614.19" y="195.43" class="todo"><title>0x0001d574 SoundEffects (110 bytes)</title></rect>
 <rect width="7.34" height="6.62" x="614.19" y="205.05" class="todo"><title>0x00032450 Func32450 (110 bytes)</title></rect>
 <rect width="7.34" height="6.53" x="614.19" y="214.67" class="todo"><title>0x00020e54 Func20e54 (109 bytes)</title></rect>
 <rect width="7.34" height="6.44" x="614.19" y="224.20" class="todo"><title>0x00026800 Func26800 (108 bytes)</title></rect>
@@ -1395,7 +1395,7 @@
 <rect width="3.90" height="4.34" x="667.45" y="206.58" class="todo"><title>0x00020a78 Func20a78 (56 bytes)</title></rect>
 <rect width="3.90" height="4.34" x="667.45" y="213.91" class="todo"><title>0x00024d80 Func24d80 (56 bytes)</title></rect>
 <rect width="3.90" height="4.34" x="667.45" y="221.25" class="todo"><title>0x0002d8a4 Func2d8a4 (56 bytes)</title></rect>
-<rect width="3.90" height="4.21" x="667.45" y="228.59" class="todo"><title>0x00019708 Func19708 (55 bytes)</title></rect>
+<rect width="3.90" height="4.21" x="667.45" y="228.59" class="todo"><title>0x00019708 GetDemoInput (55 bytes)</title></rect>
 <rect width="3.90" height="4.21" x="667.45" y="235.79" class="todo"><title>0x00023eac Func23eac (55 bytes)</title></rect>
 <rect width="3.99" height="4.11" x="674.35" y="160.85" class="todo"><title>0x00024838 Func24838 (55 bytes)</title></rect>
 <rect width="3.99" height="4.11" x="681.35" y="160.85" class="todo"><title>0x0002b42c Func2b42c (55 bytes)</title></rect>

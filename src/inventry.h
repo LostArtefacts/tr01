@@ -3,6 +3,16 @@
 
 #include "types.h"
 
+enum inv_modes
+{
+    INV_GAME_MODE = 0,
+    INV_TITLE_MODE,
+    INV_KEYS_MODE,
+    INV_SAVE_MODE,
+    INV_LOAD_MODE,
+    INV_DEATH_MODE
+};
+
 enum inventory_colours
 {
     C_BLACK = 0,
@@ -28,5 +38,8 @@ enum inventory_colours
 extern SG_COL inv_colours[];
 extern sint16 Option_Music_Volume;
 extern sint16 Inventory_Chosen;
+extern sint32 Inventory_ExtraData[];
+
+sint32 Display_Inventory(sint32 inventory_mode);
 
 #endif
