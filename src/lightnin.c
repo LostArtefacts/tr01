@@ -406,3 +406,14 @@ void ThorsHandleCollision(sint16 item_num, ITEM_INFO *laraitem, COLL_INFO *coll)
     if (coll->enable_baddie_push)
         ItemPushLara(item, laraitem, coll, 0, 1);
 }
+
+void ThorsHeadCollision(sint16 item_num, ITEM_INFO *laraitem, COLL_INFO *coll)
+{
+    ITEM_INFO *item;
+
+    item = &items[item_num];
+    if (!TestBoundsCollide(item, laraitem, coll->radius))
+        return;
+    if (coll->enable_baddie_push && item->current_anim_state != TH_ACTIVE)
+        ItemPushLara(item, laraitem, coll, 0, 1);
+}
