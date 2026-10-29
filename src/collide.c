@@ -1,5 +1,7 @@
 #include "game.h"
 
+#define TARGET_DIST (WALL_L * 4)
+
 void GetCollisionInfo(COLL_INFO *coll, sint32 xpos, sint32 ypos, sint32 zpos, sint16 room_number, sint32 objheight)
 {
     sint32 height, ceiling;
@@ -515,4 +517,64 @@ sint16 GetTiltType(FLOOR_INFO *floor, sint32 x, sint32 y, sint32 z)
     }
 
     return 0;
+}
+
+void LaraBaddieCollision(ITEM_INFO *laraitem, COLL_INFO *coll)
+{
+    int i, x, y, z;
+    ITEM_INFO *item;
+    OBJECT_INFO *object;
+    sint16 roomies[12], numroom, *door;
+    sint16 item_num, nex;
+
+    laraitem->hit_status = 0;
+    lara.hit_direction = -1;
+    if (laraitem->hit_points <= 0)
+        return;
+
+    numroom = 1;
+    roomies[0] = laraitem->room_number;
+    door = room[laraitem->room_number].door;
+    if (door)
+    {
+        for (i = (int)*(door++); i > 0; i--)
+        {
+            roomies[numroom++] = *(door);
+            door += 16;
+        }
+    }
+
+    for (i = 0; i < numroom; i++)
+    {
+        item_num = room[roomies[i]].item_number;
+        while (item_num != NO_ITEM)
+        {
+            item = &items[item_num];
+            nex = item->next_item;
+            if (item->collidable && item->status != INVISIBLE)
+            {
+                object = &objects[item->object_number];
+                if (object->collision)
+                {
+                    x = laraitem->pos.x_pos - item->pos.x_pos;
+                    y = laraitem->pos.y_pos - item->pos.y_pos;
+                    z = laraitem->pos.z_pos - item->pos.z_pos;
+                    if (x > -TARGET_DIST && x < TARGET_DIST &&
+                        z > -TARGET_DIST && z < TARGET_DIST &&
+                        y > -TARGET_DIST && y < TARGET_DIST)
+                        (*object->collision)(item_num, laraitem, coll);
+                }
+            }
+
+            item_num = nex;
+        }
+    }
+
+    if (lara.hit_effect_count)
+        EffectHit(laraitem, coll);
+
+    if (lara.hit_direction == -1)
+        lara.hit_frame = 0;
+
+    Inventory_Chosen = -1;
 }

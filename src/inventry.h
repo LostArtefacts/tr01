@@ -27,5 +27,6 @@ enum inventory_colours
 
 extern SG_COL inv_colours[];
 extern sint16 Option_Music_Volume;
+extern sint16 Inventory_Chosen;
 
 #endif

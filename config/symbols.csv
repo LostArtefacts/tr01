@@ -1748,6 +1748,7 @@ address,size,name,symbol
 0x000c1988,4,CurrentLevel,_CurrentLevel
 0x000c198c,4,level_complete,_level_complete
 0x000c2090,24,game_setup,_game_setup
+0x000c3822,2,Inventory_Chosen,_Inventory_Chosen
 0x000c384c,2,Option_Music_Volume,_Option_Music_Volume
 0x000c3b68,4,sound_active,_sound_active
 0x000c409c,4,wibble_offset,_wibble_offset
