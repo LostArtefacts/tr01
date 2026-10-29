@@ -2,6 +2,9 @@
 
 #define TARGET_DIST (WALL_L * 4)
 
+#define MOVE_SPEED 16
+#define MOVE_ANG (2 * ONE_DEGREE)
+
 void GetCollisionInfo(COLL_INFO *coll, sint32 xpos, sint32 ypos, sint32 zpos, sint16 room_number, sint32 objheight)
 {
     sint32 height, ceiling;
@@ -841,4 +844,22 @@ void AlignLaraPosition(PHD_VECTOR *vec, ITEM_INFO *item, ITEM_INFO *laraitem)
     laraitem->pos.y_pos = item->pos.y_pos + ((*(mptr + M10) * vec->x + *(mptr + M11) * vec->y + *(mptr + M12) * vec->z) >> W2V_SHIFT);
     laraitem->pos.z_pos = item->pos.z_pos + ((*(mptr + M20) * vec->x + *(mptr + M21) * vec->y + *(mptr + M22) * vec->z) >> W2V_SHIFT);
     phd_PopMatrix();
+}
+
+int MoveLaraPosition(PHD_VECTOR *vec, ITEM_INFO *item, ITEM_INFO *laraitem)
+{
+    PHD_3DPOS dest;
+    sint32 *mptr;
+
+    dest.x_rot = item->pos.x_rot;
+    dest.y_rot = item->pos.y_rot;
+    dest.z_rot = item->pos.z_rot;
+    phd_PushUnitMatrix();
+    phd_RotYXZ(item->pos.y_rot, item->pos.x_rot, item->pos.z_rot);
+    mptr = phd_mxptr;
+    dest.x_pos = item->pos.x_pos + ((*(mptr + M00) * vec->x + *(mptr + M01) * vec->y + *(mptr + M02) * vec->z) >> W2V_SHIFT);
+    dest.y_pos = item->pos.y_pos + ((*(mptr + M10) * vec->x + *(mptr + M11) * vec->y + *(mptr + M12) * vec->z) >> W2V_SHIFT);
+    dest.z_pos = item->pos.z_pos + ((*(mptr + M20) * vec->x + *(mptr + M21) * vec->y + *(mptr + M22) * vec->z) >> W2V_SHIFT);
+    phd_PopMatrix();
+    return Move3DPosTo3DPos(&laraitem->pos, &dest, MOVE_SPEED, MOVE_ANG);
 }
