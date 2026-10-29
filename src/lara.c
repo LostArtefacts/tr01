@@ -1219,6 +1219,30 @@ void lara_col_stepright(ITEM_INFO *item, COLL_INFO *coll)
     item->pos.y_pos += coll->mid_floor;
 }
 
+void lara_col_stepleft(ITEM_INFO *item, COLL_INFO *coll)
+{
+    item->gravity_status = item->fallspeed = 0;
+    lara.move_angle = item->pos.y_rot - 16384;
+    coll->bad_pos = STEP_L / 2;
+    coll->bad_neg = -STEP_L / 2;
+    coll->bad_ceiling = 0;
+    coll->slopes_are_pits = 1;
+    coll->slopes_are_walls = 1;
+    GetLaraCollisionInfo(item, coll);
+    if (LaraHitCeiling(item, coll))
+        return;
+    if (LaraDeflectEdge(item, coll))
+    {
+        item->anim_number = STOP_A;
+        item->frame_number = STOP_F;
+        item->current_anim_state = AS_STOP;
+        item->goal_anim_state = AS_STOP;
+    }
+    if (TestLaraSlide(item, coll))
+        return;
+    item->pos.y_pos += coll->mid_floor;
+}
+
 void lara_default_col(ITEM_INFO *item, COLL_INFO *coll)
 {
     lara.move_angle = item->pos.y_rot;

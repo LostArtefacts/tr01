@@ -360,7 +360,7 @@ address,size,name,symbol
 0x00026a28,240,lara_col_back,lara_col_back_
 0x00026b18,49,lara_col_null,lara_col_null_
 0x00026b4c,186,lara_col_stepright,lara_col_stepright_
-0x00026c08,189,Func26c08,
+0x00026c08,189,lara_col_stepleft,lara_col_stepleft_
 0x00026cc8,19,Func26cc8,
 0x00026cdc,22,Func26cdc,
 0x00026cf4,22,Func26cf4,
