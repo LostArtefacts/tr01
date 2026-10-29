@@ -1,7 +1,52 @@
 #include "game.h"
 
+#define PEOPLE_SHOT_DAMAGE 50
+
 #define PEOPLE_SHOOT_RANGE SQUARE(WALL_L * 7)
 #define PEOPLE_MISS_CHANCE 0x2000
+
+enum baldy_anims
+{
+    BALDY_EMPTY,
+    BALDY_STOP,
+    BALDY_WALK,
+    BALDY_RUN,
+    BALDY_AIM,
+    BALDY_DEATH,
+    BALDY_SHOOT
+};
+
+#define BALDY_WALK_TURN (ONE_DEGREE * 3)
+#define BALDY_RUN_TURN (ONE_DEGREE * 6)
+
+#define BALDY_WALK_RANGE SQUARE(WALL_L * 4)
+
+#define BALDY_DIE_ANIM 14
+
+BITE_INFO baldy_gun = {-20, 440, 20, 9};
+
+enum people_anims
+{
+    PEOPLE_EMPTY,
+    PEOPLE_STOP,
+    PEOPLE_WALK,
+    PEOPLE_RUN,
+    PEOPLE_AIM,
+    PEOPLE_DEATH,
+    PEOPLE_POSE,
+    PEOPLE_SHOOT
+};
+
+#define PEOPLE_WALK_TURN (ONE_DEGREE * 3)
+#define PEOPLE_RUN_TURN (ONE_DEGREE * 6)
+
+#define PEOPLE_POSE_CHANCE 0x60
+
+#define PEOPLE_WALK_RANGE SQUARE(WALL_L * 3)
+
+#define LARSON_DIE_ANIM 15
+
+BITE_INFO larson_gun = {-60, 170, 0, 14};
 
 int Targetable(ITEM_INFO *item, AI_INFO *info)
 {
@@ -111,4 +156,144 @@ int ShotLara(ITEM_INFO *item, sint32 distance, BITE_INFO *gun, sint16 extra_rota
         effects[fx_number].pos.y_rot += extra_rotation;
 
     return hit;
+}
+
+void PeopleControl(sint16 item_number)
+{
+    ITEM_INFO *item;
+    CREATURE_INFO *people;
+    sint16 angle, head, tilt;
+    AI_INFO info;
+
+    item = &items[item_number];
+    if (item->status == INVISIBLE)
+    {
+        if (!EnableBaddieAI(item_number, 0))
+            return;
+        item->status = ACTIVE;
+    }
+    people = (CREATURE_INFO *)item->data;
+    head = angle = tilt = 0;
+
+    if (item->hit_points <= 0)
+    {
+        if (item->current_anim_state != PEOPLE_DEATH)
+        {
+            item->anim_number = objects[LARSON].anim_index + LARSON_DIE_ANIM;
+            item->frame_number = anims[item->anim_number].frame_base;
+            item->current_anim_state = PEOPLE_DEATH;
+        }
+    }
+    else
+    {
+        CreatureAIInfo(item, &info);
+
+        if (info.ahead)
+            head = info.angle;
+
+        CreatureMood(item, &info, TIMID);
+
+        angle = CreatureTurn(item, people->maximum_turn);
+
+        switch (item->current_anim_state)
+        {
+        case PEOPLE_STOP:
+            if (item->required_anim_state)
+                item->goal_anim_state = item->required_anim_state;
+            else if (people->mood == BORED_MOOD)
+                item->goal_anim_state = (GetRandomControl() < PEOPLE_POSE_CHANCE) ? PEOPLE_POSE : PEOPLE_WALK;
+            else if (people->mood == ESCAPE_MOOD)
+                item->goal_anim_state = PEOPLE_RUN;
+            else
+                item->goal_anim_state = PEOPLE_WALK;
+            break;
+
+        case PEOPLE_POSE:
+            if (people->mood != BORED_MOOD)
+                item->goal_anim_state = PEOPLE_STOP;
+            else if (GetRandomControl() < PEOPLE_POSE_CHANCE)
+            {
+                item->required_anim_state = PEOPLE_WALK;
+                item->goal_anim_state = PEOPLE_STOP;
+            }
+            break;
+
+        case PEOPLE_WALK:
+            people->maximum_turn = PEOPLE_WALK_TURN;
+
+            if (people->mood == BORED_MOOD && GetRandomControl() < PEOPLE_POSE_CHANCE)
+            {
+                item->required_anim_state = PEOPLE_POSE;
+                item->goal_anim_state = PEOPLE_STOP;
+            }
+            else if (people->mood == ESCAPE_MOOD)
+            {
+                item->required_anim_state = PEOPLE_RUN;
+                item->goal_anim_state = PEOPLE_STOP;
+            }
+            else if (Targetable(item, &info))
+            {
+                item->required_anim_state = PEOPLE_AIM;
+                item->goal_anim_state = PEOPLE_STOP;
+            }
+            else if (!info.ahead || info.distance > PEOPLE_WALK_RANGE)
+            {
+                item->required_anim_state = PEOPLE_RUN;
+                item->goal_anim_state = PEOPLE_STOP;
+            }
+            break;
+
+        case PEOPLE_RUN:
+            people->maximum_turn = PEOPLE_RUN_TURN;
+            tilt = angle / 2;
+
+            if (people->mood == BORED_MOOD && GetRandomControl() < PEOPLE_POSE_CHANCE)
+            {
+                item->required_anim_state = PEOPLE_POSE;
+                item->goal_anim_state = PEOPLE_STOP;
+            }
+            else if (Targetable(item, &info))
+            {
+                item->required_anim_state = PEOPLE_AIM;
+                item->goal_anim_state = PEOPLE_STOP;
+            }
+            else if (info.ahead && info.distance < PEOPLE_WALK_RANGE)
+            {
+                item->required_anim_state = PEOPLE_WALK;
+                item->goal_anim_state = PEOPLE_STOP;
+            }
+            break;
+
+        case PEOPLE_AIM:
+            if (item->required_anim_state)
+                item->goal_anim_state = item->required_anim_state;
+            else if (Targetable(item, &info))
+                item->goal_anim_state = PEOPLE_SHOOT;
+            else
+                item->goal_anim_state = PEOPLE_STOP;
+            break;
+
+        case PEOPLE_SHOOT:
+
+            if (!item->required_anim_state)
+            {
+                if (ShotLara(item, info.distance, &larson_gun, head))
+                {
+                    lara_item->hit_points -= PEOPLE_SHOT_DAMAGE;
+                    lara_item->hit_status = 1;
+                }
+
+                item->required_anim_state = PEOPLE_AIM;
+            }
+
+            if (people->mood == ESCAPE_MOOD)
+                item->required_anim_state = PEOPLE_STOP;
+            break;
+        }
+    }
+
+    CreatureTilt(item, tilt);
+    CreatureHead(item, head);
+
+    CreatureAnimation(item_number, angle, 0);
 }
