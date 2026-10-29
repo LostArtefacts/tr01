@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">62.42% (495)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">37.58% (298)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">62.55% (496)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">37.45% (297)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="466.29" height="6" x="0" y="0" class="named"/>
-<rect width="280.71" height="6" x="466.29" y="0" class="todo"/>
+<rect width="467.23" height="6" x="0" y="0" class="named"/>
+<rect width="279.77" height="6" x="467.23" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -563,7 +563,7 @@
 <rect width="12" height="12" x="645" y="135" class="named"><title>0x0002dd98 mn_clear_handles (49 bytes)</title></rect>
 <rect width="12" height="12" x="660" y="135" class="named"><title>0x0002ddfc TorsoControl (1205 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="135" class="named"><title>0x0002e2ec NatlaControl (1620 bytes)</title></rect>
-<rect width="12" height="12" x="690" y="135" class="todo"><title>0x0002e940 ControlNatlaGun (321 bytes)</title></rect>
+<rect width="12" height="12" x="690" y="135" class="named"><title>0x0002e940 ControlNatlaGun (321 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="135" class="todo"><title>0x0002ea84 NatlaGun (122 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="135" class="todo"><title>0x0002eb00 Func2eb00 (49 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="135" class="todo"><title>0x0002eb34 Func2eb34 (296 bytes)</title></rect>
@@ -864,10 +864,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">57.77%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">42.23%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">57.92%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">42.08%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="431.52" height="6" x="0" y="0" class="named"/>
-<rect width="315.48" height="6" x="431.52" y="0" class="todo"/>
+<rect width="432.68" height="6" x="0" y="0" class="named"/>
+<rect width="314.32" height="6" x="432.68" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.01" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1047,7 +1047,7 @@
 <rect width="14.42" height="13.54" x="580.06" y="0" class="todo"><title>0x00033fd4 Func33fd4 (328 bytes)</title></rect>
 <rect width="14.37" height="13.54" x="597.49" y="0" class="named"><title>0x00023d64 Inv_RemoveItem (327 bytes)</title></rect>
 <rect width="14.32" height="13.54" x="614.86" y="0" class="named"><title>0x00020648 S_FrontEndCheck (326 bytes)</title></rect>
-<rect width="14.05" height="13.54" x="632.18" y="0" class="todo"><title>0x0002e940 ControlNatlaGun (321 bytes)</title></rect>
+<rect width="14.05" height="13.54" x="632.18" y="0" class="named"><title>0x0002e940 ControlNatlaGun (321 bytes)</title></rect>
 <rect width="14" height="13.54" x="649.23" y="0" class="todo"><title>0x0003a2ac Func3a2ac (320 bytes)</title></rect>
 <rect width="13.95" height="13.54" x="666.23" y="0" class="named"><title>0x00018ce8 TriggerCDTrack (319 bytes)</title></rect>
 <rect width="13.84" height="13.54" x="683.17" y="0" class="named"><title>0x000141f4 CombatCamera (317 bytes)</title></rect>

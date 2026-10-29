@@ -513,3 +513,44 @@ void NatlaControl(sint16 item_number)
     CreatureAnimation(item_number, angle, 0);
     item->pos.y_rot += facing;
 }
+
+void ControlNatlaGun(sint16 fx_number)
+{
+    FX_INFO *fx, *newfx;
+    OBJECT_INFO *object;
+    FLOOR_INFO *floor;
+    sint16 room_number;
+    sint32 x, y, z;
+
+    fx = &effects[fx_number];
+    object = &objects[fx->object_number];
+    fx->frame_number--;
+    if (fx->frame_number <= objects[fx->object_number].nmeshes)
+        KillEffect(fx_number);
+
+    if (fx->frame_number == -1)
+    {
+        z = fx->pos.z_pos + (fx->speed * phd_cos(fx->pos.y_rot) >> W2V_SHIFT);
+        x = fx->pos.x_pos + (fx->speed * phd_sin(fx->pos.y_rot) >> W2V_SHIFT);
+        y = fx->pos.y_pos;
+        room_number = fx->room_number;
+        floor = GetFloor(x, y, z, &room_number);
+
+        if (y >= GetHeight(floor, x, y, z) || y <= GetCeiling(floor, x, y, z))
+            return;
+
+        fx_number = CreateEffect(room_number);
+        if (fx_number != NO_ITEM)
+        {
+            newfx = &effects[fx_number];
+            newfx->pos.x_pos = x;
+            newfx->pos.y_pos = y;
+            newfx->pos.z_pos = z;
+            newfx->pos.y_rot = fx->pos.y_rot;
+            newfx->room_number = room_number;
+            newfx->speed = fx->speed;
+            newfx->frame_number = 0;
+            newfx->object_number = MISSILE1;
+        }
+    }
+}
