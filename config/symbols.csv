@@ -480,7 +480,7 @@ address,size,name,symbol
 0x0002d000,284,CreateZone,CreateZone_
 0x0002d11c,39,InitialiseLOT,InitialiseLOT_
 0x0002d144,87,ClearLOT,ClearLOT_
-0x0002d1a0,273,Func2d1a0,
+0x0002d1a0,273,mn_reset_sound_effects,mn_reset_sound_effects_
 0x0002d2b4,1336,SoundEffect,SoundEffect_
 0x0002d7ec,181,Func2d7ec,
 0x0002d8a4,56,mn_reset_ambient_loudness,mn_reset_ambient_loudness_
@@ -491,7 +491,7 @@ address,size,name,symbol
 0x0002dd38,14,Func2dd38,
 0x0002dd48,24,Func2dd48,
 0x0002dd60,6,Func2dd60,
-0x0002dd68,45,Func2dd68,
+0x0002dd68,45,mn_clear_fx_slot,mn_clear_fx_slot_
 0x0002dd98,49,Func2dd98,
 0x0002e940,321,Func2e940,
 0x0002ea84,122,Func2ea84,
@@ -1903,7 +1903,16 @@ address,size,name,symbol
 0x000c3994,224,lara_collision_routines,_lara_collision_routines
 0x000c3a74,230,weapons,_weapons
 0x000c3b5c,4,slots_used,_slots_used
+0x000c3b60,4,num_sample_infos,_num_sample_infos
+0x000c3b64,4,sounds_loaded,_sounds_loaded
 0x000c3b68,4,sound_active,_sound_active
+0x000c3b6c,4,mn_sound_master_volume,_mn_sound_master_volume
+0x000c3b70,4,mn_sounds_playing,_mn_sounds_playing
+0x000c3b74,4,mn_sound_master_vol_default,_mn_sound_master_vol_default
+0x000c3b78,4,mn_sound_master_fade_on,_mn_sound_master_fade_on
+0x000c3b7c,4,mn_sound_fade_counter,_mn_sound_fade_counter
+0x000c3b80,4,mn_sound_fade_rate,_mn_sound_fade_rate
+0x000c3b84,4,mn_ambient_lookup_indx,_mn_ambient_lookup_indx
 0x000c3bc4,4,detail_level,_detail_level
 0x000c3e38,4,number_cameras,_number_cameras
 0x000c3e68,128,exit_message,_exit_message
@@ -1983,6 +1992,11 @@ address,size,name,symbol
 0x000ce990,4,lara_item,_lara_item
 0x000ce994,236,lara,_lara
 0x000cea80,4,baddie_slots,_baddie_slots
+0x000cea84,16,mn_amb_lookup,_mn_amb_lookup
+0x000cea94,480,sfx_playing,_sfx_playing
+0x000cec74,512,sample_lut,_sample_lut
+0x000cee74,4,sample_infos,_sample_infos
+0x000cee78,4,num_samples,_num_samples
 0x000cee94,10596,savegame,_savegame
 0x000d2744,8192,phdsprinfo,_phdsprinfo
 0x000d4744,48000,vbuf,_vbuf
