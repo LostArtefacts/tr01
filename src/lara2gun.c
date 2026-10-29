@@ -150,3 +150,38 @@ void undraw_pistol_mesh_right(int weapon_type)
     lara.mesh_ptrs[THIGH_R] = meshes[(&objects[obj])->mesh_index + THIGH_R];
     lara.mesh_ptrs[HAND_R] = meshes[(&objects[LARA])->mesh_index + HAND_R];
 }
+
+void PistolHandler(int weapon_type)
+{
+    WEAPON_INFO *winfo;
+
+    winfo = &weapons[weapon_type];
+
+    if (input & IN_ACTION)
+        LaraTargetInfo(winfo);
+    else
+        lara.target = NULL;
+    if (lara.target == NULL)
+        LaraGetNewTarget(winfo);
+
+    AimWeapon(winfo, &lara.left_arm);
+    AimWeapon(winfo, &lara.right_arm);
+
+    if (lara.left_arm.lock && !lara.right_arm.lock)
+    {
+        lara.head_y_rot = lara.torso_y_rot = lara.left_arm.y_rot / 2;
+        lara.head_x_rot = lara.torso_x_rot = lara.left_arm.x_rot / 2;
+    }
+    else if (lara.right_arm.lock && !lara.left_arm.lock)
+    {
+        lara.head_y_rot = lara.torso_y_rot = lara.right_arm.y_rot / 2;
+        lara.head_x_rot = lara.torso_x_rot = lara.right_arm.x_rot / 2;
+    }
+    else if (lara.left_arm.lock && lara.right_arm.lock)
+    {
+        lara.head_y_rot = lara.torso_y_rot = (lara.left_arm.y_rot + lara.right_arm.y_rot) / 4;
+        lara.head_x_rot = lara.torso_x_rot = (lara.left_arm.x_rot + lara.right_arm.x_rot) / 4;
+    }
+
+    AnimatePistols(weapon_type);
+}
