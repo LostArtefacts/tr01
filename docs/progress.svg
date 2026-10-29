@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">9.73% (75)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">90.27% (696)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">9.86% (76)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">90.14% (695)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="72.67" height="6" x="0" y="0" class="named"/>
-<rect width="674.33" height="6" x="72.67" y="0" class="todo"/>
+<rect width="73.63" height="6" x="0" y="0" class="named"/>
+<rect width="673.37" height="6" x="73.63" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -147,7 +147,7 @@
 <rect width="12" height="12" x="405" y="15" class="named"><title>0x00016bb4 Move3DPosTo3DPos (349 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="15" class="named"><title>0x00016d20 ControlPhase (673 bytes)</title></rect>
 <rect width="12" height="12" x="435" y="15" class="named"><title>0x00016ff4 AnimateItem (707 bytes)</title></rect>
-<rect width="12" height="12" x="450" y="15" class="todo"><title>0x000172b8 GetChange (154 bytes)</title></rect>
+<rect width="12" height="12" x="450" y="15" class="named"><title>0x000172b8 GetChange (154 bytes)</title></rect>
 <rect width="12" height="12" x="465" y="15" class="todo"><title>0x00017354 TranslateItem (101 bytes)</title></rect>
 <rect width="12" height="12" x="480" y="15" class="todo"><title>0x000173bc GetFloor (434 bytes)</title></rect>
 <rect width="12" height="12" x="495" y="15" class="todo"><title>0x00017570 Func17570 (248 bytes)</title></rect>
@@ -842,10 +842,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">12.79%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">87.21%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">12.87%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">87.13%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="95.56" height="6" x="0" y="0" class="named"/>
-<rect width="651.44" height="6" x="95.56" y="0" class="todo"/>
+<rect width="96.13" height="6" x="0" y="0" class="named"/>
+<rect width="650.87" height="6" x="96.13" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="54.65" height="67.43" x="0" y="0" class="todo"><title>0x0001bc98 Func1bc98 (4489 bytes)</title></rect>
@@ -1174,7 +1174,7 @@
 <rect width="8.81" height="9.02" x="726.37" y="72.71" class="todo"><title>0x0001d650 Func1d650 (157 bytes)</title></rect>
 <rect width="8.81" height="9.02" x="738.19" y="72.71" class="todo"><title>0x00046db1 Func46db1 (157 bytes)</title></rect>
 <rect width="9" height="8.68" x="580.90" y="84.73" class="todo"><title>0x00024ee8 Func24ee8 (155 bytes)</title></rect>
-<rect width="9" height="8.61" x="580.90" y="96.41" class="todo"><title>0x000172b8 GetChange (154 bytes)</title></rect>
+<rect width="9" height="8.61" x="580.90" y="96.41" class="named"><title>0x000172b8 GetChange (154 bytes)</title></rect>
 <rect width="9" height="8.53" x="580.90" y="108.02" class="todo"><title>0x00024bc4 ItemNewRoom (153 bytes)</title></rect>
 <rect width="9" height="8.46" x="580.90" y="119.55" class="todo"><title>0x00022734 Func22734 (152 bytes)</title></rect>
 <rect width="9" height="8.38" x="580.90" y="131.01" class="todo"><title>0x00024a30 RemoveActiveItem (151 bytes)</title></rect>
