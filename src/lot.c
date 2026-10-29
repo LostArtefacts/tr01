@@ -198,3 +198,10 @@ void CreateZone(ITEM_INFO *item)
             creature->LOT.zone_count++;
         }
 }
+
+int InitialiseLOT(LOT_INFO *LOT)
+{
+    LOT->node = (BOX_NODE *)game_malloc(sizeof(BOX_NODE) * number_boxes, CREATURE_LOT);
+    ClearLOT(LOT);
+    return 1;
+}
