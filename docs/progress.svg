@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">42.05% (328)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">57.95% (452)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">42.18% (329)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">57.82% (451)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="314.12" height="6" x="0" y="0" class="named"/>
-<rect width="432.88" height="6" x="314.12" y="0" class="todo"/>
+<rect width="315.08" height="6" x="0" y="0" class="named"/>
+<rect width="431.92" height="6" x="315.08" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -396,7 +396,7 @@
 <rect width="12" height="12" x="390" y="90" class="named"><title>0x00025bac lara_as_pullblock (42 bytes)</title></rect>
 <rect width="12" height="12" x="405" y="90" class="named"><title>0x00025bd8 lara_as_ppready (36 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="90" class="named"><title>0x00025bfc lara_as_pickup (42 bytes)</title></rect>
-<rect width="12" height="12" x="435" y="90" class="todo"><title>0x00025c28 Func25c28 (42 bytes)</title></rect>
+<rect width="12" height="12" x="435" y="90" class="named"><title>0x00025c28 lara_as_switchon (42 bytes)</title></rect>
 <rect width="12" height="12" x="450" y="90" class="todo"><title>0x00025c54 Func25c54 (42 bytes)</title></rect>
 <rect width="12" height="12" x="465" y="90" class="todo"><title>0x00025c80 Func25c80 (42 bytes)</title></rect>
 <rect width="12" height="12" x="480" y="90" class="todo"><title>0x00025cac Func25cac (44 bytes)</title></rect>
@@ -851,10 +851,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">41.29%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">58.71%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">41.32%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">58.68%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="308.47" height="6" x="0" y="0" class="named"/>
-<rect width="438.53" height="6" x="308.47" y="0" class="todo"/>
+<rect width="308.62" height="6" x="0" y="0" class="named"/>
+<rect width="438.38" height="6" x="308.62" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1479,7 +1479,7 @@
 <rect width="3.11" height="3.14" x="737.77" y="180.64" class="named"><title>0x00025b80 lara_as_pushblock (42 bytes)</title></rect>
 <rect width="3.11" height="3.14" x="743.89" y="180.64" class="named"><title>0x00025bac lara_as_pullblock (42 bytes)</title></rect>
 <rect width="2.91" height="3.35" x="693.53" y="186.78" class="named"><title>0x00025bfc lara_as_pickup (42 bytes)</title></rect>
-<rect width="2.91" height="3.35" x="693.53" y="193.13" class="todo"><title>0x00025c28 Func25c28 (42 bytes)</title></rect>
+<rect width="2.91" height="3.35" x="693.53" y="193.13" class="named"><title>0x00025c28 lara_as_switchon (42 bytes)</title></rect>
 <rect width="2.91" height="3.35" x="693.53" y="199.48" class="todo"><title>0x00025c54 Func25c54 (42 bytes)</title></rect>
 <rect width="2.91" height="3.35" x="693.53" y="205.82" class="todo"><title>0x00025c80 Func25c80 (42 bytes)</title></rect>
 <rect width="2.91" height="3.20" x="693.53" y="212.17" class="named"><title>0x0001063c S_CalculateStaticLight (41 bytes)</title></rect>
