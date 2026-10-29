@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">39.07% (304)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">60.93% (474)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">39.20% (305)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">60.80% (473)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="291.89" height="6" x="0" y="0" class="named"/>
-<rect width="455.11" height="6" x="291.89" y="0" class="todo"/>
+<rect width="292.85" height="6" x="0" y="0" class="named"/>
+<rect width="454.15" height="6" x="292.85" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -372,7 +372,7 @@
 <rect width="12" height="12" x="30" y="90" class="named"><title>0x000255bc lara_as_turn_r (135 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="90" class="named"><title>0x00025644 lara_as_turn_l (145 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="90" class="named"><title>0x000256d8 lara_as_death (5 bytes)</title></rect>
-<rect width="12" height="12" x="75" y="90" class="todo"><title>0x000256e0 Func256e0 (69 bytes)</title></rect>
+<rect width="12" height="12" x="75" y="90" class="named"><title>0x000256e0 lara_as_fastfall (69 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="90" class="todo"><title>0x00025728 Func25728 (77 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="90" class="todo"><title>0x00025778 Func25778 (32 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="90" class="todo"><title>0x00025798 Func25798 (1 bytes)</title></rect>
@@ -849,10 +849,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">40.64%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">59.36%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">40.68%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">59.32%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="303.61" height="6" x="0" y="0" class="named"/>
-<rect width="443.39" height="6" x="303.61" y="0" class="todo"/>
+<rect width="303.87" height="6" x="0" y="0" class="named"/>
+<rect width="443.13" height="6" x="303.87" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1372,7 +1372,7 @@
 <rect width="4.99" height="4.83" x="734.01" y="144.72" class="todo"><title>0x0003ed00 Func3ed00 (70 bytes)</title></rect>
 <rect width="4.99" height="4.83" x="742.01" y="144.72" class="todo"><title>0x0003efe0 phd_atan (70 bytes)</title></rect>
 <rect width="4.68" height="5.03" x="659.68" y="152.54" class="named"><title>0x0001ac2c DrawSpriteItem (69 bytes)</title></rect>
-<rect width="4.68" height="5.03" x="667.36" y="152.54" class="todo"><title>0x000256e0 Func256e0 (69 bytes)</title></rect>
+<rect width="4.68" height="5.03" x="667.36" y="152.54" class="named"><title>0x000256e0 lara_as_fastfall (69 bytes)</title></rect>
 <rect width="4.68" height="5.03" x="675.05" y="152.54" class="todo"><title>0x0002cc18 Func2cc18 (69 bytes)</title></rect>
 <rect width="4.68" height="5.03" x="682.73" y="152.54" class="todo"><title>0x00038b10 Func38b10 (69 bytes)</title></rect>
 <rect width="4.68" height="5.03" x="690.42" y="152.54" class="todo"><title>0x00039d60 Func39d60 (69 bytes)</title></rect>

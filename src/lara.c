@@ -4,6 +4,11 @@ LARA_INFO lara;
 ITEM_INFO *lara_item;
 int health_bar_timer = 0;
 
+#define DAMAGE_START 140
+#define DAMAGE_LENGTH 14
+
+#define FASTFALL_FRICTION item->speed = (item->speed * 95) / 100
+
 #define MAX_HEAD_ROTATION (44 * ONE_DEGREE)
 #define MAX_HEAD_TILT (22 * ONE_DEGREE)
 #define MIN_HEAD_TILT (-42 * ONE_DEGREE)
@@ -319,4 +324,11 @@ void lara_as_death(ITEM_INFO *item, COLL_INFO *coll)
 {
     coll->enable_hit = 0;
     coll->enable_baddie_push = 0;
+}
+
+void lara_as_fastfall(ITEM_INFO *item, COLL_INFO *coll)
+{
+    FASTFALL_FRICTION;
+    if (item->fallspeed >= DAMAGE_START + DAMAGE_LENGTH)
+        SoundEffect(30, &item->pos, 0);
 }
