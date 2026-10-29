@@ -197,4 +197,14 @@ enum object_types
     NUMBER_OBJECTS
 };
 
+enum floor_types
+{
+    FLOOR_TYPE,
+    DOOR_TYPE,
+    TILT_TYPE,
+    ROOF_TYPE,
+    TRIGGER_TYPE,
+    LAVA_TYPE
+};
+
 #endif

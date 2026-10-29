@@ -43,6 +43,8 @@ typedef uint16 SG_COL;
 
 #define END_BIT 0x8000
 
+#define DATA_TYPE 0x00ff
+
 #define WALL_SHIFT 10
 #define WALL_L 1024
 #define STEP_L (WALL_L / 4)
@@ -95,6 +97,52 @@ typedef struct
     PHD_ANGLE z_rot;
 } PHD_3DPOS;
 
+enum coll_types
+{
+    COLL_NONE = 0,
+    COLL_FRONT = 1,
+    COLL_LEFT = 2,
+    COLL_RIGHT = 4,
+    COLL_TOP = 8,
+    COLL_TOPFRONT = 16,
+    COLL_CLAMP = 32
+};
+
+struct COLL_INFO
+{
+    sint32 mid_floor;
+    sint32 mid_ceiling;
+    sint32 mid_type;
+    sint32 front_floor;
+    sint32 front_ceiling;
+    sint32 front_type;
+    sint32 left_floor;
+    sint32 left_ceiling;
+    sint32 left_type;
+    sint32 right_floor;
+    sint32 right_ceiling;
+    sint32 right_type;
+    sint32 radius;
+    sint32 bad_pos;
+    sint32 bad_neg;
+    sint32 bad_ceiling;
+    PHD_VECTOR shift;
+    PHD_VECTOR old;
+    sint16 facing;
+    sint16 quadrant;
+    sint16 coll_type;
+    sint16 *trigger;
+    sint8 tilt_x;
+    sint8 tilt_z;
+    sint8 hit_by_baddie;
+    sint8 hit_static;
+    uint16 slopes_are_walls:1;
+    uint16 slopes_are_pits:1;
+    uint16 lava_is_pit:1;
+    uint16 enable_baddie_push:1;
+    uint16 enable_hit:1;
+};
+
 typedef struct
 {
     sint32 floor;
@@ -135,6 +183,17 @@ typedef struct
     uint8 sky_room;
     sint8 ceiling;
 } FLOOR_INFO;
+
+#define NO_HEIGHT (-0x7f00)
+
+enum height_types
+{
+    WALL,
+    SMALL_SLOPE,
+    BIG_SLOPE
+};
+
+extern int height_type;
 
 #define UNDERWATER 1
 #define SFX_ALWAYS 2
