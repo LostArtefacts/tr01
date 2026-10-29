@@ -544,3 +544,15 @@ int LoadDemo(FILE *file)
         fread(demoptr, sizeof(char), length, file);
     return 1;
 }
+
+void build_ext(char *fname, char *ext)
+{
+    while (*fname != '.' && *fname != 0)
+        fname++;
+
+    *(fname++) = '.';
+    *(fname++) = *(ext++);
+    *(fname++) = *(ext++);
+    *(fname++) = *(ext++);
+    *(fname++) = 0;
+}

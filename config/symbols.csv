@@ -193,7 +193,7 @@ address,size,name,symbol
 0x0001f360,76,LoadAnimatedTextures,LoadAnimatedTextures_
 0x0001f3ac,95,LoadCinematic,LoadCinematic_
 0x0001f40c,100,LoadDemo,LoadDemo_
-0x0001f470,49,Func1f470,
+0x0001f470,49,build_ext,build_ext_
 0x0001f4a4,33,GetFullPath,GetFullPath_
 0x0001f4c8,123,Func1f4c8,
 0x0001f544,96,Func1f544,
