@@ -74,6 +74,45 @@ void FlameControl(sint16 fx_number);
 void LavaSpray(sint16 item_number);
 void ControlLavaBlob(sint16 fx_number);
 void LavaWedge(sint16 item_number);
+void BridgeFlatCeiling(ITEM_INFO *item, sint32 x, sint32 y, sint32 z, sint16 *height);
+void BridgeFlatFloor(ITEM_INFO *item, sint32 x, sint32 y, sint32 z, sint16 *height);
+void BridgeTilt1Ceiling(ITEM_INFO *item, sint32 x, sint32 y, sint32 z, sint16 *height);
+void BridgeTilt1Floor(ITEM_INFO *item, sint32 x, sint32 y, sint32 z, sint16 *height);
+void BridgeTilt2Ceiling(ITEM_INFO *item, sint32 x, sint32 y, sint32 z, sint16 *height);
+void BridgeTilt2Floor(ITEM_INFO *item, sint32 x, sint32 y, sint32 z, sint16 *height);
+void CogControl(sint16 item_number);
+void DoorControl(sint16 item_number);
+void DrawBridgeCeiling(ITEM_INFO *item, sint32 x, sint32 y, sint32 z, sint16 *height);
+void DrawBridgeCollision(sint16 item_num, ITEM_INFO *laraitem, COLL_INFO *coll);
+void DrawBridgeFloor(ITEM_INFO *item, sint32 x, sint32 y, sint32 z, sint16 *height);
+void InitialiseDoor(sint16 item_number);
+void PickUpCollision(sint16 item_num, ITEM_INFO *laraitem, COLL_INFO *coll);
+void SwitchCollision(sint16 item_num, ITEM_INFO *laraitem, COLL_INFO *coll);
+void SwitchCollision2(sint16 item_num, ITEM_INFO *laraitem, COLL_INFO *coll);
+void SwitchControl(sint16 item_number);
+void TrapDoorCeiling(ITEM_INFO *item, sint32 x, sint32 y, sint32 z, sint16 *height);
+void TrapDoorControl(sint16 item_number);
+void TrapDoorFloor(ITEM_INFO *item, sint32 x, sint32 y, sint32 z, sint16 *height);
+void BoatControl(sint16 item_number);
+void CabinControl(sint16 item_number);
+void ControlBlood1(sint16 fx_num);
+void ControlBodyPart(sint16 fx_number);
+void ControlBubble1(sint16 fx_num);
+void ControlExplosion1(sint16 fx_num);
+void ControlGunShot(sint16 fx_number);
+void ControlMissile(sint16 fx_number);
+void ControlNatlaGun(sint16 fx_number);
+void ControlRichochet1(sint16 fx_num);
+void ControlSplash1(sint16 fx_num);
+void ControlTwinkle(sint16 fx_num);
+void EarthQuake(sint16 item_number);
+void InitialiseSavegameItem(sint16 item_num);
+void KeyHoleCollision(sint16 item_num, ITEM_INFO *laraitem, COLL_INFO *coll);
+void PickUpScion4Collision(sint16 item_num, ITEM_INFO *laraitem, COLL_INFO *coll);
+void PickUpScionCollision(sint16 item_num, ITEM_INFO *laraitem, COLL_INFO *coll);
+void PuzzleHoleCollision(sint16 item_num, ITEM_INFO *laraitem, COLL_INFO *coll);
+void Scion3Control(sint16 item_number);
+void ScionControl(sint16 item_number);
 
 extern sint16 pierre_item;
 
@@ -795,4 +834,207 @@ void TrapObjects(void)
     obj->collision = CreatureCollision;
     obj->save_position = obj->save_flags = 1;
     obj->save_anim = 1;
+}
+
+#define INIT_PICKUP(a) \
+    obj = &objects[a]; \
+    obj->draw_routine = DrawSpriteItem; \
+    obj->collision = PickUpCollision; \
+    obj->save_flags = 1
+
+#define INIT_KEYHOLE(a) \
+    obj = &objects[a]; \
+    obj->collision = KeyHoleCollision; \
+    obj->save_flags = 1
+
+#define INIT_PUZZLEHOLE(a) \
+    obj = &objects[a]; \
+    obj->collision = PuzzleHoleCollision; \
+    obj->save_flags = 1
+
+#define INIT_DOOR(a) \
+    obj = &objects[a]; \
+    obj->initialise = InitialiseDoor; \
+    obj->draw_routine = DrawUnclippedItem; \
+    obj->control = DoorControl; \
+    obj->collision = DoorCollision; \
+    obj->save_flags = obj->save_anim = 1
+
+void ObjectObjects(void)
+{
+    OBJECT_INFO *obj;
+
+    objects[CAMERA_TARGET].draw_routine = DrawDummyItem;
+
+    obj = &objects[BRIDGE_FLAT];
+    obj->floor = BridgeFlatFloor;
+    obj->ceiling = BridgeFlatCeiling;
+    obj = &objects[BRIDGE_TILT1];
+    obj->floor = BridgeTilt1Floor;
+    obj->ceiling = BridgeTilt1Ceiling;
+    obj = &objects[BRIDGE_TILT2];
+    obj->floor = BridgeTilt2Floor;
+    obj->ceiling = BridgeTilt2Ceiling;
+
+    obj = &objects[DRAW_BRIDGE];
+    if (obj->loaded)
+    {
+        obj->control = CogControl;
+        obj->collision = DrawBridgeCollision;
+        obj->floor = DrawBridgeFloor;
+        obj->ceiling = DrawBridgeCeiling;
+        obj->save_anim = obj->save_flags = 1;
+    }
+
+    obj = &objects[SWITCH_TYPE1];
+    obj->control = SwitchControl;
+    obj->collision = SwitchCollision;
+    obj->save_anim = obj->save_flags = 1;
+    obj = &objects[SWITCH_TYPE2];
+    obj->control = SwitchControl;
+    obj->collision = SwitchCollision2;
+    obj->save_anim = obj->save_flags = 1;
+
+    INIT_DOOR(DOOR_TYPE1);
+    INIT_DOOR(DOOR_TYPE2);
+    INIT_DOOR(DOOR_TYPE3);
+    INIT_DOOR(DOOR_TYPE4);
+    INIT_DOOR(DOOR_TYPE5);
+    INIT_DOOR(DOOR_TYPE6);
+    INIT_DOOR(DOOR_TYPE7);
+    INIT_DOOR(DOOR_TYPE8);
+    obj = &objects[TRAPDOOR];
+    obj->control = TrapDoorControl;
+    obj->floor = TrapDoorFloor;
+    obj->ceiling = TrapDoorCeiling;
+    obj->save_anim = obj->save_flags = 1;
+    obj = &objects[TRAPDOOR2];
+    obj->control = TrapDoorControl;
+    obj->floor = TrapDoorFloor;
+    obj->ceiling = TrapDoorCeiling;
+    obj->save_anim = obj->save_flags = 1;
+
+    obj = &objects[COG_1];
+    obj->control = CogControl;
+    obj->save_flags = 1;
+    obj = &objects[COG_2];
+    obj->control = CogControl;
+    obj->save_flags = 1;
+    obj = &objects[COG_3];
+    obj->control = CogControl;
+    obj->save_flags = 1;
+    obj = &objects[MOVING_BAR];
+    obj->control = CogControl;
+    obj->collision = ObjectCollision;
+    obj->save_flags = obj->save_anim = obj->save_position = 1;
+
+    INIT_PICKUP(PICKUP_ITEM1);
+    INIT_PICKUP(PICKUP_ITEM2);
+    INIT_PICKUP(KEY_ITEM1);
+    INIT_PICKUP(KEY_ITEM2);
+    INIT_PICKUP(KEY_ITEM3);
+    INIT_PICKUP(KEY_ITEM4);
+    INIT_PICKUP(PUZZLE_ITEM1);
+    INIT_PICKUP(PUZZLE_ITEM2);
+    INIT_PICKUP(PUZZLE_ITEM3);
+    INIT_PICKUP(PUZZLE_ITEM4);
+    INIT_PICKUP(GUN_ITEM);
+    INIT_PICKUP(SHOTGUN_ITEM);
+    INIT_PICKUP(MAGNUM_ITEM);
+    INIT_PICKUP(UZI_ITEM);
+    INIT_PICKUP(GUN_AMMO_ITEM);
+    INIT_PICKUP(SG_AMMO_ITEM);
+    INIT_PICKUP(MAG_AMMO_ITEM);
+    INIT_PICKUP(UZI_AMMO_ITEM);
+    INIT_PICKUP(EXPLOSIVE_ITEM);
+    INIT_PICKUP(MEDI_ITEM);
+    INIT_PICKUP(BIGMEDI_ITEM);
+    INIT_PICKUP(SCION_ITEM2);
+    INIT_PICKUP(LEADBAR_ITEM);
+    obj = &objects[SAVEGAME_ITEM];
+    obj->initialise = InitialiseSavegameItem;
+    obj = &objects[SCION_ITEM];
+    obj->collision = PickUpScionCollision;
+    obj->draw_routine = DrawSpriteItem;
+
+    INIT_KEYHOLE(KEY_HOLE1);
+    INIT_KEYHOLE(KEY_HOLE2);
+    INIT_KEYHOLE(KEY_HOLE3);
+    INIT_KEYHOLE(KEY_HOLE4);
+
+    INIT_PUZZLEHOLE(PUZZLE_HOLE1);
+    INIT_PUZZLEHOLE(PUZZLE_HOLE2);
+    INIT_PUZZLEHOLE(PUZZLE_HOLE3);
+    INIT_PUZZLEHOLE(PUZZLE_HOLE4);
+    objects[PUZZLE_DONE1].save_flags = 1;
+    objects[PUZZLE_DONE2].save_flags = 1;
+    objects[PUZZLE_DONE3].save_flags = 1;
+    objects[PUZZLE_DONE4].save_flags = 1;
+
+    obj = &objects[PORTACABIN];
+    obj->control = CabinControl;
+    obj->draw_routine = DrawUnclippedItem;
+    obj->collision = ObjectCollision;
+    obj->save_anim = obj->save_flags = 1;
+
+    obj = &objects[BOAT];
+    obj->control = BoatControl;
+    obj->save_flags = 1;
+    obj->save_position = obj->save_anim = 1;
+
+    obj = &objects[SCION_HOLDER];
+    obj->control = ScionControl;
+    obj->collision = ObjectCollision;
+    obj->save_flags = 1;
+    obj->save_anim = 1;
+    obj = &objects[SCION_ITEM3];
+    obj->control = Scion3Control;
+    obj->hit_points = 5;
+    obj->save_flags = 1;
+    obj = &objects[SCION_ITEM4];
+    obj->control = ScionControl;
+    obj->collision = PickUpScion4Collision;
+    obj->save_flags = 1;
+
+    obj = &objects[EARTHQUAKE];
+    obj->control = EarthQuake;
+    obj->draw_routine = DrawDummyItem;
+    obj->save_flags = 1;
+
+    obj = &objects[PLAYER_1];
+    obj->initialise = InitialisePlayer1;
+    obj->control = ControlCinematicPlayer;
+    obj->hit_points = 1;
+    obj = &objects[PLAYER_2];
+    obj->initialise = InitialiseGenPlayer;
+    obj->control = ControlCinematicPlayer;
+    obj->hit_points = 1;
+    obj = &objects[PLAYER_3];
+    obj->initialise = InitialiseGenPlayer;
+    obj->control = ControlCinematicPlayer;
+    obj->hit_points = 1;
+    obj = &objects[PLAYER4];
+    obj->initialise = InitialiseGenPlayer;
+    obj->control = ControlCinematicPlayer4;
+    obj->hit_points = 1;
+
+    objects[BLOOD1].control = ControlBlood1;
+    objects[BUBBLES1].control = ControlBubble1;
+    objects[EXPLOSION1].control = ControlExplosion1;
+
+    objects[RICOCHET1].control = ControlRichochet1;
+    objects[TWINKLE].control = ControlTwinkle;
+    objects[SPLASH1].control = ControlSplash1;
+    objects[WATERFALL].control = WaterFall;
+    objects[WATERFALL].draw_routine = DrawDummyItem;
+
+    objects[BODY_PART].control = ControlBodyPart;
+    objects[BODY_PART].nmeshes = 0;
+    objects[BODY_PART].loaded = 1;
+
+    objects[MISSILE1].control = ControlNatlaGun;
+    objects[MISSILE2].control = ControlMissile;
+    objects[MISSILE3].control = ControlMissile;
+
+    objects[GUN_FLASH].control = ControlGunShot;
 }

@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">73.65% (598)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">26.35% (214)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">73.77% (599)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">26.23% (213)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="550.13" height="6" x="0" y="0" class="named"/>
-<rect width="196.87" height="6" x="550.13" y="0" class="todo"/>
+<rect width="551.05" height="6" x="0" y="0" class="named"/>
+<rect width="195.95" height="6" x="551.05" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -666,7 +666,7 @@
 <rect width="12" height="12" x="690" y="165" class="named"><title>0x000367e4 InitialiseLevelFlags (34 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="165" class="named"><title>0x00036808 BaddyObjects (3805 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="165" class="named"><title>0x000376e8 TrapObjects (1012 bytes)</title></rect>
-<rect width="12" height="12" x="735" y="165" class="todo"><title>0x00037adc Func37adc (2329 bytes)</title></rect>
+<rect width="12" height="12" x="735" y="165" class="named"><title>0x00037adc ObjectObjects (2329 bytes)</title></rect>
 <rect width="12" height="12" x="0" y="180" class="todo"><title>0x000383f8 InitialiseObjects (94 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="180" class="todo"><title>0x00038460 Func38460 (499 bytes)</title></rect>
 <rect width="12" height="12" x="30" y="180" class="todo"><title>0x00038654 Func38654 (228 bytes)</title></rect>
@@ -721,9 +721,9 @@
 <rect width="12" height="12" x="15" y="195" class="todo"><title>0x00039da8 RollingBallControl (616 bytes)</title></rect>
 <rect width="12" height="12" x="30" y="195" class="todo"><title>0x0003a010 RollingBallCollision (666 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="195" class="todo"><title>0x0003a2ac SpikeCollision (320 bytes)</title></rect>
-<rect width="12" height="12" x="60" y="195" class="todo"><title>0x0003a3ec Func3a3ec (67 bytes)</title></rect>
-<rect width="12" height="12" x="75" y="195" class="todo"><title>0x0003a430 Func3a430 (53 bytes)</title></rect>
-<rect width="12" height="12" x="90" y="195" class="todo"><title>0x0003a468 Func3a468 (55 bytes)</title></rect>
+<rect width="12" height="12" x="60" y="195" class="todo"><title>0x0003a3ec TrapDoorControl (67 bytes)</title></rect>
+<rect width="12" height="12" x="75" y="195" class="todo"><title>0x0003a430 TrapDoorFloor (53 bytes)</title></rect>
+<rect width="12" height="12" x="90" y="195" class="todo"><title>0x0003a468 TrapDoorCeiling (55 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="195" class="todo"><title>0x0003a4a0 Func3a4a0 (165 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="195" class="todo"><title>0x0003a548 Pendulum (336 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="195" class="todo"><title>0x0003a698 FallingBlock (285 bytes)</title></rect>
@@ -746,14 +746,14 @@
 <rect width="12" height="12" x="390" y="195" class="todo"><title>0x0003b558 CentaurControl (674 bytes)</title></rect>
 <rect width="12" height="12" x="405" y="195" class="todo"><title>0x0003b7fc InitialiseWarrior2 (36 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="195" class="todo"><title>0x0003b854 FlyerControl (1563 bytes)</title></rect>
-<rect width="12" height="12" x="435" y="195" class="todo"><title>0x0003be70 Func3be70 (627 bytes)</title></rect>
+<rect width="12" height="12" x="435" y="195" class="todo"><title>0x0003be70 ControlMissile (627 bytes)</title></rect>
 <rect width="12" height="12" x="450" y="195" class="todo"><title>0x0003c0e4 ShootAtLara (213 bytes)</title></rect>
 <rect width="12" height="12" x="465" y="195" class="todo"><title>0x0003c1bc ShardGun (122 bytes)</title></rect>
 <rect width="12" height="12" x="480" y="195" class="todo"><title>0x0003c238 RocketGun (122 bytes)</title></rect>
 <rect width="12" height="12" x="495" y="195" class="todo"><title>0x0003c2b4 InitialiseMummy (63 bytes)</title></rect>
 <rect width="12" height="12" x="510" y="195" class="todo"><title>0x0003c2f4 MummyControl (165 bytes)</title></rect>
 <rect width="12" height="12" x="525" y="195" class="todo"><title>0x0003c39c ExplodingDeath (932 bytes)</title></rect>
-<rect width="12" height="12" x="540" y="195" class="todo"><title>0x0003c740 Func3c740 (433 bytes)</title></rect>
+<rect width="12" height="12" x="540" y="195" class="todo"><title>0x0003c740 ControlBodyPart (433 bytes)</title></rect>
 <rect width="12" height="12" x="555" y="195" class="todo"><title>0x0003c918 InitialisePod (229 bytes)</title></rect>
 <rect width="12" height="12" x="570" y="195" class="todo"><title>0x0003ca00 PodControl (273 bytes)</title></rect>
 <rect width="12" height="12" x="585" y="195" class="todo"><title>0x0003cb14 InitialiseStatue (232 bytes)</title></rect>
@@ -883,10 +883,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">71.42%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">28.58%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">72.48%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">27.52%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="533.49" height="6" x="0" y="0" class="named"/>
-<rect width="213.51" height="6" x="533.49" y="0" class="todo"/>
+<rect width="541.42" height="6" x="0" y="0" class="named"/>
+<rect width="205.58" height="6" x="541.42" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.95" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -894,7 +894,7 @@
 <rect width="49.95" height="60.38" x="0" y="149.08" class="named"><title>0x00036808 BaddyObjects (3805 bytes)</title></rect>
 <rect width="49.95" height="42.54" x="0" y="212.46" class="named"><title>0x00012910 CreatureAnimation (2734 bytes)</title></rect>
 <rect width="40.84" height="50.17" x="52.95" y="0" class="todo"><title>0x000359c0 ExtractSaveGameInfo (2643 bytes)</title></rect>
-<rect width="40.84" height="43.85" x="52.95" y="53.17" class="todo"><title>0x00037adc Func37adc (2329 bytes)</title></rect>
+<rect width="40.84" height="43.85" x="52.95" y="53.17" class="named"><title>0x00037adc ObjectObjects (2329 bytes)</title></rect>
 <rect width="40.84" height="43.15" x="52.95" y="100.02" class="named"><title>0x0001b224 DrawLara (2294 bytes)</title></rect>
 <rect width="40.84" height="35.12" x="52.95" y="146.17" class="todo"><title>0x0004387c Func4387c (1895 bytes)</title></rect>
 <rect width="40.84" height="33.91" x="52.95" y="184.29" class="todo"><title>0x00040be0 Func40be0 (1835 bytes)</title></rect>
@@ -986,7 +986,7 @@
 <rect width="21.05" height="20.43" x="369.24" y="120.66" class="named"><title>0x00010090 S_GetObjectBounds (639 bytes)</title></rect>
 <rect width="21.05" height="20.25" x="369.24" y="144.09" class="named"><title>0x00011674 CreatureAIInfo (634 bytes)</title></rect>
 <rect width="21.05" height="20.10" x="369.24" y="167.34" class="todo"><title>0x000421d0 Func421d0 (630 bytes)</title></rect>
-<rect width="21.05" height="19.99" x="369.24" y="190.45" class="todo"><title>0x0003be70 Func3be70 (627 bytes)</title></rect>
+<rect width="21.05" height="19.99" x="369.24" y="190.45" class="todo"><title>0x0003be70 ControlMissile (627 bytes)</title></rect>
 <rect width="21.05" height="19.59" x="369.24" y="213.44" class="todo"><title>0x00039da8 RollingBallControl (616 bytes)</title></rect>
 <rect width="21.05" height="18.97" x="369.24" y="236.03" class="named"><title>0x0002f00c TestBlockPull (599 bytes)</title></rect>
 <rect width="19.56" height="19.91" x="393.29" y="0" class="todo"><title>0x0003f910 Func3f910 (586 bytes)</title></rect>
@@ -1036,7 +1036,7 @@
 <rect width="16.70" height="16.92" x="457.38" y="140.95" class="todo"><title>0x0003934c GetJointAbsPosition (445 bytes)</title></rect>
 <rect width="16.70" height="16.74" x="457.38" y="160.87" class="named"><title>0x0001ee1c LoadItems (441 bytes)</title></rect>
 <rect width="16.70" height="16.43" x="457.38" y="180.61" class="named"><title>0x000173bc GetFloor (434 bytes)</title></rect>
-<rect width="16.70" height="16.38" x="457.38" y="200.04" class="todo"><title>0x0003c740 Func3c740 (433 bytes)</title></rect>
+<rect width="16.70" height="16.38" x="457.38" y="200.04" class="todo"><title>0x0003c740 ControlBodyPart (433 bytes)</title></rect>
 <rect width="16.70" height="16.38" x="457.38" y="219.42" class="todo"><title>0x0003e614 Func3e614 (433 bytes)</title></rect>
 <rect width="16.70" height="16.20" x="457.38" y="238.80" class="named"><title>0x00026084 lara_col_walk (429 bytes)</title></rect>
 <rect width="16.42" height="16.39" x="477.08" y="0" class="todo"><title>0x0003d7e0 phd_GenerateW2V (427 bytes)</title></rect>
@@ -1430,7 +1430,7 @@
 <rect width="4.70" height="4.91" x="661.43" y="169.21" class="todo"><title>0x0003a970 InitialiseDamoclesSword (69 bytes)</title></rect>
 <rect width="4.59" height="4.91" x="669.12" y="169.21" class="named"><title>0x0001ac2c DrawSpriteItem (68 bytes)</title></rect>
 <rect width="4.47" height="4.91" x="676.71" y="169.21" class="named"><title>0x00011630 InitialiseCreature (67 bytes)</title></rect>
-<rect width="4.47" height="4.91" x="684.18" y="169.21" class="todo"><title>0x0003a3ec Func3a3ec (67 bytes)</title></rect>
+<rect width="4.47" height="4.91" x="684.18" y="169.21" class="todo"><title>0x0003a3ec TrapDoorControl (67 bytes)</title></rect>
 <rect width="4.36" height="4.91" x="691.66" y="169.21" class="named"><title>0x00014eb8 ControlCinematicPlayer (66 bytes)</title></rect>
 <rect width="4.36" height="4.91" x="699.02" y="169.21" class="todo"><title>0x00045b64 Func45b64 (66 bytes)</title></rect>
 <rect width="4.36" height="4.91" x="706.38" y="169.21" class="todo"><title>0x00045f28 Func45f28 (66 bytes)</title></rect>
@@ -1463,12 +1463,12 @@
 <rect width="4.35" height="3.60" x="668.82" y="244.80" class="named"><title>0x0002b42c draw_shotgun_meshes (55 bytes)</title></rect>
 <rect width="4.35" height="3.60" x="668.82" y="251.40" class="named"><title>0x0002b464 undraw_shotgun_meshes (55 bytes)</title></rect>
 <rect width="3.95" height="3.98" x="676.17" y="177.11" class="named"><title>0x00034b10 SwitchControl (55 bytes)</title></rect>
-<rect width="3.95" height="3.98" x="683.12" y="177.11" class="todo"><title>0x0003a468 Func3a468 (55 bytes)</title></rect>
+<rect width="3.95" height="3.98" x="683.12" y="177.11" class="todo"><title>0x0003a468 TrapDoorCeiling (55 bytes)</title></rect>
 <rect width="3.83" height="3.98" x="690.08" y="177.11" class="named"><title>0x00025b00 lara_as_hangleft (54 bytes)</title></rect>
 <rect width="3.83" height="3.98" x="696.90" y="177.11" class="named"><title>0x00025b38 lara_as_hangright (54 bytes)</title></rect>
 <rect width="3.83" height="3.98" x="703.73" y="177.11" class="todo"><title>0x00038cfc Func38cfc (54 bytes)</title></rect>
 <rect width="3.70" height="3.98" x="710.56" y="177.11" class="named"><title>0x0001cf3c phd_TranslateRel_I (53 bytes)</title></rect>
-<rect width="3.70" height="3.98" x="717.26" y="177.11" class="todo"><title>0x0003a430 Func3a430 (53 bytes)</title></rect>
+<rect width="3.70" height="3.98" x="717.26" y="177.11" class="todo"><title>0x0003a430 TrapDoorFloor (53 bytes)</title></rect>
 <rect width="3.57" height="3.98" x="723.96" y="177.11" class="named"><title>0x0001fad8 S_FadeToBlack (52 bytes)</title></rect>
 <rect width="3.57" height="3.98" x="730.53" y="177.11" class="todo"><title>0x0003d5bc Func3d5bc (52 bytes)</title></rect>
 <rect width="3.45" height="3.98" x="737.11" y="177.11" class="named"><title>0x00015f84 ShiftItem (51 bytes)</title></rect>
