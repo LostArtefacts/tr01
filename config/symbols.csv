@@ -547,7 +547,7 @@ address,size,name,symbol
 0x00031fcc,1152,Display_Requester,Display_Requester_
 0x00032450,110,Targetable,Targetable_
 0x000324c0,62,ControlGunShot,ControlGunShot_
-0x00032500,124,Func32500,
+0x00032500,124,GunShot,GunShot_
 0x0003257c,182,Func3257c,
 0x00032634,150,Func32634,
 0x000326cc,131,Func326cc,
