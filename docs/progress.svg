@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">39.67% (309)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">60.33% (470)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">39.79% (310)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">60.21% (469)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="296.31" height="6" x="0" y="0" class="named"/>
-<rect width="450.69" height="6" x="296.31" y="0" class="todo"/>
+<rect width="297.27" height="6" x="0" y="0" class="named"/>
+<rect width="449.73" height="6" x="297.27" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -377,7 +377,7 @@
 <rect width="12" height="12" x="105" y="90" class="named"><title>0x00025778 lara_as_reach (31 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="90" class="named"><title>0x00025798 lara_as_splat (1 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="90" class="named"><title>0x00025798 lara_as_land (0 bytes)</title></rect>
-<rect width="12" height="12" x="150" y="90" class="todo"><title>0x0002579c Func2579c (258 bytes)</title></rect>
+<rect width="12" height="12" x="150" y="90" class="named"><title>0x0002579c lara_as_compress (258 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="90" class="todo"><title>0x000258a0 lara_as_back (135 bytes)</title></rect>
 <rect width="12" height="12" x="180" y="90" class="todo"><title>0x00025928 Func25928 (76 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="90" class="todo"><title>0x00025974 Func25974 (120 bytes)</title></rect>
@@ -850,10 +850,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">40.73%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">59.27%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">40.86%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">59.14%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="304.27" height="6" x="0" y="0" class="named"/>
-<rect width="442.73" height="6" x="304.27" y="0" class="todo"/>
+<rect width="305.21" height="6" x="0" y="0" class="named"/>
+<rect width="441.79" height="6" x="305.21" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1072,7 +1072,7 @@
 <rect width="12.15" height="12.64" x="525.31" y="47.44" class="named"><title>0x000251ec lara_as_run (265 bytes)</title></rect>
 <rect width="12.15" height="12.40" x="525.31" y="63.08" class="todo"><title>0x00032f8c Func32f8c (261 bytes)</title></rect>
 <rect width="12.15" height="12.28" x="525.31" y="78.48" class="named"><title>0x00018a38 ClipTarget (259 bytes)</title></rect>
-<rect width="12.15" height="12.22" x="525.31" y="93.77" class="todo"><title>0x0002579c Func2579c (258 bytes)</title></rect>
+<rect width="12.15" height="12.22" x="525.31" y="93.77" class="named"><title>0x0002579c lara_as_compress (258 bytes)</title></rect>
 <rect width="12.15" height="12.17" x="525.31" y="108.99" class="todo"><title>0x0002751c Func2751c (257 bytes)</title></rect>
 <rect width="12.15" height="12.11" x="525.31" y="124.16" class="todo"><title>0x00030a7c Func30a7c (256 bytes)</title></rect>
 <rect width="12.15" height="12.05" x="525.31" y="139.26" class="named"><title>0x0001f7c4 S_DrawScreenSprite (255 bytes)</title></rect>
