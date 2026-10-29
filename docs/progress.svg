@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">12.06% (93)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">87.94% (678)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">12.19% (94)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">87.81% (677)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="90.11" height="6" x="0" y="0" class="named"/>
-<rect width="656.89" height="6" x="90.11" y="0" class="todo"/>
+<rect width="91.07" height="6" x="0" y="0" class="named"/>
+<rect width="655.93" height="6" x="91.07" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -161,9 +161,9 @@
 <rect width="12" height="12" x="615" y="15" class="named"><title>0x00018464 zLOS (747 bytes)</title></rect>
 <rect width="12" height="12" x="630" y="15" class="named"><title>0x00018750 xLOS (741 bytes)</title></rect>
 <rect width="12" height="12" x="645" y="15" class="named"><title>0x00018a38 ClipTarget (259 bytes)</title></rect>
-<rect width="12" height="12" x="660" y="15" class="todo"><title>0x00018b3c FlipMap (227 bytes)</title></rect>
-<rect width="12" height="12" x="675" y="15" class="todo"><title>0x00018c20 Func18c20 (97 bytes)</title></rect>
-<rect width="12" height="12" x="690" y="15" class="todo"><title>0x00018c84 Func18c84 (97 bytes)</title></rect>
+<rect width="12" height="12" x="660" y="15" class="named"><title>0x00018b3c FlipMap (227 bytes)</title></rect>
+<rect width="12" height="12" x="675" y="15" class="todo"><title>0x00018c20 RemoveRoomFlipItems (97 bytes)</title></rect>
+<rect width="12" height="12" x="690" y="15" class="todo"><title>0x00018c84 AddRoomFlipItems (97 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="15" class="todo"><title>0x00018ce8 TriggerCDTrack (319 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="15" class="todo"><title>0x00018e28 Func18e28 (141 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="15" class="todo"><title>0x00018ec0 Func18ec0 (800 bytes)</title></rect>
@@ -533,7 +533,7 @@
 <rect width="12" height="12" x="195" y="135" class="todo"><title>0x0002d2b4 SoundEffect (1336 bytes)</title></rect>
 <rect width="12" height="12" x="210" y="135" class="todo"><title>0x0002d7ec Func2d7ec (181 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="135" class="todo"><title>0x0002d8a4 Func2d8a4 (56 bytes)</title></rect>
-<rect width="12" height="12" x="240" y="135" class="todo"><title>0x0002d8dc Func2d8dc (94 bytes)</title></rect>
+<rect width="12" height="12" x="240" y="135" class="todo"><title>0x0002d8dc mn_stop_ambient_samples (94 bytes)</title></rect>
 <rect width="12" height="12" x="255" y="135" class="todo"><title>0x0002d93c Func2d93c (414 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="135" class="todo"><title>0x0002dadc Func2dadc (292 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="135" class="todo"><title>0x0002dc00 mn_stop_sound_effect (312 bytes)</title></rect>
@@ -842,10 +842,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">16.03%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">83.97%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">16.15%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">83.85%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="119.78" height="6" x="0" y="0" class="named"/>
-<rect width="627.22" height="6" x="119.78" y="0" class="todo"/>
+<rect width="120.62" height="6" x="0" y="0" class="named"/>
+<rect width="626.38" height="6" x="120.62" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="54.65" height="67.43" x="0" y="0" class="todo"><title>0x0001bc98 Func1bc98 (4489 bytes)</title></rect>
@@ -1086,7 +1086,7 @@
 <rect width="10.77" height="11.98" x="667.63" y="31.85" class="todo"><title>0x00038654 Func38654 (228 bytes)</title></rect>
 <rect width="10.77" height="11.98" x="681.39" y="31.85" class="todo"><title>0x0003ab0c Func3ab0c (228 bytes)</title></rect>
 <rect width="10.77" height="11.98" x="695.16" y="31.85" class="todo"><title>0x0003cbfc Func3cbfc (228 bytes)</title></rect>
-<rect width="10.71" height="11.98" x="708.93" y="31.85" class="todo"><title>0x00018b3c FlipMap (227 bytes)</title></rect>
+<rect width="10.71" height="11.98" x="708.93" y="31.85" class="named"><title>0x00018b3c FlipMap (227 bytes)</title></rect>
 <rect width="10.71" height="11.98" x="722.64" y="31.85" class="todo"><title>0x0003ec1c phd_RotateLight (227 bytes)</title></rect>
 <rect width="10.65" height="11.98" x="736.35" y="31.85" class="todo"><title>0x00024754 Func24754 (226 bytes)</title></rect>
 <rect width="11.16" height="11.37" x="541.04" y="46.83" class="todo"><title>0x00022c30 InitColours (225 bytes)</title></rect>
@@ -1289,8 +1289,8 @@
 <rect width="6.19" height="6.65" x="624.54" y="185.42" class="todo"><title>0x00029e9c Func29e9c (98 bytes)</title></rect>
 <rect width="6.19" height="6.65" x="624.54" y="195.07" class="todo"><title>0x00029f00 Func29f00 (98 bytes)</title></rect>
 <rect width="6.19" height="6.65" x="624.54" y="204.71" class="todo"><title>0x00046912 Func46912 (98 bytes)</title></rect>
-<rect width="6.19" height="6.55" x="624.54" y="214.36" class="todo"><title>0x00018c20 Func18c20 (97 bytes)</title></rect>
-<rect width="6.19" height="6.55" x="624.54" y="223.91" class="todo"><title>0x00018c84 Func18c84 (97 bytes)</title></rect>
+<rect width="6.19" height="6.55" x="624.54" y="214.36" class="todo"><title>0x00018c20 RemoveRoomFlipItems (97 bytes)</title></rect>
+<rect width="6.19" height="6.55" x="624.54" y="223.91" class="todo"><title>0x00018c84 AddRoomFlipItems (97 bytes)</title></rect>
 <rect width="6.19" height="6.55" x="624.54" y="233.45" class="todo"><title>0x00020f60 Func20f60 (97 bytes)</title></rect>
 <rect width="6.63" height="6.11" x="633.72" y="126.96" class="todo"><title>0x0003d4a0 Insert2DLine (97 bytes)</title></rect>
 <rect width="6.63" height="6.11" x="633.72" y="136.07" class="todo"><title>0x00044700 Func44700 (97 bytes)</title></rect>
@@ -1303,7 +1303,7 @@
 <rect width="6.63" height="5.83" x="633.72" y="198.87" class="todo"><title>0x00029874 Func29874 (94 bytes)</title></rect>
 <rect width="6.63" height="5.83" x="633.72" y="207.70" class="todo"><title>0x0002bc18 Func2bc18 (94 bytes)</title></rect>
 <rect width="6.63" height="5.83" x="633.72" y="216.52" class="todo"><title>0x0002bc78 Func2bc78 (94 bytes)</title></rect>
-<rect width="6.63" height="5.83" x="633.72" y="225.35" class="todo"><title>0x0002d8dc Func2d8dc (94 bytes)</title></rect>
+<rect width="6.63" height="5.83" x="633.72" y="225.35" class="todo"><title>0x0002d8dc mn_stop_ambient_samples (94 bytes)</title></rect>
 <rect width="6.63" height="5.83" x="633.72" y="234.17" class="todo"><title>0x00031f6c Remove_Requester (94 bytes)</title></rect>
 <rect width="6.15" height="6.30" x="643.36" y="126.96" class="todo"><title>0x000383f8 Func383f8 (94 bytes)</title></rect>
 <rect width="6.05" height="6.30" x="652.50" y="126.96" class="todo"><title>0x0002555c Func2555c (93 bytes)</title></rect>

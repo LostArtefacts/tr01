@@ -94,8 +94,8 @@ address,size,name,symbol
 0x00018750,741,xLOS,xLOS_
 0x00018a38,259,ClipTarget,ClipTarget_
 0x00018b3c,227,FlipMap,FlipMap_
-0x00018c20,97,Func18c20,
-0x00018c84,97,Func18c84,
+0x00018c20,97,RemoveRoomFlipItems,RemoveRoomFlipItems_
+0x00018c84,97,AddRoomFlipItems,AddRoomFlipItems_
 0x00018ce8,319,TriggerCDTrack,TriggerCDTrack_
 0x00018e28,141,Func18e28,
 0x00018ec0,800,Func18ec0,
@@ -465,7 +465,7 @@ address,size,name,symbol
 0x0002d2b4,1336,SoundEffect,SoundEffect_
 0x0002d7ec,181,Func2d7ec,
 0x0002d8a4,56,Func2d8a4,
-0x0002d8dc,94,Func2d8dc,
+0x0002d8dc,94,mn_stop_ambient_samples,mn_stop_ambient_samples_
 0x0002d93c,414,Func2d93c,
 0x0002dadc,292,Func2dadc,
 0x0002dc00,312,mn_stop_sound_effect,mn_stop_sound_effect_
