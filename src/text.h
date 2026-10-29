@@ -56,6 +56,7 @@ void T_FlashText(TEXTSTRING *textString, sint16 i_bool, sint16 rate);
 void T_CentreH(TEXTSTRING *textString, sint16 i_bool);
 void T_CentreV(TEXTSTRING *textString, sint16 i_bool);
 void T_RightAlign(TEXTSTRING *textString, sint16 i_bool);
+void T_BottomAlign(TEXTSTRING *textString, sint16 i_bool);
 int T_RemovePrint(TEXTSTRING *tString);
 void T_DrawText(void);
 

@@ -191,6 +191,12 @@ extern sint16 inv_option_objects;
 extern sint16 inv_option_current;
 extern INVENTORY_ITEM *inv_option_list[];
 
+extern TEXTSTRING *Inv_ringText;
+extern TEXTSTRING *Inv_upArrow1;
+extern TEXTSTRING *Inv_upArrow2;
+extern TEXTSTRING *Inv_downArrow1;
+extern TEXTSTRING *Inv_downArrow2;
+
 sint32 GetDebouncedInput(sint32 input);
 extern sint32 inputDB;
 extern sint32 oldInputDB;

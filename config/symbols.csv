@@ -613,7 +613,7 @@ address,size,name,symbol
 0x0003978c,13,T_CentreH,T_CentreH_
 0x0003979c,13,T_CentreV,T_CentreV_
 0x000397ac,13,T_RightAlign,T_RightAlign_
-0x000397bc,15,Func397bc,
+0x000397bc,15,T_BottomAlign,T_BottomAlign_
 0x000397cc,201,Func397cc,
 0x00039898,45,T_RemovePrint,T_RemovePrint_
 0x000398c8,34,Func398c8,
@@ -1787,6 +1787,10 @@ address,size,name,symbol
 0x000c19f2,16,secret_totals,_secret_totals
 0x000c1a04,4,rand_1,_rand_1
 0x000c1a08,4,rand_2,_rand_2
+0x000c1a0c,10,inventory_main_heading,_inventory_main_heading
+0x000c1a16,7,inventory_option_heading,_inventory_option_heading
+0x000c1a1d,6,inventory_keys_heading,_inventory_keys_heading
+0x000c1a23,10,inventory_gameover_heading,_inventory_gameover_heading
 0x000c1a98,88,Level_Strings,_Level_Strings
 0x000c1ba4,10,demomode_text,_demomode_text
 0x000c1fd1,11,str_timetaken,_str_timetaken
@@ -1812,6 +1816,11 @@ address,size,name,symbol
 0x000c34f8,2,inv_option_objects,_inv_option_objects
 0x000c34fa,2,inv_option_current,_inv_option_current
 0x000c34fc,20,inv_option_list,_inv_option_list
+0x000c3518,4,Inv_ringText,_Inv_ringText
+0x000c351c,4,Inv_upArrow1,_Inv_upArrow1
+0x000c3520,4,Inv_upArrow2,_Inv_upArrow2
+0x000c3524,4,Inv_downArrow1,_Inv_downArrow1
+0x000c3528,4,Inv_downArrow2,_Inv_downArrow2
 0x000c352c,,Load_Game_Requester,_Load_Game_Requester
 0x000c3818,4,inputDB,_inputDB
 0x000c381c,4,oldInputDB,_oldInputDB

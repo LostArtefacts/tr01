@@ -3,6 +3,10 @@
 
 extern char demomode_text[];
 extern char *Level_Strings[NUMBER_OF_LEVELS];
+extern char inventory_main_heading[];
+extern char inventory_option_heading[];
+extern char inventory_keys_heading[];
+extern char inventory_gameover_heading[];
 extern char str_of[];
 extern char str_timetaken[];
 extern char str_secrets[];
