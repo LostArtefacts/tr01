@@ -260,3 +260,34 @@ void LaraGun(void)
         break;
     }
 }
+
+void InitialiseNewWeapon(void)
+{
+    lara.left_arm.frame_number = lara.right_arm.frame_number = 0;
+    lara.left_arm.x_rot = lara.left_arm.y_rot = lara.left_arm.z_rot = 0;
+    lara.right_arm.x_rot = lara.right_arm.y_rot = lara.right_arm.z_rot = 0;
+    lara.target = NULL;
+    lara.left_arm.lock = lara.right_arm.lock = 0;
+    lara.left_arm.flash_gun = lara.right_arm.flash_gun = 0;
+
+    switch (lara.gun_type)
+    {
+    case LG_PISTOLS:
+    case LG_MAGNUMS:
+    case LG_UZIS:
+        lara.left_arm.frame_base = lara.right_arm.frame_base = objects[PISTOLS].frame_base;
+        if (lara.gun_status != LG_ARMLESS)
+            draw_pistol_meshes(lara.gun_type);
+        break;
+
+    case LG_SHOTGUN:
+        lara.left_arm.frame_base = lara.right_arm.frame_base = objects[SHOTGUN].frame_base;
+        if (lara.gun_status != LG_ARMLESS)
+            draw_shotgun_meshes();
+        break;
+
+    default:
+        lara.left_arm.frame_base = lara.right_arm.frame_base = objects[LARA].frame_base;
+        break;
+    }
+}
