@@ -434,3 +434,17 @@ int CollideStaticObjects(COLL_INFO *coll, sint32 x, sint32 y, sint32 z, sint16 r
 
     return 0;
 }
+
+void GetNearByRooms(sint32 x, sint32 y, sint32 z, sint32 r, sint32 h, sint16 room_number)
+{
+    draw_rooms[0] = room_number;
+    number_draw_rooms = 1;
+    GetNewRoom(x + r, y, z + r, room_number);
+    GetNewRoom(x - r, y, z + r, room_number);
+    GetNewRoom(x + r, y, z - r, room_number);
+    GetNewRoom(x - r, y, z - r, room_number);
+    GetNewRoom(x + r, y - h, z + r, room_number);
+    GetNewRoom(x - r, y - h, z + r, room_number);
+    GetNewRoom(x + r, y - h, z - r, room_number);
+    GetNewRoom(x - r, y - h, z - r, room_number);
+}
