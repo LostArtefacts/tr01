@@ -1327,6 +1327,12 @@ void lara_col_hangright(ITEM_INFO *item, COLL_INFO *coll)
     lara.move_angle = item->pos.y_rot + 16384;
 }
 
+void lara_col_slideback(ITEM_INFO *item, COLL_INFO *coll)
+{
+    lara.move_angle = item->pos.y_rot - 32768;
+    lara_slide_slope(item, coll);
+}
+
 void lara_default_col(ITEM_INFO *item, COLL_INFO *coll)
 {
     lara.move_angle = item->pos.y_rot;
