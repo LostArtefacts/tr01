@@ -3,6 +3,7 @@
 
 #include "types.h"
 
+extern int flip_status;
 extern ITEM_INFO *items;
 
 #endif

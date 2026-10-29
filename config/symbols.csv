@@ -684,9 +684,9 @@ address,size,name,symbol
 0x0003ee7c,48,phd_PrintPolyList,phd_PrintPolyList_
 0x0003eeac,223,Func3eeac,
 0x0003ef8c,73,Func3ef8c,
-0x0003efe0,70,Func3efe0,
-0x0003f026,5,Func3f026,
-0x0003f02b,25,Func3f02b,
+0x0003efe0,70,phd_atan,phd_atan_
+0x0003f026,5,phd_cos,phd_cos_
+0x0003f02b,25,phd_sin,phd_sin_
 0x0003f044,26,Func3f044,
 0x0003f05e,46,phd_sqrt,phd_sqrt_
 0x0003f090,559,Func3f090,
@@ -1756,7 +1756,9 @@ address,size,name,symbol
 0x000cb294,8,ground_zone2,_ground_zone2
 0x000cb2a0,4,boxes,_boxes
 0x000cb3d0,4,items,_items
+0x000cb3d4,4,flip_status,_flip_status
 0x000cc088,4,room,_room
+0x000cc090,9550,objects,_objects
 0x000ce960,34,inv_colours,_inv_colours
 0x000ce990,4,lara_item,_lara_item
 0x000d4744,48000,vbuf,_vbuf

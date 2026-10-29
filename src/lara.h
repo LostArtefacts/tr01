@@ -7,6 +7,7 @@
 
 extern ITEM_INFO *lara_item;
 
+sint16 *GetBestFrame(ITEM_INFO *item);
 sint16 DoBloodSplat(sint32 x, sint32 y, sint32 z, sint16 speed, PHD_ANGLE direction, sint16 room_num);
 int EnableBaddieAI(sint16 item_number, int Always);
 
