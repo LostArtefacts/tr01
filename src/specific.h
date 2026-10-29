@@ -14,6 +14,7 @@ extern sint16 *aranges;
 extern int malloc_used;
 extern sint32 input;
 extern int game_hires;
+extern char exit_message[];
 extern double screen_sizer, game_sizer;
 extern int title_loaded;
 
@@ -36,6 +37,7 @@ void S_DrawLighteningSegment(sint32 x1, sint32 y1, sint32 z1, sint32 x2, sint32 
 void S_DisplayPicture(char *filename);
 void S_DrawSpriteAbs(sint32 x, sint32 y, sint32 z, sint16 sprnum, sint16 shade);
 void S_ExitSystem(char *exit_message);
+void init_game_malloc(void);
 void S_UpdateInput(void);
 int S_SaveGame(void *data, int size, int slot);
 void CheckCheatMode(void);

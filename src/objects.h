@@ -1,6 +1,8 @@
 #ifndef OBJECTS_H
 #define OBJECTS_H
 
+#define OBJECT_VERSION 32
+
 enum object_types
 {
     LARA,

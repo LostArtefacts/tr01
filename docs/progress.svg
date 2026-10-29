@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">22.97% (178)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">77.03% (597)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">23.10% (179)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">76.90% (596)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="171.57" height="6" x="0" y="0" class="named"/>
-<rect width="575.43" height="6" x="171.57" y="0" class="todo"/>
+<rect width="172.53" height="6" x="0" y="0" class="named"/>
+<rect width="574.47" height="6" x="172.53" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -247,20 +247,20 @@
 <rect width="12" height="12" x="405" y="45" class="named"><title>0x0001e23c draw_right_gun (132 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="45" class="named"><title>0x0001e2c0 S_LoadTitle (18 bytes)</title></rect>
 <rect width="12" height="12" x="435" y="45" class="named"><title>0x0001e2d4 S_LoadLevel (21 bytes)</title></rect>
-<rect width="12" height="12" x="450" y="45" class="todo"><title>0x0001e2ec LoadLevel (354 bytes)</title></rect>
-<rect width="12" height="12" x="465" y="45" class="todo"><title>0x0001e450 Func1e450 (104 bytes)</title></rect>
-<rect width="12" height="12" x="480" y="45" class="todo"><title>0x0001e4b8 Func1e4b8 (1041 bytes)</title></rect>
-<rect width="12" height="12" x="495" y="45" class="todo"><title>0x0001e8cc Func1e8cc (1090 bytes)</title></rect>
-<rect width="12" height="12" x="510" y="45" class="todo"><title>0x0001ed10 Func1ed10 (265 bytes)</title></rect>
-<rect width="12" height="12" x="525" y="45" class="todo"><title>0x0001ee1c Func1ee1c (441 bytes)</title></rect>
-<rect width="12" height="12" x="540" y="45" class="todo"><title>0x0001efd8 Func1efd8 (107 bytes)</title></rect>
-<rect width="12" height="12" x="555" y="45" class="todo"><title>0x0001f044 Func1f044 (137 bytes)</title></rect>
-<rect width="12" height="12" x="570" y="45" class="todo"><title>0x0001f0d0 Func1f0d0 (90 bytes)</title></rect>
-<rect width="12" height="12" x="585" y="45" class="todo"><title>0x0001f12c Func1f12c (90 bytes)</title></rect>
-<rect width="12" height="12" x="600" y="45" class="todo"><title>0x0001f188 Func1f188 (469 bytes)</title></rect>
-<rect width="12" height="12" x="615" y="45" class="todo"><title>0x0001f360 Func1f360 (76 bytes)</title></rect>
-<rect width="12" height="12" x="630" y="45" class="todo"><title>0x0001f3ac Func1f3ac (95 bytes)</title></rect>
-<rect width="12" height="12" x="645" y="45" class="todo"><title>0x0001f40c Func1f40c (100 bytes)</title></rect>
+<rect width="12" height="12" x="450" y="45" class="named"><title>0x0001e2ec LoadLevel (354 bytes)</title></rect>
+<rect width="12" height="12" x="465" y="45" class="todo"><title>0x0001e450 LoadTexturePages (104 bytes)</title></rect>
+<rect width="12" height="12" x="480" y="45" class="todo"><title>0x0001e4b8 LoadRooms (1041 bytes)</title></rect>
+<rect width="12" height="12" x="495" y="45" class="todo"><title>0x0001e8cc LoadObjects (1090 bytes)</title></rect>
+<rect width="12" height="12" x="510" y="45" class="todo"><title>0x0001ed10 LoadSprites (265 bytes)</title></rect>
+<rect width="12" height="12" x="525" y="45" class="todo"><title>0x0001ee1c LoadItems (441 bytes)</title></rect>
+<rect width="12" height="12" x="540" y="45" class="todo"><title>0x0001efd8 LoadDepthQ (107 bytes)</title></rect>
+<rect width="12" height="12" x="555" y="45" class="todo"><title>0x0001f044 LoadPalette (137 bytes)</title></rect>
+<rect width="12" height="12" x="570" y="45" class="todo"><title>0x0001f0d0 LoadCameras (90 bytes)</title></rect>
+<rect width="12" height="12" x="585" y="45" class="todo"><title>0x0001f12c LoadSoundEffects (90 bytes)</title></rect>
+<rect width="12" height="12" x="600" y="45" class="todo"><title>0x0001f188 LoadBoxes (469 bytes)</title></rect>
+<rect width="12" height="12" x="615" y="45" class="todo"><title>0x0001f360 LoadAnimatedTextures (76 bytes)</title></rect>
+<rect width="12" height="12" x="630" y="45" class="todo"><title>0x0001f3ac LoadCinematic (95 bytes)</title></rect>
+<rect width="12" height="12" x="645" y="45" class="todo"><title>0x0001f40c LoadDemo (100 bytes)</title></rect>
 <rect width="12" height="12" x="660" y="45" class="todo"><title>0x0001f470 Func1f470 (49 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="45" class="todo"><title>0x0001f4a4 GetFullPath (33 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="45" class="todo"><title>0x0001f4c8 Func1f4c8 (123 bytes)</title></rect>
@@ -305,7 +305,7 @@
 <rect width="12" height="12" x="525" y="60" class="todo"><title>0x00020cd4 Func20cd4 (91 bytes)</title></rect>
 <rect width="12" height="12" x="540" y="60" class="todo"><title>0x00020d30 Func20d30 (186 bytes)</title></rect>
 <rect width="12" height="12" x="555" y="60" class="todo"><title>0x00020dec S_ExitSystem (70 bytes)</title></rect>
-<rect width="12" height="12" x="570" y="60" class="todo"><title>0x00020e34 Func20e34 (31 bytes)</title></rect>
+<rect width="12" height="12" x="570" y="60" class="todo"><title>0x00020e34 init_game_malloc (31 bytes)</title></rect>
 <rect width="12" height="12" x="585" y="60" class="todo"><title>0x00020e54 Func20e54 (109 bytes)</title></rect>
 <rect width="12" height="12" x="600" y="60" class="todo"><title>0x00020ec4 Func20ec4 (47 bytes)</title></rect>
 <rect width="12" height="12" x="615" y="60" class="todo"><title>0x00020ef4 Func20ef4 (105 bytes)</title></rect>
@@ -654,7 +654,7 @@
 <rect width="12" height="12" x="510" y="165" class="todo"><title>0x00038cfc Func38cfc (54 bytes)</title></rect>
 <rect width="12" height="12" x="525" y="165" class="todo"><title>0x00038d34 Func38d34 (32 bytes)</title></rect>
 <rect width="12" height="12" x="540" y="165" class="todo"><title>0x00038d54 Func38d54 (1 bytes)</title></rect>
-<rect width="12" height="12" x="555" y="165" class="todo"><title>0x00038d58 Func38d58 (387 bytes)</title></rect>
+<rect width="12" height="12" x="555" y="165" class="todo"><title>0x00038d58 LoadSamples (387 bytes)</title></rect>
 <rect width="12" height="12" x="570" y="165" class="todo"><title>0x00038edc S_StartSyncedAudio (4 bytes)</title></rect>
 <rect width="12" height="12" x="585" y="165" class="todo"><title>0x00038ee0 S_CDPlay (218 bytes)</title></rect>
 <rect width="12" height="12" x="600" y="165" class="todo"><title>0x00038f14 S_CDVolume (6 bytes)</title></rect>
@@ -846,10 +846,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">26.56%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">73.44%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">26.74%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">73.26%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="198.44" height="6" x="0" y="0" class="named"/>
-<rect width="548.56" height="6" x="198.44" y="0" class="todo"/>
+<rect width="199.73" height="6" x="0" y="0" class="named"/>
+<rect width="547.27" height="6" x="199.73" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -886,11 +886,11 @@
 <rect width="28.98" height="27.68" x="206.46" y="30.93" class="todo"><title>0x00035574 CreateSaveGameInfo (1098 bytes)</title></rect>
 <rect width="28.98" height="27.63" x="206.46" y="61.62" class="named"><title>0x00011eb4 CreatureMood (1096 bytes)</title></rect>
 <rect width="28.98" height="27.51" x="206.46" y="92.24" class="todo"><title>0x0003fb5c Func3fb5c (1092 bytes)</title></rect>
-<rect width="28.98" height="27.46" x="206.46" y="122.76" class="todo"><title>0x0001e8cc Func1e8cc (1090 bytes)</title></rect>
+<rect width="28.98" height="27.46" x="206.46" y="122.76" class="todo"><title>0x0001e8cc LoadObjects (1090 bytes)</title></rect>
 <rect width="28.98" height="27.38" x="206.46" y="153.22" class="named"><title>0x000111e8 BearControl (1087 bytes)</title></rect>
 <rect width="28.98" height="26.87" x="206.46" y="183.59" class="todo"><title>0x0003992c Func3992c (1069 bytes)</title></rect>
 <rect width="28.98" height="26.54" x="206.46" y="213.46" class="todo"><title>0x0002371c Func2371c (1057 bytes)</title></rect>
-<rect width="25.72" height="29.39" x="238.44" y="0" class="todo"><title>0x0001e4b8 Func1e4b8 (1041 bytes)</title></rect>
+<rect width="25.72" height="29.39" x="238.44" y="0" class="todo"><title>0x0001e4b8 LoadRooms (1041 bytes)</title></rect>
 <rect width="25.72" height="28.68" x="238.44" y="32.39" class="todo"><title>0x000283b0 LaraControl (1018 bytes)</title></rect>
 <rect width="25.72" height="28.49" x="238.44" y="64.07" class="todo"><title>0x000376e8 Func376e8 (1012 bytes)</title></rect>
 <rect width="25.72" height="27.81" x="238.44" y="95.56" class="named"><title>0x0001a578 SetRoomBounds (990 bytes)</title></rect>
@@ -963,7 +963,7 @@
 <rect width="17.71" height="17.45" x="412.09" y="41.77" class="todo"><title>0x00046a54 Func46a54 (474 bytes)</title></rect>
 <rect width="17.71" height="17.37" x="412.09" y="62.22" class="todo"><title>0x0002cd30 EnableBaddieAI (472 bytes)</title></rect>
 <rect width="17.71" height="17.32" x="412.09" y="82.58" class="todo"><title>0x000299e4 Func299e4 (471 bytes)</title></rect>
-<rect width="17.71" height="17.24" x="412.09" y="102.90" class="todo"><title>0x0001f188 Func1f188 (469 bytes)</title></rect>
+<rect width="17.71" height="17.24" x="412.09" y="102.90" class="todo"><title>0x0001f188 LoadBoxes (469 bytes)</title></rect>
 <rect width="17.71" height="17.19" x="412.09" y="123.14" class="todo"><title>0x00028e9c Func28e9c (468 bytes)</title></rect>
 <rect width="17.71" height="17.19" x="412.09" y="143.33" class="todo"><title>0x0003e440 calc_object_vertices (468 bytes)</title></rect>
 <rect width="17.71" height="17.06" x="412.09" y="163.52" class="named"><title>0x00010668 S_DrawHealthBar (465 bytes)</title></rect>
@@ -980,7 +980,7 @@
 <rect width="16.79" height="17.23" x="432.81" y="143" class="todo"><title>0x000430fc Func430fc (448 bytes)</title></rect>
 <rect width="16.79" height="17.14" x="432.81" y="163.23" class="todo"><title>0x00024870 Func24870 (446 bytes)</title></rect>
 <rect width="16.79" height="17.10" x="432.81" y="183.38" class="todo"><title>0x0003934c GetJointAbsPosition (445 bytes)</title></rect>
-<rect width="16.79" height="16.92" x="432.81" y="203.48" class="todo"><title>0x0001ee1c Func1ee1c (441 bytes)</title></rect>
+<rect width="16.79" height="16.92" x="432.81" y="203.48" class="todo"><title>0x0001ee1c LoadItems (441 bytes)</title></rect>
 <rect width="16.79" height="16.60" x="432.81" y="223.40" class="named"><title>0x000173bc GetFloor (434 bytes)</title></rect>
 <rect width="16.83" height="16.51" x="452.60" y="0" class="todo"><title>0x0003c740 Func3c740 (433 bytes)</title></rect>
 <rect width="16.83" height="16.51" x="452.60" y="19.51" class="todo"><title>0x0003e614 Func3e614 (433 bytes)</title></rect>
@@ -1001,7 +1001,7 @@
 <rect width="15.51" height="15.93" x="472.43" y="57.55" class="todo"><title>0x00027fa0 Func27fa0 (392 bytes)</title></rect>
 <rect width="15.51" height="15.83" x="472.43" y="76.48" class="todo"><title>0x0002b2a4 Func2b2a4 (390 bytes)</title></rect>
 <rect width="15.51" height="15.68" x="472.43" y="95.31" class="todo"><title>0x00026234 Func26234 (387 bytes)</title></rect>
-<rect width="15.51" height="15.68" x="472.43" y="113.99" class="todo"><title>0x00038d58 Func38d58 (387 bytes)</title></rect>
+<rect width="15.51" height="15.68" x="472.43" y="113.99" class="todo"><title>0x00038d58 LoadSamples (387 bytes)</title></rect>
 <rect width="15.51" height="15.54" x="472.43" y="132.68" class="todo"><title>0x00044895 Func44895 (384 bytes)</title></rect>
 <rect width="15.51" height="15.49" x="472.43" y="151.22" class="todo"><title>0x00023b40 Func23b40 (383 bytes)</title></rect>
 <rect width="15.51" height="15.49" x="472.43" y="169.71" class="todo"><title>0x00038f20 TestCollision (383 bytes)</title></rect>
@@ -1013,7 +1013,7 @@
 <rect width="14.93" height="14.84" x="490.94" y="36.68" class="todo"><title>0x000240bc Func240bc (358 bytes)</title></rect>
 <rect width="14.93" height="14.74" x="490.94" y="54.52" class="todo"><title>0x00028128 Func28128 (356 bytes)</title></rect>
 <rect width="14.93" height="14.69" x="490.94" y="72.26" class="todo"><title>0x00028d38 Func28d38 (355 bytes)</title></rect>
-<rect width="14.93" height="14.64" x="490.94" y="89.95" class="todo"><title>0x0001e2ec LoadLevel (354 bytes)</title></rect>
+<rect width="14.93" height="14.64" x="490.94" y="89.95" class="named"><title>0x0001e2ec LoadLevel (354 bytes)</title></rect>
 <rect width="14.93" height="14.54" x="490.94" y="107.60" class="todo"><title>0x0002bcd8 Func2bcd8 (352 bytes)</title></rect>
 <rect width="14.93" height="14.39" x="490.94" y="125.14" class="named"><title>0x00016bb4 Move3DPosTo3DPos (349 bytes)</title></rect>
 <rect width="14.93" height="13.89" x="490.94" y="142.53" class="named"><title>0x000168b0 TestLaraPosition (339 bytes)</title></rect>
@@ -1064,7 +1064,7 @@
 <rect width="12.79" height="12.28" x="702.86" y="16.53" class="todo"><title>0x000298d4 Func298d4 (270 bytes)</title></rect>
 <rect width="12.73" height="12.28" x="718.65" y="16.53" class="todo"><title>0x00020790 S_SaveGame (269 bytes)</title></rect>
 <rect width="12.62" height="12.28" x="734.38" y="16.53" class="named"><title>0x00013f54 ChaseCamera (267 bytes)</title></rect>
-<rect width="12.15" height="12.64" x="525.29" y="31.81" class="todo"><title>0x0001ed10 Func1ed10 (265 bytes)</title></rect>
+<rect width="12.15" height="12.64" x="525.29" y="31.81" class="todo"><title>0x0001ed10 LoadSprites (265 bytes)</title></rect>
 <rect width="12.15" height="12.64" x="525.29" y="47.45" class="todo"><title>0x000251ec Func251ec (265 bytes)</title></rect>
 <rect width="12.15" height="12.40" x="525.29" y="63.08" class="todo"><title>0x00032f8c Func32f8c (261 bytes)</title></rect>
 <rect width="12.15" height="12.28" x="525.29" y="78.48" class="named"><title>0x00018a38 ClipTarget (259 bytes)</title></rect>
@@ -1208,7 +1208,7 @@
 <rect width="7.76" height="8.63" x="592.39" y="96.04" class="todo"><title>0x0001f5b0 Func1f5b0 (140 bytes)</title></rect>
 <rect width="7.76" height="8.63" x="592.39" y="107.67" class="todo"><title>0x0002bb1c Func2bb1c (140 bytes)</title></rect>
 <rect width="7.76" height="8.46" x="592.39" y="119.30" class="named"><title>0x00010ed0 S_DisplayPicture (138 bytes)</title></rect>
-<rect width="7.76" height="8.38" x="592.39" y="130.76" class="todo"><title>0x0001f044 Func1f044 (137 bytes)</title></rect>
+<rect width="7.76" height="8.38" x="592.39" y="130.76" class="todo"><title>0x0001f044 LoadPalette (137 bytes)</title></rect>
 <rect width="7.76" height="8.38" x="592.39" y="142.14" class="todo"><title>0x00046378 Func46378 (137 bytes)</title></rect>
 <rect width="7.76" height="8.38" x="592.39" y="153.53" class="todo"><title>0x00046d28 Func46d28 (137 bytes)</title></rect>
 <rect width="7.76" height="8.30" x="592.39" y="164.91" class="named"><title>0x0001628c EffectHit (136 bytes)</title></rect>
@@ -1273,14 +1273,14 @@
 <rect width="6.55" height="7.29" x="740.45" y="106.97" class="todo"><title>0x00032450 Func32450 (110 bytes)</title></rect>
 <rect width="6.72" height="7.02" x="623.68" y="117.26" class="todo"><title>0x00020e54 Func20e54 (109 bytes)</title></rect>
 <rect width="6.72" height="6.93" x="623.68" y="127.28" class="todo"><title>0x00026800 Func26800 (108 bytes)</title></rect>
-<rect width="6.72" height="6.83" x="623.68" y="137.21" class="todo"><title>0x0001efd8 Func1efd8 (107 bytes)</title></rect>
+<rect width="6.72" height="6.83" x="623.68" y="137.21" class="todo"><title>0x0001efd8 LoadDepthQ (107 bytes)</title></rect>
 <rect width="6.72" height="6.74" x="623.68" y="147.04" class="named"><title>0x0001d5e4 DoBloodSplat (106 bytes)</title></rect>
 <rect width="6.72" height="6.74" x="623.68" y="156.78" class="todo"><title>0x0002460c Func2460c (106 bytes)</title></rect>
 <rect width="6.72" height="6.74" x="623.68" y="166.53" class="todo"><title>0x000278d0 Func278d0 (106 bytes)</title></rect>
 <rect width="6.72" height="6.65" x="623.68" y="176.27" class="todo"><title>0x00020ef4 Func20ef4 (105 bytes)</title></rect>
 <rect width="6.72" height="6.65" x="623.68" y="185.92" class="todo"><title>0x000227cc Func227cc (105 bytes)</title></rect>
 <rect width="6.72" height="6.65" x="623.68" y="195.57" class="todo"><title>0x00030310 Func30310 (105 bytes)</title></rect>
-<rect width="6.72" height="6.56" x="623.68" y="205.22" class="todo"><title>0x0001e450 Func1e450 (104 bytes)</title></rect>
+<rect width="6.72" height="6.56" x="623.68" y="205.22" class="todo"><title>0x0001e450 LoadTexturePages (104 bytes)</title></rect>
 <rect width="6.72" height="6.47" x="623.68" y="214.78" class="named"><title>0x00015fb8 UpdateLaraRoom (103 bytes)</title></rect>
 <rect width="6.72" height="6.38" x="623.68" y="224.25" class="todo"><title>0x0002f4b8 Func2f4b8 (102 bytes)</title></rect>
 <rect width="6.72" height="6.38" x="623.68" y="233.62" class="todo"><title>0x0003e240 phd_TranslateAbs (102 bytes)</title></rect>
@@ -1288,7 +1288,7 @@
 <rect width="6.90" height="6.12" x="643.30" y="117.26" class="todo"><title>0x0003d9e8 phd_GetVectorAngles (101 bytes)</title></rect>
 <rect width="6.80" height="6.12" x="653.19" y="117.26" class="named"><title>0x0001d84c ControlTwinkle (100 bytes)</title></rect>
 <rect width="6.80" height="6.12" x="662.99" y="117.26" class="named"><title>0x0001e154 PowerUpFX (100 bytes)</title></rect>
-<rect width="6.80" height="6.12" x="672.79" y="117.26" class="todo"><title>0x0001f40c Func1f40c (100 bytes)</title></rect>
+<rect width="6.80" height="6.12" x="672.79" y="117.26" class="todo"><title>0x0001f40c LoadDemo (100 bytes)</title></rect>
 <rect width="6.70" height="6.12" x="682.59" y="117.26" class="named"><title>0x0001d6f0 ControlExplosion1 (99 bytes)</title></rect>
 <rect width="6.70" height="6.12" x="692.29" y="117.26" class="todo"><title>0x0003aec4 Func3aec4 (99 bytes)</title></rect>
 <rect width="6.60" height="6.12" x="701.99" y="117.26" class="todo"><title>0x0001f8c4 Func1f8c4 (98 bytes)</title></rect>
@@ -1304,7 +1304,7 @@
 <rect width="5.99" height="6.54" x="678.82" y="126.38" class="todo"><title>0x0001f544 Func1f544 (96 bytes)</title></rect>
 <rect width="5.99" height="6.54" x="687.81" y="126.38" class="todo"><title>0x0001ff1c GameLoop (96 bytes)</title></rect>
 <rect width="5.99" height="6.54" x="696.80" y="126.38" class="todo"><title>0x00024224 Func24224 (96 bytes)</title></rect>
-<rect width="5.90" height="6.54" x="705.79" y="126.38" class="todo"><title>0x0001f3ac Func1f3ac (95 bytes)</title></rect>
+<rect width="5.90" height="6.54" x="705.79" y="126.38" class="todo"><title>0x0001f3ac LoadCinematic (95 bytes)</title></rect>
 <rect width="5.90" height="6.54" x="714.69" y="126.38" class="todo"><title>0x00026918 Func26918 (95 bytes)</title></rect>
 <rect width="5.80" height="6.54" x="723.59" y="126.38" class="todo"><title>0x00029814 Func29814 (94 bytes)</title></rect>
 <rect width="5.80" height="6.54" x="732.39" y="126.38" class="todo"><title>0x00029874 Func29874 (94 bytes)</title></rect>
@@ -1323,8 +1323,8 @@
 <rect width="6.24" height="5.80" x="633.40" y="234.20" class="todo"><title>0x000293d4 Func293d4 (91 bytes)</title></rect>
 <rect width="5.76" height="6.28" x="642.64" y="135.93" class="todo"><title>0x0003d98c phd_LookAt (91 bytes)</title></rect>
 <rect width="5.76" height="6.18" x="642.64" y="145.21" class="named"><title>0x00019eb0 IncreaseScreenSize (90 bytes)</title></rect>
-<rect width="5.76" height="6.18" x="642.64" y="154.38" class="todo"><title>0x0001f0d0 Func1f0d0 (90 bytes)</title></rect>
-<rect width="5.76" height="6.18" x="642.64" y="163.56" class="todo"><title>0x0001f12c Func1f12c (90 bytes)</title></rect>
+<rect width="5.76" height="6.18" x="642.64" y="154.38" class="todo"><title>0x0001f0d0 LoadCameras (90 bytes)</title></rect>
+<rect width="5.76" height="6.18" x="642.64" y="163.56" class="todo"><title>0x0001f12c LoadSoundEffects (90 bytes)</title></rect>
 <rect width="5.76" height="5.97" x="642.64" y="172.74" class="todo"><title>0x0002c894 Func2c894 (88 bytes)</title></rect>
 <rect width="5.76" height="5.97" x="642.64" y="181.71" class="todo"><title>0x00045ba8 FadeToPal (88 bytes)</title></rect>
 <rect width="5.76" height="5.87" x="642.64" y="190.69" class="todo"><title>0x0002d144 Func2d144 (87 bytes)</title></rect>
@@ -1349,7 +1349,7 @@
 <rect width="5.31" height="5.29" x="651.40" y="153.15" class="todo"><title>0x00025728 Func25728 (77 bytes)</title></rect>
 <rect width="5.31" height="5.29" x="651.40" y="161.43" class="todo"><title>0x0002f520 Func2f520 (77 bytes)</title></rect>
 <rect width="5.31" height="5.29" x="651.40" y="169.72" class="todo"><title>0x0003642c Func3642c (77 bytes)</title></rect>
-<rect width="5.31" height="5.18" x="651.40" y="178.01" class="todo"><title>0x0001f360 Func1f360 (76 bytes)</title></rect>
+<rect width="5.31" height="5.18" x="651.40" y="178.01" class="todo"><title>0x0001f360 LoadAnimatedTextures (76 bytes)</title></rect>
 <rect width="5.31" height="5.18" x="651.40" y="186.18" class="todo"><title>0x00020464 Func20464 (76 bytes)</title></rect>
 <rect width="5.31" height="5.18" x="651.40" y="194.36" class="todo"><title>0x00025928 Func25928 (76 bytes)</title></rect>
 <rect width="5.31" height="5.18" x="651.40" y="202.54" class="todo"><title>0x0002cc60 Func2cc60 (76 bytes)</title></rect>
@@ -1525,7 +1525,7 @@
 <rect width="2.45" height="2.25" x="744.55" y="198.69" class="todo"><title>0x00025778 Func25778 (32 bytes)</title></rect>
 <rect width="2.83" height="1.90" x="710.99" y="203.94" class="todo"><title>0x00025a88 Func25a88 (32 bytes)</title></rect>
 <rect width="2.83" height="1.90" x="716.82" y="203.94" class="todo"><title>0x00038d34 Func38d34 (32 bytes)</title></rect>
-<rect width="2.65" height="1.90" x="722.66" y="203.94" class="todo"><title>0x00020e34 Func20e34 (31 bytes)</title></rect>
+<rect width="2.65" height="1.90" x="722.66" y="203.94" class="todo"><title>0x00020e34 init_game_malloc (31 bytes)</title></rect>
 <rect width="2.65" height="1.90" x="728.31" y="203.94" class="todo"><title>0x000245a8 Func245a8 (31 bytes)</title></rect>
 <rect width="2.47" height="1.90" x="733.96" y="203.94" class="todo"><title>0x0004564d phd_PushMatrix (30 bytes)</title></rect>
 <rect width="2.29" height="1.90" x="739.43" y="203.94" class="named"><title>0x0001d00c phd_PutPolygons_I (29 bytes)</title></rect>
