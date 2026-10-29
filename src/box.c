@@ -173,3 +173,21 @@ int UpdateLOT(LOT_INFO *LOT, int expansion)
 
     return SearchLOT(LOT, expansion);
 }
+
+void TargetBox(LOT_INFO *LOT, sint16 box_number)
+{
+    BOX_INFO *box;
+
+    box_number &= BOX_NUMBER;
+
+    box = &boxes[box_number];
+
+    LOT->target.z = box->left + WALL_L / 2 + (GetRandomControl() * (box->right - box->left - WALL_L) >> 15);
+    LOT->target.x = box->top + WALL_L / 2 + (GetRandomControl() * (box->bottom - box->top - WALL_L) >> 15);
+    LOT->required_box = box_number;
+
+    if (LOT->fly == NO_FLYING)
+        LOT->target.y = box->height;
+    else
+        LOT->target.y = box->height - STEP_L * 3 / 2;
+}
