@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">7% (54)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">93% (717)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">7.13% (55)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">92.87% (716)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="52.32" height="6" x="0" y="0" class="named"/>
-<rect width="694.68" height="6" x="52.32" y="0" class="todo"/>
+<rect width="53.29" height="6" x="0" y="0" class="named"/>
+<rect width="693.71" height="6" x="53.29" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -126,7 +126,7 @@
 <rect width="12" height="12" x="90" y="15" class="named"><title>0x00014fc0 InitialiseGenPlayer (35 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="15" class="named"><title>0x00014fe4 InGameCinematicCamera (409 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="15" class="named"><title>0x000151c0 GetCollisionInfo (1702 bytes)</title></rect>
-<rect width="12" height="12" x="135" y="15" class="todo"><title>0x00015868 FindGridShift (45 bytes)</title></rect>
+<rect width="12" height="12" x="135" y="15" class="named"><title>0x00015868 FindGridShift (45 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="15" class="todo"><title>0x000158a8 CollideStaticObjects (1445 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="15" class="todo"><title>0x00015e50 GetNearByRooms (215 bytes)</title></rect>
 <rect width="12" height="12" x="180" y="15" class="todo"><title>0x00015f28 GetNewRoom (91 bytes)</title></rect>
@@ -842,10 +842,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">9.50%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">90.50%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">9.53%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">90.47%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="71" height="6" x="0" y="0" class="named"/>
-<rect width="676" height="6" x="71" y="0" class="todo"/>
+<rect width="71.16" height="6" x="0" y="0" class="named"/>
+<rect width="675.84" height="6" x="71.16" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="54.65" height="67.43" x="0" y="0" class="todo"><title>0x0001bc98 Func1bc98 (4489 bytes)</title></rect>
@@ -1446,7 +1446,7 @@
 <rect width="3.22" height="3.69" x="713.09" y="174.39" class="todo"><title>0x0001d7cc Func1d7cc (46 bytes)</title></rect>
 <rect width="3.22" height="3.69" x="719.31" y="174.39" class="todo"><title>0x00024484 Func24484 (46 bytes)</title></rect>
 <rect width="3.22" height="3.69" x="725.53" y="174.39" class="todo"><title>0x0003f05e phd_sqrt (46 bytes)</title></rect>
-<rect width="3.08" height="3.69" x="731.75" y="174.39" class="todo"><title>0x00015868 FindGridShift (45 bytes)</title></rect>
+<rect width="3.08" height="3.69" x="731.75" y="174.39" class="named"><title>0x00015868 FindGridShift (45 bytes)</title></rect>
 <rect width="3.08" height="3.69" x="737.83" y="174.39" class="todo"><title>0x00026e60 lara_col_hangleft (45 bytes)</title></rect>
 <rect width="3.08" height="3.69" x="743.92" y="174.39" class="todo"><title>0x0002dd68 Func2dd68 (45 bytes)</title></rect>
 <rect width="3.50" height="3.26" x="687.40" y="181.08" class="todo"><title>0x00039898 Func39898 (45 bytes)</title></rect>
