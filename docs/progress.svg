@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">54.94% (434)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">45.06% (356)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">55.06% (435)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">44.94% (355)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="410.38" height="6" x="0" y="0" class="named"/>
-<rect width="336.62" height="6" x="410.38" y="0" class="todo"/>
+<rect width="411.32" height="6" x="0" y="0" class="named"/>
+<rect width="335.68" height="6" x="411.32" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -502,12 +502,12 @@
 <rect width="12" height="12" x="480" y="120" class="named"><title>0x00029e9c lara_as_surfleft (98 bytes)</title></rect>
 <rect width="12" height="12" x="495" y="120" class="named"><title>0x00029f00 lara_as_surfright (98 bytes)</title></rect>
 <rect width="12" height="12" x="510" y="120" class="named"><title>0x00029f64 lara_as_surftread (451 bytes)</title></rect>
-<rect width="12" height="12" x="525" y="120" class="todo"><title>0x0002a128 lara_col_surfswim (19 bytes)</title></rect>
+<rect width="12" height="12" x="525" y="120" class="named"><title>0x0002a128 lara_col_surfswim (19 bytes)</title></rect>
 <rect width="12" height="12" x="540" y="120" class="todo"><title>0x0002a13c lara_col_surfback (22 bytes)</title></rect>
 <rect width="12" height="12" x="555" y="120" class="todo"><title>0x0002a154 lara_col_surfleft (25 bytes)</title></rect>
 <rect width="12" height="12" x="570" y="120" class="todo"><title>0x0002a170 lara_col_surfright (22 bytes)</title></rect>
 <rect width="12" height="12" x="585" y="120" class="todo"><title>0x0002a188 lara_col_surftread (19 bytes)</title></rect>
-<rect width="12" height="12" x="600" y="120" class="todo"><title>0x0002a19c Func2a19c (224 bytes)</title></rect>
+<rect width="12" height="12" x="600" y="120" class="todo"><title>0x0002a19c LaraSurfaceCollision (224 bytes)</title></rect>
 <rect width="12" height="12" x="615" y="120" class="todo"><title>0x0002a27c Func2a27c (453 bytes)</title></rect>
 <rect width="12" height="12" x="630" y="120" class="todo"><title>0x0002a460 LaraGun (904 bytes)</title></rect>
 <rect width="12" height="12" x="645" y="120" class="todo"><title>0x0002a7e8 InitialiseNewWeapon (216 bytes)</title></rect>
@@ -861,10 +861,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">49.83%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">50.17%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">49.84%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">50.16%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="372.21" height="6" x="0" y="0" class="named"/>
-<rect width="374.79" height="6" x="372.21" y="0" class="todo"/>
+<rect width="372.28" height="6" x="0" y="0" class="named"/>
+<rect width="374.72" height="6" x="372.28" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1113,7 +1113,7 @@
 <rect width="11.18" height="11.24" x="540.49" y="75.41" class="named"><title>0x00024754 KillItem (226 bytes)</title></rect>
 <rect width="11.18" height="11.18" x="540.49" y="89.65" class="named"><title>0x00022c30 InitColours (225 bytes)</title></rect>
 <rect width="11.18" height="11.12" x="540.49" y="103.83" class="named"><title>0x0001275c CreatureCreature (224 bytes)</title></rect>
-<rect width="11.18" height="11.12" x="540.49" y="117.95" class="todo"><title>0x0002a19c Func2a19c (224 bytes)</title></rect>
+<rect width="11.18" height="11.12" x="540.49" y="117.95" class="todo"><title>0x0002a19c LaraSurfaceCollision (224 bytes)</title></rect>
 <rect width="11.18" height="11.12" x="540.49" y="132.07" class="todo"><title>0x00034544 Func34544 (224 bytes)</title></rect>
 <rect width="11.18" height="11.06" x="540.49" y="146.19" class="todo"><title>0x0003eeac phd_InitWindow (223 bytes)</title></rect>
 <rect width="11.18" height="11.06" x="540.49" y="160.24" class="todo"><title>0x0003f48c S_DrawPickup (223 bytes)</title></rect>
@@ -1581,7 +1581,7 @@
 <rect width="1.32" height="1.35" x="725.93" y="218.41" class="todo"><title>0x0002ff2c Func2ff2c (21 bytes)</title></rect>
 <rect width="1.11" height="1.35" x="730.25" y="218.41" class="named"><title>0x0001a2a0 S_NoFade (20 bytes)</title></rect>
 <rect width="0.91" height="1.35" x="734.37" y="218.41" class="named"><title>0x00026cc8 lara_col_slide (19 bytes)</title></rect>
-<rect width="0.91" height="1.35" x="738.28" y="218.41" class="todo"><title>0x0002a128 lara_col_surfswim (19 bytes)</title></rect>
+<rect width="0.91" height="1.35" x="738.28" y="218.41" class="named"><title>0x0002a128 lara_col_surfswim (19 bytes)</title></rect>
 <rect width="0.91" height="1.35" x="742.18" y="218.41" class="todo"><title>0x0002a188 lara_col_surftread (19 bytes)</title></rect>
 <rect width="0.91" height="1.35" x="746.09" y="218.41" class="todo"><title>0x0002ff18 Func2ff18 (19 bytes)</title></rect>
 <rect width="1.06" height="1.18" x="725.93" y="222.76" class="todo"><title>0x00045c00 FadeWait (19 bytes)</title></rect>

@@ -439,7 +439,7 @@ address,size,name,symbol
 0x0002a154,25,lara_col_surfleft,lara_col_surfleft_
 0x0002a170,22,lara_col_surfright,lara_col_surfright_
 0x0002a188,19,lara_col_surftread,lara_col_surftread_
-0x0002a19c,224,Func2a19c,
+0x0002a19c,224,LaraSurfaceCollision,LaraSurfaceCollision_
 0x0002a27c,453,Func2a27c,
 0x0002a460,904,LaraGun,LaraGun_
 0x0002a7e8,216,InitialiseNewWeapon,InitialiseNewWeapon_
