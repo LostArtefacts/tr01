@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">51.71% (408)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">48.29% (381)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">51.84% (409)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">48.16% (380)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="386.28" height="6" x="0" y="0" class="named"/>
-<rect width="360.72" height="6" x="386.28" y="0" class="todo"/>
+<rect width="387.23" height="6" x="0" y="0" class="named"/>
+<rect width="359.77" height="6" x="387.23" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -476,7 +476,7 @@
 <rect width="12" height="12" x="90" y="120" class="named"><title>0x00028820 AnimateLara (732 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="120" class="named"><title>0x00028afc UseItem (508 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="120" class="named"><title>0x00028cf8 ControlLaraExtra (28 bytes)</title></rect>
-<rect width="12" height="12" x="135" y="120" class="todo"><title>0x00028d14 Func28d14 (34 bytes)</title></rect>
+<rect width="12" height="12" x="135" y="120" class="named"><title>0x00028d14 InitialiseLaraLoad (34 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="120" class="todo"><title>0x00028d38 Func28d38 (355 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="120" class="todo"><title>0x00028e9c Func28e9c (468 bytes)</title></rect>
 <rect width="12" height="12" x="180" y="120" class="todo"><title>0x00029070 Func29070 (280 bytes)</title></rect>
@@ -860,10 +860,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">47.32%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">52.68%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">47.34%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">52.66%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="353.52" height="6" x="0" y="0" class="named"/>
-<rect width="393.48" height="6" x="353.52" y="0" class="todo"/>
+<rect width="353.64" height="6" x="0" y="0" class="named"/>
+<rect width="393.36" height="6" x="353.64" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1525,7 +1525,7 @@
 <rect width="2.50" height="2.69" x="705.44" y="198.62" class="todo"><title>0x0003cce0 Func3cce0 (35 bytes)</title></rect>
 <rect width="2.50" height="2.53" x="705.44" y="204.31" class="named"><title>0x000245c8 Inv_RingMotionCameraPos (34 bytes)</title></rect>
 <rect width="2.50" height="2.53" x="705.44" y="209.83" class="named"><title>0x00026014 lara_as_swandive (34 bytes)</title></rect>
-<rect width="2.50" height="2.53" x="705.44" y="215.36" class="todo"><title>0x00028d14 Func28d14 (34 bytes)</title></rect>
+<rect width="2.50" height="2.53" x="705.44" y="215.36" class="named"><title>0x00028d14 InitialiseLaraLoad (34 bytes)</title></rect>
 <rect width="2.50" height="2.53" x="705.44" y="220.89" class="todo"><title>0x0002ffd8 Func2ffd8 (34 bytes)</title></rect>
 <rect width="2.50" height="2.53" x="705.44" y="226.42" class="todo"><title>0x0003667c Func3667c (34 bytes)</title></rect>
 <rect width="2.50" height="2.53" x="705.44" y="231.94" class="todo"><title>0x000367e4 InitialiseLevelFlags (34 bytes)</title></rect>

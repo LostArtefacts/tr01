@@ -335,6 +335,12 @@ void ControlLaraExtra(sint16 item_num)
     AnimateItem(&items[item_num]);
 }
 
+void InitialiseLaraLoad(sint16 item_num)
+{
+    lara.item_number = item_num;
+    lara_item = &items[item_num];
+}
+
 void lara_as_walk(ITEM_INFO *item, COLL_INFO *coll);
 void lara_as_run(ITEM_INFO *item, COLL_INFO *coll);
 void lara_as_stop(ITEM_INFO *item, COLL_INFO *coll);
