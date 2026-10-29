@@ -207,3 +207,40 @@ void InitialiseGenPlayer(sint16 item_num)
     AddActiveItem(item_num);
     items[item_num].pos.y_rot = 0;
 }
+
+void InGameCinematicCamera(void)
+{
+    sint32 c, s;
+    sint32 tx, ty, tz;
+    sint32 cx, cy, cz;
+    sint16 roll, fov;
+    sint16 *ptr;
+
+    cine_frame++;
+    if (cine_frame >= num_cine_frames)
+        cine_frame = num_cine_frames - 1;
+
+    ptr = cine + (int)(8 * cine_frame);
+    tx = (sint32)*(ptr + 0);
+    ty = (sint32)*(ptr + 1);
+    tz = (sint32)*(ptr + 2);
+    cx = (sint32)*(ptr + 3);
+    cy = (sint32)*(ptr + 4);
+    cz = (sint32)*(ptr + 5);
+    fov = *(ptr + 6);
+    roll = *(ptr + 7);
+
+    c = phd_cos(cinematic_pos.y_rot);
+    s = phd_sin(cinematic_pos.y_rot);
+    camera.target.x = cinematic_pos.x_pos + ((tx * c + tz * s) >> W2V_SHIFT);
+    camera.target.y = cinematic_pos.y_pos + ty;
+    camera.target.z = cinematic_pos.z_pos + ((tz * c - tx * s) >> W2V_SHIFT);
+    camera.pos.x = cinematic_pos.x_pos + ((cx * c + cz * s) >> W2V_SHIFT);
+    camera.pos.y = cinematic_pos.y_pos + cy;
+    camera.pos.z = cinematic_pos.z_pos + ((cz * c - cx * s) >> W2V_SHIFT);
+
+    AlterFOV(fov);
+    phd_LookAt(camera.pos.x, camera.pos.y, camera.pos.z, camera.target.x, camera.target.y, camera.target.z,
+               roll);
+    GetFloor(camera.pos.x, camera.pos.y, camera.pos.z, &camera.pos.room_number);
+}

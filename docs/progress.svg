@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">6.74% (52)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">93.26% (719)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">6.87% (53)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">93.13% (718)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="50.38" height="6" x="0" y="0" class="named"/>
-<rect width="696.62" height="6" x="50.38" y="0" class="todo"/>
+<rect width="51.35" height="6" x="0" y="0" class="named"/>
+<rect width="695.65" height="6" x="51.35" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -124,7 +124,7 @@
 <rect width="12" height="12" x="60" y="15" class="named"><title>0x00014efc ControlCinematicPlayer4 (28 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="15" class="named"><title>0x00014f18 InitialisePlayer1 (168 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="15" class="named"><title>0x00014fc0 InitialiseGenPlayer (35 bytes)</title></rect>
-<rect width="12" height="12" x="105" y="15" class="todo"><title>0x00014fe4 InGameCinematicCamera (409 bytes)</title></rect>
+<rect width="12" height="12" x="105" y="15" class="named"><title>0x00014fe4 InGameCinematicCamera (409 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="15" class="todo"><title>0x000151c0 Func151c0 (1702 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="15" class="todo"><title>0x00015868 Func15868 (45 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="15" class="todo"><title>0x000158a8 Func158a8 (1445 bytes)</title></rect>
@@ -842,10 +842,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">8.46%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">91.54%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">8.66%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">91.34%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="63.17" height="6" x="0" y="0" class="named"/>
-<rect width="683.83" height="6" x="63.17" y="0" class="todo"/>
+<rect width="64.69" height="6" x="0" y="0" class="named"/>
+<rect width="682.31" height="6" x="64.69" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="54.65" height="67.43" x="0" y="0" class="todo"><title>0x0001bc98 Func1bc98 (4489 bytes)</title></rect>
@@ -982,7 +982,7 @@
 <rect width="16.69" height="16.02" x="453.88" y="19.62" class="todo"><title>0x0002d93c Func2d93c (414 bytes)</title></rect>
 <rect width="16.69" height="16.02" x="453.88" y="38.64" class="todo"><title>0x0003abf0 Func3abf0 (414 bytes)</title></rect>
 <rect width="16.69" height="15.88" x="453.88" y="57.66" class="todo"><title>0x000252f8 Func252f8 (411 bytes)</title></rect>
-<rect width="16.69" height="15.79" x="453.88" y="76.54" class="todo"><title>0x00014fe4 InGameCinematicCamera (409 bytes)</title></rect>
+<rect width="16.69" height="15.79" x="453.88" y="76.54" class="named"><title>0x00014fe4 InGameCinematicCamera (409 bytes)</title></rect>
 <rect width="16.69" height="15.65" x="453.88" y="95.33" class="named"><title>0x00010310 S_PrintShadow (406 bytes)</title></rect>
 <rect width="16.69" height="15.61" x="453.88" y="113.99" class="todo"><title>0x00027d4c Func27d4c (405 bytes)</title></rect>
 <rect width="16.69" height="15.61" x="453.88" y="132.60" class="todo"><title>0x0002a8c0 Func2a8c0 (405 bytes)</title></rect>

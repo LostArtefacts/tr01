@@ -1763,6 +1763,7 @@ address,size,name,symbol
 0x000cb2a0,4,boxes,_boxes
 0x000cb2a8,93,camera,_camera
 0x000cb308,4,cine,_cine
+0x000cb30c,18,cinematic_pos,_cinematic_pos
 0x000cb31e,2,cinematic_level,_cinematic_level
 0x000cb320,2,cine_frame,_cine_frame
 0x000cb322,2,num_cine_frames,_num_cine_frames
