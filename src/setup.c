@@ -7,6 +7,8 @@ void InitialiseLOTarray(void);
 void InitColours(void);
 void ExtractSaveGameInfo(void);
 
+extern sint16 pierre_item;
+
 sint16 level_music[NUMBER_OF_LEVELS] = {
     0,
     57,
@@ -64,4 +66,24 @@ int InitialiseLevel(int level_number)
     camera.underwater = 0;
 
     return 1;
+}
+
+void InitialiseGameFlags(void)
+{
+    int i;
+
+    flip_status = 0;
+    for (i = 0; i < MAX_FLIPMAPS; i++)
+        flipmap[i] = 0;
+
+    for (i = 0; i < MAX_CD_TRACKS; i++)
+        cd_flags[i] = 0;
+
+    for (i = 0; i < NUMBER_OBJECTS; i++)
+        objects[i].loaded = 0;
+
+    ammotext = NULL;
+    level_complete = 0;
+    flipeffect = -1;
+    pierre_item = NO_ITEM;
 }
