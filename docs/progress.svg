@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">11.93% (92)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">88.07% (679)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">12.06% (93)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">87.94% (678)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="89.14" height="6" x="0" y="0" class="named"/>
-<rect width="657.86" height="6" x="89.14" y="0" class="todo"/>
+<rect width="90.11" height="6" x="0" y="0" class="named"/>
+<rect width="656.89" height="6" x="90.11" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -160,7 +160,7 @@
 <rect width="12" height="12" x="600" y="15" class="named"><title>0x000183c0 LOS (163 bytes)</title></rect>
 <rect width="12" height="12" x="615" y="15" class="named"><title>0x00018464 zLOS (747 bytes)</title></rect>
 <rect width="12" height="12" x="630" y="15" class="named"><title>0x00018750 xLOS (741 bytes)</title></rect>
-<rect width="12" height="12" x="645" y="15" class="todo"><title>0x00018a38 ClipTarget (259 bytes)</title></rect>
+<rect width="12" height="12" x="645" y="15" class="named"><title>0x00018a38 ClipTarget (259 bytes)</title></rect>
 <rect width="12" height="12" x="660" y="15" class="todo"><title>0x00018b3c FlipMap (227 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="15" class="todo"><title>0x00018c20 Func18c20 (97 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="15" class="todo"><title>0x00018c84 Func18c84 (97 bytes)</title></rect>
@@ -842,10 +842,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">15.91%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">84.09%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">16.03%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">83.97%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="118.82" height="6" x="0" y="0" class="named"/>
-<rect width="628.18" height="6" x="118.82" y="0" class="todo"/>
+<rect width="119.78" height="6" x="0" y="0" class="named"/>
+<rect width="627.22" height="6" x="119.78" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="54.65" height="67.43" x="0" y="0" class="todo"><title>0x0001bc98 Func1bc98 (4489 bytes)</title></rect>
@@ -1060,7 +1060,7 @@
 <rect width="12.66" height="12.30" x="703.25" y="16.55" class="todo"><title>0x0001ed10 Func1ed10 (265 bytes)</title></rect>
 <rect width="12.66" height="12.30" x="718.92" y="16.55" class="todo"><title>0x000251ec Func251ec (265 bytes)</title></rect>
 <rect width="12.42" height="12.30" x="734.58" y="16.55" class="todo"><title>0x00032f8c Func32f8c (261 bytes)</title></rect>
-<rect width="12.08" height="12.54" x="525.97" y="31.85" class="todo"><title>0x00018a38 ClipTarget (259 bytes)</title></rect>
+<rect width="12.08" height="12.54" x="525.97" y="31.85" class="named"><title>0x00018a38 ClipTarget (259 bytes)</title></rect>
 <rect width="12.08" height="12.48" x="525.97" y="47.39" class="todo"><title>0x0002579c Func2579c (258 bytes)</title></rect>
 <rect width="12.08" height="12.42" x="525.97" y="62.86" class="todo"><title>0x0002751c Func2751c (257 bytes)</title></rect>
 <rect width="12.08" height="12.36" x="525.97" y="78.28" class="todo"><title>0x00030a7c Func30a7c (256 bytes)</title></rect>

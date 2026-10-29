@@ -1125,3 +1125,32 @@ int xLOS(GAME_VECTOR *start, GAME_VECTOR *target)
 
     return 1;
 }
+
+int ClipTarget(GAME_VECTOR *start, GAME_VECTOR *target, FLOOR_INFO *floor)
+{
+    sint32 dx, dy, dz, height;
+
+    dx = target->x - start->x;
+    dy = target->y - start->y;
+    dz = target->z - start->z;
+
+    height = GetHeight(floor, target->x, target->y, target->z);
+    if (target->y > height && start->y < height)
+    {
+        target->y = height;
+        target->x = start->x + dx * (height - start->y) / dy;
+        target->z = start->z + dz * (height - start->y) / dy;
+        return 0;
+    }
+
+    height = GetCeiling(floor, target->x, target->y, target->z);
+    if (target->y < height && start->y > height)
+    {
+        target->y = height;
+        target->x = start->x + dx * (height - start->y) / dy;
+        target->z = start->z + dz * (height - start->y) / dy;
+        return 0;
+    }
+
+    return 1;
+}
