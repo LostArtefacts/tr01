@@ -29,10 +29,6 @@ SG_COL S_COLOUR(int R, int G, int B)
     return colour;
 }
 
-void S_SetGamma(sint16 gamma)
-{
-}
-
 void S_DrawSpriteSize(sint32 x, sint32 y, sint32 z, sint32 w, sint32 h, sint16 sprnum, sint16 shade, uint16 flags)
 {
     if (x + w < 0 || y + h < 0 || x >= phd_winwidth || y >= phd_winheight)
@@ -166,4 +162,14 @@ void S_DrawScreenFBox(sint32 sx, sint32 sy, sint32 z, sint32 w, sint32 h, sint32
     info3dptr += 11;
 
     surfacenum++;
+}
+
+void S_SetGamma(sint16 gamma)
+{
+}
+
+void S_FinishInventory(void)
+{
+    if (Inventory_Mode != INV_TITLE_MODE)
+        TempVideoRemove();
 }

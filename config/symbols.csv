@@ -206,7 +206,7 @@ address,size,name,symbol
 0x0001f8c4,98,S_DrawScreenLine,S_DrawScreenLine_
 0x0001f928,290,S_DrawScreenBox,S_DrawScreenBox_
 0x0001fa4c,120,S_DrawScreenFBox,S_DrawScreenFBox_
-0x0001fac4,18,Func1fac4,
+0x0001fac4,18,S_FinishInventory,S_FinishInventory_
 0x0001fad8,52,S_FadeToBlack,S_FadeToBlack_
 0x0001fb0c,1,Func1fb0c,
 0x0001fb10,82,Func1fb10,
@@ -1779,6 +1779,7 @@ address,size,name,symbol
 0x000c2090,24,game_setup,_game_setup
 0x000c3822,2,Inventory_Chosen,_Inventory_Chosen
 0x000c3824,,Inventory_ExtraData,_Inventory_ExtraData
+0x000c3844,4,Inventory_Mode,_Inventory_Mode
 0x000c384c,2,Option_Music_Volume,_Option_Music_Volume
 0x000c38a8,4,level_items,_level_items
 0x000c38ac,4,health_bar_timer,_health_bar_timer
