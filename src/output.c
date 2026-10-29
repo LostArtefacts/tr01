@@ -37,10 +37,14 @@ typedef struct pic
     char pal[256 * 3];
 } PIC;
 
+int hires_flag;
+
 int wet = 0;
 uint8 game_palette[256 * 3], water_palette[256 * 3];
 
 sint16 *aranges;
+char *malloc_ptr;
+int malloc_used, malloc_free;
 
 static sint16 shadowman[] = {
     0, 0, 0,

@@ -3,14 +3,16 @@
 
 #include "types.h"
 
-extern int game_hires;
-extern double screen_sizer, game_sizer;
-extern char *bckscrn;
-extern int mode_lock;
-extern int hires_flag;
 extern uint8 game_palette[], water_palette[];
 extern int wet;
+extern char *bckscrn;
+extern int mode_lock;
+extern sint16 *aranges;
+extern int malloc_free, malloc_used;
+extern char *malloc_ptr;
 extern sint32 input;
+extern int hires_flag, game_hires;
+extern double screen_sizer, game_sizer;
 extern int title_loaded;
 
 void S_InitialisePolyList(void);

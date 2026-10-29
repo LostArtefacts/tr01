@@ -1785,8 +1785,11 @@ address,size,name,symbol
 0x000c5900,4,file_len,_file_len
 0x000cac70,768,game_palette,_game_palette
 0x000caf70,768,water_palette,_water_palette
+0x000cb270,4,malloc_used,_malloc_used
 0x000cb274,4,aranges,_aranges
+0x000cb278,4,malloc_free,_malloc_free
 0x000cb27c,4,hires_flag,_hires_flag
+0x000cb280,4,malloc_ptr,_malloc_ptr
 0x000cb284,8,fly_zone,_fly_zone
 0x000cb28c,8,ground_zone,_ground_zone
 0x000cb294,8,ground_zone2,_ground_zone2
