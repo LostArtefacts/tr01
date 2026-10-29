@@ -1190,6 +1190,11 @@ void lara_col_null(ITEM_INFO *item, COLL_INFO *coll)
     lara_default_col(item, coll);
 }
 
+void lara_col_fastturn(ITEM_INFO *item, COLL_INFO *coll)
+{
+    lara_col_stop(item, coll);
+}
+
 void lara_default_col(ITEM_INFO *item, COLL_INFO *coll)
 {
     lara.move_angle = item->pos.y_rot;
