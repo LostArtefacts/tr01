@@ -344,7 +344,7 @@ address,size,name,symbol
 0x00026084,429,lara_col_walk,lara_col_walk_
 0x00026234,387,lara_col_run,lara_col_run_
 0x000263b8,204,lara_col_stop,lara_col_stop_
-0x00026484,186,Func26484,
+0x00026484,186,lara_col_forwardjump,lara_col_forwardjump_
 0x00026540,213,Func26540,
 0x00026618,182,Func26618,
 0x000266d0,121,Func266d0,
@@ -390,7 +390,7 @@ address,size,name,symbol
 0x00027620,91,LaraHitCeiling,LaraHitCeiling_
 0x0002769c,549,Func2769c,
 0x000278d0,106,LaraDeflectEdge,LaraDeflectEdge_
-0x0002793c,309,Func2793c,
+0x0002793c,309,LaraDeflectEdgeJump,LaraDeflectEdgeJump_
 0x00027a74,208,Func27a74,
 0x00027b44,519,TestLaraVault,TestLaraVault_
 0x00027d4c,405,Func27d4c,
@@ -398,7 +398,7 @@ address,size,name,symbol
 0x00027fa0,392,Func27fa0,
 0x00028128,356,TestLaraSlide,TestLaraSlide_
 0x0002828c,115,LaraFloorFront,LaraFloorFront_
-0x00028300,169,Func28300,
+0x00028300,169,LaraLandedBad,LaraLandedBad_
 0x000283b0,1018,LaraControl,LaraControl_
 0x000287ac,65,LaraSwapMeshExtra,LaraSwapMeshExtra_
 0x00028820,732,AnimateLara,AnimateLara_

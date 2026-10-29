@@ -16,6 +16,8 @@ int health_bar_timer = 0;
 #define MIN_HEAD_TILT (-42 * ONE_DEGREE)
 #define HEAD_TURN (2 * ONE_DEGREE)
 
+#define BAD_JUMP_CEILING ((STEP_L * 3) / 4)
+
 void LaraAboveWater(ITEM_INFO *item, COLL_INFO *coll)
 {
     coll->old.x = item->pos.x_pos;
@@ -930,6 +932,33 @@ void lara_col_stop(ITEM_INFO *item, COLL_INFO *coll)
         return;
     ShiftItem(item, coll);
     item->pos.y_pos += coll->mid_floor;
+}
+
+void lara_col_forwardjump(ITEM_INFO *item, COLL_INFO *coll)
+{
+    lara.move_angle = item->pos.y_rot;
+    coll->bad_pos = NO_BAD_POS;
+    coll->bad_neg = -STEPUP_HEIGHT;
+    coll->bad_ceiling = BAD_JUMP_CEILING;
+    GetLaraCollisionInfo(item, coll);
+    LaraDeflectEdgeJump(item, coll);
+    if (coll->mid_floor <= 0 && item->fallspeed > 0)
+    {
+        if (LaraLandedBad(item, coll))
+            item->goal_anim_state = AS_DEATH;
+        else
+        {
+            if (input & IN_FORWARD && !(input & IN_SLOW))
+                item->goal_anim_state = AS_RUN;
+            else
+                item->goal_anim_state = AS_STOP;
+        }
+        item->fallspeed = 0;
+        item->pos.y_pos += coll->mid_floor;
+        item->gravity_status = 0;
+        item->speed = 0;
+        AnimateLara(item);
+    }
 }
 
 void GetLaraCollisionInfo(ITEM_INFO *item, COLL_INFO *coll)

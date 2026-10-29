@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">44.12% (345)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">55.88% (437)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">44.25% (346)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">55.75% (436)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="329.56" height="6" x="0" y="0" class="named"/>
-<rect width="417.44" height="6" x="329.56" y="0" class="todo"/>
+<rect width="330.51" height="6" x="0" y="0" class="named"/>
+<rect width="416.49" height="6" x="330.51" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -412,7 +412,7 @@
 <rect width="12" height="12" x="630" y="90" class="named"><title>0x00026084 lara_col_walk (429 bytes)</title></rect>
 <rect width="12" height="12" x="645" y="90" class="named"><title>0x00026234 lara_col_run (387 bytes)</title></rect>
 <rect width="12" height="12" x="660" y="90" class="named"><title>0x000263b8 lara_col_stop (204 bytes)</title></rect>
-<rect width="12" height="12" x="675" y="90" class="todo"><title>0x00026484 Func26484 (186 bytes)</title></rect>
+<rect width="12" height="12" x="675" y="90" class="named"><title>0x00026484 lara_col_forwardjump (186 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="90" class="todo"><title>0x00026540 Func26540 (213 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="90" class="todo"><title>0x00026618 Func26618 (182 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="90" class="todo"><title>0x000266d0 Func266d0 (121 bytes)</title></rect>
@@ -458,7 +458,7 @@
 <rect width="12" height="12" x="570" y="105" class="todo"><title>0x00027620 LaraHitCeiling (91 bytes)</title></rect>
 <rect width="12" height="12" x="585" y="105" class="todo"><title>0x0002769c Func2769c (549 bytes)</title></rect>
 <rect width="12" height="12" x="600" y="105" class="todo"><title>0x000278d0 LaraDeflectEdge (106 bytes)</title></rect>
-<rect width="12" height="12" x="615" y="105" class="todo"><title>0x0002793c Func2793c (309 bytes)</title></rect>
+<rect width="12" height="12" x="615" y="105" class="todo"><title>0x0002793c LaraDeflectEdgeJump (309 bytes)</title></rect>
 <rect width="12" height="12" x="630" y="105" class="todo"><title>0x00027a74 Func27a74 (208 bytes)</title></rect>
 <rect width="12" height="12" x="645" y="105" class="todo"><title>0x00027b44 TestLaraVault (519 bytes)</title></rect>
 <rect width="12" height="12" x="660" y="105" class="todo"><title>0x00027d4c Func27d4c (405 bytes)</title></rect>
@@ -466,7 +466,7 @@
 <rect width="12" height="12" x="690" y="105" class="todo"><title>0x00027fa0 Func27fa0 (392 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="105" class="todo"><title>0x00028128 TestLaraSlide (356 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="105" class="todo"><title>0x0002828c LaraFloorFront (115 bytes)</title></rect>
-<rect width="12" height="12" x="735" y="105" class="todo"><title>0x00028300 Func28300 (169 bytes)</title></rect>
+<rect width="12" height="12" x="735" y="105" class="todo"><title>0x00028300 LaraLandedBad (169 bytes)</title></rect>
 <rect width="12" height="12" x="0" y="120" class="todo"><title>0x000283b0 LaraControl (1018 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="120" class="todo"><title>0x000287ac LaraSwapMeshExtra (65 bytes)</title></rect>
 <rect width="12" height="12" x="30" y="120" class="todo"><title>0x00028820 AnimateLara (732 bytes)</title></rect>
@@ -853,10 +853,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">42.36%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">57.64%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">42.45%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">57.55%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="316.40" height="6" x="0" y="0" class="named"/>
-<rect width="430.60" height="6" x="316.40" y="0" class="todo"/>
+<rect width="317.08" height="6" x="0" y="0" class="named"/>
+<rect width="429.92" height="6" x="317.08" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1042,7 +1042,7 @@
 <rect width="13.87" height="13.53" x="682.74" y="0" class="named"><title>0x0001dac0 ControlBubble1 (312 bytes)</title></rect>
 <rect width="13.87" height="13.53" x="699.61" y="0" class="todo"><title>0x0002dc00 mn_stop_sound_effect (312 bytes)</title></rect>
 <rect width="13.82" height="13.53" x="716.48" y="0" class="todo"><title>0x0003b3fc Func3b3fc (311 bytes)</title></rect>
-<rect width="13.71" height="13.53" x="733.29" y="0" class="todo"><title>0x0002793c Func2793c (309 bytes)</title></rect>
+<rect width="13.71" height="13.53" x="733.29" y="0" class="todo"><title>0x0002793c LaraDeflectEdgeJump (309 bytes)</title></rect>
 <rect width="13.42" height="13.77" x="508.90" y="16.53" class="todo"><title>0x00044761 Func44761 (308 bytes)</title></rect>
 <rect width="13.42" height="13.71" x="508.90" y="33.30" class="todo"><title>0x00045868 Func45868 (307 bytes)</title></rect>
 <rect width="13.42" height="13.66" x="508.90" y="50.01" class="named"><title>0x00020ac0 DrawAmmoInfo (306 bytes)</title></rect>
@@ -1142,7 +1142,7 @@
 <rect width="10.09" height="9.77" x="554.65" y="204.77" class="todo"><title>0x00027ee4 Func27ee4 (187 bytes)</title></rect>
 <rect width="10.09" height="9.77" x="554.65" y="217.53" class="todo"><title>0x0003db04 Func3db04 (187 bytes)</title></rect>
 <rect width="10.09" height="9.70" x="554.65" y="230.30" class="named"><title>0x00020d30 S_InitialiseSystem (186 bytes)</title></rect>
-<rect width="10.20" height="9.59" x="567.74" y="60.02" class="todo"><title>0x00026484 Func26484 (186 bytes)</title></rect>
+<rect width="10.20" height="9.59" x="567.74" y="60.02" class="named"><title>0x00026484 lara_col_forwardjump (186 bytes)</title></rect>
 <rect width="10.20" height="9.59" x="580.94" y="60.02" class="todo"><title>0x00026b4c Func26b4c (186 bytes)</title></rect>
 <rect width="10.20" height="9.59" x="594.14" y="60.02" class="todo"><title>0x0002f380 AlterFloorHeight (186 bytes)</title></rect>
 <rect width="10.13" height="9.59" x="607.34" y="60.02" class="named"><title>0x000133c0 CreatureTurn (185 bytes)</title></rect>
@@ -1164,7 +1164,7 @@
 <rect width="9.62" height="9.26" x="567.74" y="135.17" class="todo"><title>0x00038978 S_SaveSettings (173 bytes)</title></rect>
 <rect width="9.62" height="9.11" x="567.74" y="147.43" class="todo"><title>0x0002686c Func2686c (171 bytes)</title></rect>
 <rect width="9.62" height="9.04" x="567.74" y="159.54" class="todo"><title>0x000295f8 Func295f8 (170 bytes)</title></rect>
-<rect width="9.62" height="8.97" x="567.74" y="171.59" class="todo"><title>0x00028300 Func28300 (169 bytes)</title></rect>
+<rect width="9.62" height="8.97" x="567.74" y="171.59" class="todo"><title>0x00028300 LaraLandedBad (169 bytes)</title></rect>
 <rect width="9.62" height="8.90" x="567.74" y="183.56" class="named"><title>0x00013560 InitialiseCamera (168 bytes)</title></rect>
 <rect width="9.62" height="8.90" x="567.74" y="195.46" class="named"><title>0x00014f18 InitialisePlayer1 (168 bytes)</title></rect>
 <rect width="9.62" height="8.90" x="567.74" y="207.37" class="todo"><title>0x0002975c Func2975c (168 bytes)</title></rect>
