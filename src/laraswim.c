@@ -122,3 +122,33 @@ void lara_as_glide(ITEM_INFO *item, COLL_INFO *coll)
     if (item->fallspeed <= (UW_MAXSPEED * 2) / 3)
         item->goal_anim_state = AS_TREAD;
 }
+
+void lara_as_tread(ITEM_INFO *item, COLL_INFO *coll)
+{
+    if (item->hit_points <= 0)
+    {
+        item->goal_anim_state = AS_UWDEATH;
+        return;
+    }
+
+    if (input & IN_FORWARD)
+        item->pos.x_rot -= 2 * ONE_DEGREE;
+    else if (input & IN_BACK)
+        item->pos.x_rot += 2 * ONE_DEGREE;
+    if (input & IN_LEFT)
+    {
+        item->pos.y_rot -= LARA_MED_TURN;
+        item->pos.z_rot -= LARA_LEAN_RATE * 2;
+    }
+    else if (input & IN_RIGHT)
+    {
+        item->pos.y_rot += LARA_MED_TURN;
+        item->pos.z_rot += LARA_LEAN_RATE * 2;
+    }
+    if (input & IN_JUMP)
+        item->goal_anim_state = AS_SWIM;
+
+    item->fallspeed -= WATER_FRICTION;
+    if (item->fallspeed < 0)
+        item->fallspeed = 0;
+}
