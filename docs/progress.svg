@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">51.20% (404)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">48.80% (385)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">51.33% (405)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">48.67% (384)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="382.49" height="6" x="0" y="0" class="named"/>
-<rect width="364.51" height="6" x="382.49" y="0" class="todo"/>
+<rect width="383.44" height="6" x="0" y="0" class="named"/>
+<rect width="363.56" height="6" x="383.44" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -472,7 +472,7 @@
 <rect width="12" height="12" x="30" y="120" class="named"><title>0x0002828c LaraFloorFront (115 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="120" class="named"><title>0x00028300 LaraLandedBad (169 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="120" class="named"><title>0x000283b0 LaraControl (1018 bytes)</title></rect>
-<rect width="12" height="12" x="75" y="120" class="todo"><title>0x000287ac LaraSwapMeshExtra (65 bytes)</title></rect>
+<rect width="12" height="12" x="75" y="120" class="named"><title>0x000287ac LaraSwapMeshExtra (65 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="120" class="todo"><title>0x00028820 AnimateLara (732 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="120" class="todo"><title>0x00028afc UseItem (508 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="120" class="todo"><title>0x00028cf8 Func28cf8 (28 bytes)</title></rect>
@@ -860,10 +860,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">46.67%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">53.33%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">46.70%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">53.30%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="348.63" height="6" x="0" y="0" class="named"/>
-<rect width="398.37" height="6" x="348.63" y="0" class="todo"/>
+<rect width="348.87" height="6" x="0" y="0" class="named"/>
+<rect width="398.13" height="6" x="348.87" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1396,7 +1396,7 @@
 <rect width="4.24" height="5.03" x="742.76" y="152.56" class="named"><title>0x00010018 S_DumpScreen (65 bytes)</title></rect>
 <rect width="4.59" height="4.65" x="659.71" y="160.58" class="named"><title>0x0001e1e4 FlickerFX (65 bytes)</title></rect>
 <rect width="4.59" height="4.65" x="659.71" y="168.24" class="named"><title>0x000242c0 Inv_RingCalcAdders (65 bytes)</title></rect>
-<rect width="4.59" height="4.65" x="659.71" y="175.89" class="todo"><title>0x000287ac LaraSwapMeshExtra (65 bytes)</title></rect>
+<rect width="4.59" height="4.65" x="659.71" y="175.89" class="named"><title>0x000287ac LaraSwapMeshExtra (65 bytes)</title></rect>
 <rect width="4.59" height="4.65" x="659.71" y="183.54" class="todo"><title>0x00038cb8 S_CDStop (65 bytes)</title></rect>
 <rect width="4.59" height="4.65" x="659.71" y="191.20" class="todo"><title>0x0003ed70 phd_SortPolyList (65 bytes)</title></rect>
 <rect width="4.59" height="4.54" x="659.71" y="198.85" class="todo"><title>0x00034c0c PickupTrigger (64 bytes)</title></rect>

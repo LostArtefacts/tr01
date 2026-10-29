@@ -134,6 +134,17 @@ void LaraControl(sint16 item_number)
     }
 }
 
+void LaraSwapMeshExtra(void)
+{
+    int i;
+
+    if (objects[LARA_EXTRA].loaded)
+    {
+        for (i = 0; i < 15; i++)
+            lara.mesh_ptrs[i] = meshes[(&objects[LARA_EXTRA])->mesh_index + i];
+    }
+}
+
 void lara_as_walk(ITEM_INFO *item, COLL_INFO *coll);
 void lara_as_run(ITEM_INFO *item, COLL_INFO *coll);
 void lara_as_stop(ITEM_INFO *item, COLL_INFO *coll);
