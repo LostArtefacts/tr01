@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">32.13% (250)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">67.87% (528)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">32.26% (251)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">67.74% (527)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="240.04" height="6" x="0" y="0" class="named"/>
-<rect width="506.96" height="6" x="240.04" y="0" class="todo"/>
+<rect width="241" height="6" x="0" y="0" class="named"/>
+<rect width="506" height="6" x="241" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -317,7 +317,7 @@
 <rect width="12" height="12" x="705" y="60" class="named"><title>0x00021498 Display_Inventory (4461 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="60" class="named"><title>0x00022608 Construct_Inventory (300 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="60" class="named"><title>0x00022734 SelectMeshes (152 bytes)</title></rect>
-<rect width="12" height="12" x="0" y="75" class="todo"><title>0x000227cc AnimateInventoryItem (105 bytes)</title></rect>
+<rect width="12" height="12" x="0" y="75" class="named"><title>0x000227cc AnimateInventoryItem (105 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="75" class="todo"><title>0x00022848 DrawInventoryItem (968 bytes)</title></rect>
 <rect width="12" height="12" x="30" y="75" class="named"><title>0x00022c10 GetDebouncedInput (32 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="75" class="todo"><title>0x00022c30 InitColours (225 bytes)</title></rect>
@@ -849,10 +849,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">35.07%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">64.93%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">35.12%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">64.88%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="261.99" height="6" x="0" y="0" class="named"/>
-<rect width="485.01" height="6" x="261.99" y="0" class="todo"/>
+<rect width="262.38" height="6" x="0" y="0" class="named"/>
+<rect width="484.62" height="6" x="262.38" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1281,7 +1281,7 @@
 <rect width="6.72" height="6.74" x="623.65" y="156.78" class="todo"><title>0x0002460c Inv_RingMotionItemSelect (106 bytes)</title></rect>
 <rect width="6.72" height="6.74" x="623.65" y="166.52" class="todo"><title>0x000278d0 Func278d0 (106 bytes)</title></rect>
 <rect width="6.72" height="6.65" x="623.65" y="176.26" class="named"><title>0x00020ef4 CalculateWibbleTable (105 bytes)</title></rect>
-<rect width="6.72" height="6.65" x="623.65" y="185.92" class="todo"><title>0x000227cc AnimateInventoryItem (105 bytes)</title></rect>
+<rect width="6.72" height="6.65" x="623.65" y="185.92" class="named"><title>0x000227cc AnimateInventoryItem (105 bytes)</title></rect>
 <rect width="6.72" height="6.65" x="623.65" y="195.57" class="todo"><title>0x00030310 Func30310 (105 bytes)</title></rect>
 <rect width="6.72" height="6.56" x="623.65" y="205.22" class="named"><title>0x0001e450 LoadTexturePages (104 bytes)</title></rect>
 <rect width="6.72" height="6.47" x="623.65" y="214.78" class="named"><title>0x00015fb8 UpdateLaraRoom (103 bytes)</title></rect>
