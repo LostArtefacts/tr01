@@ -361,7 +361,7 @@ address,size,name,symbol
 0x00026b18,49,lara_col_null,lara_col_null_
 0x00026b4c,186,lara_col_stepright,lara_col_stepright_
 0x00026c08,189,lara_col_stepleft,lara_col_stepleft_
-0x00026cc8,19,Func26cc8,
+0x00026cc8,19,lara_col_slide,lara_col_slide_
 0x00026cdc,22,Func26cdc,
 0x00026cf4,22,Func26cf4,
 0x00026d0c,25,Func26d0c,
@@ -390,7 +390,7 @@ address,size,name,symbol
 0x00027400,91,lara_default_col,lara_default_col_
 0x0002745c,143,Func2745c,
 0x000274ec,48,GetLaraCollisionInfo,GetLaraCollisionInfo_
-0x0002751c,257,Func2751c,
+0x0002751c,257,lara_slide_slope,lara_slide_slope_
 0x00027620,91,LaraHitCeiling,LaraHitCeiling_
 0x0002769c,549,LaraHangTest,LaraHangTest_
 0x000278d0,106,LaraDeflectEdge,LaraDeflectEdge_

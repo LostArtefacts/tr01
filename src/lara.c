@@ -1243,6 +1243,12 @@ void lara_col_stepleft(ITEM_INFO *item, COLL_INFO *coll)
     item->pos.y_pos += coll->mid_floor;
 }
 
+void lara_col_slide(ITEM_INFO *item, COLL_INFO *coll)
+{
+    lara.move_angle = item->pos.y_rot;
+    lara_slide_slope(item, coll);
+}
+
 void lara_default_col(ITEM_INFO *item, COLL_INFO *coll)
 {
     lara.move_angle = item->pos.y_rot;
