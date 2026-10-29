@@ -4,6 +4,8 @@ LARA_INFO lara;
 ITEM_INFO *lara_item;
 int health_bar_timer = 0;
 
+#define CAM_A_HANG 0
+#define CAM_E_HANG (-60 * ONE_DEGREE)
 #define DAMAGE_START 140
 #define DAMAGE_LENGTH 14
 
@@ -331,4 +333,16 @@ void lara_as_fastfall(ITEM_INFO *item, COLL_INFO *coll)
     FASTFALL_FRICTION;
     if (item->fallspeed >= DAMAGE_START + DAMAGE_LENGTH)
         SoundEffect(30, &item->pos, 0);
+}
+
+void lara_as_hang(ITEM_INFO *item, COLL_INFO *coll)
+{
+    coll->enable_hit = 0;
+    coll->enable_baddie_push = 0;
+    camera.target_angle = CAM_A_HANG;
+    camera.target_elevation = CAM_E_HANG;
+    if (input & IN_LEFT || input & IN_STEPL)
+        item->goal_anim_state = AS_HANGLEFT;
+    else if (input & IN_RIGHT || input & IN_STEPR)
+        item->goal_anim_state = AS_HANGRIGHT;
 }

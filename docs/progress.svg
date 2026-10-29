@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">39.20% (305)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">60.80% (473)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">39.33% (306)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">60.67% (472)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="292.85" height="6" x="0" y="0" class="named"/>
-<rect width="454.15" height="6" x="292.85" y="0" class="todo"/>
+<rect width="293.81" height="6" x="0" y="0" class="named"/>
+<rect width="453.19" height="6" x="293.81" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -373,7 +373,7 @@
 <rect width="12" height="12" x="45" y="90" class="named"><title>0x00025644 lara_as_turn_l (145 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="90" class="named"><title>0x000256d8 lara_as_death (5 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="90" class="named"><title>0x000256e0 lara_as_fastfall (69 bytes)</title></rect>
-<rect width="12" height="12" x="90" y="90" class="todo"><title>0x00025728 Func25728 (77 bytes)</title></rect>
+<rect width="12" height="12" x="90" y="90" class="named"><title>0x00025728 lara_as_hang (77 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="90" class="todo"><title>0x00025778 Func25778 (32 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="90" class="todo"><title>0x00025798 Func25798 (1 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="90" class="todo"><title>0x0002579c Func2579c (258 bytes)</title></rect>
@@ -849,10 +849,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">40.68%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">59.32%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">40.72%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">59.28%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="303.87" height="6" x="0" y="0" class="named"/>
-<rect width="443.13" height="6" x="303.87" y="0" class="todo"/>
+<rect width="304.15" height="6" x="0" y="0" class="named"/>
+<rect width="442.85" height="6" x="304.15" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1349,7 +1349,7 @@
 <rect width="5" height="5.83" x="734.10" y="135.89" class="named"><title>0x00013aa0 BadPosition (79 bytes)</title></rect>
 <rect width="4.90" height="5.83" x="742.10" y="135.89" class="todo"><title>0x000352e8 Func352e8 (78 bytes)</title></rect>
 <rect width="5.30" height="5.40" x="651.37" y="144.72" class="todo"><title>0x00045c60 Func45c60 (78 bytes)</title></rect>
-<rect width="5.30" height="5.29" x="651.37" y="153.11" class="todo"><title>0x00025728 Func25728 (77 bytes)</title></rect>
+<rect width="5.30" height="5.29" x="651.37" y="153.11" class="named"><title>0x00025728 lara_as_hang (77 bytes)</title></rect>
 <rect width="5.30" height="5.29" x="651.37" y="161.40" class="todo"><title>0x0002f520 Func2f520 (77 bytes)</title></rect>
 <rect width="5.30" height="5.29" x="651.37" y="169.69" class="todo"><title>0x0003642c Func3642c (77 bytes)</title></rect>
 <rect width="5.30" height="5.18" x="651.37" y="177.98" class="named"><title>0x0001f360 LoadAnimatedTextures (76 bytes)</title></rect>
