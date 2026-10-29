@@ -209,3 +209,35 @@ void lara_as_stop(ITEM_INFO *item, COLL_INFO *coll)
             item->goal_anim_state = AS_FASTBACK;
     }
 }
+
+void lara_as_forwardjump(ITEM_INFO *item, COLL_INFO *coll)
+{
+    if (item->goal_anim_state == AS_SWANDIVE || item->goal_anim_state == AS_REACH)
+        item->goal_anim_state = AS_FORWARDJUMP;
+    if (item->goal_anim_state != AS_DEATH && item->goal_anim_state != AS_STOP)
+    {
+        if ((input & IN_ACTION) && lara.gun_status == LG_ARMLESS)
+            item->goal_anim_state = AS_REACH;
+        if ((input & IN_SLOW) && lara.gun_status == LG_ARMLESS)
+            item->goal_anim_state = AS_SWANDIVE;
+        if (item->fallspeed > LARA_FASTFALL_SPEED)
+            item->goal_anim_state = AS_FASTFALL;
+    }
+
+    if (input & IN_LEFT)
+    {
+        lara.turn_rate -= LARA_TURN_RATE;
+        if (lara.turn_rate < -LARA_JUMP_TURN)
+            lara.turn_rate = -LARA_JUMP_TURN;
+    }
+    else if (input & IN_RIGHT)
+    {
+        lara.turn_rate += LARA_TURN_RATE;
+        if (lara.turn_rate > LARA_JUMP_TURN)
+            lara.turn_rate = LARA_JUMP_TURN;
+    }
+}
+
+void lara_as_pose(ITEM_INFO *item, COLL_INFO *coll)
+{
+}
