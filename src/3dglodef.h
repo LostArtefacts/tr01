@@ -85,6 +85,7 @@ extern VERTEX_INFO v_buffer[];
 extern PHD_VBUF vbuf[];
 extern PHDTEXTURESTRUCT phdtextinfo[];
 
+void AlterFOV(PHD_ANGLE fov);
 void phd_LookAt(sint32 xsrc, sint32 ysrc, sint32 zsrc, sint32 xtar, sint32 ytar, sint32 ztar, PHD_ANGLE roll);
 void phd_GetVectorAngles(sint32 x, sint32 y, sint32 z, PHD_ANGLE *dest);
 void phd_PushMatrix(void);

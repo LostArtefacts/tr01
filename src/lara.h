@@ -66,6 +66,7 @@ enum lara_water_states
 extern LARA_INFO lara;
 extern ITEM_INFO *lara_item;
 
+void AddActiveItem(sint16 item_num);
 void RemoveActiveItem(sint16 item_num);
 void ItemNewRoom(sint16 item_number, sint16 room_number);
 sint16 *GetBoundsAccurate(ITEM_INFO *item);

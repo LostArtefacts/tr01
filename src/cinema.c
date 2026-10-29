@@ -129,3 +129,34 @@ sint32 DoCinematic(sint32 nframes)
 
     return 0;
 }
+
+void CalculateCinematicCamera(void)
+{
+    sint32 tx, ty, tz;
+    sint32 cx, cy, cz;
+    sint32 c, s;
+    sint16 roll, fov;
+    sint16 *ptr;
+    PHD_VECTOR campos, camtar;
+
+    ptr = cine + (int)(8 * cine_frame);
+    tx = (sint32)*(ptr + 0);
+    ty = (sint32)*(ptr + 1);
+    tz = (sint32)*(ptr + 2);
+    cx = (sint32)*(ptr + 3);
+    cy = (sint32)*(ptr + 4);
+    cz = (sint32)*(ptr + 5);
+    fov = *(ptr + 6);
+    roll = *(ptr + 7);
+
+    c = phd_cos(camera.target_angle);
+    s = phd_sin(camera.target_angle);
+    camtar.x = camera.pos.x + ((tx * c + tz * s) >> W2V_SHIFT);
+    camtar.y = camera.pos.y + ty;
+    camtar.z = camera.pos.z + ((tz * c - tx * s) >> W2V_SHIFT);
+    campos.x = camera.pos.x + ((cx * c + cz * s) >> W2V_SHIFT);
+    campos.y = camera.pos.y + cy;
+    campos.z = camera.pos.z + ((cz * c - cx * s) >> W2V_SHIFT);
+    AlterFOV(fov);
+    phd_LookAt(campos.x, campos.y, campos.z, camtar.x, camtar.y, camtar.z, roll);
+}
