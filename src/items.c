@@ -175,3 +175,25 @@ void RemoveDrawnItem(sint16 item_num)
         }
     }
 }
+
+void AddActiveItem(sint16 item_num)
+{
+    ITEM_INFO *item;
+
+    item = &items[item_num];
+
+    if (objects[item->object_number].control == NULL)
+    {
+        item->status = NOT_ACTIVE;
+        return;
+    }
+
+    if (item->active == 1)
+    {
+        sprintf(exit_message, "Item(%d)(Obj%d) already Active\n", item_num, item->object_number);
+        S_ExitSystem(exit_message);
+    }
+    item->active = 1;
+    item->next_active = next_item_active;
+    next_item_active = item_num;
+}

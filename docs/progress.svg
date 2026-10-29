@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">36.76% (286)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">63.24% (492)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">36.89% (287)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">63.11% (491)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="274.60" height="6" x="0" y="0" class="named"/>
-<rect width="472.40" height="6" x="274.60" y="0" class="todo"/>
+<rect width="275.56" height="6" x="0" y="0" class="named"/>
+<rect width="471.44" height="6" x="275.56" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -354,7 +354,7 @@
 <rect width="12" height="12" x="510" y="75" class="named"><title>0x00024870 InitialiseItem (446 bytes)</title></rect>
 <rect width="12" height="12" x="525" y="75" class="named"><title>0x00024a30 RemoveActiveItem (151 bytes)</title></rect>
 <rect width="12" height="12" x="540" y="75" class="named"><title>0x00024ac8 RemoveDrawnItem (114 bytes)</title></rect>
-<rect width="12" height="12" x="555" y="75" class="todo"><title>0x00024b3c AddActiveItem (136 bytes)</title></rect>
+<rect width="12" height="12" x="555" y="75" class="named"><title>0x00024b3c AddActiveItem (136 bytes)</title></rect>
 <rect width="12" height="12" x="570" y="75" class="todo"><title>0x00024bc4 ItemNewRoom (153 bytes)</title></rect>
 <rect width="12" height="12" x="585" y="75" class="todo"><title>0x00024c60 Func24c60 (160 bytes)</title></rect>
 <rect width="12" height="12" x="600" y="75" class="todo"><title>0x00024d00 GlobalItemReplace (127 bytes)</title></rect>
@@ -849,10 +849,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">39.20%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">60.80%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">39.27%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">60.73%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="292.85" height="6" x="0" y="0" class="named"/>
-<rect width="454.15" height="6" x="292.85" y="0" class="todo"/>
+<rect width="293.35" height="6" x="0" y="0" class="named"/>
+<rect width="453.65" height="6" x="293.35" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1215,7 +1215,7 @@
 <rect width="7.76" height="8.38" x="592.37" y="142.14" class="todo"><title>0x00046378 Func46378 (137 bytes)</title></rect>
 <rect width="7.76" height="8.38" x="592.37" y="153.52" class="todo"><title>0x00046d28 Func46d28 (137 bytes)</title></rect>
 <rect width="7.76" height="8.30" x="592.37" y="164.90" class="named"><title>0x0001628c EffectHit (136 bytes)</title></rect>
-<rect width="7.76" height="8.30" x="592.37" y="176.20" class="todo"><title>0x00024b3c AddActiveItem (136 bytes)</title></rect>
+<rect width="7.76" height="8.30" x="592.37" y="176.20" class="named"><title>0x00024b3c AddActiveItem (136 bytes)</title></rect>
 <rect width="7.76" height="8.22" x="592.37" y="187.50" class="todo"><title>0x000255bc Func255bc (135 bytes)</title></rect>
 <rect width="7.76" height="8.22" x="592.37" y="198.72" class="todo"><title>0x000258a0 Func258a0 (135 bytes)</title></rect>
 <rect width="7.76" height="8.13" x="592.37" y="209.93" class="named"><title>0x0001dcb4 ControlSplash1 (134 bytes)</title></rect>
