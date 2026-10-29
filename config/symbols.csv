@@ -1808,6 +1808,7 @@ address,size,name,symbol
 0x000cb9e0,48,vbufdoor,_vbufdoor
 0x000cba10,1400,static_objects,_static_objects
 0x000cbf88,200,draw_rooms,_draw_rooms
+0x000cc050,12,interpolated_bounds,_interpolated_bounds
 0x000cc05c,4,IM_rate,_IM_rate
 0x000cc060,4,IMptr,_IMptr
 0x000cc064,4,IM_frac,_IM_frac
