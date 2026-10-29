@@ -139,3 +139,12 @@ void DrawBridgeCeiling(ITEM_INFO *item, sint32 x, sint32 y, sint32 z, sint16 *he
             *height = (sint16)(item->pos.y_pos + STEP_L);
     }
 }
+
+void DrawBridgeCollision(sint16 item_num, ITEM_INFO *laraitem, COLL_INFO *coll)
+{
+    ITEM_INFO *item;
+
+    item = &items[item_num];
+    if (item->current_anim_state == DOOR_CLOSED)
+        DoorCollision(item_num, laraitem, coll);
+}
