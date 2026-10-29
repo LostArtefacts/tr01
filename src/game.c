@@ -355,3 +355,24 @@ void SeedRandomDraw(sint32 seed)
 {
     rand_2 = seed;
 }
+
+int LevelIsValid(sint16 level_number)
+{
+    int n;
+    sint16 *valids;
+
+    number_valid = 0;
+    valids = valid_levels;
+    for (;;)
+    {
+        if (*(valids++) < 0)
+            break;
+        number_valid++;
+    }
+    for (n = 0; n < number_valid; n++)
+    {
+        if (valid_levels[n] == level_number)
+            return 1;
+    }
+    return 0;
+}

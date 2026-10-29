@@ -220,7 +220,7 @@ address,size,name,symbol
 0x00020434,6,SeedRandomControl,SeedRandomControl_
 0x0002043c,29,GetRandomDraw,GetRandomDraw_
 0x0002045c,6,SeedRandomDraw,SeedRandomDraw_
-0x00020464,76,Func20464,
+0x00020464,76,LevelIsValid,LevelIsValid_
 0x000204b0,128,Func204b0,
 0x00020530,60,Func20530,
 0x0002056c,220,DisplayCredits,DisplayCredits_
