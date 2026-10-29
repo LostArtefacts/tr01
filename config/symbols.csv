@@ -232,7 +232,7 @@ address,size,name,symbol
 0x00020a24,84,DrawAirBar,DrawAirBar_
 0x00020a78,56,MakeAmmoString,MakeAmmoString_
 0x00020ac0,306,DrawAmmoInfo,DrawAmmoInfo_
-0x00020bf4,22,Func20bf4,
+0x00020bf4,22,InitialisePickUpDisplay,InitialisePickUpDisplay_
 0x00020c0c,199,DrawPickups,DrawPickups_
 0x00020cd4,91,Func20cd4,
 0x00020d30,186,Func20d30,
@@ -1866,6 +1866,7 @@ address,size,name,symbol
 0x000ce5f8,4,floor_data,_floor_data
 0x000ce67c,660,Save_Game_Strings,_Save_Game_Strings
 0x000ce910,4,SavedGames,_SavedGames
+0x000ce914,12,pickups,_pickups
 0x000ce95c,4,input,_input
 0x000ce960,34,inv_colours,_inv_colours
 0x000ce984,4,effects,_effects

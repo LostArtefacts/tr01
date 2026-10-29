@@ -116,3 +116,21 @@ void DrawAmmoInfo(void)
         T_RightAlign(ammotext, 1);
     }
 }
+
+#define NUM_PU 3
+
+typedef struct displaypu
+{
+    sint16 duration;
+    sint16 sprnum;
+} DISPLAYPU;
+
+DISPLAYPU pickups[NUM_PU];
+
+void InitialisePickUpDisplay(void)
+{
+    int i;
+
+    for (i = 0; i < NUM_PU; i++)
+        pickups[i].duration = 0;
+}
