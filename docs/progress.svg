@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">28.65% (222)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">71.35% (553)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">28.77% (223)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">71.23% (552)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="213.98" height="6" x="0" y="0" class="named"/>
-<rect width="533.02" height="6" x="213.98" y="0" class="todo"/>
+<rect width="214.94" height="6" x="0" y="0" class="named"/>
+<rect width="532.06" height="6" x="214.94" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -291,7 +291,7 @@
 <rect width="12" height="12" x="315" y="60" class="named"><title>0x00020464 LevelIsValid (76 bytes)</title></rect>
 <rect width="12" height="12" x="330" y="60" class="named"><title>0x000204b0 GetValidLevelsList (128 bytes)</title></rect>
 <rect width="12" height="12" x="345" y="60" class="named"><title>0x00020530 GetSavedGamesList (60 bytes)</title></rect>
-<rect width="12" height="12" x="360" y="60" class="todo"><title>0x0002056c DisplayCredits (220 bytes)</title></rect>
+<rect width="12" height="12" x="360" y="60" class="named"><title>0x0002056c DisplayCredits (220 bytes)</title></rect>
 <rect width="12" height="12" x="375" y="60" class="todo"><title>0x00020648 Func20648 (326 bytes)</title></rect>
 <rect width="12" height="12" x="390" y="60" class="todo"><title>0x00020790 S_SaveGame (269 bytes)</title></rect>
 <rect width="12" height="12" x="405" y="60" class="todo"><title>0x000208a0 S_LoadGame (130 bytes)</title></rect>
@@ -846,10 +846,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">30.78%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">69.22%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">30.89%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">69.11%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="229.93" height="6" x="0" y="0" class="named"/>
-<rect width="517.07" height="6" x="229.93" y="0" class="todo"/>
+<rect width="230.74" height="6" x="0" y="0" class="named"/>
+<rect width="516.26" height="6" x="230.74" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1103,7 +1103,7 @@
 <rect width="11.18" height="11.06" x="540.44" y="146.19" class="todo"><title>0x0003eeac phd_InitWindow (223 bytes)</title></rect>
 <rect width="11.18" height="11.06" x="540.44" y="160.24" class="todo"><title>0x0003f48c Func3f48c (223 bytes)</title></rect>
 <rect width="11.18" height="10.93" x="540.44" y="174.30" class="named"><title>0x0001d9e0 LaraBubbles (221 bytes)</title></rect>
-<rect width="11.18" height="10.87" x="540.44" y="188.23" class="todo"><title>0x0002056c DisplayCredits (220 bytes)</title></rect>
+<rect width="11.18" height="10.87" x="540.44" y="188.23" class="named"><title>0x0002056c DisplayCredits (220 bytes)</title></rect>
 <rect width="11.18" height="10.74" x="540.44" y="202.09" class="todo"><title>0x00038ee0 S_CDPlay (218 bytes)</title></rect>
 <rect width="11.18" height="10.61" x="540.44" y="215.83" class="todo"><title>0x0002a7e8 Func2a7e8 (216 bytes)</title></rect>
 <rect width="11.18" height="10.55" x="540.44" y="229.45" class="named"><title>0x00015e50 GetNearByRooms (215 bytes)</title></rect>

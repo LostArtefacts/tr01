@@ -417,3 +417,39 @@ void GetSavedGamesList(REQUEST_INFO *req)
     if (req->selected >= req->vis_lines)
         req->line_offset = req->selected - req->vis_lines + 1;
 }
+
+void DisplayCredits(void)
+{
+    S_PlayFMV(FMV_ENDSEQ, 1);
+
+    TempVideoAdjust(1, 1.0);
+    S_DisplayPicture("data\\end");
+    ScreenDump();
+
+    FadeToPal(60, game_palette);
+    S_Wait(30 * 15);
+    S_FadeToBlack();
+
+    S_DisplayPicture("data\\cred1");
+    ScreenDump();
+
+    FadeToPal(60, game_palette);
+    S_Wait(30 * 15);
+    S_FadeToBlack();
+
+    S_DisplayPicture("data\\cred2");
+    ScreenDump();
+
+    FadeToPal(60, game_palette);
+    S_Wait(30 * 15);
+    S_FadeToBlack();
+
+    S_DisplayPicture("data\\cred3");
+    ScreenDump();
+
+    FadeToPal(60, game_palette);
+    S_Wait(30 * 15);
+    S_FadeToBlack();
+
+    S_NoFade();
+}
