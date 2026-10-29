@@ -17,6 +17,11 @@ Windows, is used as a reference for names, structures and logic. It is a
 reference only: the source here is written to match the binary, which
 differs from the port in many places, and carries none of its comments.
 
+![Progress](docs/progress.svg)
+
+`just progress` renders it: every game function, by address and as a
+treemap by size, coloured by whether it is decompiled and matching.
+
 ## Target
 
 The retail `TOMB.EXE`, dated 1996-10-30, which the GOG and Steam
