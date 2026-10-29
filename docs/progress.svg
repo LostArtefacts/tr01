@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">74.72% (606)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">25.28% (205)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">74.85% (607)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">25.15% (204)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="558.18" height="6" x="0" y="0" class="named"/>
-<rect width="188.82" height="6" x="558.18" y="0" class="todo"/>
+<rect width="559.10" height="6" x="0" y="0" class="named"/>
+<rect width="187.90" height="6" x="559.10" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -674,7 +674,7 @@
 <rect width="12" height="12" x="60" y="180" class="named"><title>0x00038978 S_SaveSettings (173 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="180" class="named"><title>0x00038a28 S_LoadSettings (207 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="180" class="named"><title>0x00038b00 S_get_pan (14 bytes)</title></rect>
-<rect width="12" height="12" x="105" y="180" class="todo"><title>0x00038b10 S_SoundPlaySample (69 bytes)</title></rect>
+<rect width="12" height="12" x="105" y="180" class="named"><title>0x00038b10 S_SoundPlaySample (69 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="180" class="todo"><title>0x00038b58 S_SoundPlaySampleLooped (75 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="180" class="todo"><title>0x00038ba4 S_SoundSampleIsPlaying (64 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="180" class="todo"><title>0x00038bb0 S_SoundStopAllSamples (14 bytes)</title></rect>
@@ -882,10 +882,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">73.28%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">26.72%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">73.31%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">26.69%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="547.40" height="6" x="0" y="0" class="named"/>
-<rect width="199.60" height="6" x="547.40" y="0" class="todo"/>
+<rect width="547.63" height="6" x="0" y="0" class="named"/>
+<rect width="199.37" height="6" x="547.63" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.95" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1424,7 +1424,7 @@
 <rect width="5.03" height="4.69" x="710.31" y="161.53" class="todo"><title>0x0003efe0 phd_atan (70 bytes)</title></rect>
 <rect width="4.92" height="4.69" x="718.34" y="161.53" class="named"><title>0x000256e0 lara_as_fastfall (69 bytes)</title></rect>
 <rect width="4.92" height="4.69" x="726.25" y="161.53" class="named"><title>0x0002cc18 ThorsHandleCollision (69 bytes)</title></rect>
-<rect width="4.92" height="4.69" x="734.17" y="161.53" class="todo"><title>0x00038b10 S_SoundPlaySample (69 bytes)</title></rect>
+<rect width="4.92" height="4.69" x="734.17" y="161.53" class="named"><title>0x00038b10 S_SoundPlaySample (69 bytes)</title></rect>
 <rect width="4.92" height="4.69" x="742.08" y="161.53" class="todo"><title>0x00039d60 InitialiseRollingBall (69 bytes)</title></rect>
 <rect width="4.70" height="4.91" x="661.44" y="169.22" class="todo"><title>0x0003a970 InitialiseDamoclesSword (69 bytes)</title></rect>
 <rect width="4.58" height="4.91" x="669.13" y="169.22" class="named"><title>0x0001ac2c DrawSpriteItem (68 bytes)</title></rect>

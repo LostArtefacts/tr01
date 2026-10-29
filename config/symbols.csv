@@ -858,7 +858,7 @@ address,size,name,symbol
 0x000487f8,73,Func487f8,
 0x00048844,184,Func48844,
 0x000488fc,88,Func488fc,
-0x00048954,220,Func48954,
+0x00048954,220,SoundPlaySample,SoundPlaySample_
 0x00048a30,333,Func48a30,
 0x00048b80,50,Func48b80,
 0x00048bb4,35,Func48bb4,
