@@ -112,3 +112,24 @@ sint32 StartGame(int level_number)
     }
     return EXIT_TO_TITLE;
 }
+
+sint32 GameLoop(int demo_mode)
+{
+    sint32 nframes = 1, game_over;
+
+    overlay_flag = 1;
+    InitialiseCamera();
+    game_over = ControlPhase(nframes, demo_mode);
+    while (!game_over)
+    {
+        nframes = DrawPhaseGame();
+        game_over = ControlPhase(nframes, demo_mode);
+    }
+
+    S_SoundStopAllSamples();
+    S_CDStop();
+    if (Option_Music_Volume)
+        S_CDVolume(Option_Music_Volume * 25 + 5);
+
+    return game_over;
+}

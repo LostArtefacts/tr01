@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">27.35% (212)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">72.65% (563)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">27.48% (213)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">72.52% (562)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="204.34" height="6" x="0" y="0" class="named"/>
-<rect width="542.66" height="6" x="204.34" y="0" class="todo"/>
+<rect width="205.30" height="6" x="0" y="0" class="named"/>
+<rect width="541.70" height="6" x="205.30" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -281,7 +281,7 @@
 <rect width="12" height="12" x="165" y="60" class="named"><title>0x0001fb64 EscapeFMV (491 bytes)</title></rect>
 <rect width="12" height="12" x="180" y="60" class="named"><title>0x0001fd50 S_PlayFMV (82 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="60" class="named"><title>0x0001fdf0 StartGame (298 bytes)</title></rect>
-<rect width="12" height="12" x="210" y="60" class="todo"><title>0x0001ff1c GameLoop (96 bytes)</title></rect>
+<rect width="12" height="12" x="210" y="60" class="named"><title>0x0001ff1c GameLoop (96 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="60" class="todo"><title>0x0001ffcc LevelCompleteSequence (328 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="60" class="todo"><title>0x00020114 Func20114 (766 bytes)</title></rect>
 <rect width="12" height="12" x="255" y="60" class="todo"><title>0x00020414 GetRandomControl (29 bytes)</title></rect>
@@ -846,10 +846,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">30.03%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">69.97%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">30.08%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">69.92%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="224.35" height="6" x="0" y="0" class="named"/>
-<rect width="522.65" height="6" x="224.35" y="0" class="todo"/>
+<rect width="224.70" height="6" x="0" y="0" class="named"/>
+<rect width="522.30" height="6" x="224.70" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1302,7 +1302,7 @@
 <rect width="6.08" height="6.54" x="660.65" y="126.38" class="todo"><title>0x0003d4a0 Insert2DLine (97 bytes)</title></rect>
 <rect width="6.08" height="6.54" x="669.74" y="126.38" class="todo"><title>0x00044700 Func44700 (97 bytes)</title></rect>
 <rect width="5.99" height="6.54" x="678.82" y="126.38" class="named"><title>0x0001f544 TestCdDrive (96 bytes)</title></rect>
-<rect width="5.99" height="6.54" x="687.81" y="126.38" class="todo"><title>0x0001ff1c GameLoop (96 bytes)</title></rect>
+<rect width="5.99" height="6.54" x="687.81" y="126.38" class="named"><title>0x0001ff1c GameLoop (96 bytes)</title></rect>
 <rect width="5.99" height="6.54" x="696.80" y="126.38" class="todo"><title>0x00024224 Func24224 (96 bytes)</title></rect>
 <rect width="5.90" height="6.54" x="705.79" y="126.38" class="named"><title>0x0001f3ac LoadCinematic (95 bytes)</title></rect>
 <rect width="5.90" height="6.54" x="714.69" y="126.38" class="todo"><title>0x00026918 Func26918 (95 bytes)</title></rect>
