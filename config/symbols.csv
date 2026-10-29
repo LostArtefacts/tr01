@@ -580,7 +580,7 @@ address,size,name,symbol
 0x00034d68,693,RatControl,RatControl_
 0x00035020,696,VoleControl,VoleControl_
 0x000352e0,6,LoadSaveGameInfo,LoadSaveGameInfo_
-0x000352e8,78,Func352e8,
+0x000352e8,78,InitialiseStartInfo,InitialiseStartInfo_
 0x00035338,255,ModifyStartInfo,ModifyStartInfo_
 0x00035438,316,CreateStartInfo,CreateStartInfo_
 0x00035574,1098,CreateSaveGameInfo,CreateSaveGameInfo_

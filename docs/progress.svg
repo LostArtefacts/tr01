@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">72.17% (581)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">27.83% (224)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">72.30% (582)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">27.70% (223)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="539.14" height="6" x="0" y="0" class="named"/>
-<rect width="207.86" height="6" x="539.14" y="0" class="todo"/>
+<rect width="540.07" height="6" x="0" y="0" class="named"/>
+<rect width="206.93" height="6" x="540.07" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -648,7 +648,7 @@
 <rect width="12" height="12" x="420" y="165" class="named"><title>0x00034d68 RatControl (693 bytes)</title></rect>
 <rect width="12" height="12" x="435" y="165" class="named"><title>0x00035020 VoleControl (696 bytes)</title></rect>
 <rect width="12" height="12" x="450" y="165" class="named"><title>0x000352e0 LoadSaveGameInfo (6 bytes)</title></rect>
-<rect width="12" height="12" x="465" y="165" class="todo"><title>0x000352e8 Func352e8 (78 bytes)</title></rect>
+<rect width="12" height="12" x="465" y="165" class="named"><title>0x000352e8 InitialiseStartInfo (78 bytes)</title></rect>
 <rect width="12" height="12" x="480" y="165" class="todo"><title>0x00035338 ModifyStartInfo (255 bytes)</title></rect>
 <rect width="12" height="12" x="495" y="165" class="todo"><title>0x00035438 CreateStartInfo (316 bytes)</title></rect>
 <rect width="12" height="12" x="510" y="165" class="todo"><title>0x00035574 CreateSaveGameInfo (1098 bytes)</title></rect>
@@ -876,10 +876,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">69.36%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">30.64%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">69.39%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">30.61%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="518.09" height="6" x="0" y="0" class="named"/>
-<rect width="228.91" height="6" x="518.09" y="0" class="todo"/>
+<rect width="518.37" height="6" x="0" y="0" class="named"/>
+<rect width="228.63" height="6" x="518.37" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="51.03" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1387,7 +1387,7 @@
 <rect width="5.72" height="5.36" x="645.15" y="177.60" class="todo"><title>0x0003950c Func3950c (81 bytes)</title></rect>
 <rect width="5.72" height="5.26" x="645.15" y="185.96" class="named"><title>0x0001d7fc Twinkle (80 bytes)</title></rect>
 <rect width="5.72" height="5.15" x="645.15" y="194.22" class="named"><title>0x00013aa0 BadPosition (79 bytes)</title></rect>
-<rect width="5.72" height="5.05" x="645.15" y="202.37" class="todo"><title>0x000352e8 Func352e8 (78 bytes)</title></rect>
+<rect width="5.72" height="5.05" x="645.15" y="202.37" class="named"><title>0x000352e8 InitialiseStartInfo (78 bytes)</title></rect>
 <rect width="5.72" height="5.05" x="645.15" y="210.42" class="todo"><title>0x00045c60 Func45c60 (78 bytes)</title></rect>
 <rect width="5.72" height="4.95" x="645.15" y="218.47" class="named"><title>0x00025728 lara_as_hang (77 bytes)</title></rect>
 <rect width="5.72" height="4.95" x="645.15" y="226.42" class="named"><title>0x0002f520 ShutThatDoor (77 bytes)</title></rect>
