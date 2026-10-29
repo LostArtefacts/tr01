@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">43.48% (340)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">56.52% (442)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">43.61% (341)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">56.39% (441)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="324.78" height="6" x="0" y="0" class="named"/>
-<rect width="422.22" height="6" x="324.78" y="0" class="todo"/>
+<rect width="325.74" height="6" x="0" y="0" class="named"/>
+<rect width="421.26" height="6" x="325.74" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -408,7 +408,7 @@
 <rect width="12" height="12" x="570" y="90" class="named"><title>0x00025d14 lara_as_diemidas (767 bytes)</title></rect>
 <rect width="12" height="12" x="585" y="90" class="named"><title>0x00026014 lara_as_swandive (34 bytes)</title></rect>
 <rect width="12" height="12" x="600" y="90" class="named"><title>0x00026038 lara_as_fastdive (60 bytes)</title></rect>
-<rect width="12" height="12" x="615" y="90" class="todo"><title>0x00026074 Func26074 (15 bytes)</title></rect>
+<rect width="12" height="12" x="615" y="90" class="named"><title>0x00026074 lara_as_waterout (15 bytes)</title></rect>
 <rect width="12" height="12" x="630" y="90" class="todo"><title>0x00026084 Func26084 (429 bytes)</title></rect>
 <rect width="12" height="12" x="645" y="90" class="todo"><title>0x00026234 Func26234 (387 bytes)</title></rect>
 <rect width="12" height="12" x="660" y="90" class="todo"><title>0x000263b8 Func263b8 (204 bytes)</title></rect>
@@ -855,8 +855,8 @@
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
 <text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">41.83%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">58.17%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="312.43" height="6" x="0" y="0" class="named"/>
-<rect width="434.57" height="6" x="312.43" y="0" class="todo"/>
+<rect width="312.49" height="6" x="0" y="0" class="named"/>
+<rect width="434.51" height="6" x="312.49" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1589,7 +1589,7 @@
 <rect width="1.04" height="0.32" x="729.99" y="226.42" class="named"><title>0x00025aa8 lara_as_rightjump (15 bytes)</title></rect>
 <rect width="1.04" height="0.32" x="729.99" y="229.74" class="named"><title>0x00025ab8 lara_as_leftjump (15 bytes)</title></rect>
 <rect width="1.04" height="0.32" x="729.99" y="233.05" class="named"><title>0x00025ac8 lara_as_upjump (15 bytes)</title></rect>
-<rect width="1.04" height="0.32" x="729.99" y="236.37" class="todo"><title>0x00026074 Func26074 (15 bytes)</title></rect>
+<rect width="1.04" height="0.32" x="729.99" y="236.37" class="named"><title>0x00026074 lara_as_waterout (15 bytes)</title></rect>
 <rect width="1.04" height="0.32" x="729.99" y="239.68" class="todo"><title>0x000397bc T_BottomAlign (15 bytes)</title></rect>
 <rect width="0.19" height="0.92" x="734.04" y="226.42" class="named"><title>0x00025d04 lara_as_usemidas (14 bytes)</title></rect>
 <rect width="0.19" height="0.92" x="737.23" y="226.42" class="todo"><title>0x0002dd38 Func2dd38 (14 bytes)</title></rect>
