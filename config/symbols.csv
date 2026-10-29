@@ -544,7 +544,7 @@ address,size,name,symbol
 0x00031f3c,48,Func31f3c,
 0x00031f6c,94,Remove_Requester,Remove_Requester_
 0x00031fcc,1152,Func31fcc,
-0x00032450,110,Func32450,
+0x00032450,110,Targetable,Targetable_
 0x000324c0,62,Func324c0,
 0x00032500,124,Func32500,
 0x0003257c,182,Func3257c,
@@ -664,8 +664,8 @@ address,size,name,symbol
 0x0003b7fc,36,Func3b7fc,
 0x0003be70,627,Func3be70,
 0x0003c0e4,213,Func3c0e4,
-0x0003c1bc,122,Func3c1bc,
-0x0003c238,122,Func3c238,
+0x0003c1bc,122,ShardGun,ShardGun_
+0x0003c238,122,RocketGun,RocketGun_
 0x0003c2b4,63,Func3c2b4,
 0x0003c2f4,165,Func3c2f4,
 0x0003c39c,932,ExplodingDeath,ExplodingDeath_

@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">62.30% (494)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">37.70% (299)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">62.42% (495)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">37.58% (298)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="465.34" height="6" x="0" y="0" class="named"/>
-<rect width="281.66" height="6" x="465.34" y="0" class="todo"/>
+<rect width="466.29" height="6" x="0" y="0" class="named"/>
+<rect width="280.71" height="6" x="466.29" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -562,7 +562,7 @@
 <rect width="12" height="12" x="630" y="135" class="named"><title>0x0002dd68 mn_clear_fx_slot (45 bytes)</title></rect>
 <rect width="12" height="12" x="645" y="135" class="named"><title>0x0002dd98 mn_clear_handles (49 bytes)</title></rect>
 <rect width="12" height="12" x="660" y="135" class="named"><title>0x0002ddfc TorsoControl (1205 bytes)</title></rect>
-<rect width="12" height="12" x="675" y="135" class="todo"><title>0x0002e2ec NatlaControl (1620 bytes)</title></rect>
+<rect width="12" height="12" x="675" y="135" class="named"><title>0x0002e2ec NatlaControl (1620 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="135" class="todo"><title>0x0002e940 ControlNatlaGun (321 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="135" class="todo"><title>0x0002ea84 NatlaGun (122 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="135" class="todo"><title>0x0002eb00 Func2eb00 (49 bytes)</title></rect>
@@ -612,7 +612,7 @@
 <rect width="12" height="12" x="630" y="150" class="todo"><title>0x00031f3c Func31f3c (48 bytes)</title></rect>
 <rect width="12" height="12" x="645" y="150" class="todo"><title>0x00031f6c Remove_Requester (94 bytes)</title></rect>
 <rect width="12" height="12" x="660" y="150" class="todo"><title>0x00031fcc Func31fcc (1152 bytes)</title></rect>
-<rect width="12" height="12" x="675" y="150" class="todo"><title>0x00032450 Func32450 (110 bytes)</title></rect>
+<rect width="12" height="12" x="675" y="150" class="todo"><title>0x00032450 Targetable (110 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="150" class="todo"><title>0x000324c0 Func324c0 (62 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="150" class="todo"><title>0x00032500 Func32500 (124 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="150" class="todo"><title>0x0003257c Func3257c (182 bytes)</title></rect>
@@ -732,8 +732,8 @@
 <rect width="12" height="12" x="180" y="195" class="todo"><title>0x0003b7fc Func3b7fc (36 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="195" class="todo"><title>0x0003be70 Func3be70 (627 bytes)</title></rect>
 <rect width="12" height="12" x="210" y="195" class="todo"><title>0x0003c0e4 Func3c0e4 (213 bytes)</title></rect>
-<rect width="12" height="12" x="225" y="195" class="todo"><title>0x0003c1bc Func3c1bc (122 bytes)</title></rect>
-<rect width="12" height="12" x="240" y="195" class="todo"><title>0x0003c238 Func3c238 (122 bytes)</title></rect>
+<rect width="12" height="12" x="225" y="195" class="todo"><title>0x0003c1bc ShardGun (122 bytes)</title></rect>
+<rect width="12" height="12" x="240" y="195" class="todo"><title>0x0003c238 RocketGun (122 bytes)</title></rect>
 <rect width="12" height="12" x="255" y="195" class="todo"><title>0x0003c2b4 Func3c2b4 (63 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="195" class="todo"><title>0x0003c2f4 Func3c2f4 (165 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="195" class="todo"><title>0x0003c39c ExplodingDeath (932 bytes)</title></rect>
@@ -864,10 +864,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">56.99%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">43.01%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">57.77%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">42.23%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="425.69" height="6" x="0" y="0" class="named"/>
-<rect width="321.31" height="6" x="425.69" y="0" class="todo"/>
+<rect width="431.52" height="6" x="0" y="0" class="named"/>
+<rect width="315.48" height="6" x="431.52" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.01" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -883,7 +883,7 @@
 <rect width="33.05" height="41.36" x="102.39" y="0" class="todo"><title>0x00043fe4 Func43fe4 (1820 bytes)</title></rect>
 <rect width="33.05" height="39.97" x="102.39" y="44.36" class="named"><title>0x00022ef0 RingNotActive (1763 bytes)</title></rect>
 <rect width="33.05" height="38.49" x="102.39" y="87.34" class="named"><title>0x000151c0 GetCollisionInfo (1702 bytes)</title></rect>
-<rect width="33.05" height="36.49" x="102.39" y="128.82" class="todo"><title>0x0002e2ec NatlaControl (1620 bytes)</title></rect>
+<rect width="33.05" height="36.49" x="102.39" y="128.82" class="named"><title>0x0002e2ec NatlaControl (1620 bytes)</title></rect>
 <rect width="33.05" height="35.22" x="102.39" y="168.31" class="named"><title>0x00017a40 TestTriggers (1568 bytes)</title></rect>
 <rect width="33.05" height="33.47" x="102.39" y="206.53" class="todo"><title>0x00031414 Func31414 (1496 bytes)</title></rect>
 <rect width="32.28" height="32.99" x="138.44" y="0" class="named"><title>0x000158a8 CollideStaticObjects (1445 bytes)</title></rect>
@@ -1262,8 +1262,8 @@
 <rect width="7.33" height="7.38" x="603.39" y="211.86" class="named"><title>0x0001e0d8 SandFX (122 bytes)</title></rect>
 <rect width="7.33" height="7.38" x="603.39" y="222.24" class="named"><title>0x000244e8 Inv_RingMotionInit (122 bytes)</title></rect>
 <rect width="7.33" height="7.38" x="603.39" y="232.62" class="todo"><title>0x0002ea84 NatlaGun (122 bytes)</title></rect>
-<rect width="7.70" height="7.02" x="613.72" y="106.03" class="todo"><title>0x0003c1bc Func3c1bc (122 bytes)</title></rect>
-<rect width="7.70" height="7.02" x="624.41" y="106.03" class="todo"><title>0x0003c238 Func3c238 (122 bytes)</title></rect>
+<rect width="7.70" height="7.02" x="613.72" y="106.03" class="todo"><title>0x0003c1bc ShardGun (122 bytes)</title></rect>
+<rect width="7.70" height="7.02" x="624.41" y="106.03" class="todo"><title>0x0003c238 RocketGun (122 bytes)</title></rect>
 <rect width="7.61" height="7.02" x="635.11" y="106.03" class="named"><title>0x000266d0 lara_col_death (121 bytes)</title></rect>
 <rect width="7.52" height="7.02" x="645.73" y="106.03" class="named"><title>0x0001df4c EarthQuakeFX (120 bytes)</title></rect>
 <rect width="7.52" height="7.02" x="656.25" y="106.03" class="named"><title>0x0001fa4c S_DrawScreenFBox (120 bytes)</title></rect>
@@ -1291,7 +1291,7 @@
 <rect width="7" height="6.75" x="623.92" y="116.05" class="named"><title>0x0002bba8 draw_pistol_meshes (111 bytes)</title></rect>
 <rect width="7" height="6.75" x="633.93" y="116.05" class="todo"><title>0x00030020 Func30020 (111 bytes)</title></rect>
 <rect width="6.91" height="6.75" x="643.93" y="116.05" class="named"><title>0x0001d574 SoundEffects (110 bytes)</title></rect>
-<rect width="6.91" height="6.75" x="653.84" y="116.05" class="todo"><title>0x00032450 Func32450 (110 bytes)</title></rect>
+<rect width="6.91" height="6.75" x="653.84" y="116.05" class="todo"><title>0x00032450 Targetable (110 bytes)</title></rect>
 <rect width="6.82" height="6.75" x="663.76" y="116.05" class="named"><title>0x00020e54 game_malloc (109 bytes)</title></rect>
 <rect width="6.73" height="6.75" x="673.58" y="116.05" class="named"><title>0x00026800 lara_col_hang (108 bytes)</title></rect>
 <rect width="6.64" height="6.75" x="683.31" y="116.05" class="named"><title>0x0001efd8 LoadDepthQ (107 bytes)</title></rect>
