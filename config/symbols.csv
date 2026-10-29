@@ -98,7 +98,7 @@ address,size,name,symbol
 0x00018c84,97,AddRoomFlipItems,AddRoomFlipItems_
 0x00018ce8,319,TriggerCDTrack,TriggerCDTrack_
 0x00018e28,141,TriggerNormalCDTrack,TriggerNormalCDTrack_
-0x00018ec0,800,Func18ec0,
+0x00018ec0,800,AlligatorControl,AlligatorControl_
 0x00019520,335,Func19520,
 0x00019670,150,Func19670,
 0x00019708,55,GetDemoInput,GetDemoInput_
@@ -1750,6 +1750,7 @@ address,size,name,symbol
 0x000c1820,4,animation_rate,_animation_rate
 0x000c1824,4,flipeffect,_flipeffect
 0x000c1828,4,fliptimer,_fliptimer
+0x000c1834,16,croc_bite,_croc_bite
 0x000c1888,4,bckscrn,_bckscrn
 0x000c18b8,,effect_routines,_effect_routines
 0x000c1988,4,CurrentLevel,_CurrentLevel
