@@ -357,7 +357,7 @@ address,size,name,symbol
 0x00026918,95,lara_col_splat,lara_col_splat_
 0x00026978,173,lara_col_compress,lara_col_compress_
 0x00026a28,240,lara_col_back,lara_col_back_
-0x00026b18,49,Func26b18,
+0x00026b18,49,lara_col_null,lara_col_null_
 0x00026b4c,186,Func26b4c,
 0x00026c08,189,Func26c08,
 0x00026cc8,19,Func26cc8,
@@ -386,7 +386,7 @@ address,size,name,symbol
 0x00027304,146,Func27304,
 0x00027398,49,Func27398,
 0x000273cc,49,Func273cc,
-0x00027400,91,Func27400,
+0x00027400,91,lara_default_col,lara_default_col_
 0x0002745c,143,Func2745c,
 0x000274ec,48,GetLaraCollisionInfo,GetLaraCollisionInfo_
 0x0002751c,257,Func2751c,

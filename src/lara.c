@@ -1185,6 +1185,22 @@ void lara_col_back(ITEM_INFO *item, COLL_INFO *coll)
     item->pos.y_pos += coll->mid_floor;
 }
 
+void lara_col_null(ITEM_INFO *item, COLL_INFO *coll)
+{
+    lara_default_col(item, coll);
+}
+
+void lara_default_col(ITEM_INFO *item, COLL_INFO *coll)
+{
+    lara.move_angle = item->pos.y_rot;
+    coll->bad_pos = STEPUP_HEIGHT;
+    coll->bad_neg = -STEPUP_HEIGHT;
+    coll->bad_ceiling = 0;
+    coll->slopes_are_pits = 1;
+    coll->slopes_are_walls = 1;
+    GetLaraCollisionInfo(item, coll);
+}
+
 void GetLaraCollisionInfo(ITEM_INFO *item, COLL_INFO *coll)
 {
     coll->facing = lara.move_angle;
