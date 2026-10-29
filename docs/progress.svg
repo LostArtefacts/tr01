@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">70.25% (562)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">29.75% (238)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">70.38% (563)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">29.62% (237)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="524.77" height="6" x="0" y="0" class="named"/>
-<rect width="222.23" height="6" x="524.77" y="0" class="todo"/>
+<rect width="525.70" height="6" x="0" y="0" class="named"/>
+<rect width="221.30" height="6" x="525.70" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -629,7 +629,7 @@
 <rect width="12" height="12" x="135" y="165" class="named"><title>0x00033768 CowboyControl (857 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="165" class="named"><title>0x00033ac4 InitialiseBaldy (35 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="165" class="named"><title>0x00033b00 BaldyControl (751 bytes)</title></rect>
-<rect width="12" height="12" x="180" y="165" class="todo"><title>0x00033df0 Func33df0 (484 bytes)</title></rect>
+<rect width="12" height="12" x="180" y="165" class="named"><title>0x00033df0 PickUpCollision (484 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="165" class="todo"><title>0x00033fd4 Func33fd4 (328 bytes)</title></rect>
 <rect width="12" height="12" x="210" y="165" class="todo"><title>0x0003411c Func3411c (245 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="165" class="todo"><title>0x00034434 Func34434 (272 bytes)</title></rect>
@@ -871,10 +871,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">67.68%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">32.32%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">67.91%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">32.09%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="505.60" height="6" x="0" y="0" class="named"/>
-<rect width="241.40" height="6" x="505.60" y="0" class="todo"/>
+<rect width="507.30" height="6" x="0" y="0" class="named"/>
+<rect width="239.70" height="6" x="507.30" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="51.65" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -992,7 +992,7 @@
 <rect width="18.34" height="17.05" x="407.98" y="144.82" class="todo"><title>0x00038460 Func38460 (499 bytes)</title></rect>
 <rect width="18.34" height="16.72" x="407.98" y="164.87" class="named"><title>0x0001fb64 EscapeFMV (491 bytes)</title></rect>
 <rect width="18.34" height="16.52" x="407.98" y="184.59" class="todo"><title>0x0003dda8 phd_RotYXZ (486 bytes)</title></rect>
-<rect width="18.34" height="16.44" x="407.98" y="204.11" class="todo"><title>0x00033df0 Func33df0 (484 bytes)</title></rect>
+<rect width="18.34" height="16.44" x="407.98" y="204.11" class="named"><title>0x00033df0 PickUpCollision (484 bytes)</title></rect>
 <rect width="18.34" height="16.44" x="407.98" y="223.56" class="todo"><title>0x0003d5f0 Func3d5f0 (484 bytes)</title></rect>
 <rect width="16.67" height="17.66" x="429.33" y="0" class="todo"><title>0x00046a54 Func46a54 (474 bytes)</title></rect>
 <rect width="16.67" height="17.57" x="429.33" y="20.66" class="named"><title>0x0002cd30 EnableBaddieAI (472 bytes)</title></rect>
