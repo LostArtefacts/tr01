@@ -19,3 +19,18 @@ void InitialiseLOTarray(void)
     }
     slots_used = 0;
 }
+
+void DisableBaddieAI(sint16 item_num)
+{
+    ITEM_INFO *item;
+    CREATURE_INFO *creature;
+
+    item = &items[item_num];
+    creature = (CREATURE_INFO *)item->data;
+    item->data = NULL;
+    if (creature)
+    {
+        creature->item_num = NO_ITEM;
+        slots_used--;
+    }
+}

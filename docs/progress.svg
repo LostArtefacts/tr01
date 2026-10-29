@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">59.92% (474)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">40.08% (317)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">60.05% (475)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">39.95% (316)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="447.63" height="6" x="0" y="0" class="named"/>
-<rect width="299.37" height="6" x="447.63" y="0" class="todo"/>
+<rect width="448.58" height="6" x="0" y="0" class="named"/>
+<rect width="298.42" height="6" x="448.58" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -542,7 +542,7 @@
 <rect width="12" height="12" x="330" y="135" class="named"><title>0x0002cc18 ThorsHandleCollision (69 bytes)</title></rect>
 <rect width="12" height="12" x="345" y="135" class="named"><title>0x0002cc60 ThorsHeadCollision (76 bytes)</title></rect>
 <rect width="12" height="12" x="360" y="135" class="named"><title>0x0002ccb0 InitialiseLOTarray (75 bytes)</title></rect>
-<rect width="12" height="12" x="375" y="135" class="todo"><title>0x0002ccfc DisableBaddieAI (49 bytes)</title></rect>
+<rect width="12" height="12" x="375" y="135" class="named"><title>0x0002ccfc DisableBaddieAI (49 bytes)</title></rect>
 <rect width="12" height="12" x="390" y="135" class="todo"><title>0x0002cd30 EnableBaddieAI (472 bytes)</title></rect>
 <rect width="12" height="12" x="405" y="135" class="todo"><title>0x0002cf08 Func2cf08 (247 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="135" class="todo"><title>0x0002d000 Func2d000 (284 bytes)</title></rect>
@@ -862,10 +862,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">55.10%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">44.90%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">55.12%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">44.88%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="411.56" height="6" x="0" y="0" class="named"/>
-<rect width="335.44" height="6" x="411.56" y="0" class="todo"/>
+<rect width="411.74" height="6" x="0" y="0" class="named"/>
+<rect width="335.26" height="6" x="411.74" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.78" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1455,7 +1455,7 @@
 <rect width="3.89" height="3.34" x="688.28" y="173.65" class="named"><title>0x0002724c lara_col_diemidas (49 bytes)</title></rect>
 <rect width="3.89" height="3.34" x="695.17" y="173.65" class="named"><title>0x00027398 lara_col_gymnast (49 bytes)</title></rect>
 <rect width="3.89" height="3.34" x="702.06" y="173.65" class="named"><title>0x000273cc lara_col_waterout (49 bytes)</title></rect>
-<rect width="3.89" height="3.34" x="708.95" y="173.65" class="todo"><title>0x0002ccfc DisableBaddieAI (49 bytes)</title></rect>
+<rect width="3.89" height="3.34" x="708.95" y="173.65" class="named"><title>0x0002ccfc DisableBaddieAI (49 bytes)</title></rect>
 <rect width="3.89" height="3.34" x="715.84" y="173.65" class="todo"><title>0x0002dd98 Func2dd98 (49 bytes)</title></rect>
 <rect width="3.89" height="3.34" x="722.73" y="173.65" class="todo"><title>0x0002eb00 Func2eb00 (49 bytes)</title></rect>
 <rect width="3.89" height="3.34" x="729.62" y="173.65" class="todo"><title>0x0002febc Func2febc (49 bytes)</title></rect>
