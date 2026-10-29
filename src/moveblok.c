@@ -310,10 +310,55 @@ int TestBlockPull(ITEM_INFO *item, int blokhite, uint16 quadrant)
     return 1;
 }
 
+enum rb_states
+{
+    RB_START,
+    RB_END,
+    RB_MOVING
+};
+
 void InitialiseRollingBlock(sint16 item_num)
 {
     ITEM_INFO *item;
 
     item = &items[item_num];
     AlterFloorHeight(item, -2048);
+}
+
+void RollingBlock(sint16 item_number)
+{
+    ITEM_INFO *item;
+    FLOOR_INFO *floor;
+    sint16 room_number;
+
+    item = &items[item_number];
+    if (TriggerActive(item))
+    {
+        if (item->current_anim_state == RB_START)
+        {
+            item->goal_anim_state = RB_END;
+            AlterFloorHeight(item, +2048);
+        }
+    }
+    else if (item->current_anim_state == RB_END)
+    {
+        item->goal_anim_state = RB_START;
+        AlterFloorHeight(item, +2048);
+    }
+
+    AnimateItem(item);
+    room_number = item->room_number;
+    floor = GetFloor(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, &room_number);
+    if (item->room_number != room_number)
+        ItemNewRoom(item_number, room_number);
+
+    if (item->status == DEACTIVATED)
+    {
+        item->status = ACTIVE;
+        AlterFloorHeight(item, -2048);
+        item->pos.x_pos &= -WALL_L;
+        item->pos.x_pos += WALL_L / 2;
+        item->pos.z_pos &= -WALL_L;
+        item->pos.z_pos += WALL_L / 2;
+    }
 }

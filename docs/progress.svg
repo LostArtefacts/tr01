@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">63.56% (504)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">36.44% (289)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">63.68% (505)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">36.32% (288)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="474.76" height="6" x="0" y="0" class="named"/>
-<rect width="272.24" height="6" x="474.76" y="0" class="todo"/>
+<rect width="475.71" height="6" x="0" y="0" class="named"/>
+<rect width="271.29" height="6" x="475.71" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -572,7 +572,7 @@
 <rect width="12" height="12" x="30" y="150" class="named"><title>0x0002eefc TestBlockPush (254 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="150" class="named"><title>0x0002f00c TestBlockPull (599 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="150" class="named"><title>0x0002f264 InitialiseRollingBlock (33 bytes)</title></rect>
-<rect width="12" height="12" x="75" y="150" class="todo"><title>0x0002f288 Func2f288 (247 bytes)</title></rect>
+<rect width="12" height="12" x="75" y="150" class="named"><title>0x0002f288 RollingBlock (247 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="150" class="todo"><title>0x0002f380 AlterFloorHeight (186 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="150" class="todo"><title>0x0002f43c Func2f43c (124 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="150" class="todo"><title>0x0002f4b8 Func2f4b8 (102 bytes)</title></rect>
@@ -864,10 +864,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">58.87%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">41.13%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">58.99%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">41.01%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="439.79" height="6" x="0" y="0" class="named"/>
-<rect width="307.21" height="6" x="439.79" y="0" class="todo"/>
+<rect width="440.68" height="6" x="0" y="0" class="named"/>
+<rect width="306.32" height="6" x="440.68" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.01" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1098,7 +1098,7 @@
 <rect width="12.16" height="11.61" x="525.78" y="228.39" class="named"><title>0x00011c30 StalkBox (252 bytes)</title></rect>
 <rect width="12.52" height="11.04" x="540.94" y="31.80" class="named"><title>0x00017570 GetWaterHeight (248 bytes)</title></rect>
 <rect width="12.46" height="11.04" x="556.46" y="31.80" class="named"><title>0x0002cf08 InitialiseSlot (247 bytes)</title></rect>
-<rect width="12.46" height="11.04" x="571.91" y="31.80" class="todo"><title>0x0002f288 Func2f288 (247 bytes)</title></rect>
+<rect width="12.46" height="11.04" x="571.91" y="31.80" class="named"><title>0x0002f288 RollingBlock (247 bytes)</title></rect>
 <rect width="12.39" height="11.04" x="587.37" y="31.80" class="named"><title>0x00010f5c decomp_pcx (246 bytes)</title></rect>
 <rect width="12.33" height="11.04" x="602.76" y="31.80" class="todo"><title>0x0003411c Func3411c (245 bytes)</title></rect>
 <rect width="12.08" height="11.04" x="618.09" y="31.80" class="named"><title>0x0001f6d0 S_DrawScreenSprite2d (241 bytes)</title></rect>
