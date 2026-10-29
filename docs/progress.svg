@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">23.74% (184)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">76.26% (591)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">23.87% (185)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">76.13% (590)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="177.35" height="6" x="0" y="0" class="named"/>
-<rect width="569.65" height="6" x="177.35" y="0" class="todo"/>
+<rect width="178.32" height="6" x="0" y="0" class="named"/>
+<rect width="568.68" height="6" x="178.32" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -253,7 +253,7 @@
 <rect width="12" height="12" x="495" y="45" class="named"><title>0x0001e8cc LoadObjects (1090 bytes)</title></rect>
 <rect width="12" height="12" x="510" y="45" class="named"><title>0x0001ed10 LoadSprites (265 bytes)</title></rect>
 <rect width="12" height="12" x="525" y="45" class="named"><title>0x0001ee1c LoadItems (441 bytes)</title></rect>
-<rect width="12" height="12" x="540" y="45" class="todo"><title>0x0001efd8 LoadDepthQ (107 bytes)</title></rect>
+<rect width="12" height="12" x="540" y="45" class="named"><title>0x0001efd8 LoadDepthQ (107 bytes)</title></rect>
 <rect width="12" height="12" x="555" y="45" class="todo"><title>0x0001f044 LoadPalette (137 bytes)</title></rect>
 <rect width="12" height="12" x="570" y="45" class="todo"><title>0x0001f0d0 LoadCameras (90 bytes)</title></rect>
 <rect width="12" height="12" x="585" y="45" class="todo"><title>0x0001f12c LoadSoundEffects (90 bytes)</title></rect>
@@ -846,10 +846,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">28.18%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">71.82%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">28.23%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">71.77%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="210.51" height="6" x="0" y="0" class="named"/>
-<rect width="536.49" height="6" x="210.51" y="0" class="todo"/>
+<rect width="210.90" height="6" x="0" y="0" class="named"/>
+<rect width="536.10" height="6" x="210.90" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1273,7 +1273,7 @@
 <rect width="6.55" height="7.29" x="740.45" y="106.97" class="todo"><title>0x00032450 Func32450 (110 bytes)</title></rect>
 <rect width="6.72" height="7.02" x="623.68" y="117.26" class="todo"><title>0x00020e54 game_malloc (109 bytes)</title></rect>
 <rect width="6.72" height="6.93" x="623.68" y="127.28" class="todo"><title>0x00026800 Func26800 (108 bytes)</title></rect>
-<rect width="6.72" height="6.83" x="623.68" y="137.21" class="todo"><title>0x0001efd8 LoadDepthQ (107 bytes)</title></rect>
+<rect width="6.72" height="6.83" x="623.68" y="137.21" class="named"><title>0x0001efd8 LoadDepthQ (107 bytes)</title></rect>
 <rect width="6.72" height="6.74" x="623.68" y="147.04" class="named"><title>0x0001d5e4 DoBloodSplat (106 bytes)</title></rect>
 <rect width="6.72" height="6.74" x="623.68" y="156.78" class="todo"><title>0x0002460c Func2460c (106 bytes)</title></rect>
 <rect width="6.72" height="6.74" x="623.68" y="166.53" class="todo"><title>0x000278d0 Func278d0 (106 bytes)</title></rect>

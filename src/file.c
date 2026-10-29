@@ -397,3 +397,20 @@ int LoadItems(FILE *file)
 
     return 1;
 }
+
+int LoadDepthQ(FILE *file)
+{
+    int i, j;
+
+    fread(depthq_table, sizeof(uint8), 32 * 256, file);
+
+    for (i = 0; i < 32; i++)
+        depthq_table[i][0] = 0;
+
+    for (i = 0; i < 32; i++)
+    {
+        for (j = 0; j < 256; j++)
+            gouraud_table[j][i] = depthq_table[i][j];
+    }
+    return 1;
+}

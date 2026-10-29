@@ -1852,6 +1852,7 @@ address,size,name,symbol
 0x000d4744,48000,vbuf,_vbuf
 0x000e02c4,40960,phdtextinfo,_phdtextinfo
 0x000ea2c4,,texture_page_ptrs,_texture_page_ptrs
+0x0012aa84,8192,gouraud_table,_gouraud_table
 0x0012ca84,8192,depthq_table,_depthq_table
 0x0012ea84,48,w2v_matrix,_w2v_matrix
 0x0012f3b4,4,sort3dptr,_sort3dptr
