@@ -1121,6 +1121,11 @@ void lara_col_splat(ITEM_INFO *item, COLL_INFO *coll)
     ShiftItem(item, coll);
 }
 
+void lara_col_land(ITEM_INFO *item, COLL_INFO *coll)
+{
+    lara_col_stop(item, coll);
+}
+
 void GetLaraCollisionInfo(ITEM_INFO *item, COLL_INFO *coll)
 {
     coll->facing = lara.move_angle;
