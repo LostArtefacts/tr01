@@ -1,6 +1,8 @@
 #ifndef _3DGLODEF_H
 #define _3DGLODEF_H
 
+#define MAX_TEXTURES 2048
+
 #include "types.h"
 
 #define WIBBLE_SIZE 32

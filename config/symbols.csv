@@ -568,7 +568,7 @@ address,size,name,symbol
 0x00036808,3805,Func36808,
 0x000376e8,1012,Func376e8,
 0x00037adc,2329,Func37adc,
-0x000383f8,94,Func383f8,
+0x000383f8,94,InitialiseObjects,InitialiseObjects_
 0x00038460,499,Func38460,
 0x00038654,228,Func38654,
 0x0003875c,539,CheckCheatMode,CheckCheatMode_

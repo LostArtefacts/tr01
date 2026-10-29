@@ -233,3 +233,85 @@ int LoadRooms(FILE *file)
 
     return 1;
 }
+
+int LoadObjects(FILE *file)
+{
+    int i;
+    int j;
+    sint32 number;
+    sint32 size;
+    sint32 number_anims;
+
+    fread(&size, sizeof(sint32), 1, file);
+    mesh_base = (sint16 *)game_malloc(size * sizeof(sint16), MESHES);
+    fread(mesh_base, sizeof(sint16), size, file);
+
+    fread(&number, sizeof(sint32), 1, file);
+    meshes = (sint16 **)game_malloc(number * sizeof(sint16 *), MESH_POINTERS);
+    fread(meshes, sizeof(sint16 *), number, file);
+
+    for (i = 0; i < number; i++)
+        meshes[i] = mesh_base + (int)meshes[i] / 2;
+
+    fread(&number_anims, sizeof(sint32), 1, file);
+    anims = (ANIM_STRUCT *)game_malloc(number_anims * sizeof(ANIM_STRUCT), ANIMS);
+    fread(anims, sizeof(ANIM_STRUCT), number_anims, file);
+
+    fread(&number, sizeof(sint32), 1, file);
+    changes = (CHANGE_STRUCT *)game_malloc(number * sizeof(CHANGE_STRUCT), STRUCTS);
+    fread(changes, sizeof(CHANGE_STRUCT), number, file);
+
+    fread(&number, sizeof(sint32), 1, file);
+    ranges = (RANGE_STRUCT *)game_malloc(number * sizeof(RANGE_STRUCT), RANGES);
+    fread(ranges, sizeof(RANGE_STRUCT), number, file);
+
+    fread(&size, sizeof(sint32), 1, file);
+    commands = (sint16 *)game_malloc(size * sizeof(sint16), COMMANDS);
+    fread(commands, sizeof(sint16), size, file);
+
+    fread(&size, sizeof(sint32), 1, file);
+    bones = (sint32 *)game_malloc(size * sizeof(sint32), BONES);
+    fread(bones, sizeof(sint32), size, file);
+
+    fread(&size, sizeof(sint32), 1, file);
+    frames = (sint16 *)game_malloc(size * sizeof(sint16), FRAMES);
+    fread(frames, sizeof(sint16), size, file);
+
+    for (i = 0; i < number_anims; i++)
+        anims[i].frame_ptr = (sint16 *)((long)anims[i].frame_ptr + (long)frames);
+
+    fread(&number, sizeof(sint32), 1, file);
+    for (i = 0; i < number; i++)
+    {
+        fread(&j, sizeof(sint32), 1, file);
+        fread(&objects[j].nmeshes, sizeof(sint16), 1, file);
+        fread(&objects[j].mesh_index, sizeof(sint16), 1, file);
+        fread(&objects[j].bone_index, sizeof(sint32), 1, file);
+        fread(&size, sizeof(sint32), 1, file);
+        objects[j].frame_base = (sint16 *)((long)size + (long)frames);
+        fread(&objects[j].anim_index, sizeof(sint16), 1, file);
+        objects[j].loaded = 1;
+    }
+
+    InitialiseObjects();
+
+    fread(&number, sizeof(sint32), 1, file);
+    for (i = 0; i < number; i++)
+    {
+        fread(&j, sizeof(sint32), 1, file);
+        fread(&static_objects[j].mesh_number, sizeof(sint16), 1, file);
+        fread(&static_objects[j].x_minp, sizeof(sint16), 6, file);
+        fread(&static_objects[j].x_minc, sizeof(sint16), 6, file);
+        fread(&static_objects[j].flags, sizeof(sint16), 1, file);
+    }
+
+    fread(&number, sizeof(sint32), 1, file);
+    if (number > MAX_TEXTURES)
+    {
+        sprintf(exit_message, "Too many Textures in level");
+        return 0;
+    }
+    fread(phdtextinfo, sizeof(PHDTEXTURESTRUCT), number, file);
+
+    return 1;
+}

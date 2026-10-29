@@ -96,6 +96,7 @@ void InitialisePlayer1(sint16 item_num);
 void InitialiseGenPlayer(sint16 item_num);
 
 int InitialiseLevel(int level_number);
+void InitialiseObjects(void);
 
 void InitialiseCamera(void);
 void MoveCamera(GAME_VECTOR *ideal, int speed);
