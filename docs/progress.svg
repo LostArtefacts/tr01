@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">70.79% (567)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">29.21% (234)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">70.91% (568)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">29.09% (233)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="528.78" height="6" x="0" y="0" class="named"/>
-<rect width="218.22" height="6" x="528.78" y="0" class="todo"/>
+<rect width="529.71" height="6" x="0" y="0" class="named"/>
+<rect width="217.29" height="6" x="529.71" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -634,7 +634,7 @@
 <rect width="12" height="12" x="210" y="165" class="named"><title>0x0003411c PickUpScion4Collision (245 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="165" class="named"><title>0x00034224 MidasCollision (526 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="165" class="named"><title>0x00034434 SwitchCollision (272 bytes)</title></rect>
-<rect width="12" height="12" x="255" y="165" class="todo"><title>0x00034544 Func34544 (224 bytes)</title></rect>
+<rect width="12" height="12" x="255" y="165" class="named"><title>0x00034544 SwitchCollision2 (224 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="165" class="todo"><title>0x00034b10 Func34b10 (55 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="165" class="todo"><title>0x00034b48 SwitchTrigger (120 bytes)</title></rect>
 <rect width="12" height="12" x="300" y="165" class="todo"><title>0x00034bc0 KeyTrigger (74 bytes)</title></rect>
@@ -872,10 +872,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">68.39%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">31.61%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">68.49%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">31.51%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="510.85" height="6" x="0" y="0" class="named"/>
-<rect width="236.15" height="6" x="510.85" y="0" class="todo"/>
+<rect width="511.64" height="6" x="0" y="0" class="named"/>
+<rect width="235.36" height="6" x="511.64" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="51.51" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1135,7 +1135,7 @@
 <rect width="11.56" height="11.03" x="648.77" y="49.55" class="named"><title>0x00022c30 InitColours (225 bytes)</title></rect>
 <rect width="11.50" height="11.03" x="663.34" y="49.55" class="named"><title>0x0001275c CreatureCreature (224 bytes)</title></rect>
 <rect width="11.50" height="11.03" x="677.83" y="49.55" class="named"><title>0x0002a19c LaraSurfaceCollision (224 bytes)</title></rect>
-<rect width="11.50" height="11.03" x="692.33" y="49.55" class="todo"><title>0x00034544 Func34544 (224 bytes)</title></rect>
+<rect width="11.50" height="11.03" x="692.33" y="49.55" class="named"><title>0x00034544 SwitchCollision2 (224 bytes)</title></rect>
 <rect width="11.43" height="11.03" x="706.83" y="49.55" class="todo"><title>0x0003eeac phd_InitWindow (223 bytes)</title></rect>
 <rect width="11.43" height="11.03" x="721.26" y="49.55" class="todo"><title>0x0003f48c S_DrawPickup (223 bytes)</title></rect>
 <rect width="11.30" height="11.03" x="735.70" y="49.55" class="named"><title>0x0001d9e0 LaraBubbles (221 bytes)</title></rect>

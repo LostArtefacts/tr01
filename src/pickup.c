@@ -331,3 +331,39 @@ void SwitchCollision(sint16 item_num, ITEM_INFO *laraitem, COLL_INFO *coll)
         }
     }
 }
+
+void SwitchCollision2(sint16 item_num, ITEM_INFO *laraitem, COLL_INFO *coll)
+{
+    ITEM_INFO *item;
+
+    item = &items[item_num];
+    if (!(input & IN_ACTION) || item->status != NOT_ACTIVE || lara.water_status != LARA_UNDERWATER)
+        return;
+
+    if (laraitem->current_anim_state == AS_TREAD)
+    {
+        if (!TestLaraPosition(Switch2Bounds, item, laraitem))
+            return;
+        if (item->current_anim_state == SS_ON || item->current_anim_state == SS_OFF)
+        {
+            if (MoveLaraPosition(&Switch2Position, item, laraitem))
+            {
+                laraitem->fallspeed = 0;
+                laraitem->goal_anim_state = AS_SWITCHON;
+                do
+                {
+                    AnimateLara(laraitem);
+                } while (laraitem->current_anim_state != AS_SWITCHON);
+                laraitem->goal_anim_state = AS_TREAD;
+                lara.gun_status = LG_HANDSBUSY;
+                item->status = ACTIVE;
+                if (item->current_anim_state == SS_ON)
+                    item->goal_anim_state = SS_OFF;
+                else
+                    item->goal_anim_state = SS_ON;
+                AddActiveItem(item_num);
+                AnimateItem(item);
+            }
+        }
+    }
+}
