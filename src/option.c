@@ -957,6 +957,18 @@ void S_ChangeCtrlText(void)
         T_ChangeText(btext[i], kname[*key]);
 }
 
+void S_RemoveCtrlText(void)
+{
+    int i;
+
+    for (i = 0; i < 13; i++)
+    {
+        T_RemovePrint(ctext[i]);
+        T_RemovePrint(btext[i]);
+        ctext[i] = btext[i] = NULL;
+    }
+}
+
 void Init_Requester(REQUEST_INFO *req)
 {
     int n;

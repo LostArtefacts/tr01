@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">68.26% (542)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">31.74% (252)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">68.39% (543)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">31.61% (251)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="509.92" height="6" x="0" y="0" class="named"/>
-<rect width="237.08" height="6" x="509.92" y="0" class="todo"/>
+<rect width="510.86" height="6" x="0" y="0" class="named"/>
+<rect width="236.14" height="6" x="510.86" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -609,7 +609,7 @@
 <rect width="12" height="12" x="585" y="150" class="named"><title>0x00031414 do_control_option (1496 bytes)</title></rect>
 <rect width="12" height="12" x="600" y="150" class="named"><title>0x000319ec S_ShowControls (1181 bytes)</title></rect>
 <rect width="12" height="12" x="615" y="150" class="named"><title>0x00031e8c S_ChangeCtrlText (124 bytes)</title></rect>
-<rect width="12" height="12" x="630" y="150" class="todo"><title>0x00031f08 S_RemoveCtrlText (51 bytes)</title></rect>
+<rect width="12" height="12" x="630" y="150" class="named"><title>0x00031f08 S_RemoveCtrlText (51 bytes)</title></rect>
 <rect width="12" height="12" x="645" y="150" class="named"><title>0x00031f3c Init_Requester (48 bytes)</title></rect>
 <rect width="12" height="12" x="660" y="150" class="todo"><title>0x00031f6c Remove_Requester (94 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="150" class="todo"><title>0x00031fcc Display_Requester (1152 bytes)</title></rect>
@@ -865,10 +865,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">65%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">35%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">65.02%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">34.98%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="485.55" height="6" x="0" y="0" class="named"/>
-<rect width="261.45" height="6" x="485.55" y="0" class="todo"/>
+<rect width="485.74" height="6" x="0" y="0" class="named"/>
+<rect width="261.26" height="6" x="485.74" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.01" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1441,7 +1441,7 @@
 <rect width="3.66" height="3.73" x="673.70" y="216.07" class="named"><title>0x00015f84 ShiftItem (51 bytes)</title></rect>
 <rect width="3.66" height="3.73" x="673.70" y="222.80" class="named"><title>0x0001a2b4 S_FadeInInventory (51 bytes)</title></rect>
 <rect width="3.66" height="3.73" x="673.70" y="229.53" class="named"><title>0x0002fe88 DrawBridgeFloor (51 bytes)</title></rect>
-<rect width="3.66" height="3.73" x="673.70" y="236.27" class="todo"><title>0x00031f08 S_RemoveCtrlText (51 bytes)</title></rect>
+<rect width="3.66" height="3.73" x="673.70" y="236.27" class="named"><title>0x00031f08 S_RemoveCtrlText (51 bytes)</title></rect>
 <rect width="3.45" height="3.81" x="680.35" y="166.95" class="named"><title>0x0001d4a8 GetBestFrame (50 bytes)</title></rect>
 <rect width="3.32" height="3.81" x="686.80" y="166.95" class="named"><title>0x0001a3b4 DrawPhaseGame (49 bytes)</title></rect>
 <rect width="3.32" height="3.81" x="693.12" y="166.95" class="named"><title>0x0001ce84 phd_PushMatrix_I (49 bytes)</title></rect>
