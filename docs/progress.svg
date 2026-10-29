@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">5.45% (42)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">94.55% (729)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">5.58% (43)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">94.42% (728)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="40.69" height="6" x="0" y="0" class="named"/>
-<rect width="706.31" height="6" x="40.69" y="0" class="todo"/>
+<rect width="41.66" height="6" x="0" y="0" class="named"/>
+<rect width="705.34" height="6" x="41.66" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -114,7 +114,7 @@
 <rect width="12" height="12" x="660" y="0" class="named"><title>0x00014060 ShiftClamp (402 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="0" class="named"><title>0x000141f4 CombatCamera (317 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="0" class="named"><title>0x00014334 LookCamera (510 bytes)</title></rect>
-<rect width="12" height="12" x="705" y="0" class="todo"><title>0x00014534 FixedCamera (146 bytes)</title></rect>
+<rect width="12" height="12" x="705" y="0" class="named"><title>0x00014534 FixedCamera (146 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="0" class="todo"><title>0x000145c8 CalculateCamera (1276 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="0" class="todo"><title>0x00014ae0 Func14ae0 (279 bytes)</title></rect>
 <rect width="12" height="12" x="0" y="15" class="todo"><title>0x00014bf8 Func14bf8 (128 bytes)</title></rect>
@@ -842,10 +842,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">7.12%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">92.88%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">7.19%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">92.81%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="53.16" height="6" x="0" y="0" class="named"/>
-<rect width="693.84" height="6" x="53.16" y="0" class="todo"/>
+<rect width="53.71" height="6" x="0" y="0" class="named"/>
+<rect width="693.29" height="6" x="53.71" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="54.65" height="67.43" x="0" y="0" class="todo"><title>0x0001bc98 Func1bc98 (4489 bytes)</title></rect>
@@ -1186,7 +1186,7 @@
 <rect width="9" height="8.15" x="580.90" y="198.61" class="todo"><title>0x00045f6c Func45f6c (148 bytes)</title></rect>
 <rect width="9" height="8.15" x="580.90" y="209.76" class="todo"><title>0x00046847 Func46847 (148 bytes)</title></rect>
 <rect width="9" height="8.08" x="580.90" y="220.92" class="todo"><title>0x000462e4 Func462e4 (147 bytes)</title></rect>
-<rect width="9" height="8" x="580.90" y="232" class="todo"><title>0x00014534 FixedCamera (146 bytes)</title></rect>
+<rect width="9" height="8" x="580.90" y="232" class="named"><title>0x00014534 FixedCamera (146 bytes)</title></rect>
 <rect width="8.49" height="8.49" x="592.90" y="84.73" class="todo"><title>0x00027304 Func27304 (146 bytes)</title></rect>
 <rect width="8.41" height="8.49" x="604.39" y="84.73" class="todo"><title>0x0001a20c Func1a20c (145 bytes)</title></rect>
 <rect width="8.41" height="8.49" x="615.81" y="84.73" class="todo"><title>0x0001d4e0 Func1d4e0 (145 bytes)</title></rect>
