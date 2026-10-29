@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">49.24% (387)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">50.76% (399)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">49.36% (388)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">50.64% (398)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="367.80" height="6" x="0" y="0" class="named"/>
-<rect width="379.20" height="6" x="367.80" y="0" class="todo"/>
+<rect width="368.75" height="6" x="0" y="0" class="named"/>
+<rect width="378.25" height="6" x="368.75" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -453,7 +453,7 @@
 <rect width="12" height="12" x="495" y="105" class="named"><title>0x0002724c lara_col_diemidas (49 bytes)</title></rect>
 <rect width="12" height="12" x="510" y="105" class="named"><title>0x00027280 lara_col_swandive (129 bytes)</title></rect>
 <rect width="12" height="12" x="525" y="105" class="named"><title>0x00027304 lara_col_fastdive (146 bytes)</title></rect>
-<rect width="12" height="12" x="540" y="105" class="todo"><title>0x00027398 Func27398 (49 bytes)</title></rect>
+<rect width="12" height="12" x="540" y="105" class="named"><title>0x00027398 lara_col_gymnast (49 bytes)</title></rect>
 <rect width="12" height="12" x="555" y="105" class="todo"><title>0x000273cc Func273cc (49 bytes)</title></rect>
 <rect width="12" height="12" x="570" y="105" class="named"><title>0x00027400 lara_default_col (91 bytes)</title></rect>
 <rect width="12" height="12" x="585" y="105" class="todo"><title>0x0002745c lara_col_jumper (143 bytes)</title></rect>
@@ -857,10 +857,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">44.25%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">55.75%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">44.28%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">55.72%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="330.57" height="6" x="0" y="0" class="named"/>
-<rect width="416.43" height="6" x="330.57" y="0" class="todo"/>
+<rect width="330.75" height="6" x="0" y="0" class="named"/>
+<rect width="416.25" height="6" x="330.75" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1447,7 +1447,7 @@
 <rect width="3.92" height="3.33" x="743.08" y="167.66" class="named"><title>0x0002703c lara_col_usepuzzle (49 bytes)</title></rect>
 <rect width="3.32" height="3.93" x="680.82" y="173.99" class="named"><title>0x00027218 lara_col_usemidas (49 bytes)</title></rect>
 <rect width="3.32" height="3.93" x="680.82" y="180.92" class="named"><title>0x0002724c lara_col_diemidas (49 bytes)</title></rect>
-<rect width="3.32" height="3.93" x="680.82" y="187.85" class="todo"><title>0x00027398 Func27398 (49 bytes)</title></rect>
+<rect width="3.32" height="3.93" x="680.82" y="187.85" class="named"><title>0x00027398 lara_col_gymnast (49 bytes)</title></rect>
 <rect width="3.32" height="3.93" x="680.82" y="194.78" class="todo"><title>0x000273cc Func273cc (49 bytes)</title></rect>
 <rect width="3.32" height="3.93" x="680.82" y="201.71" class="todo"><title>0x0002ccfc DisableBaddieAI (49 bytes)</title></rect>
 <rect width="3.32" height="3.93" x="680.82" y="208.64" class="todo"><title>0x0002dd98 Func2dd98 (49 bytes)</title></rect>

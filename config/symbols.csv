@@ -385,7 +385,7 @@ address,size,name,symbol
 0x0002724c,49,lara_col_diemidas,lara_col_diemidas_
 0x00027280,129,lara_col_swandive,lara_col_swandive_
 0x00027304,146,lara_col_fastdive,lara_col_fastdive_
-0x00027398,49,Func27398,
+0x00027398,49,lara_col_gymnast,lara_col_gymnast_
 0x000273cc,49,Func273cc,
 0x00027400,91,lara_default_col,lara_default_col_
 0x0002745c,143,lara_col_jumper,lara_col_jumper_
