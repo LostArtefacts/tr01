@@ -9,6 +9,7 @@
 #define NO_BAD_NEG NO_HEIGHT
 
 #define NUMBER_ITEMS 256
+#define NUM_EFFECTS 100
 
 #define LARA_AIR (2 * 30 * 30)
 #define LARA_HITPOINTS 1000

@@ -290,7 +290,7 @@ address,size,name,symbol
 0x00024bc4,153,ItemNewRoom,ItemNewRoom_
 0x00024c60,160,SpawnItem,SpawnItem_
 0x00024d00,127,GlobalItemReplace,GlobalItemReplace_
-0x00024d80,56,Func24d80,
+0x00024d80,56,InitialiseFXArray,InitialiseFXArray_
 0x00024db8,111,CreateEffect,CreateEffect_
 0x00024e28,192,KillEffect,KillEffect_
 0x00024ee8,155,EffectNewRoom,EffectNewRoom_
