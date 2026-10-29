@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">56.08% (443)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">43.92% (347)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">56.20% (444)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">43.80% (346)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="418.89" height="6" x="0" y="0" class="named"/>
-<rect width="328.11" height="6" x="418.89" y="0" class="todo"/>
+<rect width="419.83" height="6" x="0" y="0" class="named"/>
+<rect width="327.17" height="6" x="419.83" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -511,7 +511,7 @@
 <rect width="12" height="12" x="615" y="120" class="named"><title>0x0002a27c LaraTestWaterClimbOut (453 bytes)</title></rect>
 <rect width="12" height="12" x="630" y="120" class="named"><title>0x0002a460 LaraGun (904 bytes)</title></rect>
 <rect width="12" height="12" x="645" y="120" class="named"><title>0x0002a7e8 InitialiseNewWeapon (216 bytes)</title></rect>
-<rect width="12" height="12" x="660" y="120" class="todo"><title>0x0002a8c0 LaraTargetInfo (405 bytes)</title></rect>
+<rect width="12" height="12" x="660" y="120" class="named"><title>0x0002a8c0 LaraTargetInfo (405 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="120" class="todo"><title>0x0002aa58 LaraGetNewTarget (449 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="120" class="todo"><title>0x0002ac1c find_target_point (203 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="120" class="todo"><title>0x0002ace8 AimWeapon (183 bytes)</title></rect>
@@ -861,10 +861,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">50.76%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">49.24%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">50.96%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">49.04%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="379.18" height="6" x="0" y="0" class="named"/>
-<rect width="367.82" height="6" x="379.18" y="0" class="todo"/>
+<rect width="380.67" height="6" x="0" y="0" class="named"/>
+<rect width="366.33" height="6" x="380.67" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1007,7 +1007,7 @@
 <rect width="16.83" height="15.43" x="452.65" y="133.44" class="named"><title>0x00014fe4 InGameCinematicCamera (409 bytes)</title></rect>
 <rect width="16.83" height="15.30" x="452.65" y="151.88" class="named"><title>0x00010310 S_PrintShadow (406 bytes)</title></rect>
 <rect width="16.83" height="15.25" x="452.65" y="170.17" class="named"><title>0x00027d4c LaraTestHangJump (405 bytes)</title></rect>
-<rect width="16.83" height="15.25" x="452.65" y="188.42" class="todo"><title>0x0002a8c0 LaraTargetInfo (405 bytes)</title></rect>
+<rect width="16.83" height="15.25" x="452.65" y="188.42" class="named"><title>0x0002a8c0 LaraTargetInfo (405 bytes)</title></rect>
 <rect width="16.83" height="15.21" x="452.65" y="206.68" class="todo"><title>0x000364a4 Func364a4 (404 bytes)</title></rect>
 <rect width="16.83" height="15.12" x="452.65" y="224.88" class="named"><title>0x00014060 ShiftClamp (402 bytes)</title></rect>
 <rect width="15.51" height="16.36" x="472.48" y="0" class="named"><title>0x000104a8 S_CalculateLight (401 bytes)</title></rect>
