@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">62.93% (499)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">37.07% (294)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">63.05% (500)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">36.95% (293)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="470.05" height="6" x="0" y="0" class="named"/>
-<rect width="276.95" height="6" x="470.05" y="0" class="todo"/>
+<rect width="471" height="6" x="0" y="0" class="named"/>
+<rect width="276" height="6" x="471" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -567,10 +567,10 @@
 <rect width="12" height="12" x="705" y="135" class="named"><title>0x0002ea84 NatlaGun (122 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="135" class="named"><title>0x0002eb00 InitialiseMovingBlock (49 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="135" class="named"><title>0x0002eb34 MovableBlock (296 bytes)</title></rect>
-<rect width="12" height="12" x="0" y="150" class="todo"><title>0x0002ec7c Func2ec7c (547 bytes)</title></rect>
+<rect width="12" height="12" x="0" y="150" class="named"><title>0x0002ec7c MovableBlockCollision (547 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="150" class="todo"><title>0x0002eea0 Func2eea0 (74 bytes)</title></rect>
-<rect width="12" height="12" x="30" y="150" class="todo"><title>0x0002eefc Func2eefc (254 bytes)</title></rect>
-<rect width="12" height="12" x="45" y="150" class="todo"><title>0x0002f00c Func2f00c (599 bytes)</title></rect>
+<rect width="12" height="12" x="30" y="150" class="todo"><title>0x0002eefc TestBlockPush (254 bytes)</title></rect>
+<rect width="12" height="12" x="45" y="150" class="todo"><title>0x0002f00c TestBlockPull (599 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="150" class="todo"><title>0x0002f264 Func2f264 (33 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="150" class="todo"><title>0x0002f288 Func2f288 (247 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="150" class="todo"><title>0x0002f380 AlterFloorHeight (186 bytes)</title></rect>
@@ -864,10 +864,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">58.15%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">41.85%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">58.41%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">41.59%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="434.36" height="6" x="0" y="0" class="named"/>
-<rect width="312.64" height="6" x="434.36" y="0" class="todo"/>
+<rect width="436.33" height="6" x="0" y="0" class="named"/>
+<rect width="310.67" height="6" x="436.33" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.01" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -957,14 +957,14 @@
 <rect width="20.09" height="20.98" x="368.63" y="0" class="todo"><title>0x000421d0 Func421d0 (630 bytes)</title></rect>
 <rect width="20.09" height="20.86" x="368.63" y="23.98" class="todo"><title>0x0003be70 Func3be70 (627 bytes)</title></rect>
 <rect width="20.09" height="20.44" x="368.63" y="47.84" class="todo"><title>0x00039da8 Func39da8 (616 bytes)</title></rect>
-<rect width="20.09" height="19.80" x="368.63" y="71.28" class="todo"><title>0x0002f00c Func2f00c (599 bytes)</title></rect>
+<rect width="20.09" height="19.80" x="368.63" y="71.28" class="todo"><title>0x0002f00c TestBlockPull (599 bytes)</title></rect>
 <rect width="20.09" height="19.30" x="368.63" y="94.08" class="todo"><title>0x0003f910 Func3f910 (586 bytes)</title></rect>
 <rect width="20.09" height="18.43" x="368.63" y="116.38" class="named"><title>0x0002769c LaraHangTest (563 bytes)</title></rect>
 <rect width="20.09" height="18.27" x="368.63" y="137.81" class="todo"><title>0x0003f090 S_DrawSpriteAbs (559 bytes)</title></rect>
 <rect width="20.09" height="18.24" x="368.63" y="159.08" class="named"><title>0x0001d02c InterpolateMatrix (558 bytes)</title></rect>
 <rect width="20.09" height="17.97" x="368.63" y="180.32" class="todo"><title>0x0003f6e4 Func3f6e4 (551 bytes)</title></rect>
 <rect width="20.09" height="17.89" x="368.63" y="201.29" class="named"><title>0x000118f0 SearchLOT (549 bytes)</title></rect>
-<rect width="20.09" height="17.82" x="368.63" y="222.18" class="todo"><title>0x0002ec7c Func2ec7c (547 bytes)</title></rect>
+<rect width="20.09" height="17.82" x="368.63" y="222.18" class="named"><title>0x0002ec7c MovableBlockCollision (547 bytes)</title></rect>
 <rect width="17.78" height="19.92" x="391.72" y="0" class="named"><title>0x000291b4 ControlEvilLara (542 bytes)</title></rect>
 <rect width="17.78" height="19.79" x="391.72" y="22.92" class="todo"><title>0x0003875c CheckCheatMode (539 bytes)</title></rect>
 <rect width="17.78" height="19.49" x="391.72" y="45.71" class="named"><title>0x0002b5c0 AnimateShotgun (532 bytes)</title></rect>
@@ -1094,7 +1094,7 @@
 <rect width="12.16" height="11.84" x="525.78" y="169.26" class="todo"><title>0x00030a7c Func30a7c (256 bytes)</title></rect>
 <rect width="12.16" height="11.78" x="525.78" y="184.10" class="named"><title>0x0001f7c4 S_DrawScreenSprite (255 bytes)</title></rect>
 <rect width="12.16" height="11.78" x="525.78" y="198.88" class="todo"><title>0x00035338 ModifyStartInfo (255 bytes)</title></rect>
-<rect width="12.16" height="11.73" x="525.78" y="213.66" class="todo"><title>0x0002eefc Func2eefc (254 bytes)</title></rect>
+<rect width="12.16" height="11.73" x="525.78" y="213.66" class="todo"><title>0x0002eefc TestBlockPush (254 bytes)</title></rect>
 <rect width="12.16" height="11.61" x="525.78" y="228.39" class="named"><title>0x00011c30 StalkBox (252 bytes)</title></rect>
 <rect width="12.52" height="11.04" x="540.94" y="31.80" class="named"><title>0x00017570 GetWaterHeight (248 bytes)</title></rect>
 <rect width="12.46" height="11.04" x="556.46" y="31.80" class="named"><title>0x0002cf08 InitialiseSlot (247 bytes)</title></rect>
