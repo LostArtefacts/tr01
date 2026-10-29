@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">53.11% (419)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">46.89% (370)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">53.23% (420)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">46.77% (369)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="396.70" height="6" x="0" y="0" class="named"/>
-<rect width="350.30" height="6" x="396.70" y="0" class="todo"/>
+<rect width="397.64" height="6" x="0" y="0" class="named"/>
+<rect width="349.36" height="6" x="397.64" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -487,7 +487,7 @@
 <rect width="12" height="12" x="255" y="120" class="named"><title>0x000295f8 lara_as_swim (170 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="120" class="named"><title>0x000296a4 lara_as_glide (182 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="120" class="named"><title>0x0002975c lara_as_tread (168 bytes)</title></rect>
-<rect width="12" height="12" x="300" y="120" class="todo"><title>0x00029804 lara_as_dive (16 bytes)</title></rect>
+<rect width="12" height="12" x="300" y="120" class="named"><title>0x00029804 lara_as_dive (16 bytes)</title></rect>
 <rect width="12" height="12" x="315" y="120" class="todo"><title>0x00029814 lara_as_uwdeath (94 bytes)</title></rect>
 <rect width="12" height="12" x="330" y="120" class="todo"><title>0x00029874 lara_col_uwdeath (94 bytes)</title></rect>
 <rect width="12" height="12" x="345" y="120" class="todo"><title>0x000298d4 lara_col_tread (0 bytes)</title></rect>
@@ -860,10 +860,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">48.69%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">51.31%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">48.70%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">51.30%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="363.72" height="6" x="0" y="0" class="named"/>
-<rect width="383.28" height="6" x="363.72" y="0" class="todo"/>
+<rect width="363.78" height="6" x="0" y="0" class="named"/>
+<rect width="383.22" height="6" x="363.78" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1592,7 +1592,7 @@
 <rect width="1.15" height="0.66" x="734.14" y="222.76" class="todo"><title>0x0004670a Func4670a (17 bytes)</title></rect>
 <rect width="0.90" height="0.66" x="738.29" y="222.76" class="named"><title>0x00010af0 S_SetupAboveWater (16 bytes)</title></rect>
 <rect width="0.90" height="0.66" x="742.19" y="222.76" class="named"><title>0x00025b70 lara_as_slideback (16 bytes)</title></rect>
-<rect width="0.90" height="0.66" x="746.10" y="222.76" class="todo"><title>0x00029804 lara_as_dive (16 bytes)</title></rect>
+<rect width="0.90" height="0.66" x="746.10" y="222.76" class="named"><title>0x00029804 lara_as_dive (16 bytes)</title></rect>
 <rect width="1.04" height="0.32" x="730" y="226.42" class="named"><title>0x00025aa8 lara_as_rightjump (15 bytes)</title></rect>
 <rect width="1.04" height="0.32" x="730" y="229.74" class="named"><title>0x00025ab8 lara_as_leftjump (15 bytes)</title></rect>
 <rect width="1.04" height="0.32" x="730" y="233.05" class="named"><title>0x00025ac8 lara_as_upjump (15 bytes)</title></rect>

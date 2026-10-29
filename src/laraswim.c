@@ -152,3 +152,9 @@ void lara_as_tread(ITEM_INFO *item, COLL_INFO *coll)
     if (item->fallspeed < 0)
         item->fallspeed = 0;
 }
+
+void lara_as_dive(ITEM_INFO *item, COLL_INFO *coll)
+{
+    if (input & IN_FORWARD)
+        item->pos.x_rot -= ONE_DEGREE;
+}
