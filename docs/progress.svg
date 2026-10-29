@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">57.85% (457)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">42.15% (333)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">57.97% (458)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">42.03% (332)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="432.13" height="6" x="0" y="0" class="named"/>
-<rect width="314.87" height="6" x="432.13" y="0" class="todo"/>
+<rect width="433.07" height="6" x="0" y="0" class="named"/>
+<rect width="313.93" height="6" x="433.07" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -525,7 +525,7 @@
 <rect width="12" height="12" x="75" y="135" class="named"><title>0x0002b52c RifleHandler (145 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="135" class="named"><title>0x0002b5c0 AnimateShotgun (532 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="135" class="named"><title>0x0002b7d4 FireShotgun (201 bytes)</title></rect>
-<rect width="12" height="12" x="120" y="135" class="todo"><title>0x0002b8a0 draw_pistols (111 bytes)</title></rect>
+<rect width="12" height="12" x="120" y="135" class="named"><title>0x0002b8a0 draw_pistols (111 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="135" class="todo"><title>0x0002b910 undraw_pistols (524 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="135" class="todo"><title>0x0002bb1c ready_pistols (140 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="135" class="todo"><title>0x0002bba8 draw_pistol_meshes (111 bytes)</title></rect>
@@ -861,10 +861,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">52.74%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">47.26%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">52.80%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">47.20%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="393.98" height="6" x="0" y="0" class="named"/>
-<rect width="353.02" height="6" x="393.98" y="0" class="todo"/>
+<rect width="394.39" height="6" x="0" y="0" class="named"/>
+<rect width="352.61" height="6" x="394.39" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1281,7 +1281,7 @@
 <rect width="6.72" height="7.29" x="672.91" y="106.96" class="named"><title>0x0001a0e0 TempVideoAdjust (112 bytes)</title></rect>
 <rect width="6.72" height="7.29" x="682.63" y="106.96" class="named"><title>0x00022e80 RingIsNotOpen (112 bytes)</title></rect>
 <rect width="6.64" height="7.29" x="692.35" y="106.96" class="named"><title>0x00024db8 CreateEffect (111 bytes)</title></rect>
-<rect width="6.64" height="7.29" x="701.99" y="106.96" class="todo"><title>0x0002b8a0 draw_pistols (111 bytes)</title></rect>
+<rect width="6.64" height="7.29" x="701.99" y="106.96" class="named"><title>0x0002b8a0 draw_pistols (111 bytes)</title></rect>
 <rect width="6.64" height="7.29" x="711.63" y="106.96" class="todo"><title>0x0002bba8 draw_pistol_meshes (111 bytes)</title></rect>
 <rect width="6.64" height="7.29" x="721.26" y="106.96" class="todo"><title>0x00030020 Func30020 (111 bytes)</title></rect>
 <rect width="6.55" height="7.29" x="730.90" y="106.96" class="named"><title>0x0001d574 SoundEffects (110 bytes)</title></rect>
