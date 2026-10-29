@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">0.78% (6)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">99.22% (764)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">0.91% (7)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">99.09% (763)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="5.82" height="6" x="0" y="0" class="named"/>
-<rect width="741.18" height="6" x="5.82" y="0" class="todo"/>
+<rect width="6.79" height="6" x="0" y="0" class="named"/>
+<rect width="740.21" height="6" x="6.79" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -73,7 +73,7 @@
 <rect width="12" height="12" x="45" y="0" class="named"><title>0x00010064 S_InitialiseScreen (32 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="0" class="named"><title>0x00010084 S_OutputPolyList (10 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="0" class="named"><title>0x00010090 S_GetObjectBounds (639 bytes)</title></rect>
-<rect width="12" height="12" x="90" y="0" class="todo"><title>0x00010310 Func10310 (406 bytes)</title></rect>
+<rect width="12" height="12" x="90" y="0" class="named"><title>0x00010310 S_PrintShadow (406 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="0" class="todo"><title>0x000104a8 Func104a8 (401 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="0" class="todo"><title>0x0001063c Func1063c (41 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="0" class="todo"><title>0x00010668 Func10668 (465 bytes)</title></rect>
@@ -731,16 +731,16 @@
 <rect width="12" height="12" x="165" y="195" class="todo"><title>0x0003dad4 Func3dad4 (48 bytes)</title></rect>
 <rect width="12" height="12" x="180" y="195" class="todo"><title>0x0003db04 Func3db04 (187 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="195" class="todo"><title>0x0003dbc0 Func3dbc0 (163 bytes)</title></rect>
-<rect width="12" height="12" x="210" y="195" class="todo"><title>0x0003dc64 Func3dc64 (163 bytes)</title></rect>
+<rect width="12" height="12" x="210" y="195" class="todo"><title>0x0003dc64 phd_RotY (163 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="195" class="todo"><title>0x0003dd08 Func3dd08 (160 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="195" class="todo"><title>0x0003dda8 Func3dda8 (486 bytes)</title></rect>
 <rect width="12" height="12" x="255" y="195" class="todo"><title>0x0003df90 Func3df90 (505 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="195" class="todo"><title>0x0003e18c Func3e18c (180 bytes)</title></rect>
-<rect width="12" height="12" x="285" y="195" class="todo"><title>0x0003e240 Func3e240 (102 bytes)</title></rect>
+<rect width="12" height="12" x="285" y="195" class="todo"><title>0x0003e240 phd_TranslateAbs (102 bytes)</title></rect>
 <rect width="12" height="12" x="300" y="195" class="todo"><title>0x0003e2a8 Func3e2a8 (119 bytes)</title></rect>
 <rect width="12" height="12" x="315" y="195" class="todo"><title>0x0003e320 Func3e320 (196 bytes)</title></rect>
 <rect width="12" height="12" x="330" y="195" class="todo"><title>0x0003e3e4 Func3e3e4 (92 bytes)</title></rect>
-<rect width="12" height="12" x="345" y="195" class="todo"><title>0x0003e440 Func3e440 (468 bytes)</title></rect>
+<rect width="12" height="12" x="345" y="195" class="todo"><title>0x0003e440 calc_object_vertices (468 bytes)</title></rect>
 <rect width="12" height="12" x="360" y="195" class="todo"><title>0x0003e614 Func3e614 (433 bytes)</title></rect>
 <rect width="12" height="12" x="375" y="195" class="todo"><title>0x0003e7c8 Func3e7c8 (1107 bytes)</title></rect>
 <rect width="12" height="12" x="390" y="195" class="todo"><title>0x0003ec1c Func3ec1c (227 bytes)</title></rect>
@@ -773,7 +773,7 @@
 <rect width="12" height="12" x="45" y="210" class="todo"><title>0x000421d0 Func421d0 (630 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="210" class="todo"><title>0x00042448 Func42448 (525 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="210" class="todo"><title>0x00042658 Func42658 (695 bytes)</title></rect>
-<rect width="12" height="12" x="90" y="210" class="todo"><title>0x00042910 Func42910 (1436 bytes)</title></rect>
+<rect width="12" height="12" x="90" y="210" class="todo"><title>0x00042910 ins_poly_trans8 (1436 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="210" class="todo"><title>0x00042eb0 Func42eb0 (39 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="210" class="todo"><title>0x00042ed8 Func42ed8 (38 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="210" class="todo"><title>0x00042f00 Func42f00 (38 bytes)</title></rect>
@@ -793,7 +793,7 @@
 <rect width="12" height="12" x="345" y="210" class="todo"><title>0x00044a15 Func44a15 (765 bytes)</title></rect>
 <rect width="12" height="12" x="360" y="210" class="todo"><title>0x00044d12 Func44d12 (833 bytes)</title></rect>
 <rect width="12" height="12" x="375" y="210" class="todo"><title>0x000452d0 Func452d0 (17 bytes)</title></rect>
-<rect width="12" height="12" x="390" y="210" class="todo"><title>0x0004564d Func4564d (30 bytes)</title></rect>
+<rect width="12" height="12" x="390" y="210" class="todo"><title>0x0004564d phd_PushMatrix (30 bytes)</title></rect>
 <rect width="12" height="12" x="405" y="210" class="todo"><title>0x0004566b Func4566b (7 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="210" class="todo"><title>0x00045672 Func45672 (44 bytes)</title></rect>
 <rect width="12" height="12" x="435" y="210" class="todo"><title>0x000456d0 Func456d0 (27 bytes)</title></rect>
@@ -841,10 +841,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">0.38%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">99.62%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">0.58%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">99.42%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="2.82" height="6" x="0" y="0" class="named"/>
-<rect width="744.18" height="6" x="2.82" y="0" class="todo"/>
+<rect width="4.33" height="6" x="0" y="0" class="named"/>
+<rect width="742.67" height="6" x="4.33" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="54.96" height="67.43" x="0" y="0" class="todo"><title>0x0001bc98 Func1bc98 (4489 bytes)</title></rect>
@@ -863,7 +863,7 @@
 <rect width="33.65" height="35.90" x="105.96" y="131.13" class="todo"><title>0x00017a40 Func17a40 (1568 bytes)</title></rect>
 <rect width="33.65" height="34.12" x="105.96" y="170.03" class="todo"><title>0x00031414 Func31414 (1496 bytes)</title></rect>
 <rect width="33.65" height="32.85" x="105.96" y="207.15" class="todo"><title>0x000158a8 Func158a8 (1445 bytes)</title></rect>
-<rect width="32.97" height="33.30" x="142.61" y="0" class="todo"><title>0x00042910 Func42910 (1436 bytes)</title></rect>
+<rect width="32.97" height="33.30" x="142.61" y="0" class="todo"><title>0x00042910 ins_poly_trans8 (1436 bytes)</title></rect>
 <rect width="32.97" height="32.82" x="142.61" y="36.30" class="todo"><title>0x0001ac74 Func1ac74 (1417 bytes)</title></rect>
 <rect width="32.97" height="32.69" x="142.61" y="72.12" class="todo"><title>0x000304f8 Func304f8 (1412 bytes)</title></rect>
 <rect width="32.97" height="32.24" x="142.61" y="107.81" class="todo"><title>0x0002f5bc Func2f5bc (1394 bytes)</title></rect>
@@ -956,7 +956,7 @@
 <rect width="17.71" height="17.68" x="413.38" y="0" class="todo"><title>0x000299e4 Func299e4 (471 bytes)</title></rect>
 <rect width="17.71" height="17.59" x="413.38" y="20.68" class="todo"><title>0x0001f188 Func1f188 (469 bytes)</title></rect>
 <rect width="17.71" height="17.55" x="413.38" y="41.28" class="todo"><title>0x00028e9c Func28e9c (468 bytes)</title></rect>
-<rect width="17.71" height="17.55" x="413.38" y="61.83" class="todo"><title>0x0003e440 Func3e440 (468 bytes)</title></rect>
+<rect width="17.71" height="17.55" x="413.38" y="61.83" class="todo"><title>0x0003e440 calc_object_vertices (468 bytes)</title></rect>
 <rect width="17.71" height="17.42" x="413.38" y="82.38" class="todo"><title>0x00010668 Func10668 (465 bytes)</title></rect>
 <rect width="17.71" height="17.20" x="413.38" y="102.79" class="todo"><title>0x0003f2c0 Func3f2c0 (460 bytes)</title></rect>
 <rect width="17.71" height="17.15" x="413.38" y="122.99" class="todo"><title>0x00045d34 Func45d34 (459 bytes)</title></rect>
@@ -981,7 +981,7 @@
 <rect width="16.66" height="16.15" x="453.87" y="19.15" class="todo"><title>0x0003abf0 Func3abf0 (414 bytes)</title></rect>
 <rect width="16.66" height="16.01" x="453.87" y="38.30" class="todo"><title>0x000252f8 Func252f8 (411 bytes)</title></rect>
 <rect width="16.66" height="15.92" x="453.87" y="57.30" class="todo"><title>0x00014fe4 Func14fe4 (409 bytes)</title></rect>
-<rect width="16.66" height="15.78" x="453.87" y="76.22" class="todo"><title>0x00010310 Func10310 (406 bytes)</title></rect>
+<rect width="16.66" height="15.78" x="453.87" y="76.22" class="named"><title>0x00010310 S_PrintShadow (406 bytes)</title></rect>
 <rect width="16.66" height="15.73" x="453.87" y="95" class="todo"><title>0x00027d4c Func27d4c (405 bytes)</title></rect>
 <rect width="16.66" height="15.73" x="453.87" y="113.73" class="todo"><title>0x0002a8c0 Func2a8c0 (405 bytes)</title></rect>
 <rect width="16.66" height="15.69" x="453.87" y="132.46" class="todo"><title>0x000364a4 Func364a4 (404 bytes)</title></rect>
@@ -1161,7 +1161,7 @@
 <rect width="9.40" height="9.03" x="580.84" y="72.74" class="todo"><title>0x0002b200 Func2b200 (164 bytes)</title></rect>
 <rect width="9.32" height="9.03" x="593.23" y="72.74" class="todo"><title>0x000183c0 Func183c0 (163 bytes)</title></rect>
 <rect width="9.32" height="9.03" x="605.56" y="72.74" class="todo"><title>0x0003dbc0 Func3dbc0 (163 bytes)</title></rect>
-<rect width="9.32" height="9.03" x="617.88" y="72.74" class="todo"><title>0x0003dc64 Func3dc64 (163 bytes)</title></rect>
+<rect width="9.32" height="9.03" x="617.88" y="72.74" class="todo"><title>0x0003dc64 phd_RotY (163 bytes)</title></rect>
 <rect width="9.17" height="9.03" x="630.20" y="72.74" class="todo"><title>0x00010a00 Func10a00 (161 bytes)</title></rect>
 <rect width="9.09" height="9.03" x="642.37" y="72.74" class="todo"><title>0x00016020 Func16020 (160 bytes)</title></rect>
 <rect width="9.09" height="9.03" x="654.46" y="72.74" class="todo"><title>0x00024c60 Func24c60 (160 bytes)</title></rect>
@@ -1274,7 +1274,7 @@
 <rect width="6.72" height="6.73" x="624.28" y="166.91" class="todo"><title>0x0001e450 Func1e450 (104 bytes)</title></rect>
 <rect width="6.72" height="6.64" x="624.28" y="176.65" class="todo"><title>0x00015fb8 Func15fb8 (103 bytes)</title></rect>
 <rect width="6.72" height="6.55" x="624.28" y="186.29" class="todo"><title>0x0002f4b8 Func2f4b8 (102 bytes)</title></rect>
-<rect width="6.72" height="6.55" x="624.28" y="195.83" class="todo"><title>0x0003e240 Func3e240 (102 bytes)</title></rect>
+<rect width="6.72" height="6.55" x="624.28" y="195.83" class="todo"><title>0x0003e240 phd_TranslateAbs (102 bytes)</title></rect>
 <rect width="6.72" height="6.45" x="624.28" y="205.38" class="todo"><title>0x00017354 Func17354 (101 bytes)</title></rect>
 <rect width="6.72" height="6.45" x="624.28" y="214.83" class="todo"><title>0x0003d9e8 Func3d9e8 (101 bytes)</title></rect>
 <rect width="6.72" height="6.36" x="624.28" y="224.28" class="todo"><title>0x0001d84c Func1d84c (100 bytes)</title></rect>
@@ -1518,7 +1518,7 @@
 <rect width="2.45" height="2.34" x="739.27" y="199.41" class="todo"><title>0x00038d34 Func38d34 (32 bytes)</title></rect>
 <rect width="2.28" height="2.34" x="744.72" y="199.41" class="todo"><title>0x00020e34 Func20e34 (31 bytes)</title></rect>
 <rect width="2.74" height="1.91" x="711.85" y="204.75" class="todo"><title>0x000245a8 Func245a8 (31 bytes)</title></rect>
-<rect width="2.56" height="1.91" x="717.59" y="204.75" class="todo"><title>0x0004564d Func4564d (30 bytes)</title></rect>
+<rect width="2.56" height="1.91" x="717.59" y="204.75" class="todo"><title>0x0004564d phd_PushMatrix (30 bytes)</title></rect>
 <rect width="2.37" height="1.91" x="723.14" y="204.75" class="todo"><title>0x0001d00c Func1d00c (29 bytes)</title></rect>
 <rect width="2.37" height="1.91" x="728.52" y="204.75" class="todo"><title>0x0001e044 Func1e044 (29 bytes)</title></rect>
 <rect width="2.37" height="1.91" x="733.89" y="204.75" class="todo"><title>0x00020414 Func20414 (29 bytes)</title></rect>

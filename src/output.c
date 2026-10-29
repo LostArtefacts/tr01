@@ -4,6 +4,21 @@
 
 extern uint8 game_palette[256 * 3];
 
+static sint16 shadowman[] = {
+    0, 0, 0,
+    32767,
+    1,
+    8,
+    0, 0, 0,
+    0, 0, 0,
+    0, 0, 0,
+    0, 0, 0,
+    0, 0, 0,
+    0, 0, 0,
+    0, 0, 0,
+    0, 0, 0
+};
+
 void S_InitialisePolyList(void)
 {
     phd_InitPolyList();
@@ -148,4 +163,48 @@ int S_GetObjectBounds(sint16 *bptr)
         return -1;
 
     return 1;
+}
+
+void S_PrintShadow(sint16 size, sint16 *bptr, ITEM_INFO *iptr)
+{
+    int midx, xadd, xadd2;
+    int midz, zadd, zadd2;
+
+    midx = (*(bptr + 0) + *(bptr + 1)) / 2;
+    midz = (*(bptr + 4) + *(bptr + 5)) / 2;
+    xadd = ((*(bptr + 1) - *(bptr + 0)) * size) / (UNIT_SHADOW * 4);
+    zadd = ((*(bptr + 5) - *(bptr + 4)) * size) / (UNIT_SHADOW * 4);
+    xadd2 = xadd * 2;
+    zadd2 = zadd * 2;
+
+    shadowman[2 + 4] = midx - xadd;
+    shadowman[4 + 4] = midz + zadd2;
+
+    shadowman[5 + 4] = midx + xadd;
+    shadowman[7 + 4] = midz + zadd2;
+
+    shadowman[8 + 4] = midx + xadd2;
+    shadowman[10 + 4] = midz + zadd;
+
+    shadowman[11 + 4] = midx + xadd2;
+    shadowman[13 + 4] = midz - zadd;
+
+    shadowman[14 + 4] = midx + xadd;
+    shadowman[16 + 4] = midz - zadd * 2;
+
+    shadowman[17 + 4] = midx - xadd;
+    shadowman[19 + 4] = midz - zadd * 2;
+
+    shadowman[20 + 4] = midx - xadd2;
+    shadowman[22 + 4] = midz - zadd;
+
+    shadowman[23 + 4] = midx - xadd2;
+    shadowman[25 + 4] = midz + zadd;
+
+    phd_PushMatrix();
+    phd_TranslateAbs(iptr->pos.x_pos, iptr->floor, iptr->pos.z_pos);
+    phd_RotY(iptr->pos.y_rot);
+    if (calc_object_vertices(&shadowman[4]))
+        ins_poly_trans8(vbuf, 24);
+    phd_PopMatrix();
 }
