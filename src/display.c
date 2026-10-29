@@ -170,3 +170,15 @@ void S_NoFade(void)
 {
     fade_limit = fade_value = 16 << 16;
 }
+
+void S_FadeInInventory(int fade)
+{
+    S_CopyScreenToBuffer();
+
+    if (fade)
+    {
+        fade_value = 16 << 16;
+        fade_limit = 24 << 16;
+        fade_adder = 32768;
+    }
+}

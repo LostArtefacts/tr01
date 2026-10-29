@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">14.86% (115)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">85.14% (659)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">14.99% (116)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">85.01% (658)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="110.99" height="6" x="0" y="0" class="named"/>
-<rect width="636.01" height="6" x="110.99" y="0" class="todo"/>
+<rect width="111.95" height="6" x="0" y="0" class="named"/>
+<rect width="635.05" height="6" x="111.95" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -183,7 +183,7 @@
 <rect width="12" height="12" x="195" y="30" class="named"><title>0x0001a1c4 S_CopyScreenToBuffer (72 bytes)</title></rect>
 <rect width="12" height="12" x="210" y="30" class="named"><title>0x0001a20c S_CopyBufferToScreen (145 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="30" class="named"><title>0x0001a2a0 S_NoFade (20 bytes)</title></rect>
-<rect width="12" height="12" x="240" y="30" class="todo"><title>0x0001a2b4 S_FadeInInventory (51 bytes)</title></rect>
+<rect width="12" height="12" x="240" y="30" class="named"><title>0x0001a2b4 S_FadeInInventory (51 bytes)</title></rect>
 <rect width="12" height="12" x="255" y="30" class="todo"><title>0x0001a2e8 S_FadeOutInventory (44 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="30" class="todo"><title>0x0001a320 DrawPhaseCinematic (148 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="30" class="todo"><title>0x0001a3b4 Func1a3b4 (49 bytes)</title></rect>
@@ -845,10 +845,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">18.73%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">81.27%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">18.75%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">81.25%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="139.89" height="6" x="0" y="0" class="named"/>
-<rect width="607.11" height="6" x="139.89" y="0" class="todo"/>
+<rect width="140.08" height="6" x="0" y="0" class="named"/>
+<rect width="606.92" height="6" x="140.08" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="todo"><title>0x0001bc98 Func1bc98 (4489 bytes)</title></rect>
@@ -1416,7 +1416,7 @@
 <rect width="3.62" height="4.02" x="674.24" y="174.87" class="todo"><title>0x0001fad8 S_FadeToBlack (52 bytes)</title></rect>
 <rect width="3.62" height="4.02" x="674.24" y="181.88" class="todo"><title>0x0003d5bc Func3d5bc (52 bytes)</title></rect>
 <rect width="3.62" height="3.88" x="674.24" y="188.90" class="named"><title>0x00015f84 ShiftItem (51 bytes)</title></rect>
-<rect width="3.62" height="3.88" x="674.24" y="195.78" class="todo"><title>0x0001a2b4 S_FadeInInventory (51 bytes)</title></rect>
+<rect width="3.62" height="3.88" x="674.24" y="195.78" class="named"><title>0x0001a2b4 S_FadeInInventory (51 bytes)</title></rect>
 <rect width="3.62" height="3.88" x="674.24" y="202.66" class="todo"><title>0x0002fe88 Func2fe88 (51 bytes)</title></rect>
 <rect width="3.62" height="3.88" x="674.24" y="209.54" class="todo"><title>0x00031f08 Func31f08 (51 bytes)</title></rect>
 <rect width="3.62" height="3.75" x="674.24" y="216.42" class="todo"><title>0x0001d4a8 GetBestFrame (50 bytes)</title></rect>
