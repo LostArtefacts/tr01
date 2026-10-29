@@ -343,6 +343,17 @@ MN_SFX_PLAY_INFO *mn_get_fx_slot(sint32 sfx_num, uint32 loudness, PHD_3DPOS *pos
     return lastfreeSlot;
 }
 
+extern void mn_reset_ambient_loudness(void)
+{
+    MN_SFX_PLAY_INFO *resetslot;
+
+    if (!sound_active)
+        return;
+
+    for (resetslot = sfx_playing; resetslot < (sfx_playing + mn_ambient_lookup_indx); resetslot++)
+        resetslot->loudness = MN_NOT_AUDIBLE;
+}
+
 void mn_clear_fx_slot(MN_SFX_PLAY_INFO *slot)
 {
     slot->handle = -1;
