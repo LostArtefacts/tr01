@@ -248,3 +248,25 @@ sint16 SpawnItem(ITEM_INFO *item, int object_number)
 
     return spawn_num;
 }
+
+int GlobalItemReplace(int in_objnum, int out_objnum)
+{
+    ROOM_INFO *r;
+    int i, changed;
+    sint16 item_num;
+
+    changed = 0;
+    r = room;
+    for (i = 0; i < number_rooms; i++, r++)
+    {
+        for (item_num = r->item_number; item_num != NO_ITEM; item_num = items[item_num].next_item)
+        {
+            if (items[item_num].object_number == in_objnum)
+            {
+                items[item_num].object_number = out_objnum;
+                changed++;
+            }
+        }
+    }
+    return changed;
+}
