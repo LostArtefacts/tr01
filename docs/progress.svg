@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">76.33% (619)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">23.67% (192)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">76.45% (620)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">23.55% (191)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="570.15" height="6" x="0" y="0" class="named"/>
-<rect width="176.85" height="6" x="570.15" y="0" class="todo"/>
+<rect width="571.07" height="6" x="0" y="0" class="named"/>
+<rect width="175.93" height="6" x="571.07" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -687,7 +687,7 @@
 <rect width="12" height="12" x="255" y="180" class="named"><title>0x00038d58 LoadSamples (387 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="180" class="named"><title>0x00038edc S_StartSyncedAudio (1 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="180" class="named"><title>0x00038ee0 S_CDPlay (50 bytes)</title></rect>
-<rect width="12" height="12" x="300" y="180" class="todo"><title>0x00038f14 S_CDVolume (6 bytes)</title></rect>
+<rect width="12" height="12" x="300" y="180" class="named"><title>0x00038f14 S_CDVolume (6 bytes)</title></rect>
 <rect width="12" height="12" x="315" y="180" class="todo"><title>0x00038f20 TestCollision (383 bytes)</title></rect>
 <rect width="12" height="12" x="330" y="180" class="todo"><title>0x000390a0 GetSpheres (681 bytes)</title></rect>
 <rect width="12" height="12" x="345" y="180" class="todo"><title>0x0003934c GetJointAbsPosition (445 bytes)</title></rect>
@@ -884,8 +884,8 @@
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
 <text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">73.76%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">26.24%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="550.96" height="6" x="0" y="0" class="named"/>
-<rect width="196.04" height="6" x="550.96" y="0" class="todo"/>
+<rect width="550.98" height="6" x="0" y="0" class="named"/>
+<rect width="196.02" height="6" x="550.98" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.96" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1660,7 +1660,7 @@
 <rect width="0.10" height="0.10" x="745.24" y="247.87" class="named"><title>0x0002045c SeedRandomDraw (6 bytes)</title></rect>
 <rect width="0.10" height="0.10" x="747.62" y="247.87" class="named"><title>0x0002dd60 mn_set_sound_fade_rate (6 bytes)</title></rect>
 <rect width="0.10" height="0.10" x="740.07" y="250.09" class="named"><title>0x000352e0 LoadSaveGameInfo (6 bytes)</title></rect>
-<rect width="0.10" height="0.10" x="740.07" y="252.25" class="todo"><title>0x00038f14 S_CDVolume (6 bytes)</title></rect>
+<rect width="0.10" height="0.10" x="740.07" y="252.25" class="named"><title>0x00038f14 S_CDVolume (6 bytes)</title></rect>
 <rect width="0.10" height="0.10" x="740.07" y="254.40" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
 <rect width="0.10" height="0.10" x="740.07" y="256.20" class="named"><title>0x0001005c S_ClearScreen (5 bytes)</title></rect>
 <rect width="0.10" height="0.10" x="742.53" y="250.09" class="named"><title>0x0001de64 turn180_effect (5 bytes)</title></rect>

@@ -818,7 +818,7 @@ address,size,name,symbol
 0x000472a0,67,Func472a0,
 0x000472e4,256,Func472e4,
 0x000473e4,102,Func473e4,
-0x0004744c,82,Func4744c,
+0x0004744c,82,CDVolume,CDVolume_
 0x000474a0,271,CDPlay,CDPlay_
 0x000475b0,336,Func475b0,
 0x00047700,41,CDStop,CDStop_

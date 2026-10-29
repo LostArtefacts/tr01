@@ -13,6 +13,7 @@ void SoundSetPan(int handle, uint16 pan);
 void CDPlay(int track);
 void CDStop(void);
 void CDResume(void);
+void CDVolume(int volume);
 void SoundLoadSamples(char **sample_offsets, int num_samples);
 
 uint16 S_get_pan(sint16 angle)
@@ -195,4 +196,9 @@ int LoadSamples(FILE *file)
 void S_StartSyncedAudio(int num)
 {
     S_CDPlay(num);
+}
+
+void S_CDVolume(sint16 volume)
+{
+    CDVolume(volume);
 }
