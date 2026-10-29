@@ -63,6 +63,8 @@ void TempVideoRemove(void);
 void FadeToPal(int count, uint8 *pal);
 void FadeWait(void);
 void ShellInit(SETUP *pSetup, uint32 dwFlags);
+void ShellExit(char *szFormat, ...);
+#pragma aux ShellExit aborts;
 uint32 SoundGetSOSHandle(void);
 uint32 SoundGetSOSDriver(void);
 

@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #include "game.h"
 
 SETUP game_setup = {320, 200, 25, 25, 50, 0, 0};
@@ -36,4 +37,15 @@ void S_InitialiseSystem(void)
     CalculateWibbleTable();
 
     malloc_size = MALLOC_SIZE;
+}
+
+void S_ExitSystem(char *exit_message)
+{
+    while (input & IN_SELECT)
+        S_UpdateInput();
+
+    if (malloc_buffer)
+        free(malloc_buffer);
+
+    ShellExit("\n\nTomb Raider (c) Core Design. %s %s \n%s\n%s\n", "Oct 30 1996", "16:24:55", " ", exit_message);
 }

@@ -736,7 +736,8 @@ address,size,name,symbol
 0x000456d0,27,Func456d0,
 0x000456ec,378,ShellInit,ShellInit_
 0x00045868,307,Func45868,
-0x0004599c,174,Func4599c,
+0x0004599c,5,Func4599c,
+0x000459a4,166,ShellExit,ShellExit_
 0x00045a4c,190,FileLoad,FileLoad_
 0x00045b0c,85,Func45b0c,
 0x00045b64,66,Func45b64,
