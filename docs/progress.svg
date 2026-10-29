@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">73.45% (592)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">26.55% (214)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">73.57% (593)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">26.43% (213)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="548.67" height="6" x="0" y="0" class="named"/>
-<rect width="198.33" height="6" x="548.67" y="0" class="todo"/>
+<rect width="549.59" height="6" x="0" y="0" class="named"/>
+<rect width="197.41" height="6" x="549.59" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -660,8 +660,8 @@
 <rect width="12" height="12" x="600" y="165" class="named"><title>0x00036638 CompleteSave (14 bytes)</title></rect>
 <rect width="12" height="12" x="615" y="165" class="named"><title>0x00036648 CreateCheckSum (51 bytes)</title></rect>
 <rect width="12" height="12" x="630" y="165" class="named"><title>0x0003667c CheckSumValid (34 bytes)</title></rect>
-<rect width="12" height="12" x="645" y="165" class="todo"><title>0x000366a0 InitialiseLevel (208 bytes)</title></rect>
-<rect width="12" height="12" x="660" y="165" class="todo"><title>0x00036770 Func36770 (113 bytes)</title></rect>
+<rect width="12" height="12" x="645" y="165" class="named"><title>0x000366a0 InitialiseLevel (208 bytes)</title></rect>
+<rect width="12" height="12" x="660" y="165" class="todo"><title>0x00036770 InitialiseGameFlags (113 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="165" class="todo"><title>0x000367e4 InitialiseLevelFlags (34 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="165" class="todo"><title>0x00036808 Func36808 (3805 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="165" class="todo"><title>0x000376e8 Func376e8 (1012 bytes)</title></rect>
@@ -877,10 +877,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">70.45%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">29.55%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">70.55%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">29.45%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="526.27" height="6" x="0" y="0" class="named"/>
-<rect width="220.73" height="6" x="526.27" y="0" class="todo"/>
+<rect width="527" height="6" x="0" y="0" class="named"/>
+<rect width="220" height="6" x="527" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="51.02" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1156,7 +1156,7 @@
 <rect width="10.91" height="10.65" x="544.20" y="190.51" class="named"><title>0x0001283c BadFloor (211 bytes)</title></rect>
 <rect width="10.91" height="10.52" x="544.20" y="204.17" class="named"><title>0x00027140 lara_col_roll2 (209 bytes)</title></rect>
 <rect width="10.91" height="10.46" x="544.20" y="217.69" class="named"><title>0x00027a74 LaraSlideEdgeJump (208 bytes)</title></rect>
-<rect width="10.91" height="10.46" x="544.20" y="231.15" class="todo"><title>0x000366a0 InitialiseLevel (208 bytes)</title></rect>
+<rect width="10.91" height="10.46" x="544.20" y="231.15" class="named"><title>0x000366a0 InitialiseLevel (208 bytes)</title></rect>
 <rect width="10.91" height="10.39" x="544.20" y="244.61" class="named"><title>0x00027070 lara_col_roll (207 bytes)</title></rect>
 <rect width="11.26" height="10.06" x="558.11" y="63.56" class="todo"><title>0x00038a28 Func38a28 (207 bytes)</title></rect>
 <rect width="11.19" height="10.06" x="572.37" y="63.56" class="named"><title>0x0002b130 HitTarget (206 bytes)</title></rect>
@@ -1306,7 +1306,7 @@
 <rect width="7.25" height="7.01" x="689.13" y="123.46" class="named"><title>0x000336dc DrawSkateKid (114 bytes)</title></rect>
 <rect width="7.16" height="7.01" x="699.38" y="123.46" class="named"><title>0x00016314 CreatureCollision (113 bytes)</title></rect>
 <rect width="7.16" height="7.01" x="709.54" y="123.46" class="named"><title>0x00029dc4 lara_as_surfswim (113 bytes)</title></rect>
-<rect width="7.16" height="7.01" x="719.70" y="123.46" class="todo"><title>0x00036770 Func36770 (113 bytes)</title></rect>
+<rect width="7.16" height="7.01" x="719.70" y="123.46" class="todo"><title>0x00036770 InitialiseGameFlags (113 bytes)</title></rect>
 <rect width="7.07" height="7.01" x="729.86" y="123.46" class="named"><title>0x0001a0e0 TempVideoAdjust (112 bytes)</title></rect>
 <rect width="7.07" height="7.01" x="739.93" y="123.46" class="named"><title>0x00022e80 RingIsNotOpen (112 bytes)</title></rect>
 <rect width="7.19" height="6.80" x="616.40" y="133.46" class="named"><title>0x00024db8 CreateEffect (111 bytes)</title></rect>

@@ -593,7 +593,7 @@ address,size,name,symbol
 0x00036648,51,CreateCheckSum,CreateCheckSum_
 0x0003667c,34,CheckSumValid,CheckSumValid_
 0x000366a0,208,InitialiseLevel,InitialiseLevel_
-0x00036770,113,Func36770,
+0x00036770,113,InitialiseGameFlags,InitialiseGameFlags_
 0x000367e4,34,InitialiseLevelFlags,InitialiseLevelFlags_
 0x00036808,3805,Func36808,
 0x000376e8,1012,Func376e8,
@@ -2014,6 +2014,7 @@ address,size,name,symbol
 0x000c3e1c,12,PuzzleHolePosition,_PuzzleHolePosition
 0x000c3e28,16,rat_bite,_rat_bite
 0x000c3e38,4,number_cameras,_number_cameras
+0x000c3e3c,44,level_music,_level_music
 0x000c3e68,128,exit_message,_exit_message
 0x000c3ee8,4,title_loaded,_title_loaded
 0x000c409c,4,wibble_offset,_wibble_offset
