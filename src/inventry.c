@@ -674,6 +674,50 @@ void Construct_Inventory(void)
     item_data = 0;
 }
 
+void SelectMeshes(INVENTORY_ITEM *inv_item)
+{
+    int frame;
+
+    if (inv_item->object_number == PASSPORT_OPTION)
+    {
+        frame = inv_item->current_frame;
+        if (frame <= 14)
+        {
+            inv_item->drawn_meshes = PASS_MESH | PINFRONT | PPAGE1;
+        }
+        else if (frame > 14 && frame < 19)
+        {
+            inv_item->drawn_meshes = PASS_MESH | PINFRONT | PPAGE1 | PPAGE2;
+        }
+        else if (frame == 19)
+        {
+            inv_item->drawn_meshes = PASS_MESH | PPAGE1 | PPAGE2;
+        }
+        else if (frame > 19 && frame < 24)
+        {
+            inv_item->drawn_meshes = PASS_MESH | PPAGE1 | PPAGE2 | PINBACK;
+        }
+        else if (frame >= 24 && frame < 29)
+        {
+            inv_item->drawn_meshes = PASS_MESH | PPAGE2 | PINBACK;
+        }
+        else if (frame == 29)
+        {
+            inv_item->drawn_meshes = PASS_MESH;
+        }
+    }
+    else if (inv_item->object_number == MAP_OPTION)
+    {
+        frame = inv_item->current_frame;
+        if (frame && frame < 18)
+            inv_item->drawn_meshes = 0xffffffff;
+        else
+            inv_item->drawn_meshes = inv_item->which_meshes;
+    }
+    else
+        inv_item->drawn_meshes = 0xffffffff;
+}
+
 sint32 GetDebouncedInput(sint32 input)
 {
     if (input && !oldInputDB)
