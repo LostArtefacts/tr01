@@ -24,7 +24,7 @@ address,size,name,symbol
 0x000118f0,549,SearchLOT,SearchLOT_
 0x00011b18,132,UpdateLOT,UpdateLOT_
 0x00011b9c,148,TargetBox,TargetBox_
-0x00011c30,252,Func11c30,
+0x00011c30,252,StalkBox,StalkBox_
 0x00011d2c,184,Func11d2c,
 0x00011de4,157,Func11de4,
 0x00011eb4,1096,CreatureMood,CreatureMood_

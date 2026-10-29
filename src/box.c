@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #include "game.h"
 
 int number_boxes;
@@ -5,6 +6,9 @@ int number_overlaps;
 BOX_INFO *boxes;
 uint16 *overlap;
 sint16 *ground_zone[2], *ground_zone2[2], *fly_zone[2];
+
+#define STALK_DIST (WALL_L * 3)
+#define ESCAPE_DIST (WALL_L * 5)
 
 void InitialiseCreature(sint16 item_number)
 {
@@ -190,4 +194,38 @@ void TargetBox(LOT_INFO *LOT, sint16 box_number)
         LOT->target.y = box->height;
     else
         LOT->target.y = box->height - STEP_L * 3 / 2;
+}
+
+int StalkBox(ITEM_INFO *item, sint16 box_number)
+{
+    BOX_INFO *box;
+    int baddie_quad, box_quad, enemy_quad;
+    sint32 x, z;
+
+    box = &boxes[box_number];
+    z = ((box->left + box->right) >> 1) - lara_item->pos.z_pos;
+    x = ((box->top + box->bottom) >> 1) - lara_item->pos.x_pos;
+
+    if (x > STALK_DIST || x < -STALK_DIST || z > STALK_DIST || z < -STALK_DIST)
+        return 0;
+
+    enemy_quad = (lara_item->pos.y_rot >> 14) + 2;
+
+    if (z > 0)
+        box_quad = (x > 0) ? 2 : 1;
+    else
+        box_quad = (x > 0) ? 3 : 0;
+
+    if (enemy_quad == box_quad)
+        return 0;
+
+    if (item->pos.z_pos > lara_item->pos.z_pos)
+        baddie_quad = (item->pos.x_pos > lara_item->pos.x_pos) ? 2 : 1;
+    else
+        baddie_quad = (item->pos.x_pos > lara_item->pos.x_pos) ? 3 : 0;
+
+    if (enemy_quad == baddie_quad && abs(enemy_quad - box_quad) == 2)
+        return 0;
+
+    return 1;
 }
