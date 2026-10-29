@@ -928,6 +928,16 @@ void Inv_RingDoMotions(RING_INFO *ring)
     }
 }
 
+void Inv_RingRotateLeft(RING_INFO *ring)
+{
+    ring->rotating = 1;
+    ring->target_object = ring->current_object - 1;
+    if (ring->target_object < 0)
+        ring->target_object = ring->number_of_objects - 1;
+    ring->rot_count = ROTATE_DURATION;
+    ring->rot_adder = ring->rot_adderL;
+}
+
 void Inv_RingMotionRadius(RING_INFO *ring, sint16 target)
 {
     IMOTION_INFO *imo;

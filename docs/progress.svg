@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">35.09% (273)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">64.91% (505)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">35.22% (274)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">64.78% (504)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="262.12" height="6" x="0" y="0" class="named"/>
-<rect width="484.88" height="6" x="262.12" y="0" class="todo"/>
+<rect width="263.08" height="6" x="0" y="0" class="named"/>
+<rect width="483.92" height="6" x="263.08" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -338,7 +338,7 @@
 <rect width="12" height="12" x="270" y="75" class="named"><title>0x00024284 Inv_RingLight (58 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="75" class="named"><title>0x000242c0 Inv_RingCalcAdders (65 bytes)</title></rect>
 <rect width="12" height="12" x="300" y="75" class="named"><title>0x00024304 Inv_RingDoMotions (381 bytes)</title></rect>
-<rect width="12" height="12" x="315" y="75" class="todo"><title>0x00024484 Inv_RingRotateLeft (46 bytes)</title></rect>
+<rect width="12" height="12" x="315" y="75" class="named"><title>0x00024484 Inv_RingRotateLeft (46 bytes)</title></rect>
 <rect width="12" height="12" x="330" y="75" class="todo"><title>0x000244b4 Inv_RingRotateRight (49 bytes)</title></rect>
 <rect width="12" height="12" x="345" y="75" class="todo"><title>0x000244e8 Inv_RingMotionInit (122 bytes)</title></rect>
 <rect width="12" height="12" x="360" y="75" class="todo"><title>0x00024564 Inv_RingMotionSetup (27 bytes)</title></rect>
@@ -849,10 +849,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">38.43%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">61.57%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">38.45%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">61.55%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="287.05" height="6" x="0" y="0" class="named"/>
-<rect width="459.95" height="6" x="287.05" y="0" class="todo"/>
+<rect width="287.22" height="6" x="0" y="0" class="named"/>
+<rect width="459.78" height="6" x="287.22" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1454,7 +1454,7 @@
 <rect width="3.30" height="3.67" x="712.86" y="173.97" class="named"><title>0x0001cf74 phd_TranslateRel_ID (47 bytes)</title></rect>
 <rect width="3.30" height="3.67" x="719.16" y="173.97" class="named"><title>0x00020ec4 game_free (47 bytes)</title></rect>
 <rect width="3.17" height="3.67" x="725.46" y="173.97" class="named"><title>0x0001d7cc ControlRichochet1 (46 bytes)</title></rect>
-<rect width="3.17" height="3.67" x="731.63" y="173.97" class="todo"><title>0x00024484 Inv_RingRotateLeft (46 bytes)</title></rect>
+<rect width="3.17" height="3.67" x="731.63" y="173.97" class="named"><title>0x00024484 Inv_RingRotateLeft (46 bytes)</title></rect>
 <rect width="3.17" height="3.67" x="737.80" y="173.97" class="todo"><title>0x0003f05e phd_sqrt (46 bytes)</title></rect>
 <rect width="3.03" height="3.67" x="743.97" y="173.97" class="named"><title>0x00015868 FindGridShift (45 bytes)</title></rect>
 <rect width="3.41" height="3.28" x="687.11" y="180.64" class="todo"><title>0x00026e60 lara_col_hangleft (45 bytes)</title></rect>
