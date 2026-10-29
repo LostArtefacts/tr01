@@ -260,3 +260,25 @@ void CabinControl(sint16 item_number)
 
     AnimateItem(item);
 }
+
+void BoatControl(sint16 item_number)
+{
+    ITEM_INFO *item;
+
+    item = &items[item_number];
+
+    switch (item->current_anim_state)
+    {
+    case BOAT_SET:
+        item->goal_anim_state = BOAT_MOVE;
+        break;
+    case BOAT_MOVE:
+        item->goal_anim_state = BOAT_STOP;
+        break;
+    case BOAT_STOP:
+        KillItem(item_number);
+        break;
+    }
+
+    AnimateItem(item);
+}

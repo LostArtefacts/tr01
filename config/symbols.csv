@@ -525,7 +525,7 @@ address,size,name,symbol
 0x0002fffc,36,BridgeTilt2Ceiling,BridgeTilt2Ceiling_
 0x00030020,111,CogControl,CogControl_
 0x00030090,131,CabinControl,CabinControl_
-0x00030114,82,Func30114,
+0x00030114,82,BoatControl,BoatControl_
 0x00030168,28,Func30168,
 0x00030184,395,Func30184,
 0x00030310,105,Func30310,

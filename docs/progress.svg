@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">66.08% (524)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">33.92% (269)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">66.20% (525)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">33.80% (268)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="493.60" height="6" x="0" y="0" class="named"/>
-<rect width="253.40" height="6" x="493.60" y="0" class="todo"/>
+<rect width="494.55" height="6" x="0" y="0" class="named"/>
+<rect width="252.45" height="6" x="494.55" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -593,7 +593,7 @@
 <rect width="12" height="12" x="345" y="150" class="named"><title>0x0002fffc BridgeTilt2Ceiling (36 bytes)</title></rect>
 <rect width="12" height="12" x="360" y="150" class="named"><title>0x00030020 CogControl (111 bytes)</title></rect>
 <rect width="12" height="12" x="375" y="150" class="named"><title>0x00030090 CabinControl (131 bytes)</title></rect>
-<rect width="12" height="12" x="390" y="150" class="todo"><title>0x00030114 Func30114 (82 bytes)</title></rect>
+<rect width="12" height="12" x="390" y="150" class="named"><title>0x00030114 BoatControl (82 bytes)</title></rect>
 <rect width="12" height="12" x="405" y="150" class="todo"><title>0x00030168 Func30168 (28 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="150" class="todo"><title>0x00030184 Func30184 (395 bytes)</title></rect>
 <rect width="12" height="12" x="435" y="150" class="todo"><title>0x00030310 Func30310 (105 bytes)</title></rect>
@@ -864,10 +864,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">59.98%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">40.02%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">60.02%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">39.98%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="448.07" height="6" x="0" y="0" class="named"/>
-<rect width="298.93" height="6" x="448.07" y="0" class="todo"/>
+<rect width="448.36" height="6" x="0" y="0" class="named"/>
+<rect width="298.64" height="6" x="448.36" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.01" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1360,7 +1360,7 @@
 <rect width="5.17" height="5.82" x="709.26" y="135.25" class="named"><title>0x0001836c GetDoor (82 bytes)</title></rect>
 <rect width="5.17" height="5.82" x="717.43" y="135.25" class="named"><title>0x0001fb10 S_Wait (82 bytes)</title></rect>
 <rect width="5.17" height="5.82" x="725.59" y="135.25" class="named"><title>0x0001fd50 S_PlayFMV (82 bytes)</title></rect>
-<rect width="5.17" height="5.82" x="733.76" y="135.25" class="todo"><title>0x00030114 Func30114 (82 bytes)</title></rect>
+<rect width="5.17" height="5.82" x="733.76" y="135.25" class="named"><title>0x00030114 BoatControl (82 bytes)</title></rect>
 <rect width="5.07" height="5.82" x="741.93" y="135.25" class="todo"><title>0x000313b0 Func313b0 (81 bytes)</title></rect>
 <rect width="5.27" height="5.61" x="650.88" y="144.07" class="todo"><title>0x0003950c Func3950c (81 bytes)</title></rect>
 <rect width="5.27" height="5.50" x="650.88" y="152.68" class="named"><title>0x0001d7fc Twinkle (80 bytes)</title></rect>
