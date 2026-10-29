@@ -826,3 +826,19 @@ int TestLaraPosition(sint16 *bounds, ITEM_INFO *item, ITEM_INFO *laraitem)
 
     return 1;
 }
+
+void AlignLaraPosition(PHD_VECTOR *vec, ITEM_INFO *item, ITEM_INFO *laraitem)
+{
+    sint32 *mptr;
+
+    laraitem->pos.x_rot = item->pos.x_rot;
+    laraitem->pos.y_rot = item->pos.y_rot;
+    laraitem->pos.z_rot = item->pos.z_rot;
+    phd_PushUnitMatrix();
+    phd_RotYXZ(item->pos.y_rot, item->pos.x_rot, item->pos.z_rot);
+    mptr = phd_mxptr;
+    laraitem->pos.x_pos = item->pos.x_pos + ((*(mptr + M00) * vec->x + *(mptr + M01) * vec->y + *(mptr + M02) * vec->z) >> W2V_SHIFT);
+    laraitem->pos.y_pos = item->pos.y_pos + ((*(mptr + M10) * vec->x + *(mptr + M11) * vec->y + *(mptr + M12) * vec->z) >> W2V_SHIFT);
+    laraitem->pos.z_pos = item->pos.z_pos + ((*(mptr + M20) * vec->x + *(mptr + M21) * vec->y + *(mptr + M22) * vec->z) >> W2V_SHIFT);
+    phd_PopMatrix();
+}

@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">9.08% (70)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">90.92% (701)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">9.21% (71)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">90.79% (700)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="67.82" height="6" x="0" y="0" class="named"/>
-<rect width="679.18" height="6" x="67.82" y="0" class="todo"/>
+<rect width="68.79" height="6" x="0" y="0" class="named"/>
+<rect width="678.21" height="6" x="68.79" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -142,9 +142,9 @@
 <rect width="12" height="12" x="330" y="15" class="named"><title>0x000164a4 ItemPushLara (798 bytes)</title></rect>
 <rect width="12" height="12" x="345" y="15" class="named"><title>0x000167c4 TestBoundsCollide (236 bytes)</title></rect>
 <rect width="12" height="12" x="360" y="15" class="named"><title>0x000168b0 TestLaraPosition (339 bytes)</title></rect>
-<rect width="12" height="12" x="375" y="15" class="todo"><title>0x00016a04 Func16a04 (198 bytes)</title></rect>
-<rect width="12" height="12" x="390" y="15" class="todo"><title>0x00016acc Func16acc (229 bytes)</title></rect>
-<rect width="12" height="12" x="405" y="15" class="todo"><title>0x00016bb4 Func16bb4 (349 bytes)</title></rect>
+<rect width="12" height="12" x="375" y="15" class="named"><title>0x00016a04 AlignLaraPosition (198 bytes)</title></rect>
+<rect width="12" height="12" x="390" y="15" class="todo"><title>0x00016acc MoveLaraPosition (229 bytes)</title></rect>
+<rect width="12" height="12" x="405" y="15" class="todo"><title>0x00016bb4 Move3DPosTo3DPos (349 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="15" class="todo"><title>0x00016d20 Func16d20 (673 bytes)</title></rect>
 <rect width="12" height="12" x="435" y="15" class="todo"><title>0x00016ff4 AnimateItem (707 bytes)</title></rect>
 <rect width="12" height="12" x="450" y="15" class="todo"><title>0x000172b8 Func172b8 (154 bytes)</title></rect>
@@ -842,10 +842,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">11.72%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">88.28%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">11.82%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">88.18%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="87.57" height="6" x="0" y="0" class="named"/>
-<rect width="659.43" height="6" x="87.57" y="0" class="todo"/>
+<rect width="88.30" height="6" x="0" y="0" class="named"/>
+<rect width="658.70" height="6" x="88.30" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="54.65" height="67.43" x="0" y="0" class="todo"><title>0x0001bc98 Func1bc98 (4489 bytes)</title></rect>
@@ -1008,7 +1008,7 @@
 <rect width="14.74" height="15.10" x="491.93" y="18.15" class="todo"><title>0x00028d38 Func28d38 (355 bytes)</title></rect>
 <rect width="14.74" height="15.05" x="491.93" y="36.26" class="todo"><title>0x0001e2ec Func1e2ec (354 bytes)</title></rect>
 <rect width="14.74" height="14.95" x="491.93" y="54.31" class="todo"><title>0x0002bcd8 Func2bcd8 (352 bytes)</title></rect>
-<rect width="14.74" height="14.80" x="491.93" y="72.26" class="todo"><title>0x00016bb4 Func16bb4 (349 bytes)</title></rect>
+<rect width="14.74" height="14.80" x="491.93" y="72.26" class="todo"><title>0x00016bb4 Move3DPosTo3DPos (349 bytes)</title></rect>
 <rect width="14.74" height="14.29" x="491.93" y="90.06" class="named"><title>0x000168b0 TestLaraPosition (339 bytes)</title></rect>
 <rect width="14.74" height="14.24" x="491.93" y="107.35" class="todo"><title>0x0003a9b8 Func3a9b8 (338 bytes)</title></rect>
 <rect width="14.74" height="14.13" x="491.93" y="124.59" class="todo"><title>0x0003a548 Func3a548 (336 bytes)</title></rect>
@@ -1080,7 +1080,7 @@
 <rect width="11.07" height="11.98" x="584.16" y="31.85" class="todo"><title>0x0001bb98 Func1bb98 (233 bytes)</title></rect>
 <rect width="11.01" height="11.98" x="598.23" y="31.85" class="todo"><title>0x0003cb14 Func3cb14 (232 bytes)</title></rect>
 <rect width="10.89" height="11.98" x="612.25" y="31.85" class="todo"><title>0x0001790c Func1790c (230 bytes)</title></rect>
-<rect width="10.83" height="11.98" x="626.14" y="31.85" class="todo"><title>0x00016acc Func16acc (229 bytes)</title></rect>
+<rect width="10.83" height="11.98" x="626.14" y="31.85" class="todo"><title>0x00016acc MoveLaraPosition (229 bytes)</title></rect>
 <rect width="10.83" height="11.98" x="639.97" y="31.85" class="todo"><title>0x00019dc4 Func19dc4 (229 bytes)</title></rect>
 <rect width="10.83" height="11.98" x="653.80" y="31.85" class="todo"><title>0x00019f68 Func19f68 (229 bytes)</title></rect>
 <rect width="10.77" height="11.98" x="667.63" y="31.85" class="todo"><title>0x00038654 Func38654 (228 bytes)</title></rect>
@@ -1115,7 +1115,7 @@
 <rect width="10.75" height="10.22" x="682.08" y="46.83" class="todo"><title>0x000397cc Func397cc (201 bytes)</title></rect>
 <rect width="10.61" height="10.22" x="695.83" y="46.83" class="todo"><title>0x00020c0c Func20c0c (199 bytes)</title></rect>
 <rect width="10.61" height="10.22" x="709.44" y="46.83" class="todo"><title>0x0003edb4 Func3edb4 (199 bytes)</title></rect>
-<rect width="10.54" height="10.22" x="723.05" y="46.83" class="todo"><title>0x00016a04 Func16a04 (198 bytes)</title></rect>
+<rect width="10.54" height="10.22" x="723.05" y="46.83" class="named"><title>0x00016a04 AlignLaraPosition (198 bytes)</title></rect>
 <rect width="10.41" height="10.22" x="736.59" y="46.83" class="todo"><title>0x00025494 Func25494 (196 bytes)</title></rect>
 <rect width="10.09" height="10.55" x="555.20" y="60.05" class="todo"><title>0x0003e320 Func3e320 (196 bytes)</title></rect>
 <rect width="10.09" height="10.48" x="555.20" y="73.60" class="todo"><title>0x0001d370 Func1d370 (195 bytes)</title></rect>

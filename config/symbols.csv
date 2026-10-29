@@ -74,9 +74,9 @@ address,size,name,symbol
 0x000164a4,798,ItemPushLara,ItemPushLara_
 0x000167c4,236,TestBoundsCollide,TestBoundsCollide_
 0x000168b0,339,TestLaraPosition,TestLaraPosition_
-0x00016a04,198,Func16a04,
-0x00016acc,229,Func16acc,
-0x00016bb4,349,Func16bb4,
+0x00016a04,198,AlignLaraPosition,AlignLaraPosition_
+0x00016acc,229,MoveLaraPosition,MoveLaraPosition_
+0x00016bb4,349,Move3DPosTo3DPos,Move3DPosTo3DPos_
 0x00016d20,673,Func16d20,
 0x00016ff4,707,AnimateItem,AnimateItem_
 0x000172b8,154,Func172b8,
