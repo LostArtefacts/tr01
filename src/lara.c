@@ -1431,6 +1431,11 @@ void lara_col_special(ITEM_INFO *item, COLL_INFO *coll)
 {
 }
 
+void lara_col_usemidas(ITEM_INFO *item, COLL_INFO *coll)
+{
+    lara_default_col(item, coll);
+}
+
 void lara_default_col(ITEM_INFO *item, COLL_INFO *coll)
 {
     lara.move_angle = item->pos.y_rot;

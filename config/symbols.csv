@@ -381,7 +381,7 @@ address,size,name,symbol
 0x00027070,207,lara_col_roll,lara_col_roll_
 0x00027140,209,lara_col_roll2,lara_col_roll2_
 0x00027214,1,lara_col_special,lara_col_special_
-0x00027218,49,Func27218,
+0x00027218,49,lara_col_usemidas,lara_col_usemidas_
 0x0002724c,49,Func2724c,
 0x00027280,129,Func27280,
 0x00027304,146,Func27304,
