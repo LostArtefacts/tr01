@@ -240,5 +240,12 @@ void DisableBaddieAI(sint16 item_num);
 int EnableBaddieAI(sint16 item_number, int Always);
 void AlterFloorHeight(ITEM_INFO *item, int height);
 void LaraSwapMeshExtra(void);
+void DrawHealthBar(void);
+void DrawAirBar(void);
+void MakeAmmoString(char *string);
+void DrawAmmoInfo(void);
+void InitialisePickUpDisplay(void);
+void DrawPickups(void);
+void AddDisplayPickup(sint16 objnum);
 
 #endif
