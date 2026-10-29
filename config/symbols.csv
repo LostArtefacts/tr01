@@ -608,7 +608,7 @@ address,size,name,symbol
 0x00038b00,14,S_get_pan,S_get_pan_
 0x00038b10,69,S_SoundPlaySample,S_SoundPlaySample_
 0x00038b58,75,S_SoundPlaySampleLooped,S_SoundPlaySampleLooped_
-0x00038ba4,64,S_SoundSampleIsPlaying,S_SoundSampleIsPlaying_
+0x00038ba4,11,S_SoundSampleIsPlaying,S_SoundSampleIsPlaying_
 0x00038bb0,14,S_SoundStopAllSamples,S_SoundStopAllSamples_
 0x00038bc0,18,S_SoundStopSample,S_SoundStopSample_
 0x00038bd4,60,S_SoundSetPanAndVolume,S_SoundSetPanAndVolume_
@@ -868,6 +868,7 @@ address,size,name,symbol
 0x00048ca4,41,Func48ca4,
 0x00048cd0,43,Func48cd0,
 0x00048cfc,41,Func48cfc,
+0x00048d28,52,SoundSampleIsPlaying,SoundSampleIsPlaying_
 0x00048d60,90,Func48d60,
 0x00048dbc,86,Func48dbc,
 0x00048e14,142,Func48e14,
