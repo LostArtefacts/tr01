@@ -404,6 +404,14 @@ typedef struct
     sint16 z_maxc;
 } STATIC_INFO;
 
+typedef struct
+{
+    sint32 x;
+    sint32 y;
+    sint32 z;
+    sint32 r;
+} SPHERE;
+
 #define NO_CAMERA -1
 
 #define FOLLOW_CENTRE 1

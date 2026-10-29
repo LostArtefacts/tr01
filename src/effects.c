@@ -159,3 +159,25 @@ void ControlTwinkle(sint16 fx_num)
             KillEffect(fx_num);
     }
 }
+
+void ItemSparkle(ITEM_INFO *item, int meshmask)
+{
+    int i, num1, r;
+    SPHERE *sptr, slist[34];
+    GAME_VECTOR effectpos;
+
+    num1 = GetSpheres(item, slist, 1);
+    sptr = slist;
+    effectpos.room_number = item->room_number;
+    for (i = 0; i < num1; i++, sptr++)
+    {
+        if (meshmask & (1 << i))
+        {
+            r = sptr->r;
+            effectpos.x = sptr->x + ((GetRandomDraw() - 16384) * r) / 16384;
+            effectpos.y = sptr->y + ((GetRandomDraw() - 16384) * r) / 16384;
+            effectpos.z = sptr->z + ((GetRandomDraw() - 16384) * r) / 16384;
+            Twinkle(&effectpos);
+        }
+    }
+}

@@ -155,7 +155,7 @@ address,size,name,symbol
 0x0001d7cc,46,ControlRichochet1,ControlRichochet1_
 0x0001d7fc,80,Twinkle,Twinkle_
 0x0001d84c,100,ControlTwinkle,ControlTwinkle_
-0x0001d8b0,302,Func1d8b0,
+0x0001d8b0,302,ItemSparkle,ItemSparkle_
 0x0001d9e0,221,Func1d9e0,
 0x0001dac0,312,Func1dac0,
 0x0001dbf8,185,Func1dbf8,
@@ -590,7 +590,7 @@ address,size,name,symbol
 0x00038ee0,218,S_CDPlay,S_CDPlay_
 0x00038f14,6,S_CDVolume,S_CDVolume_
 0x00038f20,383,TestCollision,TestCollision_
-0x000390a0,681,Func390a0,
+0x000390a0,681,GetSpheres,GetSpheres_
 0x0003934c,445,GetJointAbsPosition,GetJointAbsPosition_
 0x0003950c,81,Func3950c,
 0x00039560,34,Func39560,
