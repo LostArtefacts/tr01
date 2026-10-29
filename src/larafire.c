@@ -543,3 +543,44 @@ int FireWeapon(int weapon_type, ITEM_INFO *target, ITEM_INFO *src, PHD_ANGLE *an
         return 0;
     }
 }
+
+void HitTarget(ITEM_INFO *item, GAME_VECTOR *hitpos, int damage)
+{
+    if (item->hit_points > 0 && item->hit_points <= damage)
+        savegame.kills++;
+    item->hit_points -= damage;
+    item->hit_status = 1;
+
+    DoBloodSplat(hitpos->x, hitpos->y, hitpos->z, item->speed, item->pos.y_rot, item->room_number);
+
+    if (item->hit_points > 0)
+    {
+        switch (item->object_number)
+        {
+        case WOLF:
+            SoundEffect(20, &item->pos, NULL);
+            break;
+
+        case BEAR:
+            SoundEffect(16, &item->pos, NULL);
+            break;
+
+        case LION:
+        case LIONESS:
+            SoundEffect(85, &item->pos, NULL);
+            break;
+
+        case RAT:
+            SoundEffect(95, &item->pos, NULL);
+            break;
+
+        case MERCENARY1:
+            SoundEffect(132, &item->pos, NULL);
+            break;
+
+        case EVIL_NATLA:
+            SoundEffect(142, &item->pos, NULL);
+            break;
+        }
+    }
+}
