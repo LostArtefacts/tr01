@@ -551,6 +551,12 @@ void mn_adjust_master_volume(int newVol)
     mn_sound_master_volume = mn_sound_master_vol_default;
 }
 
+void mn_start_sound_fade(void)
+{
+    mn_sound_master_fade_on = 1;
+    mn_sound_fade_counter = 0;
+}
+
 void mn_clear_fx_slot(MN_SFX_PLAY_INFO *slot)
 {
     slot->handle = -1;
