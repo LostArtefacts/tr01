@@ -482,7 +482,7 @@ address,size,name,symbol
 0x0002d144,87,ClearLOT,ClearLOT_
 0x0002d1a0,273,mn_reset_sound_effects,mn_reset_sound_effects_
 0x0002d2b4,1336,SoundEffect,SoundEffect_
-0x0002d7ec,181,Func2d7ec,
+0x0002d7ec,181,mn_get_fx_slot,mn_get_fx_slot_
 0x0002d8a4,56,mn_reset_ambient_loudness,mn_reset_ambient_loudness_
 0x0002d8dc,94,mn_stop_ambient_samples,mn_stop_ambient_samples_
 0x0002d93c,414,mn_update_sound_effects,mn_update_sound_effects_
@@ -492,7 +492,7 @@ address,size,name,symbol
 0x0002dd48,24,Func2dd48,
 0x0002dd60,6,Func2dd60,
 0x0002dd68,45,mn_clear_fx_slot,mn_clear_fx_slot_
-0x0002dd98,49,Func2dd98,
+0x0002dd98,49,mn_clear_handles,mn_clear_handles_
 0x0002e940,321,Func2e940,
 0x0002ea84,122,Func2ea84,
 0x0002eb00,49,Func2eb00,
@@ -591,12 +591,12 @@ address,size,name,symbol
 0x00038a28,207,Func38a28,
 0x00038b00,14,Func38b00,
 0x00038b0c,2,Func38b0c,
-0x00038b10,69,Func38b10,
-0x00038b58,75,Func38b58,
-0x00038ba4,64,Func38ba4,
+0x00038b10,69,S_SoundPlaySample,S_SoundPlaySample_
+0x00038b58,75,S_SoundPlaySampleLooped,S_SoundPlaySampleLooped_
+0x00038ba4,64,S_SoundSampleIsPlaying,S_SoundSampleIsPlaying_
 0x00038bb0,14,S_SoundStopAllSamples,S_SoundStopAllSamples_
-0x00038bc0,18,Func38bc0,
-0x00038bd4,60,Func38bd4,
+0x00038bc0,18,S_SoundStopSample,S_SoundStopSample_
+0x00038bd4,60,S_SoundSetPanAndVolume,S_SoundSetPanAndVolume_
 0x00038cb8,65,S_CDStop,S_CDStop_
 0x00038cfc,54,Func38cfc,
 0x00038d34,32,Func38d34,

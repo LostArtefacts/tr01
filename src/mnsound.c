@@ -84,6 +84,221 @@ void mn_reset_sound_effects(void)
     }
 }
 
+int SoundEffect(int sfx_num, PHD_3DPOS *pos, int flags)
+{
+    MN_SFX_PLAY_INFO *fxslot = NULL;
+    SAMPLE_INFO *s;
+    int number;
+    uint32 loudness, distance;
+    int pan = 0x7fff;
+    sint32 volume, pitch, sinum, mode, vars;
+    sint32 x, y, z;
+    sint16 angle = 0;
+
+    if (!sound_active)
+        return 0;
+
+    if (flags != SFX_ALWAYS && (flags & UNDERWATER) != (room[camera.pos.room_number].flags & UNDERWATER))
+        return 0;
+
+    sinum = sample_lut[sfx_num];
+
+    if (sinum < 0)
+        return 0;
+
+    s = sample_infos + sinum;
+
+    if (s->randomness && GetRandomDraw() > (int)s->randomness)
+        return 0;
+
+    mode = s->flags & 3;
+
+    flags = 0;
+    if (pos == NULL)
+    {
+        distance = 0;
+        pan = 0;
+        flags = MN_FX_NO_REVERB;
+    }
+    else
+    {
+        x = (pos->x_pos - camera.target.x);
+        y = (pos->y_pos - camera.target.y);
+        z = (pos->z_pos - camera.target.z);
+
+        if ((x < (-SOUND_RADIUS)) || (x > SOUND_RADIUS) || (y < (-SOUND_RADIUS)) || (y > SOUND_RADIUS) || (z < (-SOUND_RADIUS)) || (z > SOUND_RADIUS))
+        {
+            return 0;
+        }
+
+        distance = (uint32)(x * x + y * y + z * z);
+
+        if (distance == 0)
+            pan = 0;
+    }
+
+    volume = (sint32)s->volume - (sint32)((uint32)phd_sqrt(distance) * SOUND_RANGE_MULT_CONSTANT);
+
+    if ((s->flags & VOLUME_WIBBLE))
+        volume -= GetRandomDraw() * MAX_VOLUME_CHANGE >> 15;
+
+    if ((s->flags & NO_PAN))
+    {
+        pan = 0;
+    }
+
+    if ((volume <= 0) && (mode != AMBIENT_SOUND))
+    {
+        return 0;
+    }
+
+    if (pan)
+    {
+        angle = (sint16)phd_atan(pos->z_pos - lara_item->pos.z_pos, pos->x_pos - lara_item->pos.x_pos);
+        angle -= (lara_item->pos.y_rot + lara.torso_y_rot + lara.head_y_rot);
+
+        pan = angle;
+    }
+
+    pitch = 100;
+
+    if ((s->flags & PITCH_WIBBLE))
+        pitch += ((GetRandomDraw() * MAX_PITCH_CHANGE) / 16384) - MAX_PITCH_CHANGE;
+
+    vars = (s->flags >> 2) & 15;
+    if (vars == 1)
+        number = s->number;
+    else
+        number = s->number + (int)((GetRandomDraw() * vars) / 32768);
+
+    if (volume > 0x7fff)
+    {
+        volume = 0x7fff;
+    }
+
+    switch (mode)
+    {
+    case WAIT_SOUND:
+        if ((fxslot = mn_get_fx_slot(sfx_num, 0, pos, (sint16)mode)) != NULL)
+        {
+            if (fxslot->mn_flags & MN_FX_RESTARTED)
+            {
+                fxslot->mn_flags &= (0XFFFF - MN_FX_RESTARTED);
+                return 1;
+            }
+            else
+            {
+                fxslot->handle = S_SoundPlaySample(number, (sint16)volume, (sint16)pitch, (sint16)pan);
+
+                if (fxslot->handle >= 0)
+                {
+                    mn_clear_handles(fxslot);
+                    fxslot->mn_flags = (MN_FX_USED | flags);
+                    fxslot->fxnum = sfx_num;
+                    fxslot->pos = pos;
+                }
+                else
+                {
+                    return 0;
+                }
+            }
+        }
+        else
+        {
+            return 0;
+        }
+        break;
+
+    case RESTART_SOUND:
+        if ((fxslot = mn_get_fx_slot(sfx_num, 0, pos, (sint16)mode)) != NULL)
+        {
+            if (fxslot->mn_flags & MN_FX_RESTARTED)
+            {
+                S_SoundStopSample(fxslot->handle);
+                fxslot->handle = S_SoundPlaySample(number, (sint16)volume, (sint16)pitch, (sint16)pan);
+            }
+            else
+            {
+                fxslot->handle = S_SoundPlaySample(number, (sint16)volume, (sint16)pitch, (sint16)pan);
+
+                if (fxslot->handle >= 0)
+                {
+                    mn_clear_handles(fxslot);
+                    fxslot->mn_flags = (MN_FX_USED | flags);
+                    fxslot->fxnum = sfx_num;
+                    fxslot->pos = pos;
+                }
+                else
+                {
+                    return 0;
+                }
+            }
+        }
+        else
+        {
+            return 0;
+        }
+        break;
+
+    case AMBIENT_SOUND:
+        loudness = distance;
+
+        if ((fxslot = mn_get_fx_slot(sfx_num, loudness, pos, (sint16)mode)) != NULL)
+        {
+            fxslot->pos = pos;
+            if (fxslot->mn_flags & MN_FX_AMBIENT)
+            {
+                if (volume > 0)
+                {
+                    fxslot->loudness = loudness;
+                    fxslot->pan = pan;
+                    fxslot->volume = (sint16)volume;
+                }
+                else
+                {
+                    fxslot->loudness = MN_NOT_AUDIBLE;
+                    fxslot->volume = 0;
+                }
+            }
+            else
+            {
+                if (volume > 0)
+                {
+                    fxslot->handle = S_SoundPlaySampleLooped(number, (sint16)volume, (sint16)pitch, (sint16)pan);
+
+                    if (fxslot->handle >= 0)
+                    {
+                        mn_clear_handles(fxslot);
+
+                        fxslot->loudness = loudness;
+                        fxslot->fxnum = sfx_num;
+                        fxslot->pan = pan;
+                        fxslot->volume = (sint16)volume;
+                        fxslot->mn_flags |= (MN_FX_AMBIENT | MN_FX_USED);
+                        fxslot->pos = pos;
+                    }
+                    else
+                    {
+                        mn_clear_fx_slot(fxslot);
+                        return 0;
+                    }
+                }
+                else
+                {
+                    fxslot->loudness = MN_NOT_AUDIBLE;
+                }
+            }
+        }
+        else
+        {
+            return 0;
+        }
+        break;
+    }
+
+    return 1;
+}
+
 void mn_clear_fx_slot(MN_SFX_PLAY_INFO *slot)
 {
     slot->handle = -1;
@@ -93,4 +308,20 @@ void mn_clear_fx_slot(MN_SFX_PLAY_INFO *slot)
     slot->pan = 0;
     slot->loudness = MN_NOT_AUDIBLE;
     slot->fxnum = -1;
+}
+
+void mn_clear_handles(MN_SFX_PLAY_INFO *slot)
+{
+    sint32 chandle;
+    MN_SFX_PLAY_INFO *rslot;
+
+    chandle = slot->handle;
+
+    for (rslot = sfx_playing; rslot < (sfx_playing + MAX_PLAYING_FX); rslot++)
+    {
+        if (rslot != slot && rslot->handle == chandle)
+        {
+            rslot->handle = -1;
+        }
+    }
 }
