@@ -18,6 +18,8 @@
 #define NO_FLYING 0
 
 #define FRONT_ARC 0x4000
+#define MAX_HEAD_CHANGE (ONE_DEGREE * 5)
+#define MAX_TILT (ONE_DEGREE * 3)
 
 typedef struct
 {
@@ -115,6 +117,7 @@ int CreatureCreature(sint16 item_number);
 int BadFloor(sint32 x, sint32 y, sint32 z, sint16 box_height, sint16 next_height, sint16 room_number, LOT_INFO *LOT);
 int CreatureAnimation(sint16 item_number, sint16 angle, sint16 tilt);
 sint16 CreatureTurn(ITEM_INFO *item, sint16 maximum_turn);
+void CreatureTilt(ITEM_INFO *item, sint16 angle);
 void CreatureHead(ITEM_INFO *item, sint16 required);
 sint16 CreatureEffect(ITEM_INFO *item, BITE_INFO *bite,
     sint16 (*generate)(sint32 x, sint32 y, sint32 z, sint16 speed, PHD_ANGLE yrot, sint16 room_number));

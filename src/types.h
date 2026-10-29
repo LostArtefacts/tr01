@@ -10,7 +10,7 @@ typedef unsigned short uint16;
 typedef long sint32;
 typedef unsigned long uint32;
 
-typedef sint16 SG_COL;
+typedef uint16 SG_COL;
 
 #define W2V_SHIFT 14
 
@@ -24,6 +24,8 @@ typedef sint16 SG_COL;
 
 #define NO_ITEM -1
 
+#define DONT_TARGET (-16384)
+
 #define NOT_ACTIVE 0
 #define ACTIVE 1
 #define DEACTIVATED 2
@@ -32,6 +34,24 @@ typedef sint16 SG_COL;
 typedef sint16 PHD_ANGLE;
 
 typedef struct COLL_INFO COLL_INFO;
+
+typedef struct
+{
+    sint32 x;
+    sint32 y;
+    sint32 z;
+    sint16 room_number;
+    sint16 box_number;
+} GAME_VECTOR;
+
+typedef struct
+{
+    sint32 x;
+    sint32 y;
+    sint32 z;
+    sint16 data;
+    sint16 flags;
+} OBJECT_VECTOR;
 
 typedef struct
 {
@@ -185,6 +205,44 @@ typedef struct
     uint16 save_flags:1;
     uint16 save_anim:1;
 } OBJECT_INFO;
+
+#define NO_CAMERA -1
+
+typedef enum
+{
+    CHASE_CAMERA,
+    FIXED_CAMERA,
+    LOOK_CAMERA,
+    COMBAT_CAMERA,
+    CINEMATIC_CAMERA,
+    HEAVY_CAMERA
+} CAMERA_TYPE;
+
+typedef struct
+{
+    GAME_VECTOR pos;
+    GAME_VECTOR target;
+    CAMERA_TYPE type;
+    sint32 shift;
+    sint32 flags;
+    sint32 fixed_camera;
+    sint32 number_frames;
+    sint32 bounce;
+    sint32 underwater;
+    sint32 target_distance;
+    sint32 target_square;
+    sint16 target_angle;
+    sint16 actual_angle;
+    sint16 target_elevation;
+    sint16 box;
+    sint16 number;
+    sint16 last;
+    sint16 timer;
+    sint16 speed;
+    ITEM_INFO *item;
+    ITEM_INFO *last_item;
+    OBJECT_VECTOR *fixed;
+} CAMERA_INFO;
 
 #define SQUARE(A) ((A) * (A))
 

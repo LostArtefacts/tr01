@@ -66,8 +66,12 @@ enum lara_water_states
 extern LARA_INFO lara;
 extern ITEM_INFO *lara_item;
 
+void RemoveActiveItem(sint16 item_num);
+void ItemNewRoom(sint16 item_number, sint16 room_number);
+sint16 *GetBoundsAccurate(ITEM_INFO *item);
 sint16 *GetBestFrame(ITEM_INFO *item);
 sint16 DoBloodSplat(sint32 x, sint32 y, sint32 z, sint16 speed, PHD_ANGLE direction, sint16 room_num);
+void DisableBaddieAI(sint16 item_num);
 int EnableBaddieAI(sint16 item_number, int Always);
 
 #endif
