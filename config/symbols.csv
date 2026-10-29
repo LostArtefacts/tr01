@@ -576,6 +576,7 @@ address,size,name,symbol
 0x00034c4c,188,PickUpSaveGameCollision,PickUpSaveGameCollision_
 0x00034d08,26,InitialiseSavegameItem,InitialiseSavegameItem_
 0x00034d24,28,ControlSavegameItem,ControlSavegameItem_
+0x00034d40,5,DrawSavegameItem,DrawSavegameItem_
 0x00035020,696,Func35020,
 0x000352e0,6,Func352e0,
 0x000352e8,78,Func352e8,

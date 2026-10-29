@@ -678,3 +678,8 @@ void ControlSavegameItem(sint16 item_num)
 {
     AnimateItem(&items[item_num]);
 }
+
+void DrawSavegameItem(ITEM_INFO *item)
+{
+    DrawAnimatingItem(item);
+}
