@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">16.28% (126)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">83.72% (648)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">16.41% (127)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">83.59% (647)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="121.60" height="6" x="0" y="0" class="named"/>
-<rect width="625.40" height="6" x="121.60" y="0" class="todo"/>
+<rect width="122.57" height="6" x="0" y="0" class="named"/>
+<rect width="624.43" height="6" x="122.57" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -196,7 +196,7 @@
 <rect width="12" height="12" x="390" y="30" class="todo"><title>0x0001ac74 DrawAnimatingItem (1417 bytes)</title></rect>
 <rect width="12" height="12" x="405" y="30" class="todo"><title>0x0001b224 DrawLara (2294 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="30" class="named"><title>0x0001bb1c DrawGunFlash (124 bytes)</title></rect>
-<rect width="12" height="12" x="435" y="30" class="todo"><title>0x0001bb98 CalculateObjectLighting (233 bytes)</title></rect>
+<rect width="12" height="12" x="435" y="30" class="named"><title>0x0001bb98 CalculateObjectLighting (233 bytes)</title></rect>
 <rect width="12" height="12" x="450" y="30" class="todo"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
 <rect width="12" height="12" x="465" y="30" class="todo"><title>0x0001ce24 Func1ce24 (58 bytes)</title></rect>
 <rect width="12" height="12" x="480" y="30" class="todo"><title>0x0001ce60 Func1ce60 (35 bytes)</title></rect>
@@ -845,10 +845,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">20%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">80%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">20.11%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">79.89%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="149.39" height="6" x="0" y="0" class="named"/>
-<rect width="597.61" height="6" x="149.39" y="0" class="todo"/>
+<rect width="150.24" height="6" x="0" y="0" class="named"/>
+<rect width="596.76" height="6" x="150.24" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="todo"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1083,7 +1083,7 @@
 <rect width="11.32" height="11.98" x="584.13" y="31.81" class="todo"><title>0x00026a28 Func26a28 (240 bytes)</title></rect>
 <rect width="11.20" height="11.98" x="598.45" y="31.81" class="named"><title>0x00014c78 DoCinematic (238 bytes)</title></rect>
 <rect width="11.08" height="11.98" x="612.65" y="31.81" class="named"><title>0x000167c4 TestBoundsCollide (236 bytes)</title></rect>
-<rect width="10.90" height="11.98" x="626.73" y="31.81" class="todo"><title>0x0001bb98 CalculateObjectLighting (233 bytes)</title></rect>
+<rect width="10.90" height="11.98" x="626.73" y="31.81" class="named"><title>0x0001bb98 CalculateObjectLighting (233 bytes)</title></rect>
 <rect width="10.84" height="11.98" x="640.63" y="31.81" class="todo"><title>0x0003cb14 Func3cb14 (232 bytes)</title></rect>
 <rect width="10.72" height="11.98" x="654.47" y="31.81" class="named"><title>0x0001790c RefreshCamera (230 bytes)</title></rect>
 <rect width="10.66" height="11.98" x="668.20" y="31.81" class="named"><title>0x00016acc MoveLaraPosition (229 bytes)</title></rect>

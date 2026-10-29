@@ -377,3 +377,28 @@ void DrawGunFlash(int weapon_type, int clip)
     S_CalculateStaticLight(light);
     phd_PutPolygons(meshes[objects[GUN_FLASH].mesh_index], clip);
 }
+
+void CalculateObjectLighting(ITEM_INFO *item, sint16 *frame)
+{
+    sint32 x, y, z;
+    sint32 *mptr;
+
+    if (item->shade < 0)
+    {
+        phd_PushUnitMatrix();
+        mptr = phd_mxptr;
+        *(mptr + M03) = *(mptr + M13) = *(mptr + M23) = 0;
+        phd_RotYXZ(item->pos.y_rot, item->pos.x_rot, item->pos.z_rot);
+        x = (sint32)((*(frame + 0) + *(frame + 1)) / 2);
+        y = (sint32)((*(frame + 2) + *(frame + 3)) / 2);
+        z = (sint32)((*(frame + 4) + *(frame + 5)) / 2);
+        phd_TranslateRel(x, y, z);
+        x = (*(phd_mxptr + M03) >> W2V_SHIFT) + item->pos.x_pos;
+        y = (*(phd_mxptr + M13) >> W2V_SHIFT) + item->pos.y_pos;
+        z = (*(phd_mxptr + M23) >> W2V_SHIFT) + item->pos.z_pos;
+        phd_PopMatrix();
+        S_CalculateLight(x, y, z, item->room_number);
+    }
+    else
+        S_CalculateStaticLight(item->shade);
+}
