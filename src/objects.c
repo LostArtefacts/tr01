@@ -1,4 +1,5 @@
 #include "game.h"
+#include <string.h>
 
 typedef struct doorpos_data
 {
@@ -43,5 +44,16 @@ void ShutThatDoor(DOORPOS_DATA *d)
 
         if (d->block != NO_BOX)
             boxes[d->block].overlap_index |= BLOCKED;
+    }
+}
+
+void OpenThatDoor(DOORPOS_DATA *d)
+{
+    if (d->floor)
+    {
+        memcpy(d->floor, &d->data, sizeof(FLOOR_INFO));
+
+        if (d->block != NO_BOX)
+            boxes[d->block].overlap_index &= (~BLOCKED);
     }
 }

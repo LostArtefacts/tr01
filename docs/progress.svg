@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">64.19% (509)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">35.81% (284)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">64.31% (510)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">35.69% (283)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="479.47" height="6" x="0" y="0" class="named"/>
-<rect width="267.53" height="6" x="479.47" y="0" class="todo"/>
+<rect width="480.42" height="6" x="0" y="0" class="named"/>
+<rect width="266.58" height="6" x="480.42" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -577,7 +577,7 @@
 <rect width="12" height="12" x="105" y="150" class="named"><title>0x0002f43c DrawMovableBlock (124 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="150" class="named"><title>0x0002f4b8 DrawUnclippedItem (102 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="150" class="named"><title>0x0002f520 ShutThatDoor (77 bytes)</title></rect>
-<rect width="12" height="12" x="150" y="150" class="todo"><title>0x0002f570 Func2f570 (76 bytes)</title></rect>
+<rect width="12" height="12" x="150" y="150" class="named"><title>0x0002f570 OpenThatDoor (76 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="150" class="todo"><title>0x0002f5bc Func2f5bc (1394 bytes)</title></rect>
 <rect width="12" height="12" x="180" y="150" class="todo"><title>0x0002fb30 Func2fb30 (673 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="150" class="todo"><title>0x0002fdd4 Func2fdd4 (179 bytes)</title></rect>
@@ -864,10 +864,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">59.23%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">40.77%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">59.27%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">40.73%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="442.44" height="6" x="0" y="0" class="named"/>
-<rect width="304.56" height="6" x="442.44" y="0" class="todo"/>
+<rect width="442.71" height="6" x="0" y="0" class="named"/>
+<rect width="304.29" height="6" x="442.71" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.01" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1374,7 +1374,7 @@
 <rect width="5.27" height="5.08" x="650.88" y="218.77" class="named"><title>0x00020464 LevelIsValid (76 bytes)</title></rect>
 <rect width="5.27" height="5.08" x="650.88" y="226.85" class="named"><title>0x00025928 lara_as_fastturn (76 bytes)</title></rect>
 <rect width="5.27" height="5.08" x="650.88" y="234.92" class="named"><title>0x0002cc60 ThorsHeadCollision (76 bytes)</title></rect>
-<rect width="5.52" height="4.83" x="659.15" y="144.07" class="todo"><title>0x0002f570 Func2f570 (76 bytes)</title></rect>
+<rect width="5.52" height="4.83" x="659.15" y="144.07" class="named"><title>0x0002f570 OpenThatDoor (76 bytes)</title></rect>
 <rect width="5.41" height="4.83" x="667.68" y="144.07" class="named"><title>0x0002ccb0 InitialiseLOTarray (75 bytes)</title></rect>
 <rect width="5.41" height="4.83" x="676.09" y="144.07" class="todo"><title>0x00038b58 S_SoundPlaySampleLooped (75 bytes)</title></rect>
 <rect width="5.30" height="4.83" x="684.50" y="144.07" class="named"><title>0x00010aa4 S_SetupBelowWater (74 bytes)</title></rect>
