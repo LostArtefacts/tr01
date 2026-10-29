@@ -457,3 +457,8 @@ void FlickerFX(ITEM_INFO *item)
 
     fliptimer++;
 }
+
+void lara_hands_free(ITEM_INFO *item)
+{
+    lara.gun_status = LG_ARMLESS;
+}

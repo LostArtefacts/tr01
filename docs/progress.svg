@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">22.35% (173)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">77.65% (601)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">22.48% (174)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">77.52% (600)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="166.97" height="6" x="0" y="0" class="named"/>
-<rect width="580.03" height="6" x="166.97" y="0" class="todo"/>
+<rect width="167.93" height="6" x="0" y="0" class="named"/>
+<rect width="579.07" height="6" x="167.93" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -242,7 +242,7 @@
 <rect width="12" height="12" x="330" y="45" class="named"><title>0x0001e154 PowerUpFX (100 bytes)</title></rect>
 <rect width="12" height="12" x="345" y="45" class="named"><title>0x0001e1b8 ExplosionFX (41 bytes)</title></rect>
 <rect width="12" height="12" x="360" y="45" class="named"><title>0x0001e1e4 FlickerFX (65 bytes)</title></rect>
-<rect width="12" height="12" x="375" y="45" class="todo"><title>0x0001e228 Func1e228 (12 bytes)</title></rect>
+<rect width="12" height="12" x="375" y="45" class="named"><title>0x0001e228 lara_hands_free (12 bytes)</title></rect>
 <rect width="12" height="12" x="390" y="45" class="todo"><title>0x0001e23c Func1e23c (132 bytes)</title></rect>
 <rect width="12" height="12" x="405" y="45" class="todo"><title>0x0001e2c0 Func1e2c0 (18 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="45" class="todo"><title>0x0001e2d4 Func1e2d4 (21 bytes)</title></rect>
@@ -845,10 +845,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">26.47%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">73.53%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">26.48%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">73.52%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="197.75" height="6" x="0" y="0" class="named"/>
-<rect width="549.25" height="6" x="197.75" y="0" class="todo"/>
+<rect width="197.80" height="6" x="0" y="0" class="named"/>
+<rect width="549.20" height="6" x="197.80" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1591,7 +1591,7 @@
 <rect width="0.74" height="0.10" x="733.90" y="233.69" class="todo"><title>0x0003978c T_CentreH (13 bytes)</title></rect>
 <rect width="0.74" height="0.10" x="733.90" y="236.79" class="todo"><title>0x0003979c T_CentreV (13 bytes)</title></rect>
 <rect width="0.74" height="0.10" x="733.90" y="239.90" class="todo"><title>0x000397ac Func397ac (13 bytes)</title></rect>
-<rect width="0.37" height="0.18" x="737.64" y="230.35" class="todo"><title>0x0001e228 Func1e228 (12 bytes)</title></rect>
+<rect width="0.37" height="0.18" x="737.64" y="230.35" class="named"><title>0x0001e228 lara_hands_free (12 bytes)</title></rect>
 <rect width="0.10" height="0.18" x="741.01" y="230.35" class="named"><title>0x0001de58 finish_level_effect (11 bytes)</title></rect>
 <rect width="0.10" height="0.18" x="744.10" y="230.35" class="todo"><title>0x000466f8 Func466f8 (11 bytes)</title></rect>
 <rect width="0.10" height="0.18" x="747.19" y="230.35" class="named"><title>0x00010084 S_OutputPolyList (10 bytes)</title></rect>
