@@ -3,6 +3,7 @@
 #include "game.h"
 
 extern int demo_level;
+extern sint16 layout[2][13];
 
 int EscapeFMV(int sequence, int mode);
 int LevelIsValid(sint16 level_number);
@@ -227,5 +228,23 @@ void CheckCheatMode(void)
         break;
     default:
         cheat_mode = 0;
+    }
+}
+
+void S_SaveSettings(void)
+{
+    FILE *file;
+
+    file = fopen("settings.dat", "wb");
+    if (file)
+    {
+        fwrite(&Option_Music_Volume, sizeof(Option_Music_Volume), 1, file);
+        fwrite(&Option_SoundFX_Volume, sizeof(Option_SoundFX_Volume), 1, file);
+        fwrite(layout[1], sizeof(sint16), 13, file);
+        fwrite(&detail_level, sizeof(detail_level), 1, file);
+        fwrite(&game_hires, sizeof(game_hires), 1, file);
+        fwrite(&game_sizer, sizeof(game_sizer), 1, file);
+
+        fclose(file);
     }
 }

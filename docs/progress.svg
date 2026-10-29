@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">74.26% (603)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">25.74% (209)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">74.38% (604)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">25.62% (208)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="554.73" height="6" x="0" y="0" class="named"/>
-<rect width="192.27" height="6" x="554.73" y="0" class="todo"/>
+<rect width="555.65" height="6" x="0" y="0" class="named"/>
+<rect width="191.35" height="6" x="555.65" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -671,7 +671,7 @@
 <rect width="12" height="12" x="15" y="180" class="named"><title>0x00038460 main (499 bytes)</title></rect>
 <rect width="12" height="12" x="30" y="180" class="named"><title>0x00038654 TitleSequence (228 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="180" class="named"><title>0x0003875c CheckCheatMode (539 bytes)</title></rect>
-<rect width="12" height="12" x="60" y="180" class="todo"><title>0x00038978 S_SaveSettings (173 bytes)</title></rect>
+<rect width="12" height="12" x="60" y="180" class="named"><title>0x00038978 S_SaveSettings (173 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="180" class="todo"><title>0x00038a28 S_LoadSettings (207 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="180" class="todo"><title>0x00038b00 Func38b00 (14 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="180" class="todo"><title>0x00038b0c Func38b0c (2 bytes)</title></rect>
@@ -883,10 +883,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">73.10%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">26.90%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">73.18%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">26.82%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="546.05" height="6" x="0" y="0" class="named"/>
-<rect width="200.95" height="6" x="546.05" y="0" class="todo"/>
+<rect width="546.64" height="6" x="0" y="0" class="named"/>
+<rect width="200.36" height="6" x="546.64" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.95" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1209,7 +1209,7 @@
 <rect width="9.48" height="9.50" x="725.10" y="77.34" class="named"><title>0x0002674c lara_col_fastfall (177 bytes)</title></rect>
 <rect width="9.41" height="9.50" x="737.59" y="77.34" class="todo"><title>0x0003a818 TeethTrap (176 bytes)</title></rect>
 <rect width="9.35" height="9.35" x="571.20" y="89.85" class="named"><title>0x00026978 lara_col_compress (173 bytes)</title></rect>
-<rect width="9.35" height="9.35" x="571.20" y="102.20" class="todo"><title>0x00038978 S_SaveSettings (173 bytes)</title></rect>
+<rect width="9.35" height="9.35" x="571.20" y="102.20" class="named"><title>0x00038978 S_SaveSettings (173 bytes)</title></rect>
 <rect width="9.35" height="9.21" x="571.20" y="114.55" class="named"><title>0x0002686c lara_col_reach (171 bytes)</title></rect>
 <rect width="9.35" height="9.14" x="571.20" y="126.76" class="named"><title>0x000295f8 lara_as_swim (170 bytes)</title></rect>
 <rect width="9.35" height="9.07" x="571.20" y="138.90" class="named"><title>0x00028300 LaraLandedBad (169 bytes)</title></rect>
