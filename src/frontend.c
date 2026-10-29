@@ -29,6 +29,25 @@ SG_COL S_COLOUR(int R, int G, int B)
     return colour;
 }
 
+void S_DrawSpriteSize(sint32 x, sint32 y, sint32 z, sint32 w, sint32 h, sint16 sprnum, sint16 shade, uint16 flags)
+{
+    if (x + w < 0 || y + h < 0 || x >= phd_winwidth || y >= phd_winheight)
+        return;
+
+    *(sort3dptr) = (sint32)(info3dptr);
+    *(sort3dptr + 1) = z;
+    sort3dptr += 2;
+    *(info3dptr) = DRAW_SCALED_SPRITE;
+    *(info3dptr + 1) = (sint16)x;
+    *(info3dptr + 2) = (sint16)y;
+    *(info3dptr + 3) = (sint16)(x + w);
+    *(info3dptr + 4) = (sint16)(y + h);
+    *(info3dptr + 5) = sprnum;
+    *(info3dptr + 6) = shade;
+    info3dptr += 7;
+    surfacenum++;
+}
+
 void S_SetGamma(sint16 gamma)
 {
 }

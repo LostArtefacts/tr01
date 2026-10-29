@@ -106,6 +106,7 @@ void S_FadeInInventory(int fade);
 void S_FadeOutInventory(int fade);
 void S_FadeToBlack(void);
 SG_COL S_COLOUR(int R, int G, int B);
+void S_DrawSpriteSize(sint32 x, sint32 y, sint32 z, sint32 w, sint32 h, sint16 sprnum, sint16 shade, uint16 flags);
 void S_SetGamma(sint16 gamma);
 
 #endif

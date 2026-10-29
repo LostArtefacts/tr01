@@ -86,6 +86,8 @@ extern sint32 phd_top;
 extern sint32 phd_bottom;
 extern sint32 phd_winxmax;
 extern sint32 phd_winymax;
+extern sint32 phd_winwidth;
+extern sint32 phd_winheight;
 extern sint32 phd_centerx;
 extern sint32 phd_centery;
 extern sint32 phd_znear;

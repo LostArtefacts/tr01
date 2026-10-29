@@ -200,7 +200,7 @@ address,size,name,symbol
 0x0001f5a4,3,disk_error_handler,disk_error_handler_
 0x0001f5b0,140,S_COLOUR,S_COLOUR_
 0x0001f63c,1,S_SetGamma,S_SetGamma_
-0x0001f640,142,Func1f640,
+0x0001f640,142,S_DrawSpriteSize,S_DrawSpriteSize_
 0x0001f6d0,241,Func1f6d0,
 0x0001f7c4,255,Func1f7c4,
 0x0001f8c4,98,Func1f8c4,
@@ -1863,6 +1863,8 @@ address,size,name,symbol
 0x0012f3c4,4,phd_left,_phd_left
 0x0012f3cc,4,surfacenum,_surfacenum
 0x0012f3d0,4,phd_persp,_phd_persp
+0x0012f3d4,4,phd_winheight,_phd_winheight
+0x0012f3dc,4,phd_winwidth,_phd_winwidth
 0x0012f3e0,4,info3dptr,_info3dptr
 0x0012f3e4,4,phd_winymax,_phd_winymax
 0x0012f3e8,4,phd_winxmax,_phd_winxmax
