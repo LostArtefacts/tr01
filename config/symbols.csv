@@ -302,7 +302,7 @@ address,size,name,symbol
 0x00025558,1,lara_as_pose,lara_as_pose_
 0x0002555c,93,lara_as_fastback,lara_as_fastback_
 0x000255bc,135,lara_as_turn_r,lara_as_turn_r_
-0x00025644,145,Func25644,
+0x00025644,145,lara_as_turn_l,lara_as_turn_l_
 0x000256d8,5,Func256d8,
 0x000256e0,69,Func256e0,
 0x00025728,77,Func25728,
