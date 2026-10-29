@@ -587,7 +587,7 @@ address,size,name,symbol
 0x000359c0,2643,ExtractSaveGameInfo,ExtractSaveGameInfo_
 0x00036414,24,ResetSG,ResetSG_
 0x0003642c,77,WriteSG,WriteSG_
-0x0003647c,39,Func3647c,
+0x0003647c,39,ReadSG,ReadSG_
 0x000364a4,404,Func364a4,
 0x00036638,14,Func36638,
 0x0003667c,34,Func3667c,

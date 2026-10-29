@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">72.92% (587)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">27.08% (218)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">73.04% (588)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">26.96% (217)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="544.71" height="6" x="0" y="0" class="named"/>
-<rect width="202.29" height="6" x="544.71" y="0" class="todo"/>
+<rect width="545.63" height="6" x="0" y="0" class="named"/>
+<rect width="201.37" height="6" x="545.63" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -655,7 +655,7 @@
 <rect width="12" height="12" x="525" y="165" class="todo"><title>0x000359c0 ExtractSaveGameInfo (2643 bytes)</title></rect>
 <rect width="12" height="12" x="540" y="165" class="named"><title>0x00036414 ResetSG (24 bytes)</title></rect>
 <rect width="12" height="12" x="555" y="165" class="named"><title>0x0003642c WriteSG (77 bytes)</title></rect>
-<rect width="12" height="12" x="570" y="165" class="todo"><title>0x0003647c Func3647c (39 bytes)</title></rect>
+<rect width="12" height="12" x="570" y="165" class="named"><title>0x0003647c ReadSG (39 bytes)</title></rect>
 <rect width="12" height="12" x="585" y="165" class="todo"><title>0x000364a4 Func364a4 (404 bytes)</title></rect>
 <rect width="12" height="12" x="600" y="165" class="todo"><title>0x00036638 Func36638 (14 bytes)</title></rect>
 <rect width="12" height="12" x="615" y="165" class="todo"><title>0x0003667c Func3667c (34 bytes)</title></rect>
@@ -876,10 +876,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">70.22%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">29.78%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">70.23%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">29.77%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="524.51" height="6" x="0" y="0" class="named"/>
-<rect width="222.49" height="6" x="524.51" y="0" class="todo"/>
+<rect width="524.65" height="6" x="0" y="0" class="named"/>
+<rect width="222.35" height="6" x="524.65" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="51.03" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1529,7 +1529,7 @@
 <rect width="2.94" height="2.91" x="714.34" y="203.67" class="named"><title>0x00026e90 lara_col_hangright (39 bytes)</title></rect>
 <rect width="2.94" height="2.91" x="720.28" y="203.67" class="named"><title>0x0002d11c InitialiseLOT (39 bytes)</title></rect>
 <rect width="2.94" height="2.91" x="726.23" y="203.67" class="named"><title>0x0002fef0 DrawBridgeCollision (39 bytes)</title></rect>
-<rect width="2.94" height="2.91" x="732.17" y="203.67" class="todo"><title>0x0003647c Func3647c (39 bytes)</title></rect>
+<rect width="2.94" height="2.91" x="732.17" y="203.67" class="named"><title>0x0003647c ReadSG (39 bytes)</title></rect>
 <rect width="2.94" height="2.91" x="738.11" y="203.67" class="todo"><title>0x00042eb0 Func42eb0 (39 bytes)</title></rect>
 <rect width="2.94" height="2.91" x="744.06" y="203.67" class="todo"><title>0x00045f00 KeyClearBuffer (39 bytes)</title></rect>
 <rect width="2.59" height="3.11" x="695.90" y="209.57" class="named"><title>0x00020980 DrawGameInfo (38 bytes)</title></rect>
