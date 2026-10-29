@@ -296,3 +296,8 @@ void ControlSplash1(sint16 fx_num)
     fx->pos.z_pos += fx->speed * phd_cos(fx->pos.y_rot) >> W2V_SHIFT;
     fx->pos.x_pos += fx->speed * phd_sin(fx->pos.y_rot) >> W2V_SHIFT;
 }
+
+void finish_level_effect(ITEM_INFO *item)
+{
+    level_complete = 1;
+}

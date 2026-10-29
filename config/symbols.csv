@@ -161,7 +161,7 @@ address,size,name,symbol
 0x0001dbf8,185,Splash,Splash_
 0x0001dcb4,134,ControlSplash1,ControlSplash1_
 0x0001dd3c,281,WaterFall,WaterFall_
-0x0001de58,11,Func1de58,
+0x0001de58,11,finish_level_effect,finish_level_effect_
 0x0001de64,5,Func1de64,
 0x0001de6c,178,Func1de6c,
 0x0001df20,42,Func1df20,
