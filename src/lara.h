@@ -13,6 +13,8 @@
 #define LARA_AIR (2 * 30 * 30)
 #define LARA_HITPOINTS 1000
 
+#define SHOTGUN_AMMO_CLIP 6
+
 #define LARA_RAD 100
 #define LARA_HITE 762
 #define UW_RADIUS 300

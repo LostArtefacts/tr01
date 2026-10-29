@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "game.h"
 
 int overlay_flag = 1;
@@ -66,5 +67,52 @@ void MakeAmmoString(char *string)
             *c += 12 - 'A';
         else
             *c += 1 - '0';
+    }
+}
+
+void DrawAmmoInfo(void)
+{
+    char ammostring[80] = "";
+
+    if (lara.gun_status != LG_READY || overlay_flag <= 0 || savegame.bonus_flag)
+    {
+        if (ammotext)
+        {
+            T_RemovePrint(ammotext);
+            ammotext = NULL;
+        }
+        return;
+    }
+    switch (lara.gun_type)
+    {
+    case LG_PISTOLS:
+        return;
+        break;
+
+    case LG_MAGNUMS:
+        sprintf(ammostring, "%5d B", lara.magnums.ammo);
+        break;
+
+    case LG_UZIS:
+        sprintf(ammostring, "%5d C", lara.uzis.ammo);
+        break;
+
+    case LG_SHOTGUN:
+        sprintf(ammostring, "%5d A", lara.shotgun.ammo / SHOTGUN_AMMO_CLIP);
+        break;
+
+    default:
+        return;
+        break;
+    }
+
+    MakeAmmoString(ammostring);
+
+    if (ammotext)
+        T_ChangeText(ammotext, ammostring);
+    else
+    {
+        ammotext = T_Print(-17, 22, 0, ammostring);
+        T_RightAlign(ammotext, 1);
     }
 }

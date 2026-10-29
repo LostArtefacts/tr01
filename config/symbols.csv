@@ -596,7 +596,7 @@ address,size,name,symbol
 0x0003950c,81,Func3950c,
 0x00039560,34,T_InitPrint,T_InitPrint_
 0x00039584,281,T_Print,T_Print_
-0x000396a0,59,Func396a0,
+0x000396a0,59,T_ChangeText,T_ChangeText_
 0x000396dc,3,Func396dc,
 0x000396e0,5,Func396e0,
 0x000396e8,5,Func396e8,
@@ -610,7 +610,7 @@ address,size,name,symbol
 0x00039784,5,Func39784,
 0x0003978c,13,T_CentreH,T_CentreH_
 0x0003979c,13,T_CentreV,T_CentreV_
-0x000397ac,13,Func397ac,
+0x000397ac,13,T_RightAlign,T_RightAlign_
 0x000397bc,15,Func397bc,
 0x000397cc,201,Func397cc,
 0x00039898,45,T_RemovePrint,T_RemovePrint_
