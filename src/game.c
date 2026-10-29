@@ -527,3 +527,25 @@ int S_SaveGame(void *data, int size, int slot)
 
     return 0;
 }
+
+int S_LoadGame(void *data, int size, int slot)
+{
+    FILE *file;
+    char filename[80];
+    sint32 count;
+
+    sprintf(filename, "savegame.%d", slot);
+
+    file = fopen(filename, "rb");
+    if (file)
+    {
+        fread(filename, 1, 75, file);
+        fread(&count, sizeof(sint32), 1, file);
+
+        fread(data, size, 1, file);
+        fclose(file);
+        return 1;
+    }
+
+    return 0;
+}
