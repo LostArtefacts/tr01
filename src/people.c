@@ -8,6 +8,7 @@ sint16 pierre_item;
 #define APE_ATTACK_DAMAGE 200
 
 #define PEOPLE_SHOT_DAMAGE 50
+#define COWBOY_SHOT_DAMAGE 70
 
 #define KID_STOP_SHOT_DAMAGE 50
 #define KID_SKATE_SHOT_DAMAGE 40
@@ -62,6 +63,24 @@ BITE_INFO larson_gun = {-60, 170, 0, 14};
 
 BITE_INFO pierre_gun1 = {60, 200, 0, 11};
 BITE_INFO pierre_gun2 = {-57, 200, 0, 14};
+
+enum cowboy_anims
+{
+    COWBOY_EMPTY,
+    COWBOY_STOP,
+    COWBOY_WALK,
+    COWBOY_RUN,
+    COWBOY_AIM,
+    COWBOY_DEATH,
+    COWBOY_SHOOT
+};
+
+#define COWBOY_WALK_TURN (ONE_DEGREE * 3)
+#define COWBOY_RUN_TURN (ONE_DEGREE * 6)
+
+#define COWBOY_WALK_RANGE SQUARE(WALL_L * 3)
+
+#define COWBOY_DIE_ANIM 7
 
 BITE_INFO cowboy_gun1 = {1, 200, 41, 5};
 BITE_INFO cowboy_gun2 = {-2, 200, 40, 8};
@@ -930,4 +949,145 @@ void DrawSkateKid(ITEM_INFO *item)
     item->frame_number = frame;
     item->anim_number = anim;
     item->object_number = MERCENARY1;
+}
+
+void CowboyControl(sint16 item_number)
+{
+    ITEM_INFO *item;
+    CREATURE_INFO *cowboy;
+    sint16 angle, head, tilt, fx_number;
+    AI_INFO info;
+
+    item = &items[item_number];
+    if (item->status == INVISIBLE)
+    {
+        if (!EnableBaddieAI(item_number, 0))
+            return;
+        item->status = ACTIVE;
+    }
+    cowboy = (CREATURE_INFO *)item->data;
+    head = angle = tilt = 0;
+
+    if (item->hit_points <= 0)
+    {
+        if (item->current_anim_state != COWBOY_DEATH)
+        {
+            item->anim_number = objects[MERCENARY2].anim_index + COWBOY_DIE_ANIM;
+            item->frame_number = anims[item->anim_number].frame_base;
+            item->current_anim_state = COWBOY_DEATH;
+            SpawnItem(item, MAGNUM_ITEM);
+        }
+    }
+    else
+    {
+        CreatureAIInfo(item, &info);
+
+        if (info.ahead)
+            head = info.angle;
+
+        CreatureMood(item, &info, TIMID);
+
+        angle = CreatureTurn(item, cowboy->maximum_turn);
+
+        switch (item->current_anim_state)
+        {
+        case COWBOY_STOP:
+            if (item->required_anim_state)
+                item->goal_anim_state = item->required_anim_state;
+            else if (Targetable(item, &info))
+                item->goal_anim_state = COWBOY_AIM;
+            else if (cowboy->mood == BORED_MOOD)
+                item->goal_anim_state = COWBOY_WALK;
+            else
+                item->goal_anim_state = COWBOY_RUN;
+            break;
+
+        case COWBOY_WALK:
+            cowboy->maximum_turn = COWBOY_WALK_TURN;
+
+            if (cowboy->mood == ESCAPE_MOOD || !info.ahead)
+            {
+                item->required_anim_state = COWBOY_RUN;
+                item->goal_anim_state = COWBOY_STOP;
+            }
+            else if (Targetable(item, &info))
+            {
+                item->required_anim_state = COWBOY_AIM;
+                item->goal_anim_state = COWBOY_STOP;
+            }
+            else if (info.distance > COWBOY_WALK_RANGE)
+            {
+                item->required_anim_state = COWBOY_RUN;
+                item->goal_anim_state = COWBOY_STOP;
+            }
+            break;
+
+        case COWBOY_RUN:
+            cowboy->maximum_turn = COWBOY_RUN_TURN;
+            tilt = angle / 2;
+
+            if (cowboy->mood == ESCAPE_MOOD && !info.ahead)
+                break;
+
+            if (Targetable(item, &info))
+            {
+                item->required_anim_state = COWBOY_AIM;
+                item->goal_anim_state = COWBOY_STOP;
+            }
+            else if (info.ahead && info.distance < COWBOY_WALK_RANGE)
+            {
+                item->required_anim_state = COWBOY_WALK;
+                item->goal_anim_state = COWBOY_STOP;
+            }
+            break;
+
+        case COWBOY_AIM:
+            cowboy->flags = 0;
+            if (item->required_anim_state)
+                item->goal_anim_state = COWBOY_STOP;
+            else if (Targetable(item, &info))
+                item->goal_anim_state = COWBOY_SHOOT;
+            else
+                item->goal_anim_state = COWBOY_STOP;
+            break;
+
+        case COWBOY_SHOOT:
+
+            if (cowboy->flags == 0)
+            {
+                if (ShotLara(item, info.distance, &cowboy_gun1, head))
+                {
+                    lara_item->hit_points -= COWBOY_SHOT_DAMAGE;
+                    lara_item->hit_status = 1;
+                }
+            }
+            else if (cowboy->flags == 6)
+            {
+                if (Targetable(item, &info))
+                {
+                    if (ShotLara(item, info.distance, &cowboy_gun2, head))
+                    {
+                        lara_item->hit_points -= COWBOY_SHOT_DAMAGE;
+                        lara_item->hit_status = 1;
+                    }
+                }
+                else
+                {
+                    fx_number = CreatureEffect(item, &cowboy_gun2, GunShot);
+                    if (fx_number != NO_ITEM)
+                        effects[fx_number].pos.y_rot += head;
+                }
+            }
+            cowboy->flags++;
+
+            if (cowboy->mood == ESCAPE_MOOD)
+                item->required_anim_state = COWBOY_RUN;
+            break;
+        }
+    }
+
+    CreatureTilt(item, tilt);
+    CreatureHead(item, head);
+
+    CreatureAnimation(item_number, angle, 0);
 }
