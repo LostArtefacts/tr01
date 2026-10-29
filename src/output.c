@@ -4,6 +4,9 @@
 
 extern uint8 game_palette[256 * 3];
 
+#define DEPTHQ_END (20 * 1024)
+#define DEPTHQ_START ((DEPTHQ_END) - (8 * 1024))
+
 static sint16 shadowman[] = {
     0, 0, 0,
     32767,
@@ -207,4 +210,62 @@ void S_PrintShadow(sint16 size, sint16 *bptr, ITEM_INFO *iptr)
     if (calc_object_vertices(&shadowman[4]))
         ins_poly_trans8(vbuf, 24);
     phd_PopMatrix();
+}
+
+void S_CalculateLight(sint32 x, sint32 y, sint32 z, sint16 room_number)
+{
+    ROOM_INFO *r;
+    LIGHT_INFO *light;
+    PHD_ANGLE angles[2];
+    PHD_VECTOR ls, lc;
+    sint32 i, distance, falloff, shade, brightest, ambient;
+
+    r = &room[room_number];
+
+    if (r->num_lights == 0)
+    {
+        ls_adder = r->ambient;
+        ls_divider = 0;
+    }
+    else
+    {
+        ambient = 0x1fff - r->ambient;
+        brightest = 0;
+
+        for (i = r->num_lights, light = r->light; i > 0; i--, light++)
+        {
+            lc.x = x - light->x;
+            lc.y = y - light->y;
+            lc.z = z - light->z;
+
+            distance = (SQUARE(lc.x) + SQUARE(lc.y) + SQUARE(lc.z)) >> 12;
+            falloff = SQUARE(light->falloff) >> 12;
+
+            shade = (light->intensity * falloff) / (distance + falloff) + ambient;
+
+            if (shade > brightest)
+            {
+                brightest = shade;
+                ls = lc;
+            }
+        }
+
+        ls_adder = (brightest + ambient) / 2;
+        if (brightest != ambient)
+            ls_divider = (1 << (W2V_SHIFT + 12)) / (brightest - ls_adder);
+        else
+            ls_divider = 0;
+        ls_adder = 0x1fff - ls_adder;
+
+        phd_GetVectorAngles(ls.x, ls.y, ls.z, angles);
+        phd_RotateLight(angles[1], angles[0]);
+    }
+
+    distance = *(phd_mxptr + M23) >> W2V_SHIFT;
+    if (distance > DEPTHQ_START)
+    {
+        ls_adder += distance - DEPTHQ_START;
+        if (ls_adder > 0x1fff)
+            ls_adder = 0x1fff;
+    }
 }

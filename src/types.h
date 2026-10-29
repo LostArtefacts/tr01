@@ -62,4 +62,63 @@ typedef struct
     uint16 looked_at:1;
 } ITEM_INFO;
 
+typedef struct
+{
+    uint16 index;
+    sint16 box;
+    uint8 pit_room;
+    sint8 floor;
+    uint8 sky_room;
+    sint8 ceiling;
+} FLOOR_INFO;
+
+typedef struct
+{
+    sint32 x;
+    sint32 y;
+    sint32 z;
+    sint16 intensity;
+    sint32 falloff;
+} LIGHT_INFO;
+
+typedef struct
+{
+    sint32 x;
+    sint32 y;
+    sint32 z;
+    PHD_ANGLE y_rot;
+    sint16 shade;
+    sint16 static_number;
+} MESH_INFO;
+
+typedef struct
+{
+    sint16 *data;
+    sint16 *door;
+    FLOOR_INFO *floor;
+    LIGHT_INFO *light;
+    MESH_INFO *mesh;
+    sint32 x;
+    sint32 y;
+    sint32 z;
+    sint32 minfloor;
+    sint32 maxceiling;
+    sint16 x_size;
+    sint16 y_size;
+    sint16 ambient;
+    sint16 num_lights;
+    sint16 num_meshes;
+    sint16 left;
+    sint16 right;
+    sint16 top;
+    sint16 bottom;
+    sint16 bound_active;
+    sint16 item_number;
+    sint16 fx_number;
+    sint16 flipped_room;
+    uint16 flags;
+} ROOM_INFO;
+
+#define SQUARE(A) ((A) * (A))
+
 #endif

@@ -25,6 +25,9 @@ typedef struct
 
 #define phd_PopMatrix() phd_mxptr -= 12
 
+extern sint32 ls_adder;
+extern sint32 ls_divider;
+
 extern sint32 phd_left;
 extern sint32 phd_right;
 extern sint32 phd_top;
@@ -40,9 +43,11 @@ extern sint32 *phd_mxptr;
 
 extern PHD_VBUF vbuf[];
 
+void phd_GetVectorAngles(sint32 x, sint32 y, sint32 z, PHD_ANGLE *dest);
 void phd_PushMatrix(void);
 void phd_RotY(PHD_ANGLE ry);
 void phd_TranslateAbs(sint32 x, sint32 y, sint32 z);
+void phd_RotateLight(PHD_ANGLE pitch, PHD_ANGLE yaw);
 sint16 *calc_object_vertices(sint16 *objptr);
 int ins_poly_trans8(PHD_VBUF *v, sint16 shade);
 void phd_InitPolyList(void);

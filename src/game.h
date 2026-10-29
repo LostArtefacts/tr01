@@ -6,5 +6,6 @@
 #define TITLE 20
 
 extern int CurrentLevel;
+extern ROOM_INFO *room;
 
 #endif
