@@ -301,3 +301,8 @@ void finish_level_effect(ITEM_INFO *item)
 {
     level_complete = 1;
 }
+
+void turn180_effect(ITEM_INFO *item)
+{
+    item->pos.y_rot -= 32768;
+}
