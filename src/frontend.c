@@ -173,3 +173,18 @@ void S_FinishInventory(void)
     if (Inventory_Mode != INV_TITLE_MODE)
         TempVideoRemove();
 }
+
+void S_FadeToBlack(void)
+{
+    int i;
+    uint8 *p;
+
+    for (i = 0, p = game_palette; i < 256 * 3; i++, p++)
+        *p = 0;
+
+    FadeToPal(20, game_palette);
+    FadeWait();
+
+    ScreenClear();
+    ScreenDump();
+}

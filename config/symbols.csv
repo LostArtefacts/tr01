@@ -207,7 +207,7 @@ address,size,name,symbol
 0x0001f928,290,S_DrawScreenBox,S_DrawScreenBox_
 0x0001fa4c,120,S_DrawScreenFBox,S_DrawScreenFBox_
 0x0001fac4,18,S_FinishInventory,S_FinishInventory_
-0x0001fad8,52,S_FadeToBlack,S_FadeToBlack_
+0x0001fad8,53,S_FadeToBlack,S_FadeToBlack_
 0x0001fb0c,1,Func1fb0c,
 0x0001fb10,82,Func1fb10,
 0x0001fb64,491,Func1fb64,
@@ -741,7 +741,7 @@ address,size,name,symbol
 0x00045b0c,85,Func45b0c,
 0x00045b64,66,Func45b64,
 0x00045ba8,88,FadeToPal,FadeToPal_
-0x00045c00,19,Func45c00,
+0x00045c00,19,FadeWait,FadeWait_
 0x00045c14,74,Func45c14,
 0x00045c60,78,Func45c60,
 0x00045cb0,131,Func45cb0,

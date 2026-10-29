@@ -52,5 +52,6 @@ void ScreenDump(void);
 void ScreenPartialDump(void);
 void TempVideoRemove(void);
 void FadeToPal(int count, uint8 *pal);
+void FadeWait(void);
 
 #endif
