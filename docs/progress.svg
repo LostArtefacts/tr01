@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">3.63% (28)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">96.37% (743)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">3.76% (29)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">96.24% (742)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="27.13" height="6" x="0" y="0" class="named"/>
-<rect width="719.87" height="6" x="27.13" y="0" class="todo"/>
+<rect width="28.10" height="6" x="0" y="0" class="named"/>
+<rect width="718.90" height="6" x="28.10" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -95,8 +95,8 @@
 <rect width="12" height="12" x="375" y="0" class="named"><title>0x00011c30 StalkBox (252 bytes)</title></rect>
 <rect width="12" height="12" x="390" y="0" class="named"><title>0x00011d2c EscapeBox (184 bytes)</title></rect>
 <rect width="12" height="12" x="405" y="0" class="named"><title>0x00011de4 ValidBox (157 bytes)</title></rect>
-<rect width="12" height="12" x="420" y="0" class="todo"><title>0x00011eb4 CreatureMood (1096 bytes)</title></rect>
-<rect width="12" height="12" x="435" y="0" class="todo"><title>0x000122fc Func122fc (1120 bytes)</title></rect>
+<rect width="12" height="12" x="420" y="0" class="named"><title>0x00011eb4 CreatureMood (1096 bytes)</title></rect>
+<rect width="12" height="12" x="435" y="0" class="todo"><title>0x000122fc CalculateTarget (1120 bytes)</title></rect>
 <rect width="12" height="12" x="450" y="0" class="todo"><title>0x0001275c Func1275c (224 bytes)</title></rect>
 <rect width="12" height="12" x="465" y="0" class="todo"><title>0x0001283c Func1283c (211 bytes)</title></rect>
 <rect width="12" height="12" x="480" y="0" class="todo"><title>0x00012910 CreatureAnimation (2734 bytes)</title></rect>
@@ -842,10 +842,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">3.80%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">96.20%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">4.34%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">95.66%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="28.36" height="6" x="0" y="0" class="named"/>
-<rect width="718.64" height="6" x="28.36" y="0" class="todo"/>
+<rect width="32.42" height="6" x="0" y="0" class="named"/>
+<rect width="714.58" height="6" x="32.42" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="54.65" height="67.43" x="0" y="0" class="todo"><title>0x0001bc98 Func1bc98 (4489 bytes)</title></rect>
@@ -877,10 +877,10 @@
 <rect width="28.31" height="31.12" x="177.62" y="110.81" class="todo"><title>0x000319ec Func319ec (1181 bytes)</title></rect>
 <rect width="28.31" height="30.28" x="177.62" y="144.93" class="todo"><title>0x00031fcc Func31fcc (1152 bytes)</title></rect>
 <rect width="28.31" height="29.44" x="177.62" y="178.21" class="todo"><title>0x00013af0 Func13af0 (1123 bytes)</title></rect>
-<rect width="28.31" height="29.35" x="177.62" y="210.65" class="todo"><title>0x000122fc Func122fc (1120 bytes)</title></rect>
+<rect width="28.31" height="29.35" x="177.62" y="210.65" class="todo"><title>0x000122fc CalculateTarget (1120 bytes)</title></rect>
 <rect width="29.37" height="27.93" x="208.93" y="0" class="todo"><title>0x0003e7c8 Func3e7c8 (1107 bytes)</title></rect>
 <rect width="29.37" height="27.68" x="208.93" y="30.93" class="todo"><title>0x00035574 Func35574 (1098 bytes)</title></rect>
-<rect width="29.37" height="27.63" x="208.93" y="61.62" class="todo"><title>0x00011eb4 CreatureMood (1096 bytes)</title></rect>
+<rect width="29.37" height="27.63" x="208.93" y="61.62" class="named"><title>0x00011eb4 CreatureMood (1096 bytes)</title></rect>
 <rect width="29.37" height="27.51" x="208.93" y="92.24" class="todo"><title>0x0003fb5c Func3fb5c (1092 bytes)</title></rect>
 <rect width="29.37" height="27.46" x="208.93" y="122.76" class="todo"><title>0x0001e8cc Func1e8cc (1090 bytes)</title></rect>
 <rect width="29.37" height="27.38" x="208.93" y="153.22" class="named"><title>0x000111e8 BearControl (1087 bytes)</title></rect>

@@ -146,6 +146,20 @@ typedef struct
 
 typedef struct
 {
+    PHD_3DPOS pos;
+    sint16 room_number;
+    sint16 object_number;
+    sint16 next_fx;
+    sint16 next_active;
+    sint16 speed;
+    sint16 fallspeed;
+    sint16 frame_number;
+    sint16 counter;
+    sint16 shade;
+} FX_INFO;
+
+typedef struct
+{
     sint16 nmeshes;
     sint16 mesh_index;
     sint32 bone_index;

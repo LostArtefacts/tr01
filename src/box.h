@@ -92,6 +92,13 @@ extern sint16 *ground_zone[2];
 extern sint16 *ground_zone2[2];
 extern sint16 *fly_zone[2];
 
+typedef enum
+{
+    NO_TARGET,
+    PRIME_TARGET,
+    SECONDARY_TARGET
+} TARGET_TYPE;
+
 void InitialiseCreature(sint16 item_number);
 int SearchLOT(LOT_INFO *LOT, int expansion);
 int UpdateLOT(LOT_INFO *LOT, int expansion);
@@ -101,6 +108,7 @@ int EscapeBox(ITEM_INFO *item, sint16 box_number);
 int ValidBox(ITEM_INFO *item, sint16 zone_number, sint16 box_number);
 void CreatureAIInfo(ITEM_INFO *item, AI_INFO *info);
 void CreatureMood(ITEM_INFO *item, AI_INFO *info, int violent);
+TARGET_TYPE CalculateTarget(PHD_VECTOR *target, ITEM_INFO *item, LOT_INFO *LOT);
 int CreatureAnimation(sint16 item_number, sint16 angle, sint16 tilt);
 sint16 CreatureTurn(ITEM_INFO *item, sint16 maximum_turn);
 void CreatureHead(ITEM_INFO *item, sint16 required);
