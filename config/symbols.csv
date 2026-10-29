@@ -1766,6 +1766,7 @@ address,size,name,symbol
 0x000c1894,4,fade_limit,_fade_limit
 0x000c1898,4,fade_adder,_fade_adder
 0x000c189c,4,mode_lock,_mode_lock
+0x000c18a0,24,null_rotations,_null_rotations
 0x000c18b8,,effect_routines,_effect_routines
 0x000c1988,4,CurrentLevel,_CurrentLevel
 0x000c198c,4,level_complete,_level_complete
@@ -1814,6 +1815,7 @@ address,size,name,symbol
 0x000cc064,4,IM_frac,_IM_frac
 0x000cc068,4,camera_underwater,_camera_underwater
 0x000cc06c,4,anims,_anims
+0x000cc070,4,bones,_bones
 0x000cc074,4,meshes,_meshes
 0x000cc078,4,commands,_commands
 0x000cc07c,4,ranges,_ranges

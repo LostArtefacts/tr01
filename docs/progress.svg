@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">18.48% (143)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">81.52% (631)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">18.60% (144)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">81.40% (630)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="138.01" height="6" x="0" y="0" class="named"/>
-<rect width="608.99" height="6" x="138.01" y="0" class="todo"/>
+<rect width="138.98" height="6" x="0" y="0" class="named"/>
+<rect width="608.02" height="6" x="138.98" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -193,7 +193,7 @@
 <rect width="12" height="12" x="345" y="30" class="named"><title>0x0001a958 PrintRooms (452 bytes)</title></rect>
 <rect width="12" height="12" x="360" y="30" class="named"><title>0x0001ab1c DrawEffect (270 bytes)</title></rect>
 <rect width="12" height="12" x="375" y="30" class="named"><title>0x0001ac2c DrawSpriteItem (69 bytes)</title></rect>
-<rect width="12" height="12" x="390" y="30" class="todo"><title>0x0001ac74 DrawAnimatingItem (1417 bytes)</title></rect>
+<rect width="12" height="12" x="390" y="30" class="named"><title>0x0001ac74 DrawAnimatingItem (1417 bytes)</title></rect>
 <rect width="12" height="12" x="405" y="30" class="todo"><title>0x0001b224 DrawLara (2294 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="30" class="named"><title>0x0001bb1c DrawGunFlash (124 bytes)</title></rect>
 <rect width="12" height="12" x="435" y="30" class="named"><title>0x0001bb98 CalculateObjectLighting (233 bytes)</title></rect>
@@ -845,10 +845,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">20.95%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">79.05%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">21.64%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">78.36%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="156.46" height="6" x="0" y="0" class="named"/>
-<rect width="590.54" height="6" x="156.46" y="0" class="todo"/>
+<rect width="161.65" height="6" x="0" y="0" class="named"/>
+<rect width="585.35" height="6" x="161.65" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="todo"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -868,7 +868,7 @@
 <rect width="33.02" height="34.12" x="104.14" y="170.03" class="todo"><title>0x00031414 Func31414 (1496 bytes)</title></rect>
 <rect width="33.02" height="32.85" x="104.14" y="207.15" class="named"><title>0x000158a8 CollideStaticObjects (1445 bytes)</title></rect>
 <rect width="32.36" height="33.30" x="140.16" y="0" class="todo"><title>0x00042910 ins_poly_trans8 (1436 bytes)</title></rect>
-<rect width="32.36" height="32.82" x="140.16" y="36.30" class="todo"><title>0x0001ac74 DrawAnimatingItem (1417 bytes)</title></rect>
+<rect width="32.36" height="32.82" x="140.16" y="36.30" class="named"><title>0x0001ac74 DrawAnimatingItem (1417 bytes)</title></rect>
 <rect width="32.36" height="32.69" x="140.16" y="72.12" class="todo"><title>0x000304f8 Func304f8 (1412 bytes)</title></rect>
 <rect width="32.36" height="32.24" x="140.16" y="107.81" class="todo"><title>0x0002f5bc Func2f5bc (1394 bytes)</title></rect>
 <rect width="32.36" height="30.77" x="140.16" y="143.05" class="todo"><title>0x0002d2b4 SoundEffect (1336 bytes)</title></rect>
