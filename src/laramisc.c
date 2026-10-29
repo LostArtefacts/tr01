@@ -515,6 +515,82 @@ void InitialiseEvilLara(sint16 item_num)
     items[item_num].data = NULL;
 }
 
+void ControlEvilLara(sint16 item_num)
+{
+    ITEM_INFO *item, *litem;
+    FLOOR_INFO *floor;
+    sint32 h, lh;
+    sint32 x, y, z;
+    sint16 room_num;
+
+    item = &items[item_num];
+    litem = lara_item;
+
+    if (item->hit_points < 1000)
+    {
+        litem->hit_points -= (1000 - item->hit_points) * 10;
+        item->hit_points = 1000;
+    }
+    if (item->data == NULL)
+    {
+        room_num = item->room_number;
+        x = 2 * 36 * WALL_L - litem->pos.x_pos;
+        y = litem->pos.y_pos;
+        z = 2 * 60 * WALL_L - litem->pos.z_pos;
+        floor = GetFloor(x, y, z, &room_num);
+        h = GetHeight(floor, x, y, z);
+        item->floor = h;
+        room_num = litem->room_number;
+        floor = GetFloor(litem->pos.x_pos, litem->pos.y_pos, litem->pos.z_pos, &room_num);
+        lh = GetHeight(floor, litem->pos.x_pos, litem->pos.y_pos, litem->pos.z_pos);
+        item->frame_number = litem->frame_number;
+        item->anim_number = litem->anim_number;
+        item->pos.x_pos = x;
+        item->pos.y_pos = y;
+        item->pos.z_pos = z;
+        item->pos.x_rot = litem->pos.x_rot;
+        item->pos.y_rot = litem->pos.y_rot - 32768;
+        item->pos.z_rot = litem->pos.z_rot;
+        ItemNewRoom(item_num, litem->room_number);
+
+        if (h >= lh + WALL_L && !litem->gravity_status)
+        {
+            item->goal_anim_state = AS_FASTFALL;
+            item->current_anim_state = AS_FASTFALL;
+            item->frame_number = FASTFALL_F;
+            item->anim_number = FASTFALL_A;
+            item->gravity_status = 1;
+            item->fallspeed = 0;
+            item->speed = 0;
+            item->data = (void *)-1;
+            item->pos.y_pos += 50;
+        }
+    }
+    if (item->data)
+    {
+        AnimateItem(item);
+        room_num = item->room_number;
+        x = item->pos.x_pos;
+        y = item->pos.y_pos;
+        z = item->pos.z_pos;
+        floor = GetFloor(x, y, z, &room_num);
+        h = GetHeight(floor, x, y, z);
+        item->floor = h;
+        TestTriggers(trigger_index, 1);
+        if (item->pos.y_pos >= h)
+        {
+            item->floor = item->pos.y_pos = h;
+            floor = GetFloor(x, h, z, &room_num);
+            GetHeight(floor, x, h, z);
+            TestTriggers(trigger_index, 1);
+            item->gravity_status = 0;
+            item->fallspeed = 0;
+            item->goal_anim_state = AS_DEATH;
+            item->required_anim_state = AS_DEATH;
+        }
+    }
+}
+
 void lara_as_walk(ITEM_INFO *item, COLL_INFO *coll);
 void lara_as_run(ITEM_INFO *item, COLL_INFO *coll);
 void lara_as_stop(ITEM_INFO *item, COLL_INFO *coll);
