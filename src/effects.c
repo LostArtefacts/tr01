@@ -420,3 +420,20 @@ void SandFX(ITEM_INFO *item)
     }
     fliptimer++;
 }
+
+void PowerUpFX(ITEM_INFO *item)
+{
+    PHD_3DPOS pos;
+
+    if (fliptimer > 30 * 4)
+        flipeffect = -1;
+    else
+    {
+        pos.x_pos = camera.target.x;
+        pos.y_pos = camera.target.y + fliptimer * 100;
+        pos.z_pos = camera.target.z;
+
+        SoundEffect(155, &pos, NULL);
+    }
+    fliptimer++;
+}

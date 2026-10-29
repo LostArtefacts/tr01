@@ -171,7 +171,7 @@ address,size,name,symbol
 0x0001e064,72,ChainBlockFX,ChainBlockFX_
 0x0001e0ac,44,Stairs2SlopeFX,Stairs2SlopeFX_
 0x0001e0d8,122,SandFX,SandFX_
-0x0001e154,100,Func1e154,
+0x0001e154,100,PowerUpFX,PowerUpFX_
 0x0001e1b8,41,Func1e1b8,
 0x0001e1e4,65,Func1e1e4,
 0x0001e228,12,Func1e228,
