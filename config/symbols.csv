@@ -9,7 +9,7 @@ address,size,name,symbol
 0x000104a8,401,S_CalculateLight,S_CalculateLight_
 0x0001063c,41,S_CalculateStaticLight,S_CalculateStaticLight_
 0x00010668,465,S_DrawHealthBar,S_DrawHealthBar_
-0x0001083c,450,Func1083c,
+0x0001083c,450,S_DrawAirBar,S_DrawAirBar_
 0x00010a00,161,Func10a00,
 0x00010aa4,74,Func10aa4,
 0x00010af0,16,Func10af0,
@@ -1738,6 +1738,7 @@ address,size,name,symbol
 0x0008fa3b,3,Func8fa3b,
 0x000c17a4,60,shadowman,_shadowman
 0x000c1988,4,CurrentLevel,_CurrentLevel
+0x000c2090,24,game_setup,_game_setup
 0x000cac70,768,game_palette,_game_palette
 0x000cc088,4,room,_room
 0x000d4744,48000,vbuf,_vbuf

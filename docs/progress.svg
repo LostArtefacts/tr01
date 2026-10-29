@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">1.30% (10)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">98.70% (760)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">1.43% (11)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">98.57% (759)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="9.70" height="6" x="0" y="0" class="named"/>
-<rect width="737.30" height="6" x="9.70" y="0" class="todo"/>
+<rect width="10.67" height="6" x="0" y="0" class="named"/>
+<rect width="736.33" height="6" x="10.67" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -77,7 +77,7 @@
 <rect width="12" height="12" x="105" y="0" class="named"><title>0x000104a8 S_CalculateLight (401 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="0" class="named"><title>0x0001063c S_CalculateStaticLight (41 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="0" class="named"><title>0x00010668 S_DrawHealthBar (465 bytes)</title></rect>
-<rect width="12" height="12" x="150" y="0" class="todo"><title>0x0001083c Func1083c (450 bytes)</title></rect>
+<rect width="12" height="12" x="150" y="0" class="named"><title>0x0001083c S_DrawAirBar (450 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="0" class="todo"><title>0x00010a00 Func10a00 (161 bytes)</title></rect>
 <rect width="12" height="12" x="180" y="0" class="todo"><title>0x00010aa4 Func10aa4 (74 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="0" class="todo"><title>0x00010af0 Func10af0 (16 bytes)</title></rect>
@@ -841,10 +841,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">1.03%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">98.97%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">1.26%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">98.74%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="7.71" height="6" x="0" y="0" class="named"/>
-<rect width="739.29" height="6" x="7.71" y="0" class="todo"/>
+<rect width="9.39" height="6" x="0" y="0" class="named"/>
+<rect width="737.61" height="6" x="9.39" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="54.96" height="67.43" x="0" y="0" class="todo"><title>0x0001bc98 Func1bc98 (4489 bytes)</title></rect>
@@ -966,7 +966,7 @@
 <rect width="17.71" height="16.89" x="413.38" y="203.26" class="todo"><title>0x0002a27c Func2a27c (453 bytes)</title></rect>
 <rect width="17.71" height="16.85" x="413.38" y="223.15" class="todo"><title>0x0001a958 Func1a958 (452 bytes)</title></rect>
 <rect width="16.78" height="17.73" x="434.09" y="0" class="todo"><title>0x00029f64 Func29f64 (451 bytes)</title></rect>
-<rect width="16.78" height="17.69" x="434.09" y="20.73" class="todo"><title>0x0001083c Func1083c (450 bytes)</title></rect>
+<rect width="16.78" height="17.69" x="434.09" y="20.73" class="named"><title>0x0001083c S_DrawAirBar (450 bytes)</title></rect>
 <rect width="16.78" height="17.64" x="434.09" y="41.42" class="todo"><title>0x0002aa58 Func2aa58 (449 bytes)</title></rect>
 <rect width="16.78" height="17.59" x="434.09" y="62.06" class="todo"><title>0x000430fc Func430fc (448 bytes)</title></rect>
 <rect width="16.78" height="17.50" x="434.09" y="82.65" class="todo"><title>0x00024870 Func24870 (446 bytes)</title></rect>

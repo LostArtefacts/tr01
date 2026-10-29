@@ -3,6 +3,17 @@
 
 #include "types.h"
 
+typedef struct
+{
+    short sc_width, sc_height;
+    short mx_sense, my_sense, ms_dthresh;
+    void *scrn_ptr;
+    short col_mode;
+    short dump_x, dump_y, dump_width, dump_height;
+} SETUP;
+
+extern SETUP game_setup;
+
 extern sint32 clock_ticks;
 extern sint32 old_clock_ticks;
 

@@ -11,6 +11,10 @@ extern uint8 game_palette[256 * 3];
 #define HealthBarY 6
 #define HealthBarW 100
 
+#define AirBarX (game_setup.dump_width - 110)
+#define AirBarY 6
+#define AirBarW 100
+
 static sint16 shadowman[] = {
     0, 0, 0,
     32767,
@@ -311,5 +315,36 @@ void S_DrawHealthBar(int percent)
         Insert2DLine(x, y + 4, x + w, y + 4, -400, 8);
         Insert2DLine(x, y + 5, x + w, y + 5, -400, 6);
         Insert2DLine(x, y + 6, x + w, y + 6, -400, 24);
+    }
+}
+
+void S_DrawAirBar(int percent)
+{
+    int x, y;
+    int w;
+
+    x = AirBarX;
+    y = AirBarY;
+    w = (percent * AirBarW) / 100;
+
+    Insert2DLine(x - 1, y + 1, x + AirBarW + 1, y + 1, -100, 0);
+    Insert2DLine(x - 1, y + 2, x + AirBarW + 1, y + 2, -100, 0);
+    Insert2DLine(x - 1, y + 3, x + AirBarW + 1, y + 3, -100, 0);
+    Insert2DLine(x - 1, y + 4, x + AirBarW + 1, y + 4, -100, 0);
+    Insert2DLine(x - 1, y + 5, x + AirBarW + 1, y + 5, -100, 0);
+    Insert2DLine(x - 1, y + 6, x + AirBarW + 1, y + 6, -100, 0);
+    Insert2DLine(x - 1, y + 7, x + AirBarW + 1, y + 7, -100, 0);
+
+    Insert2DLine(x - 2, y + 8, x + AirBarW + 2, y + 8, -200, 17);
+    Insert2DLine(x + AirBarW + 2, y, x + AirBarW + 2, y + 8, -200, 17);
+    Insert2DLine(x - 2, y, x + AirBarW + 2, y, -300, 19);
+    Insert2DLine(x - 2, y, x - 2, y + 8, -300, 19);
+    if (percent > 0)
+    {
+        Insert2DLine(x, y + 2, x + w, y + 2, -400, 32);
+        Insert2DLine(x, y + 3, x + w, y + 3, -400, 41);
+        Insert2DLine(x, y + 4, x + w, y + 4, -400, 32);
+        Insert2DLine(x, y + 5, x + w, y + 5, -400, 19);
+        Insert2DLine(x, y + 6, x + w, y + 6, -400, 21);
     }
 }
