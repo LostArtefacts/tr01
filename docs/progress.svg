@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">21.45% (166)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">78.55% (608)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">21.58% (167)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">78.42% (607)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="160.21" height="6" x="0" y="0" class="named"/>
-<rect width="586.79" height="6" x="160.21" y="0" class="todo"/>
+<rect width="161.17" height="6" x="0" y="0" class="named"/>
+<rect width="585.83" height="6" x="161.17" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -235,7 +235,7 @@
 <rect width="12" height="12" x="225" y="45" class="named"><title>0x0001df20 lara_normal_effect (42 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="45" class="named"><title>0x0001df4c EarthQuakeFX (120 bytes)</title></rect>
 <rect width="12" height="12" x="255" y="45" class="named"><title>0x0001dfc4 FloodFX (127 bytes)</title></rect>
-<rect width="12" height="12" x="270" y="45" class="todo"><title>0x0001e044 Func1e044 (29 bytes)</title></rect>
+<rect width="12" height="12" x="270" y="45" class="named"><title>0x0001e044 RaisingBlockFX (29 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="45" class="todo"><title>0x0001e064 Func1e064 (72 bytes)</title></rect>
 <rect width="12" height="12" x="300" y="45" class="todo"><title>0x0001e0ac Stairs2SlopeFX (44 bytes)</title></rect>
 <rect width="12" height="12" x="315" y="45" class="todo"><title>0x0001e0d8 Func1e0d8 (122 bytes)</title></rect>
@@ -845,10 +845,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">26.24%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">73.76%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">26.26%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">73.74%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="196.02" height="6" x="0" y="0" class="named"/>
-<rect width="550.98" height="6" x="196.02" y="0" class="todo"/>
+<rect width="196.13" height="6" x="0" y="0" class="named"/>
+<rect width="550.87" height="6" x="196.13" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1528,7 +1528,7 @@
 <rect width="2.64" height="1.91" x="728.34" y="204" class="todo"><title>0x000245a8 Func245a8 (31 bytes)</title></rect>
 <rect width="2.46" height="1.91" x="733.98" y="204" class="todo"><title>0x0004564d phd_PushMatrix (30 bytes)</title></rect>
 <rect width="2.28" height="1.91" x="739.44" y="204" class="named"><title>0x0001d00c phd_PutPolygons_I (29 bytes)</title></rect>
-<rect width="2.28" height="1.91" x="744.72" y="204" class="todo"><title>0x0001e044 Func1e044 (29 bytes)</title></rect>
+<rect width="2.28" height="1.91" x="744.72" y="204" class="named"><title>0x0001e044 RaisingBlockFX (29 bytes)</title></rect>
 <rect width="2.22" height="1.97" x="711.04" y="208.91" class="todo"><title>0x00020414 GetRandomControl (29 bytes)</title></rect>
 <rect width="2.22" height="1.97" x="711.04" y="213.87" class="todo"><title>0x0002043c GetRandomDraw (29 bytes)</title></rect>
 <rect width="2.22" height="1.97" x="711.04" y="218.84" class="todo"><title>0x000245ec Func245ec (29 bytes)</title></rect>

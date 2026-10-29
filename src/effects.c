@@ -371,3 +371,9 @@ void FloodFX(ITEM_INFO *item)
     }
     fliptimer++;
 }
+
+void RaisingBlockFX(ITEM_INFO *item)
+{
+    SoundEffect(117, NULL, NULL);
+    flipeffect = -1;
+}
