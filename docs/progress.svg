@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">69.40% (551)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">30.60% (243)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">69.52% (552)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">30.48% (242)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="518.38" height="6" x="0" y="0" class="named"/>
-<rect width="228.62" height="6" x="518.38" y="0" class="todo"/>
+<rect width="519.32" height="6" x="0" y="0" class="named"/>
+<rect width="227.68" height="6" x="519.32" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -618,7 +618,7 @@
 <rect width="12" height="12" x="720" y="150" class="named"><title>0x00032500 GunShot (124 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="150" class="named"><title>0x0003257c GunHit (182 bytes)</title></rect>
 <rect width="12" height="12" x="0" y="165" class="named"><title>0x00032634 GunMiss (150 bytes)</title></rect>
-<rect width="12" height="12" x="15" y="165" class="todo"><title>0x000326cc Func326cc (131 bytes)</title></rect>
+<rect width="12" height="12" x="15" y="165" class="named"><title>0x000326cc ShotLara (131 bytes)</title></rect>
 <rect width="12" height="12" x="30" y="165" class="todo"><title>0x00032f8c Func32f8c (261 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="165" class="todo"><title>0x0003340c Func3340c (35 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="165" class="todo"><title>0x000336dc Func336dc (114 bytes)</title></rect>
@@ -865,10 +865,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">66.60%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">33.40%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">66.66%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">33.34%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="497.51" height="6" x="0" y="0" class="named"/>
-<rect width="249.49" height="6" x="497.51" y="0" class="todo"/>
+<rect width="497.98" height="6" x="0" y="0" class="named"/>
+<rect width="249.02" height="6" x="497.98" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.01" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1242,7 +1242,7 @@
 <rect width="7.59" height="7.96" x="635.55" y="95.08" class="named"><title>0x0001e23c draw_right_gun (132 bytes)</title></rect>
 <rect width="7.59" height="7.96" x="646.14" y="95.08" class="todo"><title>0x0003da50 Func3da50 (132 bytes)</title></rect>
 <rect width="7.51" height="7.96" x="656.72" y="95.08" class="named"><title>0x00030090 CabinControl (131 bytes)</title></rect>
-<rect width="7.51" height="7.96" x="667.23" y="95.08" class="todo"><title>0x000326cc Func326cc (131 bytes)</title></rect>
+<rect width="7.51" height="7.96" x="667.23" y="95.08" class="named"><title>0x000326cc ShotLara (131 bytes)</title></rect>
 <rect width="7.51" height="7.96" x="677.74" y="95.08" class="todo"><title>0x00045cb0 Func45cb0 (131 bytes)</title></rect>
 <rect width="7.43" height="7.96" x="688.24" y="95.08" class="named"><title>0x000208a0 S_LoadGame (130 bytes)</title></rect>
 <rect width="7.35" height="7.96" x="698.67" y="95.08" class="named"><title>0x00027280 lara_col_swandive (129 bytes)</title></rect>

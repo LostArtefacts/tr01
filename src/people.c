@@ -1,6 +1,7 @@
 #include "game.h"
 
 #define PEOPLE_SHOOT_RANGE SQUARE(WALL_L * 7)
+#define PEOPLE_MISS_CHANCE 0x2000
 
 int Targetable(ITEM_INFO *item, AI_INFO *info)
 {
@@ -86,4 +87,28 @@ sint16 GunMiss(sint32 x, sint32 y, sint32 z, sint16 speed, PHD_ANGLE yrot, sint1
     Richochet(&pos);
 
     return GunShot(x, y, z, speed, yrot, room_number);
+}
+
+int ShotLara(ITEM_INFO *item, sint32 distance, BITE_INFO *gun, sint16 extra_rotation)
+{
+    int hit, random;
+    sint16 fx_number;
+
+    if (distance > PEOPLE_SHOOT_RANGE)
+        hit = 0;
+    else
+    {
+        random = (PEOPLE_SHOOT_RANGE - distance) / (PEOPLE_SHOOT_RANGE / 0x7fff) - PEOPLE_MISS_CHANCE;
+        hit = (GetRandomControl() < random);
+    }
+
+    if (hit)
+        fx_number = CreatureEffect(item, gun, GunHit);
+    else
+        fx_number = CreatureEffect(item, gun, GunMiss);
+
+    if (fx_number != NO_ITEM)
+        effects[fx_number].pos.y_rot += extra_rotation;
+
+    return hit;
 }
