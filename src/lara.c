@@ -486,3 +486,11 @@ void lara_as_stepleft(ITEM_INFO *item, COLL_INFO *coll)
             lara.turn_rate = LARA_SLOW_TURN;
     }
 }
+
+void lara_as_slide(ITEM_INFO *item, COLL_INFO *coll)
+{
+    camera.flags = NO_CHUNKY;
+    camera.target_elevation = -45 * ONE_DEGREE;
+    if (input & IN_JUMP)
+        item->goal_anim_state = AS_FORWARDJUMP;
+}
