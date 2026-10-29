@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">14.99% (116)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">85.01% (658)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">15.12% (117)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">84.88% (657)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="111.95" height="6" x="0" y="0" class="named"/>
-<rect width="635.05" height="6" x="111.95" y="0" class="todo"/>
+<rect width="112.92" height="6" x="0" y="0" class="named"/>
+<rect width="634.08" height="6" x="112.92" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -184,7 +184,7 @@
 <rect width="12" height="12" x="210" y="30" class="named"><title>0x0001a20c S_CopyBufferToScreen (145 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="30" class="named"><title>0x0001a2a0 S_NoFade (20 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="30" class="named"><title>0x0001a2b4 S_FadeInInventory (51 bytes)</title></rect>
-<rect width="12" height="12" x="255" y="30" class="todo"><title>0x0001a2e8 S_FadeOutInventory (44 bytes)</title></rect>
+<rect width="12" height="12" x="255" y="30" class="named"><title>0x0001a2e8 S_FadeOutInventory (44 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="30" class="todo"><title>0x0001a320 DrawPhaseCinematic (148 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="30" class="todo"><title>0x0001a3b4 Func1a3b4 (49 bytes)</title></rect>
 <rect width="12" height="12" x="300" y="30" class="todo"><title>0x0001a3e8 Func1a3e8 (278 bytes)</title></rect>
@@ -845,10 +845,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">18.75%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">81.25%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">18.77%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">81.23%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="140.08" height="6" x="0" y="0" class="named"/>
-<rect width="606.92" height="6" x="140.08" y="0" class="todo"/>
+<rect width="140.24" height="6" x="0" y="0" class="named"/>
+<rect width="606.76" height="6" x="140.24" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="todo"><title>0x0001bc98 Func1bc98 (4489 bytes)</title></rect>
@@ -1461,7 +1461,7 @@
 <rect width="3.42" height="3.27" x="687.20" y="212.07" class="todo"><title>0x00042f88 Func42f88 (45 bytes)</title></rect>
 <rect width="3.42" height="3.27" x="687.20" y="218.34" class="todo"><title>0x00042fb8 Func42fb8 (45 bytes)</title></rect>
 <rect width="3.42" height="3.13" x="687.20" y="224.61" class="named"><title>0x0001347c CreatureTilt (44 bytes)</title></rect>
-<rect width="3.42" height="3.13" x="687.20" y="230.74" class="todo"><title>0x0001a2e8 S_FadeOutInventory (44 bytes)</title></rect>
+<rect width="3.42" height="3.13" x="687.20" y="230.74" class="named"><title>0x0001a2e8 S_FadeOutInventory (44 bytes)</title></rect>
 <rect width="3.42" height="3.13" x="687.20" y="236.87" class="todo"><title>0x0001ceb8 Func1ceb8 (44 bytes)</title></rect>
 <rect width="3.39" height="3.15" x="693.61" y="180.73" class="todo"><title>0x0001cee4 Func1cee4 (44 bytes)</title></rect>
 <rect width="3.39" height="3.15" x="700.01" y="180.73" class="todo"><title>0x0001cf10 Func1cf10 (44 bytes)</title></rect>
