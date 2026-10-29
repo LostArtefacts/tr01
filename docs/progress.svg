@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">60.30% (477)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">39.70% (314)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">60.43% (478)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">39.57% (313)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="450.47" height="6" x="0" y="0" class="named"/>
-<rect width="296.53" height="6" x="450.47" y="0" class="todo"/>
+<rect width="451.41" height="6" x="0" y="0" class="named"/>
+<rect width="295.59" height="6" x="451.41" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -545,7 +545,7 @@
 <rect width="12" height="12" x="375" y="135" class="named"><title>0x0002ccfc DisableBaddieAI (49 bytes)</title></rect>
 <rect width="12" height="12" x="390" y="135" class="named"><title>0x0002cd30 EnableBaddieAI (472 bytes)</title></rect>
 <rect width="12" height="12" x="405" y="135" class="named"><title>0x0002cf08 InitialiseSlot (247 bytes)</title></rect>
-<rect width="12" height="12" x="420" y="135" class="todo"><title>0x0002d000 CreateZone (284 bytes)</title></rect>
+<rect width="12" height="12" x="420" y="135" class="named"><title>0x0002d000 CreateZone (284 bytes)</title></rect>
 <rect width="12" height="12" x="435" y="135" class="todo"><title>0x0002d11c InitialiseLOT (39 bytes)</title></rect>
 <rect width="12" height="12" x="450" y="135" class="todo"><title>0x0002d144 ClearLOT (87 bytes)</title></rect>
 <rect width="12" height="12" x="465" y="135" class="todo"><title>0x0002d1a0 Func2d1a0 (273 bytes)</title></rect>
@@ -862,10 +862,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">55.47%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">44.53%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">55.61%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">44.39%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="414.37" height="6" x="0" y="0" class="named"/>
-<rect width="332.63" height="6" x="414.37" y="0" class="todo"/>
+<rect width="415.40" height="6" x="0" y="0" class="named"/>
+<rect width="331.60" height="6" x="415.40" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.78" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1066,7 +1066,7 @@
 <rect width="13.46" height="12.80" x="508.49" y="196.08" class="todo"><title>0x0003b2d8 Func3b2d8 (292 bytes)</title></rect>
 <rect width="13.46" height="12.69" x="508.49" y="211.88" class="named"><title>0x0001f928 S_DrawScreenBox (290 bytes)</title></rect>
 <rect width="13.46" height="12.42" x="508.49" y="227.58" class="todo"><title>0x0003a698 Func3a698 (285 bytes)</title></rect>
-<rect width="13.57" height="12.27" x="524.95" y="16.54" class="todo"><title>0x0002d000 CreateZone (284 bytes)</title></rect>
+<rect width="13.57" height="12.27" x="524.95" y="16.54" class="named"><title>0x0002d000 CreateZone (284 bytes)</title></rect>
 <rect width="13.40" height="12.27" x="541.53" y="16.54" class="todo"><title>0x00039584 T_Print (281 bytes)</title></rect>
 <rect width="13.34" height="12.27" x="557.92" y="16.54" class="named"><title>0x00029070 LaraInitialiseMeshes (280 bytes)</title></rect>
 <rect width="13.28" height="12.27" x="574.26" y="16.54" class="named"><title>0x00014ae0 StartCinematic (279 bytes)</title></rect>
