@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">32.90% (256)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">67.10% (522)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">33.03% (257)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">66.97% (521)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="245.80" height="6" x="0" y="0" class="named"/>
-<rect width="501.20" height="6" x="245.80" y="0" class="todo"/>
+<rect width="246.76" height="6" x="0" y="0" class="named"/>
+<rect width="500.24" height="6" x="246.76" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -324,7 +324,7 @@
 <rect width="12" height="12" x="60" y="75" class="named"><title>0x00022d14 RingIsOpen (363 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="75" class="named"><title>0x00022e80 RingIsNotOpen (112 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="75" class="named"><title>0x00022ef0 RingNotActive (1763 bytes)</title></rect>
-<rect width="12" height="12" x="105" y="75" class="todo"><title>0x000235d4 RingActive (59 bytes)</title></rect>
+<rect width="12" height="12" x="105" y="75" class="named"><title>0x000235d4 RingActive (59 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="75" class="todo"><title>0x0002371c Inv_AddItem (1057 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="75" class="todo"><title>0x00023b40 Inv_InsertItem (383 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="75" class="todo"><title>0x00023cc0 Inv_RequestItem (124 bytes)</title></rect>
@@ -849,10 +849,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">36.81%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">63.19%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">36.84%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">63.16%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="274.95" height="6" x="0" y="0" class="named"/>
-<rect width="472.05" height="6" x="274.95" y="0" class="todo"/>
+<rect width="275.16" height="6" x="0" y="0" class="named"/>
+<rect width="471.84" height="6" x="275.16" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1396,7 +1396,7 @@
 <rect width="4.59" height="4.07" x="659.68" y="235.93" class="named"><title>0x00020530 GetSavedGamesList (60 bytes)</title></rect>
 <rect width="3.91" height="4.76" x="667.27" y="160.57" class="todo"><title>0x00026038 Func26038 (60 bytes)</title></rect>
 <rect width="3.91" height="4.76" x="667.27" y="168.33" class="todo"><title>0x00038bd4 Func38bd4 (60 bytes)</title></rect>
-<rect width="3.91" height="4.63" x="667.27" y="176.10" class="todo"><title>0x000235d4 RingActive (59 bytes)</title></rect>
+<rect width="3.91" height="4.63" x="667.27" y="176.10" class="named"><title>0x000235d4 RingActive (59 bytes)</title></rect>
 <rect width="3.91" height="4.63" x="667.27" y="183.73" class="todo"><title>0x000396a0 T_ChangeText (59 bytes)</title></rect>
 <rect width="3.91" height="4.51" x="667.27" y="191.37" class="named"><title>0x0001ce24 InitInterpolate (58 bytes)</title></rect>
 <rect width="3.91" height="4.51" x="667.27" y="198.87" class="todo"><title>0x00024284 Inv_RingLight (58 bytes)</title></rect>

@@ -349,3 +349,17 @@ void RingNotActive(INVENTORY_ITEM *inv_item)
         break;
     }
 }
+
+void RingActive(void)
+{
+    if (Inv_itemText[IT_NAME])
+    {
+        T_RemovePrint(Inv_itemText[IT_NAME]);
+        Inv_itemText[IT_NAME] = NULL;
+    }
+    if (Inv_itemText[IT_QTY])
+    {
+        T_RemovePrint(Inv_itemText[IT_QTY]);
+        Inv_itemText[IT_QTY] = NULL;
+    }
+}
