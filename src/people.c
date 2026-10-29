@@ -22,3 +22,19 @@ int Targetable(ITEM_INFO *item, AI_INFO *info)
 
     return 0;
 }
+
+void ControlGunShot(sint16 fx_number)
+{
+    FX_INFO *fx;
+
+    fx = &effects[fx_number];
+    fx->counter--;
+
+    if (!fx->counter)
+    {
+        KillEffect(fx_number);
+        return;
+    }
+
+    fx->pos.z_rot = (PHD_ANGLE)GetRandomControl();
+}

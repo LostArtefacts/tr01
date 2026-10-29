@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">68.89% (547)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">31.11% (247)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">69.02% (548)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">30.98% (246)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="514.62" height="6" x="0" y="0" class="named"/>
-<rect width="232.38" height="6" x="514.62" y="0" class="todo"/>
+<rect width="515.56" height="6" x="0" y="0" class="named"/>
+<rect width="231.44" height="6" x="515.56" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -614,7 +614,7 @@
 <rect width="12" height="12" x="660" y="150" class="named"><title>0x00031f6c Remove_Requester (94 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="150" class="named"><title>0x00031fcc Display_Requester (1152 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="150" class="named"><title>0x00032450 Targetable (110 bytes)</title></rect>
-<rect width="12" height="12" x="705" y="150" class="todo"><title>0x000324c0 Func324c0 (62 bytes)</title></rect>
+<rect width="12" height="12" x="705" y="150" class="named"><title>0x000324c0 ControlGunShot (62 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="150" class="todo"><title>0x00032500 Func32500 (124 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="150" class="todo"><title>0x0003257c Func3257c (182 bytes)</title></rect>
 <rect width="12" height="12" x="0" y="165" class="todo"><title>0x00032634 Func32634 (150 bytes)</title></rect>
@@ -865,10 +865,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">66.35%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">33.65%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">66.38%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">33.62%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="495.64" height="6" x="0" y="0" class="named"/>
-<rect width="251.36" height="6" x="495.64" y="0" class="todo"/>
+<rect width="495.86" height="6" x="0" y="0" class="named"/>
+<rect width="251.14" height="6" x="495.86" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.01" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1411,7 +1411,7 @@
 <rect width="4.57" height="4.43" x="659.15" y="235.57" class="todo"><title>0x00038ba4 S_SoundSampleIsPlaying (64 bytes)</title></rect>
 <rect width="3.97" height="4.94" x="666.72" y="159.92" class="todo"><title>0x0003c2b4 Func3c2b4 (63 bytes)</title></rect>
 <rect width="3.97" height="4.82" x="666.72" y="167.87" class="named"><title>0x0001cfa4 phd_RotYXZ_I (62 bytes)</title></rect>
-<rect width="3.97" height="4.82" x="666.72" y="175.68" class="todo"><title>0x000324c0 Func324c0 (62 bytes)</title></rect>
+<rect width="3.97" height="4.82" x="666.72" y="175.68" class="named"><title>0x000324c0 ControlGunShot (62 bytes)</title></rect>
 <rect width="3.97" height="4.56" x="666.72" y="183.50" class="named"><title>0x00020530 GetSavedGamesList (60 bytes)</title></rect>
 <rect width="3.97" height="4.56" x="666.72" y="191.06" class="named"><title>0x00026038 lara_as_fastdive (60 bytes)</title></rect>
 <rect width="3.97" height="4.56" x="666.72" y="198.63" class="todo"><title>0x00038bd4 S_SoundSetPanAndVolume (60 bytes)</title></rect>
