@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">49.49% (389)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">50.51% (397)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">49.62% (390)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">50.38% (396)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="369.70" height="6" x="0" y="0" class="named"/>
-<rect width="377.30" height="6" x="369.70" y="0" class="todo"/>
+<rect width="370.65" height="6" x="0" y="0" class="named"/>
+<rect width="376.35" height="6" x="370.65" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -456,7 +456,7 @@
 <rect width="12" height="12" x="540" y="105" class="named"><title>0x00027398 lara_col_gymnast (49 bytes)</title></rect>
 <rect width="12" height="12" x="555" y="105" class="named"><title>0x000273cc lara_col_waterout (49 bytes)</title></rect>
 <rect width="12" height="12" x="570" y="105" class="named"><title>0x00027400 lara_default_col (91 bytes)</title></rect>
-<rect width="12" height="12" x="585" y="105" class="todo"><title>0x0002745c lara_col_jumper (143 bytes)</title></rect>
+<rect width="12" height="12" x="585" y="105" class="named"><title>0x0002745c lara_col_jumper (143 bytes)</title></rect>
 <rect width="12" height="12" x="600" y="105" class="named"><title>0x000274ec GetLaraCollisionInfo (48 bytes)</title></rect>
 <rect width="12" height="12" x="615" y="105" class="todo"><title>0x0002751c lara_slide_slope (257 bytes)</title></rect>
 <rect width="12" height="12" x="630" y="105" class="todo"><title>0x00027620 LaraHitCeiling (91 bytes)</title></rect>
@@ -857,10 +857,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">44.30%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">55.70%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">44.37%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">55.63%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="330.93" height="6" x="0" y="0" class="named"/>
-<rect width="416.07" height="6" x="330.93" y="0" class="todo"/>
+<rect width="331.46" height="6" x="0" y="0" class="named"/>
+<rect width="415.54" height="6" x="331.46" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1211,7 +1211,7 @@
 <rect width="8.32" height="8.45" x="660.85" y="84.58" class="named"><title>0x00025644 lara_as_turn_l (145 bytes)</title></rect>
 <rect width="8.32" height="8.45" x="672.17" y="84.58" class="todo"><title>0x0002b52c Func2b52c (145 bytes)</title></rect>
 <rect width="8.24" height="8.45" x="683.49" y="84.58" class="named"><title>0x0001a050 switch_resolution (144 bytes)</title></rect>
-<rect width="8.16" height="8.45" x="694.73" y="84.58" class="todo"><title>0x0002745c lara_col_jumper (143 bytes)</title></rect>
+<rect width="8.16" height="8.45" x="694.73" y="84.58" class="named"><title>0x0002745c lara_col_jumper (143 bytes)</title></rect>
 <rect width="8.09" height="8.45" x="705.89" y="84.58" class="named"><title>0x0001f640 S_DrawSpriteSize (142 bytes)</title></rect>
 <rect width="8.01" height="8.45" x="716.98" y="84.58" class="named"><title>0x00018e28 TriggerNormalCDTrack (141 bytes)</title></rect>
 <rect width="8.01" height="8.45" x="727.99" y="84.58" class="named"><title>0x0002515c lara_as_walk (141 bytes)</title></rect>
