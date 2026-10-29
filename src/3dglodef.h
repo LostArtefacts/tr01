@@ -105,6 +105,7 @@ extern sint32 *sort3dptr;
 extern sint32 wibble_offset;
 extern sint32 water_effect;
 extern sint32 shade_effect;
+extern int perspective_distance;
 extern sint32 wibble_table[WIBBLE_SIZE];
 extern sint32 shade_table[WIBBLE_SIZE];
 extern sint32 rand_table[WIBBLE_SIZE];

@@ -60,6 +60,7 @@ extern int malloc_used;
 extern int malloc_size;
 extern sint32 input;
 extern int game_hires;
+extern int detail_level;
 extern char exit_message[];
 extern double screen_sizer, game_sizer;
 extern int title_loaded;

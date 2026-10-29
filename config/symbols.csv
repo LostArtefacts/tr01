@@ -752,7 +752,7 @@ address,size,name,symbol
 0x00045f00,39,Func45f00,
 0x00045f28,66,Func45f28,
 0x00045f6c,148,Func45f6c,
-0x00046000,738,Func46000,
+0x00046000,738,JoyRead,JoyRead_
 0x000462e4,147,Func462e4,
 0x00046378,137,Func46378,
 0x00046404,753,Func46404,
@@ -1810,13 +1810,17 @@ address,size,name,symbol
 0x000c38a8,4,level_items,_level_items
 0x000c38ac,4,health_bar_timer,_health_bar_timer
 0x000c3b68,4,sound_active,_sound_active
+0x000c3bc4,4,detail_level,_detail_level
 0x000c3e38,4,number_cameras,_number_cameras
 0x000c3e68,128,exit_message,_exit_message
 0x000c3ee8,4,title_loaded,_title_loaded
 0x000c409c,4,wibble_offset,_wibble_offset
 0x000c40a0,4,water_effect,_water_effect
 0x000c40a4,4,shade_effect,_shade_effect
+0x000c40a8,4,perspective_distance,_perspective_distance
 0x000c5900,4,file_len,_file_len
+0x000c5f24,4,joy1_x,_joy1_x
+0x000c5f28,4,joy1_y,_joy1_y
 0x000cac70,768,game_palette,_game_palette
 0x000caf70,768,water_palette,_water_palette
 0x000cb270,4,malloc_used,_malloc_used

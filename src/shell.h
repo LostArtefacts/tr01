@@ -37,15 +37,24 @@ typedef struct
 
 extern KEYSTUFF *keydata;
 extern uint8 joy_fire;
+extern int joy1_x;
+extern int joy1_y;
 
 enum key_codes
 {
     K_ESC = 0x01,
+    K_RET = 0x1c,
     K_LCTRL = 0x1d,
     K_LSHIFT = 0x2a,
     K_RSHIFT = 0x36,
     K_LALT = 0x38,
     K_SPACE = 0x39,
+    K_F1 = 0x3b,
+    K_F2 = 0x3c,
+    K_F3 = 0x3d,
+    K_F4 = 0x3e,
+    K_F5 = 0x3f,
+    K_F6 = 0x40,
     K_NUMHOME = 0x47,
     K_NUMUP = 0x48,
     K_NUMPGUP = 0x49,
@@ -93,6 +102,7 @@ void ScreenPartialDump(void);
 void TempVideoRemove(void);
 void FadeToPal(int count, uint8 *pal);
 void FadeWait(void);
+void JoyRead(void);
 void ShellInit(SETUP *pSetup, uint32 dwFlags);
 void ShellExit(char *szFormat, ...);
 #pragma aux ShellExit aborts;

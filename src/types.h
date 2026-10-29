@@ -13,6 +13,7 @@ typedef unsigned long uint32;
 typedef uint16 SG_COL;
 
 #define W2V_SHIFT 14
+#define W2V_SCALE (1 << W2V_SHIFT)
 
 #define GAME_FOV 80
 
