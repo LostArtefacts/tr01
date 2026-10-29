@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">23.23% (180)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">76.77% (595)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">23.35% (181)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">76.65% (594)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="173.50" height="6" x="0" y="0" class="named"/>
-<rect width="573.50" height="6" x="173.50" y="0" class="todo"/>
+<rect width="174.46" height="6" x="0" y="0" class="named"/>
+<rect width="572.54" height="6" x="174.46" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -249,7 +249,7 @@
 <rect width="12" height="12" x="435" y="45" class="named"><title>0x0001e2d4 S_LoadLevel (21 bytes)</title></rect>
 <rect width="12" height="12" x="450" y="45" class="named"><title>0x0001e2ec LoadLevel (354 bytes)</title></rect>
 <rect width="12" height="12" x="465" y="45" class="named"><title>0x0001e450 LoadTexturePages (104 bytes)</title></rect>
-<rect width="12" height="12" x="480" y="45" class="todo"><title>0x0001e4b8 LoadRooms (1041 bytes)</title></rect>
+<rect width="12" height="12" x="480" y="45" class="named"><title>0x0001e4b8 LoadRooms (1041 bytes)</title></rect>
 <rect width="12" height="12" x="495" y="45" class="todo"><title>0x0001e8cc LoadObjects (1090 bytes)</title></rect>
 <rect width="12" height="12" x="510" y="45" class="todo"><title>0x0001ed10 LoadSprites (265 bytes)</title></rect>
 <rect width="12" height="12" x="525" y="45" class="todo"><title>0x0001ee1c LoadItems (441 bytes)</title></rect>
@@ -846,10 +846,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">26.79%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">73.21%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">27.30%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">72.70%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="200.11" height="6" x="0" y="0" class="named"/>
-<rect width="546.89" height="6" x="200.11" y="0" class="todo"/>
+<rect width="203.93" height="6" x="0" y="0" class="named"/>
+<rect width="543.07" height="6" x="203.93" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -890,7 +890,7 @@
 <rect width="28.98" height="27.38" x="206.46" y="153.22" class="named"><title>0x000111e8 BearControl (1087 bytes)</title></rect>
 <rect width="28.98" height="26.87" x="206.46" y="183.59" class="todo"><title>0x0003992c Func3992c (1069 bytes)</title></rect>
 <rect width="28.98" height="26.54" x="206.46" y="213.46" class="todo"><title>0x0002371c Func2371c (1057 bytes)</title></rect>
-<rect width="25.72" height="29.39" x="238.44" y="0" class="todo"><title>0x0001e4b8 LoadRooms (1041 bytes)</title></rect>
+<rect width="25.72" height="29.39" x="238.44" y="0" class="named"><title>0x0001e4b8 LoadRooms (1041 bytes)</title></rect>
 <rect width="25.72" height="28.68" x="238.44" y="32.39" class="todo"><title>0x000283b0 LaraControl (1018 bytes)</title></rect>
 <rect width="25.72" height="28.49" x="238.44" y="64.07" class="todo"><title>0x000376e8 Func376e8 (1012 bytes)</title></rect>
 <rect width="25.72" height="27.81" x="238.44" y="95.56" class="named"><title>0x0001a578 SetRoomBounds (990 bytes)</title></rect>

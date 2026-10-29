@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 #include "game.h"
 
 int LoadTexturePages(FILE *file);
@@ -15,6 +16,12 @@ int LoadAnimatedTextures(FILE *file);
 int LoadCinematic(FILE *file);
 int LoadDemo(FILE *file);
 int LoadSamples(FILE *file);
+
+sint16 *mesh_base;
+char *sprite_base;
+char *room_text_base;
+char *object_text_base;
+sint16 *floor_data;
 
 char *levelnames[NUMBER_OF_LEVELS] = {
     "data\\gym.phd",
@@ -132,6 +139,97 @@ int LoadTexturePages(FILE *file)
     fread(base, 65536, num_pages, file);
     for (i = 0; i < num_pages; i++, base += 65536)
         texture_page_ptrs[i] = base;
+
+    return 1;
+}
+
+int LoadRooms(FILE *file)
+{
+    int i;
+    sint16 ndoors;
+    sint32 size;
+    ROOM_INFO *r;
+
+    fread(&number_rooms, sizeof(number_rooms), 1, file);
+
+    if (number_rooms > MAX_ROOMS)
+    {
+        strcpy(exit_message, "LoadRoom(): Too many rooms");
+        return 0;
+    }
+
+    room = (ROOM_INFO *)game_malloc(number_rooms * sizeof(ROOM_INFO), ROOM_INFOS);
+    if (room == NULL)
+    {
+        strcpy(exit_message, "LoadRoom(): Could not allocate memory for rooms");
+        return 0;
+    }
+
+    for (i = 0, r = room; i < number_rooms; i++, r++)
+    {
+        fread(&r->x, sizeof(sint32), 1, file);
+        r->y = 0;
+        fread(&r->z, sizeof(sint32), 1, file);
+
+        fread(&r->minfloor, sizeof(sint32), 1, file);
+        fread(&r->maxceiling, sizeof(sint32), 1, file);
+
+        fread(&size, sizeof(size), 1, file);
+        r->data = (sint16 *)game_malloc(size * sizeof(sint16), ROOM_MESH);
+        fread(r->data, sizeof(sint16), size, file);
+
+        fread(&ndoors, sizeof(sint16), 1, file);
+        if (ndoors)
+        {
+            r->door = (sint16 *)game_malloc((ndoors * 16 + 1) * sizeof(sint16), ROOM_DOOR);
+            r->door[0] = ndoors;
+            fread(&r->door[1], sizeof(sint16), ndoors * 16, file);
+        }
+        else
+            r->door = NULL;
+
+        fread(&r->x_size, sizeof(sint16), 1, file);
+        fread(&r->y_size, sizeof(sint16), 1, file);
+        size = (int)r->x_size * r->y_size;
+        r->floor = (FLOOR_INFO *)game_malloc(size * sizeof(FLOOR_INFO), ROOM_FLOOR);
+        fread(r->floor, sizeof(FLOOR_INFO), size, file);
+
+        fread(&r->ambient, sizeof(sint16), 1, file);
+        fread(&r->num_lights, sizeof(sint16), 1, file);
+        if (r->num_lights)
+        {
+            r->light = (LIGHT_INFO *)game_malloc(r->num_lights * sizeof(LIGHT_INFO), ROOM_LIGHTS);
+            fread(r->light, sizeof(LIGHT_INFO), r->num_lights, file);
+        }
+        else
+        {
+            r->light = NULL;
+        }
+
+        fread(&r->num_meshes, sizeof(sint16), 1, file);
+        if (r->num_meshes)
+        {
+            r->mesh = (MESH_INFO *)game_malloc(r->num_meshes * sizeof(MESH_INFO), ROOM_STATIC_MESH_INFOS);
+            fread(r->mesh, sizeof(MESH_INFO), r->num_meshes, file);
+        }
+        else
+            r->mesh = NULL;
+
+        fread(&r->flipped_room, sizeof(sint16), 1, file);
+
+        fread(&r->flags, sizeof(uint16), 1, file);
+
+        r->bound_active = 0;
+        r->left = (sint16)phd_winxmax;
+        r->top = (sint16)phd_winymax;
+        r->right = r->bottom = 0;
+        r->item_number = NO_ITEM;
+        r->fx_number = NO_ITEM;
+    }
+
+    fread(&size, sizeof(sint32), 1, file);
+    floor_data = (sint16 *)game_malloc(size * sizeof(sint16), FLOOR_DATA);
+    fread(floor_data, sizeof(sint16), size, file);
 
     return 1;
 }

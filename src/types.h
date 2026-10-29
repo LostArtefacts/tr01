@@ -231,6 +231,7 @@ typedef struct
 
 #define NO_ROOM 255
 
+#define MAX_ROOMS 1024
 #define MAX_FLIPMAPS 10
 #define MAX_CD_TRACKS 64
 

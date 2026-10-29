@@ -1834,6 +1834,10 @@ address,size,name,symbol
 0x000ce5de,2,number_rooms,_number_rooms
 0x000ce5e0,4,number_sound_effects,_number_sound_effects
 0x000ce5e4,4,sound_effects,_sound_effects
+0x000ce5e8,4,object_text_base,_object_text_base
+0x000ce5ec,4,room_text_base,_room_text_base
+0x000ce5f0,4,sprite_base,_sprite_base
+0x000ce5f4,4,mesh_base,_mesh_base
 0x000ce5f8,4,floor_data,_floor_data
 0x000ce95c,4,input,_input
 0x000ce960,34,inv_colours,_inv_colours
