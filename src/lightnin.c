@@ -263,6 +263,14 @@ void LightningCollision(sint16 item_num, ITEM_INFO *laraitem, COLL_INFO *coll)
         lara.hit_frame = 34;
 }
 
+enum hammer_states
+{
+    TH_SET,
+    TH_TEASE,
+    TH_ACTIVE,
+    TH_DONE
+};
+
 void InitialiseThorsHandle(sint16 item_num)
 {
     ITEM_INFO *handitem;
@@ -279,4 +287,111 @@ void InitialiseThorsHandle(sint16 item_num)
     InitialiseItem(headnum);
     handitem->data = (void *)headitem;
     level_items++;
+}
+
+void ThorsHandleControl(sint16 item_number)
+{
+    FLOOR_INFO *floor;
+    ITEM_INFO *item, *headitem;
+    sint16 room_number;
+    int oldx, x, oldz, z;
+    sint16 frm, anm;
+
+    item = &items[item_number];
+    switch (item->current_anim_state)
+    {
+    case TH_SET:
+        if (TriggerActive(item))
+            item->goal_anim_state = TH_TEASE;
+        else
+        {
+            RemoveActiveItem(item_number);
+            item->status = NOT_ACTIVE;
+        }
+        break;
+
+    case TH_TEASE:
+        if (TriggerActive(item))
+            item->goal_anim_state = TH_ACTIVE;
+        else
+            item->goal_anim_state = TH_SET;
+        break;
+
+    case TH_ACTIVE:
+        frm = item->frame_number - anims[item->anim_number].frame_base;
+        if (frm > 30)
+        {
+            x = item->pos.x_pos;
+            z = item->pos.z_pos;
+            switch (item->pos.y_rot)
+            {
+            case 0:
+                z += WALL_L * 3;
+                break;
+            case 16384:
+                x += WALL_L * 3;
+                break;
+            case -16384:
+                x -= WALL_L * 3;
+                break;
+            case -32768:
+                z -= WALL_L * 3;
+                break;
+            }
+            if (lara_item->hit_points >= 0 && lara_item->pos.x_pos > x - 520 && lara_item->pos.x_pos < x + 520 && lara_item->pos.z_pos > z - 520 && lara_item->pos.z_pos < z + 520)
+            {
+                lara_item->hit_points = -1;
+                lara_item->pos.y_pos = item->pos.y_pos;
+                lara_item->gravity_status = 0;
+                lara_item->anim_number = RBALL_DEATH_A;
+                lara_item->frame_number = RBALL_DEATH_F;
+                lara_item->current_anim_state = AS_SPECIAL;
+                lara_item->goal_anim_state = AS_SPECIAL;
+            }
+        }
+        break;
+
+    case TH_DONE:
+        room_number = item->room_number;
+        x = item->pos.x_pos;
+        z = item->pos.z_pos;
+        floor = GetFloor(x, item->pos.y_pos, z, &room_number);
+        GetHeight(floor, x, item->pos.y_pos, z);
+        TestTriggers(trigger_index, 1);
+        oldx = x;
+        oldz = z;
+        switch (item->pos.y_rot)
+        {
+        case 0:
+            z += WALL_L * 3;
+            break;
+        case 16384:
+            x += WALL_L * 3;
+            break;
+        case -16384:
+            x -= WALL_L * 3;
+            break;
+        case -32768:
+            z -= WALL_L * 3;
+            break;
+        }
+        item->pos.x_pos = x;
+        item->pos.z_pos = z;
+        if (lara_item->hit_points >= 0)
+            AlterFloorHeight(item, -2 * WALL_L);
+        item->pos.x_pos = oldx;
+        item->pos.z_pos = oldz;
+
+        RemoveActiveItem(item_number);
+        item->status = DEACTIVATED;
+        break;
+    }
+    AnimateItem(item);
+
+    headitem = (ITEM_INFO *)item->data;
+    anm = item->anim_number - objects[THORS_HANDLE].anim_index;
+    frm = item->frame_number - anims[item->anim_number].frame_base;
+    headitem->anim_number = objects[THORS_HEAD].anim_index + anm;
+    headitem->frame_number = anims[headitem->anim_number].frame_base + frm;
+    headitem->current_anim_state = item->current_anim_state;
 }
