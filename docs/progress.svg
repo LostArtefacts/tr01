@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">63.30% (502)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">36.70% (291)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">63.43% (503)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">36.57% (290)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="472.88" height="6" x="0" y="0" class="named"/>
-<rect width="274.12" height="6" x="472.88" y="0" class="todo"/>
+<rect width="473.82" height="6" x="0" y="0" class="named"/>
+<rect width="273.18" height="6" x="473.82" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -570,7 +570,7 @@
 <rect width="12" height="12" x="0" y="150" class="named"><title>0x0002ec7c MovableBlockCollision (547 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="150" class="named"><title>0x0002eea0 TestBlockMovable (74 bytes)</title></rect>
 <rect width="12" height="12" x="30" y="150" class="named"><title>0x0002eefc TestBlockPush (254 bytes)</title></rect>
-<rect width="12" height="12" x="45" y="150" class="todo"><title>0x0002f00c TestBlockPull (599 bytes)</title></rect>
+<rect width="12" height="12" x="45" y="150" class="named"><title>0x0002f00c TestBlockPull (599 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="150" class="todo"><title>0x0002f264 Func2f264 (33 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="150" class="todo"><title>0x0002f288 Func2f288 (247 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="150" class="todo"><title>0x0002f380 AlterFloorHeight (186 bytes)</title></rect>
@@ -864,10 +864,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">58.57%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">41.43%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">58.86%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">41.14%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="437.51" height="6" x="0" y="0" class="named"/>
-<rect width="309.49" height="6" x="437.51" y="0" class="todo"/>
+<rect width="439.67" height="6" x="0" y="0" class="named"/>
+<rect width="307.33" height="6" x="439.67" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.01" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -957,7 +957,7 @@
 <rect width="20.09" height="20.98" x="368.63" y="0" class="todo"><title>0x000421d0 Func421d0 (630 bytes)</title></rect>
 <rect width="20.09" height="20.86" x="368.63" y="23.98" class="todo"><title>0x0003be70 Func3be70 (627 bytes)</title></rect>
 <rect width="20.09" height="20.44" x="368.63" y="47.84" class="todo"><title>0x00039da8 Func39da8 (616 bytes)</title></rect>
-<rect width="20.09" height="19.80" x="368.63" y="71.28" class="todo"><title>0x0002f00c TestBlockPull (599 bytes)</title></rect>
+<rect width="20.09" height="19.80" x="368.63" y="71.28" class="named"><title>0x0002f00c TestBlockPull (599 bytes)</title></rect>
 <rect width="20.09" height="19.30" x="368.63" y="94.08" class="todo"><title>0x0003f910 Func3f910 (586 bytes)</title></rect>
 <rect width="20.09" height="18.43" x="368.63" y="116.38" class="named"><title>0x0002769c LaraHangTest (563 bytes)</title></rect>
 <rect width="20.09" height="18.27" x="368.63" y="137.81" class="todo"><title>0x0003f090 S_DrawSpriteAbs (559 bytes)</title></rect>
