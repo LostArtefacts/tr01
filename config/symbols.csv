@@ -569,7 +569,7 @@ address,size,name,symbol
 0x00034544,224,SwitchCollision2,SwitchCollision2_
 0x00034634,543,KeyHoleCollision,KeyHoleCollision_
 0x00034874,668,PuzzleHoleCollision,PuzzleHoleCollision_
-0x00034b10,55,Func34b10,
+0x00034b10,55,SwitchControl,SwitchControl_
 0x00034b48,120,SwitchTrigger,SwitchTrigger_
 0x00034bc0,74,KeyTrigger,KeyTrigger_
 0x00034c0c,64,PickupTrigger,PickupTrigger_

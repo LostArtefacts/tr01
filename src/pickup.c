@@ -578,3 +578,18 @@ void PuzzleHoleCollision(sint16 item_num, ITEM_INFO *laraitem, COLL_INFO *coll)
         }
     }
 }
+
+void SwitchControl(sint16 item_number)
+{
+    ITEM_INFO *item;
+
+    item = &items[item_number];
+
+    item->flags |= CODE_BITS;
+    if (!TriggerActive(item))
+    {
+        item->goal_anim_state = SS_ON;
+        item->timer = 0;
+    }
+    AnimateItem(item);
+}

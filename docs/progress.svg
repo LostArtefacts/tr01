@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">70.98% (570)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">29.02% (233)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">71.11% (571)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">28.89% (232)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="530.25" height="6" x="0" y="0" class="named"/>
-<rect width="216.75" height="6" x="530.25" y="0" class="todo"/>
+<rect width="531.18" height="6" x="0" y="0" class="named"/>
+<rect width="215.82" height="6" x="531.18" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -637,7 +637,7 @@
 <rect width="12" height="12" x="255" y="165" class="named"><title>0x00034544 SwitchCollision2 (224 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="165" class="named"><title>0x00034634 KeyHoleCollision (543 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="165" class="named"><title>0x00034874 PuzzleHoleCollision (668 bytes)</title></rect>
-<rect width="12" height="12" x="300" y="165" class="todo"><title>0x00034b10 Func34b10 (55 bytes)</title></rect>
+<rect width="12" height="12" x="300" y="165" class="named"><title>0x00034b10 SwitchControl (55 bytes)</title></rect>
 <rect width="12" height="12" x="315" y="165" class="todo"><title>0x00034b48 SwitchTrigger (120 bytes)</title></rect>
 <rect width="12" height="12" x="330" y="165" class="todo"><title>0x00034bc0 KeyTrigger (74 bytes)</title></rect>
 <rect width="12" height="12" x="345" y="165" class="todo"><title>0x00034c0c PickupTrigger (64 bytes)</title></rect>
@@ -874,10 +874,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">68.67%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">31.33%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">68.70%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">31.30%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="512.97" height="6" x="0" y="0" class="named"/>
-<rect width="234.03" height="6" x="512.97" y="0" class="todo"/>
+<rect width="513.16" height="6" x="0" y="0" class="named"/>
+<rect width="233.84" height="6" x="513.16" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="51.21" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1447,7 +1447,7 @@
 <rect width="4.24" height="3.86" x="721.05" y="176.59" class="named"><title>0x00024838 CreateItem (55 bytes)</title></rect>
 <rect width="4.24" height="3.86" x="728.29" y="176.59" class="named"><title>0x0002b42c draw_shotgun_meshes (55 bytes)</title></rect>
 <rect width="4.24" height="3.86" x="735.53" y="176.59" class="named"><title>0x0002b464 undraw_shotgun_meshes (55 bytes)</title></rect>
-<rect width="4.24" height="3.86" x="742.76" y="176.59" class="todo"><title>0x00034b10 Func34b10 (55 bytes)</title></rect>
+<rect width="4.24" height="3.86" x="742.76" y="176.59" class="named"><title>0x00034b10 SwitchControl (55 bytes)</title></rect>
 <rect width="4.03" height="4.07" x="669.34" y="183.46" class="todo"><title>0x0003a468 Func3a468 (55 bytes)</title></rect>
 <rect width="4.03" height="3.94" x="669.34" y="190.53" class="named"><title>0x00025b00 lara_as_hangleft (54 bytes)</title></rect>
 <rect width="4.03" height="3.94" x="669.34" y="197.47" class="named"><title>0x00025b38 lara_as_hangright (54 bytes)</title></rect>
