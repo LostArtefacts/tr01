@@ -209,3 +209,115 @@ void RaptorControl(sint16 item_number)
 
     CreatureAnimation(item_number, angle, tilt);
 }
+
+void DinoControl(sint16 item_number)
+{
+    ITEM_INFO *item;
+    CREATURE_INFO *dino;
+    sint16 head, angle;
+    AI_INFO info;
+
+    item = &items[item_number];
+    if (item->status == INVISIBLE)
+    {
+        if (!EnableBaddieAI(item_number, 0))
+            return;
+
+        item->status = ACTIVE;
+    }
+
+    dino = (CREATURE_INFO *)item->data;
+    head = angle = 0;
+
+    if (item->hit_points <= 0)
+    {
+        if (item->current_anim_state == DINO_STOP)
+            item->goal_anim_state = DINO_DEATH;
+        else
+            item->goal_anim_state = DINO_STOP;
+    }
+    else
+    {
+        CreatureAIInfo(item, &info);
+
+        if (info.ahead)
+            head = info.angle;
+
+        CreatureMood(item, &info, VIOLENT);
+
+        angle = CreatureTurn(item, dino->maximum_turn);
+
+        if (item->touch_bits)
+            lara_item->hit_points -= (item->current_anim_state == DINO_RUN) ? DINO_TRAMPLE_DAMAGE : DINO_TOUCH_DAMAGE;
+
+        dino->flags = (dino->mood != ESCAPE_MOOD && !info.ahead && info.enemy_facing > -FRONT_ARC && info.enemy_facing < FRONT_ARC);
+
+        if (!dino->flags && info.distance > DINO_BITE_RANGE && info.distance < DINO_ATTACK_RANGE && info.bite)
+            dino->flags = 1;
+
+        switch (item->current_anim_state)
+        {
+        case DINO_STOP:
+            if (item->required_anim_state)
+                item->goal_anim_state = item->required_anim_state;
+            else if (info.distance < DINO_BITE_RANGE && info.bite)
+                item->goal_anim_state = DINO_ATTACK2;
+            else if (dino->mood == BORED_MOOD || dino->flags)
+                item->goal_anim_state = DINO_WALK;
+            else
+                item->goal_anim_state = DINO_RUN;
+
+            break;
+
+        case DINO_WALK:
+            dino->maximum_turn = DINO_WALK_TURN;
+
+            if (dino->mood != BORED_MOOD || !dino->flags)
+                item->goal_anim_state = DINO_STOP;
+            else if (info.ahead && GetRandomControl() < DINO_ROAR_CHANCE)
+            {
+                item->required_anim_state = DINO_ROAR;
+                item->goal_anim_state = DINO_STOP;
+            }
+
+            break;
+
+        case DINO_RUN:
+            dino->maximum_turn = DINO_RUN_TURN;
+
+            if (info.distance < DINO_RUN_RANGE && info.bite)
+                item->goal_anim_state = DINO_STOP;
+            else if (dino->flags)
+                item->goal_anim_state = DINO_STOP;
+            else if (dino->mood != ESCAPE_MOOD && info.ahead && GetRandomControl() < DINO_ROAR_CHANCE)
+            {
+                item->required_anim_state = DINO_ROAR;
+                item->goal_anim_state = DINO_STOP;
+            }
+            else if (dino->mood == BORED_MOOD)
+                item->goal_anim_state = DINO_STOP;
+
+            break;
+
+        case DINO_ATTACK2:
+            if (item->touch_bits & DINO_TOUCH)
+            {
+                lara_item->hit_points -= DINO_BITE_DAMAGE;
+                lara_item->hit_status = 1;
+                item->goal_anim_state = DINO_KILL;
+                if (lara_item == lara_item)
+                    LaraDinoDeath(item);
+            }
+
+            item->required_anim_state = DINO_WALK;
+            break;
+        }
+    }
+
+    CreatureHead(item, head >> 1);
+    dino->neck_rotation = dino->head_rotation;
+
+    CreatureAnimation(item_number, angle, 0);
+
+    item->collidable = 1;
+}

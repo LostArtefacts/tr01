@@ -124,5 +124,10 @@ sint16 CreatureEffect(ITEM_INFO *item, BITE_INFO *bite,
 
 void BatControl(sint16 item_number);
 void BearControl(sint16 item_number);
+void AlligatorControl(sint16 item_number);
+void CrocControl(sint16 item_number);
+void RaptorControl(sint16 item_number);
+void DinoControl(sint16 item_number);
+void LaraDinoDeath(ITEM_INFO *item);
 
 #endif

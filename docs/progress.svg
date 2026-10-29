@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">13.44% (104)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">86.56% (670)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">13.57% (105)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">86.43% (669)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="100.37" height="6" x="0" y="0" class="named"/>
-<rect width="646.63" height="6" x="100.37" y="0" class="todo"/>
+<rect width="101.34" height="6" x="0" y="0" class="named"/>
+<rect width="645.66" height="6" x="101.34" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -172,7 +172,7 @@
 <rect width="12" height="12" x="30" y="30" class="named"><title>0x00019670 LoadLaraDemoPos (150 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="30" class="named"><title>0x00019708 GetDemoInput (55 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="30" class="named"><title>0x00019760 RaptorControl (912 bytes)</title></rect>
-<rect width="12" height="12" x="75" y="30" class="todo"><title>0x00019b0c DinoControl (694 bytes)</title></rect>
+<rect width="12" height="12" x="75" y="30" class="named"><title>0x00019b0c DinoControl (694 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="30" class="todo"><title>0x00019dc4 LaraDinoDeath (229 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="30" class="todo"><title>0x00019eb0 Func19eb0 (90 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="30" class="todo"><title>0x00019f0c Func19f0c (91 bytes)</title></rect>
@@ -845,10 +845,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">17.77%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">82.23%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">18.11%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">81.89%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="132.78" height="6" x="0" y="0" class="named"/>
-<rect width="614.22" height="6" x="132.78" y="0" class="todo"/>
+<rect width="135.32" height="6" x="0" y="0" class="named"/>
+<rect width="611.68" height="6" x="135.32" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="todo"><title>0x0001bc98 Func1bc98 (4489 bytes)</title></rect>
@@ -919,7 +919,7 @@
 <rect width="22.44" height="21.84" x="319.83" y="25.12" class="named"><title>0x00016ff4 AnimateItem (707 bytes)</title></rect>
 <rect width="22.44" height="21.45" x="319.83" y="49.96" class="todo"><title>0x00035020 Func35020 (696 bytes)</title></rect>
 <rect width="22.44" height="21.42" x="319.83" y="74.41" class="todo"><title>0x00042658 Func42658 (695 bytes)</title></rect>
-<rect width="22.44" height="21.38" x="319.83" y="98.82" class="todo"><title>0x00019b0c DinoControl (694 bytes)</title></rect>
+<rect width="22.44" height="21.38" x="319.83" y="98.82" class="named"><title>0x00019b0c DinoControl (694 bytes)</title></rect>
 <rect width="22.44" height="21.21" x="319.83" y="123.20" class="todo"><title>0x00030b7c Func30b7c (689 bytes)</title></rect>
 <rect width="22.44" height="21.03" x="319.83" y="147.41" class="todo"><title>0x000432bc Func432bc (684 bytes)</title></rect>
 <rect width="22.44" height="20.99" x="319.83" y="171.44" class="todo"><title>0x00021120 S_UpdateInput (683 bytes)</title></rect>
