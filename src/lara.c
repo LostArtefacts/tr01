@@ -1928,3 +1928,49 @@ int TestHangSwingIn(ITEM_INFO *item, PHD_ANGLE angle)
     }
     return 0;
 }
+
+#define HANG_ANGLE (35 * ONE_DEGREE)
+
+int LaraTestHangJumpUp(ITEM_INFO *item, COLL_INFO *coll)
+{
+    int hdif;
+    PHD_ANGLE angle;
+    sint16 *bounds;
+
+    if (coll->coll_type != COLL_FRONT || !(input & IN_ACTION) || lara.gun_status != LG_ARMLESS || (ABS(coll->left_floor - coll->right_floor)) >= SLOPE_DIF)
+        return 0;
+    if (coll->front_ceiling > 0 || coll->mid_ceiling > -STEPUP_HEIGHT)
+        return 0;
+
+    bounds = GetBoundsAccurate(item);
+    hdif = coll->front_floor - bounds[2];
+    if ((hdif < 0 && hdif + item->fallspeed < 0) || (hdif > 0 && hdif + item->fallspeed > 0))
+        return 0;
+
+    angle = item->pos.y_rot;
+    if (angle >= 0 - HANG_ANGLE && angle <= 0 + HANG_ANGLE)
+        angle = 0;
+    else if (angle >= 16384 - HANG_ANGLE && angle <= 16384 + HANG_ANGLE)
+        angle = 16384;
+    else if (angle >= 32767 - HANG_ANGLE || angle <= -32767 + HANG_ANGLE)
+        angle = -32768;
+    else if (angle >= -16384 - HANG_ANGLE && angle <= -16384 + HANG_ANGLE)
+        angle = -16384;
+    if (angle & 0x3fff)
+        return 0;
+
+    item->goal_anim_state = AS_HANG;
+    item->current_anim_state = AS_HANG;
+    item->anim_number = STARTHANG_A;
+    item->frame_number = STARTHANG_F;
+    bounds = GetBoundsAccurate(item);
+    item->pos.y_pos += coll->front_floor - bounds[2];
+    item->pos.x_pos += coll->shift.x;
+    item->pos.z_pos += coll->shift.z;
+    item->pos.y_rot = angle;
+    item->gravity_status = 0;
+    item->speed = 0;
+    item->fallspeed = 0;
+    lara.gun_status = LG_HANDSBUSY;
+    return 1;
+}
