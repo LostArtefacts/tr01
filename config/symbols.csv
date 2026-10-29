@@ -362,7 +362,7 @@ address,size,name,symbol
 0x00026b4c,186,lara_col_stepright,lara_col_stepright_
 0x00026c08,189,lara_col_stepleft,lara_col_stepleft_
 0x00026cc8,19,lara_col_slide,lara_col_slide_
-0x00026cdc,22,Func26cdc,
+0x00026cdc,22,lara_col_backjump,lara_col_backjump_
 0x00026cf4,22,Func26cf4,
 0x00026d0c,25,Func26d0c,
 0x00026d28,160,Func26d28,
@@ -388,7 +388,7 @@ address,size,name,symbol
 0x00027398,49,Func27398,
 0x000273cc,49,Func273cc,
 0x00027400,91,lara_default_col,lara_default_col_
-0x0002745c,143,Func2745c,
+0x0002745c,143,lara_col_jumper,lara_col_jumper_
 0x000274ec,48,GetLaraCollisionInfo,GetLaraCollisionInfo_
 0x0002751c,257,lara_slide_slope,lara_slide_slope_
 0x00027620,91,LaraHitCeiling,LaraHitCeiling_
