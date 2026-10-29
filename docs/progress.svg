@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">22.58% (175)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">77.42% (600)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">22.71% (176)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">77.29% (599)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="168.68" height="6" x="0" y="0" class="named"/>
-<rect width="578.32" height="6" x="168.68" y="0" class="todo"/>
+<rect width="169.64" height="6" x="0" y="0" class="named"/>
+<rect width="577.36" height="6" x="169.64" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -244,7 +244,7 @@
 <rect width="12" height="12" x="360" y="45" class="named"><title>0x0001e1e4 FlickerFX (65 bytes)</title></rect>
 <rect width="12" height="12" x="375" y="45" class="named"><title>0x0001e228 lara_hands_free (12 bytes)</title></rect>
 <rect width="12" height="12" x="390" y="45" class="named"><title>0x0001e234 flip_map_effect (5 bytes)</title></rect>
-<rect width="12" height="12" x="405" y="45" class="todo"><title>0x0001e23c Func1e23c (132 bytes)</title></rect>
+<rect width="12" height="12" x="405" y="45" class="named"><title>0x0001e23c draw_right_gun (132 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="45" class="todo"><title>0x0001e2c0 Func1e2c0 (18 bytes)</title></rect>
 <rect width="12" height="12" x="435" y="45" class="todo"><title>0x0001e2d4 Func1e2d4 (21 bytes)</title></rect>
 <rect width="12" height="12" x="450" y="45" class="todo"><title>0x0001e2ec Func1e2ec (354 bytes)</title></rect>
@@ -846,10 +846,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">26.48%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">73.52%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">26.55%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">73.45%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="197.81" height="6" x="0" y="0" class="named"/>
-<rect width="549.19" height="6" x="197.81" y="0" class="todo"/>
+<rect width="198.29" height="6" x="0" y="0" class="named"/>
+<rect width="548.71" height="6" x="198.29" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1217,7 +1217,7 @@
 <rect width="7.76" height="8.22" x="592.39" y="198.72" class="todo"><title>0x000258a0 Func258a0 (135 bytes)</title></rect>
 <rect width="7.76" height="8.13" x="592.39" y="209.94" class="named"><title>0x0001dcb4 ControlSplash1 (134 bytes)</title></rect>
 <rect width="7.76" height="7.97" x="592.39" y="221.07" class="named"><title>0x00011b18 UpdateLOT (132 bytes)</title></rect>
-<rect width="7.76" height="7.97" x="592.39" y="232.03" class="todo"><title>0x0001e23c Func1e23c (132 bytes)</title></rect>
+<rect width="7.76" height="7.97" x="592.39" y="232.03" class="named"><title>0x0001e23c draw_right_gun (132 bytes)</title></rect>
 <rect width="7.79" height="7.93" x="603.14" y="96.04" class="todo"><title>0x0003da50 Func3da50 (132 bytes)</title></rect>
 <rect width="7.71" height="7.93" x="613.94" y="96.04" class="todo"><title>0x00030090 Func30090 (131 bytes)</title></rect>
 <rect width="7.71" height="7.93" x="624.65" y="96.04" class="todo"><title>0x000326cc Func326cc (131 bytes)</title></rect>

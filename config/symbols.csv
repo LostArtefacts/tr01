@@ -176,7 +176,7 @@ address,size,name,symbol
 0x0001e1e4,65,FlickerFX,FlickerFX_
 0x0001e228,12,lara_hands_free,lara_hands_free_
 0x0001e234,5,flip_map_effect,flip_map_effect_
-0x0001e23c,132,Func1e23c,
+0x0001e23c,132,draw_right_gun,draw_right_gun_
 0x0001e2c0,18,Func1e2c0,
 0x0001e2d4,21,Func1e2d4,
 0x0001e2ec,354,Func1e2ec,
