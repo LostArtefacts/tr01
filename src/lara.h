@@ -313,6 +313,7 @@ void LaraControl(sint16 item_num);
 void LaraAboveWater(ITEM_INFO *item, COLL_INFO *coll);
 void AnimateLara(ITEM_INFO *item);
 void LaraGun(void);
+void lara_as_back(ITEM_INFO *item, COLL_INFO *coll);
 void InGameCinematicCamera(void);
 int SwitchTrigger(sint16 item_num, sint16 timer);
 int KeyTrigger(sint16 item_num);

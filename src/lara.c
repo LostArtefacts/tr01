@@ -4,6 +4,9 @@ LARA_INFO lara;
 ITEM_INFO *lara_item;
 int health_bar_timer = 0;
 
+#define MAX_HEAD_ROTATION (44 * ONE_DEGREE)
+#define MAX_HEAD_TILT (22 * ONE_DEGREE)
+#define MIN_HEAD_TILT (-42 * ONE_DEGREE)
 #define HEAD_TURN (2 * ONE_DEGREE)
 
 void LaraAboveWater(ITEM_INFO *item, COLL_INFO *coll)
@@ -140,4 +143,69 @@ void lara_as_run(ITEM_INFO *item, COLL_INFO *coll)
     }
     else
         item->goal_anim_state = AS_STOP;
+}
+
+void lara_as_stop(ITEM_INFO *item, COLL_INFO *coll)
+{
+    if (item->hit_points <= 0)
+    {
+        item->goal_anim_state = AS_DEATH;
+        return;
+    }
+
+    if (input & IN_ROLL)
+    {
+        item->anim_number = ROLL_A;
+        item->frame_number = ROLL_F;
+        item->current_anim_state = AS_ROLL;
+        item->goal_anim_state = AS_STOP;
+        return;
+    }
+
+    item->goal_anim_state = AS_STOP;
+
+    if (input & IN_LOOK)
+    {
+        camera.type = LOOK_CAMERA;
+        if (input & IN_LEFT && lara.head_y_rot > -MAX_HEAD_ROTATION)
+            lara.head_y_rot -= HEAD_TURN;
+        else if (input & IN_RIGHT && lara.head_y_rot < MAX_HEAD_ROTATION)
+            lara.head_y_rot += HEAD_TURN;
+        lara.torso_y_rot = lara.head_y_rot;
+
+        if (input & IN_FORWARD && lara.head_x_rot > MIN_HEAD_TILT)
+            lara.head_x_rot -= HEAD_TURN;
+        else if (input & IN_BACK && lara.head_x_rot < MAX_HEAD_TILT)
+            lara.head_x_rot += HEAD_TURN;
+        lara.torso_x_rot = lara.head_x_rot;
+        return;
+    }
+    else if (camera.type == LOOK_CAMERA)
+        camera.type = CHASE_CAMERA;
+
+    if (input & IN_STEPL)
+        item->goal_anim_state = AS_STEPLEFT;
+    else if (input & IN_STEPR)
+        item->goal_anim_state = AS_STEPRIGHT;
+    if (input & IN_LEFT)
+        item->goal_anim_state = AS_TURN_L;
+    else if (input & IN_RIGHT)
+        item->goal_anim_state = AS_TURN_R;
+
+    if (input & IN_JUMP)
+        item->goal_anim_state = AS_COMPRESS;
+    else if (input & IN_FORWARD)
+    {
+        if (input & IN_SLOW)
+            lara_as_walk(item, coll);
+        else
+            lara_as_run(item, coll);
+    }
+    else if (input & IN_BACK)
+    {
+        if (input & IN_SLOW)
+            lara_as_back(item, coll);
+        else
+            item->goal_anim_state = AS_FASTBACK;
+    }
 }

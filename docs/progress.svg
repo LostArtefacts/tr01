@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">38.17% (297)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">61.83% (481)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">38.30% (298)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">61.70% (480)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="285.17" height="6" x="0" y="0" class="named"/>
-<rect width="461.83" height="6" x="285.17" y="0" class="todo"/>
+<rect width="286.13" height="6" x="0" y="0" class="named"/>
+<rect width="460.87" height="6" x="286.13" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -365,7 +365,7 @@
 <rect width="12" height="12" x="675" y="75" class="named"><title>0x00024f90 LaraAboveWater (458 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="75" class="named"><title>0x0002515c lara_as_walk (141 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="75" class="named"><title>0x000251ec lara_as_run (265 bytes)</title></rect>
-<rect width="12" height="12" x="720" y="75" class="todo"><title>0x000252f8 Func252f8 (411 bytes)</title></rect>
+<rect width="12" height="12" x="720" y="75" class="named"><title>0x000252f8 lara_as_stop (411 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="75" class="todo"><title>0x00025494 Func25494 (196 bytes)</title></rect>
 <rect width="12" height="12" x="0" y="90" class="todo"><title>0x00025558 Func25558 (1 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="90" class="todo"><title>0x0002555c Func2555c (93 bytes)</title></rect>
@@ -377,7 +377,7 @@
 <rect width="12" height="12" x="105" y="90" class="todo"><title>0x00025778 Func25778 (32 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="90" class="todo"><title>0x00025798 Func25798 (1 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="90" class="todo"><title>0x0002579c Func2579c (258 bytes)</title></rect>
-<rect width="12" height="12" x="150" y="90" class="todo"><title>0x000258a0 Func258a0 (135 bytes)</title></rect>
+<rect width="12" height="12" x="150" y="90" class="todo"><title>0x000258a0 lara_as_back (135 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="90" class="todo"><title>0x00025928 Func25928 (76 bytes)</title></rect>
 <rect width="12" height="12" x="180" y="90" class="todo"><title>0x00025974 Func25974 (120 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="90" class="todo"><title>0x000259ec Func259ec (120 bytes)</title></rect>
@@ -849,10 +849,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">40.16%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">59.84%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">40.36%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">59.64%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="300.01" height="6" x="0" y="0" class="named"/>
-<rect width="446.99" height="6" x="300.01" y="0" class="todo"/>
+<rect width="301.51" height="6" x="0" y="0" class="named"/>
+<rect width="445.49" height="6" x="301.51" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -991,7 +991,7 @@
 <rect width="16.83" height="16.24" x="452.61" y="58.36" class="todo"><title>0x0003d7e0 phd_GenerateW2V (427 bytes)</title></rect>
 <rect width="16.83" height="15.66" x="452.61" y="77.60" class="todo"><title>0x0002d93c mn_update_sound_effects (414 bytes)</title></rect>
 <rect width="16.83" height="15.66" x="452.61" y="96.26" class="todo"><title>0x0003abf0 Func3abf0 (414 bytes)</title></rect>
-<rect width="16.83" height="15.52" x="452.61" y="114.92" class="todo"><title>0x000252f8 Func252f8 (411 bytes)</title></rect>
+<rect width="16.83" height="15.52" x="452.61" y="114.92" class="named"><title>0x000252f8 lara_as_stop (411 bytes)</title></rect>
 <rect width="16.83" height="15.43" x="452.61" y="133.44" class="named"><title>0x00014fe4 InGameCinematicCamera (409 bytes)</title></rect>
 <rect width="16.83" height="15.30" x="452.61" y="151.88" class="named"><title>0x00010310 S_PrintShadow (406 bytes)</title></rect>
 <rect width="16.83" height="15.25" x="452.61" y="170.17" class="todo"><title>0x00027d4c Func27d4c (405 bytes)</title></rect>
@@ -1217,7 +1217,7 @@
 <rect width="7.76" height="8.30" x="592.37" y="164.90" class="named"><title>0x0001628c EffectHit (136 bytes)</title></rect>
 <rect width="7.76" height="8.30" x="592.37" y="176.20" class="named"><title>0x00024b3c AddActiveItem (136 bytes)</title></rect>
 <rect width="7.76" height="8.22" x="592.37" y="187.50" class="todo"><title>0x000255bc Func255bc (135 bytes)</title></rect>
-<rect width="7.76" height="8.22" x="592.37" y="198.72" class="todo"><title>0x000258a0 Func258a0 (135 bytes)</title></rect>
+<rect width="7.76" height="8.22" x="592.37" y="198.72" class="todo"><title>0x000258a0 lara_as_back (135 bytes)</title></rect>
 <rect width="7.76" height="8.13" x="592.37" y="209.93" class="named"><title>0x0001dcb4 ControlSplash1 (134 bytes)</title></rect>
 <rect width="7.76" height="7.97" x="592.37" y="221.07" class="named"><title>0x00011b18 UpdateLOT (132 bytes)</title></rect>
 <rect width="7.76" height="7.97" x="592.37" y="232.03" class="named"><title>0x0001e23c draw_right_gun (132 bytes)</title></rect>

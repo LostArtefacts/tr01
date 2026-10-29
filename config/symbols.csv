@@ -297,7 +297,7 @@ address,size,name,symbol
 0x00024f90,458,LaraAboveWater,LaraAboveWater_
 0x0002515c,141,lara_as_walk,lara_as_walk_
 0x000251ec,265,lara_as_run,lara_as_run_
-0x000252f8,411,Func252f8,
+0x000252f8,411,lara_as_stop,lara_as_stop_
 0x00025494,196,Func25494,
 0x00025558,1,Func25558,
 0x0002555c,93,Func2555c,
@@ -309,7 +309,7 @@ address,size,name,symbol
 0x00025778,32,Func25778,
 0x00025798,1,Func25798,
 0x0002579c,258,Func2579c,
-0x000258a0,135,Func258a0,
+0x000258a0,135,lara_as_back,lara_as_back_
 0x00025928,76,Func25928,
 0x00025974,120,Func25974,
 0x000259ec,120,Func259ec,
