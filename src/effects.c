@@ -127,3 +127,20 @@ void ControlRichochet1(sint16 fx_num)
     if (!effects[fx_num].counter)
         KillEffect(fx_num);
 }
+
+void Twinkle(GAME_VECTOR *pos)
+{
+    sint16 fx_num;
+    FX_INFO *fx;
+
+    if ((fx_num = CreateEffect(pos->room_number)) != NO_ITEM)
+    {
+        fx = &effects[fx_num];
+        fx->pos.x_pos = pos->x;
+        fx->pos.y_pos = pos->y;
+        fx->pos.z_pos = pos->z;
+        fx->counter = 0;
+        fx->frame_number = 0;
+        fx->object_number = TWINKLE;
+    }
+}

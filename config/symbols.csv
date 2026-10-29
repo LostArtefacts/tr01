@@ -153,7 +153,7 @@ address,size,name,symbol
 0x0001d6f0,99,ControlExplosion1,ControlExplosion1_
 0x0001d754,119,Richochet,Richochet_
 0x0001d7cc,46,ControlRichochet1,ControlRichochet1_
-0x0001d7fc,80,Func1d7fc,
+0x0001d7fc,80,Twinkle,Twinkle_
 0x0001d84c,100,Func1d84c,
 0x0001d8b0,302,Func1d8b0,
 0x0001d9e0,221,Func1d9e0,
