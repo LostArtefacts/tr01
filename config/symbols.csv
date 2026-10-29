@@ -605,8 +605,7 @@ address,size,name,symbol
 0x0003875c,539,CheckCheatMode,CheckCheatMode_
 0x00038978,173,S_SaveSettings,S_SaveSettings_
 0x00038a28,207,S_LoadSettings,S_LoadSettings_
-0x00038b00,14,Func38b00,
-0x00038b0c,2,Func38b0c,
+0x00038b00,14,S_get_pan,S_get_pan_
 0x00038b10,69,S_SoundPlaySample,S_SoundPlaySample_
 0x00038b58,75,S_SoundPlaySampleLooped,S_SoundPlaySampleLooped_
 0x00038ba4,64,S_SoundSampleIsPlaying,S_SoundSampleIsPlaying_
