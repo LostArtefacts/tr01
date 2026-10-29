@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">10.12% (78)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">89.88% (693)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">10.25% (79)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">89.75% (692)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="75.57" height="6" x="0" y="0" class="named"/>
-<rect width="671.43" height="6" x="75.57" y="0" class="todo"/>
+<rect width="76.54" height="6" x="0" y="0" class="named"/>
+<rect width="670.46" height="6" x="76.54" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -150,7 +150,7 @@
 <rect width="12" height="12" x="450" y="15" class="named"><title>0x000172b8 GetChange (154 bytes)</title></rect>
 <rect width="12" height="12" x="465" y="15" class="named"><title>0x00017354 TranslateItem (101 bytes)</title></rect>
 <rect width="12" height="12" x="480" y="15" class="named"><title>0x000173bc GetFloor (434 bytes)</title></rect>
-<rect width="12" height="12" x="495" y="15" class="todo"><title>0x00017570 GetWaterHeight (248 bytes)</title></rect>
+<rect width="12" height="12" x="495" y="15" class="named"><title>0x00017570 GetWaterHeight (248 bytes)</title></rect>
 <rect width="12" height="12" x="510" y="15" class="todo"><title>0x0001767c GetHeight (653 bytes)</title></rect>
 <rect width="12" height="12" x="525" y="15" class="todo"><title>0x0001790c Func1790c (230 bytes)</title></rect>
 <rect width="12" height="12" x="540" y="15" class="todo"><title>0x00017a40 Func17a40 (1568 bytes)</title></rect>
@@ -842,10 +842,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">13.13%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">86.87%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">13.26%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">86.74%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="98.12" height="6" x="0" y="0" class="named"/>
-<rect width="648.88" height="6" x="98.12" y="0" class="todo"/>
+<rect width="99.04" height="6" x="0" y="0" class="named"/>
+<rect width="647.96" height="6" x="99.04" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="54.65" height="67.43" x="0" y="0" class="todo"><title>0x0001bc98 Func1bc98 (4489 bytes)</title></rect>
@@ -1068,7 +1068,7 @@
 <rect width="12.08" height="12.30" x="525.97" y="108.93" class="todo"><title>0x00035338 Func35338 (255 bytes)</title></rect>
 <rect width="12.08" height="12.24" x="525.97" y="124.23" class="todo"><title>0x0002eefc Func2eefc (254 bytes)</title></rect>
 <rect width="12.08" height="12.12" x="525.97" y="139.47" class="named"><title>0x00011c30 StalkBox (252 bytes)</title></rect>
-<rect width="12.08" height="11.88" x="525.97" y="154.58" class="todo"><title>0x00017570 GetWaterHeight (248 bytes)</title></rect>
+<rect width="12.08" height="11.88" x="525.97" y="154.58" class="named"><title>0x00017570 GetWaterHeight (248 bytes)</title></rect>
 <rect width="12.08" height="11.82" x="525.97" y="169.46" class="todo"><title>0x0002cf08 Func2cf08 (247 bytes)</title></rect>
 <rect width="12.08" height="11.82" x="525.97" y="184.27" class="todo"><title>0x0002f288 Func2f288 (247 bytes)</title></rect>
 <rect width="12.08" height="11.76" x="525.97" y="199.09" class="named"><title>0x00010f5c decomp_pcx (246 bytes)</title></rect>

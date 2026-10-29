@@ -381,3 +381,35 @@ FLOOR_INFO *GetFloor(sint32 x, sint32 y, sint32 z, sint16 *room_number)
 
     return floor;
 }
+
+sint16 GetWaterHeight(sint32 x, sint32 y, sint32 z, sint16 room_number)
+{
+    ROOM_INFO *r;
+    FLOOR_INFO *floor;
+
+    r = &room[room_number];
+    floor = &r->floor[((z - r->z) >> WALL_SHIFT) + ((x - r->x) >> WALL_SHIFT) * r->x_size];
+
+    if (r->flags & UNDERWATER)
+    {
+        while (floor->sky_room != NO_ROOM)
+        {
+            r = &room[floor->sky_room];
+            if (!(r->flags & UNDERWATER))
+                return floor->ceiling << 8;
+            floor = &r->floor[((z - r->z) >> WALL_SHIFT) + ((x - r->x) >> WALL_SHIFT) * r->x_size];
+        }
+        return floor->ceiling << 8;
+    }
+    else
+    {
+        while (floor->pit_room != NO_ROOM)
+        {
+            r = &room[floor->pit_room];
+            if (r->flags & UNDERWATER)
+                return floor->floor << 8;
+            floor = &r->floor[((z - r->z) >> WALL_SHIFT) + ((x - r->x) >> WALL_SHIFT) * r->x_size];
+        }
+    }
+    return NO_HEIGHT;
+}

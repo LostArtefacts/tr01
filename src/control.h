@@ -20,6 +20,7 @@ int GetChange(ITEM_INFO *item, ANIM_STRUCT *anim);
 void TranslateItem(ITEM_INFO *item, sint32 x, sint32 y, sint32 z);
 void AnimateItem(ITEM_INFO *item);
 FLOOR_INFO *GetFloor(sint32 x, sint32 y, sint32 z, sint16 *room_number);
+sint16 GetWaterHeight(sint32 x, sint32 y, sint32 z, sint16 room_number);
 sint16 GetTiltType(FLOOR_INFO *floor, sint32 x, sint32 y, sint32 z);
 sint16 GetHeight(FLOOR_INFO *floor, sint32 x, sint32 y, sint32 z);
 sint16 GetCeiling(FLOOR_INFO *floor, sint32 x, sint32 y, sint32 z);
