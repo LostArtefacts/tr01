@@ -22,7 +22,7 @@ address,size,name,symbol
 0x00011630,67,InitialiseCreature,InitialiseCreature_
 0x00011674,634,CreatureAIInfo,CreatureAIInfo_
 0x000118f0,549,SearchLOT,SearchLOT_
-0x00011b18,132,Func11b18,
+0x00011b18,132,UpdateLOT,UpdateLOT_
 0x00011b9c,148,Func11b9c,
 0x00011c30,252,Func11c30,
 0x00011d2c,184,Func11d2c,

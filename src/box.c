@@ -147,3 +147,29 @@ int SearchLOT(LOT_INFO *LOT, int expansion)
 
     return 1;
 }
+
+int UpdateLOT(LOT_INFO *LOT, int expansion)
+{
+    BOX_NODE *expand;
+
+    if (LOT->required_box != NO_BOX && LOT->required_box != LOT->target_box)
+    {
+        LOT->target_box = LOT->required_box;
+
+        expand = &LOT->node[LOT->target_box];
+        if (expand->next_expansion == NO_BOX && LOT->tail != LOT->target_box)
+        {
+            expand->next_expansion = LOT->head;
+
+            if (LOT->head == NO_BOX)
+                LOT->tail = LOT->target_box;
+
+            LOT->head = LOT->target_box;
+        }
+
+        expand->search_number = ++LOT->search_number;
+        expand->exit_box = NO_BOX;
+    }
+
+    return SearchLOT(LOT, expansion);
+}
