@@ -63,6 +63,17 @@ enum lara_water_states
     LARA_CHEAT
 };
 
+enum lara_meshes
+{
+    HIPS,
+    THIGH_L, CALF_L, FOOT_L,
+    THIGH_R, CALF_R, FOOT_R,
+    TORSO,
+    UARM_R, LARM_R, HAND_R,
+    UARM_L, LARM_L, HAND_L,
+    HEAD
+};
+
 extern LARA_INFO lara;
 extern ITEM_INFO *lara_item;
 

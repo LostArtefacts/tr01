@@ -1769,6 +1769,7 @@ address,size,name,symbol
 0x000cb3d0,4,items,_items
 0x000cb3d4,4,flip_status,_flip_status
 0x000cbf88,200,draw_rooms,_draw_rooms
+0x000cc074,4,meshes,_meshes
 0x000cc088,4,room,_room
 0x000cc08c,4,number_draw_rooms,_number_draw_rooms
 0x000cc090,9550,objects,_objects

@@ -177,3 +177,27 @@ void ControlCinematicPlayer4(sint16 item_num)
 {
     AnimateItem(&items[item_num]);
 }
+
+void InitialisePlayer1(sint16 item_num)
+{
+    ITEM_INFO *item;
+    sint16 *temp;
+
+    AddActiveItem(item_num);
+    item = &items[item_num];
+    camera.pos.x = item->pos.x_pos;
+    camera.pos.y = item->pos.y_pos;
+    camera.pos.z = item->pos.z_pos;
+    camera.target_angle = item->pos.y_rot = 0;
+    camera.pos.room_number = item->room_number;
+
+    if (cinematic_level == CUTSCENE2 || cinematic_level == CUTSCENE4)
+    {
+        temp = meshes[objects[PLAYER_1].mesh_index + THIGH_L];
+        meshes[objects[PLAYER_1].mesh_index + THIGH_L] = meshes[objects[PISTOLS].mesh_index + THIGH_L];
+        meshes[objects[PISTOLS].mesh_index + THIGH_L] = temp;
+        temp = meshes[objects[PLAYER_1].mesh_index + THIGH_R];
+        meshes[objects[PLAYER_1].mesh_index + THIGH_R] = meshes[objects[PISTOLS].mesh_index + THIGH_R];
+        meshes[objects[PISTOLS].mesh_index + THIGH_R] = temp;
+    }
+}
