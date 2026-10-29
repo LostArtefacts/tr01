@@ -367,3 +367,95 @@ void SwitchCollision2(sint16 item_num, ITEM_INFO *laraitem, COLL_INFO *coll)
         }
     }
 }
+
+void KeyHoleCollision(sint16 item_num, ITEM_INFO *laraitem, COLL_INFO *coll)
+{
+    ITEM_INFO *item;
+    int correct = 0;
+
+    if (laraitem->current_anim_state == AS_STOP)
+    {
+        item = &items[item_num];
+        if ((Inventory_Chosen == -1 && !(input & IN_ACTION)) || lara.gun_status != LG_ARMLESS || laraitem->gravity_status)
+            return;
+
+        if (!TestLaraPosition(KeyHoleBounds, item, laraitem))
+            return;
+        if (item->status != NOT_ACTIVE)
+        {
+            if (laraitem->pos.x_pos != pup_x || laraitem->pos.y_pos != pup_y || laraitem->pos.z_pos != pup_z)
+            {
+                pup_x = laraitem->pos.x_pos;
+                pup_y = laraitem->pos.y_pos;
+                pup_z = laraitem->pos.z_pos;
+                SoundEffect(2, &laraitem->pos, 0);
+            }
+            return;
+        }
+        if (Inventory_Chosen == -1)
+        {
+            Display_Inventory(INV_KEYS_MODE);
+
+            if (Inventory_Chosen == -1 && inv_keys_objects)
+                return;
+            if (Inventory_Chosen != -1)
+                pup_y = laraitem->pos.y_pos - 1;
+        }
+        else
+            pup_y = laraitem->pos.y_pos - 1;
+        switch (item->object_number)
+        {
+        case KEY_HOLE1:
+            if (Inventory_Chosen != KEY_OPTION1)
+                break;
+            Inv_RemoveItem(KEY_OPTION1);
+            correct = 1;
+            break;
+
+        case KEY_HOLE2:
+            if (Inventory_Chosen != KEY_OPTION2)
+                break;
+            Inv_RemoveItem(KEY_OPTION2);
+            correct = 1;
+            break;
+
+        case KEY_HOLE3:
+            if (Inventory_Chosen != KEY_OPTION3)
+                break;
+            Inv_RemoveItem(KEY_OPTION3);
+            correct = 1;
+            break;
+
+        case KEY_HOLE4:
+            if (Inventory_Chosen != KEY_OPTION4)
+                break;
+            Inv_RemoveItem(KEY_OPTION4);
+            correct = 1;
+            break;
+        }
+        Inventory_Chosen = -1;
+        if (!correct)
+        {
+            if (laraitem->pos.x_pos != pup_x || laraitem->pos.y_pos != pup_y || laraitem->pos.z_pos != pup_z)
+            {
+                SoundEffect(2, &laraitem->pos, 0);
+                pup_x = laraitem->pos.x_pos;
+                pup_y = laraitem->pos.y_pos;
+                pup_z = laraitem->pos.z_pos;
+            }
+            return;
+        }
+        AlignLaraPosition(&KeyHolePosition, item, laraitem);
+        laraitem->goal_anim_state = AS_USEKEY;
+        do
+        {
+            AnimateLara(laraitem);
+        } while (laraitem->current_anim_state != AS_USEKEY);
+        laraitem->goal_anim_state = AS_STOP;
+        lara.gun_status = LG_HANDSBUSY;
+        item->status = ACTIVE;
+        pup_x = laraitem->pos.x_pos;
+        pup_y = laraitem->pos.y_pos;
+        pup_z = laraitem->pos.z_pos;
+    }
+}
