@@ -285,7 +285,7 @@ address,size,name,symbol
 0x00024838,55,CreateItem,CreateItem_
 0x00024870,446,InitialiseItem,InitialiseItem_
 0x00024a30,151,RemoveActiveItem,RemoveActiveItem_
-0x00024ac8,114,Func24ac8,
+0x00024ac8,114,RemoveDrawnItem,RemoveDrawnItem_
 0x00024b3c,136,AddActiveItem,AddActiveItem_
 0x00024bc4,153,ItemNewRoom,ItemNewRoom_
 0x00024c60,160,Func24c60,
