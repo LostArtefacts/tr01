@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">38.69% (301)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">61.31% (477)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">38.82% (302)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">61.18% (476)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="289.01" height="6" x="0" y="0" class="named"/>
-<rect width="457.99" height="6" x="289.01" y="0" class="todo"/>
+<rect width="289.97" height="6" x="0" y="0" class="named"/>
+<rect width="457.03" height="6" x="289.97" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -369,7 +369,7 @@
 <rect width="12" height="12" x="735" y="75" class="named"><title>0x00025494 lara_as_forwardjump (194 bytes)</title></rect>
 <rect width="12" height="12" x="0" y="90" class="named"><title>0x00025558 lara_as_pose (1 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="90" class="named"><title>0x0002555c lara_as_fastback (93 bytes)</title></rect>
-<rect width="12" height="12" x="30" y="90" class="todo"><title>0x000255bc Func255bc (135 bytes)</title></rect>
+<rect width="12" height="12" x="30" y="90" class="named"><title>0x000255bc lara_as_turn_r (135 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="90" class="todo"><title>0x00025644 Func25644 (145 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="90" class="todo"><title>0x000256d8 Func256d8 (5 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="90" class="todo"><title>0x000256e0 Func256e0 (69 bytes)</title></rect>
@@ -849,10 +849,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">40.50%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">59.50%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">40.57%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">59.43%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="302.57" height="6" x="0" y="0" class="named"/>
-<rect width="444.43" height="6" x="302.57" y="0" class="todo"/>
+<rect width="303.06" height="6" x="0" y="0" class="named"/>
+<rect width="443.94" height="6" x="303.06" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1216,7 +1216,7 @@
 <rect width="7.76" height="8.38" x="592.36" y="153.52" class="todo"><title>0x00046d28 Func46d28 (137 bytes)</title></rect>
 <rect width="7.76" height="8.30" x="592.36" y="164.90" class="named"><title>0x0001628c EffectHit (136 bytes)</title></rect>
 <rect width="7.76" height="8.30" x="592.36" y="176.20" class="named"><title>0x00024b3c AddActiveItem (136 bytes)</title></rect>
-<rect width="7.76" height="8.22" x="592.36" y="187.50" class="todo"><title>0x000255bc Func255bc (135 bytes)</title></rect>
+<rect width="7.76" height="8.22" x="592.36" y="187.50" class="named"><title>0x000255bc lara_as_turn_r (135 bytes)</title></rect>
 <rect width="7.76" height="8.22" x="592.36" y="198.72" class="todo"><title>0x000258a0 lara_as_back (135 bytes)</title></rect>
 <rect width="7.76" height="8.13" x="592.36" y="209.93" class="named"><title>0x0001dcb4 ControlSplash1 (134 bytes)</title></rect>
 <rect width="7.76" height="7.97" x="592.36" y="221.07" class="named"><title>0x00011b18 UpdateLOT (132 bytes)</title></rect>
