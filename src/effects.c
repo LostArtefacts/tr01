@@ -1,5 +1,11 @@
 #include "game.h"
 
+OBJECT_VECTOR *sound_effects;
+int number_sound_effects;
+
+#define FLIPFLAG 64
+#define UNFLIPFLAG 128
+
 int ItemNearLara(PHD_3DPOS *pos, sint32 distance)
 {
     sint32 x, y, z;
@@ -20,4 +26,27 @@ int ItemNearLara(PHD_3DPOS *pos, sint32 distance)
         return 0;
 
     return 1;
+}
+
+void SoundEffects(void)
+{
+    int i;
+    OBJECT_VECTOR *sound;
+
+    mn_reset_ambient_loudness();
+    sound = sound_effects;
+    for (i = number_sound_effects; i > 0; i--, sound++)
+    {
+        if (!flip_status && (sound->flags & UNFLIPFLAG) == 0)
+            continue;
+        else if (flip_status && (sound->flags & FLIPFLAG) == 0)
+            continue;
+
+        SoundEffect(sound->data, (PHD_3DPOS *)&sound->x, 0);
+    }
+
+    if (flipeffect != -1)
+        (*effect_routines[flipeffect])(NULL);
+
+    mn_update_sound_effects();
 }

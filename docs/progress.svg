@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">18.99% (147)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">81.01% (627)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">19.12% (148)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">80.88% (626)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="141.87" height="6" x="0" y="0" class="named"/>
-<rect width="605.13" height="6" x="141.87" y="0" class="todo"/>
+<rect width="142.84" height="6" x="0" y="0" class="named"/>
+<rect width="604.16" height="6" x="142.84" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -215,7 +215,7 @@
 <rect width="12" height="12" x="675" y="30" class="named"><title>0x0001d434 GetBoundsAccurate (116 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="30" class="named"><title>0x0001d4a8 GetBestFrame (50 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="30" class="named"><title>0x0001d4e0 ItemNearLara (145 bytes)</title></rect>
-<rect width="12" height="12" x="720" y="30" class="todo"><title>0x0001d574 SoundEffects (110 bytes)</title></rect>
+<rect width="12" height="12" x="720" y="30" class="named"><title>0x0001d574 SoundEffects (110 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="30" class="todo"><title>0x0001d5e4 DoBloodSplat (106 bytes)</title></rect>
 <rect width="12" height="12" x="0" y="45" class="todo"><title>0x0001d650 Func1d650 (157 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="45" class="todo"><title>0x0001d6f0 Func1d6f0 (99 bytes)</title></rect>
@@ -535,9 +535,9 @@
 <rect width="12" height="12" x="225" y="135" class="todo"><title>0x0002d1a0 Func2d1a0 (273 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="135" class="todo"><title>0x0002d2b4 SoundEffect (1336 bytes)</title></rect>
 <rect width="12" height="12" x="255" y="135" class="todo"><title>0x0002d7ec Func2d7ec (181 bytes)</title></rect>
-<rect width="12" height="12" x="270" y="135" class="todo"><title>0x0002d8a4 Func2d8a4 (56 bytes)</title></rect>
+<rect width="12" height="12" x="270" y="135" class="todo"><title>0x0002d8a4 mn_reset_ambient_loudness (56 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="135" class="todo"><title>0x0002d8dc mn_stop_ambient_samples (94 bytes)</title></rect>
-<rect width="12" height="12" x="300" y="135" class="todo"><title>0x0002d93c Func2d93c (414 bytes)</title></rect>
+<rect width="12" height="12" x="300" y="135" class="todo"><title>0x0002d93c mn_update_sound_effects (414 bytes)</title></rect>
 <rect width="12" height="12" x="315" y="135" class="todo"><title>0x0002dadc Func2dadc (292 bytes)</title></rect>
 <rect width="12" height="12" x="330" y="135" class="todo"><title>0x0002dc00 mn_stop_sound_effect (312 bytes)</title></rect>
 <rect width="12" height="12" x="345" y="135" class="todo"><title>0x0002dd38 Func2dd38 (14 bytes)</title></rect>
@@ -845,10 +845,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">25.04%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">74.96%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">25.09%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">74.91%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="187.03" height="6" x="0" y="0" class="named"/>
-<rect width="559.97" height="6" x="187.03" y="0" class="todo"/>
+<rect width="187.43" height="6" x="0" y="0" class="named"/>
+<rect width="559.57" height="6" x="187.43" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -985,7 +985,7 @@
 <rect width="16.83" height="16.51" x="452.61" y="19.51" class="todo"><title>0x0003e614 Func3e614 (433 bytes)</title></rect>
 <rect width="16.83" height="16.33" x="452.61" y="39.03" class="todo"><title>0x00026084 Func26084 (429 bytes)</title></rect>
 <rect width="16.83" height="16.24" x="452.61" y="58.36" class="todo"><title>0x0003d7e0 Func3d7e0 (427 bytes)</title></rect>
-<rect width="16.83" height="15.66" x="452.61" y="77.60" class="todo"><title>0x0002d93c Func2d93c (414 bytes)</title></rect>
+<rect width="16.83" height="15.66" x="452.61" y="77.60" class="todo"><title>0x0002d93c mn_update_sound_effects (414 bytes)</title></rect>
 <rect width="16.83" height="15.66" x="452.61" y="96.26" class="todo"><title>0x0003abf0 Func3abf0 (414 bytes)</title></rect>
 <rect width="16.83" height="15.52" x="452.61" y="114.92" class="todo"><title>0x000252f8 Func252f8 (411 bytes)</title></rect>
 <rect width="16.83" height="15.43" x="452.61" y="133.44" class="named"><title>0x00014fe4 InGameCinematicCamera (409 bytes)</title></rect>
@@ -1268,7 +1268,7 @@
 <rect width="6.64" height="7.30" x="702" y="106.98" class="todo"><title>0x0002b8a0 Func2b8a0 (111 bytes)</title></rect>
 <rect width="6.64" height="7.30" x="711.63" y="106.98" class="todo"><title>0x0002bba8 Func2bba8 (111 bytes)</title></rect>
 <rect width="6.64" height="7.30" x="721.27" y="106.98" class="todo"><title>0x00030020 Func30020 (111 bytes)</title></rect>
-<rect width="6.55" height="7.30" x="730.90" y="106.98" class="todo"><title>0x0001d574 SoundEffects (110 bytes)</title></rect>
+<rect width="6.55" height="7.30" x="730.90" y="106.98" class="named"><title>0x0001d574 SoundEffects (110 bytes)</title></rect>
 <rect width="6.55" height="7.30" x="740.45" y="106.98" class="todo"><title>0x00032450 Func32450 (110 bytes)</title></rect>
 <rect width="6.73" height="7.02" x="623.70" y="117.27" class="todo"><title>0x00020e54 Func20e54 (109 bytes)</title></rect>
 <rect width="6.73" height="6.93" x="623.70" y="127.29" class="todo"><title>0x00026800 Func26800 (108 bytes)</title></rect>
@@ -1400,7 +1400,7 @@
 <rect width="3.91" height="4.37" x="667.33" y="213.91" class="todo"><title>0x000469a8 Func469a8 (57 bytes)</title></rect>
 <rect width="3.91" height="4.24" x="667.33" y="221.28" class="todo"><title>0x00020a78 Func20a78 (56 bytes)</title></rect>
 <rect width="3.91" height="4.24" x="667.33" y="228.52" class="todo"><title>0x00024d80 Func24d80 (56 bytes)</title></rect>
-<rect width="3.91" height="4.24" x="667.33" y="235.76" class="todo"><title>0x0002d8a4 Func2d8a4 (56 bytes)</title></rect>
+<rect width="3.91" height="4.24" x="667.33" y="235.76" class="todo"><title>0x0002d8a4 mn_reset_ambient_loudness (56 bytes)</title></rect>
 <rect width="3.94" height="4.08" x="674.24" y="160.64" class="named"><title>0x00019708 GetDemoInput (55 bytes)</title></rect>
 <rect width="3.94" height="4.08" x="681.19" y="160.64" class="todo"><title>0x00023eac Func23eac (55 bytes)</title></rect>
 <rect width="3.94" height="4.08" x="688.13" y="160.64" class="todo"><title>0x00024838 Func24838 (55 bytes)</title></rect>

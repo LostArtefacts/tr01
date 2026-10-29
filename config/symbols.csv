@@ -467,9 +467,9 @@ address,size,name,symbol
 0x0002d1a0,273,Func2d1a0,
 0x0002d2b4,1336,SoundEffect,SoundEffect_
 0x0002d7ec,181,Func2d7ec,
-0x0002d8a4,56,Func2d8a4,
+0x0002d8a4,56,mn_reset_ambient_loudness,mn_reset_ambient_loudness_
 0x0002d8dc,94,mn_stop_ambient_samples,mn_stop_ambient_samples_
-0x0002d93c,414,Func2d93c,
+0x0002d93c,414,mn_update_sound_effects,mn_update_sound_effects_
 0x0002dadc,292,Func2dadc,
 0x0002dc00,312,mn_stop_sound_effect,mn_stop_sound_effect_
 0x0002dd38,14,Func2dd38,
@@ -1829,6 +1829,8 @@ address,size,name,symbol
 0x000cc08c,4,number_draw_rooms,_number_draw_rooms
 0x000cc090,9550,objects,_objects
 0x000ce5de,2,number_rooms,_number_rooms
+0x000ce5e0,4,number_sound_effects,_number_sound_effects
+0x000ce5e4,4,sound_effects,_sound_effects
 0x000ce5f8,4,floor_data,_floor_data
 0x000ce95c,4,input,_input
 0x000ce960,34,inv_colours,_inv_colours
