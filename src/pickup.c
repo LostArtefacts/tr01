@@ -1,4 +1,5 @@
 #include "game.h"
+#include <string.h>
 
 extern sint16 inv_keys_objects;
 static int pup_x, pup_y, pup_z;
@@ -156,5 +157,42 @@ void PickUpCollision(sint16 item_num, ITEM_INFO *laraitem, COLL_INFO *coll)
             laraitem->goal_anim_state = AS_TREAD;
             return;
         }
+    }
+}
+
+void PickUpScionCollision(sint16 item_num, ITEM_INFO *laraitem, COLL_INFO *coll)
+{
+    ITEM_INFO *item;
+
+    item = &items[item_num];
+    item->pos.y_rot = laraitem->pos.y_rot;
+    item->pos.z_rot = item->pos.x_rot = 0;
+
+    if (!TestLaraPosition(PickUpScionBounds, item, laraitem))
+        return;
+    if (laraitem->current_anim_state == AS_PICKUP)
+    {
+        if (laraitem->frame_number == PICKUPSCION_F +
+                                          anims[laraitem->anim_number].frame_base)
+        {
+            AddDisplayPickup(item->object_number);
+            Inv_AddItem(item->object_number);
+            item->status = INVISIBLE;
+            RemoveDrawnItem(item_num);
+            savegame.pickups++;
+        }
+        return;
+    }
+    else if (input & IN_ACTION && lara.gun_status == LG_ARMLESS && !laraitem->gravity_status && laraitem->current_anim_state == AS_STOP)
+    {
+        AlignLaraPosition(&PickUpScionPosition, item, laraitem);
+        laraitem->anim_number = objects[LARA_EXTRA].anim_index;
+        laraitem->frame_number = anims[laraitem->anim_number].frame_base;
+        lara.gun_status = LG_HANDSBUSY;
+        laraitem->current_anim_state = AS_PICKUP;
+        laraitem->goal_anim_state = AS_PICKUP;
+        camera.type = CINEMATIC_CAMERA;
+        cine_frame = 0;
+        memcpy(&cinematic_pos, &laraitem->pos, sizeof(PHD_3DPOS));
     }
 }
