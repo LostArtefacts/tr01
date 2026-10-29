@@ -647,3 +647,86 @@ void lara_as_usemidas(ITEM_INFO *item, COLL_INFO *coll)
     coll->enable_baddie_push = 0;
     ItemSparkle(item, (1 << HAND_L) | (1 << HAND_R));
 }
+
+void lara_as_diemidas(ITEM_INFO *item, COLL_INFO *coll)
+{
+    int frm;
+
+    item->gravity_status = 0;
+    coll->enable_hit = 0;
+    coll->enable_baddie_push = 0;
+
+    frm = item->frame_number - anims[item->anim_number].frame_base;
+    switch (frm)
+    {
+    case 5:
+        lara.mesh_effects |= (1 << FOOT_L);
+        lara.mesh_effects |= (1 << FOOT_R);
+        lara.mesh_ptrs[FOOT_L] = meshes[(&objects[LARA_EXTRA])->mesh_index + FOOT_L];
+        lara.mesh_ptrs[FOOT_R] = meshes[(&objects[LARA_EXTRA])->mesh_index + FOOT_R];
+        break;
+
+    case 70:
+        lara.mesh_effects |= (1 << CALF_L);
+        lara.mesh_ptrs[CALF_L] = meshes[(&objects[LARA_EXTRA])->mesh_index + CALF_L];
+        break;
+
+    case 90:
+        lara.mesh_effects |= (1 << THIGH_L);
+        lara.mesh_ptrs[THIGH_L] = meshes[(&objects[LARA_EXTRA])->mesh_index + THIGH_L];
+        break;
+
+    case 100:
+        lara.mesh_effects |= (1 << CALF_R);
+        lara.mesh_ptrs[CALF_R] = meshes[(&objects[LARA_EXTRA])->mesh_index + CALF_R];
+        break;
+
+    case 120:
+        lara.mesh_effects |= (1 << HIPS);
+        lara.mesh_effects |= (1 << THIGH_R);
+        lara.mesh_ptrs[HIPS] = meshes[(&objects[LARA_EXTRA])->mesh_index + HIPS];
+        lara.mesh_ptrs[THIGH_R] = meshes[(&objects[LARA_EXTRA])->mesh_index + THIGH_R];
+        break;
+
+    case 135:
+        lara.mesh_effects |= (1 << TORSO);
+        lara.mesh_ptrs[TORSO] = meshes[(&objects[LARA_EXTRA])->mesh_index + TORSO];
+        break;
+
+    case 150:
+        lara.mesh_effects |= (1 << UARM_L);
+        lara.mesh_ptrs[UARM_L] = meshes[(&objects[LARA_EXTRA])->mesh_index + UARM_L];
+        break;
+
+    case 163:
+        lara.mesh_effects |= (1 << LARM_L);
+        lara.mesh_ptrs[LARM_L] = meshes[(&objects[LARA_EXTRA])->mesh_index + LARM_L];
+        break;
+
+    case 174:
+        lara.mesh_effects |= (1 << HAND_L);
+        lara.mesh_ptrs[HAND_L] = meshes[(&objects[LARA_EXTRA])->mesh_index + HAND_L];
+        break;
+
+    case 186:
+        lara.mesh_effects |= (1 << UARM_R);
+        lara.mesh_ptrs[UARM_R] = meshes[(&objects[LARA_EXTRA])->mesh_index + UARM_R];
+        break;
+
+    case 195:
+        lara.mesh_effects |= (1 << LARM_R);
+        lara.mesh_ptrs[LARM_R] = meshes[(&objects[LARA_EXTRA])->mesh_index + LARM_R];
+        break;
+
+    case 218:
+        lara.mesh_effects |= (1 << HAND_R);
+        lara.mesh_ptrs[HAND_R] = meshes[(&objects[LARA_EXTRA])->mesh_index + HAND_R];
+        break;
+
+    case 225:
+        lara.mesh_effects |= (1 << HEAD);
+        lara.mesh_ptrs[HEAD] = meshes[(&objects[LARA_EXTRA])->mesh_index + HEAD];
+        break;
+    }
+    ItemSparkle(item, lara.mesh_effects);
+}

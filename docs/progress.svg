@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">43.02% (336)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">56.98% (445)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">43.15% (337)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">56.85% (444)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="321.37" height="6" x="0" y="0" class="named"/>
-<rect width="425.63" height="6" x="321.37" y="0" class="todo"/>
+<rect width="322.33" height="6" x="0" y="0" class="named"/>
+<rect width="424.67" height="6" x="322.33" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -404,7 +404,7 @@
 <rect width="12" height="12" x="510" y="90" class="named"><title>0x00025cd8 lara_as_roll2 (0 bytes)</title></rect>
 <rect width="12" height="12" x="525" y="90" class="named"><title>0x00025cdc lara_as_special (38 bytes)</title></rect>
 <rect width="12" height="12" x="540" y="90" class="named"><title>0x00025d04 lara_as_usemidas (14 bytes)</title></rect>
-<rect width="12" height="12" x="555" y="90" class="todo"><title>0x00025d14 Func25d14 (767 bytes)</title></rect>
+<rect width="12" height="12" x="555" y="90" class="named"><title>0x00025d14 lara_as_diemidas (767 bytes)</title></rect>
 <rect width="12" height="12" x="570" y="90" class="todo"><title>0x00026014 Func26014 (34 bytes)</title></rect>
 <rect width="12" height="12" x="585" y="90" class="todo"><title>0x00026038 Func26038 (60 bytes)</title></rect>
 <rect width="12" height="12" x="600" y="90" class="todo"><title>0x00026074 Func26074 (15 bytes)</title></rect>
@@ -852,10 +852,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">41.40%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">58.60%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">41.78%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">58.22%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="309.28" height="6" x="0" y="0" class="named"/>
-<rect width="437.72" height="6" x="309.28" y="0" class="todo"/>
+<rect width="312.09" height="6" x="0" y="0" class="named"/>
+<rect width="434.91" height="6" x="312.09" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -914,7 +914,7 @@
 <rect width="24.72" height="22.57" x="267.18" y="192.03" class="todo"><title>0x00041eb4 XYGClipper (793 bytes)</title></rect>
 <rect width="24.72" height="22.41" x="267.18" y="217.59" class="todo"><title>0x00043568 Func43568 (788 bytes)</title></rect>
 <rect width="21.94" height="24.63" x="294.90" y="0" class="todo"><title>0x00041bb0 Func41bb0 (771 bytes)</title></rect>
-<rect width="21.94" height="24.49" x="294.90" y="27.63" class="todo"><title>0x00025d14 Func25d14 (767 bytes)</title></rect>
+<rect width="21.94" height="24.49" x="294.90" y="27.63" class="named"><title>0x00025d14 lara_as_diemidas (767 bytes)</title></rect>
 <rect width="21.94" height="24.45" x="294.90" y="55.12" class="named"><title>0x00020114 LevelStats (766 bytes)</title></rect>
 <rect width="21.94" height="24.42" x="294.90" y="82.58" class="todo"><title>0x00044a15 Func44a15 (765 bytes)</title></rect>
 <rect width="21.94" height="23.99" x="294.90" y="110" class="todo"><title>0x00046404 Func46404 (753 bytes)</title></rect>
