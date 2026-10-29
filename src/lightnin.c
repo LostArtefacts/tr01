@@ -158,3 +158,92 @@ void InitialiseLightning(sint16 item_num)
     l->count = 1;
     l->zapped = 0;
 }
+
+void LightningControl(sint16 item_number)
+{
+    sint32 i, j, radius;
+    ITEM_INFO *item;
+    FLOOR_INFO *floor;
+    struct lightning *l;
+
+    item = &items[item_number];
+    l = (struct lightning *)item->data;
+
+    if (TriggerActive(item))
+    {
+        l->count--;
+        if (l->count <= 0)
+        {
+            if (l->onstate)
+            {
+                l->onstate = 0;
+                l->count = 35 + (GetRandomControl() * 45) / 32768;
+                l->zapped = 0;
+                if (flip_status)
+                    FlipMap();
+            }
+            else
+            {
+                l->onstate = 1;
+                l->count = 20;
+
+                for (i = 0; i < STEPS; i++)
+                    l->wibble[i].x = l->wibble[i].y = l->wibble[i].z = 0;
+
+                radius = (l->notarget) ? WALL_L : WALL_L * 5 / 2;
+                if (ItemNearLara(&item->pos, radius))
+                {
+                    l->target.x = lara_item->pos.x_pos;
+                    l->target.y = lara_item->pos.y_pos;
+                    l->target.z = lara_item->pos.z_pos;
+
+                    lara_item->hit_points -= LIGHTENING_DAMAGE;
+                    lara_item->hit_status = 1;
+
+                    l->zapped = 1;
+                }
+                else if (l->notarget)
+                {
+                    l->target.x = item->pos.x_pos;
+                    l->target.z = item->pos.z_pos;
+                    floor = GetFloor(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, &item->room_number);
+                    l->target.y = GetHeight(floor, item->pos.x_pos, item->pos.y_pos, item->pos.z_pos);
+                    l->zapped = 0;
+                }
+                else
+                {
+                    l->target.x = l->target.y = l->target.z = 0;
+                    GetJointAbsPosition(item, &(l->target), GetRandomControl() * 5 / 0x7fff + 1);
+                    l->zapped = 0;
+                }
+
+                for (i = 0; i < SHOOTS; i++)
+                {
+                    l->start[i] = GetRandomControl() * (STEPS - 1) / 0x7fff;
+                    l->end[i].x = l->target.x + GetRandomControl() * WALL_L / 0x7fff;
+                    l->end[i].y = l->target.y;
+                    l->end[i].z = l->target.z + GetRandomControl() * WALL_L / 0x7fff;
+
+                    for (j = 0; j < STEPS; j++)
+                        l->shoot[i][j].x = l->shoot[i][j].y = l->shoot[i][j].z = 0;
+                }
+
+                if (!flip_status)
+                    FlipMap();
+            }
+
+            SoundEffect(98, (PHD_3DPOS *)&item->pos, NULL);
+        }
+    }
+    else
+    {
+        l->count = 1;
+        l->onstate = 0;
+        l->zapped = 0;
+        if (flip_status)
+            FlipMap();
+
+        RemoveActiveItem(item_number);
+        item->status = NOT_ACTIVE;
+    }
+}
