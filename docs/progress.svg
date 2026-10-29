@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">34.58% (269)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">65.42% (509)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">34.70% (270)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">65.30% (508)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="258.28" height="6" x="0" y="0" class="named"/>
-<rect width="488.72" height="6" x="258.28" y="0" class="todo"/>
+<rect width="259.24" height="6" x="0" y="0" class="named"/>
+<rect width="487.76" height="6" x="259.24" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -334,7 +334,7 @@
 <rect width="12" height="12" x="210" y="75" class="named"><title>0x00023ff0 Inv_GetItemOption (158 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="75" class="named"><title>0x00024090 RemoveInventoryText (42 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="75" class="named"><title>0x000240bc Inv_RingInit (358 bytes)</title></rect>
-<rect width="12" height="12" x="255" y="75" class="todo"><title>0x00024224 Inv_RingGetView (96 bytes)</title></rect>
+<rect width="12" height="12" x="255" y="75" class="named"><title>0x00024224 Inv_RingGetView (96 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="75" class="todo"><title>0x00024284 Inv_RingLight (58 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="75" class="todo"><title>0x000242c0 Inv_RingCalcAdders (65 bytes)</title></rect>
 <rect width="12" height="12" x="300" y="75" class="todo"><title>0x00024304 Inv_RingDoMotions (381 bytes)</title></rect>
@@ -849,10 +849,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">38.13%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">61.87%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">38.18%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">61.82%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="284.85" height="6" x="0" y="0" class="named"/>
-<rect width="462.15" height="6" x="284.85" y="0" class="todo"/>
+<rect width="285.21" height="6" x="0" y="0" class="named"/>
+<rect width="461.79" height="6" x="285.21" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1305,7 +1305,7 @@
 <rect width="6.11" height="6.52" x="660.70" y="126.37" class="todo"><title>0x00044700 Func44700 (97 bytes)</title></rect>
 <rect width="6.01" height="6.52" x="669.81" y="126.37" class="named"><title>0x0001f544 TestCdDrive (96 bytes)</title></rect>
 <rect width="6.01" height="6.52" x="678.82" y="126.37" class="named"><title>0x0001ff1c GameLoop (96 bytes)</title></rect>
-<rect width="6.01" height="6.52" x="687.84" y="126.37" class="todo"><title>0x00024224 Inv_RingGetView (96 bytes)</title></rect>
+<rect width="6.01" height="6.52" x="687.84" y="126.37" class="named"><title>0x00024224 Inv_RingGetView (96 bytes)</title></rect>
 <rect width="5.92" height="6.52" x="696.85" y="126.37" class="named"><title>0x0001f3ac LoadCinematic (95 bytes)</title></rect>
 <rect width="5.92" height="6.52" x="705.77" y="126.37" class="todo"><title>0x00026918 Func26918 (95 bytes)</title></rect>
 <rect width="5.83" height="6.52" x="714.69" y="126.37" class="named"><title>0x00020f60 S_SeedRandom (94 bytes)</title></rect>

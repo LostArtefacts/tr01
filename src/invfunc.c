@@ -818,6 +818,19 @@ void Inv_RingInit(RING_INFO *ring, sint16 type, INVENTORY_ITEM **list, sint16 qt
     ring->light.z = 0x400;
 }
 
+void Inv_RingGetView(RING_INFO *ring, PHD_3DPOS *viewer)
+{
+    PHD_ANGLE angles[2];
+
+    phd_GetVectorAngles(0 - ring->camera.x_pos, CAMERA_YOFFSET - ring->camera.y_pos, ring->radius - ring->camera.z_pos, angles);
+    viewer->x_pos = ring->camera.x_pos;
+    viewer->y_pos = ring->camera.y_pos;
+    viewer->z_pos = ring->camera.z_pos;
+    viewer->x_rot = angles[1] + ring->camera_pitch;
+    viewer->y_rot = angles[0];
+    viewer->z_rot = 0;
+}
+
 void Inv_RingMotionRadius(RING_INFO *ring, sint16 target)
 {
     IMOTION_INFO *imo;
