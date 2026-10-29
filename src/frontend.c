@@ -127,3 +127,21 @@ void S_DrawScreenLine(sint32 sx, sint32 sy, sint32 z, sint32 w, sint32 h, sint32
     info3dptr += 6;
     surfacenum++;
 }
+
+#define B_YELLOW 15
+#define B_ORANGE 31
+
+void S_DrawScreenBox(sint32 sx, sint32 sy, sint32 z, sint32 w, sint32 h, sint32 col, uint16 *grdptr, uint16 flags)
+{
+    S_DrawScreenLine(sx, sy - 1, z, w + 1, 0, B_YELLOW, NULL, flags);
+    S_DrawScreenLine(sx, sy, z, w, 0, B_ORANGE, NULL, flags);
+
+    S_DrawScreenLine(sx + w, sy, z, 0, h, B_YELLOW, NULL, flags);
+    S_DrawScreenLine(sx + w + 1, sy, z, 0, h + 1, B_ORANGE, NULL, flags);
+
+    S_DrawScreenLine(sx + w, sy + h, z, -w, 0, B_YELLOW, NULL, flags);
+    S_DrawScreenLine(sx + w, sy + h + 1, z, -w - 1, 0, B_ORANGE, NULL, flags);
+
+    S_DrawScreenLine(sx - 1, sy + h, z, 0, -h - 1, B_YELLOW, NULL, flags);
+    S_DrawScreenLine(sx, sy + h, z, 0, -h, B_ORANGE, NULL, flags);
+}

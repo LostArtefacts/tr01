@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">26.19% (203)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">73.81% (572)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">26.32% (204)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">73.68% (571)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="195.67" height="6" x="0" y="0" class="named"/>
-<rect width="551.33" height="6" x="195.67" y="0" class="todo"/>
+<rect width="196.63" height="6" x="0" y="0" class="named"/>
+<rect width="550.37" height="6" x="196.63" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -272,7 +272,7 @@
 <rect width="12" height="12" x="30" y="60" class="named"><title>0x0001f6d0 S_DrawScreenSprite2d (241 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="60" class="named"><title>0x0001f7c4 S_DrawScreenSprite (255 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="60" class="named"><title>0x0001f8c4 S_DrawScreenLine (98 bytes)</title></rect>
-<rect width="12" height="12" x="75" y="60" class="todo"><title>0x0001f928 Func1f928 (290 bytes)</title></rect>
+<rect width="12" height="12" x="75" y="60" class="named"><title>0x0001f928 S_DrawScreenBox (290 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="60" class="todo"><title>0x0001fa4c Func1fa4c (120 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="60" class="todo"><title>0x0001fac4 Func1fac4 (18 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="60" class="todo"><title>0x0001fad8 S_FadeToBlack (52 bytes)</title></rect>
@@ -846,10 +846,10 @@
 </g>
 <g transform="translate(0 411)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">29.33%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">70.67%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">29.47%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">70.53%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="219.10" height="6" x="0" y="0" class="named"/>
-<rect width="527.90" height="6" x="219.10" y="0" class="todo"/>
+<rect width="220.16" height="6" x="0" y="0" class="named"/>
+<rect width="526.84" height="6" x="220.16" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="53.97" height="67.43" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1047,7 +1047,7 @@
 <rect width="13.42" height="13.06" x="508.87" y="148.38" class="named"><title>0x00013978 ShiftCamera (295 bytes)</title></rect>
 <rect width="13.42" height="12.90" x="508.87" y="164.44" class="todo"><title>0x0002dadc Func2dadc (292 bytes)</title></rect>
 <rect width="13.42" height="12.90" x="508.87" y="180.34" class="todo"><title>0x0003b2d8 Func3b2d8 (292 bytes)</title></rect>
-<rect width="13.42" height="12.79" x="508.87" y="196.24" class="todo"><title>0x0001f928 Func1f928 (290 bytes)</title></rect>
+<rect width="13.42" height="12.79" x="508.87" y="196.24" class="named"><title>0x0001f928 S_DrawScreenBox (290 bytes)</title></rect>
 <rect width="13.42" height="12.52" x="508.87" y="212.02" class="todo"><title>0x0003a698 Func3a698 (285 bytes)</title></rect>
 <rect width="13.42" height="12.46" x="508.87" y="227.54" class="todo"><title>0x0002d000 Func2d000 (284 bytes)</title></rect>
 <rect width="13.43" height="12.28" x="525.29" y="16.53" class="todo"><title>0x0001dd3c WaterFall (281 bytes)</title></rect>
