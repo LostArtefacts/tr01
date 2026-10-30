@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">86.81% (704)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">13.19% (107)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">86.93% (705)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">13.07% (106)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="648.44" height="6" x="0" y="0" class="named"/>
-<rect width="98.56" height="6" x="648.44" y="0" class="todo"/>
+<rect width="649.36" height="6" x="0" y="0" class="named"/>
+<rect width="97.64" height="6" x="649.36" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -772,7 +772,7 @@
 <rect width="12" height="12" x="30" y="210" class="named"><title>0x0003db04 phd_GetMatrixAngles (187 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="210" class="named"><title>0x0003dbc0 phd_RotX (163 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="210" class="named"><title>0x0003dc64 phd_RotY (163 bytes)</title></rect>
-<rect width="12" height="12" x="75" y="210" class="todo"><title>0x0003dd08 phd_RotZ (160 bytes)</title></rect>
+<rect width="12" height="12" x="75" y="210" class="named"><title>0x0003dd08 phd_RotZ (160 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="210" class="todo"><title>0x0003dda8 phd_RotYXZ (486 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="210" class="todo"><title>0x0003df90 phd_RotYXZpack (505 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="210" class="todo"><title>0x0003e18c phd_TranslateRel (180 bytes)</title></rect>
@@ -882,10 +882,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">82.69%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">17.31%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">82.77%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">17.23%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="617.71" height="6" x="0" y="0" class="named"/>
-<rect width="129.29" height="6" x="617.71" y="0" class="todo"/>
+<rect width="618.25" height="6" x="0" y="0" class="named"/>
+<rect width="128.75" height="6" x="618.25" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.96" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1229,7 +1229,7 @@
 <rect width="8.84" height="8.92" x="656.11" y="89.09" class="named"><title>0x00016020 GetTiltType (160 bytes)</title></rect>
 <rect width="8.84" height="8.92" x="667.95" y="89.09" class="named"><title>0x00024c60 SpawnItem (160 bytes)</title></rect>
 <rect width="8.84" height="8.92" x="679.79" y="89.09" class="named"><title>0x00026d28 lara_col_upjump (160 bytes)</title></rect>
-<rect width="8.84" height="8.92" x="691.63" y="89.09" class="todo"><title>0x0003dd08 phd_RotZ (160 bytes)</title></rect>
+<rect width="8.84" height="8.92" x="691.63" y="89.09" class="named"><title>0x0003dd08 phd_RotZ (160 bytes)</title></rect>
 <rect width="8.69" height="8.92" x="703.46" y="89.09" class="named"><title>0x00023ff0 Inv_GetItemOption (158 bytes)</title></rect>
 <rect width="8.62" height="8.92" x="715.15" y="89.09" class="named"><title>0x00011de4 ValidBox (157 bytes)</title></rect>
 <rect width="8.62" height="8.92" x="726.77" y="89.09" class="named"><title>0x0001d650 ControlBlood1 (157 bytes)</title></rect>
