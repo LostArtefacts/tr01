@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">76.70% (622)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">23.30% (189)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">76.82% (623)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">23.18% (188)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="572.91" height="6" x="0" y="0" class="named"/>
-<rect width="174.09" height="6" x="572.91" y="0" class="todo"/>
+<rect width="573.84" height="6" x="0" y="0" class="named"/>
+<rect width="173.16" height="6" x="573.84" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -690,7 +690,7 @@
 <rect width="12" height="12" x="300" y="180" class="named"><title>0x00038f14 S_CDVolume (6 bytes)</title></rect>
 <rect width="12" height="12" x="315" y="180" class="named"><title>0x00038f20 TestCollision (383 bytes)</title></rect>
 <rect width="12" height="12" x="330" y="180" class="named"><title>0x000390a0 GetSpheres (681 bytes)</title></rect>
-<rect width="12" height="12" x="345" y="180" class="todo"><title>0x0003934c GetJointAbsPosition (445 bytes)</title></rect>
+<rect width="12" height="12" x="345" y="180" class="named"><title>0x0003934c GetJointAbsPosition (445 bytes)</title></rect>
 <rect width="12" height="12" x="360" y="180" class="todo"><title>0x0003950c Func3950c (81 bytes)</title></rect>
 <rect width="12" height="12" x="375" y="180" class="todo"><title>0x00039560 T_InitPrint (34 bytes)</title></rect>
 <rect width="12" height="12" x="390" y="180" class="todo"><title>0x00039584 T_Print (281 bytes)</title></rect>
@@ -882,10 +882,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">74.24%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">25.76%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">74.45%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">25.55%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="554.60" height="6" x="0" y="0" class="named"/>
-<rect width="192.40" height="6" x="554.60" y="0" class="todo"/>
+<rect width="556.12" height="6" x="0" y="0" class="named"/>
+<rect width="190.88" height="6" x="556.12" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.96" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1032,7 +1032,7 @@
 <rect width="16.71" height="17.10" x="457.50" y="80.84" class="named"><title>0x0002aa58 LaraGetNewTarget (449 bytes)</title></rect>
 <rect width="16.71" height="17.05" x="457.50" y="100.94" class="todo"><title>0x000430fc Func430fc (448 bytes)</title></rect>
 <rect width="16.71" height="16.96" x="457.50" y="120.99" class="named"><title>0x00024870 InitialiseItem (446 bytes)</title></rect>
-<rect width="16.71" height="16.92" x="457.50" y="140.95" class="todo"><title>0x0003934c GetJointAbsPosition (445 bytes)</title></rect>
+<rect width="16.71" height="16.92" x="457.50" y="140.95" class="named"><title>0x0003934c GetJointAbsPosition (445 bytes)</title></rect>
 <rect width="16.71" height="16.74" x="457.50" y="160.87" class="named"><title>0x0001ee1c LoadItems (441 bytes)</title></rect>
 <rect width="16.71" height="16.43" x="457.50" y="180.61" class="named"><title>0x000173bc GetFloor (434 bytes)</title></rect>
 <rect width="16.71" height="16.38" x="457.50" y="200.04" class="todo"><title>0x0003c740 ControlBodyPart (433 bytes)</title></rect>
