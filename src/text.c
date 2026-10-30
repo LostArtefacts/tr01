@@ -101,6 +101,11 @@ void T_SetScale(TEXTSTRING *textString, sint32 scaleH, sint32 scaleV)
     textString->scaleV = scaleV;
 }
 
+void T_LetterSpacing(TEXTSTRING *textString, sint16 pixels)
+{
+    textString->letterSpacing = pixels * 8;
+}
+
 sint16 T_GetStringLen(char *string)
 {
     sint16 len = 1;
