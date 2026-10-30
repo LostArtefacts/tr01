@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">79.90% (648)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">20.10% (163)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">80.02% (649)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">19.98% (162)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="596.86" height="6" x="0" y="0" class="named"/>
-<rect width="150.14" height="6" x="596.86" y="0" class="todo"/>
+<rect width="597.78" height="6" x="0" y="0" class="named"/>
+<rect width="149.22" height="6" x="597.78" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -716,7 +716,7 @@
 <rect width="12" height="12" x="690" y="180" class="named"><title>0x000398ec T_GetStringLen (26 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="180" class="named"><title>0x00039908 T_DrawText (33 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="180" class="named"><title>0x0003992c T_DrawThisText (1069 bytes)</title></rect>
-<rect width="12" height="12" x="735" y="180" class="todo"><title>0x00039d60 InitialiseRollingBall (69 bytes)</title></rect>
+<rect width="12" height="12" x="735" y="180" class="named"><title>0x00039d60 InitialiseRollingBall (69 bytes)</title></rect>
 <rect width="12" height="12" x="0" y="195" class="todo"><title>0x00039da8 RollingBallControl (616 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="195" class="todo"><title>0x0003a010 RollingBallCollision (666 bytes)</title></rect>
 <rect width="12" height="12" x="30" y="195" class="todo"><title>0x0003a2ac SpikeCollision (320 bytes)</title></rect>
@@ -882,10 +882,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">75.39%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">24.61%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">75.42%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">24.58%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="563.18" height="6" x="0" y="0" class="named"/>
-<rect width="183.82" height="6" x="563.18" y="0" class="todo"/>
+<rect width="563.41" height="6" x="0" y="0" class="named"/>
+<rect width="183.59" height="6" x="563.41" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.96" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1425,7 +1425,7 @@
 <rect width="4.72" height="4.89" x="653.59" y="234.34" class="named"><title>0x000256e0 lara_as_fastfall (69 bytes)</title></rect>
 <rect width="4.72" height="4.89" x="653.59" y="242.23" class="named"><title>0x0002cc18 ThorsHandleCollision (69 bytes)</title></rect>
 <rect width="4.72" height="4.89" x="653.59" y="250.11" class="named"><title>0x00038b10 S_SoundPlaySample (69 bytes)</title></rect>
-<rect width="4.67" height="4.94" x="661.31" y="169.30" class="todo"><title>0x00039d60 InitialiseRollingBall (69 bytes)</title></rect>
+<rect width="4.67" height="4.94" x="661.31" y="169.30" class="named"><title>0x00039d60 InitialiseRollingBall (69 bytes)</title></rect>
 <rect width="4.67" height="4.94" x="668.98" y="169.30" class="todo"><title>0x0003a970 InitialiseDamoclesSword (69 bytes)</title></rect>
 <rect width="4.56" height="4.94" x="676.65" y="169.30" class="named"><title>0x0001ac2c DrawSpriteItem (68 bytes)</title></rect>
 <rect width="4.45" height="4.94" x="684.20" y="169.30" class="named"><title>0x00011630 InitialiseCreature (67 bytes)</title></rect>
