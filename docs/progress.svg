@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">80.15% (650)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">19.85% (161)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">80.27% (651)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">19.73% (160)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="598.71" height="6" x="0" y="0" class="named"/>
-<rect width="148.29" height="6" x="598.71" y="0" class="todo"/>
+<rect width="599.63" height="6" x="0" y="0" class="named"/>
+<rect width="147.37" height="6" x="599.63" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -718,7 +718,7 @@
 <rect width="12" height="12" x="720" y="180" class="named"><title>0x0003992c T_DrawThisText (1069 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="180" class="named"><title>0x00039d60 InitialiseRollingBall (69 bytes)</title></rect>
 <rect width="12" height="12" x="0" y="195" class="named"><title>0x00039da8 RollingBallControl (616 bytes)</title></rect>
-<rect width="12" height="12" x="15" y="195" class="todo"><title>0x0003a010 RollingBallCollision (666 bytes)</title></rect>
+<rect width="12" height="12" x="15" y="195" class="named"><title>0x0003a010 RollingBallCollision (666 bytes)</title></rect>
 <rect width="12" height="12" x="30" y="195" class="todo"><title>0x0003a2ac SpikeCollision (320 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="195" class="todo"><title>0x0003a3ec TrapDoorControl (67 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="195" class="todo"><title>0x0003a430 TrapDoorFloor (53 bytes)</title></rect>
@@ -882,10 +882,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">75.70%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">24.30%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">76.01%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">23.99%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="565.51" height="6" x="0" y="0" class="named"/>
-<rect width="181.49" height="6" x="565.51" y="0" class="todo"/>
+<rect width="567.78" height="6" x="0" y="0" class="named"/>
+<rect width="179.22" height="6" x="567.78" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.96" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -978,7 +978,7 @@
 <rect width="22.59" height="20.13" x="343.75" y="211.83" class="named"><title>0x0002c5f4 LightningControl (671 bytes)</title></rect>
 <rect width="22.59" height="20.03" x="343.75" y="234.97" class="named"><title>0x00034874 PuzzleHoleCollision (668 bytes)</title></rect>
 <rect width="21.06" height="21.42" x="369.34" y="0" class="named"><title>0x0002c97c ThorsHandleControl (666 bytes)</title></rect>
-<rect width="21.06" height="21.42" x="369.34" y="24.42" class="todo"><title>0x0003a010 RollingBallCollision (666 bytes)</title></rect>
+<rect width="21.06" height="21.42" x="369.34" y="24.42" class="named"><title>0x0003a010 RollingBallCollision (666 bytes)</title></rect>
 <rect width="21.06" height="21.35" x="369.34" y="48.85" class="named"><title>0x00033444 SkateKidControl (664 bytes)</title></rect>
 <rect width="21.06" height="20.95" x="369.34" y="73.20" class="named"><title>0x0001767c GetHeight (653 bytes)</title></rect>
 <rect width="21.06" height="20.51" x="369.34" y="97.15" class="named"><title>0x000180e8 GetCeiling (641 bytes)</title></rect>

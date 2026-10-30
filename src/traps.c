@@ -1,5 +1,7 @@
 #include "game.h"
 
+#define ROLLINGBALL_DAMAGE_AIR 100
+
 void InitialiseRollingBall(sint16 item_number)
 {
     ITEM_INFO *item;
@@ -96,4 +98,69 @@ void RollingBallControl(sint16 item_number)
             RemoveActiveItem(item_number);
         }
     }
+}
+
+void RollingBallCollision(sint16 item_num, ITEM_INFO *litem, COLL_INFO *coll)
+{
+    int x, y, z, d, i;
+    ITEM_INFO *item;
+
+    item = &items[item_num];
+
+    if (item->status == ACTIVE)
+    {
+        if (!TestBoundsCollide(item, litem, coll->radius))
+            return;
+        if (!TestCollision(item, litem))
+            return;
+
+        if (litem->gravity_status)
+        {
+            if (coll->enable_baddie_push)
+                ItemPushLara(item, litem, coll, coll->enable_hit, 1);
+            litem->hit_points -= ROLLINGBALL_DAMAGE_AIR;
+            x = litem->pos.x_pos - item->pos.x_pos;
+            y = (litem->pos.y_pos - 350) - (item->pos.y_pos - WALL_L / 2);
+            z = litem->pos.z_pos - item->pos.z_pos;
+            d = phd_sqrt(x * x + y * y + z * z);
+            if (d < WALL_L / 2)
+                d = WALL_L / 2;
+            x = item->pos.x_pos + (x * WALL_L / 2) / d;
+            y = item->pos.y_pos - WALL_L / 2 + (y * WALL_L / 2) / d;
+            z = item->pos.z_pos + (z * WALL_L / 2) / d;
+            DoBloodSplat(x, y, z, item->speed, item->pos.y_rot, item->room_number);
+        }
+        else
+        {
+            litem->hit_status = 1;
+            if (litem->hit_points > 0)
+            {
+                litem->hit_points = -1;
+                if (litem->room_number != item->room_number)
+                    ItemNewRoom(lara.item_number, item->room_number);
+
+                litem->pos.y_rot = item->pos.y_rot;
+                litem->pos.x_rot = litem->pos.z_rot = 0;
+
+                litem->anim_number = RBALL_DEATH_A;
+                litem->frame_number = RBALL_DEATH_F;
+                litem->current_anim_state = AS_SPECIAL;
+                litem->goal_anim_state = AS_SPECIAL;
+
+                camera.flags = FOLLOW_CENTRE;
+                camera.target_angle = 170 * ONE_DEGREE;
+                camera.target_elevation = -25 * ONE_DEGREE;
+                for (i = 0; i < 15; i++)
+                {
+                    x = litem->pos.x_pos + (GetRandomControl() - 16384) / 256;
+                    z = litem->pos.z_pos + (GetRandomControl() - 16384) / 256;
+                    y = litem->pos.y_pos - GetRandomControl() / 64;
+                    d = (GetRandomControl() - 16384) / 8 + item->pos.y_rot;
+                    DoBloodSplat(x, y, z, item->speed * 2, d, item->room_number);
+                }
+            }
+        }
+    }
+    else if (item->status != INVISIBLE)
+        ObjectCollision(item_num, litem, coll);
 }
