@@ -560,3 +560,155 @@ void gtmap_persp16_fp(int ymin, int ymax, char *tptr)
         }
     }
 }
+
+void wgtmap_persp16_fp(int ymin, int ymax, char *tptr)
+{
+    XBUF_PERSP_FP *dataptr;
+    uint8 *lineptr, *pixptr;
+    double ooz, oozadd;
+    double uoz, uozadd;
+    double voz, vozadd;
+    double oozadd16, uozadd16, vozadd16;
+    int start_g, add_g;
+    int end_u, end_v;
+    int start_u, start_v;
+    int add_u, add_v;
+    int start_x, end_x;
+    int x1, x2, xsize;
+    char texel;
+
+    dataptr = ((XBUF_PERSP_FP *)xbuffer) + ymin;
+    lineptr = phd_winptr + (ymin * phd_scrwidth);
+    for (; ymin < ymax; ymin++, dataptr++, lineptr += phd_scrwidth)
+    {
+        start_x = dataptr->Xleft >> 16;
+        end_x = dataptr->Xright >> 16;
+        xsize = end_x - start_x;
+        if (xsize > 0)
+        {
+            uoz = dataptr->UOZleft;
+            uozadd = (dataptr->UOZright - uoz) / xsize;
+            voz = dataptr->VOZleft;
+            vozadd = (dataptr->VOZright - voz) / xsize;
+            ooz = dataptr->OOZleft;
+            oozadd = (dataptr->OOZright - ooz) / xsize;
+            uozadd16 = uozadd * 16.0;
+            vozadd16 = vozadd * 16.0;
+            oozadd16 = oozadd * 16.0;
+            start_g = dataptr->Gleft;
+            add_g = (dataptr->Gright - start_g) / xsize;
+            end_u = (int)(uoz / ooz);
+            end_v = (int)(voz / ooz);
+            x2 = start_x;
+            pixptr = lineptr + x2;
+            for (;;)
+            {
+                start_u = end_u;
+                start_v = end_v;
+                x1 = x2;
+                x2 += 16;
+                if (x2 >= end_x)
+                    break;
+                ooz += oozadd16;
+                uoz += uozadd16;
+                voz += vozadd16;
+                end_u = (int)(uoz / ooz);
+                end_v = (int)(voz / ooz);
+                add_u = (end_u - start_u) >> 4;
+                add_v = (end_v - start_v) >> 4;
+                if ((texel = *(tptr + ((start_v >> 16) << 8) + (start_u >> 16))))
+                    *(pixptr) = depthq_table[(start_g >> 16)][texel];
+                start_u += add_u;
+                start_v += add_v;
+                start_g += add_g;
+                if ((texel = *(tptr + ((start_v >> 16) << 8) + (start_u >> 16))))
+                    *(pixptr + 1) = depthq_table[(start_g >> 16)][texel];
+                start_u += add_u;
+                start_v += add_v;
+                start_g += add_g;
+                if ((texel = *(tptr + ((start_v >> 16) << 8) + (start_u >> 16))))
+                    *(pixptr + 2) = depthq_table[(start_g >> 16)][texel];
+                start_u += add_u;
+                start_v += add_v;
+                start_g += add_g;
+                if ((texel = *(tptr + ((start_v >> 16) << 8) + (start_u >> 16))))
+                    *(pixptr + 3) = depthq_table[(start_g >> 16)][texel];
+                start_u += add_u;
+                start_v += add_v;
+                start_g += add_g;
+                if ((texel = *(tptr + ((start_v >> 16) << 8) + (start_u >> 16))))
+                    *(pixptr + 4) = depthq_table[(start_g >> 16)][texel];
+                start_u += add_u;
+                start_v += add_v;
+                start_g += add_g;
+                if ((texel = *(tptr + ((start_v >> 16) << 8) + (start_u >> 16))))
+                    *(pixptr + 5) = depthq_table[(start_g >> 16)][texel];
+                start_u += add_u;
+                start_v += add_v;
+                start_g += add_g;
+                if ((texel = *(tptr + ((start_v >> 16) << 8) + (start_u >> 16))))
+                    *(pixptr + 6) = depthq_table[(start_g >> 16)][texel];
+                start_u += add_u;
+                start_v += add_v;
+                start_g += add_g;
+                if ((texel = *(tptr + ((start_v >> 16) << 8) + (start_u >> 16))))
+                    *(pixptr + 7) = depthq_table[(start_g >> 16)][texel];
+                start_u += add_u;
+                start_v += add_v;
+                start_g += add_g;
+                if ((texel = *(tptr + ((start_v >> 16) << 8) + (start_u >> 16))))
+                    *(pixptr + 8) = depthq_table[(start_g >> 16)][texel];
+                start_u += add_u;
+                start_v += add_v;
+                start_g += add_g;
+                if ((texel = *(tptr + ((start_v >> 16) << 8) + (start_u >> 16))))
+                    *(pixptr + 9) = depthq_table[(start_g >> 16)][texel];
+                start_u += add_u;
+                start_v += add_v;
+                start_g += add_g;
+                if ((texel = *(tptr + ((start_v >> 16) << 8) + (start_u >> 16))))
+                    *(pixptr + 10) = depthq_table[(start_g >> 16)][texel];
+                start_u += add_u;
+                start_v += add_v;
+                start_g += add_g;
+                if ((texel = *(tptr + ((start_v >> 16) << 8) + (start_u >> 16))))
+                    *(pixptr + 11) = depthq_table[(start_g >> 16)][texel];
+                start_u += add_u;
+                start_v += add_v;
+                start_g += add_g;
+                if ((texel = *(tptr + ((start_v >> 16) << 8) + (start_u >> 16))))
+                    *(pixptr + 12) = depthq_table[(start_g >> 16)][texel];
+                start_u += add_u;
+                start_v += add_v;
+                start_g += add_g;
+                if ((texel = *(tptr + ((start_v >> 16) << 8) + (start_u >> 16))))
+                    *(pixptr + 13) = depthq_table[(start_g >> 16)][texel];
+                start_u += add_u;
+                start_v += add_v;
+                start_g += add_g;
+                if ((texel = *(tptr + ((start_v >> 16) << 8) + (start_u >> 16))))
+                    *(pixptr + 14) = depthq_table[(start_g >> 16)][texel];
+                start_u += add_u;
+                start_v += add_v;
+                start_g += add_g;
+                if ((texel = *(tptr + ((start_v >> 16) << 8) + (start_u >> 16))))
+                    *(pixptr + 15) = depthq_table[(start_g >> 16)][texel];
+                start_g += add_g;
+                pixptr += 16;
+            }
+            end_u = (int)(dataptr->UOZright / dataptr->OOZright);
+            end_v = (int)(dataptr->VOZright / dataptr->OOZright);
+            x2 = end_x - x1;
+            add_u = (end_u - start_u) / x2;
+            add_v = (end_v - start_v) / x2;
+            for (; x2 > 0; x2--, pixptr++)
+            {
+                if ((texel = *(tptr + ((start_v >> 16) << 8) + (start_u >> 16))))
+                    *(pixptr) = depthq_table[(start_g >> 16)][texel];
+                start_u += add_u;
+                start_v += add_v;
+                start_g += add_g;
+            }
+        }
+    }
+}
