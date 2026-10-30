@@ -370,3 +370,10 @@ void FallingBlockFloor(ITEM_INFO *item, sint32 x, sint32 y, sint32 z, sint16 *he
         if (item->current_anim_state == TRAP_SET || item->current_anim_state == TRAP_ACTIVATE)
             *height = (sint16)(item->pos.y_pos - (STEP_L * 2));
 }
+
+void FallingBlockCeiling(ITEM_INFO *item, sint32 x, sint32 y, sint32 z, sint16 *height)
+{
+    if (y > item->pos.y_pos - (STEP_L * 2))
+        if (item->current_anim_state == TRAP_SET || item->current_anim_state == TRAP_ACTIVATE)
+            *height = (sint16)(item->pos.y_pos - STEP_L);
+}
