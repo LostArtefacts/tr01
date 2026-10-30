@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">90.14% (731)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">9.86% (80)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">90.26% (732)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">9.74% (79)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="673.31" height="6" x="0" y="0" class="named"/>
-<rect width="73.69" height="6" x="673.31" y="0" class="todo"/>
+<rect width="674.23" height="6" x="0" y="0" class="named"/>
+<rect width="72.77" height="6" x="674.23" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -804,7 +804,7 @@
 <rect width="12" height="12" x="510" y="210" class="named"><title>0x0003f910 ZedClipper (586 bytes)</title></rect>
 <rect width="12" height="12" x="525" y="210" class="named"><title>0x0003fb5c XYGUVClipper (1092 bytes)</title></rect>
 <rect width="12" height="12" x="540" y="210" class="named"><title>0x0003ffa0 ins_roomGT4 (1829 bytes)</title></rect>
-<rect width="12" height="12" x="555" y="210" class="todo"><title>0x000406c8 ins_roomGT3 (1302 bytes)</title></rect>
+<rect width="12" height="12" x="555" y="210" class="named"><title>0x000406c8 ins_roomGT3 (1302 bytes)</title></rect>
 <rect width="12" height="12" x="570" y="210" class="todo"><title>0x00040be0 ins_objectGT4persp (1835 bytes)</title></rect>
 <rect width="12" height="12" x="585" y="210" class="todo"><title>0x0004130c ins_objectGT3persp (1300 bytes)</title></rect>
 <rect width="12" height="12" x="600" y="210" class="todo"><title>0x00041820 ins_objectGT4 (910 bytes)</title></rect>
@@ -882,10 +882,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">87.46%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">12.54%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">88.06%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">11.94%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="653.35" height="6" x="0" y="0" class="named"/>
-<rect width="93.65" height="6" x="653.35" y="0" class="todo"/>
+<rect width="657.79" height="6" x="0" y="0" class="named"/>
+<rect width="89.21" height="6" x="657.79" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.96" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -912,7 +912,7 @@
 <rect width="30.36" height="33.86" x="136.25" y="151" class="named"><title>0x0002f5bc InitialiseDoor (1394 bytes)</title></rect>
 <rect width="30.36" height="32.33" x="136.25" y="187.87" class="named"><title>0x0002d2b4 SoundEffect (1336 bytes)</title></rect>
 <rect width="30.36" height="31.80" x="136.25" y="223.20" class="named"><title>0x0002c050 DrawLightning (1316 bytes)</title></rect>
-<rect width="30.87" height="30.91" x="169.61" y="0" class="todo"><title>0x000406c8 ins_roomGT3 (1302 bytes)</title></rect>
+<rect width="30.87" height="30.91" x="169.61" y="0" class="named"><title>0x000406c8 ins_roomGT3 (1302 bytes)</title></rect>
 <rect width="30.87" height="30.86" x="169.61" y="33.91" class="todo"><title>0x0004130c ins_objectGT3persp (1300 bytes)</title></rect>
 <rect width="30.87" height="30.24" x="169.61" y="67.78" class="named"><title>0x000145c8 CalculateCamera (1276 bytes)</title></rect>
 <rect width="30.87" height="29.82" x="169.61" y="101.01" class="named"><title>0x00030e30 do_sound_option (1260 bytes)</title></rect>
