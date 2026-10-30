@@ -1,5 +1,6 @@
 #include "game.h"
 
+#define SPIKE_DAMAGE 15
 #define ROLLINGBALL_DAMAGE_AIR 100
 
 void InitialiseRollingBall(sint16 item_number)
@@ -163,4 +164,49 @@ void RollingBallCollision(sint16 item_num, ITEM_INFO *litem, COLL_INFO *coll)
     }
     else if (item->status != INVISIBLE)
         ObjectCollision(item_num, litem, coll);
+}
+
+void SpikeCollision(sint16 item_num, ITEM_INFO *litem, COLL_INFO *coll)
+{
+    int x, y, z, num;
+    ITEM_INFO *item;
+
+    item = &items[item_num];
+    if (litem->hit_points < 0)
+        return;
+
+    if (!TestBoundsCollide(item, litem, coll->radius))
+        return;
+    if (!TestCollision(item, litem))
+        return;
+
+    num = GetRandomControl() / 24576;
+    if (litem->gravity_status)
+    {
+        if (litem->fallspeed > 0)
+        {
+            litem->hit_points = -1;
+            num = 20;
+        }
+    }
+    else if (litem->speed < 30)
+        return;
+
+    litem->hit_points -= SPIKE_DAMAGE;
+    for (; num > 0; num--)
+    {
+        x = litem->pos.x_pos + (GetRandomControl() - 16384) / 256;
+        z = litem->pos.z_pos + (GetRandomControl() - 16384) / 256;
+        y = litem->pos.y_pos - GetRandomControl() / 64;
+        DoBloodSplat(x, y, z, 20, (PHD_ANGLE)GetRandomControl(), item->room_number);
+    }
+    if (litem->hit_points <= 0)
+    {
+        litem->anim_number = SPIKE_DEATH_A;
+        litem->frame_number = SPIKE_DEATH_F;
+        litem->current_anim_state = AS_DEATH;
+        litem->goal_anim_state = AS_DEATH;
+        litem->pos.y_pos = item->pos.y_pos;
+        litem->gravity_status = 0;
+    }
 }

@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">80.27% (651)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">19.73% (160)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">80.39% (652)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">19.61% (159)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="599.63" height="6" x="0" y="0" class="named"/>
-<rect width="147.37" height="6" x="599.63" y="0" class="todo"/>
+<rect width="600.55" height="6" x="0" y="0" class="named"/>
+<rect width="146.45" height="6" x="600.55" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -719,7 +719,7 @@
 <rect width="12" height="12" x="735" y="180" class="named"><title>0x00039d60 InitialiseRollingBall (69 bytes)</title></rect>
 <rect width="12" height="12" x="0" y="195" class="named"><title>0x00039da8 RollingBallControl (616 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="195" class="named"><title>0x0003a010 RollingBallCollision (666 bytes)</title></rect>
-<rect width="12" height="12" x="30" y="195" class="todo"><title>0x0003a2ac SpikeCollision (320 bytes)</title></rect>
+<rect width="12" height="12" x="30" y="195" class="named"><title>0x0003a2ac SpikeCollision (320 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="195" class="todo"><title>0x0003a3ec TrapDoorControl (67 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="195" class="todo"><title>0x0003a430 TrapDoorFloor (53 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="195" class="todo"><title>0x0003a468 TrapDoorCeiling (55 bytes)</title></rect>
@@ -882,10 +882,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">76.01%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">23.99%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">76.15%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">23.85%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="567.78" height="6" x="0" y="0" class="named"/>
-<rect width="179.22" height="6" x="567.78" y="0" class="todo"/>
+<rect width="568.87" height="6" x="0" y="0" class="named"/>
+<rect width="178.13" height="6" x="568.87" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.96" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1080,7 +1080,7 @@
 <rect width="14.30" height="13.67" x="496.64" y="208.34" class="named"><title>0x00023d64 Inv_RemoveItem (327 bytes)</title></rect>
 <rect width="14.30" height="13.62" x="496.64" y="225.01" class="named"><title>0x00020648 S_FrontEndCheck (326 bytes)</title></rect>
 <rect width="14.30" height="13.37" x="496.64" y="241.63" class="named"><title>0x0002e940 ControlNatlaGun (321 bytes)</title></rect>
-<rect width="14.34" height="13.28" x="513.94" y="18.29" class="todo"><title>0x0003a2ac SpikeCollision (320 bytes)</title></rect>
+<rect width="14.34" height="13.28" x="513.94" y="18.29" class="named"><title>0x0003a2ac SpikeCollision (320 bytes)</title></rect>
 <rect width="14.28" height="13.28" x="531.27" y="18.29" class="named"><title>0x00018ce8 TriggerCDTrack (319 bytes)</title></rect>
 <rect width="14.18" height="13.28" x="548.56" y="18.29" class="named"><title>0x000141f4 CombatCamera (317 bytes)</title></rect>
 <rect width="14.12" height="13.28" x="565.73" y="18.29" class="named"><title>0x00035438 CreateStartInfo (316 bytes)</title></rect>
