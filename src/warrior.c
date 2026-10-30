@@ -54,6 +54,7 @@ BITE_INFO warrior_shard = {-35, 269, 0, 9};
 #define FLYER_TWIST 8
 
 #define SHARD_SPEED 250
+#define ROCKET_SPEED 220
 
 #define ROCKET_RANGE SQUARE(WALL_L)
 
@@ -576,6 +577,31 @@ sint16 ShardGun(sint32 x, sint32 y, sint32 z, sint16 speed, PHD_ANGLE yrot, sint
         fx->frame_number = 0;
         fx->object_number = MISSILE2;
         fx->shade = 14 * 256;
+        ShootAtLara(fx);
+    }
+
+    return fx_number;
+}
+
+sint16 RocketGun(sint32 x, sint32 y, sint32 z, sint16 speed, PHD_ANGLE yrot, sint16 room_number)
+{
+    sint16 fx_number;
+    FX_INFO *fx;
+
+    fx_number = CreateEffect(room_number);
+    if (fx_number != NO_ITEM)
+    {
+        fx = &effects[fx_number];
+        fx->pos.x_pos = x;
+        fx->pos.y_pos = y;
+        fx->pos.z_pos = z;
+        fx->room_number = room_number;
+        fx->pos.x_rot = fx->pos.z_rot = 0;
+        fx->pos.y_rot = yrot;
+        fx->speed = ROCKET_SPEED;
+        fx->frame_number = 0;
+        fx->object_number = MISSILE3;
+        fx->shade = 16 * 256;
         ShootAtLara(fx);
     }
 

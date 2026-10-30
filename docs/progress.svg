@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">83.85% (680)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">16.15% (131)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">83.97% (681)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">16.03% (130)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="626.34" height="6" x="0" y="0" class="named"/>
-<rect width="120.66" height="6" x="626.34" y="0" class="todo"/>
+<rect width="627.26" height="6" x="0" y="0" class="named"/>
+<rect width="119.74" height="6" x="627.26" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -748,7 +748,7 @@
 <rect width="12" height="12" x="420" y="195" class="named"><title>0x0003be70 ControlMissile (627 bytes)</title></rect>
 <rect width="12" height="12" x="435" y="195" class="named"><title>0x0003c0e4 ShootAtLara (213 bytes)</title></rect>
 <rect width="12" height="12" x="450" y="195" class="named"><title>0x0003c1bc ShardGun (122 bytes)</title></rect>
-<rect width="12" height="12" x="465" y="195" class="todo"><title>0x0003c238 RocketGun (122 bytes)</title></rect>
+<rect width="12" height="12" x="465" y="195" class="named"><title>0x0003c238 RocketGun (122 bytes)</title></rect>
 <rect width="12" height="12" x="480" y="195" class="todo"><title>0x0003c2b4 InitialiseMummy (63 bytes)</title></rect>
 <rect width="12" height="12" x="495" y="195" class="todo"><title>0x0003c2f4 MummyControl (165 bytes)</title></rect>
 <rect width="12" height="12" x="510" y="195" class="todo"><title>0x0003c39c ExplodingDeath (932 bytes)</title></rect>
@@ -882,10 +882,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">79.63%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">20.37%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">79.69%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">20.31%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="594.87" height="6" x="0" y="0" class="named"/>
-<rect width="152.13" height="6" x="594.87" y="0" class="todo"/>
+<rect width="595.29" height="6" x="0" y="0" class="named"/>
+<rect width="151.71" height="6" x="595.29" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.96" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1296,7 +1296,7 @@
 <rect width="7.36" height="7.39" x="606.13" y="165.27" class="named"><title>0x000244e8 Inv_RingMotionInit (122 bytes)</title></rect>
 <rect width="7.36" height="7.39" x="606.13" y="175.66" class="named"><title>0x0002ea84 NatlaGun (122 bytes)</title></rect>
 <rect width="7.36" height="7.39" x="606.13" y="186.05" class="named"><title>0x0003c1bc ShardGun (122 bytes)</title></rect>
-<rect width="7.36" height="7.39" x="606.13" y="196.44" class="todo"><title>0x0003c238 RocketGun (122 bytes)</title></rect>
+<rect width="7.36" height="7.39" x="606.13" y="196.44" class="named"><title>0x0003c238 RocketGun (122 bytes)</title></rect>
 <rect width="7.36" height="7.30" x="606.13" y="206.82" class="named"><title>0x000266d0 lara_col_death (121 bytes)</title></rect>
 <rect width="7.36" height="7.22" x="606.13" y="217.13" class="named"><title>0x0001df4c EarthQuakeFX (120 bytes)</title></rect>
 <rect width="7.36" height="7.22" x="606.13" y="227.35" class="named"><title>0x0001fa4c S_DrawScreenFBox (120 bytes)</title></rect>
