@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">89.15% (723)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">10.85% (88)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">89.27% (724)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">10.73% (87)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="665.94" height="6" x="0" y="0" class="named"/>
-<rect width="81.06" height="6" x="665.94" y="0" class="todo"/>
+<rect width="666.87" height="6" x="0" y="0" class="named"/>
+<rect width="80.13" height="6" x="666.87" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -796,7 +796,7 @@
 <rect width="12" height="12" x="390" y="210" class="todo"><title>0x0003f02b phd_sin (25 bytes)</title></rect>
 <rect width="12" height="12" x="405" y="210" class="todo"><title>0x0003f044 Func3f044 (26 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="210" class="todo"><title>0x0003f05e phd_sqrt (46 bytes)</title></rect>
-<rect width="12" height="12" x="435" y="210" class="todo"><title>0x0003f090 S_DrawSpriteAbs (559 bytes)</title></rect>
+<rect width="12" height="12" x="435" y="210" class="named"><title>0x0003f090 S_DrawSpriteAbs (559 bytes)</title></rect>
 <rect width="12" height="12" x="450" y="210" class="todo"><title>0x0003f2c0 S_DrawSpriteRel (460 bytes)</title></rect>
 <rect width="12" height="12" x="465" y="210" class="todo"><title>0x0003f48c S_DrawPickup (223 bytes)</title></rect>
 <rect width="12" height="12" x="480" y="210" class="todo"><title>0x0003f56c ins_room_sprite (376 bytes)</title></rect>
@@ -882,10 +882,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">84.88%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">15.12%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">85.13%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">14.87%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="634.02" height="6" x="0" y="0" class="named"/>
-<rect width="112.98" height="6" x="634.02" y="0" class="todo"/>
+<rect width="635.93" height="6" x="0" y="0" class="named"/>
+<rect width="111.07" height="6" x="635.93" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.96" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -990,7 +990,7 @@
 <rect width="21.06" height="18.97" x="369.34" y="236.03" class="named"><title>0x0002f00c TestBlockPull (599 bytes)</title></rect>
 <rect width="19.56" height="19.91" x="393.39" y="0" class="todo"><title>0x0003f910 Func3f910 (586 bytes)</title></rect>
 <rect width="19.56" height="19.01" x="393.39" y="22.91" class="named"><title>0x0002769c LaraHangTest (563 bytes)</title></rect>
-<rect width="19.56" height="18.86" x="393.39" y="44.93" class="todo"><title>0x0003f090 S_DrawSpriteAbs (559 bytes)</title></rect>
+<rect width="19.56" height="18.86" x="393.39" y="44.93" class="named"><title>0x0003f090 S_DrawSpriteAbs (559 bytes)</title></rect>
 <rect width="19.56" height="18.82" x="393.39" y="66.79" class="named"><title>0x0001d02c InterpolateMatrix (558 bytes)</title></rect>
 <rect width="19.56" height="18.55" x="393.39" y="88.61" class="todo"><title>0x0003f6e4 draw_scaled_spriteC (551 bytes)</title></rect>
 <rect width="19.56" height="18.47" x="393.39" y="110.15" class="named"><title>0x000118f0 SearchLOT (549 bytes)</title></rect>
