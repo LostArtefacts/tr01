@@ -29,6 +29,20 @@ typedef struct
     sint32 Vright;
 } XBUF_XGUV;
 
+typedef struct
+{
+    sint32 Xleft;
+    sint32 Gleft;
+    float UOZleft;
+    float VOZleft;
+    float OOZleft;
+    sint32 Xright;
+    sint32 Gright;
+    float UOZright;
+    float VOZright;
+    float OOZright;
+} XBUF_PERSP_FP;
+
 extern XBUF_X xbuffer[];
 
 int xgen_x(sint16 *iptr);
@@ -309,4 +323,104 @@ int xgen_xguv(sint16 *iptr)
     xgen_ymin = min_y;
     xgen_ymax = max_y;
     return (1);
+}
+
+typedef struct
+{
+    sint16 xs;
+    sint16 ys;
+    sint16 shade;
+    float ooz;
+    float uoz;
+    float voz;
+} UVGP_INFO;
+
+int xgen_xguvpersp_fp(sint16 *iptr)
+{
+    UVGP_INFO *ptr1, *ptr2;
+    XBUF_PERSP_FP *xptr;
+    int g, g_add;
+    int x, x_add;
+    float uoz, uoz_add;
+    float voz, voz_add;
+    float ooz, ooz_add;
+    int y1, y2, ydif;
+    int min_y, max_y;
+    int numcoords;
+
+    numcoords = (int)*(iptr++);
+    ptr2 = (UVGP_INFO *)iptr;
+    ptr1 = ptr2 + numcoords - 1;
+    min_y = max_y = ptr1->ys;
+    for (; numcoords > 0; numcoords--, ptr1 = ptr2, ptr2++)
+    {
+        y1 = ptr1->ys;
+        y2 = ptr2->ys;
+        if (y1 < y2)
+        {
+            if (y1 < min_y)
+                min_y = y1;
+            ydif = y2 - y1;
+            x = ptr1->xs;
+            x_add = ((ptr2->xs - x) << 16) / ydif;
+            x = (x << 16) + 0x0ffff;
+            g = ptr1->shade << 8;
+            g_add = ((ptr2->shade << 8) - g) / ydif;
+            uoz = ptr1->uoz;
+            uoz_add = (ptr2->uoz - uoz) / ydif;
+            voz = ptr1->voz;
+            voz_add = (ptr2->voz - voz) / ydif;
+            ooz = ptr1->ooz / 256.0;
+            ooz_add = (ptr2->ooz / 256.0 - ooz) / ydif;
+            xptr = ((XBUF_PERSP_FP *)xbuffer) + y1;
+            for (; y1 < y2; y1++, xptr++)
+            {
+                x += x_add;
+                g += g_add;
+                uoz += uoz_add;
+                voz += voz_add;
+                ooz += ooz_add;
+                xptr->Xright = x;
+                xptr->Gright = g;
+                xptr->UOZright = uoz;
+                xptr->VOZright = voz;
+                xptr->OOZright = ooz;
+            }
+        }
+        else if (y2 < y1)
+        {
+            if (y1 > max_y)
+                max_y = y1;
+            ydif = y1 - y2;
+            x = ptr2->xs;
+            x_add = ((ptr1->xs - x) << 16) / ydif;
+            x = (x << 16) + 0x0001;
+            g = ptr2->shade << 8;
+            g_add = ((ptr1->shade << 8) - g) / ydif;
+            uoz = ptr2->uoz;
+            uoz_add = (ptr1->uoz - uoz) / ydif;
+            voz = ptr2->voz;
+            voz_add = (ptr1->voz - voz) / ydif;
+            ooz = ptr2->ooz / 256.0;
+            ooz_add = (ptr1->ooz / 256.0 - ooz) / ydif;
+            xptr = ((XBUF_PERSP_FP *)xbuffer) + y2;
+            for (; y2 < y1; y2++, xptr++)
+            {
+                x += x_add;
+                g += g_add;
+                uoz += uoz_add;
+                voz += voz_add;
+                ooz += ooz_add;
+                xptr->Xleft = x;
+                xptr->Gleft = g;
+                xptr->UOZleft = uoz;
+                xptr->VOZleft = voz;
+                xptr->OOZleft = ooz;
+            }
+        }
+    }
+    if (min_y == max_y)
+        return 0;    xgen_ymin = min_y;
+    xgen_ymax = max_y;
+    return 1;
 }
