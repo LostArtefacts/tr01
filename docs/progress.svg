@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">86.07% (698)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">13.93% (113)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">86.19% (699)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">13.81% (112)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="642.92" height="6" x="0" y="0" class="named"/>
-<rect width="104.08" height="6" x="642.92" y="0" class="todo"/>
+<rect width="643.84" height="6" x="0" y="0" class="named"/>
+<rect width="103.16" height="6" x="643.84" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -766,7 +766,7 @@
 <rect width="12" height="12" x="690" y="195" class="named"><title>0x0003d5f0 draw_poly_line (484 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="195" class="named"><title>0x0003d7e0 phd_GenerateW2V (427 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="195" class="named"><title>0x0003d98c phd_LookAt (91 bytes)</title></rect>
-<rect width="12" height="12" x="735" y="195" class="todo"><title>0x0003d9e8 phd_GetVectorAngles (101 bytes)</title></rect>
+<rect width="12" height="12" x="735" y="195" class="named"><title>0x0003d9e8 phd_GetVectorAngles (101 bytes)</title></rect>
 <rect width="12" height="12" x="0" y="210" class="todo"><title>0x0003da50 Func3da50 (132 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="210" class="todo"><title>0x0003dad4 Func3dad4 (48 bytes)</title></rect>
 <rect width="12" height="12" x="30" y="210" class="todo"><title>0x0003db04 Func3db04 (187 bytes)</title></rect>
@@ -882,10 +882,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">82.33%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">17.67%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">82.38%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">17.62%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="615.01" height="6" x="0" y="0" class="named"/>
-<rect width="131.99" height="6" x="615.01" y="0" class="todo"/>
+<rect width="615.35" height="6" x="0" y="0" class="named"/>
+<rect width="131.65" height="6" x="615.35" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.96" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1339,7 +1339,7 @@
 <rect width="6.35" height="6.63" x="703.64" y="133.28" class="named"><title>0x0002f4b8 DrawUnclippedItem (102 bytes)</title></rect>
 <rect width="6.35" height="6.63" x="712.98" y="133.28" class="todo"><title>0x0003e240 phd_TranslateAbs (102 bytes)</title></rect>
 <rect width="6.25" height="6.63" x="722.33" y="133.28" class="named"><title>0x00017354 TranslateItem (101 bytes)</title></rect>
-<rect width="6.25" height="6.63" x="731.58" y="133.28" class="todo"><title>0x0003d9e8 phd_GetVectorAngles (101 bytes)</title></rect>
+<rect width="6.25" height="6.63" x="731.58" y="133.28" class="named"><title>0x0003d9e8 phd_GetVectorAngles (101 bytes)</title></rect>
 <rect width="6.16" height="6.63" x="740.84" y="133.28" class="named"><title>0x0001d84c ControlTwinkle (100 bytes)</title></rect>
 <rect width="6.04" height="6.76" x="626.67" y="142.91" class="named"><title>0x0001e154 PowerUpFX (100 bytes)</title></rect>
 <rect width="6.04" height="6.76" x="626.67" y="152.67" class="named"><title>0x0001f40c LoadDemo (100 bytes)</title></rect>

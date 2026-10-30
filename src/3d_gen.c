@@ -49,3 +49,20 @@ void phd_LookAt(sint32 xsrc, sint32 ysrc, sint32 zsrc, sint32 xtar, sint32 ytar,
     viewer.z_rot = roll;
     phd_GenerateW2V(&viewer);
 }
+
+void phd_GetVectorAngles(sint32 x, sint32 y, sint32 z, PHD_ANGLE *dest)
+{
+    PHD_ANGLE pitch;
+
+    *(dest + 0) = (PHD_ANGLE)phd_atan(z, x);
+    while ((sint16)x != x || (sint16)y != y || (sint16)z != z)
+    {
+        x >>= 2;
+        y >>= 2;
+        z >>= 2;
+    }
+    pitch = (PHD_ANGLE)phd_atan(phd_sqrt(x * x + z * z), y);
+    if ((y > 0 && pitch > 0) || (y < 0 && pitch < 0))
+        pitch = -pitch;
+    *(dest + 1) = pitch;
+}
