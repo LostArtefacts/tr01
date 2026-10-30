@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">92.23% (748)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">7.77% (63)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">92.36% (749)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">7.64% (62)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="688.97" height="6" x="0" y="0" class="named"/>
-<rect width="58.03" height="6" x="688.97" y="0" class="todo"/>
+<rect width="689.89" height="6" x="0" y="0" class="named"/>
+<rect width="57.11" height="6" x="689.89" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -821,7 +821,7 @@
 <rect width="12" height="12" x="15" y="225" class="named"><title>0x00042f58 draw_poly_wgtmap (45 bytes)</title></rect>
 <rect width="12" height="12" x="30" y="225" class="named"><title>0x00042f88 draw_poly_gtmap_persp (45 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="225" class="named"><title>0x00042fb8 draw_poly_wgtmap_persp (45 bytes)</title></rect>
-<rect width="12" height="12" x="60" y="225" class="todo"><title>0x00042fe8 xgen_x (273 bytes)</title></rect>
+<rect width="12" height="12" x="60" y="225" class="named"><title>0x00042fe8 xgen_x (273 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="225" class="todo"><title>0x000430fc xgen_xg (448 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="225" class="todo"><title>0x000432bc xgen_xguv (684 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="225" class="todo"><title>0x00043568 xgen_xguvpersp_fp (788 bytes)</title></rect>
@@ -882,10 +882,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">92.25%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">7.75%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">92.37%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">7.63%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="689.09" height="6" x="0" y="0" class="named"/>
-<rect width="57.91" height="6" x="689.09" y="0" class="todo"/>
+<rect width="690.02" height="6" x="0" y="0" class="named"/>
+<rect width="56.98" height="6" x="690.02" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.96" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1111,7 +1111,7 @@
 <rect width="13.20" height="12.03" x="529.85" y="34.58" class="named"><title>0x0001d25c InterpolateArmMatrix (276 bytes)</title></rect>
 <rect width="13.02" height="12.03" x="546.05" y="34.58" class="named"><title>0x0002d1a0 mn_reset_sound_effects (273 bytes)</title></rect>
 <rect width="13.02" height="12.03" x="562.07" y="34.58" class="named"><title>0x0003ca00 PodControl (273 bytes)</title></rect>
-<rect width="13.02" height="12.03" x="578.09" y="34.58" class="todo"><title>0x00042fe8 xgen_x (273 bytes)</title></rect>
+<rect width="13.02" height="12.03" x="578.09" y="34.58" class="named"><title>0x00042fe8 xgen_x (273 bytes)</title></rect>
 <rect width="12.96" height="12.03" x="594.11" y="34.58" class="named"><title>0x00034434 SwitchCollision (272 bytes)</title></rect>
 <rect width="12.85" height="12.03" x="610.08" y="34.58" class="named"><title>0x0001ab1c DrawEffect (270 bytes)</title></rect>
 <rect width="12.85" height="12.03" x="625.93" y="34.58" class="named"><title>0x000298d4 lara_col_tread (270 bytes)</title></rect>

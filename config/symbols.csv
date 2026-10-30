@@ -2140,6 +2140,7 @@ address,size,name,symbol
 0x000e02c4,40960,phdtextinfo,_phdtextinfo
 0x000ea2c4,,texture_page_ptrs,_texture_page_ptrs
 0x000ea344,24000,sort3d_buffer,_sort3d_buffer
+0x000f0104,20000,xbuffer,_xbuffer
 0x000f4f24,220000,info3d_buffer,_info3d_buffer
 0x0012aa84,8192,gouraud_table,_gouraud_table
 0x0012ca84,8192,depthq_table,_depthq_table
