@@ -3,6 +3,8 @@
 
 
 
+
+
     .code
 
     public VgaGetMode_
@@ -23,5 +25,18 @@ VgaSetMode_ proc near
     popa
     ret
 VgaSetMode_ endp
+
+    public VgaGetRows_
+VgaGetRows_ proc near
+    push    es
+    pusha
+    mov     ax,1130h
+    mov     bh,6
+    int     10h
+    mov     byte ptr [esp+1ch],dl
+    popa
+    pop     es
+    ret
+VgaGetRows_ endp
 
     end

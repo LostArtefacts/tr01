@@ -61,11 +61,11 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">97.20% (798)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0.12% (1)</tspan> · <tspan class="todo">2.68% (22)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">97.32% (799)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0.12% (1)</tspan> · <tspan class="todo">2.56% (21)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="726.07" height="6" x="0" y="0" class="named"/>
-<rect width="0.91" height="6" x="726.07" y="0" class="nonmatching"/>
-<rect width="20.02" height="6" x="726.98" y="0" class="todo"/>
+<rect width="726.98" height="6" x="0" y="0" class="named"/>
+<rect width="0.91" height="6" x="726.98" y="0" class="nonmatching"/>
+<rect width="19.11" height="6" x="727.89" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -867,7 +867,7 @@
 <rect width="12" height="12" x="690" y="225" class="nonmatching"><title>0x00046404 InterruptSet (753 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="225" class="named"><title>0x000466f8 VgaGetMode (11 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="225" class="named"><title>0x00046703 VgaSetMode (7 bytes)</title></rect>
-<rect width="12" height="12" x="735" y="225" class="todo"><title>0x0004670a VgaGetRows (17 bytes)</title></rect>
+<rect width="12" height="12" x="735" y="225" class="named"><title>0x0004670a VgaGetRows (17 bytes)</title></rect>
 <rect width="12" height="12" x="0" y="240" class="todo"><title>0x0004671b VgaSetRows (71 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="240" class="todo"><title>0x00046762 ScreenClear (41 bytes)</title></rect>
 <rect width="12" height="12" x="30" y="240" class="todo"><title>0x0004678b Func4678b (102 bytes)</title></rect>
@@ -893,11 +893,11 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">98.82%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0.34%</tspan> · <tspan class="todo">0.84%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">98.83%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0.34%</tspan> · <tspan class="todo">0.83%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="738.17" height="6" x="0" y="0" class="named"/>
-<rect width="2.54" height="6" x="738.17" y="0" class="nonmatching"/>
-<rect width="6.29" height="6" x="740.71" y="0" class="todo"/>
+<rect width="738.23" height="6" x="0" y="0" class="named"/>
+<rect width="2.54" height="6" x="738.23" y="0" class="nonmatching"/>
+<rect width="6.23" height="6" x="740.77" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.55" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1650,7 +1650,7 @@
 <rect width="0.91" height="1.03" x="725.35" y="253.97" class="named"><title>0x0001fac4 S_FinishInventory (18 bytes)</title></rect>
 <rect width="1.44" height="0.55" x="729.26" y="237.19" class="named"><title>0x00038bc0 S_SoundStopSample (18 bytes)</title></rect>
 <rect width="1.20" height="0.55" x="733.71" y="237.19" class="named"><title>0x000452d0 phd_FixedDivide (17 bytes)</title></rect>
-<rect width="1.20" height="0.55" x="737.90" y="237.19" class="todo"><title>0x0004670a VgaGetRows (17 bytes)</title></rect>
+<rect width="1.20" height="0.55" x="737.90" y="237.19" class="named"><title>0x0004670a VgaGetRows (17 bytes)</title></rect>
 <rect width="0.95" height="0.55" x="742.10" y="237.19" class="named"><title>0x00010af0 S_SetupAboveWater (16 bytes)</title></rect>
 <rect width="0.95" height="0.55" x="746.05" y="237.19" class="named"><title>0x00025b70 lara_as_slideback (16 bytes)</title></rect>
 <rect width="0.85" height="0.63" x="729.26" y="240.74" class="named"><title>0x00029804 lara_as_dive (16 bytes)</title></rect>
