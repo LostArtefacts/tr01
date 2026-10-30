@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">85.82% (696)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">14.18% (115)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">85.94% (697)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">14.06% (114)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="641.08" height="6" x="0" y="0" class="named"/>
-<rect width="105.92" height="6" x="641.08" y="0" class="todo"/>
+<rect width="642" height="6" x="0" y="0" class="named"/>
+<rect width="105" height="6" x="642" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -764,7 +764,7 @@
 <rect width="12" height="12" x="660" y="195" class="named"><title>0x0003d504 ins_poly_line (183 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="195" class="named"><title>0x0003d5bc draw_line (52 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="195" class="named"><title>0x0003d5f0 draw_poly_line (484 bytes)</title></rect>
-<rect width="12" height="12" x="705" y="195" class="todo"><title>0x0003d7e0 phd_GenerateW2V (427 bytes)</title></rect>
+<rect width="12" height="12" x="705" y="195" class="named"><title>0x0003d7e0 phd_GenerateW2V (427 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="195" class="todo"><title>0x0003d98c phd_LookAt (91 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="195" class="todo"><title>0x0003d9e8 phd_GetVectorAngles (101 bytes)</title></rect>
 <rect width="12" height="12" x="0" y="210" class="todo"><title>0x0003da50 Func3da50 (132 bytes)</title></rect>
@@ -882,10 +882,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">82.09%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">17.91%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">82.29%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">17.71%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="613.24" height="6" x="0" y="0" class="named"/>
-<rect width="133.76" height="6" x="613.24" y="0" class="todo"/>
+<rect width="614.70" height="6" x="0" y="0" class="named"/>
+<rect width="132.30" height="6" x="614.70" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.96" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1038,7 +1038,7 @@
 <rect width="16.71" height="16.38" x="457.50" y="200.04" class="named"><title>0x0003c740 ControlBodyPart (433 bytes)</title></rect>
 <rect width="16.71" height="16.38" x="457.50" y="219.42" class="todo"><title>0x0003e614 Func3e614 (433 bytes)</title></rect>
 <rect width="16.71" height="16.20" x="457.50" y="238.80" class="named"><title>0x00026084 lara_col_walk (429 bytes)</title></rect>
-<rect width="16.43" height="16.39" x="477.21" y="0" class="todo"><title>0x0003d7e0 phd_GenerateW2V (427 bytes)</title></rect>
+<rect width="16.43" height="16.39" x="477.21" y="0" class="named"><title>0x0003d7e0 phd_GenerateW2V (427 bytes)</title></rect>
 <rect width="16.43" height="15.80" x="477.21" y="19.39" class="named"><title>0x0002d93c mn_update_sound_effects (414 bytes)</title></rect>
 <rect width="16.43" height="15.80" x="477.21" y="38.19" class="named"><title>0x0003abf0 DartEmitterControl (414 bytes)</title></rect>
 <rect width="16.43" height="15.67" x="477.21" y="57" class="named"><title>0x000252f8 lara_as_stop (411 bytes)</title></rect>
