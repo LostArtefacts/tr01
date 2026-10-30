@@ -758,7 +758,7 @@ address,size,name,symbol
 0x000432bc,684,xgen_xguv,xgen_xguv_
 0x00043568,788,xgen_xguvpersp_fp,xgen_xguvpersp_fp_
 0x0004387c,1895,gtmap_persp16_fp,gtmap_persp16_fp_
-0x00043fe4,1820,Func43fe4,
+0x00043fe4,1820,wgtmap_persp16_fp,wgtmap_persp16_fp_
 0x00044700,97,flatA,flatA_
 0x00044761,308,transA,transA_
 0x00044895,384,gourA,gourA_

@@ -8,6 +8,7 @@ int xgen_xg(sint16 *iptr);
 int xgen_xguv(sint16 *iptr);
 int xgen_xguvpersp_fp(sint16 *iptr);
 void gtmap_persp16_fp(int ymin, int ymax, char *tptr);
+void wgtmap_persp16_fp(int ymin, int ymax, char *tptr);
 void flatA(int min_y, int max_y, char color);
 void transA(int min_y, int max_y, sint16 colbase);
 void gourA(int min_y, int max_y, sint16 colbase);
@@ -48,4 +49,10 @@ void draw_poly_gtmap_persp(sint16 *iptr)
 {
     if (xgen_xguvpersp_fp(iptr + 1))
         gtmap_persp16_fp(xgen_ymin, xgen_ymax, texture_page_ptrs[*(iptr)]);
+}
+
+void draw_poly_wgtmap_persp(sint16 *iptr)
+{
+    if (xgen_xguvpersp_fp(iptr + 1))
+        wgtmap_persp16_fp(xgen_ymin, xgen_ymax, texture_page_ptrs[*(iptr)]);
 }
