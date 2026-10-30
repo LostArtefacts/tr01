@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">81.75% (663)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">18.25% (148)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">81.87% (664)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">18.13% (147)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="610.68" height="6" x="0" y="0" class="named"/>
-<rect width="136.32" height="6" x="610.68" y="0" class="todo"/>
+<rect width="611.60" height="6" x="0" y="0" class="named"/>
+<rect width="135.40" height="6" x="611.60" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -731,7 +731,7 @@
 <rect width="12" height="12" x="165" y="195" class="named"><title>0x0003a818 TeethTrap (176 bytes)</title></rect>
 <rect width="12" height="12" x="180" y="195" class="named"><title>0x0003a8c8 FallingCeiling (168 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="195" class="named"><title>0x0003a970 InitialiseDamoclesSword (69 bytes)</title></rect>
-<rect width="12" height="12" x="210" y="195" class="todo"><title>0x0003a9b8 DamoclesSwordControl (338 bytes)</title></rect>
+<rect width="12" height="12" x="210" y="195" class="named"><title>0x0003a9b8 DamoclesSwordControl (338 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="195" class="todo"><title>0x0003ab0c DamoclesSwordCollision (228 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="195" class="todo"><title>0x0003abf0 DartEmitterControl (414 bytes)</title></rect>
 <rect width="12" height="12" x="255" y="195" class="todo"><title>0x0003ad90 DartsControl (305 bytes)</title></rect>
@@ -882,10 +882,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">76.82%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">23.18%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">76.98%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">23.02%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="573.88" height="6" x="0" y="0" class="named"/>
-<rect width="173.12" height="6" x="573.88" y="0" class="todo"/>
+<rect width="575.03" height="6" x="0" y="0" class="named"/>
+<rect width="171.97" height="6" x="575.03" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.96" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1070,7 +1070,7 @@
 <rect width="14.30" height="14.95" x="496.64" y="36.35" class="named"><title>0x0002bcd8 PistolHandler (352 bytes)</title></rect>
 <rect width="14.30" height="14.80" x="496.64" y="54.29" class="named"><title>0x00016bb4 Move3DPosTo3DPos (349 bytes)</title></rect>
 <rect width="14.30" height="14.29" x="496.64" y="72.09" class="named"><title>0x000168b0 TestLaraPosition (339 bytes)</title></rect>
-<rect width="14.30" height="14.23" x="496.64" y="89.38" class="todo"><title>0x0003a9b8 DamoclesSwordControl (338 bytes)</title></rect>
+<rect width="14.30" height="14.23" x="496.64" y="89.38" class="named"><title>0x0003a9b8 DamoclesSwordControl (338 bytes)</title></rect>
 <rect width="14.30" height="14.13" x="496.64" y="106.61" class="named"><title>0x0003a548 Pendulum (336 bytes)</title></rect>
 <rect width="14.30" height="14.08" x="496.64" y="123.74" class="named"><title>0x00014d68 CalculateCinematicCamera (335 bytes)</title></rect>
 <rect width="14.30" height="14.08" x="496.64" y="140.82" class="named"><title>0x00019520 StartDemo (335 bytes)</title></rect>

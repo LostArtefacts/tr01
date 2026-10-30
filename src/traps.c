@@ -464,3 +464,44 @@ void InitialiseDamoclesSword(sint16 item_number)
     item->required_anim_state = (sint16)((GetRandomControl() - 16384) / 16);
     item->fallspeed = 50;
 }
+
+#define GO_DIST ((WALL_L * 3) / 2)
+
+void DamoclesSwordControl(sint16 item_number)
+{
+    int x, y, z;
+    ITEM_INFO *item;
+
+    item = &items[item_number];
+
+    if (item->gravity_status)
+    {
+        item->pos.y_rot += item->required_anim_state;
+        item->fallspeed += (item->fallspeed < FASTFALL_SPEED) ? GRAVITY : 1;
+        item->pos.y_pos += item->fallspeed;
+        item->pos.x_pos += item->current_anim_state;
+        item->pos.z_pos += item->goal_anim_state;
+
+        if (item->pos.y_pos > item->floor)
+        {
+            SoundEffect(103, &item->pos, NULL);
+            item->pos.y_pos = item->floor + 10;
+            item->gravity_status = 0;
+            item->status = DEACTIVATED;
+            RemoveActiveItem(item_number);
+        }
+    }
+    else if (item->pos.y_pos != item->floor)
+    {
+        item->pos.y_rot += item->required_anim_state;
+        x = lara_item->pos.x_pos - item->pos.x_pos;
+        y = lara_item->pos.y_pos - item->pos.y_pos;
+        z = lara_item->pos.z_pos - item->pos.z_pos;
+        if (x >= -GO_DIST && x <= GO_DIST && z >= -GO_DIST && z <= GO_DIST && y > 0 && y < WALL_L * 3)
+        {
+            item->current_anim_state = x / 32;
+            item->goal_anim_state = z / 32;
+            item->gravity_status = 1;
+        }
+    }
+}
