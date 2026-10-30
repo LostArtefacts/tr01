@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">79.28% (643)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">20.72% (168)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">79.41% (644)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">20.59% (167)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="592.26" height="6" x="0" y="0" class="named"/>
-<rect width="154.74" height="6" x="592.26" y="0" class="todo"/>
+<rect width="593.18" height="6" x="0" y="0" class="named"/>
+<rect width="153.82" height="6" x="593.18" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -710,7 +710,7 @@
 <rect width="12" height="12" x="600" y="180" class="named"><title>0x0003979c T_CentreV (13 bytes)</title></rect>
 <rect width="12" height="12" x="615" y="180" class="named"><title>0x000397ac T_RightAlign (13 bytes)</title></rect>
 <rect width="12" height="12" x="630" y="180" class="named"><title>0x000397bc T_BottomAlign (15 bytes)</title></rect>
-<rect width="12" height="12" x="645" y="180" class="todo"><title>0x000397cc Func397cc (201 bytes)</title></rect>
+<rect width="12" height="12" x="645" y="180" class="named"><title>0x000397cc T_GetTextWidth (201 bytes)</title></rect>
 <rect width="12" height="12" x="660" y="180" class="todo"><title>0x00039898 T_RemovePrint (45 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="180" class="todo"><title>0x000398c8 Func398c8 (34 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="180" class="named"><title>0x000398ec T_GetStringLen (26 bytes)</title></rect>
@@ -882,10 +882,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">74.76%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">25.24%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">74.85%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">25.15%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="558.47" height="6" x="0" y="0" class="named"/>
-<rect width="188.53" height="6" x="558.47" y="0" class="todo"/>
+<rect width="559.16" height="6" x="0" y="0" class="named"/>
+<rect width="187.84" height="6" x="559.16" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.96" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1173,7 +1173,7 @@
 <rect width="10.72" height="10.11" x="642.29" y="63.41" class="named"><title>0x000263b8 lara_col_stop (204 bytes)</title></rect>
 <rect width="10.66" height="10.11" x="656.02" y="63.41" class="named"><title>0x0002ac1c find_target_point (203 bytes)</title></rect>
 <rect width="10.52" height="10.11" x="669.67" y="63.41" class="named"><title>0x0002b7d4 FireShotgun (201 bytes)</title></rect>
-<rect width="10.52" height="10.11" x="683.20" y="63.41" class="todo"><title>0x000397cc Func397cc (201 bytes)</title></rect>
+<rect width="10.52" height="10.11" x="683.20" y="63.41" class="named"><title>0x000397cc T_GetTextWidth (201 bytes)</title></rect>
 <rect width="10.39" height="10.11" x="696.72" y="63.41" class="named"><title>0x00020c0c DrawPickups (199 bytes)</title></rect>
 <rect width="10.39" height="10.11" x="710.11" y="63.41" class="todo"><title>0x0003edb4 Func3edb4 (199 bytes)</title></rect>
 <rect width="10.32" height="10.11" x="723.49" y="63.41" class="named"><title>0x00016a04 AlignLaraPosition (198 bytes)</title></rect>

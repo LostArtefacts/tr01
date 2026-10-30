@@ -642,7 +642,7 @@ address,size,name,symbol
 0x0003979c,13,T_CentreV,T_CentreV_
 0x000397ac,13,T_RightAlign,T_RightAlign_
 0x000397bc,15,T_BottomAlign,T_BottomAlign_
-0x000397cc,201,Func397cc,
+0x000397cc,201,T_GetTextWidth,T_GetTextWidth_
 0x00039898,45,T_RemovePrint,T_RemovePrint_
 0x000398c8,34,Func398c8,
 0x000398ec,26,T_GetStringLen,T_GetStringLen_
@@ -2024,6 +2024,8 @@ address,size,name,symbol
 0x000c3e68,128,exit_message,_exit_message
 0x000c3ee8,4,title_loaded,_title_loaded
 0x000c3eec,4,cheat_mode,_cheat_mode
+0x000c3ef0,110,T_textSpacing,_T_textSpacing
+0x000c3f5e,95,T_remapASCII,_T_remapASCII
 0x000c409c,4,wibble_offset,_wibble_offset
 0x000c40a0,4,water_effect,_water_effect
 0x000c40a4,4,shade_effect,_shade_effect

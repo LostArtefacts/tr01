@@ -9,6 +9,49 @@ sint16 T_numStrings;
 
 char T_theStrings[MAX_TEXT_STRINGS * MAX_STRING_SIZE];
 
+char T_textSpacing[] = {
+    14, 11, 11, 11, 11,
+    11, 11, 13, 8, 11,
+    12, 11, 13, 13, 12,
+    11, 12, 12, 11, 12,
+    13, 13, 13, 12, 12, 11,
+
+    9, 9, 9, 9, 9,
+    9, 9, 9, 5, 9,
+    9, 5, 12, 10, 9,
+    9, 9, 8, 9, 8,
+    9, 9, 11, 9, 9, 9,
+
+    12, 8, 10, 10, 10,
+    10, 10, 9, 10, 10,
+
+    5, 5, 5, 11, 9,
+    10, 8, 6, 6, 7,
+    7, 3, 11, 8, 13,
+    16, 9, 4,
+    12, 12,
+    7, 5, 7, 7, 7, 7, 7, 7, 7, 7,
+    16, 14, 14, 14, 16, 16, 16, 16, 16,
+    12, 14,
+    8, 8, 8, 8, 8, 8, 8
+};
+
+char T_remapASCII[] = {
+    0,
+    64, 66, 78, 77, 74, 78, 79, 69,
+    70, 92, 72, 63, 71, 62, 68, 52,
+    53, 54, 55, 56, 57, 58, 59, 60,
+    61, 73, 73, 66, 74, 75, 65, 0,
+    0, 1, 2, 3, 4, 5, 6, 7,
+    8, 9, 10, 11, 12, 13, 14, 15,
+    16, 17, 18, 19, 20, 21, 22, 23,
+    24, 25, 80, 76, 81, 97, 98, 77,
+    26, 27, 28, 29, 30, 31, 32, 33,
+    34, 35, 36, 37, 38, 39, 40, 41,
+    42, 43, 44, 45, 46, 47, 48, 49,
+    50, 51, 100, 101, 102, 67
+};
+
 void T_InitPrint(void)
 {
     int n;
@@ -184,6 +227,46 @@ void T_BottomAlign(TEXTSTRING *textString, sint16 i_bool)
         textString->flags |= T_BOTTOM;
     else
         textString->flags &= ~T_BOTTOM;
+}
+
+sint32 T_GetTextWidth(TEXTSTRING *textString)
+{
+    char *string;
+    int letter = 0;
+    sint32 width = 0;
+
+    string = textString->string;
+
+    while (*string)
+    {
+        letter = *(string++);
+        if (letter > 126)
+            continue;
+        if (letter > 10 && letter < 32)
+            continue;
+        if (letter == 32)
+        {
+            if (textString->scaleH == 0x10000)
+                width += textString->wordSpacing;
+            else
+                width += ((textString->wordSpacing * textString->scaleH) >> 16);
+            continue;
+        }
+        if (letter < 11)
+            letter += 81;
+        else if (letter < 16)
+            letter += 91;
+        else
+            letter = T_remapASCII[letter - 32];
+
+        if (textString->scaleH == 0x10000)
+            width += (T_textSpacing[letter] + textString->letterSpacing);
+        else
+            width += ((((sint32)T_textSpacing[letter] + textString->letterSpacing) * textString->scaleH) >> 16);
+    }
+    width -= textString->letterSpacing;
+    width &= 0xfffe;
+    return width;
 }
 
 sint16 T_GetStringLen(char *string)
