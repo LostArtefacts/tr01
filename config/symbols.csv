@@ -647,7 +647,7 @@ address,size,name,symbol
 0x000398c8,34,T_RemoveAllPrints,T_RemoveAllPrints_
 0x000398ec,26,T_GetStringLen,T_GetStringLen_
 0x00039908,33,T_DrawText,T_DrawText_
-0x0003992c,1069,Func3992c,
+0x0003992c,1069,T_DrawThisText,T_DrawThisText_
 0x00039d60,69,InitialiseRollingBall,InitialiseRollingBall_
 0x00039da8,616,RollingBallControl,RollingBallControl_
 0x0003a010,666,RollingBallCollision,RollingBallCollision_

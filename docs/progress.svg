@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">79.65% (646)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">20.35% (165)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">79.78% (647)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">20.22% (164)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="595.02" height="6" x="0" y="0" class="named"/>
-<rect width="151.98" height="6" x="595.02" y="0" class="todo"/>
+<rect width="595.94" height="6" x="0" y="0" class="named"/>
+<rect width="151.06" height="6" x="595.94" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -714,8 +714,8 @@
 <rect width="12" height="12" x="660" y="180" class="named"><title>0x00039898 T_RemovePrint (45 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="180" class="named"><title>0x000398c8 T_RemoveAllPrints (34 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="180" class="named"><title>0x000398ec T_GetStringLen (26 bytes)</title></rect>
-<rect width="12" height="12" x="705" y="180" class="todo"><title>0x00039908 T_DrawText (33 bytes)</title></rect>
-<rect width="12" height="12" x="720" y="180" class="todo"><title>0x0003992c Func3992c (1069 bytes)</title></rect>
+<rect width="12" height="12" x="705" y="180" class="named"><title>0x00039908 T_DrawText (33 bytes)</title></rect>
+<rect width="12" height="12" x="720" y="180" class="todo"><title>0x0003992c T_DrawThisText (1069 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="180" class="todo"><title>0x00039d60 InitialiseRollingBall (69 bytes)</title></rect>
 <rect width="12" height="12" x="0" y="195" class="todo"><title>0x00039da8 RollingBallControl (616 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="195" class="todo"><title>0x0003a010 RollingBallCollision (666 bytes)</title></rect>
@@ -882,10 +882,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">74.89%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">25.11%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">74.90%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">25.10%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="559.43" height="6" x="0" y="0" class="named"/>
-<rect width="187.57" height="6" x="559.43" y="0" class="todo"/>
+<rect width="559.54" height="6" x="0" y="0" class="named"/>
+<rect width="187.46" height="6" x="559.54" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.96" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -928,7 +928,7 @@
 <rect width="27.14" height="28.97" x="203.48" y="162.30" class="todo"><title>0x0003fb5c Func3fb5c (1092 bytes)</title></rect>
 <rect width="27.14" height="28.91" x="203.48" y="194.27" class="named"><title>0x0001e8cc LoadObjects (1090 bytes)</title></rect>
 <rect width="27.14" height="28.82" x="203.48" y="226.18" class="named"><title>0x000111e8 BearControl (1087 bytes)</title></rect>
-<rect width="28.32" height="27.11" x="233.62" y="0" class="todo"><title>0x0003992c Func3992c (1069 bytes)</title></rect>
+<rect width="28.32" height="27.11" x="233.62" y="0" class="todo"><title>0x0003992c T_DrawThisText (1069 bytes)</title></rect>
 <rect width="28.32" height="27.11" x="233.62" y="30.11" class="todo"><title>0x0003cd34 WolfControl (1069 bytes)</title></rect>
 <rect width="28.32" height="26.77" x="233.62" y="60.22" class="named"><title>0x0002371c Inv_AddItem (1057 bytes)</title></rect>
 <rect width="28.32" height="26.32" x="233.62" y="89.99" class="named"><title>0x0001e4b8 LoadRooms (1041 bytes)</title></rect>
@@ -1573,7 +1573,7 @@
 <rect width="2.45" height="2.51" x="733.98" y="214.74" class="named"><title>0x000398c8 T_RemoveAllPrints (34 bytes)</title></rect>
 <rect width="2.29" height="2.51" x="739.43" y="214.74" class="named"><title>0x0001f4a4 GetFullPath (33 bytes)</title></rect>
 <rect width="2.29" height="2.51" x="744.71" y="214.74" class="named"><title>0x0002f264 InitialiseRollingBlock (33 bytes)</title></rect>
-<rect width="2.19" height="2.61" x="706.75" y="220.24" class="todo"><title>0x00039908 T_DrawText (33 bytes)</title></rect>
+<rect width="2.19" height="2.61" x="706.75" y="220.24" class="named"><title>0x00039908 T_DrawText (33 bytes)</title></rect>
 <rect width="2.19" height="2.44" x="706.75" y="225.86" class="named"><title>0x00010064 S_InitialiseScreen (32 bytes)</title></rect>
 <rect width="2.19" height="2.44" x="706.75" y="231.30" class="named"><title>0x00022c10 GetDebouncedInput (32 bytes)</title></rect>
 <rect width="2.19" height="2.44" x="706.75" y="236.74" class="named"><title>0x00025a88 lara_as_backjump (32 bytes)</title></rect>
