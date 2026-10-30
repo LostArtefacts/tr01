@@ -66,3 +66,28 @@ void phd_GetVectorAngles(sint32 x, sint32 y, sint32 z, PHD_ANGLE *dest)
         pitch = -pitch;
     *(dest + 1) = pitch;
 }
+
+void phd_NormaliseVector(sint32 x, sint32 y, sint32 z, sint32 *dest)
+{
+    sint32 len;
+
+    if (x || y || z)
+    {
+        while ((sint16)x != x || (sint16)y != y || (sint16)z != z)
+        {
+            x >>= 2;
+            y >>= 2;
+            z >>= 2;
+        }
+        len = phd_sqrt(x * x + y * y + z * z);
+        *(dest + 0) = (x << W2V_SHIFT) / len;
+        *(dest + 1) = (y << W2V_SHIFT) / len;
+        *(dest + 2) = (z << W2V_SHIFT) / len;
+    }
+    else
+    {
+        *(dest + 0) = 0;
+        *(dest + 1) = 0;
+        *(dest + 2) = 0;
+    }
+}

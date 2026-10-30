@@ -699,7 +699,7 @@ address,size,name,symbol
 0x0003d7e0,427,phd_GenerateW2V,phd_GenerateW2V_
 0x0003d98c,91,phd_LookAt,phd_LookAt_
 0x0003d9e8,101,phd_GetVectorAngles,phd_GetVectorAngles_
-0x0003da50,132,Func3da50,
+0x0003da50,132,phd_NormaliseVector,phd_NormaliseVector_
 0x0003dad4,48,Func3dad4,
 0x0003db04,187,Func3db04,
 0x0003dbc0,163,phd_RotX,phd_RotX_

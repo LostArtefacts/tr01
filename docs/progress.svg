@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">86.19% (699)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">13.81% (112)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">86.31% (700)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">13.69% (111)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="643.84" height="6" x="0" y="0" class="named"/>
-<rect width="103.16" height="6" x="643.84" y="0" class="todo"/>
+<rect width="644.76" height="6" x="0" y="0" class="named"/>
+<rect width="102.24" height="6" x="644.76" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -767,7 +767,7 @@
 <rect width="12" height="12" x="705" y="195" class="named"><title>0x0003d7e0 phd_GenerateW2V (427 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="195" class="named"><title>0x0003d98c phd_LookAt (91 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="195" class="named"><title>0x0003d9e8 phd_GetVectorAngles (101 bytes)</title></rect>
-<rect width="12" height="12" x="0" y="210" class="todo"><title>0x0003da50 Func3da50 (132 bytes)</title></rect>
+<rect width="12" height="12" x="0" y="210" class="named"><title>0x0003da50 phd_NormaliseVector (132 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="210" class="todo"><title>0x0003dad4 Func3dad4 (48 bytes)</title></rect>
 <rect width="12" height="12" x="30" y="210" class="todo"><title>0x0003db04 Func3db04 (187 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="210" class="todo"><title>0x0003dbc0 phd_RotX (163 bytes)</title></rect>
@@ -882,10 +882,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">82.38%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">17.62%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">82.44%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">17.56%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="615.35" height="6" x="0" y="0" class="named"/>
-<rect width="131.65" height="6" x="615.35" y="0" class="todo"/>
+<rect width="615.80" height="6" x="0" y="0" class="named"/>
+<rect width="131.20" height="6" x="615.80" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.96" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1272,7 +1272,7 @@
 <rect width="7.57" height="8.18" x="595.56" y="191.92" class="named"><title>0x0001dcb4 ControlSplash1 (134 bytes)</title></rect>
 <rect width="7.57" height="8.01" x="595.56" y="203.10" class="named"><title>0x00011b18 UpdateLOT (132 bytes)</title></rect>
 <rect width="7.57" height="8.01" x="595.56" y="214.12" class="named"><title>0x0001e23c draw_right_gun (132 bytes)</title></rect>
-<rect width="7.57" height="8.01" x="595.56" y="225.13" class="todo"><title>0x0003da50 Func3da50 (132 bytes)</title></rect>
+<rect width="7.57" height="8.01" x="595.56" y="225.13" class="named"><title>0x0003da50 phd_NormaliseVector (132 bytes)</title></rect>
 <rect width="7.57" height="7.93" x="595.56" y="236.14" class="named"><title>0x00030090 CabinControl (131 bytes)</title></rect>
 <rect width="7.57" height="7.93" x="595.56" y="247.07" class="named"><title>0x000326cc ShotLara (131 bytes)</title></rect>
 <rect width="7.62" height="7.88" x="606.13" y="112.41" class="todo"><title>0x00045cb0 Func45cb0 (131 bytes)</title></rect>
