@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">80.64% (654)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">19.36% (157)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">80.76% (655)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">19.24% (156)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="602.39" height="6" x="0" y="0" class="named"/>
-<rect width="144.61" height="6" x="602.39" y="0" class="todo"/>
+<rect width="603.31" height="6" x="0" y="0" class="named"/>
+<rect width="143.69" height="6" x="603.31" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -722,7 +722,7 @@
 <rect width="12" height="12" x="30" y="195" class="named"><title>0x0003a2ac SpikeCollision (320 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="195" class="named"><title>0x0003a3ec TrapDoorControl (67 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="195" class="named"><title>0x0003a430 TrapDoorFloor (53 bytes)</title></rect>
-<rect width="12" height="12" x="75" y="195" class="todo"><title>0x0003a468 TrapDoorCeiling (55 bytes)</title></rect>
+<rect width="12" height="12" x="75" y="195" class="named"><title>0x0003a468 TrapDoorCeiling (55 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="195" class="todo"><title>0x0003a4a0 OnTrapDoor (165 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="195" class="todo"><title>0x0003a548 Pendulum (336 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="195" class="todo"><title>0x0003a698 FallingBlock (285 bytes)</title></rect>
@@ -882,10 +882,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">76.21%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">23.79%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">76.23%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">23.77%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="569.28" height="6" x="0" y="0" class="named"/>
-<rect width="177.72" height="6" x="569.28" y="0" class="todo"/>
+<rect width="569.47" height="6" x="0" y="0" class="named"/>
+<rect width="177.53" height="6" x="569.47" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.96" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1460,7 +1460,7 @@
 <rect width="4.33" height="3.62" x="668.70" y="238.14" class="named"><title>0x0002b42c draw_shotgun_meshes (55 bytes)</title></rect>
 <rect width="4.33" height="3.62" x="668.70" y="244.76" class="named"><title>0x0002b464 undraw_shotgun_meshes (55 bytes)</title></rect>
 <rect width="4.33" height="3.62" x="668.70" y="251.38" class="named"><title>0x00034b10 SwitchControl (55 bytes)</title></rect>
-<rect width="4.01" height="3.92" x="676.03" y="177.24" class="todo"><title>0x0003a468 TrapDoorCeiling (55 bytes)</title></rect>
+<rect width="4.01" height="3.92" x="676.03" y="177.24" class="named"><title>0x0003a468 TrapDoorCeiling (55 bytes)</title></rect>
 <rect width="3.89" height="3.92" x="683.05" y="177.24" class="named"><title>0x00025b00 lara_as_hangleft (54 bytes)</title></rect>
 <rect width="3.89" height="3.92" x="689.93" y="177.24" class="named"><title>0x00025b38 lara_as_hangright (54 bytes)</title></rect>
 <rect width="3.89" height="3.92" x="696.82" y="177.24" class="named"><title>0x00038cfc S_CDPause (54 bytes)</title></rect>

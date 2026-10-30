@@ -241,3 +241,12 @@ void TrapDoorFloor(ITEM_INFO *item, sint32 x, sint32 y, sint32 z, sint16 *height
         if (item->current_anim_state == DOOR_CLOSED && item->pos.y_pos < *height)
             *height = (sint16)item->pos.y_pos;
 }
+
+void TrapDoorCeiling(ITEM_INFO *item, sint32 x, sint32 y, sint32 z, sint16 *height)
+{
+    if (!OnTrapDoor(item, x, z))
+        return;
+    if (y > item->pos.y_pos)
+        if (item->current_anim_state == DOOR_CLOSED && item->pos.y_pos > *height)
+            *height = (sint16)item->pos.y_pos + STEP_L;
+}
