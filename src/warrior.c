@@ -607,3 +607,16 @@ sint16 RocketGun(sint32 x, sint32 y, sint32 z, sint16 speed, PHD_ANGLE yrot, sin
 
     return fx_number;
 }
+
+void InitialiseMummy(sint16 item_number)
+{
+    ITEM_INFO *item;
+
+    item = &items[item_number];
+
+    item->touch_bits = 0;
+    item->mesh_bits = 0xffff87ff;
+
+    item->data = (sint16 *)game_malloc(sizeof(sint16), MUMMY_HEAD_TURN);
+    *(sint16 *)item->data = 0;
+}
