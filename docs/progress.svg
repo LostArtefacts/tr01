@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">96.70% (790)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">3.30% (27)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">96.82% (791)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">3.18% (26)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="722.31" height="6" x="0" y="0" class="named"/>
-<rect width="24.69" height="6" x="722.31" y="0" class="todo"/>
+<rect width="723.23" height="6" x="0" y="0" class="named"/>
+<rect width="23.77" height="6" x="723.23" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -827,7 +827,7 @@
 <rect width="12" height="12" x="105" y="225" class="named"><title>0x00043568 xgen_xguvpersp_fp (788 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="225" class="named"><title>0x0004387c gtmap_persp16_fp (1895 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="225" class="named"><title>0x00043fe4 wgtmap_persp16_fp (1820 bytes)</title></rect>
-<rect width="12" height="12" x="150" y="225" class="todo"><title>0x00044700 flatA (97 bytes)</title></rect>
+<rect width="12" height="12" x="150" y="225" class="named"><title>0x00044700 flatA (97 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="225" class="todo"><title>0x00044761 transA (308 bytes)</title></rect>
 <rect width="12" height="12" x="180" y="225" class="todo"><title>0x00044895 gourA (384 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="225" class="todo"><title>0x00044a15 gtmapA (765 bytes)</title></rect>
@@ -888,10 +888,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">97.80%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">2.20%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">97.85%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">2.15%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="730.60" height="6" x="0" y="0" class="named"/>
-<rect width="16.40" height="6" x="730.60" y="0" class="todo"/>
+<rect width="730.93" height="6" x="0" y="0" class="named"/>
+<rect width="16.07" height="6" x="730.93" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.74" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1361,7 +1361,7 @@
 <rect width="6.49" height="5.98" x="731.02" y="133.46" class="named"><title>0x00018c20 RemoveRoomFlipItems (97 bytes)</title></rect>
 <rect width="6.49" height="5.98" x="740.51" y="133.46" class="named"><title>0x00018c84 AddRoomFlipItems (97 bytes)</title></rect>
 <rect width="6.40" height="6.07" x="634.37" y="142.44" class="named"><title>0x0003d4a0 Insert2DLine (97 bytes)</title></rect>
-<rect width="6.40" height="6.07" x="634.37" y="151.51" class="todo"><title>0x00044700 flatA (97 bytes)</title></rect>
+<rect width="6.40" height="6.07" x="634.37" y="151.51" class="named"><title>0x00044700 flatA (97 bytes)</title></rect>
 <rect width="6.40" height="5.98" x="634.37" y="160.58" class="named"><title>0x0001f544 TestCdDrive (96 bytes)</title></rect>
 <rect width="6.40" height="5.98" x="634.37" y="169.55" class="named"><title>0x0001ff1c GameLoop (96 bytes)</title></rect>
 <rect width="6.40" height="5.98" x="634.37" y="178.53" class="named"><title>0x00024224 Inv_RingGetView (96 bytes)</title></rect>
