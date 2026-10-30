@@ -4,9 +4,17 @@
 #define TRIGMULT3(A, B, C) (TRIGMULT2((TRIGMULT2(A, B)), C))
 
 extern sint32 matrix_stack[];
+extern float phd_leftfloat, phd_rightfloat, phd_topfloat, phd_bottomfloat;
 
 void phd_GetMatrixAngles(PHD_ANGLE *dest);
 void phd_UnitMatrix(void);
+sint16 *calc_vertice_light(sint16 *objptr);
+sint16 *ins_objectGT4persp(sint16 *objptr, int number);
+sint16 *ins_objectGT3persp(sint16 *objptr, int number);
+sint16 *ins_objectGT4(sint16 *objptr, int number);
+sint16 *ins_objectGT3(sint16 *objptr, int number);
+sint16 *ins_objectG4(sint16 *objptr, int number);
+sint16 *ins_objectG3(sint16 *objptr, int number);
 
 void phd_GenerateW2V(PHD_3DPOS *viewpos)
 {
@@ -376,4 +384,37 @@ int visible_zclip(PHD_VBUF *vn1, PHD_VBUF *vn2, PHD_VBUF *vn3)
     if (((a * v2z) + (b * v2y) + (c * v2x)) < 0.0)
         return 1;
     return 0;
+}
+
+void phd_PutPolygons(sint16 *objptr, int clipstatus)
+{
+    objptr += 4;
+    if (*objptr & 1)
+    {
+        if ((objptr = calc_object_vertices(objptr)))
+        {
+            phd_leftfloat = phd_topfloat = 0.0;
+            phd_rightfloat = (float)phd_winxmax;
+            phd_bottomfloat = (float)phd_winymax;
+            objptr = calc_vertice_light(objptr);
+            objptr = ins_objectGT4persp(objptr + 1, *objptr);
+            objptr = ins_objectGT3persp(objptr + 1, *objptr);
+            objptr = ins_objectG4(objptr + 1, *objptr);
+            objptr = ins_objectG3(objptr + 1, *objptr);
+        }
+    }
+    else
+    {
+        if ((objptr = calc_object_vertices(objptr)))
+        {
+            phd_leftfloat = phd_topfloat = 0.0;
+            phd_rightfloat = (float)phd_winxmax;
+            phd_bottomfloat = (float)phd_winymax;
+            objptr = calc_vertice_light(objptr);
+            objptr = ins_objectGT4(objptr + 1, *objptr);
+            objptr = ins_objectGT3(objptr + 1, *objptr);
+            objptr = ins_objectG4(objptr + 1, *objptr);
+            objptr = ins_objectG3(objptr + 1, *objptr);
+        }
+    }
 }
