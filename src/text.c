@@ -162,6 +162,14 @@ void T_CentreH(TEXTSTRING *textString, sint16 i_bool)
         textString->flags &= ~T_CENTRE_H;
 }
 
+void T_CentreV(TEXTSTRING *textString, sint16 i_bool)
+{
+    if (i_bool)
+        textString->flags |= T_CENTRE_V;
+    else
+        textString->flags &= ~T_CENTRE_V;
+}
+
 sint16 T_GetStringLen(char *string)
 {
     sint16 len = 1;
