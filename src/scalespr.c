@@ -112,3 +112,38 @@ void S_DrawPickup(sint32 x, sint32 y, sint32 scale, sint16 sprnum, sint16 shade,
     info3dptr += 7;
     surfacenum++;
 }
+
+sint16 *ins_room_sprite(sint16 *objptr, int num)
+{
+    PHD_VBUF *vn;
+    sint32 x1, y1, x2, y2, zv;
+    PHDSPRITESTRUCT *sptr;
+
+    for (; num > 0; num--, objptr += 2)
+    {
+        vn = &vbuf[*(objptr)];
+        if (vn->clip < 0)
+            continue;
+        zv = vn->zv / phd_persp;
+        sptr = &phdsprinfo[*(objptr + 1)];
+        x1 = (sint32)((vn->xv + (sptr->x1 << W2V_SHIFT)) / zv + phd_centerx);
+        y1 = (sint32)((vn->yv + (sptr->y1 << W2V_SHIFT)) / zv + phd_centery);
+        x2 = (sint32)((vn->xv + (sptr->x2 << W2V_SHIFT)) / zv + phd_centerx);
+        y2 = (sint32)((vn->yv + (sptr->y2 << W2V_SHIFT)) / zv + phd_centery);
+        if (x2 < phd_left || y2 < phd_top || x1 >= phd_right || y1 >= phd_bottom)
+            continue;
+        *(sort3dptr) = (sint32)(info3dptr);
+        *(sort3dptr + 1) = vn->zv;
+        sort3dptr += 2;
+        *(info3dptr) = DRAW_SCALED_SPRITE;
+        *(info3dptr + 1) = (sint16)x1;
+        *(info3dptr + 2) = (sint16)y1;
+        *(info3dptr + 3) = (sint16)x2;
+        *(info3dptr + 4) = (sint16)y2;
+        *(info3dptr + 5) = *(objptr + 1);
+        *(info3dptr + 6) = vn->g;
+        info3dptr += 7;
+        surfacenum++;
+    }
+    return objptr;
+}
