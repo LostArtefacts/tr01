@@ -2,6 +2,7 @@
 
 #define TRIGMULT2(A, B) (((A) * (B)) >> W2V_SHIFT)
 #define TRIGMULT3(A, B, C) (TRIGMULT2((TRIGMULT2(A, B)), C))
+#define CLAMP_XY 32760
 
 extern sint32 matrix_stack[];
 extern float phd_leftfloat, phd_rightfloat, phd_topfloat, phd_bottomfloat;
@@ -433,4 +434,69 @@ void S_InsertRoom(sint16 *objptr)
     objptr = ins_roomGT4(objptr + 1, *objptr);
     objptr = ins_roomGT3(objptr + 1, *objptr);
     objptr = ins_room_sprite(objptr + 1, *objptr);
+}
+
+sint16 *calc_object_vertices(sint16 *objptr)
+{
+    sint32 *mptr;
+    sint32 xv, yv, zv;
+    sint32 cx, cy;
+    sint32 xs, ys;
+    int numvert;
+    sint16 clipflag, totclip;
+    PHD_VBUF *dest;
+
+    cx = phd_centerx;
+    cy = phd_centery;
+    mptr = phd_mxptr;
+    dest = vbuf;
+    totclip = -1;
+    objptr++;
+    for (numvert = (int)*(objptr++); numvert > 0; numvert--, dest++, objptr += 3)
+    {
+        dest->xv = xv = *(mptr + M00) * *(objptr) + *(mptr + M01) * *(objptr + 1) + *(mptr + M02) * *(objptr + 2) + *(mptr + M03);
+        dest->yv = yv = *(mptr + M10) * *(objptr) + *(mptr + M11) * *(objptr + 1) + *(mptr + M12) * *(objptr + 2) + *(mptr + M13);
+        dest->zv = zv = *(mptr + M20) * *(objptr) + *(mptr + M21) * *(objptr + 1) + *(mptr + M22) * *(objptr + 2) + *(mptr + M23);
+        if (zv >= phd_znear)
+        {
+            clipflag = 0;
+            zv /= phd_persp;
+            xs = (xv / zv) + cx;
+            ys = (yv / zv) + cy;
+            if (xs < phd_left)
+            {
+                if (xs < -CLAMP_XY)
+                    xs = -CLAMP_XY;
+                clipflag++;
+            }
+            else if (xs > phd_right)
+            {
+                if (xs > CLAMP_XY)
+                    xs = CLAMP_XY;
+                clipflag += 2;
+            }
+            dest->xs = (sint16)xs;
+            if (ys < phd_top)
+            {
+                if (ys < -CLAMP_XY)
+                    ys = -CLAMP_XY;
+                clipflag += 4;
+            }
+            else if (ys > phd_bottom)
+            {
+                if (ys > CLAMP_XY)
+                    ys = CLAMP_XY;
+                clipflag += 8;
+            }
+            dest->ys = (sint16)ys;
+        }
+        else
+            clipflag = -32768;
+        dest->clip = clipflag;
+        totclip &= clipflag;
+    }
+    if (totclip)
+        return NULL;
+    else
+        return objptr;
 }
