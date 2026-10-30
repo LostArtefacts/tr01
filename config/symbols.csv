@@ -629,7 +629,7 @@ address,size,name,symbol
 0x000396a0,59,T_ChangeText,T_ChangeText_
 0x000396dc,3,T_SetFlags,T_SetFlags_
 0x000396e0,5,T_SetBgndFlags,T_SetBgndFlags_
-0x000396e8,5,Func396e8,
+0x000396e8,5,T_SetOutlFlags,T_SetOutlFlags_
 0x000396f0,7,T_SetScale,T_SetScale_
 0x000396f8,8,Func396f8,
 0x00039700,8,Func39700,
