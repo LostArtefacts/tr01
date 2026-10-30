@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">83.11% (674)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">16.89% (137)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">83.23% (675)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">16.77% (136)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="620.81" height="6" x="0" y="0" class="named"/>
-<rect width="126.19" height="6" x="620.81" y="0" class="todo"/>
+<rect width="621.73" height="6" x="0" y="0" class="named"/>
+<rect width="125.27" height="6" x="621.73" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -742,7 +742,7 @@
 <rect width="12" height="12" x="330" y="195" class="named"><title>0x0003b218 LavaSpray (191 bytes)</title></rect>
 <rect width="12" height="12" x="345" y="195" class="named"><title>0x0003b2d8 ControlLavaBlob (292 bytes)</title></rect>
 <rect width="12" height="12" x="360" y="195" class="named"><title>0x0003b3fc LavaWedge (311 bytes)</title></rect>
-<rect width="12" height="12" x="375" y="195" class="todo"><title>0x0003b558 CentaurControl (674 bytes)</title></rect>
+<rect width="12" height="12" x="375" y="195" class="named"><title>0x0003b558 CentaurControl (674 bytes)</title></rect>
 <rect width="12" height="12" x="390" y="195" class="todo"><title>0x0003b7fc InitialiseWarrior2 (36 bytes)</title></rect>
 <rect width="12" height="12" x="405" y="195" class="todo"><title>0x0003b854 FlyerControl (1563 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="195" class="todo"><title>0x0003be70 ControlMissile (627 bytes)</title></rect>
@@ -882,10 +882,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">78.16%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">21.84%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">78.47%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">21.53%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="583.85" height="6" x="0" y="0" class="named"/>
-<rect width="163.15" height="6" x="583.85" y="0" class="todo"/>
+<rect width="586.15" height="6" x="0" y="0" class="named"/>
+<rect width="160.85" height="6" x="586.15" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.96" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -972,7 +972,7 @@
 <rect width="22.59" height="20.58" x="343.75" y="71.58" class="todo"><title>0x000432bc Func432bc (684 bytes)</title></rect>
 <rect width="22.59" height="20.55" x="343.75" y="95.16" class="named"><title>0x00021120 S_UpdateInput (683 bytes)</title></rect>
 <rect width="22.59" height="20.48" x="343.75" y="118.71" class="named"><title>0x000390a0 GetSpheres (681 bytes)</title></rect>
-<rect width="22.59" height="20.24" x="343.75" y="142.19" class="todo"><title>0x0003b558 CentaurControl (674 bytes)</title></rect>
+<rect width="22.59" height="20.24" x="343.75" y="142.19" class="named"><title>0x0003b558 CentaurControl (674 bytes)</title></rect>
 <rect width="22.59" height="20.20" x="343.75" y="165.43" class="named"><title>0x00016d20 ControlPhase (673 bytes)</title></rect>
 <rect width="22.59" height="20.20" x="343.75" y="188.63" class="named"><title>0x0002fb30 DoorControl (673 bytes)</title></rect>
 <rect width="22.59" height="20.13" x="343.75" y="211.83" class="named"><title>0x0002c5f4 LightningControl (671 bytes)</title></rect>

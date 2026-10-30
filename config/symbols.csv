@@ -2033,6 +2033,11 @@ address,size,name,symbol
 0x000c3ff4,16,teeth2b,_teeth2b
 0x000c4004,16,teeth3a,_teeth3a
 0x000c4014,16,teeth3b,_teeth3b
+0x000c402c,16,warrior_bite,_warrior_bite
+0x000c403c,16,warrior_rocket,_warrior_rocket
+0x000c404c,16,warrior_shard,_warrior_shard
+0x000c405c,16,centaur_rocket,_centaur_rocket
+0x000c406c,16,centaur_rear,_centaur_rear
 0x000c409c,4,wibble_offset,_wibble_offset
 0x000c40a0,4,water_effect,_water_effect
 0x000c40a4,4,shade_effect,_shade_effect
