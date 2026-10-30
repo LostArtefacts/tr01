@@ -80,6 +80,11 @@ void T_ChangeText(TEXTSTRING *textString, char *string)
     }
 }
 
+void T_SetFlags(TEXTSTRING *textString, uint32 flags)
+{
+    textString->flags = flags;
+}
+
 sint16 T_GetStringLen(char *string)
 {
     sint16 len = 1;
