@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">77.07% (625)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">22.93% (186)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">77.31% (627)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">22.69% (184)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="575.68" height="6" x="0" y="0" class="named"/>
-<rect width="171.32" height="6" x="575.68" y="0" class="todo"/>
+<rect width="577.52" height="6" x="0" y="0" class="named"/>
+<rect width="169.48" height="6" x="577.52" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -693,7 +693,7 @@
 <rect width="12" height="12" x="345" y="180" class="named"><title>0x0003934c GetJointAbsPosition (445 bytes)</title></rect>
 <rect width="12" height="12" x="360" y="180" class="named"><title>0x0003950c BaddieBiteEffect (81 bytes)</title></rect>
 <rect width="12" height="12" x="375" y="180" class="named"><title>0x00039560 T_InitPrint (34 bytes)</title></rect>
-<rect width="12" height="12" x="390" y="180" class="todo"><title>0x00039584 T_Print (281 bytes)</title></rect>
+<rect width="12" height="12" x="390" y="180" class="named"><title>0x00039584 T_Print (281 bytes)</title></rect>
 <rect width="12" height="12" x="405" y="180" class="todo"><title>0x000396a0 T_ChangeText (59 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="180" class="todo"><title>0x000396dc Func396dc (3 bytes)</title></rect>
 <rect width="12" height="12" x="435" y="180" class="todo"><title>0x000396e0 Func396e0 (5 bytes)</title></rect>
@@ -713,7 +713,7 @@
 <rect width="12" height="12" x="645" y="180" class="todo"><title>0x000397cc Func397cc (201 bytes)</title></rect>
 <rect width="12" height="12" x="660" y="180" class="todo"><title>0x00039898 T_RemovePrint (45 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="180" class="todo"><title>0x000398c8 Func398c8 (34 bytes)</title></rect>
-<rect width="12" height="12" x="690" y="180" class="todo"><title>0x000398ec Func398ec (26 bytes)</title></rect>
+<rect width="12" height="12" x="690" y="180" class="named"><title>0x000398ec T_GetStringLen (26 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="180" class="todo"><title>0x00039908 T_DrawText (33 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="180" class="todo"><title>0x0003992c Func3992c (1069 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="180" class="todo"><title>0x00039d60 InitialiseRollingBall (69 bytes)</title></rect>
@@ -882,10 +882,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">74.50%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">25.50%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">74.64%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">25.36%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="556.51" height="6" x="0" y="0" class="named"/>
-<rect width="190.49" height="6" x="556.51" y="0" class="todo"/>
+<rect width="557.56" height="6" x="0" y="0" class="named"/>
+<rect width="189.44" height="6" x="557.56" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.96" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1103,7 +1103,7 @@
 <rect width="12.91" height="13.08" x="513.94" y="132.90" class="named"><title>0x0001f928 S_DrawScreenBox (290 bytes)</title></rect>
 <rect width="12.91" height="12.80" x="513.94" y="148.98" class="todo"><title>0x0003a698 FallingBlock (285 bytes)</title></rect>
 <rect width="12.91" height="12.75" x="513.94" y="164.78" class="named"><title>0x0002d000 CreateZone (284 bytes)</title></rect>
-<rect width="12.91" height="12.58" x="513.94" y="180.53" class="todo"><title>0x00039584 T_Print (281 bytes)</title></rect>
+<rect width="12.91" height="12.58" x="513.94" y="180.53" class="named"><title>0x00039584 T_Print (281 bytes)</title></rect>
 <rect width="12.91" height="12.53" x="513.94" y="196.11" class="named"><title>0x00029070 LaraInitialiseMeshes (280 bytes)</title></rect>
 <rect width="12.91" height="12.47" x="513.94" y="211.64" class="named"><title>0x00014ae0 StartCinematic (279 bytes)</title></rect>
 <rect width="12.91" height="12.47" x="513.94" y="227.11" class="named"><title>0x0001dd3c WaterFall (279 bytes)</title></rect>
@@ -1598,7 +1598,7 @@
 <rect width="1.98" height="1.79" x="716.75" y="230.18" class="todo"><title>0x000456d0 Func456d0 (27 bytes)</title></rect>
 <rect width="1.98" height="1.79" x="716.75" y="234.96" class="todo"><title>0x00046974 Func46974 (27 bytes)</title></rect>
 <rect width="1.98" height="1.61" x="716.75" y="239.75" class="named"><title>0x00034d08 InitialiseSavegameItem (26 bytes)</title></rect>
-<rect width="1.98" height="1.61" x="716.75" y="244.35" class="todo"><title>0x000398ec Func398ec (26 bytes)</title></rect>
+<rect width="1.98" height="1.61" x="716.75" y="244.35" class="named"><title>0x000398ec T_GetStringLen (26 bytes)</title></rect>
 <rect width="1.98" height="1.61" x="716.75" y="248.96" class="todo"><title>0x0003f044 Func3f044 (26 bytes)</title></rect>
 <rect width="1.98" height="1.43" x="716.75" y="253.57" class="named"><title>0x00026d0c lara_col_leftjump (25 bytes)</title></rect>
 <rect width="1.78" height="1.62" x="721.73" y="225.39" class="named"><title>0x0002a154 lara_col_surfleft (25 bytes)</title></rect>
