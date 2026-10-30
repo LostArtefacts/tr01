@@ -49,12 +49,15 @@ enum key_codes
     K_RSHIFT = 0x36,
     K_LALT = 0x38,
     K_SPACE = 0x39,
+    K_CAPS = 0x3a,
     K_F1 = 0x3b,
     K_F2 = 0x3c,
     K_F3 = 0x3d,
     K_F4 = 0x3e,
     K_F5 = 0x3f,
     K_F6 = 0x40,
+    K_NUMLOCK = 0x45,
+    K_SCRLOCK = 0x46,
     K_NUMHOME = 0x47,
     K_NUMUP = 0x48,
     K_NUMPGUP = 0x49,
@@ -67,6 +70,7 @@ enum key_codes
     K_NUMPGDN = 0x51,
     K_NUM0 = 0x52,
     K_NUMDEL = 0x53,
+    K_SYSREQ = 0x54,
     K_NUMENTER = 0x9c,
     K_RCTRL = 0x9d,
     K_RALT = 0xb8,
@@ -76,6 +80,7 @@ enum key_codes
     K_END = 0xcf,
     K_DOWN = 0xd0,
     K_PGDN = 0xd1,
+    K_INSERT = 0xd2,
     K_DELETE = 0xd3
 };
 #define rawkey(k) (keydata->keymap[k])

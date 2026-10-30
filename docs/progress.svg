@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">93.34% (757)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">6.66% (54)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">93.46% (758)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">6.54% (53)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="697.26" height="6" x="0" y="0" class="named"/>
-<rect width="49.74" height="6" x="697.26" y="0" class="todo"/>
+<rect width="698.18" height="6" x="0" y="0" class="named"/>
+<rect width="48.82" height="6" x="698.18" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -838,7 +838,7 @@
 <rect width="12" height="12" x="270" y="225" class="todo"><title>0x00045672 phd_UnitMatrix (44 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="225" class="named"><title>0x000456d0 TimerTick (27 bytes)</title></rect>
 <rect width="12" height="12" x="300" y="225" class="named"><title>0x000456ec ShellInit (378 bytes)</title></rect>
-<rect width="12" height="12" x="315" y="225" class="todo"><title>0x00045868 Func45868 (307 bytes)</title></rect>
+<rect width="12" height="12" x="315" y="225" class="named"><title>0x00045868 ShellCleanup (307 bytes)</title></rect>
 <rect width="12" height="12" x="330" y="225" class="todo"><title>0x0004599c Func4599c (5 bytes)</title></rect>
 <rect width="12" height="12" x="345" y="225" class="todo"><title>0x000459a4 ShellExit (166 bytes)</title></rect>
 <rect width="12" height="12" x="360" y="225" class="todo"><title>0x00045a4c FileLoad (190 bytes)</title></rect>
@@ -855,12 +855,12 @@
 <rect width="12" height="12" x="525" y="225" class="todo"><title>0x00045f6c JoySetCentre (148 bytes)</title></rect>
 <rect width="12" height="12" x="540" y="225" class="todo"><title>0x00046000 JoyRead (738 bytes)</title></rect>
 <rect width="12" height="12" x="555" y="225" class="todo"><title>0x000462e4 MemAllocReal (147 bytes)</title></rect>
-<rect width="12" height="12" x="570" y="225" class="todo"><title>0x00046378 Func46378 (137 bytes)</title></rect>
+<rect width="12" height="12" x="570" y="225" class="todo"><title>0x00046378 MemFreeReal (137 bytes)</title></rect>
 <rect width="12" height="12" x="585" y="225" class="todo"><title>0x00046404 InterruptSet (753 bytes)</title></rect>
 <rect width="12" height="12" x="600" y="225" class="todo"><title>0x000466f8 VgaGetMode (11 bytes)</title></rect>
-<rect width="12" height="12" x="615" y="225" class="todo"><title>0x00046703 Func46703 (7 bytes)</title></rect>
+<rect width="12" height="12" x="615" y="225" class="todo"><title>0x00046703 VgaSetMode (7 bytes)</title></rect>
 <rect width="12" height="12" x="630" y="225" class="todo"><title>0x0004670a VgaGetRows (17 bytes)</title></rect>
-<rect width="12" height="12" x="645" y="225" class="todo"><title>0x0004671b Func4671b (71 bytes)</title></rect>
+<rect width="12" height="12" x="645" y="225" class="todo"><title>0x0004671b VgaSetRows (71 bytes)</title></rect>
 <rect width="12" height="12" x="660" y="225" class="todo"><title>0x00046762 ScreenClear (41 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="225" class="todo"><title>0x000467f1 ScreenDump (24 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="225" class="todo"><title>0x00046809 ScreenPartialDump (24 bytes)</title></rect>
@@ -882,10 +882,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">95.16%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">4.84%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">95.30%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">4.70%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="710.81" height="6" x="0" y="0" class="named"/>
-<rect width="36.19" height="6" x="710.81" y="0" class="todo"/>
+<rect width="711.86" height="6" x="0" y="0" class="named"/>
+<rect width="35.14" height="6" x="711.86" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.96" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1090,7 +1090,7 @@
 <rect width="13.85" height="13.28" x="633.62" y="18.29" class="named"><title>0x0003b3fc LavaWedge (311 bytes)</title></rect>
 <rect width="13.74" height="13.28" x="650.47" y="18.29" class="named"><title>0x0002793c LaraDeflectEdgeJump (309 bytes)</title></rect>
 <rect width="13.69" height="13.28" x="667.21" y="18.29" class="todo"><title>0x00044761 transA (308 bytes)</title></rect>
-<rect width="13.63" height="13.28" x="683.90" y="18.29" class="todo"><title>0x00045868 Func45868 (307 bytes)</title></rect>
+<rect width="13.63" height="13.28" x="683.90" y="18.29" class="named"><title>0x00045868 ShellCleanup (307 bytes)</title></rect>
 <rect width="13.58" height="13.28" x="700.53" y="18.29" class="named"><title>0x00020ac0 DrawAmmoInfo (306 bytes)</title></rect>
 <rect width="13.52" height="13.28" x="717.11" y="18.29" class="named"><title>0x0003ad90 DartsControl (305 bytes)</title></rect>
 <rect width="13.36" height="13.28" x="733.64" y="18.29" class="named"><title>0x0001d8b0 ItemSparkle (302 bytes)</title></rect>
@@ -1263,7 +1263,7 @@
 <rect width="7.83" height="8.40" x="728.49" y="101.01" class="named"><title>0x0002bb1c ready_pistols (140 bytes)</title></rect>
 <rect width="7.68" height="8.40" x="739.32" y="101.01" class="named"><title>0x00010ed0 S_DisplayPicture (138 bytes)</title></rect>
 <rect width="7.57" height="8.43" x="595.56" y="112.41" class="named"><title>0x0001f044 LoadPalette (137 bytes)</title></rect>
-<rect width="7.57" height="8.43" x="595.56" y="123.84" class="todo"><title>0x00046378 Func46378 (137 bytes)</title></rect>
+<rect width="7.57" height="8.43" x="595.56" y="123.84" class="todo"><title>0x00046378 MemFreeReal (137 bytes)</title></rect>
 <rect width="7.57" height="8.43" x="595.56" y="135.27" class="todo"><title>0x00046d28 VgaGetFont (137 bytes)</title></rect>
 <rect width="7.57" height="8.35" x="595.56" y="146.70" class="named"><title>0x0001628c EffectHit (136 bytes)</title></rect>
 <rect width="7.57" height="8.35" x="595.56" y="158.05" class="named"><title>0x00024b3c AddActiveItem (136 bytes)</title></rect>
@@ -1418,7 +1418,7 @@
 <rect width="4.72" height="5.23" x="653.59" y="177.65" class="named"><title>0x0001a1c4 S_CopyScreenToBuffer (72 bytes)</title></rect>
 <rect width="4.72" height="5.23" x="653.59" y="185.88" class="named"><title>0x0001e064 ChainBlockFX (72 bytes)</title></rect>
 <rect width="4.72" height="5.12" x="653.59" y="194.11" class="named"><title>0x0002ff44 GetOffset (71 bytes)</title></rect>
-<rect width="4.72" height="5.12" x="653.59" y="202.22" class="todo"><title>0x0004671b Func4671b (71 bytes)</title></rect>
+<rect width="4.72" height="5.12" x="653.59" y="202.22" class="todo"><title>0x0004671b VgaSetRows (71 bytes)</title></rect>
 <rect width="4.72" height="5" x="653.59" y="210.34" class="named"><title>0x00020dec S_ExitSystem (70 bytes)</title></rect>
 <rect width="4.72" height="5" x="653.59" y="218.34" class="named"><title>0x0003ed00 phd_PointLight (70 bytes)</title></rect>
 <rect width="4.72" height="5" x="653.59" y="226.34" class="todo"><title>0x0003efe0 phd_atan (70 bytes)</title></rect>
@@ -1655,7 +1655,7 @@
 <rect width="0.10" height="0.10" x="742.72" y="245.20" class="named"><title>0x00039700 T_WordSpacing (8 bytes)</title></rect>
 <rect width="0.10" height="0.10" x="745.37" y="245.20" class="named"><title>0x000396f0 T_SetScale (7 bytes)</title></rect>
 <rect width="0.10" height="0.10" x="747.68" y="245.20" class="todo"><title>0x0004566b phd_PushUnitMatrix (7 bytes)</title></rect>
-<rect width="0.10" height="0.10" x="740.07" y="247.87" class="todo"><title>0x00046703 Func46703 (7 bytes)</title></rect>
+<rect width="0.10" height="0.10" x="740.07" y="247.87" class="todo"><title>0x00046703 VgaSetMode (7 bytes)</title></rect>
 <rect width="0.10" height="0.10" x="742.85" y="247.87" class="named"><title>0x00020434 SeedRandomControl (6 bytes)</title></rect>
 <rect width="0.10" height="0.10" x="745.24" y="247.87" class="named"><title>0x0002045c SeedRandomDraw (6 bytes)</title></rect>
 <rect width="0.10" height="0.10" x="747.62" y="247.87" class="named"><title>0x0002dd60 mn_set_sound_fade_rate (6 bytes)</title></rect>

@@ -3,6 +3,23 @@
 
 #define NO_JOYSTICK 0x00000008
 
+typedef struct
+{
+    uint16 old_sel;
+    uint32 old_off;
+    uint16 old_real_seg;
+    uint16 old_real_off;
+    sint16 installed;
+    uint16 number;
+    void **data;
+    uint8 *real_code;
+    void (*init)(void);
+    void (*handler)(void);
+    uint16 handler_sel;
+    uint16 data_size;
+    uint8 *real_code_end;
+} INTERRUPT;
+
 extern void (*int_func)(void);
 extern SETUP *gamedata;
 extern uint32 shell_flags;
@@ -14,6 +31,7 @@ extern int joy_failed;
 extern uint32 joy_mask;
 extern char txt_col;
 extern uint32 timer_handle;
+extern INTERRUPT interrupts[3];
 
 void FadeTick(void);
 uint8 VgaGetMode(void);
@@ -33,6 +51,14 @@ void InterruptSet(int on, int which);
 int JoyReadAxes(uint32 mask);
 void JoyDetect(void);
 void JoySetCentre(void);
+void SoundExit(void);
+uint32 sosTIMERRemoveEvent(uint32 handle);
+uint32 sosTIMERUninitSystem(uint32 debug);
+void CDFree(void);
+void MemFreeReal(void *mem);
+void VgaSetMode(uint8 mode);
+void VgaSetRows(uint8 rows);
+void TimeRestore(void);
 
 void TimerTick(void)
 {
@@ -94,6 +120,54 @@ void ShellInit(SETUP *pSetup, uint32 dwFlags)
     clock_ticks = 0;
     int_func = NULL;
     sosTIMERRegisterEvent(60, TimerTick, &timer_handle);
+}
+
+void ShellCleanup(void)
+{
+    uint16 flags;
+
+    if (interrupts[2].installed)
+    {
+        flags = *(uint16 *)0x417 & 0x8f0;
+        if (rawkey(K_RSHIFT))
+            flags |= 0x1;
+        if (rawkey(K_LSHIFT))
+            flags |= 0x2;
+        if (rawkey(K_LCTRL) || rawkey(K_RCTRL))
+            flags |= 0x4;
+        if (rawkey(K_LALT) || rawkey(K_RALT))
+            flags |= 0x8;
+        if (rawkey(K_LCTRL))
+            flags |= 0x100;
+        if (rawkey(K_LALT))
+            flags |= 0x200;
+        if (rawkey(K_SYSREQ))
+            flags |= 0x400;
+        if (rawkey(K_SCRLOCK))
+            flags |= 0x1000;
+        if (rawkey(K_NUMLOCK))
+            flags |= 0x2000;
+        if (rawkey(K_CAPS))
+            flags |= 0x4000;
+        if (rawkey(K_INSERT))
+            flags |= 0x8000;
+        *(uint16 *)0x417 = flags;
+    }
+    SoundExit();
+    if (timer_handle != -1)
+        sosTIMERRemoveEvent(timer_handle);
+    sosTIMERUninitSystem(0);
+    CDFree();
+    InterruptSet(0, 0);
+    InterruptSet(0, 1);
+    InterruptSet(0, 2);
+    if (dos_buffer)
+        MemFreeReal(dos_buffer);
+    if (old_video_mode == 3)
+        VgaSetRows(old_text_rows);
+    else
+        VgaSetMode(old_video_mode);
+    TimeRestore();
 }
 
 void JoyDetect(void)
