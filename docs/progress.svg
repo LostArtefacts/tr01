@@ -61,11 +61,11 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">98.17% (806)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0.12% (1)</tspan> · <tspan class="todo">1.71% (14)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">98.29% (807)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0.12% (1)</tspan> · <tspan class="todo">1.58% (13)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="733.35" height="6" x="0" y="0" class="named"/>
-<rect width="0.91" height="6" x="733.35" y="0" class="nonmatching"/>
-<rect width="12.74" height="6" x="734.26" y="0" class="todo"/>
+<rect width="734.26" height="6" x="0" y="0" class="named"/>
+<rect width="0.91" height="6" x="734.26" y="0" class="nonmatching"/>
+<rect width="11.83" height="6" x="735.17" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -877,7 +877,7 @@
 <rect width="12" height="12" x="90" y="240" class="named"><title>0x00046847 ScreenPartialDumpVga (148 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="240" class="named"><title>0x000468db ScreenDumpAndClear (55 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="240" class="named"><title>0x00046912 VesaBiosCall (98 bytes)</title></rect>
-<rect width="12" height="12" x="135" y="240" class="todo"><title>0x00046974 VesaBiosGetInfo (27 bytes)</title></rect>
+<rect width="12" height="12" x="135" y="240" class="named"><title>0x00046974 VesaBiosGetInfo (27 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="240" class="todo"><title>0x0004698f VesaBiosGetModeInfo (25 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="240" class="todo"><title>0x000469a8 VesaBiosSetMode (57 bytes)</title></rect>
 <rect width="12" height="12" x="180" y="240" class="todo"><title>0x000469e1 Func469e1 (28 bytes)</title></rect>
@@ -893,11 +893,11 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">99.08%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0.34%</tspan> · <tspan class="todo">0.58%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">99.09%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0.34%</tspan> · <tspan class="todo">0.57%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="740.10" height="6" x="0" y="0" class="named"/>
-<rect width="2.54" height="6" x="740.10" y="0" class="nonmatching"/>
-<rect width="4.36" height="6" x="742.64" y="0" class="todo"/>
+<rect width="740.19" height="6" x="0" y="0" class="named"/>
+<rect width="2.54" height="6" x="740.19" y="0" class="nonmatching"/>
+<rect width="4.27" height="6" x="742.73" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.55" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1616,7 +1616,7 @@
 <rect width="1.83" height="1.89" x="715.90" y="229.03" class="named"><title>0x0003131c do_compass_option (27 bytes)</title></rect>
 <rect width="1.83" height="1.89" x="715.90" y="233.92" class="named"><title>0x00039768 T_AddOutline (27 bytes)</title></rect>
 <rect width="1.83" height="1.89" x="715.90" y="238.81" class="named"><title>0x000456d0 TimerTick (27 bytes)</title></rect>
-<rect width="1.83" height="1.89" x="715.90" y="243.70" class="todo"><title>0x00046974 VesaBiosGetInfo (27 bytes)</title></rect>
+<rect width="1.83" height="1.89" x="715.90" y="243.70" class="named"><title>0x00046974 VesaBiosGetInfo (27 bytes)</title></rect>
 <rect width="1.83" height="1.71" x="715.90" y="248.58" class="named"><title>0x00034d08 InitialiseSavegameItem (26 bytes)</title></rect>
 <rect width="1.83" height="1.71" x="715.90" y="253.29" class="named"><title>0x000398ec T_GetStringLen (26 bytes)</title></rect>
 <rect width="2.01" height="1.55" x="720.73" y="224.14" class="named"><title>0x0003f044 phd_sin_lt180 (26 bytes)</title></rect>

@@ -298,4 +298,18 @@ VesaBiosCall_ proc near
     ret
 VesaBiosCall_ endp
 
+    public VesaBiosGetInfo_
+VesaBiosGetInfo_ proc near
+    push    ecx
+    push    esi
+    mov     ax,4f00h
+    call    VesaBiosCall_
+    mov     ecx,10h
+    mov     esi,dword ptr _dos_buffer
+    rep movsd
+    pop     esi
+    pop     ecx
+    ret
+VesaBiosGetInfo_ endp
+
     end
