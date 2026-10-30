@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">93.97% (764)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">6.03% (49)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">94.10% (765)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">5.90% (48)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="701.98" height="6" x="0" y="0" class="named"/>
-<rect width="45.02" height="6" x="701.98" y="0" class="todo"/>
+<rect width="702.90" height="6" x="0" y="0" class="named"/>
+<rect width="44.10" height="6" x="702.90" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -847,7 +847,7 @@
 <rect width="12" height="12" x="405" y="225" class="named"><title>0x00045b0c FileSave (85 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="225" class="named"><title>0x00045b64 FileSize (66 bytes)</title></rect>
 <rect width="12" height="12" x="435" y="225" class="named"><title>0x00045ba8 FadeToPal (88 bytes)</title></rect>
-<rect width="12" height="12" x="450" y="225" class="todo"><title>0x00045c00 FadeWait (19 bytes)</title></rect>
+<rect width="12" height="12" x="450" y="225" class="named"><title>0x00045c00 FadeWait (19 bytes)</title></rect>
 <rect width="12" height="12" x="465" y="225" class="todo"><title>0x00045c14 Func45c14 (74 bytes)</title></rect>
 <rect width="12" height="12" x="480" y="225" class="todo"><title>0x00045c60 Func45c60 (78 bytes)</title></rect>
 <rect width="12" height="12" x="495" y="225" class="todo"><title>0x00045cb0 VesaDetectModes (131 bytes)</title></rect>
@@ -886,8 +886,8 @@
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
 <text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">95.53%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">4.47%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="713.58" height="6" x="0" y="0" class="named"/>
-<rect width="33.42" height="6" x="713.58" y="0" class="todo"/>
+<rect width="713.64" height="6" x="0" y="0" class="named"/>
+<rect width="33.36" height="6" x="713.64" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.96" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1626,7 +1626,7 @@
 <rect width="1.28" height="0.91" x="725.84" y="238.43" class="named"><title>0x0002a128 lara_col_surfswim (19 bytes)</title></rect>
 <rect width="1.28" height="0.91" x="725.84" y="242.35" class="named"><title>0x0002a188 lara_col_surftread (19 bytes)</title></rect>
 <rect width="1.28" height="0.91" x="725.84" y="246.26" class="named"><title>0x0002ff18 BridgeFlatFloor (19 bytes)</title></rect>
-<rect width="1.28" height="0.91" x="725.84" y="250.17" class="todo"><title>0x00045c00 FadeWait (19 bytes)</title></rect>
+<rect width="1.28" height="0.91" x="725.84" y="250.17" class="named"><title>0x00045c00 FadeWait (19 bytes)</title></rect>
 <rect width="1.28" height="0.91" x="725.84" y="254.09" class="todo"><title>0x00046c2e ScreenWaitVbl (19 bytes)</title></rect>
 <rect width="1.07" height="0.91" x="730.12" y="234.52" class="named"><title>0x0001e2c0 S_LoadTitle (18 bytes)</title></rect>
 <rect width="1.07" height="0.91" x="734.19" y="234.52" class="named"><title>0x0001fac4 S_FinishInventory (18 bytes)</title></rect>

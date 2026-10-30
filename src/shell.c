@@ -279,6 +279,12 @@ void FadeToPal(uint32 count, uint8 *pal)
     toddata.fade_flag = 1;
 }
 
+void FadeWait(void)
+{
+    while (toddata.fade_flag)
+        ;
+}
+
 void JoyDetect(void)
 {
     uint32 i;
