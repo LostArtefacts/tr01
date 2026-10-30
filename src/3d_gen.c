@@ -3,6 +3,7 @@
 #define TRIGMULT2(A, B) (((A) * (B)) >> W2V_SHIFT)
 #define TRIGMULT3(A, B, C) (TRIGMULT2((TRIGMULT2(A, B)), C))
 #define CLAMP_XY 32760
+#define DPQ_START 12288
 
 extern sint32 matrix_stack[];
 extern float phd_leftfloat, phd_rightfloat, phd_topfloat, phd_bottomfloat;
@@ -551,6 +552,157 @@ sint16 *calc_vertice_light(sint16 *objptr)
             else if (shad > ((32 << 8) - 1))
                 shad = ((32 << 8) - 1);
             dest->g = (sint16)shad;
+        }
+    }
+    return objptr;
+}
+
+sint16 *calc_roomvert(sint16 *objptr)
+{
+    PHD_VBUF *dest;
+    sint32 *mptr;
+    sint32 xv, yv, zv;
+    sint32 x, y, z;
+    int numvert;
+    sint16 clipflag;
+    sint32 shade;
+
+    mptr = phd_mxptr;
+    dest = vbuf;
+    if (shade_effect)
+    {
+        for (numvert = (int)*(objptr++); numvert > 0; numvert--, dest++, objptr += 4)
+        {
+            dest->xv = xv = *(mptr + M00) * *(objptr) + *(mptr + M01) * *(objptr + 1) + *(mptr + M02) * *(objptr + 2) + *(mptr + M03);
+            dest->yv = yv = *(mptr + M10) * *(objptr) + *(mptr + M11) * *(objptr + 1) + *(mptr + M12) * *(objptr + 2) + *(mptr + M13);
+            dest->zv = zv = *(mptr + M20) * *(objptr) + *(mptr + M21) * *(objptr + 1) + *(mptr + M22) * *(objptr + 2) + *(mptr + M23);
+            if (zv >= phd_znear)
+            {
+                clipflag = 0;
+                z = zv >> W2V_SHIFT;
+                if (z > DPQ_END)
+                {
+                    dest->g = 0x1fff;
+                    clipflag += 16;
+                }
+                else if (z > DPQ_START)
+                    dest->g = (int)(*(objptr + 3) + z - DPQ_START);
+                else
+                    dest->g = *(objptr + 3);
+                zv /= phd_persp;
+                x = (xv / zv) + phd_centerx;
+                y = (yv / zv) + phd_centery;
+                if (water_effect)
+                {
+                    x += wibble_table[(y + wibble_offset) & (WIBBLE_SIZE - 1)];
+                    y += wibble_table[(x + wibble_offset) & (WIBBLE_SIZE - 1)];
+                }
+                if (x < phd_left)
+                {
+                    if (x < -CLAMP_XY)
+                        x = -CLAMP_XY;
+                    clipflag++;
+                }
+                else if (x > phd_right)
+                {
+                    if (x > CLAMP_XY)
+                        x = CLAMP_XY;
+                    clipflag += 2;
+                }
+                dest->xs = x;
+                if (y < phd_top)
+                {
+                    if (y < -CLAMP_XY)
+                        y = -CLAMP_XY;
+                    clipflag += 4;
+                }
+                else if (y > phd_bottom)
+                {
+                    if (y > CLAMP_XY)
+                        y = CLAMP_XY;
+                    clipflag += 8;
+                }
+                dest->ys = y;
+                dest->clip = clipflag;
+            }
+            else
+            {
+                dest->clip = -32768;
+                dest->g = *(objptr + 3);
+            }
+            dest->g += (sint16)shade_table[(rand_table[numvert & (WIBBLE_SIZE - 1)] + wibble_offset) & (WIBBLE_SIZE - 1)];
+            if (dest->g < 0)
+                dest->g = 0;
+            else if (dest->g > 0x1fff)
+                dest->g = 0x1fff;
+        }
+    }
+    else
+    {
+        for (numvert = (int)*(objptr++); numvert > 0; numvert--, dest++, objptr += 4)
+        {
+            dest->xv = xv = *(mptr + M00) * *(objptr) + *(mptr + M01) * *(objptr + 1) + *(mptr + M02) * *(objptr + 2) + *(mptr + M03);
+            dest->yv = yv = *(mptr + M10) * *(objptr) + *(mptr + M11) * *(objptr + 1) + *(mptr + M12) * *(objptr + 2) + *(mptr + M13);
+            dest->zv = zv = *(mptr + M20) * *(objptr) + *(mptr + M21) * *(objptr + 1) + *(mptr + M22) * *(objptr + 2) + *(mptr + M23);
+            if (zv >= phd_znear)
+            {
+                clipflag = 0;
+                z = zv >> W2V_SHIFT;
+                if (z > DPQ_END)
+                {
+                    dest->g = 0x1fff;
+                    clipflag += 16;
+                }
+                else if (z > DPQ_START)
+                {
+                    shade = (int)(*(objptr + 3) + z - DPQ_START);
+                    if (shade > 0x1fff)
+                        shade = 0x1fff;
+                    dest->g = (sint16)shade;
+                }
+                else
+                    dest->g = *(objptr + 3);
+                zv /= phd_persp;
+                x = (xv / zv) + phd_centerx;
+                y = (yv / zv) + phd_centery;
+                if (water_effect)
+                {
+                    x += wibble_table[(y + wibble_offset) & (WIBBLE_SIZE - 1)];
+                    y += wibble_table[(x + wibble_offset) & (WIBBLE_SIZE - 1)];
+                }
+                if (x < phd_left)
+                {
+                    if (x < -CLAMP_XY)
+                        x = -CLAMP_XY;
+                    clipflag++;
+                }
+                else if (x > phd_right)
+                {
+                    if (x > CLAMP_XY)
+                        x = CLAMP_XY;
+                    clipflag += 2;
+                }
+                dest->xs = x;
+                if (y < phd_top)
+                {
+                    if (y < -CLAMP_XY)
+                        y = -CLAMP_XY;
+                    clipflag += 4;
+                }
+                else if (y > phd_bottom)
+                {
+                    if (y > CLAMP_XY)
+                        y = CLAMP_XY;
+                    clipflag += 8;
+                }
+                dest->ys = y;
+                dest->clip = clipflag;
+            }
+            else
+            {
+                dest->clip = -32768;
+                dest->g = *(objptr + 3);
+            }
         }
     }
     return objptr;

@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">88.04% (714)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">11.96% (97)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">88.16% (715)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">11.84% (96)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="657.65" height="6" x="0" y="0" class="named"/>
-<rect width="89.35" height="6" x="657.65" y="0" class="todo"/>
+<rect width="658.58" height="6" x="0" y="0" class="named"/>
+<rect width="88.42" height="6" x="658.58" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -782,7 +782,7 @@
 <rect width="12" height="12" x="180" y="210" class="named"><title>0x0003e3e4 S_InsertRoom (92 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="210" class="named"><title>0x0003e440 calc_object_vertices (468 bytes)</title></rect>
 <rect width="12" height="12" x="210" y="210" class="named"><title>0x0003e614 calc_vertice_light (433 bytes)</title></rect>
-<rect width="12" height="12" x="225" y="210" class="todo"><title>0x0003e7c8 calc_roomvert (1107 bytes)</title></rect>
+<rect width="12" height="12" x="225" y="210" class="named"><title>0x0003e7c8 calc_roomvert (1107 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="210" class="todo"><title>0x0003ec1c phd_RotateLight (227 bytes)</title></rect>
 <rect width="12" height="12" x="255" y="210" class="todo"><title>0x0003ed00 Func3ed00 (70 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="210" class="todo"><title>0x0003ed48 phd_InitPolyList (37 bytes)</title></rect>
@@ -882,10 +882,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">83.94%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">16.06%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">84.45%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">15.55%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="627.05" height="6" x="0" y="0" class="named"/>
-<rect width="119.95" height="6" x="627.05" y="0" class="todo"/>
+<rect width="630.82" height="6" x="0" y="0" class="named"/>
+<rect width="116.18" height="6" x="630.82" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.96" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -922,7 +922,7 @@
 <rect width="30.87" height="27.01" x="169.61" y="227.99" class="named"><title>0x00031fcc Display_Requester (1152 bytes)</title></rect>
 <rect width="27.14" height="29.88" x="203.48" y="0" class="named"><title>0x00013af0 SmartShift (1123 bytes)</title></rect>
 <rect width="27.14" height="29.79" x="203.48" y="32.88" class="named"><title>0x000122fc CalculateTarget (1120 bytes)</title></rect>
-<rect width="27.14" height="29.41" x="203.48" y="65.66" class="todo"><title>0x0003e7c8 calc_roomvert (1107 bytes)</title></rect>
+<rect width="27.14" height="29.41" x="203.48" y="65.66" class="named"><title>0x0003e7c8 calc_roomvert (1107 bytes)</title></rect>
 <rect width="27.14" height="29.14" x="203.48" y="98.07" class="named"><title>0x00035574 CreateSaveGameInfo (1098 bytes)</title></rect>
 <rect width="27.14" height="29.09" x="203.48" y="130.21" class="named"><title>0x00011eb4 CreatureMood (1096 bytes)</title></rect>
 <rect width="27.14" height="28.97" x="203.48" y="162.30" class="todo"><title>0x0003fb5c Func3fb5c (1092 bytes)</title></rect>
