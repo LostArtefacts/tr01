@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">97.18% (794)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">2.82% (23)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">97.31% (795)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">2.69% (22)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="725.97" height="6" x="0" y="0" class="named"/>
-<rect width="21.03" height="6" x="725.97" y="0" class="todo"/>
+<rect width="726.88" height="6" x="0" y="0" class="named"/>
+<rect width="20.12" height="6" x="726.88" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -831,7 +831,7 @@
 <rect width="12" height="12" x="165" y="225" class="named"><title>0x00044761 transA (308 bytes)</title></rect>
 <rect width="12" height="12" x="180" y="225" class="named"><title>0x00044895 gourA (384 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="225" class="named"><title>0x00044a15 gtmapA (765 bytes)</title></rect>
-<rect width="12" height="12" x="210" y="225" class="todo"><title>0x00044d12 wgtmapA (833 bytes)</title></rect>
+<rect width="12" height="12" x="210" y="225" class="named"><title>0x00044d12 wgtmapA (833 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="225" class="named"><title>0x000452d0 phd_FixedDivide (17 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="225" class="named"><title>0x000452e1 calc_object_verticesA_noclip (200 bytes)</title></rect>
 <rect width="12" height="12" x="255" y="225" class="named"><title>0x000453a9 calc_object_verticesA_win (344 bytes)</title></rect>
@@ -888,10 +888,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">98.51%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">1.49%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">98.89%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">1.11%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="735.87" height="6" x="0" y="0" class="named"/>
-<rect width="11.13" height="6" x="735.87" y="0" class="todo"/>
+<rect width="738.70" height="6" x="0" y="0" class="named"/>
+<rect width="8.30" height="6" x="738.70" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.74" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -950,7 +950,7 @@
 <rect width="23.99" height="26.42" x="263.84" y="119.28" class="named"><title>0x0002a460 LaraGun (904 bytes)</title></rect>
 <rect width="23.99" height="24.89" x="263.84" y="148.71" class="named"><title>0x00033768 CowboyControl (857 bytes)</title></rect>
 <rect width="23.99" height="24.63" x="263.84" y="176.60" class="named"><title>0x000330b8 ApeControl (849 bytes)</title></rect>
-<rect width="23.99" height="24.11" x="263.84" y="204.23" class="todo"><title>0x00044d12 wgtmapA (833 bytes)</title></rect>
+<rect width="23.99" height="24.11" x="263.84" y="204.23" class="named"><title>0x00044d12 wgtmapA (833 bytes)</title></rect>
 <rect width="23.99" height="23.66" x="263.84" y="231.34" class="named"><title>0x0003276c PeopleControl (819 bytes)</title></rect>
 <rect width="23.71" height="23.31" x="290.84" y="0" class="named"><title>0x00018ec0 AlligatorControl (800 bytes)</title></rect>
 <rect width="23.71" height="23.31" x="290.84" y="26.31" class="named"><title>0x000191f4 CrocControl (800 bytes)</title></rect>
