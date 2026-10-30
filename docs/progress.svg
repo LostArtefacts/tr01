@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">95.57% (777)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">4.43% (36)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">95.69% (778)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">4.31% (35)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="713.92" height="6" x="0" y="0" class="named"/>
-<rect width="33.08" height="6" x="713.92" y="0" class="todo"/>
+<rect width="714.84" height="6" x="0" y="0" class="named"/>
+<rect width="32.16" height="6" x="714.84" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -791,7 +791,7 @@
 <rect width="12" height="12" x="315" y="210" class="named"><title>0x0003ee7c phd_PrintPolyList (48 bytes)</title></rect>
 <rect width="12" height="12" x="330" y="210" class="named"><title>0x0003eeac phd_InitWindow (223 bytes)</title></rect>
 <rect width="12" height="12" x="345" y="210" class="named"><title>0x0003ef8c AlterFOV (73 bytes)</title></rect>
-<rect width="12" height="12" x="360" y="210" class="todo"><title>0x0003efe0 phd_atan (70 bytes)</title></rect>
+<rect width="12" height="12" x="360" y="210" class="named"><title>0x0003efe0 phd_atan (70 bytes)</title></rect>
 <rect width="12" height="12" x="375" y="210" class="todo"><title>0x0003f026 phd_cos (5 bytes)</title></rect>
 <rect width="12" height="12" x="390" y="210" class="todo"><title>0x0003f02b phd_sin (25 bytes)</title></rect>
 <rect width="12" height="12" x="405" y="210" class="todo"><title>0x0003f044 Func3f044 (26 bytes)</title></rect>
@@ -884,10 +884,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">97.67%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">2.33%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">97.70%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">2.30%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="729.61" height="6" x="0" y="0" class="named"/>
-<rect width="17.39" height="6" x="729.61" y="0" class="todo"/>
+<rect width="729.85" height="6" x="0" y="0" class="named"/>
+<rect width="17.15" height="6" x="729.85" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.96" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1423,7 +1423,7 @@
 <rect width="4.68" height="5.15" x="653.25" y="201.97" class="todo"><title>0x0004671b VgaSetRows (71 bytes)</title></rect>
 <rect width="4.68" height="5.04" x="653.25" y="210.12" class="named"><title>0x00020dec S_ExitSystem (70 bytes)</title></rect>
 <rect width="4.68" height="5.04" x="653.25" y="218.16" class="named"><title>0x0003ed00 phd_PointLight (70 bytes)</title></rect>
-<rect width="4.68" height="5.04" x="653.25" y="226.20" class="todo"><title>0x0003efe0 phd_atan (70 bytes)</title></rect>
+<rect width="4.68" height="5.04" x="653.25" y="226.20" class="named"><title>0x0003efe0 phd_atan (70 bytes)</title></rect>
 <rect width="4.68" height="4.92" x="653.25" y="234.23" class="named"><title>0x000256e0 lara_as_fastfall (69 bytes)</title></rect>
 <rect width="4.68" height="4.92" x="653.25" y="242.16" class="named"><title>0x0002cc18 ThorsHandleCollision (69 bytes)</title></rect>
 <rect width="4.68" height="4.92" x="653.25" y="250.08" class="named"><title>0x00038b10 S_SoundPlaySample (69 bytes)</title></rect>
