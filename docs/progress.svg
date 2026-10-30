@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">90.51% (734)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">9.49% (77)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">90.63% (735)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">9.37% (76)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="676.08" height="6" x="0" y="0" class="named"/>
-<rect width="70.92" height="6" x="676.08" y="0" class="todo"/>
+<rect width="677" height="6" x="0" y="0" class="named"/>
+<rect width="70" height="6" x="677" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -807,7 +807,7 @@
 <rect width="12" height="12" x="555" y="210" class="named"><title>0x000406c8 ins_roomGT3 (1302 bytes)</title></rect>
 <rect width="12" height="12" x="570" y="210" class="named"><title>0x00040be0 ins_objectGT4persp (1835 bytes)</title></rect>
 <rect width="12" height="12" x="585" y="210" class="named"><title>0x0004130c ins_objectGT3persp (1300 bytes)</title></rect>
-<rect width="12" height="12" x="600" y="210" class="todo"><title>0x00041820 ins_objectGT4 (910 bytes)</title></rect>
+<rect width="12" height="12" x="600" y="210" class="named"><title>0x00041820 ins_objectGT4 (910 bytes)</title></rect>
 <rect width="12" height="12" x="615" y="210" class="todo"><title>0x00041bb0 ins_objectGT3 (771 bytes)</title></rect>
 <rect width="12" height="12" x="630" y="210" class="todo"><title>0x00041eb4 XYGClipper (793 bytes)</title></rect>
 <rect width="12" height="12" x="645" y="210" class="todo"><title>0x000421d0 ins_objectG4 (630 bytes)</title></rect>
@@ -882,10 +882,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">89.49%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">10.51%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">89.90%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">10.10%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="668.47" height="6" x="0" y="0" class="named"/>
-<rect width="78.53" height="6" x="668.47" y="0" class="todo"/>
+<rect width="671.57" height="6" x="0" y="0" class="named"/>
+<rect width="75.43" height="6" x="671.57" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.96" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -940,7 +940,7 @@
 <rect width="24.11" height="27.33" x="264.94" y="0" class="named"><title>0x0003c39c ExplodingDeath (932 bytes)</title></rect>
 <rect width="24.11" height="26.68" x="264.94" y="30.33" class="named"><title>0x00019760 RaptorControl (912 bytes)</title></rect>
 <rect width="24.11" height="26.65" x="264.94" y="60.02" class="named"><title>0x0002ada0 FireWeapon (911 bytes)</title></rect>
-<rect width="24.11" height="26.62" x="264.94" y="89.67" class="todo"><title>0x00041820 ins_objectGT4 (910 bytes)</title></rect>
+<rect width="24.11" height="26.62" x="264.94" y="89.67" class="named"><title>0x00041820 ins_objectGT4 (910 bytes)</title></rect>
 <rect width="24.11" height="26.42" x="264.94" y="119.28" class="named"><title>0x0002a460 LaraGun (904 bytes)</title></rect>
 <rect width="24.11" height="24.89" x="264.94" y="148.71" class="named"><title>0x00033768 CowboyControl (857 bytes)</title></rect>
 <rect width="24.11" height="24.63" x="264.94" y="176.60" class="named"><title>0x000330b8 ApeControl (849 bytes)</title></rect>
