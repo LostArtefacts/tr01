@@ -225,6 +225,18 @@ uint8 *FileLoad(char *name, void *where, uint32 flags)
     return where;
 }
 
+void FileSave(char *name, void *where, uint32 bytes)
+{
+    FILE *fp;
+
+    if (where == NULL)
+        return;
+    TimeRestore();
+    fp = fopen(name, "wb");
+    if (fp == NULL || fwrite(where, bytes, 1, fp) != 1 || fclose(fp))
+        ShellExitErrno("File '%s':", name);
+}
+
 void JoyDetect(void)
 {
     uint32 i;

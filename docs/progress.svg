@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">93.60% (761)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">6.40% (52)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">93.73% (762)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">6.27% (51)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="699.22" height="6" x="0" y="0" class="named"/>
-<rect width="47.78" height="6" x="699.22" y="0" class="todo"/>
+<rect width="700.14" height="6" x="0" y="0" class="named"/>
+<rect width="46.86" height="6" x="700.14" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -844,7 +844,7 @@
 <rect width="12" height="12" x="360" y="225" class="todo"><title>0x000459e8 ShellExitErrno (86 bytes)</title></rect>
 <rect width="12" height="12" x="375" y="225" class="todo"><title>0x00045a40 ShellExitMemErr (10 bytes)</title></rect>
 <rect width="12" height="12" x="390" y="225" class="named"><title>0x00045a4c FileLoad (190 bytes)</title></rect>
-<rect width="12" height="12" x="405" y="225" class="todo"><title>0x00045b0c Func45b0c (85 bytes)</title></rect>
+<rect width="12" height="12" x="405" y="225" class="named"><title>0x00045b0c FileSave (85 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="225" class="todo"><title>0x00045b64 Func45b64 (66 bytes)</title></rect>
 <rect width="12" height="12" x="435" y="225" class="todo"><title>0x00045ba8 FadeToPal (88 bytes)</title></rect>
 <rect width="12" height="12" x="450" y="225" class="todo"><title>0x00045c00 FadeWait (19 bytes)</title></rect>
@@ -884,10 +884,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">95.42%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">4.58%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">95.46%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">4.54%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="712.76" height="6" x="0" y="0" class="named"/>
-<rect width="34.24" height="6" x="712.76" y="0" class="todo"/>
+<rect width="713.05" height="6" x="0" y="0" class="named"/>
+<rect width="33.95" height="6" x="713.05" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.96" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1386,7 +1386,7 @@
 <rect width="5.98" height="5.55" x="671.69" y="152.12" class="todo"><title>0x000469fd Func469fd (87 bytes)</title></rect>
 <rect width="5.87" height="5.55" x="680.67" y="152.12" class="named"><title>0x000134a8 CreatureHead (86 bytes)</title></rect>
 <rect width="5.87" height="5.55" x="689.54" y="152.12" class="todo"><title>0x000459e8 ShellExitErrno (86 bytes)</title></rect>
-<rect width="5.77" height="5.55" x="698.41" y="152.12" class="todo"><title>0x00045b0c Func45b0c (85 bytes)</title></rect>
+<rect width="5.77" height="5.55" x="698.41" y="152.12" class="named"><title>0x00045b0c FileSave (85 bytes)</title></rect>
 <rect width="5.67" height="5.55" x="707.18" y="152.12" class="named"><title>0x00016450 TrapCollision (84 bytes)</title></rect>
 <rect width="5.67" height="5.55" x="715.85" y="152.12" class="named"><title>0x00020a24 DrawAirBar (84 bytes)</title></rect>
 <rect width="5.56" height="5.55" x="724.52" y="152.12" class="named"><title>0x00024700 InitialiseItemArray (83 bytes)</title></rect>
