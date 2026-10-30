@@ -353,3 +353,27 @@ void phd_TranslateAbs(sint32 x, sint32 y, sint32 z)
     *(mptr + M13) = *(mptr + M10) * x + *(mptr + M11) * y + *(mptr + M12) * z;
     *(mptr + M23) = *(mptr + M20) * x + *(mptr + M21) * y + *(mptr + M22) * z;
 }
+
+int visible_zclip(PHD_VBUF *vn1, PHD_VBUF *vn2, PHD_VBUF *vn3)
+{
+    double v1x, v1y, v1z;
+    double v2x, v2y, v2z;
+    double v3x, v3y, v3z;
+    double a, b, c;
+
+    v1x = (double)vn1->xv;
+    v1y = (double)vn1->yv;
+    v1z = (double)vn1->zv;
+    v2x = (double)vn2->xv;
+    v2y = (double)vn2->yv;
+    v2z = (double)vn2->zv;
+    v3x = (double)vn3->xv;
+    v3y = (double)vn3->yv;
+    v3z = (double)vn3->zv;
+    a = (v3y * v1x) - (v1y * v3x);
+    b = (v3x * v1z) - (v1x * v3z);
+    c = (v1y * v3z) - (v3y * v1z);
+    if (((a * v2z) + (b * v2y) + (c * v2x)) < 0.0)
+        return 1;
+    return 0;
+}

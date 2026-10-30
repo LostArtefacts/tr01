@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">87.42% (709)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">12.58% (102)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">87.55% (710)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">12.45% (101)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="653.05" height="6" x="0" y="0" class="named"/>
-<rect width="93.95" height="6" x="653.05" y="0" class="todo"/>
+<rect width="653.97" height="6" x="0" y="0" class="named"/>
+<rect width="93.03" height="6" x="653.97" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -777,7 +777,7 @@
 <rect width="12" height="12" x="105" y="210" class="named"><title>0x0003df90 phd_RotYXZpack (505 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="210" class="named"><title>0x0003e18c phd_TranslateRel (180 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="210" class="named"><title>0x0003e240 phd_TranslateAbs (102 bytes)</title></rect>
-<rect width="12" height="12" x="150" y="210" class="todo"><title>0x0003e2a8 Func3e2a8 (119 bytes)</title></rect>
+<rect width="12" height="12" x="150" y="210" class="named"><title>0x0003e2a8 visible_zclip (119 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="210" class="todo"><title>0x0003e320 phd_PutPolygons (196 bytes)</title></rect>
 <rect width="12" height="12" x="180" y="210" class="todo"><title>0x0003e3e4 S_InsertRoom (92 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="210" class="todo"><title>0x0003e440 calc_object_vertices (468 bytes)</title></rect>
@@ -882,10 +882,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">83.35%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">16.65%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">83.40%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">16.60%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="622.59" height="6" x="0" y="0" class="named"/>
-<rect width="124.41" height="6" x="622.59" y="0" class="todo"/>
+<rect width="623" height="6" x="0" y="0" class="named"/>
+<rect width="124" height="6" x="623" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.96" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1304,7 +1304,7 @@
 <rect width="7.36" height="7.22" x="606.13" y="247.78" class="named"><title>0x000259ec lara_as_stepleft (120 bytes)</title></rect>
 <rect width="7.60" height="6.99" x="616.49" y="123.29" class="named"><title>0x00034b48 SwitchTrigger (120 bytes)</title></rect>
 <rect width="7.51" height="6.99" x="627.09" y="123.29" class="named"><title>0x0001d754 Richochet (119 bytes)</title></rect>
-<rect width="7.51" height="6.99" x="637.60" y="123.29" class="todo"><title>0x0003e2a8 Func3e2a8 (119 bytes)</title></rect>
+<rect width="7.51" height="6.99" x="637.60" y="123.29" class="named"><title>0x0003e2a8 visible_zclip (119 bytes)</title></rect>
 <rect width="7.42" height="6.99" x="648.11" y="123.29" class="named"><title>0x0001a500 GetRoomBounds (118 bytes)</title></rect>
 <rect width="7.33" height="6.99" x="658.52" y="123.29" class="named"><title>0x00031338 FlashConflicts (117 bytes)</title></rect>
 <rect width="7.24" height="6.99" x="668.86" y="123.29" class="named"><title>0x000163dc DoorCollision (116 bytes)</title></rect>

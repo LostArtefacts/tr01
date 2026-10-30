@@ -709,7 +709,7 @@ address,size,name,symbol
 0x0003df90,505,phd_RotYXZpack,phd_RotYXZpack_
 0x0003e18c,180,phd_TranslateRel,phd_TranslateRel_
 0x0003e240,102,phd_TranslateAbs,phd_TranslateAbs_
-0x0003e2a8,119,Func3e2a8,
+0x0003e2a8,119,visible_zclip,visible_zclip_
 0x0003e320,196,phd_PutPolygons,phd_PutPolygons_
 0x0003e3e4,92,S_InsertRoom,S_InsertRoom_
 0x0003e440,468,calc_object_vertices,calc_object_vertices_
