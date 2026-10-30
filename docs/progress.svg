@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">88.29% (716)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">11.71% (95)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">88.41% (717)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">11.59% (94)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="659.50" height="6" x="0" y="0" class="named"/>
-<rect width="87.50" height="6" x="659.50" y="0" class="todo"/>
+<rect width="660.42" height="6" x="0" y="0" class="named"/>
+<rect width="86.58" height="6" x="660.42" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -784,7 +784,7 @@
 <rect width="12" height="12" x="210" y="210" class="named"><title>0x0003e614 calc_vertice_light (433 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="210" class="named"><title>0x0003e7c8 calc_roomvert (1107 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="210" class="named"><title>0x0003ec1c phd_RotateLight (227 bytes)</title></rect>
-<rect width="12" height="12" x="255" y="210" class="todo"><title>0x0003ed00 Func3ed00 (70 bytes)</title></rect>
+<rect width="12" height="12" x="255" y="210" class="named"><title>0x0003ed00 phd_PointLight (70 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="210" class="todo"><title>0x0003ed48 phd_InitPolyList (37 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="210" class="todo"><title>0x0003ed70 phd_SortPolyList (65 bytes)</title></rect>
 <rect width="12" height="12" x="300" y="210" class="todo"><title>0x0003edb4 Func3edb4 (199 bytes)</title></rect>
@@ -882,10 +882,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">84.55%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">15.45%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">84.58%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">15.42%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="631.59" height="6" x="0" y="0" class="named"/>
-<rect width="115.41" height="6" x="631.59" y="0" class="todo"/>
+<rect width="631.83" height="6" x="0" y="0" class="named"/>
+<rect width="115.17" height="6" x="631.83" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.96" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1420,7 +1420,7 @@
 <rect width="4.72" height="5.12" x="653.59" y="194.11" class="named"><title>0x0002ff44 GetOffset (71 bytes)</title></rect>
 <rect width="4.72" height="5.12" x="653.59" y="202.22" class="todo"><title>0x0004671b Func4671b (71 bytes)</title></rect>
 <rect width="4.72" height="5" x="653.59" y="210.34" class="named"><title>0x00020dec S_ExitSystem (70 bytes)</title></rect>
-<rect width="4.72" height="5" x="653.59" y="218.34" class="todo"><title>0x0003ed00 Func3ed00 (70 bytes)</title></rect>
+<rect width="4.72" height="5" x="653.59" y="218.34" class="named"><title>0x0003ed00 phd_PointLight (70 bytes)</title></rect>
 <rect width="4.72" height="5" x="653.59" y="226.34" class="todo"><title>0x0003efe0 phd_atan (70 bytes)</title></rect>
 <rect width="4.72" height="4.89" x="653.59" y="234.34" class="named"><title>0x000256e0 lara_as_fastfall (69 bytes)</title></rect>
 <rect width="4.72" height="4.89" x="653.59" y="242.23" class="named"><title>0x0002cc18 ThorsHandleCollision (69 bytes)</title></rect>

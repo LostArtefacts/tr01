@@ -726,3 +726,11 @@ void phd_RotateLight(PHD_ANGLE pitch, PHD_ANGLE yaw)
     ls_vector_view.y = (*(mptr + M10) * ls_world.x + *(mptr + M11) * ls_world.y + *(mptr + M12) * ls_world.z) >> W2V_SHIFT;
     ls_vector_view.z = (*(mptr + M20) * ls_world.x + *(mptr + M21) * ls_world.y + *(mptr + M22) * ls_world.z) >> W2V_SHIFT;
 }
+
+void phd_PointLight(PHD_3DPOS *destpos, PHD_3DPOS *lightpos)
+{
+    PHD_ANGLE angles[2];
+
+    phd_GetVectorAngles(destpos->x_pos - lightpos->x_pos, destpos->y_pos - lightpos->y_pos, destpos->z_pos - lightpos->z_pos, angles);
+    phd_RotateLight(angles[1], angles[0]);
+}
