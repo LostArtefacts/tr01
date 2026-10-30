@@ -1,5 +1,7 @@
 #include "3dglodef.h"
 
+void draw_poly_line(sint16 *iptr);
+
 void Insert2DLine(sint32 x1, sint32 y1, sint32 x2, sint32 y2, sint32 z, char color)
 {
     *(sort3dptr + 0) = (sint32)(info3dptr);
@@ -41,4 +43,16 @@ sint16 *ins_poly_line(sint16 *objptr)
     info3dptr += 6;
     surfacenum++;
     return objptr + 3;
+}
+
+void draw_line(sint32 x1, sint32 y1, sint32 x2, sint32 y2, char color)
+{
+    sint16 buf[5];
+
+    buf[0] = (sint16)x1;
+    buf[1] = (sint16)y1;
+    buf[2] = (sint16)x2;
+    buf[3] = (sint16)y2;
+    buf[4] = (sint16)color;
+    draw_poly_line(buf);
 }

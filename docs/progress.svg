@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">85.57% (694)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">14.43% (117)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">85.70% (695)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">14.30% (116)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="639.23" height="6" x="0" y="0" class="named"/>
-<rect width="107.77" height="6" x="639.23" y="0" class="todo"/>
+<rect width="640.15" height="6" x="0" y="0" class="named"/>
+<rect width="106.85" height="6" x="640.15" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -762,8 +762,8 @@
 <rect width="12" height="12" x="630" y="195" class="named"><title>0x0003d180 LionControl (797 bytes)</title></rect>
 <rect width="12" height="12" x="645" y="195" class="named"><title>0x0003d4a0 Insert2DLine (97 bytes)</title></rect>
 <rect width="12" height="12" x="660" y="195" class="named"><title>0x0003d504 ins_poly_line (183 bytes)</title></rect>
-<rect width="12" height="12" x="675" y="195" class="todo"><title>0x0003d5bc Func3d5bc (52 bytes)</title></rect>
-<rect width="12" height="12" x="690" y="195" class="todo"><title>0x0003d5f0 Func3d5f0 (484 bytes)</title></rect>
+<rect width="12" height="12" x="675" y="195" class="named"><title>0x0003d5bc draw_line (52 bytes)</title></rect>
+<rect width="12" height="12" x="690" y="195" class="todo"><title>0x0003d5f0 draw_poly_line (484 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="195" class="todo"><title>0x0003d7e0 phd_GenerateW2V (427 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="195" class="todo"><title>0x0003d98c phd_LookAt (91 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="195" class="todo"><title>0x0003d9e8 phd_GetVectorAngles (101 bytes)</title></rect>
@@ -882,10 +882,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">81.85%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">18.15%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">81.87%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">18.13%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="611.42" height="6" x="0" y="0" class="named"/>
-<rect width="135.58" height="6" x="611.42" y="0" class="todo"/>
+<rect width="611.59" height="6" x="0" y="0" class="named"/>
+<rect width="135.41" height="6" x="611.59" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.96" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1012,7 +1012,7 @@
 <rect width="17.83" height="17.80" x="415.95" y="196.12" class="named"><title>0x0001fb64 EscapeFMV (491 bytes)</title></rect>
 <rect width="17.83" height="17.59" x="415.95" y="216.91" class="todo"><title>0x0003dda8 phd_RotYXZ (486 bytes)</title></rect>
 <rect width="17.83" height="17.50" x="415.95" y="237.50" class="named"><title>0x00033df0 PickUpCollision (484 bytes)</title></rect>
-<rect width="17.72" height="17.61" x="436.78" y="0" class="todo"><title>0x0003d5f0 Func3d5f0 (484 bytes)</title></rect>
+<rect width="17.72" height="17.61" x="436.78" y="0" class="todo"><title>0x0003d5f0 draw_poly_line (484 bytes)</title></rect>
 <rect width="17.72" height="17.18" x="436.78" y="20.61" class="todo"><title>0x00046a54 Func46a54 (474 bytes)</title></rect>
 <rect width="17.72" height="17.10" x="436.78" y="40.79" class="named"><title>0x0002cd30 EnableBaddieAI (472 bytes)</title></rect>
 <rect width="17.72" height="17.06" x="436.78" y="60.89" class="named"><title>0x000299e4 LaraWaterCurrent (471 bytes)</title></rect>
@@ -1467,7 +1467,7 @@
 <rect width="3.76" height="3.92" x="703.71" y="177.24" class="named"><title>0x0001cf3c phd_TranslateRel_I (53 bytes)</title></rect>
 <rect width="3.76" height="3.92" x="710.47" y="177.24" class="named"><title>0x0003a430 TrapDoorFloor (53 bytes)</title></rect>
 <rect width="3.63" height="3.92" x="717.23" y="177.24" class="named"><title>0x0001fad8 S_FadeToBlack (52 bytes)</title></rect>
-<rect width="3.63" height="3.92" x="723.86" y="177.24" class="todo"><title>0x0003d5bc Func3d5bc (52 bytes)</title></rect>
+<rect width="3.63" height="3.92" x="723.86" y="177.24" class="named"><title>0x0003d5bc draw_line (52 bytes)</title></rect>
 <rect width="3.50" height="3.92" x="730.49" y="177.24" class="named"><title>0x00015f84 ShiftItem (51 bytes)</title></rect>
 <rect width="3.50" height="3.92" x="736.99" y="177.24" class="named"><title>0x0001a2b4 S_FadeInInventory (51 bytes)</title></rect>
 <rect width="3.50" height="3.92" x="743.50" y="177.24" class="named"><title>0x0002fe88 DrawBridgeFloor (51 bytes)</title></rect>

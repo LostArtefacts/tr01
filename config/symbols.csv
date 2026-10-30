@@ -694,8 +694,8 @@ address,size,name,symbol
 0x0003d180,797,LionControl,LionControl_
 0x0003d4a0,97,Insert2DLine,Insert2DLine_
 0x0003d504,183,ins_poly_line,ins_poly_line_
-0x0003d5bc,52,Func3d5bc,
-0x0003d5f0,484,Func3d5f0,
+0x0003d5bc,52,draw_line,draw_line_
+0x0003d5f0,484,draw_poly_line,draw_poly_line_
 0x0003d7e0,427,phd_GenerateW2V,phd_GenerateW2V_
 0x0003d98c,91,phd_LookAt,phd_LookAt_
 0x0003d9e8,101,phd_GetVectorAngles,phd_GetVectorAngles_
