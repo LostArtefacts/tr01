@@ -237,6 +237,19 @@ void FileSave(char *name, void *where, uint32 bytes)
         ShellExitErrno("File '%s':", name);
 }
 
+uint32 FileSize(char *name)
+{
+    FILE *fp;
+    uint32 size;
+
+    fp = fopen(name, "rb");
+    if (fp == NULL || fseek(fp, 0, SEEK_END))
+        return -1;
+    size = ftell(fp);
+    fclose(fp);
+    return size;
+}
+
 void JoyDetect(void)
 {
     uint32 i;

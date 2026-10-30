@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">93.73% (762)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">6.27% (51)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">93.85% (763)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">6.15% (50)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="700.14" height="6" x="0" y="0" class="named"/>
-<rect width="46.86" height="6" x="700.14" y="0" class="todo"/>
+<rect width="701.06" height="6" x="0" y="0" class="named"/>
+<rect width="45.94" height="6" x="701.06" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -845,7 +845,7 @@
 <rect width="12" height="12" x="375" y="225" class="todo"><title>0x00045a40 ShellExitMemErr (10 bytes)</title></rect>
 <rect width="12" height="12" x="390" y="225" class="named"><title>0x00045a4c FileLoad (190 bytes)</title></rect>
 <rect width="12" height="12" x="405" y="225" class="named"><title>0x00045b0c FileSave (85 bytes)</title></rect>
-<rect width="12" height="12" x="420" y="225" class="todo"><title>0x00045b64 Func45b64 (66 bytes)</title></rect>
+<rect width="12" height="12" x="420" y="225" class="named"><title>0x00045b64 FileSize (66 bytes)</title></rect>
 <rect width="12" height="12" x="435" y="225" class="todo"><title>0x00045ba8 FadeToPal (88 bytes)</title></rect>
 <rect width="12" height="12" x="450" y="225" class="todo"><title>0x00045c00 FadeWait (19 bytes)</title></rect>
 <rect width="12" height="12" x="465" y="225" class="todo"><title>0x00045c14 Func45c14 (74 bytes)</title></rect>
@@ -884,10 +884,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">95.46%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">4.54%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">95.49%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">4.51%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="713.05" height="6" x="0" y="0" class="named"/>
-<rect width="33.95" height="6" x="713.05" y="0" class="todo"/>
+<rect width="713.28" height="6" x="0" y="0" class="named"/>
+<rect width="33.72" height="6" x="713.28" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.96" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1434,7 +1434,7 @@
 <rect width="4.45" height="4.93" x="691.40" y="168.90" class="named"><title>0x00011630 InitialiseCreature (67 bytes)</title></rect>
 <rect width="4.45" height="4.93" x="698.85" y="168.90" class="named"><title>0x0003a3ec TrapDoorControl (67 bytes)</title></rect>
 <rect width="4.34" height="4.93" x="706.30" y="168.90" class="named"><title>0x00014eb8 ControlCinematicPlayer (66 bytes)</title></rect>
-<rect width="4.34" height="4.93" x="713.64" y="168.90" class="todo"><title>0x00045b64 Func45b64 (66 bytes)</title></rect>
+<rect width="4.34" height="4.93" x="713.64" y="168.90" class="named"><title>0x00045b64 FileSize (66 bytes)</title></rect>
 <rect width="4.34" height="4.93" x="720.98" y="168.90" class="named"><title>0x00045f28 JoyDetect (66 bytes)</title></rect>
 <rect width="4.23" height="4.93" x="728.32" y="168.90" class="named"><title>0x00010018 S_DumpScreen (65 bytes)</title></rect>
 <rect width="4.23" height="4.93" x="735.54" y="168.90" class="named"><title>0x0001e1e4 FlickerFX (65 bytes)</title></rect>

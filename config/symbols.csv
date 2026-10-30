@@ -777,7 +777,7 @@ address,size,name,symbol
 0x00045a40,10,ShellExitMemErr,ShellExitMemErr_
 0x00045a4c,190,FileLoad,FileLoad_
 0x00045b0c,85,FileSave,FileSave_
-0x00045b64,66,Func45b64,
+0x00045b64,66,FileSize,FileSize_
 0x00045ba8,88,FadeToPal,FadeToPal_
 0x00045c00,19,FadeWait,FadeWait_
 0x00045c14,74,Func45c14,
