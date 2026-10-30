@@ -103,3 +103,22 @@ void phd_NormaliseMatrix(void)
     phd_UnitMatrix();
     phd_RotYXZ(angles[1], angles[0], angles[2]);
 }
+
+void phd_GetMatrixAngles(PHD_ANGLE *dest)
+{
+    PHD_ANGLE roll, pitch, yaw;
+    sint32 sy, cy;
+    sint32 *mptr = phd_mxptr;
+
+    yaw = phd_atan(*(mptr + M22), *(mptr + M02));
+    pitch = phd_atan(phd_sqrt(*(mptr + M22) * *(mptr + M22) + *(mptr + M02) * *(mptr + M02)), *(mptr + M12));
+    sy = phd_sin(yaw);
+    cy = phd_cos(yaw);
+    roll = phd_atan(((cy * *(mptr + M00)) - (sy * *(mptr + M20))), ((sy * *(mptr + M21)) - (cy * *(mptr + M01))));
+    if ((*(mptr + M12) >= 0 && pitch > 0) || (*(mptr + M12) < 0 && pitch < 0))
+        pitch = -pitch;
+
+    *(dest + 0) = pitch;
+    *(dest + 1) = yaw;
+    *(dest + 2) = roll;
+}
