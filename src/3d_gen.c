@@ -828,3 +828,9 @@ void phd_InitWindow(int x, int y, int width, int height, int nearz, int farz, in
     phd_bottom = phd_winymax;
     phd_mxptr = matrix_stack;
 }
+
+void AlterFOV(PHD_ANGLE fov)
+{
+    fov /= 2;
+    phd_persp = ((phd_winwidth / 2) * phd_cos(fov)) / phd_sin(fov);
+}

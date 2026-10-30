@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">89.03% (722)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">10.97% (89)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">89.15% (723)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">10.85% (88)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="665.02" height="6" x="0" y="0" class="named"/>
-<rect width="81.98" height="6" x="665.02" y="0" class="todo"/>
+<rect width="665.94" height="6" x="0" y="0" class="named"/>
+<rect width="81.06" height="6" x="665.94" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -790,7 +790,7 @@
 <rect width="12" height="12" x="300" y="210" class="named"><title>0x0003edb4 do_quickysorty (199 bytes)</title></rect>
 <rect width="12" height="12" x="315" y="210" class="named"><title>0x0003ee7c phd_PrintPolyList (48 bytes)</title></rect>
 <rect width="12" height="12" x="330" y="210" class="named"><title>0x0003eeac phd_InitWindow (223 bytes)</title></rect>
-<rect width="12" height="12" x="345" y="210" class="todo"><title>0x0003ef8c AlterFOV (73 bytes)</title></rect>
+<rect width="12" height="12" x="345" y="210" class="named"><title>0x0003ef8c AlterFOV (73 bytes)</title></rect>
 <rect width="12" height="12" x="360" y="210" class="todo"><title>0x0003efe0 phd_atan (70 bytes)</title></rect>
 <rect width="12" height="12" x="375" y="210" class="todo"><title>0x0003f026 phd_cos (5 bytes)</title></rect>
 <rect width="12" height="12" x="390" y="210" class="todo"><title>0x0003f02b phd_sin (25 bytes)</title></rect>
@@ -882,10 +882,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">84.84%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">15.16%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">84.88%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">15.12%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="633.77" height="6" x="0" y="0" class="named"/>
-<rect width="113.23" height="6" x="633.77" y="0" class="todo"/>
+<rect width="634.02" height="6" x="0" y="0" class="named"/>
+<rect width="112.98" height="6" x="634.02" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.96" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1414,7 +1414,7 @@
 <rect width="4.90" height="5.26" x="726.30" y="161.04" class="named"><title>0x0002eea0 TestBlockMovable (74 bytes)</title></rect>
 <rect width="4.90" height="5.26" x="734.20" y="161.04" class="named"><title>0x00034bc0 KeyTrigger (74 bytes)</title></rect>
 <rect width="4.90" height="5.26" x="742.10" y="161.04" class="todo"><title>0x00045c14 Func45c14 (74 bytes)</title></rect>
-<rect width="4.72" height="5.34" x="653.59" y="169.30" class="todo"><title>0x0003ef8c AlterFOV (73 bytes)</title></rect>
+<rect width="4.72" height="5.34" x="653.59" y="169.30" class="named"><title>0x0003ef8c AlterFOV (73 bytes)</title></rect>
 <rect width="4.72" height="5.23" x="653.59" y="177.65" class="named"><title>0x0001a1c4 S_CopyScreenToBuffer (72 bytes)</title></rect>
 <rect width="4.72" height="5.23" x="653.59" y="185.88" class="named"><title>0x0001e064 ChainBlockFX (72 bytes)</title></rect>
 <rect width="4.72" height="5.12" x="653.59" y="194.11" class="named"><title>0x0002ff44 GetOffset (71 bytes)</title></rect>
