@@ -700,8 +700,8 @@ address,size,name,symbol
 0x0003d98c,91,phd_LookAt,phd_LookAt_
 0x0003d9e8,101,phd_GetVectorAngles,phd_GetVectorAngles_
 0x0003da50,132,phd_NormaliseVector,phd_NormaliseVector_
-0x0003dad4,48,Func3dad4,
-0x0003db04,187,Func3db04,
+0x0003dad4,48,phd_NormaliseMatrix,phd_NormaliseMatrix_
+0x0003db04,187,phd_GetMatrixAngles,phd_GetMatrixAngles_
 0x0003dbc0,163,phd_RotX,phd_RotX_
 0x0003dc64,163,phd_RotY,phd_RotY_
 0x0003dd08,160,phd_RotZ,phd_RotZ_
@@ -767,7 +767,7 @@ address,size,name,symbol
 0x000452d0,17,Func452d0,
 0x0004564d,30,phd_PushMatrix,phd_PushMatrix_
 0x0004566b,7,phd_PushUnitMatrix,phd_PushUnitMatrix_
-0x00045672,44,Func45672,
+0x00045672,44,phd_UnitMatrix,phd_UnitMatrix_
 0x000456d0,27,Func456d0,
 0x000456ec,378,ShellInit,ShellInit_
 0x00045868,307,Func45868,

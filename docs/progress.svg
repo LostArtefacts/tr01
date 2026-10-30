@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">86.31% (700)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">13.69% (111)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">86.44% (701)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">13.56% (110)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="644.76" height="6" x="0" y="0" class="named"/>
-<rect width="102.24" height="6" x="644.76" y="0" class="todo"/>
+<rect width="645.68" height="6" x="0" y="0" class="named"/>
+<rect width="101.32" height="6" x="645.68" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -768,8 +768,8 @@
 <rect width="12" height="12" x="720" y="195" class="named"><title>0x0003d98c phd_LookAt (91 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="195" class="named"><title>0x0003d9e8 phd_GetVectorAngles (101 bytes)</title></rect>
 <rect width="12" height="12" x="0" y="210" class="named"><title>0x0003da50 phd_NormaliseVector (132 bytes)</title></rect>
-<rect width="12" height="12" x="15" y="210" class="todo"><title>0x0003dad4 Func3dad4 (48 bytes)</title></rect>
-<rect width="12" height="12" x="30" y="210" class="todo"><title>0x0003db04 Func3db04 (187 bytes)</title></rect>
+<rect width="12" height="12" x="15" y="210" class="named"><title>0x0003dad4 phd_NormaliseMatrix (48 bytes)</title></rect>
+<rect width="12" height="12" x="30" y="210" class="todo"><title>0x0003db04 phd_GetMatrixAngles (187 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="210" class="todo"><title>0x0003dbc0 phd_RotX (163 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="210" class="todo"><title>0x0003dc64 phd_RotY (163 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="210" class="todo"><title>0x0003dd08 phd_RotZ (160 bytes)</title></rect>
@@ -835,7 +835,7 @@
 <rect width="12" height="12" x="225" y="225" class="todo"><title>0x000452d0 Func452d0 (17 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="225" class="todo"><title>0x0004564d phd_PushMatrix (30 bytes)</title></rect>
 <rect width="12" height="12" x="255" y="225" class="todo"><title>0x0004566b phd_PushUnitMatrix (7 bytes)</title></rect>
-<rect width="12" height="12" x="270" y="225" class="todo"><title>0x00045672 Func45672 (44 bytes)</title></rect>
+<rect width="12" height="12" x="270" y="225" class="todo"><title>0x00045672 phd_UnitMatrix (44 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="225" class="todo"><title>0x000456d0 Func456d0 (27 bytes)</title></rect>
 <rect width="12" height="12" x="300" y="225" class="todo"><title>0x000456ec ShellInit (378 bytes)</title></rect>
 <rect width="12" height="12" x="315" y="225" class="todo"><title>0x00045868 Func45868 (307 bytes)</title></rect>
@@ -882,10 +882,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">82.44%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">17.56%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">82.46%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">17.54%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="615.80" height="6" x="0" y="0" class="named"/>
-<rect width="131.20" height="6" x="615.80" y="0" class="todo"/>
+<rect width="615.96" height="6" x="0" y="0" class="named"/>
+<rect width="131.04" height="6" x="615.96" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.96" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1187,7 +1187,7 @@
 <rect width="9.86" height="9.90" x="558.54" y="155.49" class="named"><title>0x00034c4c PickUpSaveGameCollision (188 bytes)</title></rect>
 <rect width="9.86" height="9.90" x="558.54" y="168.39" class="named"><title>0x0003b15c LavaBurn (188 bytes)</title></rect>
 <rect width="9.86" height="9.83" x="558.54" y="181.29" class="named"><title>0x00027ee4 TestHangSwingIn (187 bytes)</title></rect>
-<rect width="9.86" height="9.83" x="558.54" y="194.12" class="todo"><title>0x0003db04 Func3db04 (187 bytes)</title></rect>
+<rect width="9.86" height="9.83" x="558.54" y="194.12" class="todo"><title>0x0003db04 phd_GetMatrixAngles (187 bytes)</title></rect>
 <rect width="9.86" height="9.76" x="558.54" y="206.95" class="named"><title>0x00020d30 S_InitialiseSystem (186 bytes)</title></rect>
 <rect width="9.86" height="9.76" x="558.54" y="219.71" class="named"><title>0x00026484 lara_col_forwardjump (186 bytes)</title></rect>
 <rect width="9.86" height="9.76" x="558.54" y="232.48" class="named"><title>0x00026b4c lara_col_stepright (186 bytes)</title></rect>
@@ -1500,7 +1500,7 @@
 <rect width="3.33" height="3.69" x="682.54" y="224.56" class="named"><title>0x00031f3c Init_Requester (48 bytes)</title></rect>
 <rect width="3.33" height="3.69" x="682.54" y="231.25" class="named"><title>0x0003a7b8 FallingBlockFloor (48 bytes)</title></rect>
 <rect width="3.33" height="3.69" x="682.54" y="237.94" class="named"><title>0x0003a7e8 FallingBlockCeiling (48 bytes)</title></rect>
-<rect width="3.33" height="3.69" x="682.54" y="244.62" class="todo"><title>0x0003dad4 Func3dad4 (48 bytes)</title></rect>
+<rect width="3.33" height="3.69" x="682.54" y="244.62" class="named"><title>0x0003dad4 phd_NormaliseMatrix (48 bytes)</title></rect>
 <rect width="3.33" height="3.69" x="682.54" y="251.31" class="todo"><title>0x0003ee7c phd_PrintPolyList (48 bytes)</title></rect>
 <rect width="3.29" height="3.60" x="688.88" y="190.57" class="named"><title>0x0001cf74 phd_TranslateRel_ID (47 bytes)</title></rect>
 <rect width="3.29" height="3.60" x="695.16" y="190.57" class="named"><title>0x00020ec4 game_free (47 bytes)</title></rect>
@@ -1521,7 +1521,7 @@
 <rect width="3.42" height="3.04" x="688.88" y="233.83" class="named"><title>0x0001cee4 phd_RotX_I (44 bytes)</title></rect>
 <rect width="3.42" height="3.04" x="688.88" y="239.87" class="named"><title>0x0001cf10 phd_RotZ_I (44 bytes)</title></rect>
 <rect width="3.42" height="3.04" x="688.88" y="245.91" class="named"><title>0x0001e0ac Stairs2SlopeFX (44 bytes)</title></rect>
-<rect width="3.42" height="3.04" x="688.88" y="251.96" class="todo"><title>0x00045672 Func45672 (44 bytes)</title></rect>
+<rect width="3.42" height="3.04" x="688.88" y="251.96" class="todo"><title>0x00045672 phd_UnitMatrix (44 bytes)</title></rect>
 <rect width="3.09" height="3.08" x="695.30" y="197.16" class="named"><title>0x0001df20 lara_normal_effect (42 bytes)</title></rect>
 <rect width="3.09" height="3.08" x="701.39" y="197.16" class="named"><title>0x00024090 RemoveInventoryText (42 bytes)</title></rect>
 <rect width="3.09" height="3.08" x="707.49" y="197.16" class="named"><title>0x00025b80 lara_as_pushblock (42 bytes)</title></rect>

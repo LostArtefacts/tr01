@@ -5,6 +5,9 @@
 
 extern sint32 matrix_stack[];
 
+void phd_GetMatrixAngles(PHD_ANGLE *dest);
+void phd_UnitMatrix(void);
+
 void phd_GenerateW2V(PHD_3DPOS *viewpos)
 {
     sint32 sx, sy, sz;
@@ -90,4 +93,13 @@ void phd_NormaliseVector(sint32 x, sint32 y, sint32 z, sint32 *dest)
         *(dest + 1) = 0;
         *(dest + 2) = 0;
     }
+}
+
+void phd_NormaliseMatrix(void)
+{
+    PHD_ANGLE angles[3];
+
+    phd_GetMatrixAngles(angles);
+    phd_UnitMatrix();
+    phd_RotYXZ(angles[1], angles[0], angles[2]);
 }
