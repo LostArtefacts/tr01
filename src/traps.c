@@ -454,3 +454,13 @@ void FallingCeiling(sint16 item_number)
         item->gravity_status = 0;
     }
 }
+
+void InitialiseDamoclesSword(sint16 item_number)
+{
+    ITEM_INFO *item;
+
+    item = &items[item_number];
+    item->pos.y_rot = (PHD_ANGLE)GetRandomControl();
+    item->required_anim_state = (sint16)((GetRandomControl() - 16384) / 16);
+    item->fallspeed = 50;
+}
