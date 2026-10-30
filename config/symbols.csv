@@ -807,7 +807,7 @@ address,size,name,symbol
 0x00046821,38,ScreenDumpVga,ScreenDumpVga_
 0x00046847,148,ScreenPartialDumpVga,ScreenPartialDumpVga_
 0x000468db,55,ScreenDumpAndClear,ScreenDumpAndClear_
-0x00046912,98,Func46912,
+0x00046912,98,VesaBiosCall,VesaBiosCall_
 0x00046974,27,VesaBiosGetInfo,VesaBiosGetInfo_
 0x0004698f,25,VesaBiosGetModeInfo,VesaBiosGetModeInfo_
 0x000469a8,57,VesaBiosSetMode,VesaBiosSetMode_

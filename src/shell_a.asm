@@ -1,12 +1,17 @@
     .386p
     .model flat
 
+    extrn _dos_buffer:dword
     extrn _gamedata:dword
 
     .data
 
     public _video_depth
 _video_depth dd 1
+
+    .data?
+
+rm_regs db 50 dup(?)
 
     .code
 
@@ -257,5 +262,40 @@ l1:
     popa
     ret
 ScreenDumpAndClear_ endp
+
+    public VesaBiosCall_
+VesaBiosCall_ proc near
+    push    ds
+    push    es
+    push    fs
+    push    gs
+    pusha
+    mov     edx,eax
+    mov     esi,ecx
+    mov     edi,offset rm_regs
+    mov     ecx,0ch
+    xor     eax,eax
+    rep stosd
+    mov     word ptr [edi],ax
+    mov     word ptr rm_regs+1ch,dx
+    mov     word ptr rm_regs+18h,si
+    mov     eax,dword ptr _dos_buffer
+    mov     word ptr rm_regs,ax
+    shr     eax,4
+    and     eax,0f000h
+    mov     word ptr rm_regs+22h,ax
+    sub     edi,30h
+    mov     ax,300h
+    mov     bx,10h
+    int     31h
+    popa
+    pop     gs
+    pop     fs
+    pop     es
+    pop     ds
+    mov     eax,dword ptr rm_regs+1ch
+    and     eax,0ffffh
+    ret
+VesaBiosCall_ endp
 
     end
