@@ -3,6 +3,8 @@
 #define DPQ_START 12288
 
 extern sint32 phd_viewdist;
+extern uint8 *phd_winptr;
+extern sint32 phd_scrwidth;
 
 void S_DrawSpriteAbs(sint32 x, sint32 y, sint32 z, sint16 sprnum, sint16 shade)
 {
@@ -146,4 +148,81 @@ sint16 *ins_room_sprite(sint16 *objptr, int num)
         surfacenum++;
     }
     return objptr;
+}
+
+void draw_scaled_spriteC(sint16 *inptr)
+{
+    sint32 x1, y1, x2, y2;
+    sint32 xdif;
+    sint32 u, ustart, uadd;
+    sint32 vstart, vadd, pixadd;
+    uint8 *pixptr, *dqptr;
+    uint8 *ssptr, *slptr;
+    uint8 pix;
+    PHDSPRITESTRUCT *sptr;
+
+    x1 = (int)*(inptr);
+    y1 = (int)*(inptr + 1);
+    x2 = (int)*(inptr + 2);
+    y2 = (int)*(inptr + 3);
+    if (x2 <= x1 || y2 <= y1 || x2 <= 0 || y2 <= 0 || x1 >= phd_winxmax || y1 >= phd_winymax)
+        return;
+    dqptr = depthq_table[(*(inptr + 5)) >> 8];
+    sptr = &phdsprinfo[*(inptr + 4)];
+    vadd = (int)((sptr->height << 8) / (y2 - y1));
+    uadd = (int)((sptr->width << 8) / (x2 - x1));
+    ssptr = (uint8 *)texture_page_ptrs[sptr->tpage] + sptr->offset;
+    ustart = vstart = 0x4000;
+    if (x1 < 0)
+    {
+        ustart -= uadd * x1;
+        x1 = 0;
+    }
+    if (y1 < 0)
+    {
+        vstart -= vadd * y1;
+        y1 = 0;
+    }
+    if (x2 > phd_winxmax)
+        x2 = phd_winxmax;
+    if (y2 > phd_winymax)
+        y2 = phd_winymax;
+    x2 -= x1;
+    y2 -= y1;
+    pixptr = phd_winptr + y1 * phd_scrwidth + x1;
+    pixadd = phd_scrwidth - x2;
+    if (dqptr == depthq_table[16])
+    {
+        for (; y2 > 0; y2--)
+        {
+            slptr = ssptr + ((vstart >> 16) << 8);
+            u = ustart;
+            for (xdif = x2; xdif > 0; xdif--)
+            {
+                if ((pix = *(slptr + (u >> 16))))
+                    *(pixptr) = pix;
+                u += uadd;
+                pixptr++;
+            }
+            pixptr += pixadd;
+            vstart += vadd;
+        }
+    }
+    else
+    {
+        for (; y2 > 0; y2--)
+        {
+            slptr = ssptr + ((vstart >> 16) << 8);
+            u = ustart;
+            for (xdif = x2; xdif > 0; xdif--)
+            {
+                if ((pix = *(slptr + (u >> 16))))
+                    *(pixptr) = *(dqptr + pix);
+                u += uadd;
+                pixptr++;
+            }
+            pixptr += pixadd;
+            vstart += vadd;
+        }
+    }
 }

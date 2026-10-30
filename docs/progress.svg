@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">89.64% (727)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">10.36% (84)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">89.77% (728)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">10.23% (83)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="669.63" height="6" x="0" y="0" class="named"/>
-<rect width="77.37" height="6" x="669.63" y="0" class="todo"/>
+<rect width="670.55" height="6" x="0" y="0" class="named"/>
+<rect width="76.45" height="6" x="670.55" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -800,7 +800,7 @@
 <rect width="12" height="12" x="450" y="210" class="named"><title>0x0003f2c0 S_DrawSpriteRel (460 bytes)</title></rect>
 <rect width="12" height="12" x="465" y="210" class="named"><title>0x0003f48c S_DrawPickup (223 bytes)</title></rect>
 <rect width="12" height="12" x="480" y="210" class="named"><title>0x0003f56c ins_room_sprite (376 bytes)</title></rect>
-<rect width="12" height="12" x="495" y="210" class="todo"><title>0x0003f6e4 draw_scaled_spriteC (551 bytes)</title></rect>
+<rect width="12" height="12" x="495" y="210" class="named"><title>0x0003f6e4 draw_scaled_spriteC (551 bytes)</title></rect>
 <rect width="12" height="12" x="510" y="210" class="todo"><title>0x0003f910 Func3f910 (586 bytes)</title></rect>
 <rect width="12" height="12" x="525" y="210" class="todo"><title>0x0003fb5c Func3fb5c (1092 bytes)</title></rect>
 <rect width="12" height="12" x="540" y="210" class="todo"><title>0x0003ffa0 ins_roomGT4 (1829 bytes)</title></rect>
@@ -882,10 +882,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">85.61%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">14.39%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">85.86%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">14.14%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="639.53" height="6" x="0" y="0" class="named"/>
-<rect width="107.47" height="6" x="639.53" y="0" class="todo"/>
+<rect width="641.41" height="6" x="0" y="0" class="named"/>
+<rect width="105.59" height="6" x="641.41" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.96" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -992,7 +992,7 @@
 <rect width="19.56" height="19.01" x="393.39" y="22.91" class="named"><title>0x0002769c LaraHangTest (563 bytes)</title></rect>
 <rect width="19.56" height="18.86" x="393.39" y="44.93" class="named"><title>0x0003f090 S_DrawSpriteAbs (559 bytes)</title></rect>
 <rect width="19.56" height="18.82" x="393.39" y="66.79" class="named"><title>0x0001d02c InterpolateMatrix (558 bytes)</title></rect>
-<rect width="19.56" height="18.55" x="393.39" y="88.61" class="todo"><title>0x0003f6e4 draw_scaled_spriteC (551 bytes)</title></rect>
+<rect width="19.56" height="18.55" x="393.39" y="88.61" class="named"><title>0x0003f6e4 draw_scaled_spriteC (551 bytes)</title></rect>
 <rect width="19.56" height="18.47" x="393.39" y="110.15" class="named"><title>0x000118f0 SearchLOT (549 bytes)</title></rect>
 <rect width="19.56" height="18.39" x="393.39" y="131.62" class="named"><title>0x0002ec7c MovableBlockCollision (547 bytes)</title></rect>
 <rect width="19.56" height="18.23" x="393.39" y="153.01" class="named"><title>0x00034634 KeyHoleCollision (543 bytes)</title></rect>
