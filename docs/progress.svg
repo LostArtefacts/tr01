@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">81.01% (657)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">18.99% (154)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">81.13% (658)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">18.87% (153)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="605.15" height="6" x="0" y="0" class="named"/>
-<rect width="141.85" height="6" x="605.15" y="0" class="todo"/>
+<rect width="606.07" height="6" x="0" y="0" class="named"/>
+<rect width="140.93" height="6" x="606.07" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -725,7 +725,7 @@
 <rect width="12" height="12" x="75" y="195" class="named"><title>0x0003a468 TrapDoorCeiling (55 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="195" class="named"><title>0x0003a4a0 OnTrapDoor (165 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="195" class="named"><title>0x0003a548 Pendulum (336 bytes)</title></rect>
-<rect width="12" height="12" x="120" y="195" class="todo"><title>0x0003a698 FallingBlock (285 bytes)</title></rect>
+<rect width="12" height="12" x="120" y="195" class="named"><title>0x0003a698 FallingBlock (285 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="195" class="todo"><title>0x0003a7b8 FallingBlockFloor (48 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="195" class="todo"><title>0x0003a7e8 FallingBlockCeiling (48 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="195" class="todo"><title>0x0003a818 TeethTrap (176 bytes)</title></rect>
@@ -882,10 +882,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">76.46%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">23.54%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">76.59%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">23.41%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="571.17" height="6" x="0" y="0" class="named"/>
-<rect width="175.83" height="6" x="571.17" y="0" class="todo"/>
+<rect width="572.14" height="6" x="0" y="0" class="named"/>
+<rect width="174.86" height="6" x="572.14" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.96" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1101,7 +1101,7 @@
 <rect width="12.91" height="13.19" x="513.94" y="100.51" class="named"><title>0x0002dadc mn_get_sound_params (292 bytes)</title></rect>
 <rect width="12.91" height="13.19" x="513.94" y="116.70" class="todo"><title>0x0003b2d8 ControlLavaBlob (292 bytes)</title></rect>
 <rect width="12.91" height="13.08" x="513.94" y="132.90" class="named"><title>0x0001f928 S_DrawScreenBox (290 bytes)</title></rect>
-<rect width="12.91" height="12.80" x="513.94" y="148.98" class="todo"><title>0x0003a698 FallingBlock (285 bytes)</title></rect>
+<rect width="12.91" height="12.80" x="513.94" y="148.98" class="named"><title>0x0003a698 FallingBlock (285 bytes)</title></rect>
 <rect width="12.91" height="12.75" x="513.94" y="164.78" class="named"><title>0x0002d000 CreateZone (284 bytes)</title></rect>
 <rect width="12.91" height="12.58" x="513.94" y="180.53" class="named"><title>0x00039584 T_Print (281 bytes)</title></rect>
 <rect width="12.91" height="12.53" x="513.94" y="196.11" class="named"><title>0x00029070 LaraInitialiseMeshes (280 bytes)</title></rect>

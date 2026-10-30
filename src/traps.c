@@ -306,3 +306,60 @@ void Pendulum(sint16 item_number)
 
     AnimateItem(item);
 }
+
+void FallingBlock(sint16 item_number)
+{
+    ITEM_INFO *item;
+    FLOOR_INFO *floor;
+    sint16 room_number;
+
+    item = &items[item_number];
+
+    switch (item->current_anim_state)
+    {
+    case TRAP_SET:
+
+        if (lara_item->pos.y_pos == item->pos.y_pos - (STEP_L * 2))
+            item->goal_anim_state = TRAP_ACTIVATE;
+        else
+        {
+            item->status = NOT_ACTIVE;
+            RemoveActiveItem(item_number);
+            return;
+        }
+        break;
+
+    case TRAP_ACTIVATE:
+
+        item->goal_anim_state = TRAP_WORKING;
+        break;
+
+    case TRAP_WORKING:
+
+        if (item->goal_anim_state != TRAP_FINISHED)
+            item->gravity_status = 1;
+        break;
+    }
+
+    AnimateItem(item);
+    if (item->status == DEACTIVATED)
+    {
+        RemoveActiveItem(item_number);
+        return;
+    }
+
+    room_number = item->room_number;
+    floor = GetFloor(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, &room_number);
+    if (item->room_number != room_number)
+        ItemNewRoom(item_number, room_number);
+
+    item->floor = GetHeight(floor, item->pos.x_pos, item->pos.y_pos, item->pos.z_pos);
+
+    if (item->current_anim_state == TRAP_WORKING && item->pos.y_pos >= item->floor)
+    {
+        item->goal_anim_state = TRAP_FINISHED;
+        item->pos.y_pos = item->floor;
+        item->fallspeed = 0;
+        item->gravity_status = 0;
+    }
+}
