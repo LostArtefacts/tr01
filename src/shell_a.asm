@@ -312,4 +312,16 @@ VesaBiosGetInfo_ proc near
     ret
 VesaBiosGetInfo_ endp
 
+    public VesaBiosGetModeInfo_
+VesaBiosGetModeInfo_ proc near
+    push    esi
+    mov     ax,4f01h
+    call    VesaBiosCall_
+    mov     ecx,10h
+    mov     esi,dword ptr _dos_buffer
+    rep movsd
+    pop     esi
+    ret
+VesaBiosGetModeInfo_ endp
+
     end
