@@ -2074,6 +2074,7 @@ address,size,name,symbol
 0x000c5f78,576,video_modes,_video_modes
 0x000c61b8,256,vesa_info,_vesa_info
 0x000c62c0,256,vesa_mode_info,_vesa_mode_info
+0x000c63b8,256,real_blocks,_real_blocks
 0x000c64b8,114,interrupts,_interrupts
 0x000c652c,2,bank_cnt,_bank_cnt
 0x000c652e,4,video_depth,_video_depth

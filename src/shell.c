@@ -1,4 +1,5 @@
 #include <errno.h>
+#include <i86.h>
 #include <stdarg.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -43,6 +44,13 @@ typedef struct
     int aspect;
     int available;
 } VIDEOMODE;
+
+typedef struct
+{
+    uint16 selector;
+    uint16 segment;
+    uint32 size;
+} REALBLOCK;
 
 extern void (*int_func)(void);
 extern SETUP *gamedata;
@@ -109,6 +117,7 @@ extern int joy_y;
 extern int joy_z;
 extern int joy_hat;
 extern int joy_throttle;
+extern REALBLOCK real_blocks[32];
 
 void FadeTick(void);
 uint8 VgaGetMode(void);
@@ -144,7 +153,6 @@ void VgaSetMode(uint8 mode);
 void VgaSetRows(uint8 rows);
 void TimeRestore(void);
 void ShellExitRealMemErr(void);
-#pragma aux ShellExitRealMemErr aborts;
 void ShellExitErrno(char *szFormat, ...);
 #pragma aux ShellExitErrno aborts;
 void ShellExitMemErr(void);
@@ -588,4 +596,27 @@ void JoyRead(void)
                 joy_hat = 4;
         }
     }
+}
+
+void *MemAllocReal(uint32 size)
+{
+    union REGS regs;
+    int i;
+
+    regs.x.eax = 0x100;
+    regs.x.ebx = (size + 15) >> 4;
+    int386(0x31, &regs, &regs);
+    if (regs.x.cflag)
+        ShellExitRealMemErr();
+    for (i = 0; i < 32; i++)
+    {
+        if (!real_blocks[i].selector)
+            break;
+    }
+    if (i >= 32)
+        ShellExitRealMemErr();
+    real_blocks[i].selector = regs.x.edx;
+    real_blocks[i].segment = regs.x.eax;
+    real_blocks[i].size = size;
+    return (void *)((regs.x.eax & 0xffff) << 4);
 }
