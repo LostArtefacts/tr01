@@ -42,6 +42,34 @@ exit:
     ret
 phd_atan_ endp
 
+    public phd_cos_
+phd_cos_ proc near
+    add     eax,4000h
+phd_cos_ endp
+
+    public phd_sin_
+phd_sin_ proc near
+    and     eax,0ffffh
+    cmp     eax,8000h
+    jl      phd_sin_lt180_
+    sub     eax,8000h
+    call    phd_sin_lt180_
+    neg     eax
+    ret
+phd_sin_ endp
+
+    public phd_sin_lt180_
+phd_sin_lt180_ proc near
+    cmp     eax,4000h
+    jle     le90
+    neg     eax
+    add     eax,8000h
+le90:
+    shr     eax,4
+    mov     ax,_phdsintab[eax*2]
+    ret
+phd_sin_lt180_ endp
+
     .data
 
     public _phdtan2
@@ -307,5 +335,137 @@ _phdtantab label word
     dw 01fd7h, 01fdah, 01fdch, 01fdfh, 01fe1h, 01fe4h, 01fe6h, 01fe9h
     dw 01fech, 01feeh, 01ff1h, 01ff3h, 01ff6h, 01ff8h, 01ffbh, 01ffdh
     dw 02000h, 02000h
+
+    public _phdsintab
+_phdsintab label word
+    dw 00000h, 00019h, 00032h, 0004bh, 00065h, 0007eh, 00097h, 000b0h
+    dw 000c9h, 000e2h, 000fbh, 00114h, 0012eh, 00147h, 00160h, 00179h
+    dw 00192h, 001abh, 001c4h, 001ddh, 001f7h, 00210h, 00229h, 00242h
+    dw 0025bh, 00274h, 0028dh, 002a6h, 002c0h, 002d9h, 002f2h, 0030bh
+    dw 00324h, 0033dh, 00356h, 0036fh, 00388h, 003a1h, 003bbh, 003d4h
+    dw 003edh, 00406h, 0041fh, 00438h, 00451h, 0046ah, 00483h, 0049ch
+    dw 004b5h, 004ceh, 004e7h, 00500h, 0051ah, 00533h, 0054ch, 00565h
+    dw 0057eh, 00597h, 005b0h, 005c9h, 005e2h, 005fbh, 00614h, 0062dh
+    dw 00646h, 0065fh, 00678h, 00691h, 006aah, 006c3h, 006dch, 006f5h
+    dw 0070eh, 00727h, 00740h, 00759h, 00772h, 0078bh, 007a4h, 007bdh
+    dw 007d6h, 007efh, 00807h, 00820h, 00839h, 00852h, 0086bh, 00884h
+    dw 0089dh, 008b6h, 008cfh, 008e8h, 00901h, 00919h, 00932h, 0094bh
+    dw 00964h, 0097dh, 00996h, 009afh, 009c7h, 009e0h, 009f9h, 00a12h
+    dw 00a2bh, 00a44h, 00a5ch, 00a75h, 00a8eh, 00aa7h, 00ac0h, 00ad8h
+    dw 00af1h, 00b0ah, 00b23h, 00b3bh, 00b54h, 00b6dh, 00b85h, 00b9eh
+    dw 00bb7h, 00bd0h, 00be8h, 00c01h, 00c1ah, 00c32h, 00c4bh, 00c64h
+    dw 00c7ch, 00c95h, 00caeh, 00cc6h, 00cdfh, 00cf8h, 00d10h, 00d29h
+    dw 00d41h, 00d5ah, 00d72h, 00d8bh, 00da4h, 00dbch, 00dd5h, 00dedh
+    dw 00e06h, 00e1eh, 00e37h, 00e4fh, 00e68h, 00e80h, 00e99h, 00eb1h
+    dw 00ecah, 00ee2h, 00efbh, 00f13h, 00f2bh, 00f44h, 00f5ch, 00f75h
+    dw 00f8dh, 00fa5h, 00fbeh, 00fd6h, 00feeh, 01007h, 0101fh, 01037h
+    dw 01050h, 01068h, 01080h, 01099h, 010b1h, 010c9h, 010e1h, 010fah
+    dw 01112h, 0112ah, 01142h, 0115ah, 01173h, 0118bh, 011a3h, 011bbh
+    dw 011d3h, 011ebh, 01204h, 0121ch, 01234h, 0124ch, 01264h, 0127ch
+    dw 01294h, 012ach, 012c4h, 012dch, 012f4h, 0130ch, 01324h, 0133ch
+    dw 01354h, 0136ch, 01384h, 0139ch, 013b4h, 013cch, 013e4h, 013fbh
+    dw 01413h, 0142bh, 01443h, 0145bh, 01473h, 0148bh, 014a2h, 014bah
+    dw 014d2h, 014eah, 01501h, 01519h, 01531h, 01549h, 01560h, 01578h
+    dw 01590h, 015a7h, 015bfh, 015d7h, 015eeh, 01606h, 0161dh, 01635h
+    dw 0164ch, 01664h, 0167ch, 01693h, 016abh, 016c2h, 016dah, 016f1h
+    dw 01709h, 01720h, 01737h, 0174fh, 01766h, 0177eh, 01795h, 017ach
+    dw 017c4h, 017dbh, 017f2h, 0180ah, 01821h, 01838h, 0184fh, 01867h
+    dw 0187eh, 01895h, 018ach, 018c3h, 018dbh, 018f2h, 01909h, 01920h
+    dw 01937h, 0194eh, 01965h, 0197ch, 01993h, 019aah, 019c1h, 019d8h
+    dw 019efh, 01a06h, 01a1dh, 01a34h, 01a4bh, 01a62h, 01a79h, 01a90h
+    dw 01aa7h, 01abeh, 01ad4h, 01aebh, 01b02h, 01b19h, 01b30h, 01b46h
+    dw 01b5dh, 01b74h, 01b8ah, 01ba1h, 01bb8h, 01bceh, 01be5h, 01bfch
+    dw 01c12h, 01c29h, 01c3fh, 01c56h, 01c6ch, 01c83h, 01c99h, 01cb0h
+    dw 01cc6h, 01cddh, 01cf3h, 01d0ah, 01d20h, 01d36h, 01d4dh, 01d63h
+    dw 01d79h, 01d90h, 01da6h, 01dbch, 01dd3h, 01de9h, 01dffh, 01e15h
+    dw 01e2bh, 01e42h, 01e58h, 01e6eh, 01e84h, 01e9ah, 01eb0h, 01ec6h
+    dw 01edch, 01ef2h, 01f08h, 01f1eh, 01f34h, 01f4ah, 01f60h, 01f76h
+    dw 01f8ch, 01fa2h, 01fb7h, 01fcdh, 01fe3h, 01ff9h, 0200fh, 02024h
+    dw 0203ah, 02050h, 02065h, 0207bh, 02091h, 020a6h, 020bch, 020d1h
+    dw 020e7h, 020fdh, 02112h, 02128h, 0213dh, 02153h, 02168h, 0217dh
+    dw 02193h, 021a8h, 021beh, 021d3h, 021e8h, 021feh, 02213h, 02228h
+    dw 0223dh, 02253h, 02268h, 0227dh, 02292h, 022a7h, 022bch, 022d2h
+    dw 022e7h, 022fch, 02311h, 02326h, 0233bh, 02350h, 02365h, 0237ah
+    dw 0238eh, 023a3h, 023b8h, 023cdh, 023e2h, 023f7h, 0240bh, 02420h
+    dw 02435h, 0244ah, 0245eh, 02473h, 02488h, 0249ch, 024b1h, 024c5h
+    dw 024dah, 024efh, 02503h, 02518h, 0252ch, 02541h, 02555h, 02569h
+    dw 0257eh, 02592h, 025a6h, 025bbh, 025cfh, 025e3h, 025f8h, 0260ch
+    dw 02620h, 02634h, 02648h, 0265ch, 02671h, 02685h, 02699h, 026adh
+    dw 026c1h, 026d5h, 026e9h, 026fdh, 02711h, 02724h, 02738h, 0274ch
+    dw 02760h, 02774h, 02788h, 0279bh, 027afh, 027c3h, 027d6h, 027eah
+    dw 027feh, 02811h, 02825h, 02838h, 0284ch, 02860h, 02873h, 02886h
+    dw 0289ah, 028adh, 028c1h, 028d4h, 028e7h, 028fbh, 0290eh, 02921h
+    dw 02935h, 02948h, 0295bh, 0296eh, 02981h, 02994h, 029a7h, 029bbh
+    dw 029ceh, 029e1h, 029f4h, 02a07h, 02a1ah, 02a2ch, 02a3fh, 02a52h
+    dw 02a65h, 02a78h, 02a8bh, 02a9dh, 02ab0h, 02ac3h, 02ad6h, 02ae8h
+    dw 02afbh, 02b0dh, 02b20h, 02b33h, 02b45h, 02b58h, 02b6ah, 02b7dh
+    dw 02b8fh, 02ba1h, 02bb4h, 02bc6h, 02bd8h, 02bebh, 02bfdh, 02c0fh
+    dw 02c21h, 02c34h, 02c46h, 02c58h, 02c6ah, 02c7ch, 02c8eh, 02ca0h
+    dw 02cb2h, 02cc4h, 02cd6h, 02ce8h, 02cfah, 02d0ch, 02d1eh, 02d2fh
+    dw 02d41h, 02d53h, 02d65h, 02d76h, 02d88h, 02d9ah, 02dabh, 02dbdh
+    dw 02dcfh, 02de0h, 02df2h, 02e03h, 02e15h, 02e26h, 02e37h, 02e49h
+    dw 02e5ah, 02e6bh, 02e7dh, 02e8eh, 02e9fh, 02eb0h, 02ec2h, 02ed3h
+    dw 02ee4h, 02ef5h, 02f06h, 02f17h, 02f28h, 02f39h, 02f4ah, 02f5bh
+    dw 02f6ch, 02f7dh, 02f8dh, 02f9eh, 02fafh, 02fc0h, 02fd0h, 02fe1h
+    dw 02ff2h, 03002h, 03013h, 03024h, 03034h, 03045h, 03055h, 03066h
+    dw 03076h, 03087h, 03097h, 030a7h, 030b8h, 030c8h, 030d8h, 030e8h
+    dw 030f9h, 03109h, 03119h, 03129h, 03139h, 03149h, 03159h, 03169h
+    dw 03179h, 03189h, 03199h, 031a9h, 031b9h, 031c8h, 031d8h, 031e8h
+    dw 031f8h, 03207h, 03217h, 03227h, 03236h, 03246h, 03255h, 03265h
+    dw 03274h, 03284h, 03293h, 032a3h, 032b2h, 032c1h, 032d0h, 032e0h
+    dw 032efh, 032feh, 0330dh, 0331dh, 0332ch, 0333bh, 0334ah, 03359h
+    dw 03368h, 03377h, 03386h, 03395h, 033a3h, 033b2h, 033c1h, 033d0h
+    dw 033dfh, 033edh, 033fch, 0340bh, 03419h, 03428h, 03436h, 03445h
+    dw 03453h, 03462h, 03470h, 0347fh, 0348dh, 0349bh, 034aah, 034b8h
+    dw 034c6h, 034d4h, 034e2h, 034f1h, 034ffh, 0350dh, 0351bh, 03529h
+    dw 03537h, 03545h, 03553h, 03561h, 0356eh, 0357ch, 0358ah, 03598h
+    dw 035a5h, 035b3h, 035c1h, 035ceh, 035dch, 035eah, 035f7h, 03605h
+    dw 03612h, 03620h, 0362dh, 0363ah, 03648h, 03655h, 03662h, 0366fh
+    dw 0367dh, 0368ah, 03697h, 036a4h, 036b1h, 036beh, 036cbh, 036d8h
+    dw 036e5h, 036f2h, 036ffh, 0370ch, 03718h, 03725h, 03732h, 0373fh
+    dw 0374bh, 03758h, 03765h, 03771h, 0377eh, 0378ah, 03797h, 037a3h
+    dw 037b0h, 037bch, 037c8h, 037d5h, 037e1h, 037edh, 037f9h, 03805h
+    dw 03812h, 0381eh, 0382ah, 03836h, 03842h, 0384eh, 0385ah, 03866h
+    dw 03871h, 0387dh, 03889h, 03895h, 038a1h, 038ach, 038b8h, 038c3h
+    dw 038cfh, 038dbh, 038e6h, 038f2h, 038fdh, 03909h, 03914h, 0391fh
+    dw 0392bh, 03936h, 03941h, 0394ch, 03958h, 03963h, 0396eh, 03979h
+    dw 03984h, 0398fh, 0399ah, 039a5h, 039b0h, 039bbh, 039c5h, 039d0h
+    dw 039dbh, 039e6h, 039f0h, 039fbh, 03a06h, 03a10h, 03a1bh, 03a25h
+    dw 03a30h, 03a3ah, 03a45h, 03a4fh, 03a59h, 03a64h, 03a6eh, 03a78h
+    dw 03a82h, 03a8dh, 03a97h, 03aa1h, 03aabh, 03ab5h, 03abfh, 03ac9h
+    dw 03ad3h, 03addh, 03ae6h, 03af0h, 03afah, 03b04h, 03b0eh, 03b17h
+    dw 03b21h, 03b2ah, 03b34h, 03b3eh, 03b47h, 03b50h, 03b5ah, 03b63h
+    dw 03b6dh, 03b76h, 03b7fh, 03b88h, 03b92h, 03b9bh, 03ba4h, 03badh
+    dw 03bb6h, 03bbfh, 03bc8h, 03bd1h, 03bdah, 03be3h, 03bech, 03bf5h
+    dw 03bfdh, 03c06h, 03c0fh, 03c17h, 03c20h, 03c29h, 03c31h, 03c3ah
+    dw 03c42h, 03c4bh, 03c53h, 03c5bh, 03c64h, 03c6ch, 03c74h, 03c7dh
+    dw 03c85h, 03c8dh, 03c95h, 03c9dh, 03ca5h, 03cadh, 03cb5h, 03cbdh
+    dw 03cc5h, 03ccdh, 03cd5h, 03cddh, 03ce4h, 03cech, 03cf4h, 03cfbh
+    dw 03d03h, 03d0bh, 03d12h, 03d1ah, 03d21h, 03d28h, 03d30h, 03d37h
+    dw 03d3fh, 03d46h, 03d4dh, 03d54h, 03d5bh, 03d63h, 03d6ah, 03d71h
+    dw 03d78h, 03d7fh, 03d86h, 03d8dh, 03d93h, 03d9ah, 03da1h, 03da8h
+    dw 03dafh, 03db5h, 03dbch, 03dc2h, 03dc9h, 03dd0h, 03dd6h, 03dddh
+    dw 03de3h, 03de9h, 03df0h, 03df6h, 03dfch, 03e03h, 03e09h, 03e0fh
+    dw 03e15h, 03e1bh, 03e21h, 03e27h, 03e2dh, 03e33h, 03e39h, 03e3fh
+    dw 03e45h, 03e4ah, 03e50h, 03e56h, 03e5ch, 03e61h, 03e67h, 03e6ch
+    dw 03e72h, 03e77h, 03e7dh, 03e82h, 03e88h, 03e8dh, 03e92h, 03e98h
+    dw 03e9dh, 03ea2h, 03ea7h, 03each, 03eb1h, 03eb6h, 03ebbh, 03ec0h
+    dw 03ec5h, 03ecah, 03ecfh, 03ed4h, 03ed8h, 03eddh, 03ee2h, 03ee7h
+    dw 03eebh, 03ef0h, 03ef4h, 03ef9h, 03efdh, 03f02h, 03f06h, 03f0ah
+    dw 03f0fh, 03f13h, 03f17h, 03f1ch, 03f20h, 03f24h, 03f28h, 03f2ch
+    dw 03f30h, 03f34h, 03f38h, 03f3ch, 03f40h, 03f43h, 03f47h, 03f4bh
+    dw 03f4fh, 03f52h, 03f56h, 03f5ah, 03f5dh, 03f61h, 03f64h, 03f68h
+    dw 03f6bh, 03f6eh, 03f72h, 03f75h, 03f78h, 03f7bh, 03f7fh, 03f82h
+    dw 03f85h, 03f88h, 03f8bh, 03f8eh, 03f91h, 03f94h, 03f97h, 03f99h
+    dw 03f9ch, 03f9fh, 03fa2h, 03fa4h, 03fa7h, 03faah, 03fach, 03fafh
+    dw 03fb1h, 03fb4h, 03fb6h, 03fb8h, 03fbbh, 03fbdh, 03fbfh, 03fc1h
+    dw 03fc4h, 03fc6h, 03fc8h, 03fcah, 03fcch, 03fceh, 03fd0h, 03fd2h
+    dw 03fd4h, 03fd5h, 03fd7h, 03fd9h, 03fdbh, 03fdch, 03fdeh, 03fe0h
+    dw 03fe1h, 03fe3h, 03fe4h, 03fe6h, 03fe7h, 03fe8h, 03feah, 03febh
+    dw 03fech, 03fedh, 03fefh, 03ff0h, 03ff1h, 03ff2h, 03ff3h, 03ff4h
+    dw 03ff5h, 03ff6h, 03ff7h, 03ff7h, 03ff8h, 03ff9h, 03ffah, 03ffah
+    dw 03ffbh, 03ffch, 03ffch, 03ffdh, 03ffdh, 03ffeh, 03ffeh, 03ffeh
+    dw 03fffh, 03fffh, 03fffh, 04000h, 04000h, 04000h, 04000h, 04000h
+    dw 04000h, 04000h
 
     end

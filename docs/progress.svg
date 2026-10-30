@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">95.69% (778)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">4.31% (35)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">96.06% (781)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">3.94% (32)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="714.84" height="6" x="0" y="0" class="named"/>
-<rect width="32.16" height="6" x="714.84" y="0" class="todo"/>
+<rect width="717.60" height="6" x="0" y="0" class="named"/>
+<rect width="29.40" height="6" x="717.60" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -792,9 +792,9 @@
 <rect width="12" height="12" x="330" y="210" class="named"><title>0x0003eeac phd_InitWindow (223 bytes)</title></rect>
 <rect width="12" height="12" x="345" y="210" class="named"><title>0x0003ef8c AlterFOV (73 bytes)</title></rect>
 <rect width="12" height="12" x="360" y="210" class="named"><title>0x0003efe0 phd_atan (70 bytes)</title></rect>
-<rect width="12" height="12" x="375" y="210" class="todo"><title>0x0003f026 phd_cos (5 bytes)</title></rect>
-<rect width="12" height="12" x="390" y="210" class="todo"><title>0x0003f02b phd_sin (25 bytes)</title></rect>
-<rect width="12" height="12" x="405" y="210" class="todo"><title>0x0003f044 Func3f044 (26 bytes)</title></rect>
+<rect width="12" height="12" x="375" y="210" class="named"><title>0x0003f026 phd_cos (5 bytes)</title></rect>
+<rect width="12" height="12" x="390" y="210" class="named"><title>0x0003f02b phd_sin (25 bytes)</title></rect>
+<rect width="12" height="12" x="405" y="210" class="named"><title>0x0003f044 phd_sin_lt180 (26 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="210" class="todo"><title>0x0003f05e phd_sqrt (46 bytes)</title></rect>
 <rect width="12" height="12" x="435" y="210" class="named"><title>0x0003f090 S_DrawSpriteAbs (559 bytes)</title></rect>
 <rect width="12" height="12" x="450" y="210" class="named"><title>0x0003f2c0 S_DrawSpriteRel (460 bytes)</title></rect>
@@ -884,10 +884,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">97.70%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">2.30%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">97.73%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">2.27%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="729.85" height="6" x="0" y="0" class="named"/>
-<rect width="17.15" height="6" x="729.85" y="0" class="todo"/>
+<rect width="730.04" height="6" x="0" y="0" class="named"/>
+<rect width="16.96" height="6" x="730.04" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.96" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1602,11 +1602,11 @@
 <rect width="1.85" height="1.91" x="726.64" y="224.93" class="todo"><title>0x00046974 VesaBiosGetInfo (27 bytes)</title></rect>
 <rect width="1.67" height="1.91" x="731.49" y="224.93" class="named"><title>0x00034d08 InitialiseSavegameItem (26 bytes)</title></rect>
 <rect width="1.67" height="1.91" x="736.17" y="224.93" class="named"><title>0x000398ec T_GetStringLen (26 bytes)</title></rect>
-<rect width="1.67" height="1.91" x="740.84" y="224.93" class="todo"><title>0x0003f044 Func3f044 (26 bytes)</title></rect>
+<rect width="1.67" height="1.91" x="740.84" y="224.93" class="named"><title>0x0003f044 phd_sin_lt180 (26 bytes)</title></rect>
 <rect width="1.49" height="1.91" x="745.51" y="224.93" class="named"><title>0x00026d0c lara_col_leftjump (25 bytes)</title></rect>
 <rect width="1.64" height="1.76" x="716.94" y="229.85" class="named"><title>0x0002a154 lara_col_surfleft (25 bytes)</title></rect>
 <rect width="1.64" height="1.76" x="716.94" y="234.60" class="named"><title>0x00039708 T_FlashText (25 bytes)</title></rect>
-<rect width="1.64" height="1.76" x="716.94" y="239.36" class="todo"><title>0x0003f02b phd_sin (25 bytes)</title></rect>
+<rect width="1.64" height="1.76" x="716.94" y="239.36" class="named"><title>0x0003f02b phd_sin (25 bytes)</title></rect>
 <rect width="1.64" height="1.76" x="716.94" y="244.11" class="todo"><title>0x0004698f VesaBiosGetModeInfo (25 bytes)</title></rect>
 <rect width="1.64" height="1.57" x="716.94" y="248.87" class="named"><title>0x0002dd48 mn_start_sound_fade (24 bytes)</title></rect>
 <rect width="1.64" height="1.57" x="716.94" y="253.43" class="named"><title>0x00036414 ResetSG (24 bytes)</title></rect>
@@ -1675,7 +1675,7 @@
 <rect width="0.10" height="0.10" x="746.25" y="250.62" class="named"><title>0x000396e8 T_SetOutlFlags (5 bytes)</title></rect>
 <rect width="0.10" height="0.10" x="748.13" y="250.62" class="named"><title>0x00039760 T_RemoveBackground (5 bytes)</title></rect>
 <rect width="0.10" height="0.10" x="744.38" y="252.98" class="named"><title>0x00039784 T_RemoveOutline (5 bytes)</title></rect>
-<rect width="0.10" height="0.10" x="744.38" y="255.49" class="todo"><title>0x0003f026 phd_cos (5 bytes)</title></rect>
+<rect width="0.10" height="0.10" x="744.38" y="255.49" class="named"><title>0x0003f026 phd_cos (5 bytes)</title></rect>
 <rect width="0.10" height="0.10" x="746.14" y="252.98" class="named"><title>0x0004599c ShellExitRealMemErr (5 bytes)</title></rect>
 <rect width="0.10" height="0.10" x="748.55" y="252.98" class="named"><title>0x0001f5a4 disk_error_handler (3 bytes)</title></rect>
 <rect width="0.10" height="0.10" x="746.14" y="254.80" class="named"><title>0x000396dc T_SetFlags (3 bytes)</title></rect>
