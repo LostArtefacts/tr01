@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">91.37% (741)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">8.63% (70)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">91.49% (742)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">8.51% (69)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="682.52" height="6" x="0" y="0" class="named"/>
-<rect width="64.48" height="6" x="682.52" y="0" class="todo"/>
+<rect width="683.45" height="6" x="0" y="0" class="named"/>
+<rect width="63.55" height="6" x="683.45" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -814,20 +814,20 @@
 <rect width="12" height="12" x="660" y="210" class="named"><title>0x00042448 ins_objectG3 (525 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="210" class="named"><title>0x00042658 XYClipper (695 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="210" class="named"><title>0x00042910 ins_poly_trans8 (1436 bytes)</title></rect>
-<rect width="12" height="12" x="705" y="210" class="todo"><title>0x00042eb0 draw_poly_flat (39 bytes)</title></rect>
+<rect width="12" height="12" x="705" y="210" class="named"><title>0x00042eb0 draw_poly_flat (39 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="210" class="todo"><title>0x00042ed8 draw_poly_trans (38 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="210" class="todo"><title>0x00042f00 draw_poly_gouraud (38 bytes)</title></rect>
 <rect width="12" height="12" x="0" y="225" class="todo"><title>0x00042f28 draw_poly_gtmap (45 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="225" class="todo"><title>0x00042f58 draw_poly_wgtmap (45 bytes)</title></rect>
 <rect width="12" height="12" x="30" y="225" class="todo"><title>0x00042f88 draw_poly_gtmap_persp (45 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="225" class="todo"><title>0x00042fb8 draw_poly_wgtmap_persp (45 bytes)</title></rect>
-<rect width="12" height="12" x="60" y="225" class="todo"><title>0x00042fe8 Func42fe8 (273 bytes)</title></rect>
+<rect width="12" height="12" x="60" y="225" class="todo"><title>0x00042fe8 xgen_x (273 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="225" class="todo"><title>0x000430fc Func430fc (448 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="225" class="todo"><title>0x000432bc Func432bc (684 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="225" class="todo"><title>0x00043568 Func43568 (788 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="225" class="todo"><title>0x0004387c Func4387c (1895 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="225" class="todo"><title>0x00043fe4 Func43fe4 (1820 bytes)</title></rect>
-<rect width="12" height="12" x="150" y="225" class="todo"><title>0x00044700 Func44700 (97 bytes)</title></rect>
+<rect width="12" height="12" x="150" y="225" class="todo"><title>0x00044700 flatA (97 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="225" class="todo"><title>0x00044761 Func44761 (308 bytes)</title></rect>
 <rect width="12" height="12" x="180" y="225" class="todo"><title>0x00044895 Func44895 (384 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="225" class="todo"><title>0x00044a15 Func44a15 (765 bytes)</title></rect>
@@ -882,10 +882,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">92.11%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">7.89%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">92.13%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">7.87%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="688.08" height="6" x="0" y="0" class="named"/>
-<rect width="58.92" height="6" x="688.08" y="0" class="todo"/>
+<rect width="688.22" height="6" x="0" y="0" class="named"/>
+<rect width="58.78" height="6" x="688.22" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.96" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1111,7 +1111,7 @@
 <rect width="13.20" height="12.03" x="529.85" y="34.58" class="named"><title>0x0001d25c InterpolateArmMatrix (276 bytes)</title></rect>
 <rect width="13.02" height="12.03" x="546.05" y="34.58" class="named"><title>0x0002d1a0 mn_reset_sound_effects (273 bytes)</title></rect>
 <rect width="13.02" height="12.03" x="562.07" y="34.58" class="named"><title>0x0003ca00 PodControl (273 bytes)</title></rect>
-<rect width="13.02" height="12.03" x="578.09" y="34.58" class="todo"><title>0x00042fe8 Func42fe8 (273 bytes)</title></rect>
+<rect width="13.02" height="12.03" x="578.09" y="34.58" class="todo"><title>0x00042fe8 xgen_x (273 bytes)</title></rect>
 <rect width="12.96" height="12.03" x="594.11" y="34.58" class="named"><title>0x00034434 SwitchCollision (272 bytes)</title></rect>
 <rect width="12.85" height="12.03" x="610.08" y="34.58" class="named"><title>0x0001ab1c DrawEffect (270 bytes)</title></rect>
 <rect width="12.85" height="12.03" x="625.93" y="34.58" class="named"><title>0x000298d4 lara_col_tread (270 bytes)</title></rect>
@@ -1353,7 +1353,7 @@
 <rect width="6.04" height="6.47" x="626.67" y="229.59" class="named"><title>0x00018c20 RemoveRoomFlipItems (97 bytes)</title></rect>
 <rect width="6.04" height="6.47" x="626.67" y="239.06" class="named"><title>0x00018c84 AddRoomFlipItems (97 bytes)</title></rect>
 <rect width="6.04" height="6.47" x="626.67" y="248.53" class="named"><title>0x0003d4a0 Insert2DLine (97 bytes)</title></rect>
-<rect width="5.99" height="6.52" x="635.71" y="142.91" class="todo"><title>0x00044700 Func44700 (97 bytes)</title></rect>
+<rect width="5.99" height="6.52" x="635.71" y="142.91" class="todo"><title>0x00044700 flatA (97 bytes)</title></rect>
 <rect width="5.90" height="6.52" x="644.70" y="142.91" class="named"><title>0x0001f544 TestCdDrive (96 bytes)</title></rect>
 <rect width="5.90" height="6.52" x="653.60" y="142.91" class="named"><title>0x0001ff1c GameLoop (96 bytes)</title></rect>
 <rect width="5.90" height="6.52" x="662.49" y="142.91" class="named"><title>0x00024224 Inv_RingGetView (96 bytes)</title></rect>
@@ -1541,7 +1541,7 @@
 <rect width="2.91" height="2.82" x="738.18" y="203.24" class="named"><title>0x0002d11c InitialiseLOT (39 bytes)</title></rect>
 <rect width="2.91" height="2.82" x="744.09" y="203.24" class="named"><title>0x0002fef0 DrawBridgeCollision (39 bytes)</title></rect>
 <rect width="2.53" height="3.22" x="695.30" y="209.07" class="named"><title>0x0003647c ReadSG (39 bytes)</title></rect>
-<rect width="2.53" height="3.22" x="695.30" y="215.28" class="todo"><title>0x00042eb0 draw_poly_flat (39 bytes)</title></rect>
+<rect width="2.53" height="3.22" x="695.30" y="215.28" class="named"><title>0x00042eb0 draw_poly_flat (39 bytes)</title></rect>
 <rect width="2.53" height="3.22" x="695.30" y="221.50" class="todo"><title>0x00045f00 KeyClearBuffer (39 bytes)</title></rect>
 <rect width="2.53" height="3.06" x="695.30" y="227.71" class="named"><title>0x00020980 DrawGameInfo (38 bytes)</title></rect>
 <rect width="2.53" height="3.06" x="695.30" y="233.77" class="named"><title>0x00025cdc lara_as_special (38 bytes)</title></rect>

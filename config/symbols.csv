@@ -753,13 +753,13 @@ address,size,name,symbol
 0x00042f58,45,draw_poly_wgtmap,draw_poly_wgtmap_
 0x00042f88,45,draw_poly_gtmap_persp,draw_poly_gtmap_persp_
 0x00042fb8,45,draw_poly_wgtmap_persp,draw_poly_wgtmap_persp_
-0x00042fe8,273,Func42fe8,
+0x00042fe8,273,xgen_x,xgen_x_
 0x000430fc,448,Func430fc,
 0x000432bc,684,Func432bc,
 0x00043568,788,Func43568,
 0x0004387c,1895,Func4387c,
 0x00043fe4,1820,Func43fe4,
-0x00044700,97,Func44700,
+0x00044700,97,flatA,flatA_
 0x00044761,308,Func44761,
 0x00044895,384,Func44895,
 0x00044a15,765,Func44a15,
@@ -2179,6 +2179,8 @@ address,size,name,symbol
 0x0012f42c,2,phd_ls_yaw,_phd_ls_yaw
 0x0012f42e,2,phd_ls_pitch,_phd_ls_pitch
 0x0012f430,480,v_buffer,_v_buffer
+0x0012f610,4,xgen_ymin,_xgen_ymin
+0x0012f614,4,xgen_ymax,_xgen_ymax
 0x0012f63c,4,old_clock_ticks,_old_clock_ticks
 0x0012f644,4,clock_ticks,_clock_ticks
 0x0012f658,4,keydata,_keydata
