@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">82.49% (669)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">17.51% (142)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">82.61% (670)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">17.39% (141)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="616.21" height="6" x="0" y="0" class="named"/>
-<rect width="130.79" height="6" x="616.21" y="0" class="todo"/>
+<rect width="617.13" height="6" x="0" y="0" class="named"/>
+<rect width="129.87" height="6" x="617.13" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -737,7 +737,7 @@
 <rect width="12" height="12" x="255" y="195" class="named"><title>0x0003ad90 DartsControl (305 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="195" class="named"><title>0x0003aec4 DartEffectControl (99 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="195" class="named"><title>0x0003af28 FlameEmitterControl (167 bytes)</title></rect>
-<rect width="12" height="12" x="300" y="195" class="todo"><title>0x0003afd0 FlameControl (396 bytes)</title></rect>
+<rect width="12" height="12" x="300" y="195" class="named"><title>0x0003afd0 FlameControl (396 bytes)</title></rect>
 <rect width="12" height="12" x="315" y="195" class="todo"><title>0x0003b15c LavaBurn (188 bytes)</title></rect>
 <rect width="12" height="12" x="330" y="195" class="todo"><title>0x0003b218 LavaSpray (191 bytes)</title></rect>
 <rect width="12" height="12" x="345" y="195" class="todo"><title>0x0003b2d8 ControlLavaBlob (292 bytes)</title></rect>
@@ -882,10 +882,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">77.53%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">22.47%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">77.71%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">22.29%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="579.16" height="6" x="0" y="0" class="named"/>
-<rect width="167.84" height="6" x="579.16" y="0" class="todo"/>
+<rect width="580.51" height="6" x="0" y="0" class="named"/>
+<rect width="166.49" height="6" x="580.51" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.96" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1049,7 +1049,7 @@
 <rect width="16.43" height="15.35" x="477.21" y="149.46" class="named"><title>0x000364a4 ConfirmSave (404 bytes)</title></rect>
 <rect width="16.43" height="15.26" x="477.21" y="167.81" class="named"><title>0x00014060 ShiftClamp (402 bytes)</title></rect>
 <rect width="16.43" height="15.21" x="477.21" y="186.06" class="named"><title>0x000104a8 S_CalculateLight (401 bytes)</title></rect>
-<rect width="16.43" height="14.98" x="477.21" y="204.27" class="todo"><title>0x0003afd0 FlameControl (396 bytes)</title></rect>
+<rect width="16.43" height="14.98" x="477.21" y="204.27" class="named"><title>0x0003afd0 FlameControl (396 bytes)</title></rect>
 <rect width="16.43" height="14.94" x="477.21" y="222.26" class="named"><title>0x00030184 Scion3Control (395 bytes)</title></rect>
 <rect width="16.43" height="14.80" x="477.21" y="240.20" class="named"><title>0x00027fa0 LaraTestHangJumpUp (392 bytes)</title></rect>
 <rect width="15.81" height="15.29" x="496.64" y="0" class="named"><title>0x0002b2a4 undraw_shotgun (390 bytes)</title></rect>

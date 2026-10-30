@@ -7,6 +7,9 @@
 #define DAMOCLES_SWORD_DAMAGE 100
 #define ROLLINGBALL_DAMAGE_AIR 100
 
+#define FLAME_TOONEAR_DAMAGE 3
+#define FLAME_ONFIRE_DAMAGE 5
+
 int OnTrapDoor(ITEM_INFO *item, sint32 x, sint32 z);
 sint16 CreateItem(void);
 
@@ -692,5 +695,73 @@ void FlameEmitterControl(sint16 item_number)
         mn_stop_sound_effect(150, NULL);
         KillEffect((sint16)((int)(item->data) - 1));
         item->data = NULL;
+    }
+}
+
+void FlameControl(sint16 fx_number)
+{
+    FX_INFO *fx;
+    sint32 x, y, z, distance;
+
+    fx = &effects[fx_number];
+
+    fx->frame_number--;
+    if (fx->frame_number <= objects[FLAME].nmeshes)
+        fx->frame_number = 0;
+
+    if (fx->counter < 0)
+    {
+        fx->pos.x_pos = 0;
+        fx->pos.y_pos = 0;
+        if (fx->counter == -1)
+            fx->pos.z_pos = -100;
+        else
+            fx->pos.z_pos = 0;
+        GetJointAbsPosition(lara_item, (PHD_VECTOR *)&fx->pos, -fx->counter - 1);
+
+        y = GetWaterHeight(fx->pos.x_pos, fx->pos.y_pos, fx->pos.z_pos, fx->room_number);
+        if (y != NO_HEIGHT && fx->pos.y_pos > y)
+        {
+            fx->counter = 0;
+            mn_stop_sound_effect(150, NULL);
+            KillEffect(fx_number);
+        }
+        else
+        {
+            SoundEffect(150, &fx->pos, NULL);
+            lara_item->hit_points -= FLAME_ONFIRE_DAMAGE;
+            lara_item->hit_status = 1;
+        }
+        return;
+    }
+
+    SoundEffect(150, &fx->pos, NULL);
+    if (fx->counter)
+        fx->counter--;
+    else
+    {
+        if (ItemNearLara(&fx->pos, 600))
+        {
+            x = lara_item->pos.x_pos - fx->pos.x_pos;
+            z = lara_item->pos.z_pos - fx->pos.z_pos;
+            distance = x * x + z * z;
+
+            lara_item->hit_points -= FLAME_TOONEAR_DAMAGE;
+            lara_item->hit_status = 1;
+
+            if (distance < SQUARE(300))
+            {
+                fx->counter = 100;
+
+                fx_number = CreateEffect(lara_item->room_number);
+                if (fx_number != NO_ITEM)
+                {
+                    fx = &effects[fx_number];
+                    fx->frame_number = 0;
+                    fx->object_number = FLAME;
+                    fx->counter = -1;
+                }
+            }
+        }
     }
 }
