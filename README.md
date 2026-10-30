@@ -78,6 +78,12 @@ stack and much of the DOS shell) is assembled with Microsoft MASM 6.11,
 `ml /c /Cp`. Watcom's own WASM gives the same instructions with other
 encodings (`89 c1` where the original has `8b c8`); MASM's match.
 
+These flags, the original's file names, its code range and where the
+game code ends, the Watcom libraries searched, and where Watcom, MASM,
+Ghidra and DOSBox are installed are kept in `project.toml`, which every
+tool reads; `python3 tools/project.py get KEY` prints one setting, such
+as `build.cflags`.
+
 ## Workflow
 
 Everything runs headless. `just` lists the recipes.

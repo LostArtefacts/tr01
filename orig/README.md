@@ -28,7 +28,9 @@ cd orig && sha1sum -c tomb.sha1
 ## Compiler
 
 Watcom C/C++ 10.6, which is not redistributable. Point `WATCOM` at a
-directory holding the `BINNT`, `H` and `LIB386` directories of its CD:
+directory holding the `BINNT`, `H` and `LIB386` directories of its CD,
+or add the directory to `build.watcom` in `project.toml`, the list of
+places searched without it:
 
 ```sh
 7z x -o"$HOME/opt/watcom10.6" watcom10.6.iso BINNT H LIB386
@@ -39,10 +41,19 @@ export WATCOM=$HOME/opt/watcom10.6
 
 MASM 6.11, which is not redistributable either. Point `MASM` at a
 directory holding its `ML.EXE` (expanded from the install disks with
-the disks' `DECOMP.EXE`); `~/opt/masm611` is found without it.
+the disks' `DECOMP.EXE`), or add the directory to `build.masm` in
+`project.toml`; `~/opt/masm611` is already there.
 
 ## DOSBox
 
 `just run` needs dosbox-staging (0.83.0 works). `DOSBOX` is its binary;
-the release tarball unpacked to `~/opt/` or `~/data.local/work/` is
-found without it.
+without it, the first match of `dosbox.search` in `project.toml` is
+used, which finds the release tarball unpacked to `~/opt/` or
+`~/data.local/work/`.
+
+## Ghidra
+
+`just analyze` and `just decompile` need Ghidra and a JDK 21. `GHIDRA`
+is its installation directory; without it, the first match of
+`ghidra.search` in `project.toml` is used. A `jdk-21*` next to it is
+used when there is no `java` on the `PATH`.
