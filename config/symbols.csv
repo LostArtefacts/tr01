@@ -632,7 +632,7 @@ address,size,name,symbol
 0x000396e8,5,T_SetOutlFlags,T_SetOutlFlags_
 0x000396f0,7,T_SetScale,T_SetScale_
 0x000396f8,8,T_LetterSpacing,T_LetterSpacing_
-0x00039700,8,Func39700,
+0x00039700,8,T_WordSpacing,T_WordSpacing_
 0x00039708,25,T_FlashText,T_FlashText_
 0x00039724,58,T_AddBackground,T_AddBackground_
 0x00039760,5,T_RemoveBackground,T_RemoveBackground_

@@ -106,6 +106,11 @@ void T_LetterSpacing(TEXTSTRING *textString, sint16 pixels)
     textString->letterSpacing = pixels * 8;
 }
 
+void T_WordSpacing(TEXTSTRING *textString, sint16 pixels)
+{
+    textString->wordSpacing = pixels * 8;
+}
+
 sint16 T_GetStringLen(char *string)
 {
     sint16 len = 1;
