@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">84.83% (688)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">15.17% (123)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">84.96% (689)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">15.04% (122)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="633.71" height="6" x="0" y="0" class="named"/>
-<rect width="113.29" height="6" x="633.71" y="0" class="todo"/>
+<rect width="634.63" height="6" x="0" y="0" class="named"/>
+<rect width="112.37" height="6" x="634.63" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -756,7 +756,7 @@
 <rect width="12" height="12" x="540" y="195" class="named"><title>0x0003c918 InitialisePod (229 bytes)</title></rect>
 <rect width="12" height="12" x="555" y="195" class="named"><title>0x0003ca00 PodControl (273 bytes)</title></rect>
 <rect width="12" height="12" x="570" y="195" class="named"><title>0x0003cb14 InitialiseStatue (232 bytes)</title></rect>
-<rect width="12" height="12" x="585" y="195" class="todo"><title>0x0003cbfc StatueControl (228 bytes)</title></rect>
+<rect width="12" height="12" x="585" y="195" class="named"><title>0x0003cbfc StatueControl (228 bytes)</title></rect>
 <rect width="12" height="12" x="600" y="195" class="todo"><title>0x0003cce0 InitialiseWolf (35 bytes)</title></rect>
 <rect width="12" height="12" x="615" y="195" class="todo"><title>0x0003cd34 WolfControl (1069 bytes)</title></rect>
 <rect width="12" height="12" x="630" y="195" class="todo"><title>0x0003d180 LionControl (797 bytes)</title></rect>
@@ -882,10 +882,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">80.75%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">19.25%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">80.86%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">19.14%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="603.21" height="6" x="0" y="0" class="named"/>
-<rect width="143.79" height="6" x="603.21" y="0" class="todo"/>
+<rect width="603.99" height="6" x="0" y="0" class="named"/>
+<rect width="143.01" height="6" x="603.99" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.96" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1147,7 +1147,7 @@
 <rect width="11.58" height="10.80" x="662.67" y="49.61" class="named"><title>0x00038654 TitleSequence (228 bytes)</title></rect>
 <rect width="11.58" height="10.80" x="677.24" y="49.61" class="named"><title>0x00038bd4 S_SoundSetPanAndVolume (228 bytes)</title></rect>
 <rect width="11.58" height="10.80" x="691.82" y="49.61" class="named"><title>0x0003ab0c DamoclesSwordCollision (228 bytes)</title></rect>
-<rect width="11.58" height="10.80" x="706.40" y="49.61" class="todo"><title>0x0003cbfc StatueControl (228 bytes)</title></rect>
+<rect width="11.58" height="10.80" x="706.40" y="49.61" class="named"><title>0x0003cbfc StatueControl (228 bytes)</title></rect>
 <rect width="11.51" height="10.80" x="720.97" y="49.61" class="named"><title>0x00018b3c FlipMap (227 bytes)</title></rect>
 <rect width="11.51" height="10.80" x="735.49" y="49.61" class="todo"><title>0x0003ec1c phd_RotateLight (227 bytes)</title></rect>
 <rect width="10.95" height="11.29" x="544.58" y="63.41" class="named"><title>0x00024754 KillItem (226 bytes)</title></rect>

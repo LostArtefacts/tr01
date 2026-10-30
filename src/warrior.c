@@ -986,3 +986,31 @@ void InitialiseStatue(sint16 item_number)
     else
         S_ExitSystem("FATAL: Cannot create CENTAUR in STATUE");
 }
+
+void StatueControl(sint16 item_number)
+{
+    sint32 x, y, z;
+    ITEM_INFO *item, *centaur;
+    sint16 centaur_item;
+
+    item = &items[item_number];
+
+    x = lara_item->pos.x_pos - item->pos.x_pos;
+    y = lara_item->pos.y_pos - item->pos.y_pos;
+    z = lara_item->pos.z_pos - item->pos.z_pos;
+    if (y > -WALL_L && y < WALL_L && x * x + z * z < SQUARE(WALL_L * 7 / 2))
+    {
+        ExplodingDeath(item_number, 0xffffffff, 0);
+        KillItem(item_number);
+        item->status = DEACTIVATED;
+
+        centaur_item = *(sint16 *)(item->data);
+        centaur = &items[centaur_item];
+        centaur->touch_bits = 0;
+        AddActiveItem(centaur_item);
+        EnableBaddieAI(centaur_item, 1);
+        centaur->status = ACTIVE;
+
+        SoundEffect(104, &centaur->pos, NULL);
+    }
+}
