@@ -61,11 +61,11 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">97.08% (797)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0.12% (1)</tspan> · <tspan class="todo">2.80% (23)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">97.20% (798)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0.12% (1)</tspan> · <tspan class="todo">2.68% (22)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="725.16" height="6" x="0" y="0" class="named"/>
-<rect width="0.91" height="6" x="725.16" y="0" class="nonmatching"/>
-<rect width="20.93" height="6" x="726.07" y="0" class="todo"/>
+<rect width="726.07" height="6" x="0" y="0" class="named"/>
+<rect width="0.91" height="6" x="726.07" y="0" class="nonmatching"/>
+<rect width="20.02" height="6" x="726.98" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -866,7 +866,7 @@
 <rect width="12" height="12" x="675" y="225" class="named"><title>0x00046378 MemFreeReal (137 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="225" class="nonmatching"><title>0x00046404 InterruptSet (753 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="225" class="named"><title>0x000466f8 VgaGetMode (11 bytes)</title></rect>
-<rect width="12" height="12" x="720" y="225" class="todo"><title>0x00046703 VgaSetMode (7 bytes)</title></rect>
+<rect width="12" height="12" x="720" y="225" class="named"><title>0x00046703 VgaSetMode (7 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="225" class="todo"><title>0x0004670a VgaGetRows (17 bytes)</title></rect>
 <rect width="12" height="12" x="0" y="240" class="todo"><title>0x0004671b VgaSetRows (71 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="240" class="todo"><title>0x00046762 ScreenClear (41 bytes)</title></rect>
@@ -893,11 +893,11 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">98.81%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0.34%</tspan> · <tspan class="todo">0.84%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">98.82%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0.34%</tspan> · <tspan class="todo">0.84%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="738.15" height="6" x="0" y="0" class="named"/>
-<rect width="2.54" height="6" x="738.15" y="0" class="nonmatching"/>
-<rect width="6.31" height="6" x="740.69" y="0" class="todo"/>
+<rect width="738.17" height="6" x="0" y="0" class="named"/>
+<rect width="2.54" height="6" x="738.17" y="0" class="nonmatching"/>
+<rect width="6.29" height="6" x="740.71" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.55" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1677,7 +1677,7 @@
 <rect width="0.10" height="0.10" x="736.53" y="255.63" class="named"><title>0x00039700 T_WordSpacing (8 bytes)</title></rect>
 <rect width="0.10" height="0.10" x="739.49" y="247.34" class="named"><title>0x000396f0 T_SetScale (7 bytes)</title></rect>
 <rect width="0.10" height="0.10" x="742.21" y="247.34" class="named"><title>0x0004566b phd_PushUnitMatrix (7 bytes)</title></rect>
-<rect width="0.10" height="0.10" x="744.94" y="247.34" class="todo"><title>0x00046703 VgaSetMode (7 bytes)</title></rect>
+<rect width="0.10" height="0.10" x="744.94" y="247.34" class="named"><title>0x00046703 VgaSetMode (7 bytes)</title></rect>
 <rect width="0.10" height="0.10" x="747.66" y="247.34" class="named"><title>0x00020434 SeedRandomControl (6 bytes)</title></rect>
 <rect width="0.10" height="0.10" x="739.49" y="249.59" class="named"><title>0x0002045c SeedRandomDraw (6 bytes)</title></rect>
 <rect width="0.10" height="0.10" x="739.49" y="251.69" class="named"><title>0x0002dd60 mn_set_sound_fade_rate (6 bytes)</title></rect>
