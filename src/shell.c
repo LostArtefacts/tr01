@@ -6,6 +6,7 @@
 #include "shell.h"
 
 #define NO_JOYSTICK 0x00000008
+#define FILELOAD_IFPRESENT 0x00000001
 
 typedef struct
 {
@@ -65,6 +66,10 @@ void VgaSetRows(uint8 rows);
 void TimeRestore(void);
 void ShellExitRealMemErr(void);
 #pragma aux ShellExitRealMemErr aborts;
+void ShellExitErrno(char *szFormat, ...);
+#pragma aux ShellExitErrno aborts;
+void ShellExitMemErr(void);
+#pragma aux ShellExitMemErr aborts;
 
 void TimerTick(void)
 {
@@ -192,6 +197,32 @@ void ShellExit(char *szFormat, ...)
     va_end(args);
     fputc('\n', stderr);
     exit(0);
+}
+
+uint8 *FileLoad(char *name, void *where, uint32 flags)
+{
+    FILE *fp;
+    int len;
+
+    fp = fopen(name, "rb");
+    if (fp == NULL)
+    {
+        if (flags & FILELOAD_IFPRESENT)
+            return NULL;
+        ShellExitErrno("Cannot find file '%s'", name);
+    }
+    if (fseek(fp, 0, SEEK_END) || (len = ftell(fp)) == -1 || fseek(fp, 0, SEEK_SET))
+        ShellExitErrno("File '%s'", name);
+    if (where == NULL)
+    {
+        where = malloc(len);
+        if (where == NULL)
+            ShellExitMemErr();
+    }
+    if (fread(where, len, 1, fp) != 1 || fclose(fp))
+        ShellExitErrno("File '%s'", name);
+    file_len = len;
+    return where;
 }
 
 void JoyDetect(void)
