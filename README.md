@@ -104,7 +104,11 @@ Everything runs headless. `just` lists the recipes.
    and resolve to the same address: externals through `symbols.csv`,
    the module's own segments, such as its string literals, through
    where the original puts them. The literals' bytes are compared too.
-   `just compare SYMBOL` shows a disassembly diff.
+   `just compare SYMBOL` shows a disassembly diff. A function that is
+   decompiled but does not match yet is listed in
+   [`config/nonmatching.txt`](config/nonmatching.txt): it is reported as
+   `nonmatch`, shown red in the chart and hooked into the game like the
+   others, and comes off the list when it matches.
    wcc386 does not lay out a module's uninitialized globals in
    definition order but by size class, then by the 25-entry block of
    the symbol table where each was first declared, newest first, then

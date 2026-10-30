@@ -27,6 +27,10 @@ yet can be left out of its module: references to it then go through
 symbols.csv like any external, and the functions after it still match.
 A module whose functions are not contiguous gets a warning.
 
+A function listed in config/nonmatching.txt is decompiled but known not
+to match yet: it is reported as `nonmatch` and does not fail the run,
+until it matches, when it has to come off the list.
+
 With SYMBOLs, shows a disassembly diff for each.
 """
 import csv, difflib, glob, os, struct, subprocess, sys, tempfile
@@ -50,6 +54,13 @@ class Original:
             if base <= addr and addr + n <= base + len(m):
                 return m[addr - base:addr - base + n]
         raise ValueError(f"{addr:#x}+{n} is outside the image")
+
+
+def load_nonmatching():
+    path = os.path.join(ROOT, "config/nonmatching.txt")
+    if not os.path.exists(path):
+        return set()
+    return {l.strip() for l in open(path) if l.strip()}
 
 
 def load_symbols():
@@ -302,13 +313,25 @@ def main():
         for mod in omf.modules(path):
             results += compare_module(mod, orig, by_symbol)[0]
     wanted = sys.argv[1:]
+    known = load_nonmatching()
     warnings = [r for r in results if r.warning]
     results = [r for r in results if not r.warning]
+    failed = []
     for r in results:
+        expected = r.name in known
+        if r.ok() and expected:
+            r.errors.append("matches now: remove it from config/nonmatching.txt")
+            status = "MISMATCH"
+        elif r.ok():
+            status = "ok"
+        else:
+            status = "nonmatch" if expected else "MISMATCH"
+        if status == "MISMATCH":
+            failed.append(r)
         if wanted and r.name not in wanted:
             continue
-        print(f"{'ok' if r.ok() else 'MISMATCH':8} {r.addr or 0:#010x} {r.name}")
-        for e in r.errors:
+        print(f"{status:8} {r.addr or 0:#010x} {r.name}")
+        for e in r.errors if status == "MISMATCH" or wanted else r.errors[-1:]:
             print(f"         {e}")
         if wanted and r.ours is not None:
             a = disasm(r.ours, r.addr)
@@ -321,10 +344,11 @@ def main():
         funcs = [r for r in results if not r.data]
         data = [r for r in results if r.data]
         good = [r for r in funcs if r.ok() and r.addr]
-        print(f"{len(good)} of {len(funcs)} match, {sum(r.size for r in good)} bytes; "
-              f"{sum(r.ok() for r in data)} of {len(data)} data segments match")
-    sys.exit(0 if all(r.ok() for r in results if not wanted or r.name in wanted) else 1)
-
+        near = [r for r in funcs if not r.ok() and r.name in known]
+        print(f"{len(good)} of {len(funcs)} match, {sum(r.size for r in good)} bytes"
+              + (f", {len(near)} known not to" if near else "")
+              + f"; {sum(r.ok() for r in data)} of {len(data)} data segments match")
+    sys.exit(0 if not [r for r in failed if not wanted or r.name in wanted] else 1)
 
 if __name__ == "__main__":
     main()
