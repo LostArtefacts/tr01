@@ -13,6 +13,10 @@ _video_depth dd 1
 dump_funcs label dword
     dd      offset ScreenDumpVga_, offset ScreenDumpVesa_, offset ScreenDumpVesa_
     dd      offset ScreenDumpVesa_, offset ScreenDumpVesa_
+part_dump_funcs label dword
+    dd      offset ScreenPartialDumpVga_, offset ScreenPartialDumpVesa_
+    dd      offset ScreenPartialDumpVesa_, offset ScreenPartialDumpVesa_
+    dd      offset ScreenPartialDumpVesa_
 
     .data?
 
@@ -169,6 +173,19 @@ ScreenDump_ proc near
     pop     eax
     ret
 ScreenDump_ endp
+
+    public ScreenPartialDump_
+ScreenPartialDump_ proc near
+    push    eax
+    push    edi
+    mov     edi,dword ptr _gamedata
+    xor     eax,eax
+    mov     ax,word ptr [edi+0eh]
+    call    dword ptr part_dump_funcs[eax*4]
+    pop     edi
+    pop     eax
+    ret
+ScreenPartialDump_ endp
 
     public ScreenDumpVga_
 ScreenDumpVga_ proc near
