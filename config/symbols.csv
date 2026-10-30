@@ -764,6 +764,7 @@ address,size,name,symbol
 0x00044895,384,gourA,gourA_
 0x00044a15,765,gtmapA,gtmapA_
 0x00044d12,833,wgtmapA,wgtmapA_
+0x00045053,626,Func45053,
 0x000452d0,17,phd_FixedDivide,phd_FixedDivide_
 0x000452e1,200,calc_object_verticesA_noclip,calc_object_verticesA_noclip_
 0x000453a9,344,calc_object_verticesA_win,calc_object_verticesA_win_
@@ -800,10 +801,12 @@ address,size,name,symbol
 0x0004670a,17,VgaGetRows,VgaGetRows_
 0x0004671b,71,VgaSetRows,VgaSetRows_
 0x00046762,41,ScreenClear,ScreenClear_
+0x0004678b,102,Func4678b,
 0x000467f1,24,ScreenDump,ScreenDump_
 0x00046809,24,ScreenPartialDump,ScreenPartialDump_
 0x00046821,38,Func46821,
 0x00046847,148,Func46847,
+0x000468db,55,Func468db,
 0x00046912,98,Func46912,
 0x00046974,27,VesaBiosGetInfo,VesaBiosGetInfo_
 0x0004698f,25,VesaBiosGetModeInfo,VesaBiosGetModeInfo_
@@ -812,6 +815,7 @@ address,size,name,symbol
 0x000469fd,87,Func469fd,
 0x00046a54,474,Func46a54,
 0x00046c2e,19,ScreenWaitVbl,ScreenWaitVbl_
+0x00046c41,26,Func46c41,
 0x00046c5b,22,Func46c5b,
 0x00046c71,183,FadeTick,FadeTick_
 0x00046d28,137,VgaGetFont,VgaGetFont_
