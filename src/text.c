@@ -85,6 +85,11 @@ void T_SetFlags(TEXTSTRING *textString, uint32 flags)
     textString->flags = flags;
 }
 
+void T_SetBgndFlags(TEXTSTRING *textString, uint32 flags)
+{
+    textString->bgndflags = (sint16)flags;
+}
+
 sint16 T_GetStringLen(char *string)
 {
     sint16 len = 1;

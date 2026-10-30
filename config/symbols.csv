@@ -628,7 +628,7 @@ address,size,name,symbol
 0x00039584,281,T_Print,T_Print_
 0x000396a0,59,T_ChangeText,T_ChangeText_
 0x000396dc,3,T_SetFlags,T_SetFlags_
-0x000396e0,5,Func396e0,
+0x000396e0,5,T_SetBgndFlags,T_SetBgndFlags_
 0x000396e8,5,Func396e8,
 0x000396f0,7,T_SetScale,T_SetScale_
 0x000396f8,8,Func396f8,
