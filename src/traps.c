@@ -3,6 +3,7 @@
 #define SPIKE_DAMAGE 15
 #define TEETHTRAP_DAMAGE 400
 #define FALLING_CEILING_DAMAGE 300
+#define DAMOCLES_SWORD_DAMAGE 100
 #define ROLLINGBALL_DAMAGE_AIR 100
 
 int OnTrapDoor(ITEM_INFO *item, sint32 x, sint32 z);
@@ -503,5 +504,26 @@ void DamoclesSwordControl(sint16 item_number)
             item->goal_anim_state = z / 32;
             item->gravity_status = 1;
         }
+    }
+}
+
+void DamoclesSwordCollision(sint16 item_num, ITEM_INFO *litem, COLL_INFO *coll)
+{
+    int x, y, z, d;
+    ITEM_INFO *item;
+
+    item = &items[item_num];
+    if (!TestBoundsCollide(item, litem, coll->radius))
+        return;
+    if (coll->enable_baddie_push)
+        ItemPushLara(item, litem, coll, 0, 1);
+    if (item->gravity_status)
+    {
+        litem->hit_points -= DAMOCLES_SWORD_DAMAGE;
+        x = litem->pos.x_pos + (GetRandomControl() - 16384) / 256;
+        z = litem->pos.z_pos + (GetRandomControl() - 16384) / 256;
+        y = litem->pos.y_pos - GetRandomControl() / 44;
+        d = (GetRandomControl() - 16384) / 8 + litem->pos.y_rot;
+        DoBloodSplat(x, y, z, litem->speed, d, litem->room_number);
     }
 }
