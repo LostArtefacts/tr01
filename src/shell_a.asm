@@ -1,11 +1,12 @@
     .386p
     .model flat
 
+    extrn _gamedata:dword
 
+    .data
 
-
-
-
+    public _video_depth
+_video_depth dd 1
 
     .code
 
@@ -76,5 +77,25 @@ l4:
     popa
     ret
 VgaSetRows_ endp
+
+    public ScreenClear_
+ScreenClear_ proc near
+    pusha
+    cld
+    mov     edi,dword ptr _gamedata
+    xor     eax,eax
+    xor     ecx,ecx
+    mov     cx,word ptr [edi]
+    mov     ax,word ptr [edi+2]
+    imul    ecx
+    imul    dword ptr _video_depth
+    mov     ecx,eax
+    shr     ecx,2
+    mov     edi,dword ptr [edi+0ah]
+    xor     eax,eax
+    rep stosd
+    popa
+    ret
+ScreenClear_ endp
 
     end
