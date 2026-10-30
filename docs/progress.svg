@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">91.49% (742)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">8.51% (69)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">91.62% (743)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">8.38% (68)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="683.45" height="6" x="0" y="0" class="named"/>
-<rect width="63.55" height="6" x="683.45" y="0" class="todo"/>
+<rect width="684.37" height="6" x="0" y="0" class="named"/>
+<rect width="62.63" height="6" x="684.37" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -815,7 +815,7 @@
 <rect width="12" height="12" x="675" y="210" class="named"><title>0x00042658 XYClipper (695 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="210" class="named"><title>0x00042910 ins_poly_trans8 (1436 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="210" class="named"><title>0x00042eb0 draw_poly_flat (39 bytes)</title></rect>
-<rect width="12" height="12" x="720" y="210" class="todo"><title>0x00042ed8 draw_poly_trans (38 bytes)</title></rect>
+<rect width="12" height="12" x="720" y="210" class="named"><title>0x00042ed8 draw_poly_trans (38 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="210" class="todo"><title>0x00042f00 draw_poly_gouraud (38 bytes)</title></rect>
 <rect width="12" height="12" x="0" y="225" class="todo"><title>0x00042f28 draw_poly_gtmap (45 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="225" class="todo"><title>0x00042f58 draw_poly_wgtmap (45 bytes)</title></rect>
@@ -828,7 +828,7 @@
 <rect width="12" height="12" x="120" y="225" class="todo"><title>0x0004387c Func4387c (1895 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="225" class="todo"><title>0x00043fe4 Func43fe4 (1820 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="225" class="todo"><title>0x00044700 flatA (97 bytes)</title></rect>
-<rect width="12" height="12" x="165" y="225" class="todo"><title>0x00044761 Func44761 (308 bytes)</title></rect>
+<rect width="12" height="12" x="165" y="225" class="todo"><title>0x00044761 transA (308 bytes)</title></rect>
 <rect width="12" height="12" x="180" y="225" class="todo"><title>0x00044895 Func44895 (384 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="225" class="todo"><title>0x00044a15 Func44a15 (765 bytes)</title></rect>
 <rect width="12" height="12" x="210" y="225" class="todo"><title>0x00044d12 Func44d12 (833 bytes)</title></rect>
@@ -882,10 +882,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">92.13%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">7.87%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">92.15%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">7.85%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="688.22" height="6" x="0" y="0" class="named"/>
-<rect width="58.78" height="6" x="688.22" y="0" class="todo"/>
+<rect width="688.35" height="6" x="0" y="0" class="named"/>
+<rect width="58.65" height="6" x="688.35" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.96" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1089,7 +1089,7 @@
 <rect width="13.90" height="13.28" x="616.72" y="18.29" class="named"><title>0x0002dc00 mn_stop_sound_effect (312 bytes)</title></rect>
 <rect width="13.85" height="13.28" x="633.62" y="18.29" class="named"><title>0x0003b3fc LavaWedge (311 bytes)</title></rect>
 <rect width="13.74" height="13.28" x="650.47" y="18.29" class="named"><title>0x0002793c LaraDeflectEdgeJump (309 bytes)</title></rect>
-<rect width="13.69" height="13.28" x="667.21" y="18.29" class="todo"><title>0x00044761 Func44761 (308 bytes)</title></rect>
+<rect width="13.69" height="13.28" x="667.21" y="18.29" class="todo"><title>0x00044761 transA (308 bytes)</title></rect>
 <rect width="13.63" height="13.28" x="683.90" y="18.29" class="todo"><title>0x00045868 Func45868 (307 bytes)</title></rect>
 <rect width="13.58" height="13.28" x="700.53" y="18.29" class="named"><title>0x00020ac0 DrawAmmoInfo (306 bytes)</title></rect>
 <rect width="13.52" height="13.28" x="717.11" y="18.29" class="named"><title>0x0003ad90 DartsControl (305 bytes)</title></rect>
@@ -1545,7 +1545,7 @@
 <rect width="2.53" height="3.22" x="695.30" y="221.50" class="todo"><title>0x00045f00 KeyClearBuffer (39 bytes)</title></rect>
 <rect width="2.53" height="3.06" x="695.30" y="227.71" class="named"><title>0x00020980 DrawGameInfo (38 bytes)</title></rect>
 <rect width="2.53" height="3.06" x="695.30" y="233.77" class="named"><title>0x00025cdc lara_as_special (38 bytes)</title></rect>
-<rect width="2.53" height="3.06" x="695.30" y="239.83" class="todo"><title>0x00042ed8 draw_poly_trans (38 bytes)</title></rect>
+<rect width="2.53" height="3.06" x="695.30" y="239.83" class="named"><title>0x00042ed8 draw_poly_trans (38 bytes)</title></rect>
 <rect width="2.53" height="3.06" x="695.30" y="245.89" class="todo"><title>0x00042f00 draw_poly_gouraud (38 bytes)</title></rect>
 <rect width="2.53" height="3.06" x="695.30" y="251.94" class="todo"><title>0x00046821 Func46821 (38 bytes)</title></rect>
 <rect width="2.91" height="2.52" x="700.84" y="209.07" class="named"><title>0x00010b00 S_AnimateTextures (37 bytes)</title></rect>
