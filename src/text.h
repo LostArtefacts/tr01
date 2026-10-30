@@ -8,6 +8,11 @@
 
 #define TEXT_HEIGHT 11
 
+#define SCR_LEFT 0
+#define SCR_RIGHT game_setup.dump_width
+#define SCR_TOP 0
+#define SCR_BOTTOM game_setup.dump_height
+
 typedef struct textstringinfo
 {
     uint32 flags;

@@ -2026,6 +2026,7 @@ address,size,name,symbol
 0x000c3eec,4,cheat_mode,_cheat_mode
 0x000c3ef0,110,T_textSpacing,_T_textSpacing
 0x000c3f5e,95,T_remapASCII,_T_remapASCII
+0x000c3fc0,4,base_xpos,_base_xpos
 0x000c409c,4,wibble_offset,_wibble_offset
 0x000c40a0,4,water_effect,_water_effect
 0x000c40a4,4,shade_effect,_shade_effect

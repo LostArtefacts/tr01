@@ -4,6 +4,7 @@
 
 sint16 T_GetStringLen(char *string);
 void T_DrawThisText(TEXTSTRING *textString);
+void S_DrawScreenSprite2d(sint32 sx, sint32 sy, sint32 z, sint32 scaleH, sint32 scaleV, sint16 sprnum, sint16 shade, uint16 flags);
 
 TEXTSTRING T_textStrings[MAX_TEXT_STRINGS];
 sint16 T_numStrings;
@@ -295,6 +296,8 @@ sint16 T_GetStringLen(char *string)
     return len;
 }
 
+sint32 base_xpos = 0;
+
 void T_DrawText(void)
 {
     int n;
@@ -306,4 +309,110 @@ void T_DrawText(void)
             T_DrawThisText(textString);
         textString++;
     }
+}
+
+void T_DrawThisText(TEXTSTRING *textString)
+{
+    char *string;
+    int letter = 0, sprite;
+    int hw, hh, hw2, hh2;
+    sint32 xpos, ypos, zpos;
+    sint32 bxpos, bypos, bwidth = 0, bheight = 0;
+    sint32 pixWidth;
+
+    if (textString->flags & T_FLASH)
+    {
+        textString->flashCount -= (sint16)camera.number_frames;
+        if (textString->flashCount <= -textString->flashRate)
+            textString->flashCount = textString->flashRate;
+        else if (textString->flashCount < 0)
+            return;
+    }
+
+    string = textString->string;
+    xpos = textString->xpos + base_xpos + SCR_LEFT;
+    ypos = textString->ypos + SCR_TOP;
+    zpos = textString->zpos;
+
+    pixWidth = T_GetTextWidth(textString);
+
+    if (textString->flags & T_CENTRE_H)
+        xpos += (((SCR_RIGHT - SCR_LEFT) - pixWidth) / 2);
+    else if (textString->flags & T_RIGHT)
+        xpos += ((SCR_RIGHT - SCR_LEFT) - pixWidth);
+
+    if (textString->flags & T_CENTRE_V)
+        ypos += ((SCR_BOTTOM - SCR_TOP) / 2);
+    else if (textString->flags & T_BOTTOM)
+        ypos += (SCR_BOTTOM - SCR_TOP);
+
+    bxpos = xpos - 2 + textString->bgndOffX;
+    bypos = ypos - 4 - TEXT_HEIGHT + textString->bgndOffY;
+
+    while (*string)
+    {
+        letter = *(string++);
+        if (letter > 15 && letter < 32)
+            continue;
+        if (letter == 32)
+        {
+            xpos += ((textString->wordSpacing * textString->scaleH) >> 16);
+            continue;
+        }
+
+        if (letter < 11)
+            sprite = letter + 81;
+        else if (letter < 16)
+            sprite = letter + 91;
+        else
+            sprite = T_remapASCII[letter - 32];
+
+        S_DrawScreenSprite2d(xpos, ypos, zpos, textString->scaleH, textString->scaleV, objects[ALPHABET].mesh_index + sprite, 16 << 8, textString->textflags);
+
+        if (letter == '(' || letter == ')' || letter == '$' || letter == '~')
+            continue;
+
+        if (textString->scaleH == 0x10000)
+            xpos += (T_textSpacing[sprite] + textString->letterSpacing);
+        else
+            xpos += ((((sint32)T_textSpacing[sprite] + textString->letterSpacing) * textString->scaleH) >> 16);
+    }
+
+    if (textString->flags & T_BGND || textString->flags & T_OUTLINE)
+    {
+        if (textString->bgndSizeX)
+        {
+            bxpos += (pixWidth / 2);
+            pixWidth = textString->bgndSizeX;
+            bxpos -= (pixWidth / 2);
+        }
+        bwidth = pixWidth + 4;
+
+        if (textString->bgndSizeY)
+            bheight = textString->bgndSizeY;
+        else
+            bheight = TEXT_HEIGHT + 5;
+    }
+
+    if (textString->flags & T_BGND)
+    {
+        if (textString->bgndGour)
+        {
+            hw = bwidth / 2;
+            hh = bheight / 2;
+            hw2 = bwidth - hw;
+            hh2 = bheight - hh;
+            S_DrawScreenFBox(bxpos, bypos, zpos + textString->bgndOffZ + 8, hw, hh, textString->bgndColour, textString->bgndGour, textString->bgndflags);
+            S_DrawScreenFBox(bxpos + hw, bypos, zpos + textString->bgndOffZ + 8, hw2, hh, textString->bgndColour, textString->bgndGour + 4, textString->bgndflags);
+            S_DrawScreenFBox(bxpos + hw, bypos + hh, zpos + textString->bgndOffZ + 8, hw, hh2, textString->bgndColour, textString->bgndGour + 8, textString->bgndflags);
+            S_DrawScreenFBox(bxpos, bypos + hh, zpos + textString->bgndOffZ + 8, hw2, hh2, textString->bgndColour, textString->bgndGour + 12, textString->bgndflags);
+        }
+        else
+        {
+            S_DrawScreenFBox(bxpos, bypos, zpos + textString->bgndOffZ + 8, bwidth, bheight, textString->bgndColour, textString->bgndGour, textString->bgndflags);
+            S_DrawScreenBox(bxpos, bypos, zpos + textString->bgndOffZ, bwidth, bheight, C_BLACK, NULL, NULL);
+        }
+    }
+    if (textString->flags & T_OUTLINE)
+        S_DrawScreenBox(bxpos, bypos, zpos + textString->bgndOffZ, bwidth, bheight, textString->outlColour, textString->outlGour, textString->outlflags);
 }
