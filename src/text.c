@@ -136,6 +136,11 @@ void T_AddBackground(TEXTSTRING *textString, sint16 xsize, sint16 ysize, sint16 
     textString->bgndflags = flags;
 }
 
+void T_RemoveBackground(TEXTSTRING *textString)
+{
+    textString->flags &= ~T_BGND;
+}
+
 sint16 T_GetStringLen(char *string)
 {
     sint16 len = 1;

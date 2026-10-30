@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">78.42% (636)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">21.58% (175)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">78.55% (637)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">21.45% (174)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="585.81" height="6" x="0" y="0" class="named"/>
-<rect width="161.19" height="6" x="585.81" y="0" class="todo"/>
+<rect width="586.73" height="6" x="0" y="0" class="named"/>
+<rect width="160.27" height="6" x="586.73" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -703,7 +703,7 @@
 <rect width="12" height="12" x="495" y="180" class="named"><title>0x00039700 T_WordSpacing (8 bytes)</title></rect>
 <rect width="12" height="12" x="510" y="180" class="named"><title>0x00039708 T_FlashText (25 bytes)</title></rect>
 <rect width="12" height="12" x="525" y="180" class="named"><title>0x00039724 T_AddBackground (58 bytes)</title></rect>
-<rect width="12" height="12" x="540" y="180" class="todo"><title>0x00039760 T_RemoveBackground (5 bytes)</title></rect>
+<rect width="12" height="12" x="540" y="180" class="named"><title>0x00039760 T_RemoveBackground (5 bytes)</title></rect>
 <rect width="12" height="12" x="555" y="180" class="todo"><title>0x00039768 T_AddOutline (27 bytes)</title></rect>
 <rect width="12" height="12" x="570" y="180" class="todo"><title>0x00039784 T_RemoveOutline (5 bytes)</title></rect>
 <rect width="12" height="12" x="585" y="180" class="todo"><title>0x0003978c T_CentreH (13 bytes)</title></rect>
@@ -884,8 +884,8 @@
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
 <text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">74.72%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">25.28%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="558.16" height="6" x="0" y="0" class="named"/>
-<rect width="188.84" height="6" x="558.16" y="0" class="todo"/>
+<rect width="558.18" height="6" x="0" y="0" class="named"/>
+<rect width="188.82" height="6" x="558.18" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.96" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1669,7 +1669,7 @@
 <rect width="0.10" height="0.10" x="748.13" y="250.09" class="named"><title>0x00034d40 DrawSavegameItem (5 bytes)</title></rect>
 <rect width="0.10" height="0.10" x="742.53" y="252.45" class="named"><title>0x000396e0 T_SetBgndFlags (5 bytes)</title></rect>
 <rect width="0.10" height="0.10" x="742.53" y="254.30" class="named"><title>0x000396e8 T_SetOutlFlags (5 bytes)</title></rect>
-<rect width="0.10" height="0.10" x="742.53" y="256.15" class="todo"><title>0x00039760 T_RemoveBackground (5 bytes)</title></rect>
+<rect width="0.10" height="0.10" x="742.53" y="256.15" class="named"><title>0x00039760 T_RemoveBackground (5 bytes)</title></rect>
 <rect width="0.10" height="0.10" x="744.91" y="252.45" class="todo"><title>0x00039784 T_RemoveOutline (5 bytes)</title></rect>
 <rect width="0.10" height="0.10" x="747.46" y="252.45" class="todo"><title>0x0003f026 phd_cos (5 bytes)</title></rect>
 <rect width="0.10" height="0.10" x="744.91" y="254.19" class="todo"><title>0x0004599c Func4599c (5 bytes)</title></rect>
