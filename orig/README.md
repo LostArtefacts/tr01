@@ -35,6 +35,12 @@ directory holding the `BINNT`, `H` and `LIB386` directories of its CD:
 export WATCOM=$HOME/opt/watcom10.6
 ```
 
+## Assembler
+
+MASM 6.11, which is not redistributable either. Point `MASM` at a
+directory holding its `ML.EXE` (expanded from the install disks with
+the disks' `DECOMP.EXE`); `~/opt/masm611` is found without it.
+
 ## DOSBox
 
 `just run` needs dosbox-staging (0.83.0 works). `DOSBOX` is its binary;

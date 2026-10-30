@@ -73,6 +73,11 @@ functions found unchanged in the original:
 `-4r`, `-fp5`, `-oe` alone and `-zp4` match fewer; `-zp1`, `-zp2`, `-fp3`,
 `-or` and `-ol+` change nothing.
 
+The hand-written assembly (the maths, the scanline fillers, the matrix
+stack and much of the DOS shell) is assembled with Microsoft MASM 6.11,
+`ml /c /Cp`. Watcom's own WASM gives the same instructions with other
+encodings (`89 c1` where the original has `8b c8`); MASM's match.
+
 ## Workflow
 
 Everything runs headless. `just` lists the recipes.

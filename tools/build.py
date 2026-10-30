@@ -1,15 +1,19 @@
-"""Compiles src/*.c with Watcom C 10.6 under Wine into build/obj/.
+"""Compiles src/*.c with Watcom C 10.6 and assembles src/*.asm with MASM
+6.11, both under Wine, into build/obj/.
 
-    build.py [FILE.c...]
+    build.py [FILE.c|FILE.asm...]
 
 WATCOM is the compiler directory, with BINNT, H and LIB386. It defaults
-to ~/opt/watcom10.6 or ~/data.local/watcom/10.6. An object is rebuilt
-when its source or any header in src/ is newer.
+to ~/opt/watcom10.6 or ~/data.local/watcom/10.6. MASM is the directory
+holding ML.EXE 6.11; it defaults to ~/opt/masm611 or
+~/data.frost/blob/cirno-labs/masm/6.11. An object is rebuilt when its
+source or any header or include file in src/ is newer.
 """
 import glob, os, subprocess, sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CFLAGS = ["-bt=dos", "-5r", "-oneatx", "-zq"]
+AFLAGS = ["/nologo", "/c", "/Cp"]
 
 
 def watcom():
@@ -18,6 +22,14 @@ def watcom():
         if d and os.path.isfile(os.path.join(d, "BINNT", "WCC386.EXE")):
             return d
     sys.exit("error: set WATCOM to a Watcom C 10.6 directory (see orig/README.md)")
+
+
+def masm():
+    for d in [os.environ.get("MASM"), os.path.expanduser("~/opt/masm611"),
+              os.path.expanduser("~/data.frost/blob/cirno-labs/masm/6.11")]:
+        if d and os.path.isfile(os.path.join(d, "ML.EXE")):
+            return d
+    sys.exit("error: set MASM to a directory with MASM 6.11's ML.EXE (see orig/README.md)")
 
 
 def winpath(path):
@@ -34,10 +46,15 @@ def env(w):
 
 
 def compile(w, src, obj):
-    cmd = ["wine", os.path.join(w, "BINNT", "WCC386.EXE"), *CFLAGS,
-           "-fo=" + winpath(obj), winpath(src)]
+    if src.endswith(".asm"):
+        cmd = ["wine", os.path.join(masm(), "ML.EXE"), *AFLAGS, "/I" + winpath("src"),
+               "/Fo" + winpath(obj), winpath(src)]
+    else:
+        cmd = ["wine", os.path.join(w, "BINNT", "WCC386.EXE"), *CFLAGS,
+               "-fo=" + winpath(obj), winpath(src)]
     r = subprocess.run(cmd, env=env(w), capture_output=True, text=True)
-    out = "\n".join(l for l in r.stdout.splitlines() + r.stderr.splitlines() if l.strip())
+    out = "\n".join(l for l in r.stdout.splitlines() + r.stderr.splitlines()
+                    if l.strip() and not l.startswith(" Assembling:"))
     if r.returncode or not os.path.exists(obj):
         sys.exit(f"{out}\nerror: {os.path.relpath(src, ROOT)} failed to compile")
     if out:
@@ -48,8 +65,11 @@ def main():
     os.chdir(ROOT)
     w = watcom()
     os.makedirs("build/obj", exist_ok=True)
-    srcs = sys.argv[1:] or sorted(glob.glob("src/*.c"))
-    headers = max((os.path.getmtime(h) for h in glob.glob("src/*.h")), default=0)
+    srcs = sys.argv[1:] or sorted(glob.glob("src/*.c") + glob.glob("src/*.asm"))
+    names = [os.path.splitext(os.path.basename(s))[0] for s in srcs]
+    if len(set(names)) != len(names):
+        sys.exit("error: a .c and an .asm file in src/ share a name")
+    headers = max((os.path.getmtime(h) for h in glob.glob("src/*.h") + glob.glob("src/*.inc")), default=0)
     if not sys.argv[1:]:
         names = {os.path.splitext(os.path.basename(s))[0] for s in srcs}
         for obj in glob.glob("build/obj/*.obj"):
