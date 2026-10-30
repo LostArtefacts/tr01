@@ -779,3 +779,69 @@ int ExplodingDeath(sint16 item_number, sint32 mesh_bits, sint16 damage)
     else
         return 0;
 }
+
+void ControlBodyPart(sint16 fx_number)
+{
+    FX_INFO *fx;
+    FLOOR_INFO *floor;
+    sint32 height, ceiling;
+    sint16 room_number;
+
+    fx = &effects[fx_number];
+
+    fx->pos.x_rot += (ONE_DEGREE * 5);
+    fx->pos.z_rot += (ONE_DEGREE * 10);
+    fx->pos.z_pos += fx->speed * phd_cos(fx->pos.y_rot) >> W2V_SHIFT;
+    fx->pos.x_pos += fx->speed * phd_sin(fx->pos.y_rot) >> W2V_SHIFT;
+    fx->fallspeed += GRAVITY;
+    fx->pos.y_pos += fx->fallspeed;
+
+    room_number = fx->room_number;
+    floor = GetFloor(fx->pos.x_pos, fx->pos.y_pos, fx->pos.z_pos, &room_number);
+
+    ceiling = GetCeiling(floor, fx->pos.x_pos, fx->pos.y_pos, fx->pos.z_pos);
+    if (fx->pos.y_pos < ceiling)
+    {
+        fx->fallspeed = -fx->fallspeed;
+        fx->pos.y_pos = ceiling;
+    }
+
+    height = GetHeight(floor, fx->pos.x_pos, fx->pos.y_pos, fx->pos.z_pos);
+    if (fx->pos.y_pos >= height)
+    {
+        if (fx->counter)
+        {
+            fx->speed = 0;
+            fx->frame_number = 0;
+            fx->counter = 0;
+            fx->object_number = EXPLOSION1;
+            SoundEffect(104, &fx->pos, NULL);
+        }
+        else
+            KillEffect(fx_number);
+        return;
+    }
+
+    if (ItemNearLara(&fx->pos, fx->counter * 2))
+    {
+        lara_item->hit_points -= fx->counter;
+        lara_item->hit_status = 1;
+
+        if (fx->counter)
+        {
+            fx->speed = 0;
+            fx->frame_number = 0;
+            fx->counter = 0;
+            fx->object_number = EXPLOSION1;
+            SoundEffect(104, &fx->pos, NULL);
+
+            lara.hit_effect_count = 5;
+            lara.hit_effect = fx;
+        }
+        else
+            KillEffect(fx_number);
+    }
+
+    if (room_number != fx->room_number)
+        EffectNewRoom(fx_number, room_number);
+}

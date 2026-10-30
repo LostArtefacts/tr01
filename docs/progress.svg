@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">84.34% (684)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">15.66% (127)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">84.46% (685)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">15.54% (126)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="630.02" height="6" x="0" y="0" class="named"/>
-<rect width="116.98" height="6" x="630.02" y="0" class="todo"/>
+<rect width="630.94" height="6" x="0" y="0" class="named"/>
+<rect width="116.06" height="6" x="630.94" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -752,7 +752,7 @@
 <rect width="12" height="12" x="480" y="195" class="named"><title>0x0003c2b4 InitialiseMummy (63 bytes)</title></rect>
 <rect width="12" height="12" x="495" y="195" class="named"><title>0x0003c2f4 MummyControl (165 bytes)</title></rect>
 <rect width="12" height="12" x="510" y="195" class="named"><title>0x0003c39c ExplodingDeath (932 bytes)</title></rect>
-<rect width="12" height="12" x="525" y="195" class="todo"><title>0x0003c740 ControlBodyPart (433 bytes)</title></rect>
+<rect width="12" height="12" x="525" y="195" class="named"><title>0x0003c740 ControlBodyPart (433 bytes)</title></rect>
 <rect width="12" height="12" x="540" y="195" class="todo"><title>0x0003c918 InitialisePod (229 bytes)</title></rect>
 <rect width="12" height="12" x="555" y="195" class="todo"><title>0x0003ca00 PodControl (273 bytes)</title></rect>
 <rect width="12" height="12" x="570" y="195" class="todo"><title>0x0003cb14 InitialiseStatue (232 bytes)</title></rect>
@@ -882,10 +882,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">80.22%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">19.78%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">80.42%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">19.58%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="599.24" height="6" x="0" y="0" class="named"/>
-<rect width="147.76" height="6" x="599.24" y="0" class="todo"/>
+<rect width="600.71" height="6" x="0" y="0" class="named"/>
+<rect width="146.29" height="6" x="600.71" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.96" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1035,7 +1035,7 @@
 <rect width="16.71" height="16.92" x="457.50" y="140.95" class="named"><title>0x0003934c GetJointAbsPosition (445 bytes)</title></rect>
 <rect width="16.71" height="16.74" x="457.50" y="160.87" class="named"><title>0x0001ee1c LoadItems (441 bytes)</title></rect>
 <rect width="16.71" height="16.43" x="457.50" y="180.61" class="named"><title>0x000173bc GetFloor (434 bytes)</title></rect>
-<rect width="16.71" height="16.38" x="457.50" y="200.04" class="todo"><title>0x0003c740 ControlBodyPart (433 bytes)</title></rect>
+<rect width="16.71" height="16.38" x="457.50" y="200.04" class="named"><title>0x0003c740 ControlBodyPart (433 bytes)</title></rect>
 <rect width="16.71" height="16.38" x="457.50" y="219.42" class="todo"><title>0x0003e614 Func3e614 (433 bytes)</title></rect>
 <rect width="16.71" height="16.20" x="457.50" y="238.80" class="named"><title>0x00026084 lara_col_walk (429 bytes)</title></rect>
 <rect width="16.43" height="16.39" x="477.21" y="0" class="todo"><title>0x0003d7e0 phd_GenerateW2V (427 bytes)</title></rect>
