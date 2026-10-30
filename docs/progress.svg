@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">82.37% (668)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">17.63% (143)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">82.49% (669)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">17.51% (142)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="615.28" height="6" x="0" y="0" class="named"/>
-<rect width="131.72" height="6" x="615.28" y="0" class="todo"/>
+<rect width="616.21" height="6" x="0" y="0" class="named"/>
+<rect width="130.79" height="6" x="616.21" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -736,7 +736,7 @@
 <rect width="12" height="12" x="240" y="195" class="named"><title>0x0003abf0 DartEmitterControl (414 bytes)</title></rect>
 <rect width="12" height="12" x="255" y="195" class="named"><title>0x0003ad90 DartsControl (305 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="195" class="named"><title>0x0003aec4 DartEffectControl (99 bytes)</title></rect>
-<rect width="12" height="12" x="285" y="195" class="todo"><title>0x0003af28 FlameEmitterControl (167 bytes)</title></rect>
+<rect width="12" height="12" x="285" y="195" class="named"><title>0x0003af28 FlameEmitterControl (167 bytes)</title></rect>
 <rect width="12" height="12" x="300" y="195" class="todo"><title>0x0003afd0 FlameControl (396 bytes)</title></rect>
 <rect width="12" height="12" x="315" y="195" class="todo"><title>0x0003b15c LavaBurn (188 bytes)</title></rect>
 <rect width="12" height="12" x="330" y="195" class="todo"><title>0x0003b218 LavaSpray (191 bytes)</title></rect>
@@ -882,10 +882,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">77.46%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">22.54%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">77.53%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">22.47%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="578.59" height="6" x="0" y="0" class="named"/>
-<rect width="168.41" height="6" x="578.59" y="0" class="todo"/>
+<rect width="579.16" height="6" x="0" y="0" class="named"/>
+<rect width="167.84" height="6" x="579.16" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.96" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1216,7 +1216,7 @@
 <rect width="9.36" height="8.99" x="571.40" y="174.72" class="named"><title>0x00014f18 InitialisePlayer1 (168 bytes)</title></rect>
 <rect width="9.36" height="8.99" x="571.40" y="186.71" class="named"><title>0x0002975c lara_as_tread (168 bytes)</title></rect>
 <rect width="9.36" height="8.99" x="571.40" y="198.70" class="named"><title>0x0003a8c8 FallingCeiling (168 bytes)</title></rect>
-<rect width="9.36" height="8.92" x="571.40" y="210.69" class="todo"><title>0x0003af28 FlameEmitterControl (167 bytes)</title></rect>
+<rect width="9.36" height="8.92" x="571.40" y="210.69" class="named"><title>0x0003af28 FlameEmitterControl (167 bytes)</title></rect>
 <rect width="9.36" height="8.85" x="571.40" y="222.60" class="todo"><title>0x000459a4 ShellExit (166 bytes)</title></rect>
 <rect width="9.36" height="8.77" x="571.40" y="234.45" class="named"><title>0x0003a4a0 OnTrapDoor (165 bytes)</title></rect>
 <rect width="9.36" height="8.77" x="571.40" y="246.23" class="todo"><title>0x0003c2f4 MummyControl (165 bytes)</title></rect>

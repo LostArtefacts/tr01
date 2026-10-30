@@ -659,3 +659,38 @@ void DartEffectControl(sint16 fx_num)
             KillEffect(fx_num);
     }
 }
+
+void FlameEmitterControl(sint16 item_number)
+{
+    ITEM_INFO *item;
+    FX_INFO *fx;
+    sint16 fx_number;
+
+    item = &items[item_number];
+
+    if (TriggerActive(item))
+    {
+        if (item->data == NULL)
+        {
+            fx_number = CreateEffect(item->room_number);
+            if (fx_number != NO_ITEM)
+            {
+                fx = &effects[fx_number];
+                fx->pos.x_pos = item->pos.x_pos;
+                fx->pos.y_pos = item->pos.y_pos;
+                fx->pos.z_pos = item->pos.z_pos;
+                fx->frame_number = 0;
+                fx->object_number = FLAME;
+                fx->counter = 0;
+            }
+
+            item->data = (void *)(fx_number + 1);
+        }
+    }
+    else if (item->data)
+    {
+        mn_stop_sound_effect(150, NULL);
+        KillEffect((sint16)((int)(item->data) - 1));
+        item->data = NULL;
+    }
+}
