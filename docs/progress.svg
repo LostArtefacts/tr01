@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">82.24% (667)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">17.76% (144)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">82.37% (668)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">17.63% (143)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="614.36" height="6" x="0" y="0" class="named"/>
-<rect width="132.64" height="6" x="614.36" y="0" class="todo"/>
+<rect width="615.28" height="6" x="0" y="0" class="named"/>
+<rect width="131.72" height="6" x="615.28" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -735,7 +735,7 @@
 <rect width="12" height="12" x="225" y="195" class="named"><title>0x0003ab0c DamoclesSwordCollision (228 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="195" class="named"><title>0x0003abf0 DartEmitterControl (414 bytes)</title></rect>
 <rect width="12" height="12" x="255" y="195" class="named"><title>0x0003ad90 DartsControl (305 bytes)</title></rect>
-<rect width="12" height="12" x="270" y="195" class="todo"><title>0x0003aec4 DartEffectControl (99 bytes)</title></rect>
+<rect width="12" height="12" x="270" y="195" class="named"><title>0x0003aec4 DartEffectControl (99 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="195" class="todo"><title>0x0003af28 FlameEmitterControl (167 bytes)</title></rect>
 <rect width="12" height="12" x="300" y="195" class="todo"><title>0x0003afd0 FlameControl (396 bytes)</title></rect>
 <rect width="12" height="12" x="315" y="195" class="todo"><title>0x0003b15c LavaBurn (188 bytes)</title></rect>
@@ -882,10 +882,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">77.41%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">22.59%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">77.46%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">22.54%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="578.25" height="6" x="0" y="0" class="named"/>
-<rect width="168.75" height="6" x="578.25" y="0" class="todo"/>
+<rect width="578.59" height="6" x="0" y="0" class="named"/>
+<rect width="168.41" height="6" x="578.59" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.96" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1344,7 +1344,7 @@
 <rect width="6.04" height="6.76" x="626.67" y="142.91" class="named"><title>0x0001e154 PowerUpFX (100 bytes)</title></rect>
 <rect width="6.04" height="6.76" x="626.67" y="152.67" class="named"><title>0x0001f40c LoadDemo (100 bytes)</title></rect>
 <rect width="6.04" height="6.66" x="626.67" y="162.44" class="named"><title>0x0001d6f0 ControlExplosion1 (99 bytes)</title></rect>
-<rect width="6.04" height="6.66" x="626.67" y="172.10" class="todo"><title>0x0003aec4 DartEffectControl (99 bytes)</title></rect>
+<rect width="6.04" height="6.66" x="626.67" y="172.10" class="named"><title>0x0003aec4 DartEffectControl (99 bytes)</title></rect>
 <rect width="6.04" height="6.57" x="626.67" y="181.76" class="named"><title>0x0001f8c4 S_DrawScreenLine (98 bytes)</title></rect>
 <rect width="6.04" height="6.57" x="626.67" y="191.33" class="named"><title>0x00029e38 lara_as_surfback (98 bytes)</title></rect>
 <rect width="6.04" height="6.57" x="626.67" y="200.90" class="named"><title>0x00029e9c lara_as_surfleft (98 bytes)</title></rect>
