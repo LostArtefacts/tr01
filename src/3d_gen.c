@@ -328,3 +328,16 @@ void phd_RotYXZpack(sint32 rots)
         *(mptr + M21) = r1 >> W2V_SHIFT;
     }
 }
+
+int phd_TranslateRel(sint32 x, sint32 y, sint32 z)
+{
+    sint32 *mptr;
+
+    mptr = phd_mxptr;
+    *(mptr + M03) += *(mptr + M00) * x + *(mptr + M01) * y + *(mptr + M02) * z;
+    *(mptr + M13) += *(mptr + M10) * x + *(mptr + M11) * y + *(mptr + M12) * z;
+    *(mptr + M23) += *(mptr + M20) * x + *(mptr + M21) * y + *(mptr + M22) * z;
+    if ((x = ABS(*(mptr + M03))) > phd_zfar || (y = ABS(*(mptr + M13))) > phd_zfar || (z = ABS(*(mptr + M23))) > phd_zfar)
+        return 0;
+    return 1;
+}

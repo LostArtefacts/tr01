@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">87.18% (707)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">12.82% (104)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">87.30% (708)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">12.70% (103)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="651.21" height="6" x="0" y="0" class="named"/>
-<rect width="95.79" height="6" x="651.21" y="0" class="todo"/>
+<rect width="652.13" height="6" x="0" y="0" class="named"/>
+<rect width="94.87" height="6" x="652.13" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -775,7 +775,7 @@
 <rect width="12" height="12" x="75" y="210" class="named"><title>0x0003dd08 phd_RotZ (160 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="210" class="named"><title>0x0003dda8 phd_RotYXZ (486 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="210" class="named"><title>0x0003df90 phd_RotYXZpack (505 bytes)</title></rect>
-<rect width="12" height="12" x="120" y="210" class="todo"><title>0x0003e18c phd_TranslateRel (180 bytes)</title></rect>
+<rect width="12" height="12" x="120" y="210" class="named"><title>0x0003e18c phd_TranslateRel (180 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="210" class="todo"><title>0x0003e240 phd_TranslateAbs (102 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="210" class="todo"><title>0x0003e2a8 Func3e2a8 (119 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="210" class="todo"><title>0x0003e320 phd_PutPolygons (196 bytes)</title></rect>
@@ -882,10 +882,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">83.22%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">16.78%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">83.30%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">16.70%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="621.63" height="6" x="0" y="0" class="named"/>
-<rect width="125.37" height="6" x="621.63" y="0" class="todo"/>
+<rect width="622.24" height="6" x="0" y="0" class="named"/>
+<rect width="124.76" height="6" x="622.24" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.96" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1202,7 +1202,7 @@
 <rect width="9.78" height="9.57" x="661.61" y="76.52" class="named"><title>0x000296a4 lara_as_glide (182 bytes)</title></rect>
 <rect width="9.78" height="9.57" x="674.39" y="76.52" class="named"><title>0x0003257c GunHit (182 bytes)</title></rect>
 <rect width="9.71" height="9.57" x="687.17" y="76.52" class="named"><title>0x0002d7ec mn_get_fx_slot (181 bytes)</title></rect>
-<rect width="9.64" height="9.57" x="699.87" y="76.52" class="todo"><title>0x0003e18c phd_TranslateRel (180 bytes)</title></rect>
+<rect width="9.64" height="9.57" x="699.87" y="76.52" class="named"><title>0x0003e18c phd_TranslateRel (180 bytes)</title></rect>
 <rect width="9.57" height="9.57" x="712.51" y="76.52" class="named"><title>0x0002fdd4 OnDrawBridge (179 bytes)</title></rect>
 <rect width="9.50" height="9.57" x="725.08" y="76.52" class="named"><title>0x0001de6c dino_stomp_effect (178 bytes)</title></rect>
 <rect width="9.43" height="9.57" x="737.57" y="76.52" class="named"><title>0x0002674c lara_col_fastfall (177 bytes)</title></rect>
