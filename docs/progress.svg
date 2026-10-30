@@ -61,11 +61,11 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">98.42% (808)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0.12% (1)</tspan> · <tspan class="todo">1.46% (12)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">98.54% (809)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0.12% (1)</tspan> · <tspan class="todo">1.34% (11)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="735.17" height="6" x="0" y="0" class="named"/>
-<rect width="0.91" height="6" x="735.17" y="0" class="nonmatching"/>
-<rect width="10.92" height="6" x="736.08" y="0" class="todo"/>
+<rect width="736.08" height="6" x="0" y="0" class="named"/>
+<rect width="0.91" height="6" x="736.08" y="0" class="nonmatching"/>
+<rect width="10.01" height="6" x="736.99" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -879,7 +879,7 @@
 <rect width="12" height="12" x="120" y="240" class="named"><title>0x00046912 VesaBiosCall (98 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="240" class="named"><title>0x00046974 VesaBiosGetInfo (27 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="240" class="named"><title>0x0004698f VesaBiosGetModeInfo (25 bytes)</title></rect>
-<rect width="12" height="12" x="165" y="240" class="todo"><title>0x000469a8 VesaBiosSetMode (57 bytes)</title></rect>
+<rect width="12" height="12" x="165" y="240" class="named"><title>0x000469a8 VesaBiosSetMode (57 bytes)</title></rect>
 <rect width="12" height="12" x="180" y="240" class="todo"><title>0x000469e1 Func469e1 (28 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="240" class="todo"><title>0x000469fd Func469fd (87 bytes)</title></rect>
 <rect width="12" height="12" x="210" y="240" class="todo"><title>0x00046a54 Func46a54 (474 bytes)</title></rect>
@@ -893,11 +893,11 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">99.10%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0.34%</tspan> · <tspan class="todo">0.56%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">99.13%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0.34%</tspan> · <tspan class="todo">0.53%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="740.27" height="6" x="0" y="0" class="named"/>
-<rect width="2.54" height="6" x="740.27" y="0" class="nonmatching"/>
-<rect width="4.18" height="6" x="742.82" y="0" class="todo"/>
+<rect width="740.46" height="6" x="0" y="0" class="named"/>
+<rect width="2.54" height="6" x="740.46" y="0" class="nonmatching"/>
+<rect width="3.99" height="6" x="743.01" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.55" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1468,7 +1468,7 @@
 <rect width="3.99" height="4.27" x="682.06" y="175.45" class="named"><title>0x0001ce24 InitInterpolate (58 bytes)</title></rect>
 <rect width="3.99" height="4.27" x="689.05" y="175.45" class="named"><title>0x00024284 Inv_RingLight (58 bytes)</title></rect>
 <rect width="3.99" height="4.27" x="696.04" y="175.45" class="named"><title>0x00039724 T_AddBackground (58 bytes)</title></rect>
-<rect width="3.87" height="4.27" x="703.02" y="175.45" class="todo"><title>0x000469a8 VesaBiosSetMode (57 bytes)</title></rect>
+<rect width="3.87" height="4.27" x="703.02" y="175.45" class="named"><title>0x000469a8 VesaBiosSetMode (57 bytes)</title></rect>
 <rect width="3.75" height="4.27" x="709.89" y="175.45" class="named"><title>0x00020a78 MakeAmmoString (56 bytes)</title></rect>
 <rect width="3.75" height="4.27" x="716.63" y="175.45" class="named"><title>0x00024d80 InitialiseFXArray (56 bytes)</title></rect>
 <rect width="3.75" height="4.27" x="723.38" y="175.45" class="named"><title>0x0002d8a4 mn_reset_ambient_loudness (56 bytes)</title></rect>

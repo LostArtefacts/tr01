@@ -324,4 +324,34 @@ VesaBiosGetModeInfo_ proc near
     ret
 VesaBiosGetModeInfo_ endp
 
+    public VesaBiosSetMode_
+VesaBiosSetMode_ proc near
+    push    ds
+    push    es
+    push    fs
+    push    gs
+    pusha
+    mov     bx,ax
+    mov     ax,4f02h
+    int     10h
+    cmp     ax,4fh
+    jne     l1
+    mov     ax,4f03h
+    int     10h
+    mov     cx,word ptr [esp+1ch]
+    and     cx,7fffh
+    cmp     cx,bx
+    je      l2
+l1:
+    xor     eax,eax
+l2:
+    mov     dword ptr [esp+1ch],eax
+    popa
+    pop     gs
+    pop     fs
+    pop     es
+    pop     ds
+    ret
+VesaBiosSetMode_ endp
+
     end
