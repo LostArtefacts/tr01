@@ -9,6 +9,8 @@ extern sint32 matrix_stack[];
 extern float phd_leftfloat, phd_rightfloat, phd_topfloat, phd_bottomfloat;
 extern PHD_VECTOR ls_vector_view;
 extern PHD_ANGLE phd_ls_yaw, phd_ls_pitch;
+extern sint32 sort3d_buffer[][2];
+extern sint16 info3d_buffer[];
 
 void phd_GetMatrixAngles(PHD_ANGLE *dest);
 void phd_UnitMatrix(void);
@@ -733,4 +735,11 @@ void phd_PointLight(PHD_3DPOS *destpos, PHD_3DPOS *lightpos)
 
     phd_GetVectorAngles(destpos->x_pos - lightpos->x_pos, destpos->y_pos - lightpos->y_pos, destpos->z_pos - lightpos->z_pos, angles);
     phd_RotateLight(angles[1], angles[0]);
+}
+
+void phd_InitPolyList(void)
+{
+    surfacenum = 0;
+    sort3dptr = (sint32 *)sort3d_buffer;
+    info3dptr = (sint16 *)info3d_buffer;
 }

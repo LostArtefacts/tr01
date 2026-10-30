@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">88.41% (717)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">11.59% (94)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">88.53% (718)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">11.47% (93)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="660.42" height="6" x="0" y="0" class="named"/>
-<rect width="86.58" height="6" x="660.42" y="0" class="todo"/>
+<rect width="661.34" height="6" x="0" y="0" class="named"/>
+<rect width="85.66" height="6" x="661.34" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -785,7 +785,7 @@
 <rect width="12" height="12" x="225" y="210" class="named"><title>0x0003e7c8 calc_roomvert (1107 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="210" class="named"><title>0x0003ec1c phd_RotateLight (227 bytes)</title></rect>
 <rect width="12" height="12" x="255" y="210" class="named"><title>0x0003ed00 phd_PointLight (70 bytes)</title></rect>
-<rect width="12" height="12" x="270" y="210" class="todo"><title>0x0003ed48 phd_InitPolyList (37 bytes)</title></rect>
+<rect width="12" height="12" x="270" y="210" class="named"><title>0x0003ed48 phd_InitPolyList (37 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="210" class="todo"><title>0x0003ed70 phd_SortPolyList (65 bytes)</title></rect>
 <rect width="12" height="12" x="300" y="210" class="todo"><title>0x0003edb4 Func3edb4 (199 bytes)</title></rect>
 <rect width="12" height="12" x="315" y="210" class="todo"><title>0x0003ee7c phd_PrintPolyList (48 bytes)</title></rect>
@@ -882,10 +882,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">84.58%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">15.42%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">84.60%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">15.40%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="631.83" height="6" x="0" y="0" class="named"/>
-<rect width="115.17" height="6" x="631.83" y="0" class="todo"/>
+<rect width="631.95" height="6" x="0" y="0" class="named"/>
+<rect width="115.05" height="6" x="631.95" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.96" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1552,7 +1552,7 @@
 <rect width="2.91" height="2.52" x="700.84" y="214.59" class="named"><title>0x0001cfe4 phd_RotYXZpack_I (37 bytes)</title></rect>
 <rect width="2.91" height="2.52" x="700.84" y="220.11" class="named"><title>0x00024580 Inv_RingMotionRadius (37 bytes)</title></rect>
 <rect width="2.91" height="2.52" x="700.84" y="225.63" class="named"><title>0x0002ffb0 BridgeTilt1Ceiling (37 bytes)</title></rect>
-<rect width="2.91" height="2.52" x="700.84" y="231.15" class="todo"><title>0x0003ed48 phd_InitPolyList (37 bytes)</title></rect>
+<rect width="2.91" height="2.52" x="700.84" y="231.15" class="named"><title>0x0003ed48 phd_InitPolyList (37 bytes)</title></rect>
 <rect width="2.91" height="2.37" x="700.84" y="236.67" class="named"><title>0x00025bd8 lara_as_ppready (36 bytes)</title></rect>
 <rect width="2.91" height="2.37" x="700.84" y="242.04" class="named"><title>0x0002fffc BridgeTilt2Ceiling (36 bytes)</title></rect>
 <rect width="2.91" height="2.37" x="700.84" y="247.41" class="named"><title>0x0003b7fc InitialiseWarrior2 (36 bytes)</title></rect>
