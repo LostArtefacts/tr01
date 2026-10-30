@@ -815,7 +815,7 @@ address,size,name,symbol
 0x000469fd,87,ScreenDumpVesa,ScreenDumpVesa_
 0x00046a54,474,ScreenPartialDumpVesa,ScreenPartialDumpVesa_
 0x00046c2e,19,ScreenWaitVbl,ScreenWaitVbl_
-0x00046c41,26,Func46c41,
+0x00046c41,26,PalSetBorder,PalSetBorder_
 0x00046c5b,22,Func46c5b,
 0x00046c71,183,FadeTick,FadeTick_
 0x00046d28,137,VgaGetFont,VgaGetFont_

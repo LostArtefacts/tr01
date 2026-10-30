@@ -616,4 +616,22 @@ l2:
     ret
 ScreenWaitVbl_ endp
 
+    public PalSetBorder_
+PalSetBorder_ proc near
+    push    edx
+    rol     eax,8
+    mov     dx,3c8h
+    xor     al,al
+    out     dx,al
+    inc     edx
+    rol     eax,8
+    out     dx,al
+    rol     eax,8
+    out     dx,al
+    rol     eax,8
+    out     dx,al
+    pop     edx
+    ret
+PalSetBorder_ endp
+
     end
