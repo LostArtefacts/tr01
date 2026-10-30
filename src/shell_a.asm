@@ -634,4 +634,20 @@ PalSetBorder_ proc near
     ret
 PalSetBorder_ endp
 
+    public PalInsertColours_
+PalInsertColours_ proc near
+    call    ScreenWaitVbl_
+    mov     dx,3c8h
+    out     dx,al
+    inc     edx
+    lea     ecx,[ecx+ecx*2]
+l1:
+    mov     al,byte ptr [esi]
+    out     dx,al
+    inc     esi
+    dec     ecx
+    jne     l1
+    ret
+PalInsertColours_ endp
+
     end

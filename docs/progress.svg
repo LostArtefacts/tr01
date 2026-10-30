@@ -61,11 +61,11 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">99.39% (816)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0.12% (1)</tspan> · <tspan class="todo">0.49% (4)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">99.51% (817)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0.12% (1)</tspan> · <tspan class="todo">0.37% (3)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="742.45" height="6" x="0" y="0" class="named"/>
-<rect width="0.91" height="6" x="742.45" y="0" class="nonmatching"/>
-<rect width="3.64" height="6" x="743.36" y="0" class="todo"/>
+<rect width="743.36" height="6" x="0" y="0" class="named"/>
+<rect width="0.91" height="6" x="743.36" y="0" class="nonmatching"/>
+<rect width="2.73" height="6" x="744.27" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -885,7 +885,7 @@
 <rect width="12" height="12" x="210" y="240" class="named"><title>0x00046a54 ScreenPartialDumpVesa (474 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="240" class="named"><title>0x00046c2e ScreenWaitVbl (19 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="240" class="named"><title>0x00046c41 PalSetBorder (26 bytes)</title></rect>
-<rect width="12" height="12" x="255" y="240" class="todo"><title>0x00046c5b Func46c5b (22 bytes)</title></rect>
+<rect width="12" height="12" x="255" y="240" class="named"><title>0x00046c5b PalInsertColours (22 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="240" class="todo"><title>0x00046c71 FadeTick (183 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="240" class="todo"><title>0x00046d28 VgaGetFont (137 bytes)</title></rect>
 <rect width="12" height="12" x="300" y="240" class="todo"><title>0x00046db1 VgaSetFont (157 bytes)</title></rect>
@@ -893,11 +893,11 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">99.43%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0.34%</tspan> · <tspan class="todo">0.23%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">99.44%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0.34%</tspan> · <tspan class="todo">0.22%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="742.77" height="6" x="0" y="0" class="named"/>
-<rect width="2.54" height="6" x="742.77" y="0" class="nonmatching"/>
-<rect width="1.69" height="6" x="745.31" y="0" class="todo"/>
+<rect width="742.84" height="6" x="0" y="0" class="named"/>
+<rect width="2.54" height="6" x="742.84" y="0" class="nonmatching"/>
+<rect width="1.61" height="6" x="745.39" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.55" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1636,7 +1636,7 @@
 <rect width="1.62" height="1.17" x="720.73" y="241.31" class="named"><title>0x00026eb8 lara_col_slideback (22 bytes)</title></rect>
 <rect width="1.62" height="1.17" x="720.73" y="245.48" class="named"><title>0x0002a13c lara_col_surfback (22 bytes)</title></rect>
 <rect width="1.62" height="1.17" x="720.73" y="249.66" class="named"><title>0x0002a170 lara_col_surfright (22 bytes)</title></rect>
-<rect width="1.62" height="1.17" x="720.73" y="253.83" class="todo"><title>0x00046c5b Func46c5b (22 bytes)</title></rect>
+<rect width="1.62" height="1.17" x="720.73" y="253.83" class="named"><title>0x00046c5b PalInsertColours (22 bytes)</title></rect>
 <rect width="1.35" height="1.23" x="725.35" y="232.97" class="named"><title>0x0001e2d4 S_LoadLevel (21 bytes)</title></rect>
 <rect width="1.35" height="1.23" x="729.70" y="232.97" class="named"><title>0x0002ff2c BridgeFlatCeiling (21 bytes)</title></rect>
 <rect width="1.14" height="1.23" x="734.05" y="232.97" class="named"><title>0x0001a2a0 S_NoFade (20 bytes)</title></rect>
