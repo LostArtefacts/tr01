@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">77.31% (627)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">22.69% (184)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">77.44% (628)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">22.56% (183)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="577.52" height="6" x="0" y="0" class="named"/>
-<rect width="169.48" height="6" x="577.52" y="0" class="todo"/>
+<rect width="578.44" height="6" x="0" y="0" class="named"/>
+<rect width="168.56" height="6" x="578.44" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -694,7 +694,7 @@
 <rect width="12" height="12" x="360" y="180" class="named"><title>0x0003950c BaddieBiteEffect (81 bytes)</title></rect>
 <rect width="12" height="12" x="375" y="180" class="named"><title>0x00039560 T_InitPrint (34 bytes)</title></rect>
 <rect width="12" height="12" x="390" y="180" class="named"><title>0x00039584 T_Print (281 bytes)</title></rect>
-<rect width="12" height="12" x="405" y="180" class="todo"><title>0x000396a0 T_ChangeText (59 bytes)</title></rect>
+<rect width="12" height="12" x="405" y="180" class="named"><title>0x000396a0 T_ChangeText (59 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="180" class="todo"><title>0x000396dc Func396dc (3 bytes)</title></rect>
 <rect width="12" height="12" x="435" y="180" class="todo"><title>0x000396e0 Func396e0 (5 bytes)</title></rect>
 <rect width="12" height="12" x="450" y="180" class="todo"><title>0x000396e8 Func396e8 (5 bytes)</title></rect>
@@ -882,10 +882,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">74.64%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">25.36%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">74.67%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">25.33%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="557.56" height="6" x="0" y="0" class="named"/>
-<rect width="189.44" height="6" x="557.56" y="0" class="todo"/>
+<rect width="557.76" height="6" x="0" y="0" class="named"/>
+<rect width="189.24" height="6" x="557.76" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.96" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1446,7 +1446,7 @@
 <rect width="4.40" height="4.16" x="661.31" y="222.69" class="named"><title>0x00020530 GetSavedGamesList (60 bytes)</title></rect>
 <rect width="4.40" height="4.16" x="661.31" y="229.85" class="named"><title>0x00026038 lara_as_fastdive (60 bytes)</title></rect>
 <rect width="4.40" height="4.04" x="661.31" y="237" class="named"><title>0x000235d4 RingActive (59 bytes)</title></rect>
-<rect width="4.40" height="4.04" x="661.31" y="244.04" class="todo"><title>0x000396a0 T_ChangeText (59 bytes)</title></rect>
+<rect width="4.40" height="4.04" x="661.31" y="244.04" class="named"><title>0x000396a0 T_ChangeText (59 bytes)</title></rect>
 <rect width="4.40" height="3.92" x="661.31" y="251.08" class="named"><title>0x0001ce24 InitInterpolate (58 bytes)</title></rect>
 <rect width="4.33" height="3.98" x="668.70" y="177.24" class="named"><title>0x00024284 Inv_RingLight (58 bytes)</title></rect>
 <rect width="4.33" height="3.98" x="668.70" y="184.22" class="todo"><title>0x00039724 T_AddBackground (58 bytes)</title></rect>

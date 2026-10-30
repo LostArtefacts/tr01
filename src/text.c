@@ -1,4 +1,5 @@
 #include "game.h"
+#include <stdio.h>
 #include <string.h>
 
 sint16 T_GetStringLen(char *string);
@@ -66,6 +67,17 @@ TEXTSTRING *T_Print(sint16 xpos, sint16 ypos, sint16 zpos, char *string)
     T_numStrings++;
 
     return textString;
+}
+
+void T_ChangeText(TEXTSTRING *textString, char *string)
+{
+    if (textString->flags & T_ACTIVE)
+    {
+        if (T_GetStringLen(string) > MAX_STRING_SIZE)
+            string[MAX_STRING_SIZE - 1] = 0;
+
+        sprintf(textString->string, string);
+    }
 }
 
 sint16 T_GetStringLen(char *string)
