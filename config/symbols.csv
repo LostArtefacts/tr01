@@ -801,7 +801,7 @@ address,size,name,symbol
 0x0004670a,17,VgaGetRows,VgaGetRows_
 0x0004671b,71,VgaSetRows,VgaSetRows_
 0x00046762,41,ScreenClear,ScreenClear_
-0x0004678b,102,Func4678b,
+0x0004678b,102,ScreenPartialClear,ScreenPartialClear_
 0x000467f1,24,ScreenDump,ScreenDump_
 0x00046809,24,ScreenPartialDump,ScreenPartialDump_
 0x00046821,38,Func46821,

@@ -61,11 +61,11 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">97.56% (801)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0.12% (1)</tspan> · <tspan class="todo">2.31% (19)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">97.69% (802)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0.12% (1)</tspan> · <tspan class="todo">2.19% (18)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="728.80" height="6" x="0" y="0" class="named"/>
-<rect width="0.91" height="6" x="728.80" y="0" class="nonmatching"/>
-<rect width="17.29" height="6" x="729.71" y="0" class="todo"/>
+<rect width="729.71" height="6" x="0" y="0" class="named"/>
+<rect width="0.91" height="6" x="729.71" y="0" class="nonmatching"/>
+<rect width="16.38" height="6" x="730.62" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -870,7 +870,7 @@
 <rect width="12" height="12" x="735" y="225" class="named"><title>0x0004670a VgaGetRows (17 bytes)</title></rect>
 <rect width="12" height="12" x="0" y="240" class="named"><title>0x0004671b VgaSetRows (71 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="240" class="named"><title>0x00046762 ScreenClear (41 bytes)</title></rect>
-<rect width="12" height="12" x="30" y="240" class="todo"><title>0x0004678b Func4678b (102 bytes)</title></rect>
+<rect width="12" height="12" x="30" y="240" class="named"><title>0x0004678b ScreenPartialClear (102 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="240" class="todo"><title>0x000467f1 ScreenDump (24 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="240" class="todo"><title>0x00046809 ScreenPartialDump (24 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="240" class="todo"><title>0x00046821 Func46821 (38 bytes)</title></rect>
@@ -893,11 +893,11 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">98.88%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0.34%</tspan> · <tspan class="todo">0.78%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">98.92%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0.34%</tspan> · <tspan class="todo">0.74%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="738.61" height="6" x="0" y="0" class="named"/>
-<rect width="2.54" height="6" x="738.61" y="0" class="nonmatching"/>
-<rect width="5.85" height="6" x="741.15" y="0" class="todo"/>
+<rect width="738.95" height="6" x="0" y="0" class="named"/>
+<rect width="2.54" height="6" x="738.95" y="0" class="nonmatching"/>
+<rect width="5.50" height="6" x="741.50" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.55" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1353,7 +1353,7 @@
 <rect width="6.51" height="6.48" x="702.91" y="132.48" class="named"><title>0x00015fb8 UpdateLaraRoom (103 bytes)</title></rect>
 <rect width="6.42" height="6.48" x="712.42" y="132.48" class="named"><title>0x0002f4b8 DrawUnclippedItem (102 bytes)</title></rect>
 <rect width="6.42" height="6.48" x="721.84" y="132.48" class="named"><title>0x0003e240 phd_TranslateAbs (102 bytes)</title></rect>
-<rect width="6.42" height="6.48" x="731.26" y="132.48" class="todo"><title>0x0004678b Func4678b (102 bytes)</title></rect>
+<rect width="6.42" height="6.48" x="731.26" y="132.48" class="named"><title>0x0004678b ScreenPartialClear (102 bytes)</title></rect>
 <rect width="6.33" height="6.48" x="740.67" y="132.48" class="named"><title>0x00017354 TranslateItem (101 bytes)</title></rect>
 <rect width="6.68" height="6.13" x="624.98" y="141.96" class="named"><title>0x0003d9e8 phd_GetVectorAngles (101 bytes)</title></rect>
 <rect width="6.68" height="6.04" x="624.98" y="151.10" class="named"><title>0x0001d84c ControlTwinkle (100 bytes)</title></rect>

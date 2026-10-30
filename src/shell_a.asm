@@ -98,4 +98,53 @@ ScreenClear_ proc near
     ret
 ScreenClear_ endp
 
+    public ScreenPartialClear_
+ScreenPartialClear_ proc near
+    pusha
+    cld
+    mov     esi,dword ptr _gamedata
+    movzx   ecx,word ptr [esi]
+    movzx   eax,word ptr [esi+12h]
+    mul     ecx
+    mov     cx,word ptr [edi+10h]
+    and     cl,0fch
+    add     eax,ecx
+    mov     edi,eax
+    movzx   ebx,word ptr [esi]
+    movzx   ebp,word ptr [esi+14h]
+    add     ebp,3
+    and     bp,0fffch
+    sub     ebx,ebp
+    js      l2
+    je      l3
+    movsx   edx,word ptr [esi+16h]
+    test    edx,edx
+    jle     l2
+    add     edi,dword ptr [esi+0ah]
+    shr     ebp,2
+    xor     eax,eax
+l1:
+    mov     ecx,ebp
+    rep stosd
+    add     edi,ebx
+    dec     edx
+    jne     l1
+l2:
+    popa
+    ret
+l3:
+    movzx   ecx,word ptr [esi]
+    movzx   eax,word ptr [esi+16h]
+    test    eax,eax
+    jle     l2
+    mul     ecx
+    add     edi,dword ptr [esi+0ah]
+    mov     ecx,eax
+    shr     ecx,2
+    xor     eax,eax
+    rep stosd
+    popa
+    ret
+ScreenPartialClear_ endp
+
     end
