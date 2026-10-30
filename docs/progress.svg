@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">83.60% (678)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">16.40% (133)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">83.72% (679)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">16.28% (132)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="624.50" height="6" x="0" y="0" class="named"/>
-<rect width="122.50" height="6" x="624.50" y="0" class="todo"/>
+<rect width="625.42" height="6" x="0" y="0" class="named"/>
+<rect width="121.58" height="6" x="625.42" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -746,7 +746,7 @@
 <rect width="12" height="12" x="390" y="195" class="named"><title>0x0003b7fc InitialiseWarrior2 (36 bytes)</title></rect>
 <rect width="12" height="12" x="405" y="195" class="named"><title>0x0003b854 FlyerControl (1563 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="195" class="named"><title>0x0003be70 ControlMissile (627 bytes)</title></rect>
-<rect width="12" height="12" x="435" y="195" class="todo"><title>0x0003c0e4 ShootAtLara (213 bytes)</title></rect>
+<rect width="12" height="12" x="435" y="195" class="named"><title>0x0003c0e4 ShootAtLara (213 bytes)</title></rect>
 <rect width="12" height="12" x="450" y="195" class="todo"><title>0x0003c1bc ShardGun (122 bytes)</title></rect>
 <rect width="12" height="12" x="465" y="195" class="todo"><title>0x0003c238 RocketGun (122 bytes)</title></rect>
 <rect width="12" height="12" x="480" y="195" class="todo"><title>0x0003c2b4 InitialiseMummy (63 bytes)</title></rect>
@@ -882,10 +882,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">79.48%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">20.52%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">79.58%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">20.42%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="593.73" height="6" x="0" y="0" class="named"/>
-<rect width="153.27" height="6" x="593.73" y="0" class="todo"/>
+<rect width="594.46" height="6" x="0" y="0" class="named"/>
+<rect width="152.54" height="6" x="594.46" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.96" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1162,7 +1162,7 @@
 <rect width="10.95" height="10.66" x="544.58" y="190.48" class="named"><title>0x0002a7e8 InitialiseNewWeapon (216 bytes)</title></rect>
 <rect width="10.95" height="10.59" x="544.58" y="204.14" class="named"><title>0x00015e50 GetNearByRooms (215 bytes)</title></rect>
 <rect width="10.95" height="10.47" x="544.58" y="217.73" class="named"><title>0x00026540 lara_col_fastback (213 bytes)</title></rect>
-<rect width="10.95" height="10.47" x="544.58" y="231.19" class="todo"><title>0x0003c0e4 ShootAtLara (213 bytes)</title></rect>
+<rect width="10.95" height="10.47" x="544.58" y="231.19" class="named"><title>0x0003c0e4 ShootAtLara (213 bytes)</title></rect>
 <rect width="10.95" height="10.34" x="544.58" y="244.66" class="named"><title>0x0001283c BadFloor (211 bytes)</title></rect>
 <rect width="11.06" height="10.11" x="558.54" y="63.41" class="named"><title>0x00027140 lara_col_roll2 (209 bytes)</title></rect>
 <rect width="10.99" height="10.11" x="572.60" y="63.41" class="named"><title>0x00027a74 LaraSlideEdgeJump (208 bytes)</title></rect>
