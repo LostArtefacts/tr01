@@ -166,4 +166,69 @@ ScreenDumpVga_ proc near
     ret
 ScreenDumpVga_ endp
 
+    public ScreenPartialDumpVga_
+ScreenPartialDumpVga_ proc near
+    push    ebp
+    mov     ebp,esp
+    add     esp,0fffffffch
+    pusha
+    mov     edi,dword ptr _gamedata
+    xor     eax,eax
+    xor     ecx,ecx
+    mov     cx,word ptr [edi]
+    mov     ax,word ptr [edi+12h]
+    mul     ecx
+    mov     cx,word ptr [edi+10h]
+    and     ecx,0fffch
+    add     eax,ecx
+    mov     dword ptr [ebp-4],eax
+    xor     ebx,ebx
+    mov     bx,word ptr [edi]
+    mov     ax,word ptr [edi+14h]
+    add     ax,3
+    and     eax,0fffch
+    sub     ebx,eax
+    jl      l2
+    je      l3
+    mov     dx,word ptr [edi+16h]
+    test    dx,dx
+    jle     l2
+    mov     ecx,dword ptr [ebp-4]
+    mov     esi,dword ptr [edi+0ah]
+    add     esi,ecx
+    mov     edi,0a0000h
+    add     edi,ecx
+    cld
+    sar     eax,2
+l1:
+    mov     ecx,eax
+    rep movsd
+    add     esi,ebx
+    add     edi,ebx
+    dec     dx
+    jne     l1
+l2:
+    popa
+    leave
+    ret
+l3:
+    mov     cx,word ptr [edi]
+    mov     ax,word ptr [edi+16h]
+    test    ax,ax
+    jle     l2
+    mul     ecx
+    mov     ecx,eax
+    sar     ecx,2
+    mov     eax,dword ptr [ebp-4]
+    mov     esi,dword ptr [edi+0ah]
+    add     esi,eax
+    mov     edi,0a0000h
+    add     edi,eax
+    cld
+    rep movsd
+    popa
+    leave
+    ret
+ScreenPartialDumpVga_ endp
+
     end

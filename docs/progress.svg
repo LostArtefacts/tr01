@@ -61,11 +61,11 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">97.81% (803)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0.12% (1)</tspan> · <tspan class="todo">2.07% (17)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">97.93% (804)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0.12% (1)</tspan> · <tspan class="todo">1.95% (16)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="730.62" height="6" x="0" y="0" class="named"/>
-<rect width="0.91" height="6" x="730.62" y="0" class="nonmatching"/>
-<rect width="15.47" height="6" x="731.53" y="0" class="todo"/>
+<rect width="731.53" height="6" x="0" y="0" class="named"/>
+<rect width="0.91" height="6" x="731.53" y="0" class="nonmatching"/>
+<rect width="14.56" height="6" x="732.44" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -874,7 +874,7 @@
 <rect width="12" height="12" x="45" y="240" class="todo"><title>0x000467f1 ScreenDump (24 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="240" class="todo"><title>0x00046809 ScreenPartialDump (24 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="240" class="named"><title>0x00046821 ScreenDumpVga (38 bytes)</title></rect>
-<rect width="12" height="12" x="90" y="240" class="todo"><title>0x00046847 Func46847 (148 bytes)</title></rect>
+<rect width="12" height="12" x="90" y="240" class="named"><title>0x00046847 ScreenPartialDumpVga (148 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="240" class="todo"><title>0x000468db Func468db (55 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="240" class="todo"><title>0x00046912 Func46912 (98 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="240" class="todo"><title>0x00046974 VesaBiosGetInfo (27 bytes)</title></rect>
@@ -893,11 +893,11 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">98.94%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0.34%</tspan> · <tspan class="todo">0.72%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">99.01%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0.34%</tspan> · <tspan class="todo">0.65%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="739.08" height="6" x="0" y="0" class="named"/>
-<rect width="2.54" height="6" x="739.08" y="0" class="nonmatching"/>
-<rect width="5.38" height="6" x="741.62" y="0" class="todo"/>
+<rect width="739.58" height="6" x="0" y="0" class="named"/>
+<rect width="2.54" height="6" x="739.58" y="0" class="nonmatching"/>
+<rect width="4.88" height="6" x="742.12" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.55" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1260,7 +1260,7 @@
 <rect width="8.01" height="8.77" x="695.03" y="90.08" class="named"><title>0x00011b9c TargetBox (148 bytes)</title></rect>
 <rect width="8.01" height="8.77" x="706.04" y="90.08" class="named"><title>0x0001a320 DrawPhaseCinematic (148 bytes)</title></rect>
 <rect width="8.01" height="8.77" x="717.05" y="90.08" class="named"><title>0x00045f6c JoySetCentre (148 bytes)</title></rect>
-<rect width="8.01" height="8.77" x="728.06" y="90.08" class="todo"><title>0x00046847 Func46847 (148 bytes)</title></rect>
+<rect width="8.01" height="8.77" x="728.06" y="90.08" class="named"><title>0x00046847 ScreenPartialDumpVga (148 bytes)</title></rect>
 <rect width="7.94" height="8.77" x="739.06" y="90.08" class="named"><title>0x000462e4 MemAllocReal (147 bytes)</title></rect>
 <rect width="8.23" height="8.38" x="592.97" y="101.85" class="named"><title>0x00014534 FixedCamera (146 bytes)</title></rect>
 <rect width="8.23" height="8.38" x="592.97" y="113.22" class="named"><title>0x00027304 lara_col_fastdive (146 bytes)</title></rect>
