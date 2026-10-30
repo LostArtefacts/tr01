@@ -1,6 +1,7 @@
 # tr01: Tomb Raider, the DOS TOMB.EXE (TOMBno3Dfx.EXE in the GOG release)
 
 [game]
+format = "le"
 name = "tomb"
 title = "TOMB.EXE"
 dir = "orig/tomb"
