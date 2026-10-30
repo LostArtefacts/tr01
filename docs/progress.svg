@@ -61,11 +61,11 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">96.83% (795)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0.12% (1)</tspan> · <tspan class="todo">3.05% (25)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">96.95% (796)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0.12% (1)</tspan> · <tspan class="todo">2.92% (24)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="723.34" height="6" x="0" y="0" class="named"/>
-<rect width="0.91" height="6" x="723.34" y="0" class="nonmatching"/>
-<rect width="22.75" height="6" x="724.25" y="0" class="todo"/>
+<rect width="724.25" height="6" x="0" y="0" class="named"/>
+<rect width="0.91" height="6" x="724.25" y="0" class="nonmatching"/>
+<rect width="21.84" height="6" x="725.16" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -833,7 +833,7 @@
 <rect width="12" height="12" x="180" y="225" class="named"><title>0x00044895 gourA (384 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="225" class="named"><title>0x00044a15 gtmapA (765 bytes)</title></rect>
 <rect width="12" height="12" x="210" y="225" class="named"><title>0x00044d12 wgtmapA (833 bytes)</title></rect>
-<rect width="12" height="12" x="225" y="225" class="todo"><title>0x00045053 Func45053 (626 bytes)</title></rect>
+<rect width="12" height="12" x="225" y="225" class="named"><title>0x00045053 draw_scaled_spriteA (626 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="225" class="named"><title>0x000452d0 phd_FixedDivide (17 bytes)</title></rect>
 <rect width="12" height="12" x="255" y="225" class="named"><title>0x000452e1 calc_object_verticesA_noclip (200 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="225" class="named"><title>0x000453a9 calc_object_verticesA_win (344 bytes)</title></rect>
@@ -893,11 +893,11 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">98.53%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0.34%</tspan> · <tspan class="todo">1.13%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">98.81%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0.34%</tspan> · <tspan class="todo">0.85%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="735.99" height="6" x="0" y="0" class="named"/>
-<rect width="2.54" height="6" x="735.99" y="0" class="nonmatching"/>
-<rect width="8.46" height="6" x="738.54" y="0" class="todo"/>
+<rect width="738.11" height="6" x="0" y="0" class="named"/>
+<rect width="2.54" height="6" x="738.11" y="0" class="nonmatching"/>
+<rect width="6.35" height="6" x="740.65" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.55" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -998,7 +998,7 @@
 <rect width="20.96" height="20.16" x="366.46" y="143.54" class="named"><title>0x00011674 CreatureAIInfo (634 bytes)</title></rect>
 <rect width="20.96" height="20.02" x="366.46" y="166.70" class="named"><title>0x000421d0 ins_objectG4 (630 bytes)</title></rect>
 <rect width="20.96" height="19.91" x="366.46" y="189.72" class="named"><title>0x0003be70 ControlMissile (627 bytes)</title></rect>
-<rect width="20.96" height="19.87" x="366.46" y="212.63" class="todo"><title>0x00045053 Func45053 (626 bytes)</title></rect>
+<rect width="20.96" height="19.87" x="366.46" y="212.63" class="named"><title>0x00045053 draw_scaled_spriteA (626 bytes)</title></rect>
 <rect width="20.96" height="19.50" x="366.46" y="235.50" class="named"><title>0x00039da8 RollingBallControl (616 bytes)</title></rect>
 <rect width="19.62" height="20.18" x="390.42" y="0" class="named"><title>0x0002f00c TestBlockPull (599 bytes)</title></rect>
 <rect width="19.62" height="19.67" x="390.42" y="23.18" class="named"><title>0x0003f910 ZedClipper (586 bytes)</title></rect>

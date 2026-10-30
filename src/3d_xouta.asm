@@ -4,8 +4,10 @@
     extrn _depthq_table:byte
     extrn _gouraud_table:byte
     extrn _phd_scrwidth:dword
+    extrn _phd_winheight:dword
     extrn _phd_winptr:dword
     extrn _phd_winwidth:dword
+    extrn _phdsprinfo:dword
     extrn _xbuffer:word
 
     .code
@@ -864,5 +866,275 @@ l23:
     popa
     ret
 wgtmapA_ endp
+
+    public draw_scaled_spriteA_
+draw_scaled_spriteA_ proc near
+    pusha
+    sub     esp,34h
+    mov     esi,eax
+    movsx   eax,word ptr [eax]
+    movsx   edx,word ptr [esi+2]
+    movsx   ecx,word ptr [esi+4]
+    movsx   ebx,word ptr [esi+6]
+    cmp     eax,ecx
+    jge     l1
+    cmp     edx,ebx
+    jge     l1
+    test    ecx,ecx
+    jle     l1
+    test    ebx,ebx
+    jle     l1
+    cmp     eax,dword ptr _phd_winwidth
+    jge     l1
+    cmp     edx,dword ptr _phd_winheight
+    jl      l2
+l1:
+    jmp     l26
+l2:
+    mov     dword ptr [esp+20h],eax
+    mov     dword ptr [esp+24h],edx
+    mov     dword ptr [esp+28h],ecx
+    mov     dword ptr [esp+2ch],ebx
+    movzx   ebp,word ptr [esi+8]
+    shl     ebp,4
+    add     ebp,offset _phdsprinfo
+    sub     ecx,eax
+    sub     ebx,edx
+    movzx   eax,word ptr [ebp+4]
+    shl     eax,8
+    cdq
+    idiv    ecx
+    mov     dword ptr [esp+14h],eax
+    movzx   eax,word ptr [ebp+6]
+    shl     eax,8
+    cdq
+    idiv    ebx
+    mov     dword ptr [esp+18h],eax
+    xor     eax,eax
+    mov     dword ptr [esp+0ch],eax
+    mov     dword ptr [esp+10h],eax
+    mov     eax,dword ptr [esp+20h]
+    test    eax,eax
+    jge     l3
+    imul    eax,dword ptr [esp+14h]
+    sub     dword ptr [esp+0ch],eax
+    xor     eax,eax
+l3:
+    mov     ebx,dword ptr [esp+24h]
+    test    ebx,ebx
+    jge     l4
+    imul    ebx,dword ptr [esp+18h]
+    sub     dword ptr [esp+10h],ebx
+    xor     ebx,ebx
+l4:
+    mov     ecx,dword ptr [esp+28h]
+    cmp     ecx,dword ptr _phd_winwidth
+    jle     l5
+    mov     ecx,dword ptr _phd_winwidth
+l5:
+    mov     edx,dword ptr [esp+2ch]
+    cmp     edx,dword ptr _phd_winheight
+    jle     l6
+    mov     edx,dword ptr _phd_winheight
+l6:
+    sub     ecx,eax
+    sub     edx,ebx
+    mov     edi,eax
+    add     edi,dword ptr _phd_winptr
+    mov     eax,_phd_scrwidth
+    imul    ebx,eax
+    add     edi,ebx
+    sub     eax,ecx
+    mov     dword ptr [esp+30h],eax
+    mov     eax,ecx
+    neg     eax
+    and     eax,0fh
+    shl     eax,4
+    mov     dword ptr l27+1,eax
+    dec     ecx
+    sar     ecx,4
+    mov     dword ptr [esp+8],ecx
+    mov     dword ptr [esp+4],edx
+    mov     eax,dword ptr [esp+0ch]
+    sar     eax,10h
+    add     eax,dword ptr [ebp+0]
+    shl     dword ptr [esp+0ch],10h
+    mov     dword ptr [esp+1ch],eax
+    mov     edx,dword ptr [esp+14h]
+    mov     ebp,edx
+    shl     edx,10h
+    sar     ebp,10h
+    movsx   ebx,byte ptr [esi+0bh]
+    shl     ebx,8
+    add     ebx,offset _depthq_table
+    xor     eax,eax
+l7:
+    mov     esi,dword ptr [esp+8]
+    mov     dword ptr [esp],esi
+    mov     esi,dword ptr [esp+10h]
+    sar     esi,10h
+    mov     ecx,dword ptr [esp+0ch]
+    shl     esi,8
+    add     esi,dword ptr [esp+1ch]
+l27:
+    jmp     l24
+l8:
+    mov     al,byte ptr [esi]
+    or      al,al
+    je      l9
+    mov     al,byte ptr [eax+ebx*1]
+    mov     byte ptr [edi],al
+l9:
+    add     ecx,edx
+    adc     esi,ebp
+    inc     edi
+    mov     al,byte ptr [esi]
+    or      al,al
+    je      l10
+    mov     al,byte ptr [eax+ebx*1]
+    mov     byte ptr [edi],al
+l10:
+    add     ecx,edx
+    adc     esi,ebp
+    inc     edi
+    mov     al,byte ptr [esi]
+    or      al,al
+    je      l11
+    mov     al,byte ptr [eax+ebx*1]
+    mov     byte ptr [edi],al
+l11:
+    add     ecx,edx
+    adc     esi,ebp
+    inc     edi
+    mov     al,byte ptr [esi]
+    or      al,al
+    je      l12
+    mov     al,byte ptr [eax+ebx*1]
+    mov     byte ptr [edi],al
+l12:
+    add     ecx,edx
+    adc     esi,ebp
+    inc     edi
+    mov     al,byte ptr [esi]
+    or      al,al
+    je      l13
+    mov     al,byte ptr [eax+ebx*1]
+    mov     byte ptr [edi],al
+l13:
+    add     ecx,edx
+    adc     esi,ebp
+    inc     edi
+    mov     al,byte ptr [esi]
+    or      al,al
+    je      l14
+    mov     al,byte ptr [eax+ebx*1]
+    mov     byte ptr [edi],al
+l14:
+    add     ecx,edx
+    adc     esi,ebp
+    inc     edi
+    mov     al,byte ptr [esi]
+    or      al,al
+    je      l15
+    mov     al,byte ptr [eax+ebx*1]
+    mov     byte ptr [edi],al
+l15:
+    add     ecx,edx
+    adc     esi,ebp
+    inc     edi
+    mov     al,byte ptr [esi]
+    or      al,al
+    je      l16
+    mov     al,byte ptr [eax+ebx*1]
+    mov     byte ptr [edi],al
+l16:
+    add     ecx,edx
+    adc     esi,ebp
+    inc     edi
+    mov     al,byte ptr [esi]
+    or      al,al
+    je      l17
+    mov     al,byte ptr [eax+ebx*1]
+    mov     byte ptr [edi],al
+l17:
+    add     ecx,edx
+    adc     esi,ebp
+    inc     edi
+    mov     al,byte ptr [esi]
+    or      al,al
+    je      l18
+    mov     al,byte ptr [eax+ebx*1]
+    mov     byte ptr [edi],al
+l18:
+    add     ecx,edx
+    adc     esi,ebp
+    inc     edi
+    mov     al,byte ptr [esi]
+    or      al,al
+    je      l19
+    mov     al,byte ptr [eax+ebx*1]
+    mov     byte ptr [edi],al
+l19:
+    add     ecx,edx
+    adc     esi,ebp
+    inc     edi
+    mov     al,byte ptr [esi]
+    or      al,al
+    je      l20
+    mov     al,byte ptr [eax+ebx*1]
+    mov     byte ptr [edi],al
+l20:
+    add     ecx,edx
+    adc     esi,ebp
+    inc     edi
+    mov     al,byte ptr [esi]
+    or      al,al
+    je      l21
+    mov     al,byte ptr [eax+ebx*1]
+    mov     byte ptr [edi],al
+l21:
+    add     ecx,edx
+    adc     esi,ebp
+    inc     edi
+    mov     al,byte ptr [esi]
+    or      al,al
+    je      l22
+    mov     al,byte ptr [eax+ebx*1]
+    mov     byte ptr [edi],al
+l22:
+    add     ecx,edx
+    adc     esi,ebp
+    inc     edi
+    mov     al,byte ptr [esi]
+    or      al,al
+    je      l23
+    mov     al,byte ptr [eax+ebx*1]
+    mov     byte ptr [edi],al
+l23:
+    add     ecx,edx
+    adc     esi,ebp
+    inc     edi
+l24:
+    mov     al,byte ptr [esi]
+    or      al,al
+    je      l25
+    mov     al,byte ptr [eax+ebx*1]
+    mov     byte ptr [edi],al
+l25:
+    add     ecx,edx
+    adc     esi,ebp
+    inc     edi
+    dec     dword ptr [esp]
+    jns     l8
+    add     edi,dword ptr [esp+30h]
+    mov     ecx,dword ptr [esp+18h]
+    add     dword ptr [esp+10h],ecx
+    dec     dword ptr [esp+4]
+    jne     l7
+l26:
+    add     esp,34h
+    popa
+    ret
+draw_scaled_spriteA_ endp
 
     end

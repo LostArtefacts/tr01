@@ -764,7 +764,7 @@ address,size,name,symbol
 0x00044895,384,gourA,gourA_
 0x00044a15,765,gtmapA,gtmapA_
 0x00044d12,833,wgtmapA,wgtmapA_
-0x00045053,626,Func45053,
+0x00045053,626,draw_scaled_spriteA,draw_scaled_spriteA_
 0x000452d0,17,phd_FixedDivide,phd_FixedDivide_
 0x000452e1,200,calc_object_verticesA_noclip,calc_object_verticesA_noclip_
 0x000453a9,344,calc_object_verticesA_win,calc_object_verticesA_win_
