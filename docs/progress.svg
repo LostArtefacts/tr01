@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">85.45% (693)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">14.55% (118)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">85.57% (694)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">14.43% (117)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="638.31" height="6" x="0" y="0" class="named"/>
-<rect width="108.69" height="6" x="638.31" y="0" class="todo"/>
+<rect width="639.23" height="6" x="0" y="0" class="named"/>
+<rect width="107.77" height="6" x="639.23" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -761,7 +761,7 @@
 <rect width="12" height="12" x="615" y="195" class="named"><title>0x0003cd34 WolfControl (1069 bytes)</title></rect>
 <rect width="12" height="12" x="630" y="195" class="named"><title>0x0003d180 LionControl (797 bytes)</title></rect>
 <rect width="12" height="12" x="645" y="195" class="named"><title>0x0003d4a0 Insert2DLine (97 bytes)</title></rect>
-<rect width="12" height="12" x="660" y="195" class="todo"><title>0x0003d504 Func3d504 (183 bytes)</title></rect>
+<rect width="12" height="12" x="660" y="195" class="named"><title>0x0003d504 ins_poly_line (183 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="195" class="todo"><title>0x0003d5bc Func3d5bc (52 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="195" class="todo"><title>0x0003d5f0 Func3d5f0 (484 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="195" class="todo"><title>0x0003d7e0 phd_GenerateW2V (427 bytes)</title></rect>
@@ -882,10 +882,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">81.77%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">18.23%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">81.85%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">18.15%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="610.79" height="6" x="0" y="0" class="named"/>
-<rect width="136.21" height="6" x="610.79" y="0" class="todo"/>
+<rect width="611.42" height="6" x="0" y="0" class="named"/>
+<rect width="135.58" height="6" x="611.42" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.96" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1196,7 +1196,7 @@
 <rect width="9.99" height="9.57" x="584.38" y="76.52" class="named"><title>0x0001dbf8 Splash (185 bytes)</title></rect>
 <rect width="9.92" height="9.57" x="597.37" y="76.52" class="named"><title>0x00011d2c EscapeBox (184 bytes)</title></rect>
 <rect width="9.85" height="9.57" x="610.29" y="76.52" class="named"><title>0x0002ace8 AimWeapon (183 bytes)</title></rect>
-<rect width="9.85" height="9.57" x="623.14" y="76.52" class="todo"><title>0x0003d504 Func3d504 (183 bytes)</title></rect>
+<rect width="9.85" height="9.57" x="623.14" y="76.52" class="named"><title>0x0003d504 ins_poly_line (183 bytes)</title></rect>
 <rect width="9.85" height="9.57" x="635.99" y="76.52" class="todo"><title>0x00046c71 Func46c71 (183 bytes)</title></rect>
 <rect width="9.78" height="9.57" x="648.83" y="76.52" class="named"><title>0x00026618 lara_col_turn_r (182 bytes)</title></rect>
 <rect width="9.78" height="9.57" x="661.61" y="76.52" class="named"><title>0x000296a4 lara_as_glide (182 bytes)</title></rect>

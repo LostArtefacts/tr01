@@ -693,7 +693,7 @@ address,size,name,symbol
 0x0003cd34,1069,WolfControl,WolfControl_
 0x0003d180,797,LionControl,LionControl_
 0x0003d4a0,97,Insert2DLine,Insert2DLine_
-0x0003d504,183,Func3d504,
+0x0003d504,183,ins_poly_line,ins_poly_line_
 0x0003d5bc,52,Func3d5bc,
 0x0003d5f0,484,Func3d5f0,
 0x0003d7e0,427,phd_GenerateW2V,phd_GenerateW2V_
