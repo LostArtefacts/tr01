@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">78.30% (635)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">21.70% (176)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">78.42% (636)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">21.58% (175)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="584.89" height="6" x="0" y="0" class="named"/>
-<rect width="162.11" height="6" x="584.89" y="0" class="todo"/>
+<rect width="585.81" height="6" x="0" y="0" class="named"/>
+<rect width="161.19" height="6" x="585.81" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -702,7 +702,7 @@
 <rect width="12" height="12" x="480" y="180" class="named"><title>0x000396f8 T_LetterSpacing (8 bytes)</title></rect>
 <rect width="12" height="12" x="495" y="180" class="named"><title>0x00039700 T_WordSpacing (8 bytes)</title></rect>
 <rect width="12" height="12" x="510" y="180" class="named"><title>0x00039708 T_FlashText (25 bytes)</title></rect>
-<rect width="12" height="12" x="525" y="180" class="todo"><title>0x00039724 T_AddBackground (58 bytes)</title></rect>
+<rect width="12" height="12" x="525" y="180" class="named"><title>0x00039724 T_AddBackground (58 bytes)</title></rect>
 <rect width="12" height="12" x="540" y="180" class="todo"><title>0x00039760 T_RemoveBackground (5 bytes)</title></rect>
 <rect width="12" height="12" x="555" y="180" class="todo"><title>0x00039768 T_AddOutline (27 bytes)</title></rect>
 <rect width="12" height="12" x="570" y="180" class="todo"><title>0x00039784 T_RemoveOutline (5 bytes)</title></rect>
@@ -882,10 +882,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">74.69%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">25.31%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">74.72%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">25.28%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="557.97" height="6" x="0" y="0" class="named"/>
-<rect width="189.03" height="6" x="557.97" y="0" class="todo"/>
+<rect width="558.16" height="6" x="0" y="0" class="named"/>
+<rect width="188.84" height="6" x="558.16" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.96" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1449,7 +1449,7 @@
 <rect width="4.40" height="4.04" x="661.31" y="244.04" class="named"><title>0x000396a0 T_ChangeText (59 bytes)</title></rect>
 <rect width="4.40" height="3.92" x="661.31" y="251.08" class="named"><title>0x0001ce24 InitInterpolate (58 bytes)</title></rect>
 <rect width="4.33" height="3.98" x="668.70" y="177.24" class="named"><title>0x00024284 Inv_RingLight (58 bytes)</title></rect>
-<rect width="4.33" height="3.98" x="668.70" y="184.22" class="todo"><title>0x00039724 T_AddBackground (58 bytes)</title></rect>
+<rect width="4.33" height="3.98" x="668.70" y="184.22" class="named"><title>0x00039724 T_AddBackground (58 bytes)</title></rect>
 <rect width="4.33" height="3.86" x="668.70" y="191.20" class="todo"><title>0x000469a8 Func469a8 (57 bytes)</title></rect>
 <rect width="4.33" height="3.74" x="668.70" y="198.06" class="named"><title>0x00020a78 MakeAmmoString (56 bytes)</title></rect>
 <rect width="4.33" height="3.74" x="668.70" y="204.80" class="named"><title>0x00024d80 InitialiseFXArray (56 bytes)</title></rect>

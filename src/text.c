@@ -123,6 +123,19 @@ void T_FlashText(TEXTSTRING *textString, sint16 i_bool, sint16 rate)
         textString->flags &= ~T_FLASH;
 }
 
+void T_AddBackground(TEXTSTRING *textString, sint16 xsize, sint16 ysize, sint16 xoff, sint16 yoff, sint16 zoff, sint16 colour, SG_COL *gourptr, uint16 flags)
+{
+    textString->flags |= T_BGND;
+    textString->bgndSizeX = xsize;
+    textString->bgndSizeY = ysize;
+    textString->bgndOffX = xoff;
+    textString->bgndOffY = yoff;
+    textString->bgndOffZ = zoff;
+    textString->bgndColour = colour;
+    textString->bgndGour = gourptr;
+    textString->bgndflags = flags;
+}
+
 sint16 T_GetStringLen(char *string)
 {
     sint16 len = 1;
