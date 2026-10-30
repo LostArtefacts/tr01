@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">96.94% (792)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">3.06% (25)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">97.06% (793)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">2.94% (24)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="724.14" height="6" x="0" y="0" class="named"/>
-<rect width="22.86" height="6" x="724.14" y="0" class="todo"/>
+<rect width="725.06" height="6" x="0" y="0" class="named"/>
+<rect width="21.94" height="6" x="725.06" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -829,7 +829,7 @@
 <rect width="12" height="12" x="135" y="225" class="named"><title>0x00043fe4 wgtmap_persp16_fp (1820 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="225" class="named"><title>0x00044700 flatA (97 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="225" class="named"><title>0x00044761 transA (308 bytes)</title></rect>
-<rect width="12" height="12" x="180" y="225" class="todo"><title>0x00044895 gourA (384 bytes)</title></rect>
+<rect width="12" height="12" x="180" y="225" class="named"><title>0x00044895 gourA (384 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="225" class="todo"><title>0x00044a15 gtmapA (765 bytes)</title></rect>
 <rect width="12" height="12" x="210" y="225" class="todo"><title>0x00044d12 wgtmapA (833 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="225" class="named"><title>0x000452d0 phd_FixedDivide (17 bytes)</title></rect>
@@ -888,10 +888,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">97.99%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">2.01%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">98.16%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">1.84%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="731.97" height="6" x="0" y="0" class="named"/>
-<rect width="15.03" height="6" x="731.97" y="0" class="todo"/>
+<rect width="733.28" height="6" x="0" y="0" class="named"/>
+<rect width="13.72" height="6" x="733.28" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.74" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1061,7 +1061,7 @@
 <rect width="15.96" height="15.07" x="494.58" y="0" class="named"><title>0x0002b2a4 undraw_shotgun (390 bytes)</title></rect>
 <rect width="15.81" height="15.07" x="513.54" y="0" class="named"><title>0x00026234 lara_col_run (387 bytes)</title></rect>
 <rect width="15.81" height="15.07" x="532.35" y="0" class="named"><title>0x00038d58 LoadSamples (387 bytes)</title></rect>
-<rect width="15.67" height="15.07" x="551.17" y="0" class="todo"><title>0x00044895 gourA (384 bytes)</title></rect>
+<rect width="15.67" height="15.07" x="551.17" y="0" class="named"><title>0x00044895 gourA (384 bytes)</title></rect>
 <rect width="15.62" height="15.07" x="569.83" y="0" class="named"><title>0x00023b40 Inv_InsertItem (383 bytes)</title></rect>
 <rect width="15.62" height="15.07" x="588.45" y="0" class="named"><title>0x00038f20 TestCollision (383 bytes)</title></rect>
 <rect width="15.52" height="15.07" x="607.07" y="0" class="named"><title>0x00024304 Inv_RingDoMotions (381 bytes)</title></rect>

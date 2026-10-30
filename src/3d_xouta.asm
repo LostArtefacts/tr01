@@ -2,6 +2,7 @@
     .model flat
 
     extrn _depthq_table:byte
+    extrn _gouraud_table:byte
     extrn _phd_scrwidth:dword
     extrn _phd_winptr:dword
     extrn _phd_winwidth:dword
@@ -170,5 +171,159 @@ l8:
     popa
     ret
 transA_ endp
+
+    public gourA_
+gourA_ proc near
+    push    ecx
+    push    esi
+    push    edi
+    push    ebp
+    sub     esp,10h
+    sub     edx,eax
+    jle     l8
+    mov     dword ptr [esp+4],edx
+    mov     ecx,eax
+    shl     ecx,4
+    add     ecx,offset _xbuffer
+    mov     dword ptr [esp+8],ecx
+    imul    eax,dword ptr _phd_scrwidth
+    add     eax,dword ptr _phd_winptr
+    mov     dword ptr [esp+0ch],eax
+    movzx   ebx,bx
+    shl     ebx,5
+    add     ebx,offset _gouraud_table
+    mov     dword ptr [esp],ebx
+l1:
+    mov     eax,dword ptr [esp+8]
+    movsx   ebx,word ptr [eax+0ah]
+    movsx   edi,word ptr [eax+2]
+    test    ebx,ebx
+    jle     l7
+    cmp     edi,ebx
+    jge     l7
+    cmp     edi,dword ptr _phd_winwidth
+    jge     l7
+    mov     ecx,dword ptr [eax+4]
+    mov     ebp,ebx
+    mov     edx,dword ptr [eax+0ch]
+    sub     edx,ecx
+    sub     ebx,edi
+    mov     eax,edx
+    sar     edx,1fh
+    idiv    ebx
+    test    edi,edi
+    jns     l2
+    imul    edi,eax
+    sub     ecx,edi
+    xor     edi,edi
+l2:
+    mov     edx,dword ptr _phd_winwidth
+    cmp     edx,ebp
+    jge     l3
+    mov     ebp,edx
+l3:
+    sub     ebp,edi
+    add     edi,dword ptr [esp+0ch]
+    mov     edx,eax
+    mov     esi,ecx
+    sar     eax,10h
+    sar     ecx,10h
+    shl     edx,10h
+    shl     esi,10h
+    add     ecx,dword ptr [esp]
+    test    edi,1
+    je      l4
+    mov     bl,byte ptr [ecx]
+    add     esi,edx
+    mov     byte ptr [edi],bl
+    adc     ecx,eax
+    dec     ebp
+    inc     edi
+l4:
+    sub     ebp,10h
+    js      l5
+    mov     bl,byte ptr [ecx]
+    add     esi,edx
+    adc     ecx,eax
+    mov     bh,byte ptr [ecx]
+    add     esi,edx
+    mov     word ptr [edi],bx
+    adc     ecx,eax
+    mov     bl,byte ptr [ecx]
+    add     esi,edx
+    adc     ecx,eax
+    mov     bh,byte ptr [ecx]
+    add     esi,edx
+    mov     word ptr [edi+2],bx
+    adc     ecx,eax
+    mov     bl,byte ptr [ecx]
+    add     esi,edx
+    adc     ecx,eax
+    mov     bh,byte ptr [ecx]
+    add     esi,edx
+    mov     word ptr [edi+4],bx
+    adc     ecx,eax
+    mov     bl,byte ptr [ecx]
+    add     esi,edx
+    adc     ecx,eax
+    mov     bh,byte ptr [ecx]
+    add     esi,edx
+    mov     word ptr [edi+6],bx
+    adc     ecx,eax
+    mov     bl,byte ptr [ecx]
+    add     esi,edx
+    adc     ecx,eax
+    mov     bh,byte ptr [ecx]
+    add     esi,edx
+    mov     word ptr [edi+8],bx
+    adc     ecx,eax
+    mov     bl,byte ptr [ecx]
+    add     esi,edx
+    adc     ecx,eax
+    mov     bh,byte ptr [ecx]
+    add     esi,edx
+    mov     word ptr [edi+0ah],bx
+    adc     ecx,eax
+    mov     bl,byte ptr [ecx]
+    add     esi,edx
+    adc     ecx,eax
+    mov     bh,byte ptr [ecx]
+    add     esi,edx
+    mov     word ptr [edi+0ch],bx
+    adc     ecx,eax
+    mov     bl,byte ptr [ecx]
+    add     esi,edx
+    adc     ecx,eax
+    mov     bh,byte ptr [ecx]
+    add     esi,edx
+    mov     word ptr [edi+0eh],bx
+    adc     ecx,eax
+    add     edi,10h
+    jmp     l4
+l5:
+    add     ebp,10h
+    jle     l7
+l6:
+    mov     bl,byte ptr [ecx]
+    add     esi,edx
+    mov     byte ptr [edi],bl
+    adc     ecx,eax
+    inc     edi
+    dec     ebp
+    jne     l6
+l7:
+    mov     eax,_phd_scrwidth
+    add     dword ptr [esp+8],10h
+    add     dword ptr [esp+0ch],eax
+    dec     dword ptr [esp+4]
+    jne     l1
+l8:
+    add     esp,10h
+    pop     ebp
+    pop     edi
+    pop     esi
+    pop     ecx
+    ret
+gourA_ endp
 
     end
