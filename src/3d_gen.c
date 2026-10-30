@@ -6,6 +6,7 @@
 
 extern sint32 matrix_stack[];
 extern float phd_leftfloat, phd_rightfloat, phd_topfloat, phd_bottomfloat;
+extern PHD_VECTOR ls_vector_view;
 
 void phd_GetMatrixAngles(PHD_ANGLE *dest);
 void phd_UnitMatrix(void);
@@ -499,4 +500,58 @@ sint16 *calc_object_vertices(sint16 *objptr)
         return NULL;
     else
         return objptr;
+}
+
+sint16 *calc_vertice_light(sint16 *objptr)
+{
+    int numvert;
+    sint32 xv, yv, zv;
+    PHD_VBUF *dest;
+    sint32 *mptr;
+    sint32 shad;
+
+    dest = &vbuf[0];
+    numvert = (int)*(objptr++);
+    if (numvert > 0)
+    {
+        if (ls_divider)
+        {
+            mptr = phd_mxptr;
+            xv = (*(mptr + M00) * ls_vector_view.x + *(mptr + M10) * ls_vector_view.y + *(mptr + M20) * ls_vector_view.z) / ls_divider;
+            yv = (*(mptr + M01) * ls_vector_view.x + *(mptr + M11) * ls_vector_view.y + *(mptr + M21) * ls_vector_view.z) / ls_divider;
+            zv = (*(mptr + M02) * ls_vector_view.x + *(mptr + M12) * ls_vector_view.y + *(mptr + M22) * ls_vector_view.z) / ls_divider;
+            for (; numvert > 0; numvert--, dest++, objptr += 3)
+            {
+                shad = ((*(objptr + 0) * xv + *(objptr + 1) * yv + *(objptr + 2) * zv) >> (W2V_SHIFT + 2)) + ls_adder;
+                if (shad < 0)
+                    shad = 0;
+                else if (shad > ((32 << 8) - 1))
+                    shad = ((32 << 8) - 1);
+                dest->g = (sint16)shad;
+            }
+        }
+        else
+        {
+            shad = ls_adder;
+            if (shad < 0)
+                shad = 0;
+            else if (shad > ((32 << 8) - 1))
+                shad = ((32 << 8) - 1);
+            for (; numvert > 0; numvert--, dest++, objptr += 3)
+                dest->g = (sint16)shad;
+        }
+    }
+    else if (numvert < 0)
+    {
+        for (; numvert < 0; numvert++, dest++)
+        {
+            shad = *(objptr++) + ls_adder;
+            if (shad < 0)
+                shad = 0;
+            else if (shad > ((32 << 8) - 1))
+                shad = ((32 << 8) - 1);
+            dest->g = (sint16)shad;
+        }
+    }
+    return objptr;
 }

@@ -2163,6 +2163,7 @@ address,size,name,symbol
 0x0012f3fc,4,phd_zfar,_phd_zfar
 0x0012f400,4,phd_right,_phd_right
 0x0012f404,4,phd_znear,_phd_znear
+0x0012f408,12,ls_vector_view,_ls_vector_view
 0x0012f414,4,phd_bottomfloat,_phd_bottomfloat
 0x0012f418,4,phd_leftfloat,_phd_leftfloat
 0x0012f41c,4,phd_topfloat,_phd_topfloat

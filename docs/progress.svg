@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">87.92% (713)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">12.08% (98)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">88.04% (714)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">11.96% (97)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="656.73" height="6" x="0" y="0" class="named"/>
-<rect width="90.27" height="6" x="656.73" y="0" class="todo"/>
+<rect width="657.65" height="6" x="0" y="0" class="named"/>
+<rect width="89.35" height="6" x="657.65" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -781,7 +781,7 @@
 <rect width="12" height="12" x="165" y="210" class="named"><title>0x0003e320 phd_PutPolygons (196 bytes)</title></rect>
 <rect width="12" height="12" x="180" y="210" class="named"><title>0x0003e3e4 S_InsertRoom (92 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="210" class="named"><title>0x0003e440 calc_object_vertices (468 bytes)</title></rect>
-<rect width="12" height="12" x="210" y="210" class="todo"><title>0x0003e614 calc_vertice_light (433 bytes)</title></rect>
+<rect width="12" height="12" x="210" y="210" class="named"><title>0x0003e614 calc_vertice_light (433 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="210" class="todo"><title>0x0003e7c8 calc_roomvert (1107 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="210" class="todo"><title>0x0003ec1c phd_RotateLight (227 bytes)</title></rect>
 <rect width="12" height="12" x="255" y="210" class="todo"><title>0x0003ed00 Func3ed00 (70 bytes)</title></rect>
@@ -882,10 +882,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">83.74%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">16.26%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">83.94%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">16.06%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="625.57" height="6" x="0" y="0" class="named"/>
-<rect width="121.43" height="6" x="625.57" y="0" class="todo"/>
+<rect width="627.05" height="6" x="0" y="0" class="named"/>
+<rect width="119.95" height="6" x="627.05" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.96" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1036,7 +1036,7 @@
 <rect width="16.71" height="16.74" x="457.50" y="160.87" class="named"><title>0x0001ee1c LoadItems (441 bytes)</title></rect>
 <rect width="16.71" height="16.43" x="457.50" y="180.61" class="named"><title>0x000173bc GetFloor (434 bytes)</title></rect>
 <rect width="16.71" height="16.38" x="457.50" y="200.04" class="named"><title>0x0003c740 ControlBodyPart (433 bytes)</title></rect>
-<rect width="16.71" height="16.38" x="457.50" y="219.42" class="todo"><title>0x0003e614 calc_vertice_light (433 bytes)</title></rect>
+<rect width="16.71" height="16.38" x="457.50" y="219.42" class="named"><title>0x0003e614 calc_vertice_light (433 bytes)</title></rect>
 <rect width="16.71" height="16.20" x="457.50" y="238.80" class="named"><title>0x00026084 lara_col_walk (429 bytes)</title></rect>
 <rect width="16.43" height="16.39" x="477.21" y="0" class="named"><title>0x0003d7e0 phd_GenerateW2V (427 bytes)</title></rect>
 <rect width="16.43" height="15.80" x="477.21" y="19.39" class="named"><title>0x0002d93c mn_update_sound_effects (414 bytes)</title></rect>
