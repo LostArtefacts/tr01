@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">85.33% (692)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">14.67% (119)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">85.45% (693)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">14.55% (118)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="637.39" height="6" x="0" y="0" class="named"/>
-<rect width="109.61" height="6" x="637.39" y="0" class="todo"/>
+<rect width="638.31" height="6" x="0" y="0" class="named"/>
+<rect width="108.69" height="6" x="638.31" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -760,7 +760,7 @@
 <rect width="12" height="12" x="600" y="195" class="named"><title>0x0003cce0 InitialiseWolf (35 bytes)</title></rect>
 <rect width="12" height="12" x="615" y="195" class="named"><title>0x0003cd34 WolfControl (1069 bytes)</title></rect>
 <rect width="12" height="12" x="630" y="195" class="named"><title>0x0003d180 LionControl (797 bytes)</title></rect>
-<rect width="12" height="12" x="645" y="195" class="todo"><title>0x0003d4a0 Insert2DLine (97 bytes)</title></rect>
+<rect width="12" height="12" x="645" y="195" class="named"><title>0x0003d4a0 Insert2DLine (97 bytes)</title></rect>
 <rect width="12" height="12" x="660" y="195" class="todo"><title>0x0003d504 Func3d504 (183 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="195" class="todo"><title>0x0003d5bc Func3d5bc (52 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="195" class="todo"><title>0x0003d5f0 Func3d5f0 (484 bytes)</title></rect>
@@ -882,10 +882,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">81.72%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">18.28%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">81.77%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">18.23%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="610.46" height="6" x="0" y="0" class="named"/>
-<rect width="136.54" height="6" x="610.46" y="0" class="todo"/>
+<rect width="610.79" height="6" x="0" y="0" class="named"/>
+<rect width="136.21" height="6" x="610.79" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.96" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1352,7 +1352,7 @@
 <rect width="6.04" height="6.57" x="626.67" y="220.03" class="todo"><title>0x00046912 Func46912 (98 bytes)</title></rect>
 <rect width="6.04" height="6.47" x="626.67" y="229.59" class="named"><title>0x00018c20 RemoveRoomFlipItems (97 bytes)</title></rect>
 <rect width="6.04" height="6.47" x="626.67" y="239.06" class="named"><title>0x00018c84 AddRoomFlipItems (97 bytes)</title></rect>
-<rect width="6.04" height="6.47" x="626.67" y="248.53" class="todo"><title>0x0003d4a0 Insert2DLine (97 bytes)</title></rect>
+<rect width="6.04" height="6.47" x="626.67" y="248.53" class="named"><title>0x0003d4a0 Insert2DLine (97 bytes)</title></rect>
 <rect width="5.99" height="6.52" x="635.71" y="142.91" class="todo"><title>0x00044700 Func44700 (97 bytes)</title></rect>
 <rect width="5.90" height="6.52" x="644.70" y="142.91" class="named"><title>0x0001f544 TestCdDrive (96 bytes)</title></rect>
 <rect width="5.90" height="6.52" x="653.60" y="142.91" class="named"><title>0x0001ff1c GameLoop (96 bytes)</title></rect>
