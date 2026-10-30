@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">82.12% (666)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">17.88% (145)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">82.24% (667)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">17.76% (144)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="613.44" height="6" x="0" y="0" class="named"/>
-<rect width="133.56" height="6" x="613.44" y="0" class="todo"/>
+<rect width="614.36" height="6" x="0" y="0" class="named"/>
+<rect width="132.64" height="6" x="614.36" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -734,7 +734,7 @@
 <rect width="12" height="12" x="210" y="195" class="named"><title>0x0003a9b8 DamoclesSwordControl (338 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="195" class="named"><title>0x0003ab0c DamoclesSwordCollision (228 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="195" class="named"><title>0x0003abf0 DartEmitterControl (414 bytes)</title></rect>
-<rect width="12" height="12" x="255" y="195" class="todo"><title>0x0003ad90 DartsControl (305 bytes)</title></rect>
+<rect width="12" height="12" x="255" y="195" class="named"><title>0x0003ad90 DartsControl (305 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="195" class="todo"><title>0x0003aec4 DartEffectControl (99 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="195" class="todo"><title>0x0003af28 FlameEmitterControl (167 bytes)</title></rect>
 <rect width="12" height="12" x="300" y="195" class="todo"><title>0x0003afd0 FlameControl (396 bytes)</title></rect>
@@ -882,10 +882,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">77.27%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">22.73%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">77.41%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">22.59%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="577.22" height="6" x="0" y="0" class="named"/>
-<rect width="169.78" height="6" x="577.22" y="0" class="todo"/>
+<rect width="578.25" height="6" x="0" y="0" class="named"/>
+<rect width="168.75" height="6" x="578.25" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.96" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1092,7 +1092,7 @@
 <rect width="13.69" height="13.28" x="667.21" y="18.29" class="todo"><title>0x00044761 Func44761 (308 bytes)</title></rect>
 <rect width="13.63" height="13.28" x="683.90" y="18.29" class="todo"><title>0x00045868 Func45868 (307 bytes)</title></rect>
 <rect width="13.58" height="13.28" x="700.53" y="18.29" class="named"><title>0x00020ac0 DrawAmmoInfo (306 bytes)</title></rect>
-<rect width="13.52" height="13.28" x="717.11" y="18.29" class="todo"><title>0x0003ad90 DartsControl (305 bytes)</title></rect>
+<rect width="13.52" height="13.28" x="717.11" y="18.29" class="named"><title>0x0003ad90 DartsControl (305 bytes)</title></rect>
 <rect width="13.36" height="13.28" x="733.64" y="18.29" class="named"><title>0x0001d8b0 ItemSparkle (302 bytes)</title></rect>
 <rect width="12.91" height="13.64" x="513.94" y="34.58" class="named"><title>0x00022608 Construct_Inventory (300 bytes)</title></rect>
 <rect width="12.91" height="13.53" x="513.94" y="51.21" class="named"><title>0x0001fdf0 StartGame (298 bytes)</title></rect>

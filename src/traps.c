@@ -607,3 +607,40 @@ void DartEmitterControl(sint16 item_num)
     }
     AnimateItem(item);
 }
+
+void DartsControl(sint16 item_num)
+{
+    FX_INFO *fx;
+    ITEM_INFO *item;
+    FLOOR_INFO *floor;
+    sint16 room_number, fx_num;
+
+    item = &items[item_num];
+
+    if (item->touch_bits)
+    {
+        lara_item->hit_points -= 50;
+        lara_item->hit_status = 1;
+        DoBloodSplat(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, lara_item->speed, lara_item->pos.y_rot, lara_item->room_number);
+    }
+
+    AnimateItem(item);
+    room_number = item->room_number;
+    floor = GetFloor(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, &room_number);
+    if (item->room_number != room_number)
+        ItemNewRoom(item_num, room_number);
+    item->floor = GetHeight(floor, item->pos.x_pos, item->pos.y_pos, item->pos.z_pos);
+    if (item->pos.y_pos >= item->floor)
+    {
+        KillItem(item_num);
+        if ((fx_num = CreateEffect(item->room_number)) != NO_ITEM)
+        {
+            fx = &effects[fx_num];
+            memcpy(&fx->pos, &item->pos, sizeof(PHD_3DPOS));
+            fx->speed = 0;
+            fx->frame_number = (sint16) - ((int)(GetRandomControl() * 3) / 32768);
+            fx->counter = 6;
+            fx->object_number = RICOCHET1;
+        }
+    }
+}
