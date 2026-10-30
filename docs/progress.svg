@@ -61,11 +61,11 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">99.51% (817)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0.12% (1)</tspan> · <tspan class="todo">0.37% (3)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">99.63% (818)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0.12% (1)</tspan> · <tspan class="todo">0.24% (2)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="743.36" height="6" x="0" y="0" class="named"/>
-<rect width="0.91" height="6" x="743.36" y="0" class="nonmatching"/>
-<rect width="2.73" height="6" x="744.27" y="0" class="todo"/>
+<rect width="744.27" height="6" x="0" y="0" class="named"/>
+<rect width="0.91" height="6" x="744.27" y="0" class="nonmatching"/>
+<rect width="1.82" height="6" x="745.18" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -886,18 +886,18 @@
 <rect width="12" height="12" x="225" y="240" class="named"><title>0x00046c2e ScreenWaitVbl (19 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="240" class="named"><title>0x00046c41 PalSetBorder (26 bytes)</title></rect>
 <rect width="12" height="12" x="255" y="240" class="named"><title>0x00046c5b PalInsertColours (22 bytes)</title></rect>
-<rect width="12" height="12" x="270" y="240" class="todo"><title>0x00046c71 FadeTick (183 bytes)</title></rect>
+<rect width="12" height="12" x="270" y="240" class="named"><title>0x00046c71 FadeTick (183 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="240" class="todo"><title>0x00046d28 VgaGetFont (137 bytes)</title></rect>
 <rect width="12" height="12" x="300" y="240" class="todo"><title>0x00046db1 VgaSetFont (157 bytes)</title></rect>
 </g>
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">99.44%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0.34%</tspan> · <tspan class="todo">0.22%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">99.53%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0.34%</tspan> · <tspan class="todo">0.13%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="742.84" height="6" x="0" y="0" class="named"/>
-<rect width="2.54" height="6" x="742.84" y="0" class="nonmatching"/>
-<rect width="1.61" height="6" x="745.39" y="0" class="todo"/>
+<rect width="743.46" height="6" x="0" y="0" class="named"/>
+<rect width="2.54" height="6" x="743.46" y="0" class="nonmatching"/>
+<rect width="0.99" height="6" x="746.01" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.55" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1213,7 +1213,7 @@
 <rect width="9.43" height="9.96" x="568.78" y="129.92" class="named"><title>0x00011d2c EscapeBox (184 bytes)</title></rect>
 <rect width="9.43" height="9.89" x="568.78" y="142.88" class="named"><title>0x0002ace8 AimWeapon (183 bytes)</title></rect>
 <rect width="9.43" height="9.89" x="568.78" y="155.76" class="named"><title>0x0003d504 ins_poly_line (183 bytes)</title></rect>
-<rect width="9.43" height="9.89" x="568.78" y="168.65" class="todo"><title>0x00046c71 FadeTick (183 bytes)</title></rect>
+<rect width="9.43" height="9.89" x="568.78" y="168.65" class="named"><title>0x00046c71 FadeTick (183 bytes)</title></rect>
 <rect width="9.43" height="9.81" x="568.78" y="181.53" class="named"><title>0x00026618 lara_col_turn_r (182 bytes)</title></rect>
 <rect width="9.43" height="9.81" x="568.78" y="194.35" class="named"><title>0x000296a4 lara_as_glide (182 bytes)</title></rect>
 <rect width="9.43" height="9.81" x="568.78" y="207.16" class="named"><title>0x0003257c GunHit (182 bytes)</title></rect>

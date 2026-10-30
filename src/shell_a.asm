@@ -3,6 +3,7 @@
 
     extrn _dos_buffer:dword
     extrn _gamedata:dword
+    extrn _toddata:dword
 
     .data
 
@@ -649,5 +650,63 @@ l1:
     jne     l1
     ret
 PalInsertColours_ endp
+
+    public FadeTick_
+FadeTick_ proc near
+    pusha
+    test    byte ptr _toddata+1566,1
+    je      l4
+    mov     eax,_toddata+1558
+    sub     eax,dword ptr _toddata+1562
+    mov     _toddata+1558,eax
+    test    eax,eax
+    jns     l2
+    mov     esi,dword ptr _toddata+1554
+    mov     edi,offset _toddata+18
+    mov     ecx,0c0h
+    mov     edx,4
+l1:
+    mov     eax,dword ptr [esi]
+    mov     dword ptr [edi],eax
+    mov     dword ptr [edi+300h],eax
+    add     esi,edx
+    add     edi,edx
+    dec     ecx
+    jne     l1
+    mov     byte ptr _toddata+1566,0
+    mov     byte ptr _toddata+1567,1
+l2:
+    lea     esi,_toddata+786
+    xor     eax,eax
+    mov     ecx,100h
+    call    PalInsertColours_
+    test    byte ptr _toddata+1566,1
+    je      l4
+    mov     esi,dword ptr _toddata+1554
+    mov     ebx,3f00h
+    sub     ebx,dword ptr _toddata+1558
+    test    bh,bh
+    je      l4
+    shr     bx,6
+    mov     byte ptr _toddata+1567,0
+    mov     edi,offset _toddata+18
+    mov     ecx,300h
+l3:
+    xor     eax,eax
+    xor     edx,edx
+    mov     al,byte ptr [esi]
+    mov     dl,byte ptr [edi]
+    sub     eax,edx
+    imul    bx
+    add     ah,byte ptr [edi]
+    mov     byte ptr [edi+300h],ah
+    inc     esi
+    inc     edi
+    dec     ecx
+    jne     l3
+l4:
+    popa
+    ret
+FadeTick_ endp
 
     end
