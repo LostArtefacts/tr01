@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">84.71% (687)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">15.29% (124)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">84.83% (688)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">15.17% (123)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="632.79" height="6" x="0" y="0" class="named"/>
-<rect width="114.21" height="6" x="632.79" y="0" class="todo"/>
+<rect width="633.71" height="6" x="0" y="0" class="named"/>
+<rect width="113.29" height="6" x="633.71" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -755,7 +755,7 @@
 <rect width="12" height="12" x="525" y="195" class="named"><title>0x0003c740 ControlBodyPart (433 bytes)</title></rect>
 <rect width="12" height="12" x="540" y="195" class="named"><title>0x0003c918 InitialisePod (229 bytes)</title></rect>
 <rect width="12" height="12" x="555" y="195" class="named"><title>0x0003ca00 PodControl (273 bytes)</title></rect>
-<rect width="12" height="12" x="570" y="195" class="todo"><title>0x0003cb14 InitialiseStatue (232 bytes)</title></rect>
+<rect width="12" height="12" x="570" y="195" class="named"><title>0x0003cb14 InitialiseStatue (232 bytes)</title></rect>
 <rect width="12" height="12" x="585" y="195" class="todo"><title>0x0003cbfc StatueControl (228 bytes)</title></rect>
 <rect width="12" height="12" x="600" y="195" class="todo"><title>0x0003cce0 InitialiseWolf (35 bytes)</title></rect>
 <rect width="12" height="12" x="615" y="195" class="todo"><title>0x0003cd34 WolfControl (1069 bytes)</title></rect>
@@ -882,10 +882,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">80.65%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">19.35%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">80.75%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">19.25%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="602.42" height="6" x="0" y="0" class="named"/>
-<rect width="144.58" height="6" x="602.42" y="0" class="todo"/>
+<rect width="603.21" height="6" x="0" y="0" class="named"/>
+<rect width="143.79" height="6" x="603.21" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.96" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1138,7 +1138,7 @@
 <rect width="11.74" height="11.25" x="529.85" y="243.75" class="named"><title>0x00014c78 DoCinematic (238 bytes)</title></rect>
 <rect width="12.09" height="10.80" x="544.58" y="49.61" class="named"><title>0x000167c4 TestBoundsCollide (236 bytes)</title></rect>
 <rect width="11.90" height="10.80" x="559.67" y="49.61" class="named"><title>0x0001bb98 CalculateObjectLighting (233 bytes)</title></rect>
-<rect width="11.83" height="10.80" x="574.57" y="49.61" class="todo"><title>0x0003cb14 InitialiseStatue (232 bytes)</title></rect>
+<rect width="11.83" height="10.80" x="574.57" y="49.61" class="named"><title>0x0003cb14 InitialiseStatue (232 bytes)</title></rect>
 <rect width="11.70" height="10.80" x="589.40" y="49.61" class="named"><title>0x0001790c RefreshCamera (230 bytes)</title></rect>
 <rect width="11.64" height="10.80" x="604.10" y="49.61" class="named"><title>0x00016acc MoveLaraPosition (229 bytes)</title></rect>
 <rect width="11.64" height="10.80" x="618.75" y="49.61" class="named"><title>0x00019dc4 LaraDinoDeath (229 bytes)</title></rect>

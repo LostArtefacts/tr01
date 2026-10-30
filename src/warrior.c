@@ -951,3 +951,38 @@ void PodControl(sint16 item_number)
 
     AnimateItem(item);
 }
+
+void InitialiseStatue(sint16 item_number)
+{
+    sint16 centaur_item;
+    ITEM_INFO *item, *centaur;
+
+    item = &items[item_number];
+
+    centaur_item = CreateItem();
+    if (centaur_item != NO_ITEM)
+    {
+        centaur = &items[centaur_item];
+        centaur->object_number = CENTAUR;
+        centaur->room_number = item->room_number;
+        centaur->pos.x_pos = item->pos.x_pos;
+        centaur->pos.y_pos = item->pos.y_pos;
+        centaur->pos.z_pos = item->pos.z_pos;
+        centaur->flags = NOT_VISIBLE;
+        centaur->shade = -1;
+
+        InitialiseItem(centaur_item);
+
+        centaur->anim_number = objects[CENTAUR].anim_index + 7;
+        centaur->frame_number = anims[centaur->anim_number].frame_base + 36;
+        centaur->current_anim_state = centaur->goal_anim_state = anims[centaur->anim_number].current_anim_state;
+        centaur->pos.y_rot = item->pos.y_rot;
+
+        item->data = (sint16 *)game_malloc(sizeof(sint16), 0);
+        *(sint16 *)(item->data) = centaur_item;
+
+        level_items++;
+    }
+    else
+        S_ExitSystem("FATAL: Cannot create CENTAUR in STATUE");
+}
