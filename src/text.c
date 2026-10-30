@@ -149,6 +149,11 @@ void T_AddOutline(TEXTSTRING *textString, sint16 i_bool, sint16 colour, SG_COL *
     textString->outlflags = flags;
 }
 
+void T_RemoveOutline(TEXTSTRING *textString)
+{
+    textString->flags &= ~T_OUTLINE;
+}
+
 sint16 T_GetStringLen(char *string)
 {
     sint16 len = 1;
