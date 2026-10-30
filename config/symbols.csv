@@ -754,14 +754,14 @@ address,size,name,symbol
 0x00042f88,45,draw_poly_gtmap_persp,draw_poly_gtmap_persp_
 0x00042fb8,45,draw_poly_wgtmap_persp,draw_poly_wgtmap_persp_
 0x00042fe8,273,xgen_x,xgen_x_
-0x000430fc,448,Func430fc,
+0x000430fc,448,xgen_xg,xgen_xg_
 0x000432bc,684,Func432bc,
 0x00043568,788,Func43568,
 0x0004387c,1895,Func4387c,
 0x00043fe4,1820,Func43fe4,
 0x00044700,97,flatA,flatA_
 0x00044761,308,transA,transA_
-0x00044895,384,Func44895,
+0x00044895,384,gourA,gourA_
 0x00044a15,765,Func44a15,
 0x00044d12,833,Func44d12,
 0x000452d0,17,Func452d0,
