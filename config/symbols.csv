@@ -2170,6 +2170,8 @@ address,size,name,symbol
 0x0012f420,4,ls_adder,_ls_adder
 0x0012f424,4,ls_divider,_ls_divider
 0x0012f428,4,phd_rightfloat,_phd_rightfloat
+0x0012f42c,2,phd_ls_yaw,_phd_ls_yaw
+0x0012f42e,2,phd_ls_pitch,_phd_ls_pitch
 0x0012f430,480,v_buffer,_v_buffer
 0x0012f63c,4,old_clock_ticks,_old_clock_ticks
 0x0012f644,4,clock_ticks,_clock_ticks
