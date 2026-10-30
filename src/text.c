@@ -141,6 +141,14 @@ void T_RemoveBackground(TEXTSTRING *textString)
     textString->flags &= ~T_BGND;
 }
 
+void T_AddOutline(TEXTSTRING *textString, sint16 i_bool, sint16 colour, SG_COL *gourptr, uint16 flags)
+{
+    textString->flags |= T_OUTLINE;
+    textString->outlColour = colour;
+    textString->outlGour = gourptr;
+    textString->outlflags = flags;
+}
+
 sint16 T_GetStringLen(char *string)
 {
     sint16 len = 1;

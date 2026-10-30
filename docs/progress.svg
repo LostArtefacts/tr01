@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">78.55% (637)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">21.45% (174)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">78.67% (638)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">21.33% (173)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="586.73" height="6" x="0" y="0" class="named"/>
-<rect width="160.27" height="6" x="586.73" y="0" class="todo"/>
+<rect width="587.65" height="6" x="0" y="0" class="named"/>
+<rect width="159.35" height="6" x="587.65" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -704,7 +704,7 @@
 <rect width="12" height="12" x="510" y="180" class="named"><title>0x00039708 T_FlashText (25 bytes)</title></rect>
 <rect width="12" height="12" x="525" y="180" class="named"><title>0x00039724 T_AddBackground (58 bytes)</title></rect>
 <rect width="12" height="12" x="540" y="180" class="named"><title>0x00039760 T_RemoveBackground (5 bytes)</title></rect>
-<rect width="12" height="12" x="555" y="180" class="todo"><title>0x00039768 T_AddOutline (27 bytes)</title></rect>
+<rect width="12" height="12" x="555" y="180" class="named"><title>0x00039768 T_AddOutline (27 bytes)</title></rect>
 <rect width="12" height="12" x="570" y="180" class="todo"><title>0x00039784 T_RemoveOutline (5 bytes)</title></rect>
 <rect width="12" height="12" x="585" y="180" class="todo"><title>0x0003978c T_CentreH (13 bytes)</title></rect>
 <rect width="12" height="12" x="600" y="180" class="todo"><title>0x0003979c T_CentreV (13 bytes)</title></rect>
@@ -882,10 +882,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">74.72%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">25.28%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">74.74%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">25.26%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="558.18" height="6" x="0" y="0" class="named"/>
-<rect width="188.82" height="6" x="558.18" y="0" class="todo"/>
+<rect width="558.27" height="6" x="0" y="0" class="named"/>
+<rect width="188.73" height="6" x="558.27" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.96" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1594,7 +1594,7 @@
 <rect width="1.80" height="2.15" x="735.95" y="220.24" class="todo"><title>0x000469e1 Func469e1 (28 bytes)</title></rect>
 <rect width="1.63" height="2.15" x="740.74" y="220.24" class="named"><title>0x00024564 Inv_RingMotionSetup (27 bytes)</title></rect>
 <rect width="1.63" height="2.15" x="745.37" y="220.24" class="named"><title>0x0003131c do_compass_option (27 bytes)</title></rect>
-<rect width="1.98" height="1.79" x="716.75" y="225.39" class="todo"><title>0x00039768 T_AddOutline (27 bytes)</title></rect>
+<rect width="1.98" height="1.79" x="716.75" y="225.39" class="named"><title>0x00039768 T_AddOutline (27 bytes)</title></rect>
 <rect width="1.98" height="1.79" x="716.75" y="230.18" class="todo"><title>0x000456d0 Func456d0 (27 bytes)</title></rect>
 <rect width="1.98" height="1.79" x="716.75" y="234.96" class="todo"><title>0x00046974 Func46974 (27 bytes)</title></rect>
 <rect width="1.98" height="1.61" x="716.75" y="239.75" class="named"><title>0x00034d08 InitialiseSavegameItem (26 bytes)</title></rect>
