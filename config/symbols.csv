@@ -744,7 +744,7 @@ address,size,name,symbol
 0x00041eb4,793,XYGClipper,XYGClipper_
 0x000421d0,630,ins_objectG4,ins_objectG4_
 0x00042448,525,ins_objectG3,ins_objectG3_
-0x00042658,695,Func42658,
+0x00042658,695,XYClipper,XYClipper_
 0x00042910,1436,ins_poly_trans8,ins_poly_trans8_
 0x00042eb0,39,draw_poly_flat,draw_poly_flat_
 0x00042ed8,38,draw_poly_trans,draw_poly_trans_
