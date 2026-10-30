@@ -36,10 +36,10 @@ With SYMBOLs, shows a disassembly diff for each.
 import csv, difflib, glob, os, struct, subprocess, sys, tempfile
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-import le, omf
+import le, omf, project
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-EXE = "build/tomb.exe"
+EXE = project.ORIGINAL
 PADDING = (b"\x8d\x40\x00", b"\x8b\xc0", b"\x90")
 
 

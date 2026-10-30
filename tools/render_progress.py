@@ -44,10 +44,11 @@ import glob
 
 import compare
 import omf
-from seed_symbols import GAME_END
+import project
+from project import GAME_END
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-TITLE = "TOMB.EXE"
+TITLE = project.config["game"]["title"]
 
 
 class SymbolStatus(StrEnum):
@@ -110,7 +111,7 @@ def collect_functions(root: str = ROOT, built_svg: dict[int, bool | None] | None
                            stdout=subprocess.DEVNULL)
         built = compare_built(root)
     sizes = {}
-    found = os.path.join(root, "build/functions.csv")
+    found = os.path.join(root, project.FUNCTIONS)
     if os.path.exists(found):
         with open(found) as f:
             sizes = {int(r["address"], 16): r["size"] for r in csv.DictReader(f)}

@@ -1,6 +1,6 @@
 """Runs the game in DOSBox, headless under Xvfb, and drives it with keys.
 
-    play.py [--exe NAME] [STEP...]
+    play.py [--exe NAME | --orig] [STEP...]
 
 Steps run in order:
 
@@ -9,17 +9,20 @@ Steps run in order:
     hold:KEY:SECONDS hold a key down
     shot:NAME        save a screenshot to build/shots/NAME.png
 
-The game runs from build/game/TOMBRAID, mounted as C:, with the CD image
-mounted as D:. --exe runs NAME there instead of TOMB.EXE. With no steps
-a screenshot is taken after 20 seconds. DOSBOX is the dosbox-staging
-binary; it defaults to ~/opt/dosbox-staging*/dosbox or
-~/data.local/work/dosbox-staging*/dosbox. Needs Xvfb, xdotool and
-ImageMagick.
+build/game is mounted as C: and the CD image, game.cd in project.toml,
+as D:. The hooked executable, game.hooked, runs from its directory;
+--exe runs NAME there instead, and --orig copies the unmodified original
+there as ORIG.EXE and runs that. With no steps a screenshot is taken
+after 20 seconds. DOSBOX is the dosbox-staging binary; it defaults to
+the first in dosbox.search. Needs Xvfb, xdotool and ImageMagick.
 """
-import glob, os, subprocess, sys, time
+import os, shutil, subprocess, sys, time
 
-ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-GAME = os.path.join(ROOT, "build/game")
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import project
+from project import ROOT, dosbox
+
+GAME = os.path.join(ROOT, project.GAME)
 SHOTS = os.path.join(ROOT, "build/shots")
 
 CONF = """\
@@ -46,20 +49,10 @@ nosound = true
 mount c "{game}"
 imgmount d "{cue}" -t cdrom
 c:
-cd \\TOMBRAID
+cd \\{dir}
 {exe}
 exit
 """
-
-
-def dosbox():
-    if os.environ.get("DOSBOX"):
-        return os.environ["DOSBOX"]
-    found = sorted(glob.glob(os.path.expanduser("~/opt/dosbox-staging*/dosbox"))
-                   + glob.glob(os.path.expanduser("~/data.local/work/dosbox-staging*/dosbox")))
-    if not found:
-        sys.exit("error: set DOSBOX to a dosbox-staging binary")
-    return found[-1]
 
 
 def free_display():
@@ -75,13 +68,17 @@ def xdo(env, *args):
 
 def main():
     args = sys.argv[1:]
-    exe = "TOMB.EXE"
+    folder, exe = os.path.split(project.config["game"]["hooked"])
     if args[:1] == ["--exe"]:
         exe, args = args[1], args[2:]
+    elif args[:1] == ["--orig"]:
+        exe, args = "ORIG.EXE", args[1:]
+        shutil.copyfile(os.path.join(ROOT, project.ORIGINAL), os.path.join(GAME, folder, exe))
     steps = args or ["wait:20", "shot:start"]
     conf = os.path.join(GAME, "dosbox.conf")
     with open(conf, "w") as f:
-        f.write(CONF.format(game=GAME, cue=os.path.join(GAME, "GAME.DAT"), exe=exe))
+        f.write(CONF.format(game=GAME, cue=os.path.join(GAME, project.config["game"]["cd"]),
+                           dir=folder.replace("/", "\\"), exe=exe))
     display = free_display()
     env = dict(os.environ, DISPLAY=display, SDL_AUDIODRIVER="dummy")
     os.makedirs(SHOTS, exist_ok=True)

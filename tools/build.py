@@ -3,33 +3,20 @@
 
     build.py [FILE.c|FILE.asm...]
 
-WATCOM is the compiler directory, with BINNT, H and LIB386. It defaults
-to ~/opt/watcom10.6 or ~/data.local/watcom/10.6. MASM is the directory
-holding ML.EXE 6.11; it defaults to ~/opt/masm611 or
-~/data.frost/blob/cirno-labs/masm611/6.11. An object is rebuilt when its
-source or any header or include file in src/ is newer.
+The flags are build.cflags and build.asflags in project.toml. WATCOM
+is the compiler directory, with BINNT, H and LIB386; it defaults to the
+first in build.watcom that has one. MASM is the directory holding ML.EXE
+6.11; it defaults to the first in build.masm that has one. An object is
+rebuilt when its source or any header or include file in src/ is newer.
 """
 import glob, os, subprocess, sys
 
-ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-CFLAGS = ["-bt=dos", "-5r", "-oneatx", "-zq"]
-AFLAGS = ["/nologo", "/c", "/Cp"]
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import project
+from project import ROOT, masm, watcom
 
-
-def watcom():
-    for d in [os.environ.get("WATCOM"), os.path.expanduser("~/opt/watcom10.6"),
-              os.path.expanduser("~/data.local/watcom/10.6")]:
-        if d and os.path.isfile(os.path.join(d, "BINNT", "WCC386.EXE")):
-            return d
-    sys.exit("error: set WATCOM to a Watcom C 10.6 directory (see orig/README.md)")
-
-
-def masm():
-    for d in [os.environ.get("MASM"), os.path.expanduser("~/opt/masm611"),
-              os.path.expanduser("~/data.frost/blob/cirno-labs/masm611/6.11")]:
-        if d and os.path.isfile(os.path.join(d, "ML.EXE")):
-            return d
-    sys.exit("error: set MASM to a directory with MASM 6.11's ML.EXE (see orig/README.md)")
+CFLAGS = project.config["build"]["cflags"]
+AFLAGS = project.config["build"]["asflags"]
 
 
 def winpath(path):

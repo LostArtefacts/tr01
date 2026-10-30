@@ -1,6 +1,9 @@
 """Lists the functions of the flattened executable.
 
-    functions.py [build/tomb.elf] > build/functions.csv
+    functions.py [ELF] > build/functions.csv
+
+ELF defaults to build/<game.name>.elf, and game.code in project.toml is
+the range that holds code.
 
 A function starts at a direct call target or at a fixup that points into
 code, such as a function pointer in a table or stored by an instruction.
@@ -13,10 +16,11 @@ jumps there: code after a return in the same function is only reached
 by a jump. It ends where the next one
 starts, less the alignment padding Watcom puts between functions.
 """
-import re, subprocess, sys
+import os, re, subprocess, sys
 
-ELF = "build/tomb.elf"
-CODE = (0x10000, 0x8FA3E)
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from project import CODE, ELF
+
 PADDING = (b"\x8d\x40\x00", b"\x8b\xc0", b"\x90")
 
 

@@ -10,14 +10,20 @@ per object, so objdump and Ghidra can load it directly. The fixup
 targets are also written to OUT.fixups as `source,target` lines, which
 tells code references from plain numbers.
 
+EXE defaults to game.original in project.toml, the ELF file to
+build/<game.name>.elf.
+
 `Patch` edits an executable: bytes, fixups and a new object, and writes
 it back. Pages whose fixups are untouched keep their original fixup
 records. `roundtrip` rewrites the executable without changes, which must
 give the same file.
 """
-import struct, sys
+import os, struct, sys
 
-EXE = "build/tomb.exe"
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import project
+
+EXE = project.ORIGINAL
 
 
 class LE:
@@ -306,7 +312,7 @@ def main():
             print(f"object {i + 1}: base {o['base']:#010x} size {o['size']:#x} flags {o['flags']:#06x} "
                   f"pages {o['page']}+{o['npages']}")
     elif cmd == "elf":
-        out = sys.argv[3] if len(sys.argv) > 3 else "build/tomb.elf"
+        out = sys.argv[3] if len(sys.argv) > 3 else project.ELF
         objs, fixups = write_elf(le, out)
         print(f"wrote {out}: {len(objs)} objects, {len(fixups)} fixups")
     elif cmd == "roundtrip":

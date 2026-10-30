@@ -1,10 +1,11 @@
 """Adds every function of the original to config/symbols.csv.
 
-    seed_symbols.py [build/functions_ghidra.csv]
+    seed_symbols.py [FUNCTIONS]
 
-Functions come from the Ghidra analysis, with a placeholder name,
-FuncXXXXX. Library functions are recognized by searching the original
-for each public of Watcom's CLIB3R.LIB and MATH387R.LIB, with the bytes
+Functions come from the Ghidra analysis (ghidra.functions in
+project.toml), with a placeholder name, FuncXXXXX. Library functions are
+recognized by searching the original past game.game_end for each public
+of symbols.libs, Watcom's CLIB3R.LIB and MATH387R.LIB, with the bytes
 under their fixups as wildcards; one found at exactly one address gets
 the library's name and symbol.
 
@@ -13,11 +14,11 @@ Existing rows are never changed.
 import csv, os, re, sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-import build, le, omf
+import build, le, omf, project
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-LIBS = ["LIB386/DOS/CLIB3R.LIB", "LIB386/MATH387R.LIB"]
-GAME_END = 0x46E00
+LIBS = project.config["symbols"]["libs"]
+GAME_END = project.GAME_END
 
 
 def library_functions(w, code, base):
@@ -39,10 +40,10 @@ def library_functions(w, code, base):
 
 def main():
     os.chdir(ROOT)
-    src = sys.argv[1] if len(sys.argv) > 1 else "build/functions_ghidra.csv"
+    src = sys.argv[1] if len(sys.argv) > 1 else project.config["ghidra"]["functions"]
     path = "config/symbols.csv"
     rows = {int(r["address"], 16): r for r in csv.DictReader(open(path))} if os.path.exists(path) else {}
-    objs, _ = le.LE("build/tomb.exe").image()
+    objs, _ = le.LE(project.ORIGINAL).image()
     base, code, _ = objs[0]
     lib = library_functions(build.watcom(), bytes(code), base)
     added = named = 0

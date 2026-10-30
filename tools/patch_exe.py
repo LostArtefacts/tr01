@@ -3,28 +3,27 @@
     patch_exe.py [OUT]
 
 Every function of build/obj that config/symbols.csv names goes into a
-new object, and the original's first instruction becomes a jump to it,
-so the game runs our code whether or not it matches yet. A function
-with less than 5 bytes before the next one, such as an empty function
-on another one's ret, has no room for the jump and stays the
-original's. Calls and references from it resolve as in compare.py:
-externals through symbols.csv, the module's own data segments to where
-the original has them once compare.py has placed them, or else into the
-new object too.
+new object at build.hook_base, and the original's first instruction
+becomes a jump to it, so the game runs our code whether or not it
+matches yet. A function with less than 5 bytes before the next one, such
+as an empty function on another one's ret, has no room for the jump and
+stays the original's. Calls and references from it resolve as in
+compare.py: externals through symbols.csv, the module's own data
+segments to where the original has them once compare.py has placed
+them, or else into the new object too. OUT defaults to game.hooked in
+build/game; both settings are in project.toml.
 """
 import glob, os, struct, sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-import compare, le, omf
+import compare, le, omf, project
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-BASE = 0x200000
+BASE = project.config["build"]["hook_base"]
 FLAGS = 0x2047
 
 
-def main():
-    os.chdir(ROOT)
-    out = sys.argv[1] if len(sys.argv) > 1 else "build/game/TOMBRAID/TOMB.EXE"
+def patch(out):
     exe = le.LE(compare.EXE)
     orig = compare.Original(compare.EXE)
     by_symbol, by_addr = compare.load_symbols()
@@ -81,6 +80,11 @@ def main():
     os.makedirs(os.path.dirname(out), exist_ok=True)
     patch.save(out)
     print(f"{hooked} functions hooked into {out}, {len(blob)} bytes at {BASE:#x}")
+
+
+def main():
+    os.chdir(ROOT)
+    patch(sys.argv[1] if len(sys.argv) > 1 else project.HOOKED)
 
 
 if __name__ == "__main__":
