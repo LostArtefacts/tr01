@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">83.35% (676)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">16.65% (135)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">83.48% (677)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">16.52% (134)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="622.65" height="6" x="0" y="0" class="named"/>
-<rect width="124.35" height="6" x="622.65" y="0" class="todo"/>
+<rect width="623.57" height="6" x="0" y="0" class="named"/>
+<rect width="123.43" height="6" x="623.57" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -744,7 +744,7 @@
 <rect width="12" height="12" x="360" y="195" class="named"><title>0x0003b3fc LavaWedge (311 bytes)</title></rect>
 <rect width="12" height="12" x="375" y="195" class="named"><title>0x0003b558 CentaurControl (674 bytes)</title></rect>
 <rect width="12" height="12" x="390" y="195" class="named"><title>0x0003b7fc InitialiseWarrior2 (36 bytes)</title></rect>
-<rect width="12" height="12" x="405" y="195" class="todo"><title>0x0003b854 FlyerControl (1563 bytes)</title></rect>
+<rect width="12" height="12" x="405" y="195" class="named"><title>0x0003b854 FlyerControl (1563 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="195" class="todo"><title>0x0003be70 ControlMissile (627 bytes)</title></rect>
 <rect width="12" height="12" x="435" y="195" class="todo"><title>0x0003c0e4 ShootAtLara (213 bytes)</title></rect>
 <rect width="12" height="12" x="450" y="195" class="todo"><title>0x0003c1bc ShardGun (122 bytes)</title></rect>
@@ -882,10 +882,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">78.48%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">21.52%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">79.20%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">20.80%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="586.27" height="6" x="0" y="0" class="named"/>
-<rect width="160.73" height="6" x="586.27" y="0" class="todo"/>
+<rect width="591.59" height="6" x="0" y="0" class="named"/>
+<rect width="155.41" height="6" x="591.59" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.96" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -903,7 +903,7 @@
 <rect width="36.43" height="35.08" x="96.82" y="80.16" class="named"><title>0x000151c0 GetCollisionInfo (1702 bytes)</title></rect>
 <rect width="36.43" height="33.24" x="96.82" y="118.24" class="named"><title>0x0002e2ec NatlaControl (1620 bytes)</title></rect>
 <rect width="36.43" height="32.08" x="96.82" y="154.48" class="named"><title>0x00017a40 TestTriggers (1568 bytes)</title></rect>
-<rect width="36.43" height="31.97" x="96.82" y="189.56" class="todo"><title>0x0003b854 FlyerControl (1563 bytes)</title></rect>
+<rect width="36.43" height="31.97" x="96.82" y="189.56" class="named"><title>0x0003b854 FlyerControl (1563 bytes)</title></rect>
 <rect width="36.43" height="30.47" x="96.82" y="224.53" class="named"><title>0x00031414 do_control_option (1496 bytes)</title></rect>
 <rect width="30.36" height="35.21" x="136.25" y="0" class="named"><title>0x000158a8 CollideStaticObjects (1445 bytes)</title></rect>
 <rect width="30.36" height="34.98" x="136.25" y="38.21" class="todo"><title>0x00042910 ins_poly_trans8 (1436 bytes)</title></rect>
