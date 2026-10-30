@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">93.85% (763)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">6.15% (50)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">93.97% (764)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">6.03% (49)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="701.06" height="6" x="0" y="0" class="named"/>
-<rect width="45.94" height="6" x="701.06" y="0" class="todo"/>
+<rect width="701.98" height="6" x="0" y="0" class="named"/>
+<rect width="45.02" height="6" x="701.98" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -846,7 +846,7 @@
 <rect width="12" height="12" x="390" y="225" class="named"><title>0x00045a4c FileLoad (190 bytes)</title></rect>
 <rect width="12" height="12" x="405" y="225" class="named"><title>0x00045b0c FileSave (85 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="225" class="named"><title>0x00045b64 FileSize (66 bytes)</title></rect>
-<rect width="12" height="12" x="435" y="225" class="todo"><title>0x00045ba8 FadeToPal (88 bytes)</title></rect>
+<rect width="12" height="12" x="435" y="225" class="named"><title>0x00045ba8 FadeToPal (88 bytes)</title></rect>
 <rect width="12" height="12" x="450" y="225" class="todo"><title>0x00045c00 FadeWait (19 bytes)</title></rect>
 <rect width="12" height="12" x="465" y="225" class="todo"><title>0x00045c14 Func45c14 (74 bytes)</title></rect>
 <rect width="12" height="12" x="480" y="225" class="todo"><title>0x00045c60 Func45c60 (78 bytes)</title></rect>
@@ -884,10 +884,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">95.49%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">4.51%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">95.53%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">4.47%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="713.28" height="6" x="0" y="0" class="named"/>
-<rect width="33.72" height="6" x="713.28" y="0" class="todo"/>
+<rect width="713.58" height="6" x="0" y="0" class="named"/>
+<rect width="33.42" height="6" x="713.58" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.96" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1381,7 +1381,7 @@
 <rect width="6.10" height="5.73" x="635.46" y="240.55" class="named"><title>0x0001f0d0 LoadCameras (90 bytes)</title></rect>
 <rect width="6.10" height="5.73" x="635.46" y="249.27" class="named"><title>0x0001f12c LoadSoundEffects (90 bytes)</title></rect>
 <rect width="6.08" height="5.55" x="644.55" y="152.12" class="named"><title>0x0002c894 LightningCollision (88 bytes)</title></rect>
-<rect width="6.08" height="5.55" x="653.63" y="152.12" class="todo"><title>0x00045ba8 FadeToPal (88 bytes)</title></rect>
+<rect width="6.08" height="5.55" x="653.63" y="152.12" class="named"><title>0x00045ba8 FadeToPal (88 bytes)</title></rect>
 <rect width="5.98" height="5.55" x="662.71" y="152.12" class="named"><title>0x0002d144 ClearLOT (87 bytes)</title></rect>
 <rect width="5.98" height="5.55" x="671.69" y="152.12" class="todo"><title>0x000469fd Func469fd (87 bytes)</title></rect>
 <rect width="5.87" height="5.55" x="680.67" y="152.12" class="named"><title>0x000134a8 CreatureHead (86 bytes)</title></rect>

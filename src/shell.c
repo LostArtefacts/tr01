@@ -37,6 +37,25 @@ extern uint32 joy_mask;
 extern char txt_col;
 extern uint32 timer_handle;
 extern INTERRUPT interrupts[3];
+typedef struct
+{
+    uint32 old_pmoff;
+    uint16 old_pmseg;
+    uint32 clock;
+    uint16 vbl_count;
+    uint16 timer;
+    uint16 vbl_overflow;
+    uint16 vbl_max;
+    uint8 palette[256 * 3];
+    uint8 temp_pal[256 * 3];
+    void *pal_ptr;
+    uint32 fade_cnt;
+    uint32 fade_dec;
+    uint8 fade_flag;
+    uint8 pal_flag;
+} TODSTUFF;
+
+extern volatile TODSTUFF toddata;
 
 void FadeTick(void);
 uint8 VgaGetMode(void);
@@ -248,6 +267,16 @@ uint32 FileSize(char *name)
     size = ftell(fp);
     fclose(fp);
     return size;
+}
+
+void FadeToPal(uint32 count, uint8 *pal)
+{
+    if (!toddata.pal_flag)
+        memcpy((void *)toddata.palette, (void *)toddata.temp_pal, sizeof(toddata.temp_pal));
+    toddata.pal_ptr = pal;
+    toddata.fade_dec = 0x3f00 / count;
+    toddata.fade_cnt = 0x3f00;
+    toddata.fade_flag = 1;
 }
 
 void JoyDetect(void)

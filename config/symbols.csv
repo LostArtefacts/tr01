@@ -2049,6 +2049,7 @@ address,size,name,symbol
 0x000c40ac,36,poly_draw_routines,_poly_draw_routines
 0x000c58f8,4,one,_one
 0x000c5900,4,file_len,_file_len
+0x000c5904,1568,toddata,_toddata
 0x000c5f24,4,joy1_x,_joy1_x
 0x000c5f28,4,joy1_y,_joy1_y
 0x000c5f70,4,joy_mask,_joy_mask

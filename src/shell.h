@@ -105,7 +105,7 @@ void ScreenClear(void);
 void ScreenDump(void);
 void ScreenPartialDump(void);
 void TempVideoRemove(void);
-void FadeToPal(int count, uint8 *pal);
+void FadeToPal(uint32 count, uint8 *pal);
 void FadeWait(void);
 void JoyRead(void);
 void ShellInit(SETUP *pSetup, uint32 dwFlags);
