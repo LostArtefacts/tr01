@@ -61,11 +61,11 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">98.90% (812)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0.12% (1)</tspan> · <tspan class="todo">0.97% (8)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">99.03% (813)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0.12% (1)</tspan> · <tspan class="todo">0.85% (7)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="738.81" height="6" x="0" y="0" class="named"/>
-<rect width="0.91" height="6" x="738.81" y="0" class="nonmatching"/>
-<rect width="7.28" height="6" x="739.72" y="0" class="todo"/>
+<rect width="739.72" height="6" x="0" y="0" class="named"/>
+<rect width="0.91" height="6" x="739.72" y="0" class="nonmatching"/>
+<rect width="6.37" height="6" x="740.63" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -871,7 +871,7 @@
 <rect width="12" height="12" x="0" y="240" class="named"><title>0x0004671b VgaSetRows (71 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="240" class="named"><title>0x00046762 ScreenClear (41 bytes)</title></rect>
 <rect width="12" height="12" x="30" y="240" class="named"><title>0x0004678b ScreenPartialClear (102 bytes)</title></rect>
-<rect width="12" height="12" x="45" y="240" class="todo"><title>0x000467f1 ScreenDump (24 bytes)</title></rect>
+<rect width="12" height="12" x="45" y="240" class="named"><title>0x000467f1 ScreenDump (24 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="240" class="todo"><title>0x00046809 ScreenPartialDump (24 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="240" class="named"><title>0x00046821 ScreenDumpVga (38 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="240" class="named"><title>0x00046847 ScreenPartialDumpVga (148 bytes)</title></rect>
@@ -893,11 +893,11 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">99.39%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0.34%</tspan> · <tspan class="todo">0.27%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">99.40%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0.34%</tspan> · <tspan class="todo">0.26%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="742.45" height="6" x="0" y="0" class="named"/>
-<rect width="2.54" height="6" x="742.45" y="0" class="nonmatching"/>
-<rect width="2" height="6" x="745" y="0" class="todo"/>
+<rect width="742.54" height="6" x="0" y="0" class="named"/>
+<rect width="2.54" height="6" x="742.54" y="0" class="nonmatching"/>
+<rect width="1.92" height="6" x="745.08" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.55" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1628,7 +1628,7 @@
 <rect width="2.12" height="1.28" x="720.73" y="228.69" class="named"><title>0x0004698f VesaBiosGetModeInfo (25 bytes)</title></rect>
 <rect width="1.91" height="1.28" x="725.85" y="228.69" class="named"><title>0x0002dd48 mn_start_sound_fade (24 bytes)</title></rect>
 <rect width="1.91" height="1.28" x="730.76" y="228.69" class="named"><title>0x00036414 ResetSG (24 bytes)</title></rect>
-<rect width="1.91" height="1.28" x="735.67" y="228.69" class="todo"><title>0x000467f1 ScreenDump (24 bytes)</title></rect>
+<rect width="1.91" height="1.28" x="735.67" y="228.69" class="named"><title>0x000467f1 ScreenDump (24 bytes)</title></rect>
 <rect width="1.91" height="1.28" x="740.59" y="228.69" class="todo"><title>0x00046809 ScreenPartialDump (24 bytes)</title></rect>
 <rect width="1.50" height="1.28" x="745.50" y="228.69" class="named"><title>0x00020bf4 InitialisePickUpDisplay (22 bytes)</title></rect>
 <rect width="1.62" height="1.17" x="720.73" y="232.97" class="named"><title>0x00026cdc lara_col_backjump (22 bytes)</title></rect>

@@ -10,6 +10,9 @@
     public _video_depth
 _bank_cnt dw 0
 _video_depth dd 1
+dump_funcs label dword
+    dd      offset ScreenDumpVga_, offset ScreenDumpVesa_, offset ScreenDumpVesa_
+    dd      offset ScreenDumpVesa_, offset ScreenDumpVesa_
 
     .data?
 
@@ -153,6 +156,19 @@ l3:
     popa
     ret
 ScreenPartialClear_ endp
+
+    public ScreenDump_
+ScreenDump_ proc near
+    push    eax
+    push    edi
+    mov     edi,dword ptr _gamedata
+    xor     eax,eax
+    mov     ax,word ptr [edi+0eh]
+    call    dword ptr dump_funcs[eax*4]
+    pop     edi
+    pop     eax
+    ret
+ScreenDump_ endp
 
     public ScreenDumpVga_
 ScreenDumpVga_ proc near
