@@ -925,8 +925,8 @@ address,size,name,symbol
 0x0004a173,81,_localtime,_localtime_
 0x0004a1c4,13,localtime,localtime_
 0x0004a1d4,57,KeyGet,KeyGet_
-0x0004a20d,189,Func4a20d,
-0x0004a2ca,161,Func4a2ca,
+0x0004a20d,189,MouseInit,MouseInit_
+0x0004a2ca,161,MouseRead,MouseRead_
 0x0004a36b,148,JoyReadAxes,JoyReadAxes_
 0x0004a400,49,__STOSB,__STOSB
 0x0004a437,108,__STOSD,__STOSD
@@ -2058,6 +2058,8 @@ address,size,name,symbol
 0x000c61b8,256,vesa_info,_vesa_info
 0x000c62c0,256,vesa_mode_info,_vesa_mode_info
 0x000c64b8,114,interrupts,_interrupts
+0x000c652c,2,bank_cnt,_bank_cnt
+0x000c652e,4,video_depth,_video_depth
 0x000c6a40,520,__iob,___iob
 0x000cac70,768,game_palette,_game_palette
 0x000caf70,768,water_palette,_water_palette
@@ -2194,6 +2196,7 @@ address,size,name,symbol
 0x0012f614,4,xgen_ymax,_xgen_ymax
 0x0012f620,4,shell_flags,_shell_flags
 0x0012f628,4,dos_buffer,_dos_buffer
+0x0012f62c,4,video_aspect,_video_aspect
 0x0012f638,4,joy_found,_joy_found
 0x0012f63c,4,old_clock_ticks,_old_clock_ticks
 0x0012f640,4,joy_failed,_joy_failed
@@ -2201,7 +2204,11 @@ address,size,name,symbol
 0x0012f64c,4,int_func,_int_func
 0x0012f654,4,gamedata,_gamedata
 0x0012f658,4,keydata,_keydata
+0x0012f65c,2,mbuttons,_mbuttons
 0x0012f65e,1,old_video_mode,_old_video_mode
 0x0012f65f,1,old_text_rows,_old_text_rows
 0x0012ffb2,1,joy_fire,_joy_fire
+0x0012ffb4,4,txt_screen,_txt_screen
+0x0012ffb8,4,txt_width,_txt_width
+0x0012ffbc,4,txt_pitch,_txt_pitch
 0x0012ffc0,1,txt_col,_txt_col

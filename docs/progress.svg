@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">94.46% (768)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">5.54% (45)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">94.59% (769)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">5.41% (44)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="705.65" height="6" x="0" y="0" class="named"/>
-<rect width="41.35" height="6" x="705.65" y="0" class="todo"/>
+<rect width="706.57" height="6" x="0" y="0" class="named"/>
+<rect width="40.43" height="6" x="706.57" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -851,7 +851,7 @@
 <rect width="12" height="12" x="465" y="225" class="named"><title>0x00045c14 VesaHasMode (74 bytes)</title></rect>
 <rect width="12" height="12" x="480" y="225" class="named"><title>0x00045c60 VesaSetMode (78 bytes)</title></rect>
 <rect width="12" height="12" x="495" y="225" class="named"><title>0x00045cb0 VesaDetectModes (131 bytes)</title></rect>
-<rect width="12" height="12" x="510" y="225" class="todo"><title>0x00045d34 SwitchVideoMode (459 bytes)</title></rect>
+<rect width="12" height="12" x="510" y="225" class="named"><title>0x00045d34 SwitchVideoMode (459 bytes)</title></rect>
 <rect width="12" height="12" x="525" y="225" class="todo"><title>0x00045f00 KeyClearBuffer (39 bytes)</title></rect>
 <rect width="12" height="12" x="540" y="225" class="named"><title>0x00045f28 JoyDetect (66 bytes)</title></rect>
 <rect width="12" height="12" x="555" y="225" class="todo"><title>0x00045f6c JoySetCentre (148 bytes)</title></rect>
@@ -884,10 +884,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">95.66%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">4.34%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">95.87%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">4.13%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="714.60" height="6" x="0" y="0" class="named"/>
-<rect width="32.40" height="6" x="714.60" y="0" class="todo"/>
+<rect width="716.17" height="6" x="0" y="0" class="named"/>
+<rect width="30.83" height="6" x="716.17" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.96" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1023,7 +1023,7 @@
 <rect width="17.72" height="16.93" x="436.79" y="120.85" class="named"><title>0x0003e440 calc_object_vertices (468 bytes)</title></rect>
 <rect width="17.72" height="16.80" x="436.79" y="140.77" class="named"><title>0x00010668 S_DrawHealthBar (465 bytes)</title></rect>
 <rect width="17.72" height="16.59" x="436.79" y="160.57" class="named"><title>0x0003f2c0 S_DrawSpriteRel (460 bytes)</title></rect>
-<rect width="17.72" height="16.54" x="436.79" y="180.16" class="todo"><title>0x00045d34 SwitchVideoMode (459 bytes)</title></rect>
+<rect width="17.72" height="16.54" x="436.79" y="180.16" class="named"><title>0x00045d34 SwitchVideoMode (459 bytes)</title></rect>
 <rect width="17.72" height="16.50" x="436.79" y="199.71" class="named"><title>0x00024f90 LaraAboveWater (458 bytes)</title></rect>
 <rect width="17.72" height="16.46" x="436.79" y="219.21" class="named"><title>0x000160c0 LaraBaddieCollision (457 bytes)</title></rect>
 <rect width="17.72" height="16.33" x="436.79" y="238.67" class="named"><title>0x00029430 LaraUnderWater (454 bytes)</title></rect>

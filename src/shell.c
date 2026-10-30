@@ -78,6 +78,13 @@ extern volatile TODSTUFF toddata;
 extern VESAINFO vesa_info;
 extern uint8 vesa_mode_info[256];
 extern VIDEOMODE video_modes[24];
+extern int video_depth;
+extern int video_aspect;
+extern uint16 bank_cnt;
+extern uint8 *txt_screen;
+extern int txt_width;
+extern int txt_pitch;
+extern sint16 mbuttons;
 
 void FadeTick(void);
 uint8 VgaGetMode(void);
@@ -102,6 +109,8 @@ int VesaBiosGetInfo(VESAINFO *info);
 void VesaBiosGetModeInfo(uint8 *info, int mode);
 #pragma aux VesaBiosGetModeInfo parm [edi] [ecx] modify [eax ecx edi];
 int VesaBiosSetMode(int mode);
+uint16 MouseInit(void);
+void MouseRead(void);
 void SoundExit(void);
 uint32 sosTIMERRemoveEvent(uint32 handle);
 uint32 sosTIMERUninitSystem(uint32 debug);
@@ -354,6 +363,81 @@ void VesaDetectModes(void)
             }
         }
     }
+}
+
+int SwitchVideoMode(SETUP *pSetup)
+{
+    uint16 mode;
+    int failed;
+    int i;
+
+    video_depth = 1;
+    video_aspect = 0x4169;
+    failed = 0;
+    mode = 0x13;
+    if (pSetup->sc_width <= 320)
+        VgaSetMode(mode);
+    else
+    {
+        failed = 1;
+        i = pSetup->col_mode * 6;
+        if (i <= 18)
+        {
+            for (;; i++)
+            {
+                if (!video_modes[i].width)
+                    break;
+                if (pSetup->sc_width == video_modes[i].width && pSetup->sc_height == video_modes[i].height && video_modes[i].available)
+                {
+                    mode = video_modes[i].mode;
+                    failed = 0;
+                    break;
+                }
+            }
+        }
+        if (mode == 0x13)
+        {
+            VgaSetMode(mode);
+            pSetup->sc_width = 320;
+            pSetup->sc_height = 200;
+            pSetup->col_mode = 0;
+        }
+        else if (!VesaSetMode(mode))
+        {
+            mode = 0x13;
+            VgaSetMode(mode);
+            pSetup->sc_width = 320;
+            pSetup->sc_height = 200;
+            failed = 1;
+            pSetup->col_mode = 0;
+        }
+        else
+        {
+            video_depth = video_modes[i].depth;
+            video_aspect = video_modes[i].aspect;
+            bank_cnt = 64 / *(uint16 *)(vesa_mode_info + 4);
+        }
+    }
+    if (pSetup->scrn_ptr == NULL)
+        pSetup->scrn_ptr = malloc(640 * 480);
+    ScreenClear();
+    if (mode != 0x13)
+        pSetup->col_mode++;
+    txt_screen = pSetup->scrn_ptr;
+    txt_width = pSetup->sc_width;
+    txt_pitch = txt_width * 8;
+    if (shell_flags & NO_MOUSE)
+        mbuttons = 0;
+    else
+    {
+        mbuttons = MouseInit();
+        MouseRead();
+    }
+    pSetup->dump_y = 0;
+    pSetup->dump_x = pSetup->dump_y;
+    pSetup->dump_width = pSetup->sc_width;
+    pSetup->dump_height = pSetup->sc_height;
+    return failed;
 }
 
 void JoyDetect(void)
