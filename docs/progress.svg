@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">89.89% (729)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">10.11% (82)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">90.01% (730)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">9.99% (81)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="671.47" height="6" x="0" y="0" class="named"/>
-<rect width="75.53" height="6" x="671.47" y="0" class="todo"/>
+<rect width="672.39" height="6" x="0" y="0" class="named"/>
+<rect width="74.61" height="6" x="672.39" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -802,7 +802,7 @@
 <rect width="12" height="12" x="480" y="210" class="named"><title>0x0003f56c ins_room_sprite (376 bytes)</title></rect>
 <rect width="12" height="12" x="495" y="210" class="named"><title>0x0003f6e4 draw_scaled_spriteC (551 bytes)</title></rect>
 <rect width="12" height="12" x="510" y="210" class="named"><title>0x0003f910 ZedClipper (586 bytes)</title></rect>
-<rect width="12" height="12" x="525" y="210" class="todo"><title>0x0003fb5c Func3fb5c (1092 bytes)</title></rect>
+<rect width="12" height="12" x="525" y="210" class="named"><title>0x0003fb5c XYGUVClipper (1092 bytes)</title></rect>
 <rect width="12" height="12" x="540" y="210" class="todo"><title>0x0003ffa0 ins_roomGT4 (1829 bytes)</title></rect>
 <rect width="12" height="12" x="555" y="210" class="todo"><title>0x000406c8 ins_roomGT3 (1302 bytes)</title></rect>
 <rect width="12" height="12" x="570" y="210" class="todo"><title>0x00040be0 ins_objectGT4persp (1835 bytes)</title></rect>
@@ -882,10 +882,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">86.13%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">13.87%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">86.63%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">13.37%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="643.41" height="6" x="0" y="0" class="named"/>
-<rect width="103.59" height="6" x="643.41" y="0" class="todo"/>
+<rect width="647.13" height="6" x="0" y="0" class="named"/>
+<rect width="99.87" height="6" x="647.13" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.96" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -925,7 +925,7 @@
 <rect width="27.14" height="29.41" x="203.48" y="65.66" class="named"><title>0x0003e7c8 calc_roomvert (1107 bytes)</title></rect>
 <rect width="27.14" height="29.14" x="203.48" y="98.07" class="named"><title>0x00035574 CreateSaveGameInfo (1098 bytes)</title></rect>
 <rect width="27.14" height="29.09" x="203.48" y="130.21" class="named"><title>0x00011eb4 CreatureMood (1096 bytes)</title></rect>
-<rect width="27.14" height="28.97" x="203.48" y="162.30" class="todo"><title>0x0003fb5c Func3fb5c (1092 bytes)</title></rect>
+<rect width="27.14" height="28.97" x="203.48" y="162.30" class="named"><title>0x0003fb5c XYGUVClipper (1092 bytes)</title></rect>
 <rect width="27.14" height="28.91" x="203.48" y="194.27" class="named"><title>0x0001e8cc LoadObjects (1090 bytes)</title></rect>
 <rect width="27.14" height="28.82" x="203.48" y="226.18" class="named"><title>0x000111e8 BearControl (1087 bytes)</title></rect>
 <rect width="28.32" height="27.11" x="233.62" y="0" class="named"><title>0x0003992c T_DrawThisText (1069 bytes)</title></rect>

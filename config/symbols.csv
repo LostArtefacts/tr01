@@ -734,7 +734,7 @@ address,size,name,symbol
 0x0003f56c,376,ins_room_sprite,ins_room_sprite_
 0x0003f6e4,551,draw_scaled_spriteC,draw_scaled_spriteC_
 0x0003f910,586,ZedClipper,ZedClipper_
-0x0003fb5c,1092,Func3fb5c,
+0x0003fb5c,1092,XYGUVClipper,XYGUVClipper_
 0x0003ffa0,1829,ins_roomGT4,ins_roomGT4_
 0x000406c8,1302,ins_roomGT3,ins_roomGT3_
 0x00040be0,1835,ins_objectGT4persp,ins_objectGT4persp_
