@@ -771,8 +771,8 @@ address,size,name,symbol
 0x000456d0,27,TimerTick,TimerTick_
 0x000456ec,378,ShellInit,ShellInit_
 0x00045868,307,ShellCleanup,ShellCleanup_
-0x0004599c,5,Func4599c,
-0x000459a4,166,ShellExit,ShellExit_
+0x0004599c,5,ShellExitRealMemErr,ShellExitRealMemErr_
+0x000459a4,68,ShellExit,ShellExit_
 0x00045a4c,190,FileLoad,FileLoad_
 0x00045b0c,85,Func45b0c,
 0x00045b64,66,Func45b64,
@@ -953,8 +953,8 @@ address,size,name,symbol
 0x0004b174,21,Func4b174,
 0x0004b18e,16,Func4b18e,
 0x0004b19e,16,fflush,fflush_
+0x0004b1ae,5,vfprintf,vfprintf_
 0x0004b1b3,164,fputc,fputc_
-0x0004b257,6,Func4b257,
 0x0004b25d,6,Func4b25d,
 0x0004b263,23,strerror,strerror_
 0x0004b27a,33,fscanf,fscanf_
@@ -2052,6 +2052,7 @@ address,size,name,symbol
 0x000c5f70,4,joy_mask,_joy_mask
 0x000c5f74,4,timer_handle,_timer_handle
 0x000c64b8,114,interrupts,_interrupts
+0x000c6a40,520,__iob,___iob
 0x000cac70,768,game_palette,_game_palette
 0x000caf70,768,water_palette,_water_palette
 0x000cb270,4,malloc_used,_malloc_used

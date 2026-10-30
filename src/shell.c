@@ -1,4 +1,8 @@
+#include <errno.h>
+#include <stdarg.h>
+#include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "shell.h"
 
 #define NO_JOYSTICK 0x00000008
@@ -59,6 +63,8 @@ void MemFreeReal(void *mem);
 void VgaSetMode(uint8 mode);
 void VgaSetRows(uint8 rows);
 void TimeRestore(void);
+void ShellExitRealMemErr(void);
+#pragma aux ShellExitRealMemErr aborts;
 
 void TimerTick(void)
 {
@@ -168,6 +174,24 @@ void ShellCleanup(void)
     else
         VgaSetMode(old_video_mode);
     TimeRestore();
+}
+
+void ShellExitRealMemErr(void)
+{
+    ShellExit("Cannot allocate Real Mode buffer");
+}
+
+void ShellExit(char *szFormat, ...)
+{
+    va_list args;
+
+    ShellCleanup();
+    fflush(stdout);
+    va_start(args, szFormat);
+    vfprintf(stderr, szFormat, args);
+    va_end(args);
+    fputc('\n', stderr);
+    exit(0);
 }
 
 void JoyDetect(void)
