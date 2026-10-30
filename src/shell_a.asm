@@ -783,4 +783,90 @@ l2:
     ret
 VgaGetFont_ endp
 
+    public VgaSetFont_
+VgaSetFont_ proc near
+    pusha
+    mov     dx,3c4h
+    mov     al,2
+    out     dx,al
+    inc     dl
+    mov     al,4
+    out     dx,al
+    dec     dl
+    mov     al,4
+    out     dx,al
+    inc     dl
+    mov     al,6
+    out     dx,al
+    mov     dl,0ceh
+    mov     al,1
+    out     dx,al
+    inc     dl
+    dec     al
+    out     dx,al
+    dec     dl
+    mov     al,5
+    out     dx,al
+    inc     dl
+    xor     al,al
+    out     dx,al
+    dec     dl
+    mov     al,6
+    out     dx,al
+    inc     dl
+    mov     al,5
+    out     dx,al
+    dec     dl
+    mov     al,8
+    out     dx,al
+    inc     dl
+    mov     al,0ffh
+    out     dx,al
+    mov     edi,0a0000h
+    xor     ecx,ecx
+l1:
+    mov     eax,dword ptr [esi]
+    mov     ebx,dword ptr [esi+4]
+    mov     edx,dword ptr [esi+8]
+    mov     ebp,dword ptr [esi+0ch]
+    mov     dword ptr [edi],eax
+    mov     dword ptr [edi+4],ebx
+    mov     dword ptr [edi+8],edx
+    mov     dword ptr [edi+0ch],ebp
+    inc     cl
+    lea     esi,[esi+10h]
+    lea     edi,[edi+20h]
+    jne     l1
+    mov     dx,3c4h
+    mov     al,2
+    out     dx,al
+    inc     dl
+    mov     al,3
+    out     dx,al
+    dec     dl
+    mov     al,4
+    out     dx,al
+    inc     dl
+    mov     al,3
+    out     dx,al
+    mov     dl,0ceh
+    mov     al,5
+    out     dx,al
+    inc     dl
+    mov     al,10h
+    out     dx,al
+    dec     dl
+    mov     al,6
+    out     dx,al
+    inc     dl
+    test    byte ptr ds:[487h],2
+    mov     al,0ah
+    jne     l2
+    mov     al,0eh
+l2:
+    out     dx,al
+    popa
+    ret
+VgaSetFont_ endp
+
     end

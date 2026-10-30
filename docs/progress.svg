@@ -61,11 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">99.76% (819)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0.12% (1)</tspan> · <tspan class="todo">0.12% (1)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">99.88% (820)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0.12% (1)</tspan> · <tspan class="todo">0% (0)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="745.18" height="6" x="0" y="0" class="named"/>
-<rect width="0.91" height="6" x="745.18" y="0" class="nonmatching"/>
-<rect width="0.91" height="6" x="746.09" y="0" class="todo"/>
+<rect width="746.09" height="6" x="0" y="0" class="named"/>
+<rect width="0.91" height="6" x="746.09" y="0" class="nonmatching"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -888,16 +887,15 @@
 <rect width="12" height="12" x="255" y="240" class="named"><title>0x00046c5b PalInsertColours (22 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="240" class="named"><title>0x00046c71 FadeTick (183 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="240" class="named"><title>0x00046d28 VgaGetFont (137 bytes)</title></rect>
-<rect width="12" height="12" x="300" y="240" class="todo"><title>0x00046db1 VgaSetFont (157 bytes)</title></rect>
+<rect width="12" height="12" x="300" y="240" class="named"><title>0x00046db1 VgaSetFont (157 bytes)</title></rect>
 </g>
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">99.59%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0.34%</tspan> · <tspan class="todo">0.07%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">99.66%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0.34%</tspan> · <tspan class="todo">0%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="743.92" height="6" x="0" y="0" class="named"/>
-<rect width="2.54" height="6" x="743.92" y="0" class="nonmatching"/>
-<rect width="0.53" height="6" x="746.47" y="0" class="todo"/>
+<rect width="744.46" height="6" x="0" y="0" class="named"/>
+<rect width="2.54" height="6" x="744.46" y="0" class="nonmatching"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.55" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1248,7 +1246,7 @@
 <rect width="8.76" height="8.77" x="581.21" y="222.85" class="named"><title>0x00023ff0 Inv_GetItemOption (158 bytes)</title></rect>
 <rect width="8.76" height="8.69" x="581.21" y="234.62" class="named"><title>0x00011de4 ValidBox (157 bytes)</title></rect>
 <rect width="8.76" height="8.69" x="581.21" y="246.31" class="named"><title>0x0001d650 ControlBlood1 (157 bytes)</title></rect>
-<rect width="8.68" height="8.77" x="592.97" y="90.08" class="todo"><title>0x00046db1 VgaSetFont (157 bytes)</title></rect>
+<rect width="8.68" height="8.77" x="592.97" y="90.08" class="named"><title>0x00046db1 VgaSetFont (157 bytes)</title></rect>
 <rect width="8.53" height="8.77" x="604.65" y="90.08" class="named"><title>0x00024ee8 EffectNewRoom (155 bytes)</title></rect>
 <rect width="8.46" height="8.77" x="616.18" y="90.08" class="named"><title>0x000172b8 GetChange (154 bytes)</title></rect>
 <rect width="8.38" height="8.77" x="627.63" y="90.08" class="named"><title>0x00024bc4 ItemNewRoom (153 bytes)</title></rect>
