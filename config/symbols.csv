@@ -2114,6 +2114,9 @@ address,size,name,symbol
 0x000d17f8,4,cheat_turn,_cheat_turn
 0x000d17fc,2,as,_as
 0x000d17fe,2,cheat_angle,_cheat_angle
+0x000d1800,1856,T_textStrings,_T_textStrings
+0x000d1f40,2048,T_theStrings,_T_theStrings
+0x000d2740,2,T_numStrings,_T_numStrings
 0x000d2744,8192,phdsprinfo,_phdsprinfo
 0x000d4744,48000,vbuf,_vbuf
 0x000e02c4,40960,phdtextinfo,_phdtextinfo

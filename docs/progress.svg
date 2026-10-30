@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">76.94% (624)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">23.06% (187)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">77.07% (625)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">22.93% (186)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="574.76" height="6" x="0" y="0" class="named"/>
-<rect width="172.24" height="6" x="574.76" y="0" class="todo"/>
+<rect width="575.68" height="6" x="0" y="0" class="named"/>
+<rect width="171.32" height="6" x="575.68" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -692,7 +692,7 @@
 <rect width="12" height="12" x="330" y="180" class="named"><title>0x000390a0 GetSpheres (681 bytes)</title></rect>
 <rect width="12" height="12" x="345" y="180" class="named"><title>0x0003934c GetJointAbsPosition (445 bytes)</title></rect>
 <rect width="12" height="12" x="360" y="180" class="named"><title>0x0003950c BaddieBiteEffect (81 bytes)</title></rect>
-<rect width="12" height="12" x="375" y="180" class="todo"><title>0x00039560 T_InitPrint (34 bytes)</title></rect>
+<rect width="12" height="12" x="375" y="180" class="named"><title>0x00039560 T_InitPrint (34 bytes)</title></rect>
 <rect width="12" height="12" x="390" y="180" class="todo"><title>0x00039584 T_Print (281 bytes)</title></rect>
 <rect width="12" height="12" x="405" y="180" class="todo"><title>0x000396a0 T_ChangeText (59 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="180" class="todo"><title>0x000396dc Func396dc (3 bytes)</title></rect>
@@ -882,10 +882,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">74.48%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">25.52%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">74.50%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">25.50%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="556.40" height="6" x="0" y="0" class="named"/>
-<rect width="190.60" height="6" x="556.40" y="0" class="todo"/>
+<rect width="556.51" height="6" x="0" y="0" class="named"/>
+<rect width="190.49" height="6" x="556.51" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.96" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1569,7 +1569,7 @@
 <rect width="2.45" height="2.51" x="712.20" y="214.74" class="named"><title>0x0002ffd8 BridgeTilt2Floor (34 bytes)</title></rect>
 <rect width="2.45" height="2.51" x="717.64" y="214.74" class="named"><title>0x0003667c CheckSumValid (34 bytes)</title></rect>
 <rect width="2.45" height="2.51" x="723.09" y="214.74" class="named"><title>0x000367e4 InitialiseLevelFlags (34 bytes)</title></rect>
-<rect width="2.45" height="2.51" x="728.53" y="214.74" class="todo"><title>0x00039560 T_InitPrint (34 bytes)</title></rect>
+<rect width="2.45" height="2.51" x="728.53" y="214.74" class="named"><title>0x00039560 T_InitPrint (34 bytes)</title></rect>
 <rect width="2.45" height="2.51" x="733.98" y="214.74" class="todo"><title>0x000398c8 Func398c8 (34 bytes)</title></rect>
 <rect width="2.29" height="2.51" x="739.43" y="214.74" class="named"><title>0x0001f4a4 GetFullPath (33 bytes)</title></rect>
 <rect width="2.29" height="2.51" x="744.71" y="214.74" class="named"><title>0x0002f264 InitialiseRollingBlock (33 bytes)</title></rect>
