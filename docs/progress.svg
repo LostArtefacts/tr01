@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">91% (738)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">9% (73)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">91.12% (739)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">8.88% (72)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="679.76" height="6" x="0" y="0" class="named"/>
-<rect width="67.24" height="6" x="679.76" y="0" class="todo"/>
+<rect width="680.68" height="6" x="0" y="0" class="named"/>
+<rect width="66.32" height="6" x="680.68" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -811,7 +811,7 @@
 <rect width="12" height="12" x="615" y="210" class="named"><title>0x00041bb0 ins_objectGT3 (771 bytes)</title></rect>
 <rect width="12" height="12" x="630" y="210" class="named"><title>0x00041eb4 XYGClipper (793 bytes)</title></rect>
 <rect width="12" height="12" x="645" y="210" class="named"><title>0x000421d0 ins_objectG4 (630 bytes)</title></rect>
-<rect width="12" height="12" x="660" y="210" class="todo"><title>0x00042448 ins_objectG3 (525 bytes)</title></rect>
+<rect width="12" height="12" x="660" y="210" class="named"><title>0x00042448 ins_objectG3 (525 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="210" class="todo"><title>0x00042658 Func42658 (695 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="210" class="todo"><title>0x00042910 ins_poly_trans8 (1436 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="210" class="todo"><title>0x00042eb0 draw_poly_flat (39 bytes)</title></rect>
@@ -882,10 +882,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">90.90%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">9.10%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">91.14%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">8.86%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="679.04" height="6" x="0" y="0" class="named"/>
-<rect width="67.96" height="6" x="679.04" y="0" class="todo"/>
+<rect width="680.83" height="6" x="0" y="0" class="named"/>
+<rect width="66.17" height="6" x="680.83" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.96" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1001,7 +1001,7 @@
 <rect width="19.56" height="17.80" x="393.39" y="216.51" class="named"><title>0x0002b5c0 AnimateShotgun (532 bytes)</title></rect>
 <rect width="19.56" height="17.69" x="393.39" y="237.31" class="named"><title>0x0002be38 AnimatePistols (529 bytes)</title></rect>
 <rect width="17.83" height="19.28" x="415.95" y="0" class="named"><title>0x00034224 MidasCollision (526 bytes)</title></rect>
-<rect width="17.83" height="19.24" x="415.95" y="22.28" class="todo"><title>0x00042448 ins_objectG3 (525 bytes)</title></rect>
+<rect width="17.83" height="19.24" x="415.95" y="22.28" class="named"><title>0x00042448 ins_objectG3 (525 bytes)</title></rect>
 <rect width="17.83" height="19.20" x="415.95" y="44.52" class="named"><title>0x0002b910 undraw_pistols (524 bytes)</title></rect>
 <rect width="17.83" height="18.98" x="415.95" y="66.71" class="named"><title>0x00027b44 TestLaraVault (519 bytes)</title></rect>
 <rect width="17.83" height="18.77" x="415.95" y="88.70" class="named"><title>0x00029bc0 LaraSurface (514 bytes)</title></rect>
