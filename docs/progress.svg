@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">92.73% (752)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">7.27% (59)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">92.85% (753)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">7.15% (58)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="692.66" height="6" x="0" y="0" class="named"/>
-<rect width="54.34" height="6" x="692.66" y="0" class="todo"/>
+<rect width="693.58" height="6" x="0" y="0" class="named"/>
+<rect width="53.42" height="6" x="693.58" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -825,7 +825,7 @@
 <rect width="12" height="12" x="75" y="225" class="named"><title>0x000430fc xgen_xg (448 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="225" class="named"><title>0x000432bc xgen_xguv (684 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="225" class="named"><title>0x00043568 xgen_xguvpersp_fp (788 bytes)</title></rect>
-<rect width="12" height="12" x="120" y="225" class="todo"><title>0x0004387c gtmap_persp16_fp (1895 bytes)</title></rect>
+<rect width="12" height="12" x="120" y="225" class="named"><title>0x0004387c gtmap_persp16_fp (1895 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="225" class="todo"><title>0x00043fe4 wgtmap_persp16_fp (1820 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="225" class="todo"><title>0x00044700 flatA (97 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="225" class="todo"><title>0x00044761 transA (308 bytes)</title></rect>
@@ -882,10 +882,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">93.25%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">6.75%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">94.11%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">5.89%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="696.56" height="6" x="0" y="0" class="named"/>
-<rect width="50.44" height="6" x="696.56" y="0" class="todo"/>
+<rect width="703.01" height="6" x="0" y="0" class="named"/>
+<rect width="43.99" height="6" x="703.01" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.96" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -895,7 +895,7 @@
 <rect width="40.85" height="50.17" x="52.96" y="0" class="todo"><title>0x000359c0 ExtractSaveGameInfo (2643 bytes)</title></rect>
 <rect width="40.85" height="43.85" x="52.96" y="53.17" class="named"><title>0x00037adc ObjectObjects (2329 bytes)</title></rect>
 <rect width="40.85" height="43.15" x="52.96" y="100.02" class="named"><title>0x0001b224 DrawLara (2294 bytes)</title></rect>
-<rect width="40.85" height="35.12" x="52.96" y="146.17" class="todo"><title>0x0004387c gtmap_persp16_fp (1895 bytes)</title></rect>
+<rect width="40.85" height="35.12" x="52.96" y="146.17" class="named"><title>0x0004387c gtmap_persp16_fp (1895 bytes)</title></rect>
 <rect width="40.85" height="33.91" x="52.96" y="184.29" class="named"><title>0x00040be0 ins_objectGT4persp (1835 bytes)</title></rect>
 <rect width="40.85" height="33.79" x="52.96" y="221.21" class="named"><title>0x0003ffa0 ins_roomGT4 (1829 bytes)</title></rect>
 <rect width="36.43" height="37.72" x="96.82" y="0" class="todo"><title>0x00043fe4 wgtmap_persp16_fp (1820 bytes)</title></rect>
