@@ -33,7 +33,19 @@ typedef struct
     uint32 oem;
     uint32 capabilities;
     uint32 modes;
+    uint16 memory;
+    uint8 reserved[244];
 } VESAINFO;
+
+typedef struct
+{
+    uint8 ctrl_break;
+} BRKSTUFF;
+
+typedef struct
+{
+    uint8 crit_err;
+} CRITSTUFF;
 
 typedef struct
 {
@@ -60,10 +72,7 @@ extern uint8 old_text_rows;
 extern void *dos_buffer;
 extern int joy_found;
 extern int joy_failed;
-extern uint32 joy_mask;
 extern char txt_col;
-extern uint32 timer_handle;
-extern INTERRUPT interrupts[3];
 typedef struct
 {
     uint32 old_pmoff;
@@ -82,10 +91,6 @@ typedef struct
     uint8 pal_flag;
 } TODSTUFF;
 
-extern volatile TODSTUFF toddata;
-extern VESAINFO vesa_info;
-extern uint8 vesa_mode_info[256];
-extern VIDEOMODE video_modes[24];
 extern int video_depth;
 extern int video_aspect;
 extern uint16 bank_cnt;
@@ -97,27 +102,75 @@ extern volatile sint16 joy_x_raw;
 extern volatile sint16 joy_y_raw;
 extern volatile sint16 joy_z_raw;
 extern volatile sint16 joy_r_raw;
-extern uint32 joy_x_centre;
-extern uint32 joy_y_centre;
-extern uint32 joy_z_centre;
-extern uint32 joy_r_centre;
-extern uint32 joy_x_min;
-extern uint32 joy_x_max;
-extern uint32 joy_y_min;
-extern uint32 joy_y_max;
-extern uint32 joy_z_min;
-extern uint32 joy_z_max;
-extern uint32 joy_r_min;
-extern uint32 joy_r_max;
-extern int joy_x_old;
-extern int joy_y_old;
-extern int joy_z_old;
 extern int joy_x;
 extern int joy_y;
 extern int joy_z;
-extern int joy_hat;
-extern int joy_throttle;
-extern REALBLOCK real_blocks[32];
+extern volatile BRKSTUFF *brkdata;
+extern volatile CRITSTUFF *critdata;
+extern uint8 key_real_code[];
+extern uint8 key_real_code_end[];
+
+void KeyHandler(void);
+void BreakHandler(void);
+void CritHandler(void);
+
+int file_len = 0;
+volatile TODSTUFF toddata = {0};
+int joy1_x = 0;
+int joy1_y = 0;
+int joy_hat = 4;
+int joy_throttle = 0;
+uint32 joy_x_min = 1024;
+uint32 joy_x_max = 0;
+uint32 joy_x_centre = 0;
+uint32 joy_y_min = 1024;
+uint32 joy_y_max = 0;
+uint32 joy_y_centre = 0;
+int joy_x_old = 0;
+int joy_y_old = 0;
+uint32 joy_z_min = 1024;
+uint32 joy_z_max = 0;
+uint32 joy_z_centre = 0;
+uint32 joy_r_min = 1024;
+uint32 joy_r_max = 0;
+uint32 joy_r_centre = 0;
+int joy_z_old = 0;
+uint32 joy_mask = 0;
+uint32 timer_handle = -1;
+VIDEOMODE video_modes[24] = {
+    {0x100, 640, 400, 1, 0x4169, 0},
+    {0x101, 640, 480, 1, 0x4ce6, 0},
+    {0x103, 800, 600, 1, 0x525e, 0},
+    {0x105, 1024, 768, 1, 0x3559, 0},
+    {0x107, 1280, 1024, 1, 0x3559, 0},
+    {0, 0, 0, 0, 0, 0},
+    {0x10d, 320, 200, 2, 0x4c82, 0},
+    {0x110, 640, 480, 2, 0x4ce6, 0},
+    {0x113, 800, 600, 2, 0x525e, 0},
+    {0x116, 1024, 768, 2, 0x3559, 0},
+    {0x119, 1280, 1024, 2, 0x3559, 0},
+    {0, 0, 0, 0, 0, 0},
+    {0x10e, 320, 200, 2, 0x4c82, 0},
+    {0x111, 640, 480, 2, 0x4ce6, 0},
+    {0x114, 800, 600, 2, 0x525e, 0},
+    {0x117, 1024, 768, 2, 0x3559, 0},
+    {0x11a, 1280, 1024, 2, 0x3559, 0},
+    {0, 0, 0, 0, 0, 0},
+    {0x10f, 320, 200, 3, 0x4c82, 0},
+    {0x112, 640, 480, 3, 0x4ce6, 0},
+    {0x115, 800, 600, 3, 0x525e, 0},
+    {0x118, 1024, 768, 3, 0x3559, 0},
+    {0x11b, 1280, 1024, 3, 0x3559, 0},
+    {0, 0, 0, 0, 0, 0}
+};
+VESAINFO vesa_info = {0};
+uint8 vesa_mode_info[248] = {0};
+REALBLOCK real_blocks[32] = {0};
+INTERRUPT interrupts[3] = {
+    {0, 0, 0, 0, 0, 0x23, (void **)&brkdata, NULL, NULL, BreakHandler, 0, 16, NULL},
+    {0, 0, 0, 0, 0, 0x24, (void **)&critdata, NULL, NULL, CritHandler, 0, 16, NULL},
+    {0, 0, 0, 0, 0, 9, (void **)&keydata, key_real_code, NULL, KeyHandler, 0, 336, key_real_code_end}
+};
 
 void FadeTick(void);
 uint8 VgaGetMode(void);

@@ -936,8 +936,9 @@ address,size,name,symbol
 0x0004a5ec,537,Func4a5ec,
 0x0004a805,59,__do_exit_with_msg,__do_exit_with_msg__
 0x0004a840,9,___GETDSStart,___GETDSStart_
-0x0004a974,19,Func4a974,
-0x0004a987,31,Func4a987,
+0x0004a84c,296,KeyHandler,KeyHandler_
+0x0004a974,19,BreakHandler,BreakHandler_
+0x0004a987,31,CritHandler,CritHandler_
 0x0004a9b3,71,Func4a9b3,
 0x0004a9fa,98,TimeRestore,TimeRestore_
 0x0004aa5c,5,Func4aa5c,
@@ -1782,6 +1783,8 @@ address,size,name,symbol
 0x0008f9e2,88,__Intel_hook_init,__Intel_hook_init_
 0x0008fa3a,1,Func8fa3a,
 0x0008fa3b,3,Func8fa3b,
+0x00090000,616,key_real_code,_key_real_code
+0x00090268,0,key_real_code_end,_key_real_code_end
 0x000c17a0,4,wet,_wet
 0x000c17a4,60,shadowman,_shadowman
 0x000c17e4,16,bat_bite,_bat_bite
@@ -2073,8 +2076,8 @@ address,size,name,symbol
 0x000c5f70,4,joy_mask,_joy_mask
 0x000c5f74,4,timer_handle,_timer_handle
 0x000c5f78,576,video_modes,_video_modes
-0x000c61b8,256,vesa_info,_vesa_info
-0x000c62c0,256,vesa_mode_info,_vesa_mode_info
+0x000c61b8,264,vesa_info,_vesa_info
+0x000c62c0,248,vesa_mode_info,_vesa_mode_info
 0x000c63b8,256,real_blocks,_real_blocks
 0x000c64b8,114,interrupts,_interrupts
 0x000c652c,2,bank_cnt,_bank_cnt
@@ -2223,7 +2226,9 @@ address,size,name,symbol
 0x0012f63c,4,old_clock_ticks,_old_clock_ticks
 0x0012f640,4,joy_failed,_joy_failed
 0x0012f644,4,clock_ticks,_clock_ticks
+0x0012f648,4,critdata,_critdata
 0x0012f64c,4,int_func,_int_func
+0x0012f650,4,brkdata,_brkdata
 0x0012f654,4,gamedata,_gamedata
 0x0012f658,4,keydata,_keydata
 0x0012f65c,2,mbuttons,_mbuttons
