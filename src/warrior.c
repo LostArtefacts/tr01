@@ -82,6 +82,13 @@ BITE_INFO centaur_rear = {50, 30, 0, 5};
 
 #define CENTAUR_REAR_RANGE SQUARE(WALL_L * 3 / 2)
 
+enum mummy_anims
+{
+    MUMMY_EMPTY,
+    MUMMY_STOP,
+    MUMMY_DEATH
+};
+
 sint16 ShardGun(sint32 x, sint32 y, sint32 z, sint16 speed, PHD_ANGLE yrot, sint16 room_number);
 sint16 RocketGun(sint32 x, sint32 y, sint32 z, sint16 speed, PHD_ANGLE yrot, sint16 room_number);
 int ExplodingDeath(sint16 item_number, sint32 mesh_bits, sint16 damage);
@@ -619,4 +626,36 @@ void InitialiseMummy(sint16 item_number)
 
     item->data = (sint16 *)game_malloc(sizeof(sint16), MUMMY_HEAD_TURN);
     *(sint16 *)item->data = 0;
+}
+
+void MummyControl(sint16 item_number)
+{
+    ITEM_INFO *item;
+    sint16 head;
+
+    item = &items[item_number];
+
+    head = 0;
+
+    if (item->current_anim_state == MUMMY_STOP)
+    {
+        head = (sint16)phd_atan(lara_item->pos.z_pos - item->pos.z_pos, lara_item->pos.x_pos - item->pos.x_pos) - item->pos.y_rot;
+        if (head < -FRONT_ARC)
+            head = -FRONT_ARC;
+        else if (head > FRONT_ARC)
+            head = FRONT_ARC;
+
+        if (item->hit_points <= 0 || item->touch_bits)
+            item->goal_anim_state = MUMMY_DEATH;
+    }
+
+    CreatureHead(item, head);
+
+    AnimateItem(item);
+
+    if (item->status == DEACTIVATED)
+    {
+        RemoveActiveItem(item_number);
+        item->hit_points = DONT_TARGET;
+    }
 }
