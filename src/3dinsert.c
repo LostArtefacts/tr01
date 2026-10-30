@@ -1017,3 +1017,64 @@ int XYGClipper(int number, VERTEX_INFO *input)
         return 0;
     return j;
 }
+
+sint16 *ins_objectG4(sint16 *objptr, int number)
+{
+    PHD_VBUF *vn1, *vn2, *vn3, *vn4;
+    VERTEX_INFO *v;
+    sint16 *outptr;
+    int i, npoints;
+    sint32 zdepth;
+
+    outptr = info3dptr;
+    for (; number > 0; number--, objptr += 5)
+    {
+        vn1 = &vbuf[*(objptr)];
+        vn2 = &vbuf[*(objptr + 1)];
+        vn3 = &vbuf[*(objptr + 2)];
+        vn4 = &vbuf[*(objptr + 3)];
+        if ((vn1->clip & vn2->clip & vn3->clip & vn4->clip) || vn1->clip < 0 || vn2->clip < 0 || vn3->clip < 0 || vn4->clip < 0)
+            continue;
+        if ((sint32)((vn3->xs - vn2->xs) * (vn1->ys - vn2->ys) - (vn1->xs - vn2->xs) * (vn3->ys - vn2->ys)) < 0)
+            continue;
+        v = v_buffer;
+        v->x = (float)vn1->xs;
+        v->y = (float)vn1->ys;
+        v->g = (float)vn1->g;
+        v++;
+        v->x = (float)vn2->xs;
+        v->y = (float)vn2->ys;
+        v->g = (float)vn2->g;
+        v++;
+        v->x = (float)vn3->xs;
+        v->y = (float)vn3->ys;
+        v->g = (float)vn3->g;
+        v++;
+        v->x = (float)vn4->xs;
+        v->y = (float)vn4->ys;
+        v->g = (float)vn4->g;
+        npoints = 4;
+        if (vn1->clip || vn2->clip || vn3->clip || vn4->clip)
+            npoints = XYGClipper(npoints, v_buffer);
+        if (npoints)
+        {
+            zdepth = (vn1->zv + vn2->zv + vn3->zv + vn4->zv) / 4;
+            *(sort3dptr) = (sint32)outptr;
+            *(sort3dptr + 1) = zdepth;
+            sort3dptr += 2;
+            *(outptr) = DRAW_POLY_GOURAUD;
+            *(outptr + 1) = *(objptr + 4);
+            *(outptr + 2) = npoints;
+            outptr += 3;
+            for (i = 0, v = v_buffer; i < npoints; i++, v++, outptr += 3)
+            {
+                *(outptr) = (sint16)v->x;
+                *(outptr + 1) = (sint16)v->y;
+                *(outptr + 2) = (sint16)v->g;
+            }
+            surfacenum++;
+        }
+    }
+    info3dptr = outptr;
+    return objptr;
+}

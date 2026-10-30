@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">90.88% (737)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">9.12% (74)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">91% (738)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">9% (73)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="678.84" height="6" x="0" y="0" class="named"/>
-<rect width="68.16" height="6" x="678.84" y="0" class="todo"/>
+<rect width="679.76" height="6" x="0" y="0" class="named"/>
+<rect width="67.24" height="6" x="679.76" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -810,7 +810,7 @@
 <rect width="12" height="12" x="600" y="210" class="named"><title>0x00041820 ins_objectGT4 (910 bytes)</title></rect>
 <rect width="12" height="12" x="615" y="210" class="named"><title>0x00041bb0 ins_objectGT3 (771 bytes)</title></rect>
 <rect width="12" height="12" x="630" y="210" class="named"><title>0x00041eb4 XYGClipper (793 bytes)</title></rect>
-<rect width="12" height="12" x="645" y="210" class="todo"><title>0x000421d0 ins_objectG4 (630 bytes)</title></rect>
+<rect width="12" height="12" x="645" y="210" class="named"><title>0x000421d0 ins_objectG4 (630 bytes)</title></rect>
 <rect width="12" height="12" x="660" y="210" class="todo"><title>0x00042448 ins_objectG3 (525 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="210" class="todo"><title>0x00042658 Func42658 (695 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="210" class="todo"><title>0x00042910 ins_poly_trans8 (1436 bytes)</title></rect>
@@ -882,10 +882,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">90.61%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">9.39%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">90.90%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">9.10%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="676.89" height="6" x="0" y="0" class="named"/>
-<rect width="70.11" height="6" x="676.89" y="0" class="todo"/>
+<rect width="679.04" height="6" x="0" y="0" class="named"/>
+<rect width="67.96" height="6" x="679.04" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.96" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -984,7 +984,7 @@
 <rect width="21.06" height="20.51" x="369.34" y="97.15" class="named"><title>0x000180e8 GetCeiling (641 bytes)</title></rect>
 <rect width="21.06" height="20.43" x="369.34" y="120.66" class="named"><title>0x00010090 S_GetObjectBounds (639 bytes)</title></rect>
 <rect width="21.06" height="20.25" x="369.34" y="144.09" class="named"><title>0x00011674 CreatureAIInfo (634 bytes)</title></rect>
-<rect width="21.06" height="20.10" x="369.34" y="167.34" class="todo"><title>0x000421d0 ins_objectG4 (630 bytes)</title></rect>
+<rect width="21.06" height="20.10" x="369.34" y="167.34" class="named"><title>0x000421d0 ins_objectG4 (630 bytes)</title></rect>
 <rect width="21.06" height="19.99" x="369.34" y="190.45" class="named"><title>0x0003be70 ControlMissile (627 bytes)</title></rect>
 <rect width="21.06" height="19.59" x="369.34" y="213.44" class="named"><title>0x00039da8 RollingBallControl (616 bytes)</title></rect>
 <rect width="21.06" height="18.97" x="369.34" y="236.03" class="named"><title>0x0002f00c TestBlockPull (599 bytes)</title></rect>
