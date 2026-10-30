@@ -623,7 +623,7 @@ address,size,name,symbol
 0x00038f20,383,TestCollision,TestCollision_
 0x000390a0,681,GetSpheres,GetSpheres_
 0x0003934c,445,GetJointAbsPosition,GetJointAbsPosition_
-0x0003950c,81,Func3950c,
+0x0003950c,81,BaddieBiteEffect,BaddieBiteEffect_
 0x00039560,34,T_InitPrint,T_InitPrint_
 0x00039584,281,T_Print,T_Print_
 0x000396a0,59,T_ChangeText,T_ChangeText_

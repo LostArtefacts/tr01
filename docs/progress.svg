@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">76.82% (623)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">23.18% (188)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">76.94% (624)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">23.06% (187)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="573.84" height="6" x="0" y="0" class="named"/>
-<rect width="173.16" height="6" x="573.84" y="0" class="todo"/>
+<rect width="574.76" height="6" x="0" y="0" class="named"/>
+<rect width="172.24" height="6" x="574.76" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -691,7 +691,7 @@
 <rect width="12" height="12" x="315" y="180" class="named"><title>0x00038f20 TestCollision (383 bytes)</title></rect>
 <rect width="12" height="12" x="330" y="180" class="named"><title>0x000390a0 GetSpheres (681 bytes)</title></rect>
 <rect width="12" height="12" x="345" y="180" class="named"><title>0x0003934c GetJointAbsPosition (445 bytes)</title></rect>
-<rect width="12" height="12" x="360" y="180" class="todo"><title>0x0003950c Func3950c (81 bytes)</title></rect>
+<rect width="12" height="12" x="360" y="180" class="named"><title>0x0003950c BaddieBiteEffect (81 bytes)</title></rect>
 <rect width="12" height="12" x="375" y="180" class="todo"><title>0x00039560 T_InitPrint (34 bytes)</title></rect>
 <rect width="12" height="12" x="390" y="180" class="todo"><title>0x00039584 T_Print (281 bytes)</title></rect>
 <rect width="12" height="12" x="405" y="180" class="todo"><title>0x000396a0 T_ChangeText (59 bytes)</title></rect>
@@ -882,10 +882,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">74.45%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">25.55%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">74.48%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">25.52%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="556.12" height="6" x="0" y="0" class="named"/>
-<rect width="190.88" height="6" x="556.12" y="0" class="todo"/>
+<rect width="556.40" height="6" x="0" y="0" class="named"/>
+<rect width="190.60" height="6" x="556.40" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.96" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1395,7 +1395,7 @@
 <rect width="5.73" height="5.29" x="644.86" y="177.62" class="named"><title>0x0001fd50 S_PlayFMV (82 bytes)</title></rect>
 <rect width="5.73" height="5.29" x="644.86" y="185.91" class="named"><title>0x00030114 BoatControl (82 bytes)</title></rect>
 <rect width="5.73" height="5.19" x="644.86" y="194.20" class="named"><title>0x000313b0 DefaultConflict (81 bytes)</title></rect>
-<rect width="5.73" height="5.19" x="644.86" y="202.39" class="todo"><title>0x0003950c Func3950c (81 bytes)</title></rect>
+<rect width="5.73" height="5.19" x="644.86" y="202.39" class="named"><title>0x0003950c BaddieBiteEffect (81 bytes)</title></rect>
 <rect width="5.73" height="5.09" x="644.86" y="210.58" class="named"><title>0x0001d7fc Twinkle (80 bytes)</title></rect>
 <rect width="5.73" height="4.99" x="644.86" y="218.67" class="named"><title>0x00013aa0 BadPosition (79 bytes)</title></rect>
 <rect width="5.73" height="4.89" x="644.86" y="226.66" class="named"><title>0x000352e8 InitialiseStartInfo (78 bytes)</title></rect>
