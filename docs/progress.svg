@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">80.89% (656)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">19.11% (155)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">81.01% (657)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">18.99% (154)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="604.23" height="6" x="0" y="0" class="named"/>
-<rect width="142.77" height="6" x="604.23" y="0" class="todo"/>
+<rect width="605.15" height="6" x="0" y="0" class="named"/>
+<rect width="141.85" height="6" x="605.15" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -724,7 +724,7 @@
 <rect width="12" height="12" x="60" y="195" class="named"><title>0x0003a430 TrapDoorFloor (53 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="195" class="named"><title>0x0003a468 TrapDoorCeiling (55 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="195" class="named"><title>0x0003a4a0 OnTrapDoor (165 bytes)</title></rect>
-<rect width="12" height="12" x="105" y="195" class="todo"><title>0x0003a548 Pendulum (336 bytes)</title></rect>
+<rect width="12" height="12" x="105" y="195" class="named"><title>0x0003a548 Pendulum (336 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="195" class="todo"><title>0x0003a698 FallingBlock (285 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="195" class="todo"><title>0x0003a7b8 FallingBlockFloor (48 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="195" class="todo"><title>0x0003a7e8 FallingBlockCeiling (48 bytes)</title></rect>
@@ -882,10 +882,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">76.31%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">23.69%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">76.46%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">23.54%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="570.03" height="6" x="0" y="0" class="named"/>
-<rect width="176.97" height="6" x="570.03" y="0" class="todo"/>
+<rect width="571.17" height="6" x="0" y="0" class="named"/>
+<rect width="175.83" height="6" x="571.17" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.96" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1071,7 +1071,7 @@
 <rect width="14.30" height="14.80" x="496.64" y="54.29" class="named"><title>0x00016bb4 Move3DPosTo3DPos (349 bytes)</title></rect>
 <rect width="14.30" height="14.29" x="496.64" y="72.09" class="named"><title>0x000168b0 TestLaraPosition (339 bytes)</title></rect>
 <rect width="14.30" height="14.23" x="496.64" y="89.38" class="todo"><title>0x0003a9b8 DamoclesSwordControl (338 bytes)</title></rect>
-<rect width="14.30" height="14.13" x="496.64" y="106.61" class="todo"><title>0x0003a548 Pendulum (336 bytes)</title></rect>
+<rect width="14.30" height="14.13" x="496.64" y="106.61" class="named"><title>0x0003a548 Pendulum (336 bytes)</title></rect>
 <rect width="14.30" height="14.08" x="496.64" y="123.74" class="named"><title>0x00014d68 CalculateCinematicCamera (335 bytes)</title></rect>
 <rect width="14.30" height="14.08" x="496.64" y="140.82" class="named"><title>0x00019520 StartDemo (335 bytes)</title></rect>
 <rect width="14.30" height="13.98" x="496.64" y="157.91" class="named"><title>0x00020fd0 Key (333 bytes)</title></rect>
