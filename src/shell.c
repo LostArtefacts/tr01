@@ -440,6 +440,11 @@ int SwitchVideoMode(SETUP *pSetup)
     return failed;
 }
 
+void KeyClearBuffer(void)
+{
+    keydata->bufchars = keydata->bufin = keydata->bufout = 0;
+}
+
 void JoyDetect(void)
 {
     uint32 i;

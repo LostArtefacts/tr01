@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">94.59% (769)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">5.41% (44)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">94.71% (770)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">5.29% (43)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="706.57" height="6" x="0" y="0" class="named"/>
-<rect width="40.43" height="6" x="706.57" y="0" class="todo"/>
+<rect width="707.49" height="6" x="0" y="0" class="named"/>
+<rect width="39.51" height="6" x="707.49" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -852,7 +852,7 @@
 <rect width="12" height="12" x="480" y="225" class="named"><title>0x00045c60 VesaSetMode (78 bytes)</title></rect>
 <rect width="12" height="12" x="495" y="225" class="named"><title>0x00045cb0 VesaDetectModes (131 bytes)</title></rect>
 <rect width="12" height="12" x="510" y="225" class="named"><title>0x00045d34 SwitchVideoMode (459 bytes)</title></rect>
-<rect width="12" height="12" x="525" y="225" class="todo"><title>0x00045f00 KeyClearBuffer (39 bytes)</title></rect>
+<rect width="12" height="12" x="525" y="225" class="named"><title>0x00045f00 KeyClearBuffer (39 bytes)</title></rect>
 <rect width="12" height="12" x="540" y="225" class="named"><title>0x00045f28 JoyDetect (66 bytes)</title></rect>
 <rect width="12" height="12" x="555" y="225" class="todo"><title>0x00045f6c JoySetCentre (148 bytes)</title></rect>
 <rect width="12" height="12" x="570" y="225" class="todo"><title>0x00046000 JoyRead (738 bytes)</title></rect>
@@ -884,10 +884,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">95.87%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">4.13%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">95.89%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">4.11%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="716.17" height="6" x="0" y="0" class="named"/>
-<rect width="30.83" height="6" x="716.17" y="0" class="todo"/>
+<rect width="716.30" height="6" x="0" y="0" class="named"/>
+<rect width="30.70" height="6" x="716.30" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.96" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1545,7 +1545,7 @@
 <rect width="2.51" height="3.25" x="694.87" y="208.67" class="named"><title>0x0002fef0 DrawBridgeCollision (39 bytes)</title></rect>
 <rect width="2.51" height="3.25" x="694.87" y="214.91" class="named"><title>0x0003647c ReadSG (39 bytes)</title></rect>
 <rect width="2.51" height="3.25" x="694.87" y="221.16" class="named"><title>0x00042eb0 draw_poly_flat (39 bytes)</title></rect>
-<rect width="2.51" height="3.25" x="694.87" y="227.41" class="todo"><title>0x00045f00 KeyClearBuffer (39 bytes)</title></rect>
+<rect width="2.51" height="3.25" x="694.87" y="227.41" class="named"><title>0x00045f00 KeyClearBuffer (39 bytes)</title></rect>
 <rect width="2.51" height="3.09" x="694.87" y="233.65" class="named"><title>0x00020980 DrawGameInfo (38 bytes)</title></rect>
 <rect width="2.51" height="3.09" x="694.87" y="239.74" class="named"><title>0x00025cdc lara_as_special (38 bytes)</title></rect>
 <rect width="2.51" height="3.09" x="694.87" y="245.83" class="named"><title>0x00042ed8 draw_poly_trans (38 bytes)</title></rect>

@@ -35,7 +35,7 @@ typedef struct
     uint8 keys_held;
 } KEYSTUFF;
 
-extern KEYSTUFF *keydata;
+extern volatile KEYSTUFF *keydata;
 extern uint8 joy_fire;
 extern int joy1_x;
 extern int joy1_y;
