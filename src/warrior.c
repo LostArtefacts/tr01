@@ -659,3 +659,123 @@ void MummyControl(sint16 item_number)
         item->hit_points = DONT_TARGET;
     }
 }
+
+int ExplodingDeath(sint16 item_number, sint32 mesh_bits, sint16 damage)
+{
+    int i, poppush, torso;
+    ITEM_INFO *item;
+    OBJECT_INFO *object;
+    sint32 *bone, *packed_rotation, bit;
+    sint16 *frame, *extra_rotation;
+    sint16 fx_number;
+    FX_INFO *fx;
+
+    item = &items[item_number];
+    object = &objects[item->object_number];
+    torso = (item->object_number == EVIL_NATLA);
+
+    frame = GetBestFrame(item);
+
+    phd_PushUnitMatrix();
+    phd_mxptr[M03] = 0;
+    phd_mxptr[M13] = 0;
+    phd_mxptr[M23] = 0;
+
+    phd_RotYXZ(item->pos.y_rot, item->pos.x_rot, item->pos.z_rot);
+
+    phd_TranslateRel((sint32)*(frame + 6), (sint32)*(frame + 7), (sint32)*(frame + 8));
+
+    packed_rotation = (sint32 *)(frame + 10);
+    phd_RotYXZpack(*(packed_rotation++));
+
+    bone = bones + object->bone_index;
+    extra_rotation = (sint16 *)item->data;
+
+    bit = 1;
+
+    if ((bit & mesh_bits) && (bit & item->mesh_bits))
+    {
+        fx_number = CreateEffect(item->room_number);
+        if (fx_number != NO_ITEM)
+        {
+            fx = &effects[fx_number];
+            fx->pos.x_pos = (*(phd_mxptr + M03) >> W2V_SHIFT) + item->pos.x_pos;
+            fx->pos.y_pos = (*(phd_mxptr + M13) >> W2V_SHIFT) + item->pos.y_pos;
+            fx->pos.z_pos = (*(phd_mxptr + M23) >> W2V_SHIFT) + item->pos.z_pos;
+            fx->room_number = item->room_number;
+            fx->pos.y_rot = (PHD_ANGLE)((GetRandomControl() - 0x4000) << 1);
+            if (torso)
+            {
+                fx->speed = (sint16)(GetRandomControl() >> 7);
+                fx->fallspeed = (sint16)(-GetRandomControl() >> 7);
+            }
+            else
+            {
+                fx->speed = (sint16)(GetRandomControl() >> 8);
+                fx->fallspeed = (sint16)(-GetRandomControl() >> 8);
+            }
+            fx->counter = damage;
+            fx->frame_number = object->mesh_index;
+            fx->object_number = BODY_PART;
+        }
+        item->mesh_bits -= bit;
+    }
+
+    for (i = 1; i < object->nmeshes; i++, bone += 3)
+    {
+        poppush = *(bone++);
+        if (poppush & 1)
+            phd_PopMatrix();
+        if (poppush & 2)
+            phd_PushMatrix();
+
+        phd_TranslateRel(*(bone), *(bone + 1), *(bone + 2));
+        phd_RotYXZpack(*(packed_rotation++));
+
+        if (poppush & (ROT_X | ROT_Y | ROT_Z))
+        {
+            if (poppush & ROT_Y)
+                phd_RotY(*(extra_rotation++));
+            if (poppush & ROT_X)
+                phd_RotX(*(extra_rotation++));
+            if (poppush & ROT_Z)
+                phd_RotZ(*(extra_rotation++));
+        }
+
+        bit <<= 1;
+        if ((bit & mesh_bits) && (bit & item->mesh_bits))
+        {
+            fx_number = CreateEffect(item->room_number);
+            if (fx_number != NO_ITEM)
+            {
+                fx = &effects[fx_number];
+                fx->pos.x_pos = (*(phd_mxptr + M03) >> W2V_SHIFT) + item->pos.x_pos;
+                fx->pos.y_pos = (*(phd_mxptr + M13) >> W2V_SHIFT) + item->pos.y_pos;
+                fx->pos.z_pos = (*(phd_mxptr + M23) >> W2V_SHIFT) + item->pos.z_pos;
+                fx->room_number = item->room_number;
+                fx->pos.y_rot = (PHD_ANGLE)((GetRandomControl() - 0x4000) << 1);
+                if (torso)
+                {
+                    fx->speed = (sint16)(GetRandomControl() >> 7);
+                    fx->fallspeed = (sint16)(-GetRandomControl() >> 7);
+                }
+                else
+                {
+                    fx->speed = (sint16)(GetRandomControl() >> 8);
+                    fx->fallspeed = (sint16)(-GetRandomControl() >> 8);
+                }
+                fx->counter = damage;
+                fx->frame_number = object->mesh_index + i;
+                fx->object_number = BODY_PART;
+            }
+            item->mesh_bits -= bit;
+        }
+    }
+
+    phd_PopMatrix();
+
+    if (!((0x7fffffff >> (31 - object->nmeshes)) & item->mesh_bits))
+        return 1;
+    else
+        return 0;
+}

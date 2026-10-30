@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">84.22% (683)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">15.78% (128)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">84.34% (684)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">15.66% (127)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="629.10" height="6" x="0" y="0" class="named"/>
-<rect width="117.90" height="6" x="629.10" y="0" class="todo"/>
+<rect width="630.02" height="6" x="0" y="0" class="named"/>
+<rect width="116.98" height="6" x="630.02" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -751,7 +751,7 @@
 <rect width="12" height="12" x="465" y="195" class="named"><title>0x0003c238 RocketGun (122 bytes)</title></rect>
 <rect width="12" height="12" x="480" y="195" class="named"><title>0x0003c2b4 InitialiseMummy (63 bytes)</title></rect>
 <rect width="12" height="12" x="495" y="195" class="named"><title>0x0003c2f4 MummyControl (165 bytes)</title></rect>
-<rect width="12" height="12" x="510" y="195" class="todo"><title>0x0003c39c ExplodingDeath (932 bytes)</title></rect>
+<rect width="12" height="12" x="510" y="195" class="named"><title>0x0003c39c ExplodingDeath (932 bytes)</title></rect>
 <rect width="12" height="12" x="525" y="195" class="todo"><title>0x0003c740 ControlBodyPart (433 bytes)</title></rect>
 <rect width="12" height="12" x="540" y="195" class="todo"><title>0x0003c918 InitialisePod (229 bytes)</title></rect>
 <rect width="12" height="12" x="555" y="195" class="todo"><title>0x0003ca00 PodControl (273 bytes)</title></rect>
@@ -882,10 +882,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">79.79%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">20.21%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">80.22%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">19.78%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="596.06" height="6" x="0" y="0" class="named"/>
-<rect width="150.94" height="6" x="596.06" y="0" class="todo"/>
+<rect width="599.24" height="6" x="0" y="0" class="named"/>
+<rect width="147.76" height="6" x="599.24" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.96" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -937,7 +937,7 @@
 <rect width="28.32" height="24.88" x="233.62" y="176.49" class="named"><title>0x0001a578 SetRoomBounds (990 bytes)</title></rect>
 <rect width="28.32" height="24.26" x="233.62" y="204.37" class="named"><title>0x00022848 DrawInventoryItem (968 bytes)</title></rect>
 <rect width="28.32" height="23.36" x="233.62" y="231.64" class="named"><title>0x00010b28 S_DrawLighteningSegment (936 bytes)</title></rect>
-<rect width="24.11" height="27.33" x="264.94" y="0" class="todo"><title>0x0003c39c ExplodingDeath (932 bytes)</title></rect>
+<rect width="24.11" height="27.33" x="264.94" y="0" class="named"><title>0x0003c39c ExplodingDeath (932 bytes)</title></rect>
 <rect width="24.11" height="26.68" x="264.94" y="30.33" class="named"><title>0x00019760 RaptorControl (912 bytes)</title></rect>
 <rect width="24.11" height="26.65" x="264.94" y="60.02" class="named"><title>0x0002ada0 FireWeapon (911 bytes)</title></rect>
 <rect width="24.11" height="26.62" x="264.94" y="89.67" class="todo"><title>0x00041820 Func41820 (910 bytes)</title></rect>
