@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">82.86% (672)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">17.14% (139)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">82.98% (673)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">17.02% (138)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="618.97" height="6" x="0" y="0" class="named"/>
-<rect width="128.03" height="6" x="618.97" y="0" class="todo"/>
+<rect width="619.89" height="6" x="0" y="0" class="named"/>
+<rect width="127.11" height="6" x="619.89" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -740,7 +740,7 @@
 <rect width="12" height="12" x="300" y="195" class="named"><title>0x0003afd0 FlameControl (396 bytes)</title></rect>
 <rect width="12" height="12" x="315" y="195" class="named"><title>0x0003b15c LavaBurn (188 bytes)</title></rect>
 <rect width="12" height="12" x="330" y="195" class="named"><title>0x0003b218 LavaSpray (191 bytes)</title></rect>
-<rect width="12" height="12" x="345" y="195" class="todo"><title>0x0003b2d8 ControlLavaBlob (292 bytes)</title></rect>
+<rect width="12" height="12" x="345" y="195" class="named"><title>0x0003b2d8 ControlLavaBlob (292 bytes)</title></rect>
 <rect width="12" height="12" x="360" y="195" class="todo"><title>0x0003b3fc LavaWedge (311 bytes)</title></rect>
 <rect width="12" height="12" x="375" y="195" class="todo"><title>0x0003b558 CentaurControl (674 bytes)</title></rect>
 <rect width="12" height="12" x="390" y="195" class="todo"><title>0x0003b7fc InitialiseWarrior2 (36 bytes)</title></rect>
@@ -882,10 +882,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">77.88%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">22.12%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">78.02%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">21.98%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="581.80" height="6" x="0" y="0" class="named"/>
-<rect width="165.20" height="6" x="581.80" y="0" class="todo"/>
+<rect width="582.79" height="6" x="0" y="0" class="named"/>
+<rect width="164.21" height="6" x="582.79" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.96" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1099,7 +1099,7 @@
 <rect width="12.91" height="13.41" x="513.94" y="67.74" class="named"><title>0x0002eb34 MovableBlock (296 bytes)</title></rect>
 <rect width="12.91" height="13.36" x="513.94" y="84.15" class="named"><title>0x00013978 ShiftCamera (295 bytes)</title></rect>
 <rect width="12.91" height="13.19" x="513.94" y="100.51" class="named"><title>0x0002dadc mn_get_sound_params (292 bytes)</title></rect>
-<rect width="12.91" height="13.19" x="513.94" y="116.70" class="todo"><title>0x0003b2d8 ControlLavaBlob (292 bytes)</title></rect>
+<rect width="12.91" height="13.19" x="513.94" y="116.70" class="named"><title>0x0003b2d8 ControlLavaBlob (292 bytes)</title></rect>
 <rect width="12.91" height="13.08" x="513.94" y="132.90" class="named"><title>0x0001f928 S_DrawScreenBox (290 bytes)</title></rect>
 <rect width="12.91" height="12.80" x="513.94" y="148.98" class="named"><title>0x0003a698 FallingBlock (285 bytes)</title></rect>
 <rect width="12.91" height="12.75" x="513.94" y="164.78" class="named"><title>0x0002d000 CreateZone (284 bytes)</title></rect>

@@ -10,6 +10,8 @@
 #define FLAME_TOONEAR_DAMAGE 3
 #define FLAME_ONFIRE_DAMAGE 5
 
+#define LAVA_GLOB_DAMAGE 10
+
 int OnTrapDoor(ITEM_INFO *item, sint32 x, sint32 z);
 sint16 CreateItem(void);
 
@@ -818,4 +820,38 @@ void LavaSpray(sint16 item_number)
 
         SoundEffect(149, &item->pos, NULL);
     }
+}
+
+void ControlLavaBlob(sint16 fx_number)
+{
+    FX_INFO *fx;
+    FLOOR_INFO *floor;
+    sint16 room_number;
+
+    fx = &effects[fx_number];
+
+    fx->pos.z_pos += fx->speed * phd_cos(fx->pos.y_rot) >> W2V_SHIFT;
+    fx->pos.x_pos += fx->speed * phd_sin(fx->pos.y_rot) >> W2V_SHIFT;
+    fx->fallspeed += GRAVITY;
+    fx->pos.y_pos += fx->fallspeed;
+
+    room_number = fx->room_number;
+    floor = GetFloor(fx->pos.x_pos, fx->pos.y_pos, fx->pos.z_pos, &room_number);
+    if (fx->pos.y_pos >= GetHeight(floor, fx->pos.x_pos, fx->pos.y_pos, fx->pos.z_pos) || fx->pos.y_pos < GetCeiling(floor, fx->pos.x_pos, fx->pos.y_pos, fx->pos.z_pos))
+    {
+        KillEffect(fx_number);
+        return;
+    }
+
+    if (ItemNearLara(&fx->pos, 200))
+    {
+        lara_item->hit_points -= LAVA_GLOB_DAMAGE;
+        lara_item->hit_status = 1;
+
+        KillEffect(fx_number);
+        return;
+    }
+
+    if (room_number != fx->room_number)
+        EffectNewRoom(fx_number, room_number);
 }
