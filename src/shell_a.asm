@@ -6,7 +6,9 @@
 
     .data
 
+    public _bank_cnt
     public _video_depth
+_bank_cnt dw 0
 _video_depth dd 1
 
     .data?
@@ -372,5 +374,38 @@ VesaSetBank_ proc near
     pop     ds
     ret
 VesaSetBank_ endp
+
+    public ScreenDumpVesa_
+ScreenDumpVesa_ proc near
+    pusha
+    cld
+    mov     edi,dword ptr _gamedata
+    xor     eax,eax
+    xor     ecx,ecx
+    mov     cx,word ptr [edi]
+    mov     ax,word ptr [edi+2]
+    mul     ecx
+    mul     dword ptr _video_depth
+    mov     ebx,eax
+    rol     ebx,10h
+    mov     esi,dword ptr [edi+0ah]
+    xor     eax,eax
+    call    VesaSetBank_
+l1:
+    mov     edi,0a0000h
+    mov     ecx,4000h
+    rep movsd
+    add     ax,_bank_cnt
+    call    VesaSetBank_
+    dec     bx
+    jne     l1
+    rol     ebx,10h
+    sar     ebx,2
+    mov     ecx,ebx
+    mov     edi,0a0000h
+    rep movsd
+    popa
+    ret
+ScreenDumpVesa_ endp
 
     end

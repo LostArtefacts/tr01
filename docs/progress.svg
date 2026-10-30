@@ -61,11 +61,11 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">98.66% (810)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0.12% (1)</tspan> · <tspan class="todo">1.22% (10)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">98.78% (811)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0.12% (1)</tspan> · <tspan class="todo">1.10% (9)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="736.99" height="6" x="0" y="0" class="named"/>
-<rect width="0.91" height="6" x="736.99" y="0" class="nonmatching"/>
-<rect width="9.10" height="6" x="737.90" y="0" class="todo"/>
+<rect width="737.90" height="6" x="0" y="0" class="named"/>
+<rect width="0.91" height="6" x="737.90" y="0" class="nonmatching"/>
+<rect width="8.19" height="6" x="738.81" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -881,7 +881,7 @@
 <rect width="12" height="12" x="150" y="240" class="named"><title>0x0004698f VesaBiosGetModeInfo (25 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="240" class="named"><title>0x000469a8 VesaBiosSetMode (57 bytes)</title></rect>
 <rect width="12" height="12" x="180" y="240" class="named"><title>0x000469e1 VesaSetBank (28 bytes)</title></rect>
-<rect width="12" height="12" x="195" y="240" class="todo"><title>0x000469fd Func469fd (87 bytes)</title></rect>
+<rect width="12" height="12" x="195" y="240" class="named"><title>0x000469fd ScreenDumpVesa (87 bytes)</title></rect>
 <rect width="12" height="12" x="210" y="240" class="todo"><title>0x00046a54 Func46a54 (474 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="240" class="todo"><title>0x00046c2e ScreenWaitVbl (19 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="240" class="todo"><title>0x00046c41 Func46c41 (26 bytes)</title></rect>
@@ -893,11 +893,11 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">99.14%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0.34%</tspan> · <tspan class="todo">0.52%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">99.18%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0.34%</tspan> · <tspan class="todo">0.48%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="740.56" height="6" x="0" y="0" class="named"/>
-<rect width="2.54" height="6" x="740.56" y="0" class="nonmatching"/>
-<rect width="3.90" height="6" x="743.10" y="0" class="todo"/>
+<rect width="740.85" height="6" x="0" y="0" class="named"/>
+<rect width="2.54" height="6" x="740.85" y="0" class="nonmatching"/>
+<rect width="3.60" height="6" x="743.40" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.55" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1398,7 +1398,7 @@
 <rect width="6.01" height="5.55" x="662.12" y="151.34" class="named"><title>0x0002c894 LightningCollision (88 bytes)</title></rect>
 <rect width="6.01" height="5.55" x="671.13" y="151.34" class="named"><title>0x00045ba8 FadeToPal (88 bytes)</title></rect>
 <rect width="5.91" height="5.55" x="680.15" y="151.34" class="named"><title>0x0002d144 ClearLOT (87 bytes)</title></rect>
-<rect width="5.91" height="5.55" x="689.06" y="151.34" class="todo"><title>0x000469fd Func469fd (87 bytes)</title></rect>
+<rect width="5.91" height="5.55" x="689.06" y="151.34" class="named"><title>0x000469fd ScreenDumpVesa (87 bytes)</title></rect>
 <rect width="5.81" height="5.55" x="697.97" y="151.34" class="named"><title>0x000134a8 CreatureHead (86 bytes)</title></rect>
 <rect width="5.81" height="5.55" x="706.78" y="151.34" class="named"><title>0x000459e8 ShellExitErrno (86 bytes)</title></rect>
 <rect width="5.71" height="5.55" x="715.59" y="151.34" class="named"><title>0x00045b0c FileSave (85 bytes)</title></rect>
