@@ -89,10 +89,26 @@ extern volatile sint16 joy_x_raw;
 extern volatile sint16 joy_y_raw;
 extern volatile sint16 joy_z_raw;
 extern volatile sint16 joy_r_raw;
-extern int joy_x_centre;
-extern int joy_y_centre;
-extern int joy_z_centre;
-extern int joy_r_centre;
+extern uint32 joy_x_centre;
+extern uint32 joy_y_centre;
+extern uint32 joy_z_centre;
+extern uint32 joy_r_centre;
+extern uint32 joy_x_min;
+extern uint32 joy_x_max;
+extern uint32 joy_y_min;
+extern uint32 joy_y_max;
+extern uint32 joy_z_min;
+extern uint32 joy_z_max;
+extern uint32 joy_r_min;
+extern uint32 joy_r_max;
+extern int joy_x_old;
+extern int joy_y_old;
+extern int joy_z_old;
+extern int joy_x;
+extern int joy_y;
+extern int joy_z;
+extern int joy_hat;
+extern int joy_throttle;
 
 void FadeTick(void);
 uint8 VgaGetMode(void);
@@ -491,5 +507,85 @@ void JoySetCentre(void)
         joy_y_centre = y >> 8;
         joy_z_centre = z >> 8;
         joy_r_centre = r >> 8;
+    }
+}
+
+void JoyRead(void)
+{
+    int range;
+    int delta;
+
+    joy_throttle = 0;
+    joy_fire = 0;
+    joy1_y = 0;
+    joy1_x = 0;
+    joy_hat = 4;
+    if (!joy_mask)
+        return;
+    if (!JoyReadAxes(joy_mask))
+        joy_failed = 1;
+    if (joy_mask & 1)
+    {
+        if (joy_x_raw < joy_x_min)
+            joy_x_min = joy_x_raw;
+        if (joy_x_raw > joy_x_max)
+            joy_x_max = joy_x_raw;
+        if (joy_x_raw > joy_x_centre)
+            range = joy_x_max - joy_x_centre;
+        else
+            range = joy_x_centre - joy_x_min;
+        delta = joy_x_raw - joy_x_centre;
+        range >>= 5;
+        if (range)
+            joy_x = delta / range;
+        joy1_x = (joy_x + joy_x_old) / 2;
+        joy_x_old = joy_x;
+    }
+    if (joy_mask & 2)
+    {
+        if (joy_y_raw < joy_y_min)
+            joy_y_min = joy_y_raw;
+        if (joy_y_raw > joy_y_max)
+            joy_y_max = joy_y_raw;
+        if (joy_y_raw > joy_y_centre)
+            range = joy_y_max - joy_y_centre;
+        else
+            range = joy_y_centre - joy_y_min;
+        delta = joy_y_raw - joy_y_centre;
+        range >>= 5;
+        if (range)
+            joy_y = delta / range;
+        joy1_y = (joy_y + joy_y_old) / 2;
+        joy_y_old = joy_y;
+    }
+    if (joy_mask & 4)
+    {
+        if (joy_z_raw < joy_z_min)
+            joy_z_min = joy_z_raw;
+        if (joy_z_raw > joy_z_max)
+            joy_z_max = joy_z_raw;
+        if (joy_z_raw > joy_z_centre)
+            range = joy_z_max - joy_z_centre;
+        else
+            range = joy_z_centre - joy_z_min;
+        delta = joy_z_raw - joy_z_centre;
+        range >>= 5;
+        if (range)
+            joy_z = delta / range;
+        joy_throttle = (joy_z + joy_z_old) / 2;
+        joy_z_old = joy_z;
+    }
+    if (joy_mask & 8)
+    {
+        if (joy_r_raw < joy_r_min)
+            joy_r_min = joy_r_raw;
+        if (joy_r_raw > joy_r_max)
+            joy_r_max = joy_r_raw;
+        if (joy_r_max - joy_r_min)
+        {
+            joy_hat = ((joy_r_raw - joy_r_min) * 8 / (joy_r_max - joy_r_min) + 1) >> 1;
+            if (joy_hat < 0 || joy_hat > 4)
+                joy_hat = 4;
+        }
     }
 }

@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">94.83% (771)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">5.17% (42)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">94.96% (772)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">5.04% (41)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="708.41" height="6" x="0" y="0" class="named"/>
-<rect width="38.59" height="6" x="708.41" y="0" class="todo"/>
+<rect width="709.33" height="6" x="0" y="0" class="named"/>
+<rect width="37.67" height="6" x="709.33" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -855,7 +855,7 @@
 <rect width="12" height="12" x="525" y="225" class="named"><title>0x00045f00 KeyClearBuffer (39 bytes)</title></rect>
 <rect width="12" height="12" x="540" y="225" class="named"><title>0x00045f28 JoyDetect (66 bytes)</title></rect>
 <rect width="12" height="12" x="555" y="225" class="named"><title>0x00045f6c JoySetCentre (148 bytes)</title></rect>
-<rect width="12" height="12" x="570" y="225" class="todo"><title>0x00046000 JoyRead (738 bytes)</title></rect>
+<rect width="12" height="12" x="570" y="225" class="named"><title>0x00046000 JoyRead (738 bytes)</title></rect>
 <rect width="12" height="12" x="585" y="225" class="todo"><title>0x000462e4 MemAllocReal (147 bytes)</title></rect>
 <rect width="12" height="12" x="600" y="225" class="todo"><title>0x00046378 MemFreeReal (137 bytes)</title></rect>
 <rect width="12" height="12" x="615" y="225" class="todo"><title>0x00046404 InterruptSet (753 bytes)</title></rect>
@@ -884,10 +884,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">95.96%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">4.04%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">96.29%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">3.71%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="716.80" height="6" x="0" y="0" class="named"/>
-<rect width="30.20" height="6" x="716.80" y="0" class="todo"/>
+<rect width="719.32" height="6" x="0" y="0" class="named"/>
+<rect width="27.68" height="6" x="719.32" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.96" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -962,7 +962,7 @@
 <rect width="21.88" height="23.63" x="318.87" y="26.70" class="named"><title>0x00033b00 BaldyControl (751 bytes)</title></rect>
 <rect width="21.88" height="23.49" x="318.87" y="53.34" class="named"><title>0x00018464 zLOS (747 bytes)</title></rect>
 <rect width="21.88" height="23.28" x="318.87" y="79.83" class="named"><title>0x00018750 xLOS (741 bytes)</title></rect>
-<rect width="21.88" height="23.17" x="318.87" y="106.11" class="todo"><title>0x00046000 JoyRead (738 bytes)</title></rect>
+<rect width="21.88" height="23.17" x="318.87" y="106.11" class="named"><title>0x00046000 JoyRead (738 bytes)</title></rect>
 <rect width="21.88" height="22.96" x="318.87" y="132.28" class="named"><title>0x00028820 AnimateLara (732 bytes)</title></rect>
 <rect width="21.88" height="22.36" x="318.87" y="158.24" class="named"><title>0x00013608 MoveCamera (715 bytes)</title></rect>
 <rect width="21.88" height="22.07" x="318.87" y="183.60" class="named"><title>0x00016ff4 AnimateItem (707 bytes)</title></rect>
