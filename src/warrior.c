@@ -6,6 +6,9 @@
 
 #define FLYER_PART_DAMAGE 100
 
+#define SHARD_DAMAGE 30
+#define ROCKET_DAMAGE 100
+
 #define CENTAUR_REAR_DAMAGE 200
 
 enum flyer_anims
@@ -49,6 +52,8 @@ BITE_INFO warrior_shard = {-35, 269, 0, 9};
 #define FLYER_BULLET2 2
 #define FLYER_FLYMODE 4
 #define FLYER_TWIST 8
+
+#define ROCKET_RANGE SQUARE(WALL_L)
 
 enum centaur_anims
 {
@@ -449,4 +454,83 @@ void FlyerControl(sint16 item_number)
         flyer->neck_rotation = 0;
 
     CreatureAnimation(item_number, angle, 0);
+}
+
+void ControlMissile(sint16 fx_number)
+{
+    FX_INFO *fx;
+    FLOOR_INFO *floor;
+    sint16 room_number;
+    sint32 speed, x, y, z, range;
+
+    fx = &effects[fx_number];
+
+    fx->pos.y_pos += (fx->speed * phd_sin(-fx->pos.x_rot) >> W2V_SHIFT);
+    speed = fx->speed * phd_cos(fx->pos.x_rot) >> W2V_SHIFT;
+    fx->pos.z_pos += (speed * phd_cos(fx->pos.y_rot) >> W2V_SHIFT);
+    fx->pos.x_pos += (speed * phd_sin(fx->pos.y_rot) >> W2V_SHIFT);
+    room_number = fx->room_number;
+    floor = GetFloor(fx->pos.x_pos, fx->pos.y_pos, fx->pos.z_pos, &room_number);
+
+    if (fx->pos.y_pos >= GetHeight(floor, fx->pos.x_pos, fx->pos.y_pos, fx->pos.z_pos) || fx->pos.y_pos <= GetCeiling(floor, fx->pos.x_pos, fx->pos.y_pos, fx->pos.z_pos))
+    {
+        if (fx->object_number == MISSILE2)
+        {
+            fx->speed = 0;
+            fx->frame_number = (sint16)(-GetRandomControl() / 11000);
+            fx->counter = 6;
+            fx->object_number = RICOCHET1;
+            SoundEffect(10, &fx->pos, NULL);
+        }
+        else
+        {
+            fx->speed = 0;
+            fx->frame_number = 0;
+            fx->counter = 0;
+            fx->object_number = EXPLOSION1;
+            SoundEffect(104, &fx->pos, NULL);
+
+            x = fx->pos.x_pos - lara_item->pos.x_pos;
+            y = fx->pos.y_pos - lara_item->pos.y_pos;
+            z = fx->pos.z_pos - lara_item->pos.z_pos;
+
+            range = x * x + y * y + z * z;
+            if (range < ROCKET_RANGE)
+            {
+                lara_item->hit_points -= ROCKET_DAMAGE * (ROCKET_RANGE - range) / ROCKET_RANGE;
+                lara_item->hit_status = 1;
+            }
+        }
+        return;
+    }
+
+    if (room_number != fx->room_number)
+        EffectNewRoom(fx_number, room_number);
+
+    if (ItemNearLara(&fx->pos, 200))
+    {
+        if (fx->object_number == MISSILE2)
+        {
+            lara_item->hit_points -= SHARD_DAMAGE;
+            fx->object_number = BLOOD1;
+            SoundEffect(50, &fx->pos, NULL);
+        }
+        else
+        {
+            lara_item->hit_points -= ROCKET_DAMAGE;
+            fx->object_number = EXPLOSION1;
+            if (lara_item->hit_points > 0)
+            {
+                SoundEffect(31, &lara_item->pos, NULL);
+                lara.hit_effect = fx;
+                lara.hit_effect_count = 5;
+            }
+            SoundEffect(104, &fx->pos, NULL);
+        }
+        lara_item->hit_status = 1;
+
+        fx->pos.y_rot = lara_item->pos.y_rot;
+        fx->speed = lara_item->speed;
+        fx->frame_number = fx->counter = 0;
+    }
 }
