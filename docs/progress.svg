@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">81.13% (658)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">18.87% (153)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">81.26% (659)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">18.74% (152)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="606.07" height="6" x="0" y="0" class="named"/>
-<rect width="140.93" height="6" x="606.07" y="0" class="todo"/>
+<rect width="607" height="6" x="0" y="0" class="named"/>
+<rect width="140" height="6" x="607" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -726,7 +726,7 @@
 <rect width="12" height="12" x="90" y="195" class="named"><title>0x0003a4a0 OnTrapDoor (165 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="195" class="named"><title>0x0003a548 Pendulum (336 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="195" class="named"><title>0x0003a698 FallingBlock (285 bytes)</title></rect>
-<rect width="12" height="12" x="135" y="195" class="todo"><title>0x0003a7b8 FallingBlockFloor (48 bytes)</title></rect>
+<rect width="12" height="12" x="135" y="195" class="named"><title>0x0003a7b8 FallingBlockFloor (48 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="195" class="todo"><title>0x0003a7e8 FallingBlockCeiling (48 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="195" class="todo"><title>0x0003a818 TeethTrap (176 bytes)</title></rect>
 <rect width="12" height="12" x="180" y="195" class="todo"><title>0x0003a8c8 FallingCeiling (168 bytes)</title></rect>
@@ -882,10 +882,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">76.59%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">23.41%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">76.61%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">23.39%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="572.14" height="6" x="0" y="0" class="named"/>
-<rect width="174.86" height="6" x="572.14" y="0" class="todo"/>
+<rect width="572.31" height="6" x="0" y="0" class="named"/>
+<rect width="174.69" height="6" x="572.31" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.96" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1498,7 +1498,7 @@
 <rect width="3.33" height="3.83" x="682.54" y="211.05" class="named"><title>0x0002febc DrawBridgeCeiling (49 bytes)</title></rect>
 <rect width="3.33" height="3.69" x="682.54" y="217.87" class="named"><title>0x000274ec GetLaraCollisionInfo (48 bytes)</title></rect>
 <rect width="3.33" height="3.69" x="682.54" y="224.56" class="named"><title>0x00031f3c Init_Requester (48 bytes)</title></rect>
-<rect width="3.33" height="3.69" x="682.54" y="231.25" class="todo"><title>0x0003a7b8 FallingBlockFloor (48 bytes)</title></rect>
+<rect width="3.33" height="3.69" x="682.54" y="231.25" class="named"><title>0x0003a7b8 FallingBlockFloor (48 bytes)</title></rect>
 <rect width="3.33" height="3.69" x="682.54" y="237.94" class="todo"><title>0x0003a7e8 FallingBlockCeiling (48 bytes)</title></rect>
 <rect width="3.33" height="3.69" x="682.54" y="244.62" class="todo"><title>0x0003dad4 Func3dad4 (48 bytes)</title></rect>
 <rect width="3.33" height="3.69" x="682.54" y="251.31" class="todo"><title>0x0003ee7c phd_PrintPolyList (48 bytes)</title></rect>
