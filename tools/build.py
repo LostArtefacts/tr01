@@ -6,7 +6,7 @@
 WATCOM is the compiler directory, with BINNT, H and LIB386. It defaults
 to ~/opt/watcom10.6 or ~/data.local/watcom/10.6. MASM is the directory
 holding ML.EXE 6.11; it defaults to ~/opt/masm611 or
-~/data.frost/blob/cirno-labs/masm/6.11. An object is rebuilt when its
+~/data.frost/blob/cirno-labs/masm611/6.11. An object is rebuilt when its
 source or any header or include file in src/ is newer.
 """
 import glob, os, subprocess, sys
@@ -26,7 +26,7 @@ def watcom():
 
 def masm():
     for d in [os.environ.get("MASM"), os.path.expanduser("~/opt/masm611"),
-              os.path.expanduser("~/data.frost/blob/cirno-labs/masm/6.11")]:
+              os.path.expanduser("~/data.frost/blob/cirno-labs/masm611/6.11")]:
         if d and os.path.isfile(os.path.join(d, "ML.EXE")):
             return d
     sys.exit("error: set MASM to a directory with MASM 6.11's ML.EXE (see orig/README.md)")
