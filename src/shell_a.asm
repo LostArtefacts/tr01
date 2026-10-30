@@ -598,4 +598,22 @@ l9:
     ret
 ScreenPartialDumpVesa_ endp
 
+    public ScreenWaitVbl_
+ScreenWaitVbl_ proc near
+    push    eax
+    push    edx
+    mov     dx,3dah
+l1:
+    in      al,dx
+    test    al,8
+    jne     l1
+l2:
+    in      al,dx
+    test    al,8
+    je      l2
+    pop     edx
+    pop     eax
+    ret
+ScreenWaitVbl_ endp
+
     end
