@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">91.74% (744)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">8.26% (67)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">91.86% (745)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">8.14% (66)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="685.29" height="6" x="0" y="0" class="named"/>
-<rect width="61.71" height="6" x="685.29" y="0" class="todo"/>
+<rect width="686.21" height="6" x="0" y="0" class="named"/>
+<rect width="60.79" height="6" x="686.21" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -817,20 +817,20 @@
 <rect width="12" height="12" x="705" y="210" class="named"><title>0x00042eb0 draw_poly_flat (39 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="210" class="named"><title>0x00042ed8 draw_poly_trans (38 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="210" class="named"><title>0x00042f00 draw_poly_gouraud (38 bytes)</title></rect>
-<rect width="12" height="12" x="0" y="225" class="todo"><title>0x00042f28 draw_poly_gtmap (45 bytes)</title></rect>
+<rect width="12" height="12" x="0" y="225" class="named"><title>0x00042f28 draw_poly_gtmap (45 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="225" class="todo"><title>0x00042f58 draw_poly_wgtmap (45 bytes)</title></rect>
 <rect width="12" height="12" x="30" y="225" class="todo"><title>0x00042f88 draw_poly_gtmap_persp (45 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="225" class="todo"><title>0x00042fb8 draw_poly_wgtmap_persp (45 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="225" class="todo"><title>0x00042fe8 xgen_x (273 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="225" class="todo"><title>0x000430fc xgen_xg (448 bytes)</title></rect>
-<rect width="12" height="12" x="90" y="225" class="todo"><title>0x000432bc Func432bc (684 bytes)</title></rect>
+<rect width="12" height="12" x="90" y="225" class="todo"><title>0x000432bc xgen_xguv (684 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="225" class="todo"><title>0x00043568 Func43568 (788 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="225" class="todo"><title>0x0004387c Func4387c (1895 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="225" class="todo"><title>0x00043fe4 Func43fe4 (1820 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="225" class="todo"><title>0x00044700 flatA (97 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="225" class="todo"><title>0x00044761 transA (308 bytes)</title></rect>
 <rect width="12" height="12" x="180" y="225" class="todo"><title>0x00044895 gourA (384 bytes)</title></rect>
-<rect width="12" height="12" x="195" y="225" class="todo"><title>0x00044a15 Func44a15 (765 bytes)</title></rect>
+<rect width="12" height="12" x="195" y="225" class="todo"><title>0x00044a15 gtmapA (765 bytes)</title></rect>
 <rect width="12" height="12" x="210" y="225" class="todo"><title>0x00044d12 Func44d12 (833 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="225" class="todo"><title>0x000452d0 Func452d0 (17 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="225" class="todo"><title>0x0004564d phd_PushMatrix (30 bytes)</title></rect>
@@ -882,10 +882,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">92.17%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">7.83%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">92.19%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">7.81%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="688.48" height="6" x="0" y="0" class="named"/>
-<rect width="58.52" height="6" x="688.48" y="0" class="todo"/>
+<rect width="688.63" height="6" x="0" y="0" class="named"/>
+<rect width="58.37" height="6" x="688.63" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.96" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -955,7 +955,7 @@
 <rect width="23.83" height="22.36" x="292.05" y="157.07" class="named"><title>0x00041bb0 ins_objectGT3 (771 bytes)</title></rect>
 <rect width="23.83" height="22.22" x="292.05" y="182.43" class="named"><title>0x00025d14 lara_as_diemidas (767 bytes)</title></rect>
 <rect width="23.83" height="22.19" x="292.05" y="207.65" class="named"><title>0x00020114 LevelStats (766 bytes)</title></rect>
-<rect width="23.83" height="22.16" x="292.05" y="232.84" class="todo"><title>0x00044a15 Func44a15 (765 bytes)</title></rect>
+<rect width="23.83" height="22.16" x="292.05" y="232.84" class="todo"><title>0x00044a15 gtmapA (765 bytes)</title></rect>
 <rect width="21.88" height="23.70" x="318.87" y="0" class="todo"><title>0x00046404 Func46404 (753 bytes)</title></rect>
 <rect width="21.88" height="23.63" x="318.87" y="26.70" class="named"><title>0x00033b00 BaldyControl (751 bytes)</title></rect>
 <rect width="21.88" height="23.49" x="318.87" y="53.34" class="named"><title>0x00018464 zLOS (747 bytes)</title></rect>
@@ -969,7 +969,7 @@
 <rect width="22.59" height="20.93" x="343.75" y="0" class="named"><title>0x00019b0c DinoControl (694 bytes)</title></rect>
 <rect width="22.59" height="20.89" x="343.75" y="23.93" class="named"><title>0x00034d68 RatControl (693 bytes)</title></rect>
 <rect width="22.59" height="20.76" x="343.75" y="47.82" class="named"><title>0x00030b7c do_detail_option (689 bytes)</title></rect>
-<rect width="22.59" height="20.58" x="343.75" y="71.58" class="todo"><title>0x000432bc Func432bc (684 bytes)</title></rect>
+<rect width="22.59" height="20.58" x="343.75" y="71.58" class="todo"><title>0x000432bc xgen_xguv (684 bytes)</title></rect>
 <rect width="22.59" height="20.55" x="343.75" y="95.16" class="named"><title>0x00021120 S_UpdateInput (683 bytes)</title></rect>
 <rect width="22.59" height="20.48" x="343.75" y="118.71" class="named"><title>0x000390a0 GetSpheres (681 bytes)</title></rect>
 <rect width="22.59" height="20.24" x="343.75" y="142.19" class="named"><title>0x0003b558 CentaurControl (674 bytes)</title></rect>
@@ -1511,7 +1511,7 @@
 <rect width="3.02" height="3.60" x="725.93" y="190.57" class="named"><title>0x00026e60 lara_col_hangleft (45 bytes)</title></rect>
 <rect width="3.02" height="3.60" x="731.94" y="190.57" class="named"><title>0x0002dd68 mn_clear_fx_slot (45 bytes)</title></rect>
 <rect width="3.02" height="3.60" x="737.96" y="190.57" class="named"><title>0x00039898 T_RemovePrint (45 bytes)</title></rect>
-<rect width="3.02" height="3.60" x="743.98" y="190.57" class="todo"><title>0x00042f28 draw_poly_gtmap (45 bytes)</title></rect>
+<rect width="3.02" height="3.60" x="743.98" y="190.57" class="named"><title>0x00042f28 draw_poly_gtmap (45 bytes)</title></rect>
 <rect width="3.42" height="3.18" x="688.88" y="197.16" class="todo"><title>0x00042f58 draw_poly_wgtmap (45 bytes)</title></rect>
 <rect width="3.42" height="3.18" x="688.88" y="203.34" class="todo"><title>0x00042f88 draw_poly_gtmap_persp (45 bytes)</title></rect>
 <rect width="3.42" height="3.18" x="688.88" y="209.52" class="todo"><title>0x00042fb8 draw_poly_wgtmap_persp (45 bytes)</title></rect>
