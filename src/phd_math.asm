@@ -70,6 +70,37 @@ le90:
     ret
 phd_sin_lt180_ endp
 
+    public phd_sqrt_
+phd_sqrt_ proc near
+    push    ebx
+    push    ecx
+    push    edx
+    mov     ecx,eax
+    mov     ebx,40000000h
+    xor     eax,eax
+next:
+    mov     edx,eax
+    add     eax,ebx
+    shr     edx,1
+    cmp     eax,ecx
+    ja      toohigh
+    sub     ecx,eax
+    mov     eax,ebx
+    or      eax,edx
+    shr     ebx,2
+    jnz     next
+    jmp     exit
+toohigh:
+    mov     eax,edx
+    shr     ebx,2
+    jnz     next
+exit:
+    pop     edx
+    pop     ecx
+    pop     ebx
+    ret
+phd_sqrt_ endp
+
     .data
 
     public _phdtan2

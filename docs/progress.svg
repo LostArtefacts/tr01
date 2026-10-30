@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">96.06% (781)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">3.94% (32)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">96.19% (782)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">3.81% (31)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="717.60" height="6" x="0" y="0" class="named"/>
-<rect width="29.40" height="6" x="717.60" y="0" class="todo"/>
+<rect width="718.52" height="6" x="0" y="0" class="named"/>
+<rect width="28.48" height="6" x="718.52" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -795,7 +795,7 @@
 <rect width="12" height="12" x="375" y="210" class="named"><title>0x0003f026 phd_cos (5 bytes)</title></rect>
 <rect width="12" height="12" x="390" y="210" class="named"><title>0x0003f02b phd_sin (25 bytes)</title></rect>
 <rect width="12" height="12" x="405" y="210" class="named"><title>0x0003f044 phd_sin_lt180 (26 bytes)</title></rect>
-<rect width="12" height="12" x="420" y="210" class="todo"><title>0x0003f05e phd_sqrt (46 bytes)</title></rect>
+<rect width="12" height="12" x="420" y="210" class="named"><title>0x0003f05e phd_sqrt (46 bytes)</title></rect>
 <rect width="12" height="12" x="435" y="210" class="named"><title>0x0003f090 S_DrawSpriteAbs (559 bytes)</title></rect>
 <rect width="12" height="12" x="450" y="210" class="named"><title>0x0003f2c0 S_DrawSpriteRel (460 bytes)</title></rect>
 <rect width="12" height="12" x="465" y="210" class="named"><title>0x0003f48c S_DrawPickup (223 bytes)</title></rect>
@@ -884,10 +884,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">97.73%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">2.27%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">97.75%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">2.25%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="730.04" height="6" x="0" y="0" class="named"/>
-<rect width="16.96" height="6" x="730.04" y="0" class="todo"/>
+<rect width="730.20" height="6" x="0" y="0" class="named"/>
+<rect width="16.80" height="6" x="730.20" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.96" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1509,7 +1509,7 @@
 <rect width="3.59" height="3.29" x="682.19" y="209.17" class="named"><title>0x00020ec4 game_free (47 bytes)</title></rect>
 <rect width="3.59" height="3.15" x="682.19" y="215.46" class="named"><title>0x0001d7cc ControlRichochet1 (46 bytes)</title></rect>
 <rect width="3.59" height="3.15" x="682.19" y="221.61" class="named"><title>0x00024484 Inv_RingRotateLeft (46 bytes)</title></rect>
-<rect width="3.59" height="3.15" x="682.19" y="227.76" class="todo"><title>0x0003f05e phd_sqrt (46 bytes)</title></rect>
+<rect width="3.59" height="3.15" x="682.19" y="227.76" class="named"><title>0x0003f05e phd_sqrt (46 bytes)</title></rect>
 <rect width="3.59" height="3.02" x="682.19" y="233.92" class="named"><title>0x00015868 FindGridShift (45 bytes)</title></rect>
 <rect width="3.59" height="3.02" x="682.19" y="239.94" class="named"><title>0x00026e60 lara_col_hangleft (45 bytes)</title></rect>
 <rect width="3.59" height="3.02" x="682.19" y="245.96" class="named"><title>0x0002dd68 mn_clear_fx_slot (45 bytes)</title></rect>
