@@ -151,3 +151,9 @@ void CentaurControl(sint16 item_number)
         item->status = DEACTIVATED;
     }
 }
+
+void InitialiseWarrior2(sint16 item_number)
+{
+    InitialiseCreature(item_number);
+    items[item_number].mesh_bits = 0xffe07fff;
+}

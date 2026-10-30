@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">83.23% (675)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">16.77% (136)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">83.35% (676)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">16.65% (135)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="621.73" height="6" x="0" y="0" class="named"/>
-<rect width="125.27" height="6" x="621.73" y="0" class="todo"/>
+<rect width="622.65" height="6" x="0" y="0" class="named"/>
+<rect width="124.35" height="6" x="622.65" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -743,7 +743,7 @@
 <rect width="12" height="12" x="345" y="195" class="named"><title>0x0003b2d8 ControlLavaBlob (292 bytes)</title></rect>
 <rect width="12" height="12" x="360" y="195" class="named"><title>0x0003b3fc LavaWedge (311 bytes)</title></rect>
 <rect width="12" height="12" x="375" y="195" class="named"><title>0x0003b558 CentaurControl (674 bytes)</title></rect>
-<rect width="12" height="12" x="390" y="195" class="todo"><title>0x0003b7fc InitialiseWarrior2 (36 bytes)</title></rect>
+<rect width="12" height="12" x="390" y="195" class="named"><title>0x0003b7fc InitialiseWarrior2 (36 bytes)</title></rect>
 <rect width="12" height="12" x="405" y="195" class="todo"><title>0x0003b854 FlyerControl (1563 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="195" class="todo"><title>0x0003be70 ControlMissile (627 bytes)</title></rect>
 <rect width="12" height="12" x="435" y="195" class="todo"><title>0x0003c0e4 ShootAtLara (213 bytes)</title></rect>
@@ -882,10 +882,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">78.47%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">21.53%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">78.48%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">21.52%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="586.15" height="6" x="0" y="0" class="named"/>
-<rect width="160.85" height="6" x="586.15" y="0" class="todo"/>
+<rect width="586.27" height="6" x="0" y="0" class="named"/>
+<rect width="160.73" height="6" x="586.27" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.96" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1555,7 +1555,7 @@
 <rect width="2.91" height="2.52" x="700.84" y="231.15" class="todo"><title>0x0003ed48 phd_InitPolyList (37 bytes)</title></rect>
 <rect width="2.91" height="2.37" x="700.84" y="236.67" class="named"><title>0x00025bd8 lara_as_ppready (36 bytes)</title></rect>
 <rect width="2.91" height="2.37" x="700.84" y="242.04" class="named"><title>0x0002fffc BridgeTilt2Ceiling (36 bytes)</title></rect>
-<rect width="2.91" height="2.37" x="700.84" y="247.41" class="todo"><title>0x0003b7fc InitialiseWarrior2 (36 bytes)</title></rect>
+<rect width="2.91" height="2.37" x="700.84" y="247.41" class="named"><title>0x0003b7fc InitialiseWarrior2 (36 bytes)</title></rect>
 <rect width="2.91" height="2.22" x="700.84" y="252.78" class="named"><title>0x00014fc0 InitialiseGenPlayer (35 bytes)</title></rect>
 <rect width="2.45" height="2.67" x="706.75" y="209.07" class="named"><title>0x0001ce60 phd_PopMatrix_I (35 bytes)</title></rect>
 <rect width="2.45" height="2.67" x="712.19" y="209.07" class="named"><title>0x00025a64 lara_as_slide (35 bytes)</title></rect>
