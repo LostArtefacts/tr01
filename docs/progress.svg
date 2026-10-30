@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">77.81% (631)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">22.19% (180)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">77.93% (632)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">22.07% (179)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="581.20" height="6" x="0" y="0" class="named"/>
-<rect width="165.80" height="6" x="581.20" y="0" class="todo"/>
+<rect width="582.13" height="6" x="0" y="0" class="named"/>
+<rect width="164.87" height="6" x="582.13" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -698,7 +698,7 @@
 <rect width="12" height="12" x="420" y="180" class="named"><title>0x000396dc T_SetFlags (3 bytes)</title></rect>
 <rect width="12" height="12" x="435" y="180" class="named"><title>0x000396e0 T_SetBgndFlags (5 bytes)</title></rect>
 <rect width="12" height="12" x="450" y="180" class="named"><title>0x000396e8 T_SetOutlFlags (5 bytes)</title></rect>
-<rect width="12" height="12" x="465" y="180" class="todo"><title>0x000396f0 T_SetScale (7 bytes)</title></rect>
+<rect width="12" height="12" x="465" y="180" class="named"><title>0x000396f0 T_SetScale (7 bytes)</title></rect>
 <rect width="12" height="12" x="480" y="180" class="todo"><title>0x000396f8 Func396f8 (8 bytes)</title></rect>
 <rect width="12" height="12" x="495" y="180" class="todo"><title>0x00039700 Func39700 (8 bytes)</title></rect>
 <rect width="12" height="12" x="510" y="180" class="todo"><title>0x00039708 T_FlashText (25 bytes)</title></rect>
@@ -882,10 +882,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">74.67%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">25.33%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">74.68%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">25.32%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="557.80" height="6" x="0" y="0" class="named"/>
-<rect width="189.20" height="6" x="557.80" y="0" class="todo"/>
+<rect width="557.83" height="6" x="0" y="0" class="named"/>
+<rect width="189.17" height="6" x="557.83" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.96" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1653,7 +1653,7 @@
 <rect width="0.10" height="0.10" x="737.11" y="255.02" class="named"><title>0x00010084 S_OutputPolyList (10 bytes)</title></rect>
 <rect width="0.10" height="0.10" x="740.07" y="245.20" class="todo"><title>0x000396f8 Func396f8 (8 bytes)</title></rect>
 <rect width="0.10" height="0.10" x="742.72" y="245.20" class="todo"><title>0x00039700 Func39700 (8 bytes)</title></rect>
-<rect width="0.10" height="0.10" x="745.37" y="245.20" class="todo"><title>0x000396f0 T_SetScale (7 bytes)</title></rect>
+<rect width="0.10" height="0.10" x="745.37" y="245.20" class="named"><title>0x000396f0 T_SetScale (7 bytes)</title></rect>
 <rect width="0.10" height="0.10" x="747.68" y="245.20" class="todo"><title>0x0004566b phd_PushUnitMatrix (7 bytes)</title></rect>
 <rect width="0.10" height="0.10" x="740.07" y="247.87" class="todo"><title>0x00046703 Func46703 (7 bytes)</title></rect>
 <rect width="0.10" height="0.10" x="742.85" y="247.87" class="named"><title>0x00020434 SeedRandomControl (6 bytes)</title></rect>

@@ -95,6 +95,12 @@ void T_SetOutlFlags(TEXTSTRING *textString, uint32 flags)
     textString->outlflags = (sint16)flags;
 }
 
+void T_SetScale(TEXTSTRING *textString, sint32 scaleH, sint32 scaleV)
+{
+    textString->scaleH = scaleH;
+    textString->scaleV = scaleV;
+}
+
 sint16 T_GetStringLen(char *string)
 {
     sint16 len = 1;
