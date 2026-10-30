@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">86.93% (705)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">13.07% (106)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">87.05% (706)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">12.95% (105)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="649.36" height="6" x="0" y="0" class="named"/>
-<rect width="97.64" height="6" x="649.36" y="0" class="todo"/>
+<rect width="650.29" height="6" x="0" y="0" class="named"/>
+<rect width="96.71" height="6" x="650.29" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -773,7 +773,7 @@
 <rect width="12" height="12" x="45" y="210" class="named"><title>0x0003dbc0 phd_RotX (163 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="210" class="named"><title>0x0003dc64 phd_RotY (163 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="210" class="named"><title>0x0003dd08 phd_RotZ (160 bytes)</title></rect>
-<rect width="12" height="12" x="90" y="210" class="todo"><title>0x0003dda8 phd_RotYXZ (486 bytes)</title></rect>
+<rect width="12" height="12" x="90" y="210" class="named"><title>0x0003dda8 phd_RotYXZ (486 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="210" class="todo"><title>0x0003df90 phd_RotYXZpack (505 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="210" class="todo"><title>0x0003e18c phd_TranslateRel (180 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="210" class="todo"><title>0x0003e240 phd_TranslateAbs (102 bytes)</title></rect>
@@ -882,10 +882,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">82.77%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">17.23%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">82.99%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">17.01%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="618.25" height="6" x="0" y="0" class="named"/>
-<rect width="128.75" height="6" x="618.25" y="0" class="todo"/>
+<rect width="619.91" height="6" x="0" y="0" class="named"/>
+<rect width="127.09" height="6" x="619.91" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.96" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1010,7 +1010,7 @@
 <rect width="17.83" height="18.39" x="415.95" y="153.59" class="todo"><title>0x0003df90 phd_RotYXZpack (505 bytes)</title></rect>
 <rect width="17.83" height="18.14" x="415.95" y="174.98" class="named"><title>0x00038460 main (499 bytes)</title></rect>
 <rect width="17.83" height="17.80" x="415.95" y="196.12" class="named"><title>0x0001fb64 EscapeFMV (491 bytes)</title></rect>
-<rect width="17.83" height="17.59" x="415.95" y="216.91" class="todo"><title>0x0003dda8 phd_RotYXZ (486 bytes)</title></rect>
+<rect width="17.83" height="17.59" x="415.95" y="216.91" class="named"><title>0x0003dda8 phd_RotYXZ (486 bytes)</title></rect>
 <rect width="17.83" height="17.50" x="415.95" y="237.50" class="named"><title>0x00033df0 PickUpCollision (484 bytes)</title></rect>
 <rect width="17.72" height="17.61" x="436.78" y="0" class="named"><title>0x0003d5f0 draw_poly_line (484 bytes)</title></rect>
 <rect width="17.72" height="17.18" x="436.78" y="20.61" class="todo"><title>0x00046a54 Func46a54 (474 bytes)</title></rect>
