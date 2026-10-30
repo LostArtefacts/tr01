@@ -2054,6 +2054,7 @@ address,size,name,symbol
 0x000c5f28,4,joy1_y,_joy1_y
 0x000c5f70,4,joy_mask,_joy_mask
 0x000c5f74,4,timer_handle,_timer_handle
+0x000c5f78,576,video_modes,_video_modes
 0x000c61b8,256,vesa_info,_vesa_info
 0x000c62c0,256,vesa_mode_info,_vesa_mode_info
 0x000c64b8,114,interrupts,_interrupts

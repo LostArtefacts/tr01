@@ -34,6 +34,16 @@ typedef struct
     uint32 modes;
 } VESAINFO;
 
+typedef struct
+{
+    int mode;
+    int width;
+    int height;
+    int depth;
+    int aspect;
+    int available;
+} VIDEOMODE;
+
 extern void (*int_func)(void);
 extern SETUP *gamedata;
 extern uint32 shell_flags;
@@ -67,6 +77,7 @@ typedef struct
 extern volatile TODSTUFF toddata;
 extern VESAINFO vesa_info;
 extern uint8 vesa_mode_info[256];
+extern VIDEOMODE video_modes[24];
 
 void FadeTick(void);
 uint8 VgaGetMode(void);
@@ -320,6 +331,29 @@ int VesaSetMode(uint16 mode)
         return 0;
     VesaBiosGetModeInfo(vesa_mode_info, mode);
     return VesaBiosSetMode(mode);
+}
+
+void VesaDetectModes(void)
+{
+    uint16 *p;
+    uint16 mode;
+    int i;
+
+    if (VesaBiosGetInfo(&vesa_info) != 0x4f || vesa_info.signature != 0x41534556 || !vesa_info.modes)
+        return;
+    p = (uint16 *)(((vesa_info.modes >> 12) & 0xffff0) + (vesa_info.modes & 0xffff));
+    while (*p != 0xffff)
+    {
+        mode = *p++;
+        for (i = 0; i < 24; i++)
+        {
+            if (video_modes[i].mode == mode)
+            {
+                video_modes[i].available = 1;
+                break;
+            }
+        }
+    }
 }
 
 void JoyDetect(void)

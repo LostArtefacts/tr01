@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">94.34% (767)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">5.66% (46)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">94.46% (768)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">5.54% (45)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="704.73" height="6" x="0" y="0" class="named"/>
-<rect width="42.27" height="6" x="704.73" y="0" class="todo"/>
+<rect width="705.65" height="6" x="0" y="0" class="named"/>
+<rect width="41.35" height="6" x="705.65" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -850,7 +850,7 @@
 <rect width="12" height="12" x="450" y="225" class="named"><title>0x00045c00 FadeWait (19 bytes)</title></rect>
 <rect width="12" height="12" x="465" y="225" class="named"><title>0x00045c14 VesaHasMode (74 bytes)</title></rect>
 <rect width="12" height="12" x="480" y="225" class="named"><title>0x00045c60 VesaSetMode (78 bytes)</title></rect>
-<rect width="12" height="12" x="495" y="225" class="todo"><title>0x00045cb0 VesaDetectModes (131 bytes)</title></rect>
+<rect width="12" height="12" x="495" y="225" class="named"><title>0x00045cb0 VesaDetectModes (131 bytes)</title></rect>
 <rect width="12" height="12" x="510" y="225" class="todo"><title>0x00045d34 SwitchVideoMode (459 bytes)</title></rect>
 <rect width="12" height="12" x="525" y="225" class="todo"><title>0x00045f00 KeyClearBuffer (39 bytes)</title></rect>
 <rect width="12" height="12" x="540" y="225" class="named"><title>0x00045f28 JoyDetect (66 bytes)</title></rect>
@@ -884,10 +884,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">95.60%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">4.40%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">95.66%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">4.34%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="714.16" height="6" x="0" y="0" class="named"/>
-<rect width="32.84" height="6" x="714.16" y="0" class="todo"/>
+<rect width="714.60" height="6" x="0" y="0" class="named"/>
+<rect width="32.40" height="6" x="714.60" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.96" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1276,7 +1276,7 @@
 <rect width="7.53" height="8.06" x="595.50" y="214.02" class="named"><title>0x0003da50 phd_NormaliseVector (132 bytes)</title></rect>
 <rect width="7.53" height="7.97" x="595.50" y="225.08" class="named"><title>0x00030090 CabinControl (131 bytes)</title></rect>
 <rect width="7.53" height="7.97" x="595.50" y="236.05" class="named"><title>0x000326cc ShotLara (131 bytes)</title></rect>
-<rect width="7.53" height="7.97" x="595.50" y="247.03" class="todo"><title>0x00045cb0 VesaDetectModes (131 bytes)</title></rect>
+<rect width="7.53" height="7.97" x="595.50" y="247.03" class="named"><title>0x00045cb0 VesaDetectModes (131 bytes)</title></rect>
 <rect width="7.59" height="7.83" x="606.03" y="112.31" class="named"><title>0x000208a0 S_LoadGame (130 bytes)</title></rect>
 <rect width="7.51" height="7.83" x="616.62" y="112.31" class="named"><title>0x00027280 lara_col_swandive (129 bytes)</title></rect>
 <rect width="7.43" height="7.83" x="627.13" y="112.31" class="named"><title>0x00014bf8 InitCinematicRooms (128 bytes)</title></rect>
