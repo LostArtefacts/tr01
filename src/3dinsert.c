@@ -1226,3 +1226,98 @@ int XYClipper(int number, VERTEX_INFO *input)
         return 0;
     return j;
 }
+
+int ins_poly_trans8(PHD_VBUF *vbuf, sint16 shade)
+{
+    PHD_VBUF *vn1, *vn2, *vn3, *vn4, *vn5, *vn6, *vn7, *vn8;
+    VERTEX_INFO *v;
+    int npoints;
+
+    vn1 = vbuf;
+    vn2 = vbuf + 1;
+    vn3 = vbuf + 2;
+    vn4 = vbuf + 3;
+    vn5 = vbuf + 4;
+    vn6 = vbuf + 5;
+    vn7 = vbuf + 6;
+    vn8 = vbuf + 7;
+    if ((vn1->clip & vn2->clip & vn3->clip & vn4->clip & vn5->clip & vn6->clip & vn7->clip & vn8->clip) || vn1->clip < 0 || vn2->clip < 0 || vn3->clip < 0 || vn4->clip < 0 || vn5->clip < 0 || vn6->clip < 0 || vn7->clip < 0 || vn8->clip < 0)
+        return 0;
+    if ((sint32)((vn3->xs - vn2->xs) * (vn1->ys - vn2->ys) - (vn1->xs - vn2->xs) * (vn3->ys - vn2->ys)) < 0)
+        return 0;
+    if ((vn1->clip | vn2->clip | vn3->clip | vn4->clip | vn5->clip | vn6->clip | vn7->clip | vn8->clip) == 0)
+    {
+        *(sort3dptr) = (sint32)info3dptr;
+        *(sort3dptr + 1) = vn1->zv / 8 + vn2->zv / 8 + vn3->zv / 8 + vn4->zv / 8 + vn5->zv / 8 + vn6->zv / 8 + vn7->zv / 8 + vn8->zv / 8;
+        sort3dptr += 2;
+        *(info3dptr) = DRAW_POLY_TRANS;
+        *(info3dptr + 1) = shade;
+        *(info3dptr + 2) = 8;
+        *(info3dptr + 3) = (sint16)vn1->xs;
+        *(info3dptr + 4) = (sint16)vn1->ys;
+        *(info3dptr + 5) = (sint16)vn2->xs;
+        *(info3dptr + 6) = (sint16)vn2->ys;
+        *(info3dptr + 7) = (sint16)vn3->xs;
+        *(info3dptr + 8) = (sint16)vn3->ys;
+        *(info3dptr + 9) = (sint16)vn4->xs;
+        *(info3dptr + 10) = (sint16)vn4->ys;
+        *(info3dptr + 11) = (sint16)vn5->xs;
+        *(info3dptr + 12) = (sint16)vn5->ys;
+        *(info3dptr + 13) = (sint16)vn6->xs;
+        *(info3dptr + 14) = (sint16)vn6->ys;
+        *(info3dptr + 15) = (sint16)vn7->xs;
+        *(info3dptr + 16) = (sint16)vn7->ys;
+        *(info3dptr + 17) = (sint16)vn8->xs;
+        *(info3dptr + 18) = (sint16)vn8->ys;
+        info3dptr += 19;
+        surfacenum++;
+    }
+    else
+    {
+        phd_leftfloat = phd_topfloat = 0.0;
+        phd_rightfloat = (float)phd_winxmax;
+        phd_bottomfloat = (float)phd_winymax;
+        v = v_buffer;
+        v->x = (float)vn1->xs;
+        v->y = (float)vn1->ys;
+        v++;
+        v->x = (float)vn2->xs;
+        v->y = (float)vn2->ys;
+        v++;
+        v->x = (float)vn3->xs;
+        v->y = (float)vn3->ys;
+        v++;
+        v->x = (float)vn4->xs;
+        v->y = (float)vn4->ys;
+        v++;
+        v->x = (float)vn5->xs;
+        v->y = (float)vn5->ys;
+        v++;
+        v->x = (float)vn6->xs;
+        v->y = (float)vn6->ys;
+        v++;
+        v->x = (float)vn7->xs;
+        v->y = (float)vn7->ys;
+        v++;
+        v->x = (float)vn8->xs;
+        v->y = (float)vn8->ys;
+        npoints = XYClipper(8, v_buffer);
+        if (npoints)
+        {
+            *(sort3dptr) = (sint32)info3dptr;
+            *(sort3dptr + 1) = vn1->zv / 8 + vn2->zv / 8 + vn3->zv / 8 + vn4->zv / 8 + vn5->zv / 8 + vn6->zv / 8 + vn7->zv / 8 + vn8->zv / 8;
+            sort3dptr += 2;
+            *(info3dptr) = DRAW_POLY_TRANS;
+            *(info3dptr + 1) = shade;
+            *(info3dptr + 2) = npoints;
+            info3dptr += 3;
+            for (v = v_buffer; npoints > 0; npoints--, info3dptr += 2, v++)
+            {
+                *(info3dptr) = (sint16)v->x;
+                *(info3dptr + 1) = (sint16)v->y;
+            }
+            surfacenum++;
+        }
+    }
+    return 1;
+}

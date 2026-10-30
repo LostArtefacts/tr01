@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">91.25% (740)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">8.75% (71)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">91.37% (741)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">8.63% (70)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="681.60" height="6" x="0" y="0" class="named"/>
-<rect width="65.40" height="6" x="681.60" y="0" class="todo"/>
+<rect width="682.52" height="6" x="0" y="0" class="named"/>
+<rect width="64.48" height="6" x="682.52" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -813,7 +813,7 @@
 <rect width="12" height="12" x="645" y="210" class="named"><title>0x000421d0 ins_objectG4 (630 bytes)</title></rect>
 <rect width="12" height="12" x="660" y="210" class="named"><title>0x00042448 ins_objectG3 (525 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="210" class="named"><title>0x00042658 XYClipper (695 bytes)</title></rect>
-<rect width="12" height="12" x="690" y="210" class="todo"><title>0x00042910 ins_poly_trans8 (1436 bytes)</title></rect>
+<rect width="12" height="12" x="690" y="210" class="named"><title>0x00042910 ins_poly_trans8 (1436 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="210" class="todo"><title>0x00042eb0 draw_poly_flat (39 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="210" class="todo"><title>0x00042ed8 draw_poly_trans (38 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="210" class="todo"><title>0x00042f00 draw_poly_gouraud (38 bytes)</title></rect>
@@ -882,10 +882,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">91.46%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">8.54%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">92.11%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">7.89%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="683.19" height="6" x="0" y="0" class="named"/>
-<rect width="63.81" height="6" x="683.19" y="0" class="todo"/>
+<rect width="688.08" height="6" x="0" y="0" class="named"/>
+<rect width="58.92" height="6" x="688.08" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.96" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -906,7 +906,7 @@
 <rect width="36.43" height="31.97" x="96.82" y="189.56" class="named"><title>0x0003b854 FlyerControl (1563 bytes)</title></rect>
 <rect width="36.43" height="30.47" x="96.82" y="224.53" class="named"><title>0x00031414 do_control_option (1496 bytes)</title></rect>
 <rect width="30.36" height="35.21" x="136.25" y="0" class="named"><title>0x000158a8 CollideStaticObjects (1445 bytes)</title></rect>
-<rect width="30.36" height="34.98" x="136.25" y="38.21" class="todo"><title>0x00042910 ins_poly_trans8 (1436 bytes)</title></rect>
+<rect width="30.36" height="34.98" x="136.25" y="38.21" class="named"><title>0x00042910 ins_poly_trans8 (1436 bytes)</title></rect>
 <rect width="30.36" height="34.47" x="136.25" y="76.19" class="named"><title>0x0001ac74 DrawAnimatingItem (1417 bytes)</title></rect>
 <rect width="30.36" height="34.34" x="136.25" y="113.66" class="named"><title>0x000304f8 do_passport_option (1412 bytes)</title></rect>
 <rect width="30.36" height="33.86" x="136.25" y="151" class="named"><title>0x0002f5bc InitialiseDoor (1394 bytes)</title></rect>
