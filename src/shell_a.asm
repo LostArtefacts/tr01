@@ -354,4 +354,23 @@ l2:
     ret
 VesaBiosSetMode_ endp
 
+    public VesaSetBank_
+VesaSetBank_ proc near
+    push    ds
+    push    es
+    push    fs
+    push    gs
+    pusha
+    mov     dx,ax
+    mov     ax,4f05h
+    mov     bx,0
+    int     10h
+    popa
+    pop     gs
+    pop     fs
+    pop     es
+    pop     ds
+    ret
+VesaSetBank_ endp
+
     end

@@ -61,11 +61,11 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">98.54% (809)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0.12% (1)</tspan> · <tspan class="todo">1.34% (11)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">98.66% (810)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0.12% (1)</tspan> · <tspan class="todo">1.22% (10)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="736.08" height="6" x="0" y="0" class="named"/>
-<rect width="0.91" height="6" x="736.08" y="0" class="nonmatching"/>
-<rect width="10.01" height="6" x="736.99" y="0" class="todo"/>
+<rect width="736.99" height="6" x="0" y="0" class="named"/>
+<rect width="0.91" height="6" x="736.99" y="0" class="nonmatching"/>
+<rect width="9.10" height="6" x="737.90" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -880,7 +880,7 @@
 <rect width="12" height="12" x="135" y="240" class="named"><title>0x00046974 VesaBiosGetInfo (27 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="240" class="named"><title>0x0004698f VesaBiosGetModeInfo (25 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="240" class="named"><title>0x000469a8 VesaBiosSetMode (57 bytes)</title></rect>
-<rect width="12" height="12" x="180" y="240" class="todo"><title>0x000469e1 Func469e1 (28 bytes)</title></rect>
+<rect width="12" height="12" x="180" y="240" class="named"><title>0x000469e1 VesaSetBank (28 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="240" class="todo"><title>0x000469fd Func469fd (87 bytes)</title></rect>
 <rect width="12" height="12" x="210" y="240" class="todo"><title>0x00046a54 Func46a54 (474 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="240" class="todo"><title>0x00046c2e ScreenWaitVbl (19 bytes)</title></rect>
@@ -893,11 +893,11 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">99.13%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0.34%</tspan> · <tspan class="todo">0.53%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">99.14%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0.34%</tspan> · <tspan class="todo">0.52%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="740.46" height="6" x="0" y="0" class="named"/>
-<rect width="2.54" height="6" x="740.46" y="0" class="nonmatching"/>
-<rect width="3.99" height="6" x="743.01" y="0" class="todo"/>
+<rect width="740.56" height="6" x="0" y="0" class="named"/>
+<rect width="2.54" height="6" x="740.56" y="0" class="nonmatching"/>
+<rect width="3.90" height="6" x="743.10" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.55" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1611,7 +1611,7 @@
 <rect width="2.12" height="1.79" x="710.78" y="238.85" class="named"><title>0x00028cf8 ControlLaraExtra (28 bytes)</title></rect>
 <rect width="2.12" height="1.79" x="710.78" y="243.64" class="named"><title>0x00030168 ScionControl (28 bytes)</title></rect>
 <rect width="2.12" height="1.79" x="710.78" y="248.42" class="named"><title>0x00034d24 ControlSavegameItem (28 bytes)</title></rect>
-<rect width="2.12" height="1.79" x="710.78" y="253.21" class="todo"><title>0x000469e1 Func469e1 (28 bytes)</title></rect>
+<rect width="2.12" height="1.79" x="710.78" y="253.21" class="named"><title>0x000469e1 VesaSetBank (28 bytes)</title></rect>
 <rect width="1.83" height="1.89" x="715.90" y="224.14" class="named"><title>0x00024564 Inv_RingMotionSetup (27 bytes)</title></rect>
 <rect width="1.83" height="1.89" x="715.90" y="229.03" class="named"><title>0x0003131c do_compass_option (27 bytes)</title></rect>
 <rect width="1.83" height="1.89" x="715.90" y="233.92" class="named"><title>0x00039768 T_AddOutline (27 bytes)</title></rect>
