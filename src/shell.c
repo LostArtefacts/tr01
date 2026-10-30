@@ -186,7 +186,7 @@ void SoundInit(uint32 flags);
 void CDInit(void);
 void *MemAllocReal(uint32 size);
 void VesaDetectModes(void);
-void InterruptSet(int on, int which);
+void InterruptSet(int on, uint32 which);
 int JoyReadAxes(uint32 mask);
 void JoyDetect(void);
 void JoySetCentre(void);
@@ -717,5 +717,88 @@ void MemFreeReal(void *mem)
             real_blocks[i].selector = 0;
             real_blocks[i].size = 0;
         }
+    }
+}
+
+void InterruptSet(int on, uint32 which)
+{
+    union REGS regs;
+    struct SREGS sregs;
+    uint8 *mem;
+    uint16 size;
+    INTERRUPT *e;
+
+    e = (INTERRUPT *)(which * sizeof(INTERRUPT) + (uint32)&interrupts);
+    if (on == 1)
+    {
+        if (e->installed)
+            return;
+        memset(&regs, 0, sizeof(regs));
+        memset(&sregs, 0, sizeof(sregs));
+        regs.x.eax = e->number + 0x3500;
+        int386x(0x21, &regs, &regs, &sregs);
+        e->old_sel = sregs.es;
+        e->old_off = regs.x.ebx;
+        if (e->real_code)
+        {
+            memset(&regs, 0, sizeof(regs));
+            memset(&sregs, 0, sizeof(sregs));
+            regs.x.eax = 0x200;
+            regs.h.bl = e->number;
+            int386(0x31, &regs, &regs);
+            e->old_real_seg = regs.x.ecx;
+            e->old_real_off = regs.x.edx;
+            size = e->real_code_end - e->real_code;
+            mem = MemAllocReal(size);
+            if (mem == NULL)
+                ShellExitRealMemErr();
+            memcpy(mem, e->real_code, size);
+        }
+        else
+            mem = malloc(e->data_size);
+        *e->data = mem;
+        memset(mem, 0, e->data_size);
+        if (e->init)
+            e->init();
+        memset(&regs, 0, sizeof(regs));
+        memset(&sregs, 0, sizeof(sregs));
+        regs.x.eax = e->number + 0x2500;
+        sregs.ds = e->handler_sel;
+        regs.x.edx = (uint32)e->handler;
+        int386x(0x21, &regs, &regs, &sregs);
+        if (e->real_code)
+        {
+            memset(&regs, 0, sizeof(regs));
+            memset(&sregs, 0, sizeof(sregs));
+            regs.x.eax = 0x201;
+            regs.h.bl = e->number;
+            regs.x.ecx = (uint16)((int)(mem + e->data_size) >> 4);
+            regs.x.edx = (int)(mem + e->data_size) & 0xf;
+            int386x(0x31, &regs, &regs, &sregs);
+        }
+        e->installed = 1;
+    }
+    else if (on == 0 && e->installed)
+    {
+        e->installed = 0;
+        memset(&regs, 0, sizeof(regs));
+        memset(&sregs, 0, sizeof(sregs));
+        regs.x.eax = e->number + 0x2500;
+        regs.x.edx = e->old_off;
+        sregs.ds = e->old_sel;
+        int386x(0x21, &regs, &regs, &sregs);
+        if (e->real_code)
+        {
+            memset(&regs, 0, sizeof(regs));
+            memset(&sregs, 0, sizeof(sregs));
+            regs.x.eax = 0x201;
+            regs.h.bl = e->number;
+            regs.x.ecx = e->old_real_seg;
+            regs.x.edx = e->old_real_off;
+            int386(0x31, &regs, &regs);
+            MemFreeReal(*e->data);
+        }
+        else
+            free(*e->data);
     }
 }
