@@ -408,4 +408,161 @@ l1:
     ret
 ScreenDumpVesa_ endp
 
+    public ScreenPartialDumpVesa_
+ScreenPartialDumpVesa_ proc near
+    push    ebp
+    mov     ebp,esp
+    add     esp,0ffffffe8h
+    pusha
+    xor     eax,eax
+    xor     ecx,ecx
+    mov     edi,dword ptr _gamedata
+    mov     cx,word ptr [edi]
+    mov     ax,word ptr [edi+12h]
+    mul     ecx
+    mov     cx,word ptr [edi+10h]
+    and     ecx,0fffch
+    add     eax,ecx
+    mov     dword ptr [ebp-4],eax
+    sar     eax,10h
+    xor     ecx,ecx
+    mov     cx,_bank_cnt
+    mul     ecx
+    mov     word ptr [ebp-6],ax
+    call    VesaSetBank_
+    mov     eax,dword ptr [edi+0ah]
+    mov     dword ptr [ebp-10h],eax
+    cld
+    xor     ebx,ebx
+    mov     bx,word ptr [edi]
+    mov     ax,word ptr [edi+14h]
+    add     ax,3
+    and     eax,0fffch
+    mov     dword ptr [ebp-18h],eax
+    sub     ebx,eax
+    jl      l5
+    je      l6
+    mov     dword ptr [ebp-14h],ebx
+    mov     dx,word ptr [edi+16h]
+    test    dx,dx
+    je      l5
+    mov     esi,dword ptr [ebp-10h]
+    mov     eax,dword ptr [ebp-4]
+    add     esi,eax
+    and     eax,0ffffh
+    mov     edi,0a0000h
+    add     edi,eax
+l1:
+    mov     ecx,edi
+    mov     eax,dword ptr [ebp-18h]
+    add     ecx,eax
+    sub     ecx,0a0000h
+    cmp     ecx,0ffffh
+    jg      l2
+    mov     ecx,eax
+    sar     ecx,2
+    rep movsd
+    jmp     l3
+l2:
+    mov     ebx,10000h
+    sub     ebx,ecx
+    neg     ebx
+    mov     ecx,dword ptr [ebp-18h]
+    sub     ecx,ebx
+    push    ecx
+    sar     ecx,2
+    rep movsd
+    mov     bx,_bank_cnt
+    add     word ptr [ebp-6],bx
+    mov     ax,word ptr [ebp-6]
+    call    VesaSetBank_
+    pop     ebx
+    mov     edi,0a0000h
+    mov     ecx,dword ptr [ebp-18h]
+    sub     ecx,ebx
+    sar     ecx,2
+    rep movsd
+    mov     eax,dword ptr [ebp-14h]
+    add     esi,eax
+    add     edi,eax
+    jmp     l4
+l3:
+    mov     eax,dword ptr [ebp-14h]
+    add     esi,eax
+    add     edi,eax
+    mov     ecx,edi
+    sub     ecx,0a0000h
+    cmp     ecx,0ffffh
+    jl      l4
+    and     ecx,0ffffh
+    add     ecx,0a0000h
+    mov     edi,ecx
+    mov     bx,_bank_cnt
+    add     word ptr [ebp-6],bx
+    mov     ax,word ptr [ebp-6]
+    call    VesaSetBank_
+l4:
+    dec     dx
+    jne     l1
+l5:
+    popa
+    leave
+    ret
+l6:
+    mov     cx,word ptr [edi]
+    mov     ax,word ptr [edi+16h]
+    test    ax,ax
+    jle     l5
+    mul     ecx
+    mov     dword ptr [ebp-0ch],eax
+    mov     eax,10000h
+    sub     eax,dword ptr [ebp-4]
+    and     eax,0ffffh
+    test    eax,eax
+    jne     l7
+    mov     eax,10000h
+l7:
+    mov     ecx,eax
+    sar     ecx,2
+    sub     dword ptr [ebp-0ch],eax
+    mov     esi,dword ptr [ebp-10h]
+    mov     eax,dword ptr [ebp-4]
+    add     esi,eax
+    and     eax,0ffffh
+    mov     edi,0a0000h
+    add     edi,eax
+    rep movsd
+    mov     bx,_bank_cnt
+    add     word ptr [ebp-6],bx
+    mov     ax,word ptr [ebp-6]
+    call    VesaSetBank_
+    mov     edx,dword ptr [ebp-0ch]
+    sar     edx,10h
+    test    dx,dx
+    jle     l9
+    mov     ebx,10000h
+l8:
+    mov     edi,0a0000h
+    mov     ecx,4000h
+    rep movsd
+    mov     bx,_bank_cnt
+    add     word ptr [ebp-6],bx
+    mov     ax,word ptr [ebp-6]
+    call    VesaSetBank_
+    sub     dword ptr [ebp-0ch],ebx
+    dec     dx
+    jne     l8
+l9:
+    mov     ecx,dword ptr [ebp-0ch]
+    test    ecx,ecx
+    jle     l5
+    sar     ecx,2
+    inc     ecx
+    mov     edi,0a0000h
+    rep movsd
+    popa
+    leave
+    ret
+ScreenPartialDumpVesa_ endp
+
     end

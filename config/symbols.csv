@@ -813,7 +813,7 @@ address,size,name,symbol
 0x000469a8,57,VesaBiosSetMode,VesaBiosSetMode_
 0x000469e1,28,VesaSetBank,VesaSetBank_
 0x000469fd,87,ScreenDumpVesa,ScreenDumpVesa_
-0x00046a54,474,Func46a54,
+0x00046a54,474,ScreenPartialDumpVesa,ScreenPartialDumpVesa_
 0x00046c2e,19,ScreenWaitVbl,ScreenWaitVbl_
 0x00046c41,26,Func46c41,
 0x00046c5b,22,Func46c5b,
