@@ -147,4 +147,23 @@ l3:
     ret
 ScreenPartialClear_ endp
 
+    public ScreenDumpVga_
+ScreenDumpVga_ proc near
+    pusha
+    mov     edi,dword ptr _gamedata
+    xor     eax,eax
+    xor     ecx,ecx
+    mov     cx,word ptr [edi]
+    mov     ax,word ptr [edi+2]
+    mul     ecx
+    mov     ecx,eax
+    sar     ecx,2
+    cld
+    mov     esi,dword ptr [edi+0ah]
+    mov     edi,0a0000h
+    rep movsd
+    popa
+    ret
+ScreenDumpVga_ endp
+
     end

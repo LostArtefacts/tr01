@@ -804,7 +804,7 @@ address,size,name,symbol
 0x0004678b,102,ScreenPartialClear,ScreenPartialClear_
 0x000467f1,24,ScreenDump,ScreenDump_
 0x00046809,24,ScreenPartialDump,ScreenPartialDump_
-0x00046821,38,Func46821,
+0x00046821,38,ScreenDumpVga,ScreenDumpVga_
 0x00046847,148,Func46847,
 0x000468db,55,Func468db,
 0x00046912,98,Func46912,
