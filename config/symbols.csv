@@ -2144,11 +2144,13 @@ address,size,name,symbol
 0x0012f2b4,128,rand_table,_rand_table
 0x0012f334,128,wibble_table,_wibble_table
 0x0012f3b4,4,sort3dptr,_sort3dptr
+0x0012f3b8,4,phd_winptr,_phd_winptr
 0x0012f3c0,4,phd_bottom,_phd_bottom
 0x0012f3c4,4,phd_left,_phd_left
 0x0012f3cc,4,surfacenum,_surfacenum
 0x0012f3d0,4,phd_persp,_phd_persp
 0x0012f3d4,4,phd_winheight,_phd_winheight
+0x0012f3d8,4,phd_scrwidth,_phd_scrwidth
 0x0012f3dc,4,phd_winwidth,_phd_winwidth
 0x0012f3e0,4,info3dptr,_info3dptr
 0x0012f3e4,4,phd_winymax,_phd_winymax
