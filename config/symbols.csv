@@ -1,7 +1,7 @@
 address,size,name,symbol
-0x00010010,,S_InitialisePolyList,S_InitialisePolyList_
+0x00010010,5,S_InitialisePolyList,S_InitialisePolyList_
 0x00010018,65,S_DumpScreen,S_DumpScreen_
-0x0001005c,,S_ClearScreen,S_ClearScreen_
+0x0001005c,5,S_ClearScreen,S_ClearScreen_
 0x00010064,32,S_InitialiseScreen,S_InitialiseScreen_
 0x00010084,10,S_OutputPolyList,S_OutputPolyList_
 0x00010090,639,S_GetObjectBounds,S_GetObjectBounds_
