@@ -794,3 +794,28 @@ void LavaBurn(ITEM_INFO *item)
         }
     }
 }
+
+void LavaSpray(sint16 item_number)
+{
+    ITEM_INFO *item;
+    sint16 fx_number;
+    FX_INFO *fx;
+
+    item = &items[item_number];
+
+    fx_number = CreateEffect(item->room_number);
+    if (fx_number != NO_ITEM)
+    {
+        fx = &effects[fx_number];
+        fx->pos.x_pos = item->pos.x_pos;
+        fx->pos.y_pos = item->pos.y_pos;
+        fx->pos.z_pos = item->pos.z_pos;
+        fx->pos.y_rot = (sint16)((GetRandomControl() - 0x4000) * 2);
+        fx->speed = (sint16)(GetRandomControl() >> 10);
+        fx->fallspeed = (sint16)(-GetRandomControl() / 200);
+        fx->frame_number = (sint16)(-GetRandomControl() * 4 / 0x7fff);
+        fx->object_number = LAVA;
+
+        SoundEffect(149, &item->pos, NULL);
+    }
+}
