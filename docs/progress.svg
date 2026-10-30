@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">95.33% (775)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">4.67% (38)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">95.57% (777)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">4.43% (36)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="712.08" height="6" x="0" y="0" class="named"/>
-<rect width="34.92" height="6" x="712.08" y="0" class="todo"/>
+<rect width="713.92" height="6" x="0" y="0" class="named"/>
+<rect width="33.08" height="6" x="713.92" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -841,8 +841,8 @@
 <rect width="12" height="12" x="315" y="225" class="named"><title>0x00045868 ShellCleanup (307 bytes)</title></rect>
 <rect width="12" height="12" x="330" y="225" class="named"><title>0x0004599c ShellExitRealMemErr (5 bytes)</title></rect>
 <rect width="12" height="12" x="345" y="225" class="named"><title>0x000459a4 ShellExit (68 bytes)</title></rect>
-<rect width="12" height="12" x="360" y="225" class="todo"><title>0x000459e8 ShellExitErrno (86 bytes)</title></rect>
-<rect width="12" height="12" x="375" y="225" class="todo"><title>0x00045a40 ShellExitMemErr (10 bytes)</title></rect>
+<rect width="12" height="12" x="360" y="225" class="named"><title>0x000459e8 ShellExitErrno (86 bytes)</title></rect>
+<rect width="12" height="12" x="375" y="225" class="named"><title>0x00045a40 ShellExitMemErr (10 bytes)</title></rect>
 <rect width="12" height="12" x="390" y="225" class="named"><title>0x00045a4c FileLoad (190 bytes)</title></rect>
 <rect width="12" height="12" x="405" y="225" class="named"><title>0x00045b0c FileSave (85 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="225" class="named"><title>0x00045b64 FileSize (66 bytes)</title></rect>
@@ -884,10 +884,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">97.63%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">2.37%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">97.67%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">2.33%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="729.29" height="6" x="0" y="0" class="named"/>
-<rect width="17.71" height="6" x="729.29" y="0" class="todo"/>
+<rect width="729.61" height="6" x="0" y="0" class="named"/>
+<rect width="17.39" height="6" x="729.61" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.96" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1385,7 +1385,7 @@
 <rect width="5.98" height="5.55" x="662.71" y="152.12" class="named"><title>0x0002d144 ClearLOT (87 bytes)</title></rect>
 <rect width="5.98" height="5.55" x="671.69" y="152.12" class="todo"><title>0x000469fd Func469fd (87 bytes)</title></rect>
 <rect width="5.87" height="5.55" x="680.67" y="152.12" class="named"><title>0x000134a8 CreatureHead (86 bytes)</title></rect>
-<rect width="5.87" height="5.55" x="689.54" y="152.12" class="todo"><title>0x000459e8 ShellExitErrno (86 bytes)</title></rect>
+<rect width="5.87" height="5.55" x="689.54" y="152.12" class="named"><title>0x000459e8 ShellExitErrno (86 bytes)</title></rect>
 <rect width="5.77" height="5.55" x="698.41" y="152.12" class="named"><title>0x00045b0c FileSave (85 bytes)</title></rect>
 <rect width="5.67" height="5.55" x="707.18" y="152.12" class="named"><title>0x00016450 TrapCollision (84 bytes)</title></rect>
 <rect width="5.67" height="5.55" x="715.85" y="152.12" class="named"><title>0x00020a24 DrawAirBar (84 bytes)</title></rect>
@@ -1654,7 +1654,7 @@
 <rect width="0.10" height="0.24" x="736.74" y="245.62" class="named"><title>0x00038ba4 S_SoundSampleIsPlaying (11 bytes)</title></rect>
 <rect width="0.10" height="0.24" x="736.74" y="248.86" class="todo"><title>0x000466f8 VgaGetMode (11 bytes)</title></rect>
 <rect width="0.10" height="0.10" x="736.74" y="252.11" class="named"><title>0x00010084 S_OutputPolyList (10 bytes)</title></rect>
-<rect width="0.10" height="0.10" x="736.74" y="255.05" class="todo"><title>0x00045a40 ShellExitMemErr (10 bytes)</title></rect>
+<rect width="0.10" height="0.10" x="736.74" y="255.05" class="named"><title>0x00045a40 ShellExitMemErr (10 bytes)</title></rect>
 <rect width="0.10" height="0.10" x="739.74" y="245.62" class="named"><title>0x000396f8 T_LetterSpacing (8 bytes)</title></rect>
 <rect width="0.10" height="0.10" x="742.47" y="245.62" class="named"><title>0x00039700 T_WordSpacing (8 bytes)</title></rect>
 <rect width="0.10" height="0.10" x="745.21" y="245.62" class="named"><title>0x000396f0 T_SetScale (7 bytes)</title></rect>

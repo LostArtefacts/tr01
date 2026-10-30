@@ -268,11 +268,6 @@ void ShellCleanup(void)
     TimeRestore();
 }
 
-void ShellExitRealMemErr(void)
-{
-    ShellExit("Cannot allocate Real Mode buffer");
-}
-
 void ShellExit(char *szFormat, ...)
 {
     va_list args;
@@ -284,6 +279,31 @@ void ShellExit(char *szFormat, ...)
     va_end(args);
     fputc('\n', stderr);
     exit(0);
+}
+
+void ShellExitErrno(char *szFormat, ...)
+{
+    va_list args;
+    int err;
+
+    err = errno;
+    ShellCleanup();
+    fflush(stdout);
+    va_start(args, szFormat);
+    vfprintf(stderr, szFormat, args);
+    va_end(args);
+    fprintf(stderr, ":%s\n", strerror(err));
+    exit(0);
+}
+
+void ShellExitMemErr(void)
+{
+    ShellExit("Out of memory.");
+}
+
+void ShellExitRealMemErr(void)
+{
+    ShellExit("Cannot allocate Real Mode buffer");
 }
 
 uint8 *FileLoad(char *name, void *where, uint32 flags)

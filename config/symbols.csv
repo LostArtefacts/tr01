@@ -957,9 +957,10 @@ address,size,name,symbol
 0x0004b19e,16,fflush,fflush_
 0x0004b1ae,5,vfprintf,vfprintf_
 0x0004b1b3,164,fputc,fputc_
+0x0004b257,6,__get_errno_ptr,__get_errno_ptr_
 0x0004b25d,6,Func4b25d,
 0x0004b263,23,strerror,strerror_
-0x0004b27a,33,fscanf,fscanf_
+0x0004b27a,33,fprintf,fprintf_
 0x0004b29b,66,ftell,ftell_
 0x0004b2dd,29,int386,int386_
 0x0004b300,24,memset,memset_
