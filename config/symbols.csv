@@ -732,7 +732,7 @@ address,size,name,symbol
 0x0003f2c0,460,S_DrawSpriteRel,S_DrawSpriteRel_
 0x0003f48c,223,S_DrawPickup,S_DrawPickup_
 0x0003f56c,376,ins_room_sprite,ins_room_sprite_
-0x0003f6e4,551,Func3f6e4,
+0x0003f6e4,551,draw_scaled_spriteC,draw_scaled_spriteC_
 0x0003f910,586,Func3f910,
 0x0003fb5c,1092,Func3fb5c,
 0x0003ffa0,1829,ins_roomGT4,ins_roomGT4_
@@ -746,13 +746,13 @@ address,size,name,symbol
 0x00042448,525,ins_objectG3,ins_objectG3_
 0x00042658,695,Func42658,
 0x00042910,1436,ins_poly_trans8,ins_poly_trans8_
-0x00042eb0,39,Func42eb0,
-0x00042ed8,38,Func42ed8,
-0x00042f00,38,Func42f00,
-0x00042f28,45,Func42f28,
-0x00042f58,45,Func42f58,
-0x00042f88,45,Func42f88,
-0x00042fb8,45,Func42fb8,
+0x00042eb0,39,draw_poly_flat,draw_poly_flat_
+0x00042ed8,38,draw_poly_trans,draw_poly_trans_
+0x00042f00,38,draw_poly_gouraud,draw_poly_gouraud_
+0x00042f28,45,draw_poly_gtmap,draw_poly_gtmap_
+0x00042f58,45,draw_poly_wgtmap,draw_poly_wgtmap_
+0x00042f88,45,draw_poly_gtmap_persp,draw_poly_gtmap_persp_
+0x00042fb8,45,draw_poly_wgtmap_persp,draw_poly_wgtmap_persp_
 0x00042fe8,273,Func42fe8,
 0x000430fc,448,Func430fc,
 0x000432bc,684,Func432bc,
@@ -2044,6 +2044,7 @@ address,size,name,symbol
 0x000c40a0,4,water_effect,_water_effect
 0x000c40a4,4,shade_effect,_shade_effect
 0x000c40a8,4,perspective_distance,_perspective_distance
+0x000c40ac,36,poly_draw_routines,_poly_draw_routines
 0x000c5900,4,file_len,_file_len
 0x000c5f24,4,joy1_x,_joy1_x
 0x000c5f28,4,joy1_y,_joy1_y

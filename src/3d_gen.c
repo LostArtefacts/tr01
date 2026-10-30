@@ -11,6 +11,7 @@ extern PHD_VECTOR ls_vector_view;
 extern PHD_ANGLE phd_ls_yaw, phd_ls_pitch;
 extern sint32 sort3d_buffer[][2];
 extern sint16 info3d_buffer[];
+extern void (*poly_draw_routines[])(sint16 *);
 
 void phd_GetMatrixAngles(PHD_ANGLE *dest);
 void phd_UnitMatrix(void);
@@ -784,4 +785,21 @@ void do_quickysorty(int left, int right)
         do_quickysorty(left, j);
     if (i < right)
         do_quickysorty(i, right);
+}
+
+void phd_PrintPolyList(void)
+{
+    int i;
+    sint32 *sptr;
+    sint16 *iptr;
+    sint16 routine;
+
+    sptr = (sint32 *)sort3d_buffer;
+    for (i = surfacenum; i > 0; i--)
+    {
+        iptr = (sint16 *)(*sptr);
+        routine = *(iptr++);
+        (*poly_draw_routines[routine])(iptr);
+        sptr += 2;
+    }
 }
