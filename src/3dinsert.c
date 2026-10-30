@@ -8,10 +8,22 @@ typedef struct
     float g;
 } POINT_INFO;
 
+typedef struct
+{
+    sint16 xs;
+    sint16 ys;
+    sint16 g;
+    float ooz;
+    float u;
+    float v;
+} OUTPUT_INFO;
+
 extern float phd_leftfloat;
 extern float phd_rightfloat;
 extern float phd_topfloat;
 extern float phd_bottomfloat;
+
+int visible_zclip(PHD_VBUF *vn1, PHD_VBUF *vn2, PHD_VBUF *vn3);
 
 static float one = 65536.0 * 8.0 * 16384.0;
 
@@ -210,4 +222,153 @@ int XYGUVClipper(int number, VERTEX_INFO *input)
     if (j < 3)
         return 0;
     return j;
+}
+
+sint16 *ins_roomGT4(sint16 *objptr, int number)
+{
+    PHD_VBUF *vn1, *vn2, *vn3, *vn4;
+    PHDTEXTURESTRUCT *tex;
+    VERTEX_INFO *v;
+    POINT_INFO point[4], *p;
+    OUTPUT_INFO *outptr;
+    int i, npoints;
+    sint32 zdepth;
+
+    for (; number > 0; number--, objptr += 5)
+    {
+        vn1 = &vbuf[*(objptr)];
+        vn2 = &vbuf[*(objptr + 1)];
+        vn3 = &vbuf[*(objptr + 2)];
+        vn4 = &vbuf[*(objptr + 3)];
+        if (vn1->clip & vn2->clip & vn3->clip & vn4->clip)
+            continue;
+        if (vn1->clip < 0 || vn2->clip < 0 || vn3->clip < 0 || vn4->clip < 0)
+        {
+            if (!visible_zclip(vn1, vn2, vn3))
+                continue;
+            tex = &phdtextinfo[*(objptr + 4)];
+            p = point;
+            p->xv = (float)vn1->xv;
+            p->yv = (float)vn1->yv;
+            p->zv = (float)vn1->zv;
+            p->xs = (float)vn1->xs;
+            p->ys = (float)vn1->ys;
+            p->g = (float)vn1->g;
+            p->u = (float)tex->u1;
+            p->v = (float)tex->v1;
+            p++;
+            p->xv = (float)vn2->xv;
+            p->yv = (float)vn2->yv;
+            p->zv = (float)vn2->zv;
+            p->xs = (float)vn2->xs;
+            p->ys = (float)vn2->ys;
+            p->g = (float)vn2->g;
+            p->u = (float)tex->u2;
+            p->v = (float)tex->v2;
+            p++;
+            p->xv = (float)vn3->xv;
+            p->yv = (float)vn3->yv;
+            p->zv = (float)vn3->zv;
+            p->xs = (float)vn3->xs;
+            p->ys = (float)vn3->ys;
+            p->g = (float)vn3->g;
+            p->u = (float)tex->u3;
+            p->v = (float)tex->v3;
+            p++;
+            p->xv = (float)vn4->xv;
+            p->yv = (float)vn4->yv;
+            p->zv = (float)vn4->zv;
+            p->xs = (float)vn4->xs;
+            p->ys = (float)vn4->ys;
+            p->g = (float)vn4->g;
+            p->u = (float)tex->u4;
+            p->v = (float)tex->v4;
+            npoints = ZedClipper(4, point, v_buffer);
+            if (npoints)
+                npoints = XYGUVClipper(npoints, v_buffer);
+        }
+        else
+        {
+            if ((sint32)((vn3->xs - vn2->xs) * (vn1->ys - vn2->ys) - (vn1->xs - vn2->xs) * (vn3->ys - vn2->ys)) < 0)
+                continue;
+            tex = &phdtextinfo[*(objptr + 4)];
+            v = v_buffer;
+            v->x = (float)vn1->xs;
+            v->y = (float)vn1->ys;
+            v->ooz = one / vn1->zv;
+            v->g = (float)vn1->g;
+            v->u = tex->u1 * v->ooz;
+            v->v = tex->v1 * v->ooz;
+            v++;
+            v->x = (float)vn2->xs;
+            v->y = (float)vn2->ys;
+            v->ooz = one / vn2->zv;
+            v->g = (float)vn2->g;
+            v->u = tex->u2 * v->ooz;
+            v->v = tex->v2 * v->ooz;
+            v++;
+            v->x = (float)vn3->xs;
+            v->y = (float)vn3->ys;
+            v->ooz = one / vn3->zv;
+            v->g = (float)vn3->g;
+            v->u = tex->u3 * v->ooz;
+            v->v = tex->v3 * v->ooz;
+            v++;
+            v->x = (float)vn4->xs;
+            v->y = (float)vn4->ys;
+            v->ooz = one / vn4->zv;
+            v->g = (float)vn4->g;
+            v->u = tex->u4 * v->ooz;
+            v->v = tex->v4 * v->ooz;
+            npoints = 4;
+            if (vn1->clip || vn2->clip || vn3->clip || vn4->clip)
+                npoints = XYGUVClipper(npoints, v_buffer);
+        }
+        if (npoints)
+        {
+            zdepth = vn1->zv;
+            if (vn2->zv > zdepth)
+                zdepth = vn2->zv;
+            if (vn3->zv > zdepth)
+                zdepth = vn3->zv;
+            if (vn4->zv > zdepth)
+                zdepth = vn4->zv;
+            *(sort3dptr) = (sint32)info3dptr;
+            *(sort3dptr + 1) = zdepth;
+            sort3dptr += 2;
+            if (zdepth < perspective_distance)
+            {
+                *(info3dptr) = tex->drawtype + (DRAW_POLY_GTMAP_PERSPECTIVE - DRAW_POLY_GTMAP);
+                *(info3dptr + 1) = tex->tpage;
+                *(info3dptr + 2) = npoints;
+                outptr = (OUTPUT_INFO *)(info3dptr + 3);
+                for (i = 0, v = v_buffer; i < npoints; i++, v++, outptr++)
+                {
+                    outptr->xs = (sint16)v->x;
+                    outptr->ys = (sint16)v->y;
+                    outptr->g = (sint16)v->g;
+                    outptr->ooz = v->ooz;
+                    outptr->u = v->u;
+                    outptr->v = v->v;
+                }
+                info3dptr = (sint16 *)outptr;
+            }
+            else
+            {
+                *((uint32 *)info3dptr) = *((uint32 *)&tex->drawtype);
+                *(info3dptr + 2) = npoints;
+                info3dptr += 3;
+                for (i = 0, v = v_buffer; i < npoints; i++, v++, info3dptr += 5)
+                {
+                    *(info3dptr) = (sint16)v->x;
+                    *(info3dptr + 1) = (sint16)v->y;
+                    *(info3dptr + 2) = (sint16)v->g;
+                    *(info3dptr + 3) = (sint16)(v->u / v->ooz);
+                    *(info3dptr + 4) = (sint16)(v->v / v->ooz);
+                }
+            }
+            surfacenum++;
+        }
+    }
+    return objptr;
 }
