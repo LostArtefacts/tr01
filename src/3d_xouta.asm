@@ -326,4 +326,248 @@ l8:
     ret
 gourA_ endp
 
+    public gtmapA_
+gtmapA_ proc near
+    pusha
+    sub     esp,2ch
+    sub     edx,eax
+    jle     l6
+    mov     dword ptr [esp+20h],edx
+    mov     ecx,eax
+    shl     ecx,5
+    add     ecx,offset _xbuffer
+    mov     dword ptr [esp+1ch],ecx
+    imul    eax,dword ptr _phd_scrwidth
+    add     eax,dword ptr _phd_winptr
+    mov     dword ptr [esp+28h],eax
+    mov     dword ptr [esp+24h],ebx
+l1:
+    mov     esi,dword ptr [esp+1ch]
+    mov     edi,dword ptr [esi]
+    mov     ebp,dword ptr [esi+10h]
+    sar     edi,10h
+    sar     ebp,10h
+    cmp     ebp,edi
+    jle     l5
+    mov     ebx,ebp
+    sub     ebx,edi
+    mov     ecx,dword ptr [esi+4]
+    mov     eax,dword ptr [esi+14h]
+    sub     eax,ecx
+    cdq
+    idiv    ebx
+    mov     dword ptr [esp+14h],ecx
+    mov     dword ptr [esp+8],eax
+    mov     ecx,dword ptr [esi+8]
+    mov     eax,dword ptr [esi+18h]
+    sub     eax,ecx
+    cdq
+    idiv    ebx
+    mov     dword ptr [esp+0ch],ecx
+    mov     dword ptr [esp],eax
+    mov     ecx,dword ptr [esi+0ch]
+    mov     eax,dword ptr [esi+1ch]
+    sub     eax,ecx
+    cdq
+    idiv    ebx
+    mov     dword ptr [esp+10h],ecx
+    mov     dword ptr [esp+4],eax
+    sub     ebp,edi
+    add     edi,dword ptr [esp+28h]
+    mov     esi,dword ptr [esp+24h]
+    mov     dword ptr [esp+18h],ebp
+    xor     eax,eax
+    xor     ebx,ebx
+    mov     ecx,dword ptr [esp+0ch]
+    mov     edx,dword ptr [esp+10h]
+    mov     ebp,dword ptr [esp+14h]
+    shl     ecx,10h
+    shl     edx,10h
+    shl     ebp,10h
+    mov     cl,byte ptr [esp+2]
+    mov     ch,byte ptr [esp+6]
+    mov     dh,byte ptr [esp+0ah]
+    shl     dword ptr [esp],10h
+    shl     dword ptr [esp+4],10h
+    shl     dword ptr [esp+8],10h
+    mov     al,byte ptr [esp+0eh]
+    mov     ah,byte ptr [esp+12h]
+    mov     bh,byte ptr [esp+16h]
+l2:
+    sub     dword ptr [esp+18h],10h
+    js      l3
+    mov     bl,byte ptr [eax+esi*1]
+    mov     dl,byte ptr _depthq_table[ebx]
+    add     ecx,dword ptr [esp]
+    mov     byte ptr [edi],dl
+    adc     al,cl
+    add     edx,dword ptr [esp+4]
+    adc     ah,ch
+    add     ebp,dword ptr [esp+8]
+    adc     bh,dh
+    mov     bl,byte ptr [eax+esi*1]
+    mov     dl,byte ptr _depthq_table[ebx]
+    add     ecx,dword ptr [esp]
+    mov     byte ptr [edi+1],dl
+    adc     al,cl
+    add     edx,dword ptr [esp+4]
+    adc     ah,ch
+    add     ebp,dword ptr [esp+8]
+    adc     bh,dh
+    mov     bl,byte ptr [eax+esi*1]
+    mov     dl,byte ptr _depthq_table[ebx]
+    add     ecx,dword ptr [esp]
+    mov     byte ptr [edi+2],dl
+    adc     al,cl
+    add     edx,dword ptr [esp+4]
+    adc     ah,ch
+    add     ebp,dword ptr [esp+8]
+    adc     bh,dh
+    mov     bl,byte ptr [eax+esi*1]
+    mov     dl,byte ptr _depthq_table[ebx]
+    add     ecx,dword ptr [esp]
+    mov     byte ptr [edi+3],dl
+    adc     al,cl
+    add     edx,dword ptr [esp+4]
+    adc     ah,ch
+    add     ebp,dword ptr [esp+8]
+    adc     bh,dh
+    mov     bl,byte ptr [eax+esi*1]
+    mov     dl,byte ptr _depthq_table[ebx]
+    add     ecx,dword ptr [esp]
+    mov     byte ptr [edi+4],dl
+    adc     al,cl
+    add     edx,dword ptr [esp+4]
+    adc     ah,ch
+    add     ebp,dword ptr [esp+8]
+    adc     bh,dh
+    mov     bl,byte ptr [eax+esi*1]
+    mov     dl,byte ptr _depthq_table[ebx]
+    add     ecx,dword ptr [esp]
+    mov     byte ptr [edi+5],dl
+    adc     al,cl
+    add     edx,dword ptr [esp+4]
+    adc     ah,ch
+    add     ebp,dword ptr [esp+8]
+    adc     bh,dh
+    mov     bl,byte ptr [eax+esi*1]
+    mov     dl,byte ptr _depthq_table[ebx]
+    add     ecx,dword ptr [esp]
+    mov     byte ptr [edi+6],dl
+    adc     al,cl
+    add     edx,dword ptr [esp+4]
+    adc     ah,ch
+    add     ebp,dword ptr [esp+8]
+    adc     bh,dh
+    mov     bl,byte ptr [eax+esi*1]
+    mov     dl,byte ptr _depthq_table[ebx]
+    add     ecx,dword ptr [esp]
+    mov     byte ptr [edi+7],dl
+    adc     al,cl
+    add     edx,dword ptr [esp+4]
+    adc     ah,ch
+    add     ebp,dword ptr [esp+8]
+    adc     bh,dh
+    mov     bl,byte ptr [eax+esi*1]
+    mov     dl,byte ptr _depthq_table[ebx]
+    add     ecx,dword ptr [esp]
+    mov     byte ptr [edi+8],dl
+    adc     al,cl
+    add     edx,dword ptr [esp+4]
+    adc     ah,ch
+    add     ebp,dword ptr [esp+8]
+    adc     bh,dh
+    mov     bl,byte ptr [eax+esi*1]
+    mov     dl,byte ptr _depthq_table[ebx]
+    add     ecx,dword ptr [esp]
+    mov     byte ptr [edi+9],dl
+    adc     al,cl
+    add     edx,dword ptr [esp+4]
+    adc     ah,ch
+    add     ebp,dword ptr [esp+8]
+    adc     bh,dh
+    mov     bl,byte ptr [eax+esi*1]
+    mov     dl,byte ptr _depthq_table[ebx]
+    add     ecx,dword ptr [esp]
+    mov     byte ptr [edi+0ah],dl
+    adc     al,cl
+    add     edx,dword ptr [esp+4]
+    adc     ah,ch
+    add     ebp,dword ptr [esp+8]
+    adc     bh,dh
+    mov     bl,byte ptr [eax+esi*1]
+    mov     dl,byte ptr _depthq_table[ebx]
+    add     ecx,dword ptr [esp]
+    mov     byte ptr [edi+0bh],dl
+    adc     al,cl
+    add     edx,dword ptr [esp+4]
+    adc     ah,ch
+    add     ebp,dword ptr [esp+8]
+    adc     bh,dh
+    mov     bl,byte ptr [eax+esi*1]
+    mov     dl,byte ptr _depthq_table[ebx]
+    add     ecx,dword ptr [esp]
+    mov     byte ptr [edi+0ch],dl
+    adc     al,cl
+    add     edx,dword ptr [esp+4]
+    adc     ah,ch
+    add     ebp,dword ptr [esp+8]
+    adc     bh,dh
+    mov     bl,byte ptr [eax+esi*1]
+    mov     dl,byte ptr _depthq_table[ebx]
+    add     ecx,dword ptr [esp]
+    mov     byte ptr [edi+0dh],dl
+    adc     al,cl
+    add     edx,dword ptr [esp+4]
+    adc     ah,ch
+    add     ebp,dword ptr [esp+8]
+    adc     bh,dh
+    mov     bl,byte ptr [eax+esi*1]
+    mov     dl,byte ptr _depthq_table[ebx]
+    add     ecx,dword ptr [esp]
+    mov     byte ptr [edi+0eh],dl
+    adc     al,cl
+    add     edx,dword ptr [esp+4]
+    adc     ah,ch
+    add     ebp,dword ptr [esp+8]
+    adc     bh,dh
+    mov     bl,byte ptr [eax+esi*1]
+    mov     dl,byte ptr _depthq_table[ebx]
+    add     ecx,dword ptr [esp]
+    mov     byte ptr [edi+0fh],dl
+    adc     al,cl
+    add     edx,dword ptr [esp+4]
+    adc     ah,ch
+    add     ebp,dword ptr [esp+8]
+    adc     bh,dh
+    add     edi,10h
+    jmp     l2
+l3:
+    add     dword ptr [esp+18h],10h
+    jle     l5
+l4:
+    mov     bl,byte ptr [eax+esi*1]
+    mov     dl,byte ptr _depthq_table[ebx]
+    add     ecx,dword ptr [esp]
+    mov     byte ptr [edi],dl
+    adc     al,cl
+    add     edx,dword ptr [esp+4]
+    adc     ah,ch
+    add     ebp,dword ptr [esp+8]
+    adc     bh,dh
+    inc     edi
+    dec     dword ptr [esp+18h]
+    jne     l4
+l5:
+    mov     eax,_phd_scrwidth
+    add     dword ptr [esp+1ch],20h
+    add     dword ptr [esp+28h],eax
+    dec     dword ptr [esp+20h]
+    jne     l1
+l6:
+    add     esp,2ch
+    popa
+    ret
+gtmapA_ endp
+
     end
