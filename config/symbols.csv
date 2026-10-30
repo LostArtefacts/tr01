@@ -781,7 +781,7 @@ address,size,name,symbol
 0x00045ba8,88,FadeToPal,FadeToPal_
 0x00045c00,19,FadeWait,FadeWait_
 0x00045c14,74,VesaHasMode,VesaHasMode_
-0x00045c60,78,Func45c60,
+0x00045c60,78,VesaSetMode,VesaSetMode_
 0x00045cb0,131,VesaDetectModes,VesaDetectModes_
 0x00045d34,459,SwitchVideoMode,SwitchVideoMode_
 0x00045f00,39,KeyClearBuffer,KeyClearBuffer_
@@ -801,9 +801,9 @@ address,size,name,symbol
 0x00046821,38,Func46821,
 0x00046847,148,Func46847,
 0x00046912,98,Func46912,
-0x00046974,27,Func46974,
-0x0004698f,25,Func4698f,
-0x000469a8,57,Func469a8,
+0x00046974,27,VesaBiosGetInfo,VesaBiosGetInfo_
+0x0004698f,25,VesaBiosGetModeInfo,VesaBiosGetModeInfo_
+0x000469a8,57,VesaBiosSetMode,VesaBiosSetMode_
 0x000469e1,28,Func469e1,
 0x000469fd,87,Func469fd,
 0x00046a54,474,Func46a54,
@@ -2055,6 +2055,7 @@ address,size,name,symbol
 0x000c5f70,4,joy_mask,_joy_mask
 0x000c5f74,4,timer_handle,_timer_handle
 0x000c61b8,256,vesa_info,_vesa_info
+0x000c62c0,256,vesa_mode_info,_vesa_mode_info
 0x000c64b8,114,interrupts,_interrupts
 0x000c6a40,520,__iob,___iob
 0x000cac70,768,game_palette,_game_palette

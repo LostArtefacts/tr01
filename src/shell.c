@@ -66,6 +66,7 @@ typedef struct
 
 extern volatile TODSTUFF toddata;
 extern VESAINFO vesa_info;
+extern uint8 vesa_mode_info[256];
 
 void FadeTick(void);
 uint8 VgaGetMode(void);
@@ -85,6 +86,11 @@ void InterruptSet(int on, int which);
 int JoyReadAxes(uint32 mask);
 void JoyDetect(void);
 void JoySetCentre(void);
+int VesaBiosGetInfo(VESAINFO *info);
+#pragma aux VesaBiosGetInfo parm [edi] modify [eax edi];
+void VesaBiosGetModeInfo(uint8 *info, int mode);
+#pragma aux VesaBiosGetModeInfo parm [edi] [ecx] modify [eax ecx edi];
+int VesaBiosSetMode(int mode);
 void SoundExit(void);
 uint32 sosTIMERRemoveEvent(uint32 handle);
 uint32 sosTIMERUninitSystem(uint32 debug);
@@ -306,6 +312,14 @@ int VesaHasMode(uint16 mode)
             return 1;
     }
     return 0;
+}
+
+int VesaSetMode(uint16 mode)
+{
+    if (VesaBiosGetInfo(&vesa_info) != 0x4f || vesa_info.signature != 0x41534556 || !VesaHasMode(mode))
+        return 0;
+    VesaBiosGetModeInfo(vesa_mode_info, mode);
+    return VesaBiosSetMode(mode);
 }
 
 void JoyDetect(void)
