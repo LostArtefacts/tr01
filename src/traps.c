@@ -210,3 +210,23 @@ void SpikeCollision(sint16 item_num, ITEM_INFO *litem, COLL_INFO *coll)
         litem->gravity_status = 0;
     }
 }
+
+void TrapDoorControl(sint16 item_number)
+{
+    ITEM_INFO *item;
+
+    item = &items[item_number];
+
+    if (TriggerActive(item))
+    {
+        if (item->current_anim_state == DOOR_CLOSED)
+            item->goal_anim_state = DOOR_OPEN;
+    }
+    else
+    {
+        if (item->current_anim_state == DOOR_OPEN)
+            item->goal_anim_state = DOOR_CLOSED;
+    }
+
+    AnimateItem(item);
+}
