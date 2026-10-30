@@ -49,6 +49,11 @@ Watcom C library, the Escape FMV player (`RPL*.C`, `124*.ASM`, `$Id`
 strings by MFC and MDV), the VGA and VESA code and the HMI sound
 library follow.
 
+The standalone exe links that C library from the user's Watcom 10.6,
+like the compiler: `[link]` in `project.toml` lists the 156 modules of
+`CLIB3R.LIB`, `MATH387R.LIB` and `EMU387.LIB` the original holds, in
+its order. The rest that `src/` lacks is still cut out of the original.
+
 ```sh
 just analyze   # writes build/functions_tomb.csv, seeds config/symbols.csv
 ```

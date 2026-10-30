@@ -30,5 +30,45 @@ hook_base = 0x200000  # patch_exe.py loads the compiled functions here
 [symbols]
 libs = ["LIB386/DOS/CLIB3R.LIB", "LIB386/MATH387R.LIB"]  # in the Watcom directory
 
+
+[link]
+# Watcom's library modules the original links, in its order (the order
+# their code has; a module without code by its data). link_le.py links
+# them from the user's libraries, not from the original.
+libs = { CLIB3R = "LIB386/DOS/CLIB3R.LIB", MATH387R = "LIB386/MATH387R.LIB", EMU387 = "LIB386/DOS/EMU387.LIB" }
+modules = [
+    "MATH387R/fchop", "EMU387/386inite", "CLIB3R/nmalloc", "CLIB3R/fopen", "CLIB3R/sprintf",
+    "CLIB3R/fread", "CLIB3R/fclose", "CLIB3R/fseek", "CLIB3R/hrder386", "CLIB3R/printf",
+    "CLIB3R/exit", "CLIB3R/remove", "CLIB3R/nfree", "CLIB3R/fwrite", "CLIB3R/time",
+    "CLIB3R/localtim", "CLIB3R/__stos", "CLIB3R/strncmp", "CLIB3R/cmp386", "CLIB3R/cstrt386",
+    "CLIB3R/fflush", "CLIB3R/vfprintf", "CLIB3R/fputc", "CLIB3R/errno", "CLIB3R/strerror",
+    "CLIB3R/fprintf", "CLIB3R/ftell", "CLIB3R/int386", "CLIB3R/set386", "CLIB3R/intx386",
+    "MATH387R/dosinite", "CLIB3R/chk8087", "CLIB3R/crwd386", "CLIB3R/delay386", "CLIB3R/memalloc",
+    "CLIB3R/grownear", "CLIB3R/nmemneed", "CLIB3R/tolower", "CLIB3R/seterrno", "CLIB3R/open",
+    "CLIB3R/allocfp", "CLIB3R/chktty", "CLIB3R/prtf", "CLIB3R/ioalloc", "CLIB3R/qread",
+    "CLIB3R/fgetc", "CLIB3R/gtpid", "CLIB3R/flush", "CLIB3R/lseek", "CLIB3R/_clse", "CLIB3R/tell",
+    "CLIB3R/fprtf", "CLIB3R/unlnk", "CLIB3R/calloc", "CLIB3R/qwrit", "CLIB3R/setefg",
+    "CLIB3R/gtctm", "CLIB3R/mktime", "CLIB3R/tzset", "CLIB3R/gmtime", "CLIB3R/timeutil",
+    "CLIB3R/cmain386", "CLIB3R/inirt386", "CLIB3R/initargv", "CLIB3R/flushall", "CLIB3R/segread",
+    "CLIB3R/intxa386", "EMU387/emu387", "CLIB3R/hook387", "CLIB3R/save8087", "CLIB3R/ini87386",
+    "CLIB3R/delay", "CLIB3R/sbrk386", "CLIB3R/isatt", "CLIB3R/dosret", "CLIB3R/iomode",
+    "CLIB3R/initfile", "CLIB3R/ioexit", "CLIB3R/itoa", "CLIB3R/noefgfmt", "CLIB3R/ltoa",
+    "CLIB3R/toupper", "CLIB3R/gtche", "CLIB3R/memmove", "CLIB3R/stricmp", "CLIB3R/strcpy",
+    "CLIB3R/fmemcpy", "CLIB3R/memcpy", "CLIB3R/efgfmt", "MATH387R/cnvs2d", "CLIB3R/getenv",
+    "CLIB3R/stack386", "CLIB3R/cinit", "CLIB3R/d_setvec", "CLIB3R/xmsg", "CLIB3R/strcat",
+    "CLIB3R/read", "CLIB3R/io386", "CLIB3R/close", "CLIB3R/fgets", "CLIB3R/strdup",
+    "MATH387R/strtod", "MATH387R/ftos", "CLIB3R/strnicmp", "CLIB3R/sigsy", "CLIB3R/enterdb",
+    "CLIB3R/error386", "CLIB3R/amodf386", "MATH387R/scale", "MATH387R/nan_inf", "MATH387R/log387",
+    "MATH387R/floor", "MATH387R/cvt", "CLIB3R/setenvp", "CLIB3R/signl", "CLIB3R/chint386",
+    "CLIB3R/d_getvec", "MATH387R/i64ts386", "CLIB3R/chipd32", "MATH387R/log87e", "MATH387R/modf387",
+    "MATH387R/frexp", "CLIB3R/abort", "MATH387R/grabfpe", "CLIB3R/chipbug", "MATH387R/math2err",
+    "CLIB3R/grabfp87", "MATH387R/_matherr", "CLIB3R/fpe387", "CLIB3R/fpeinth", "MATH387R/__mtherr",
+    "CLIB3R/iobaddr", "CLIB3R/fputs", "CLIB3R/fpephar", "CLIB3R/fpedos4g", "CLIB3R/fpeergo",
+    "CLIB3R/fpeintel", "MATH387R/matherr", "CLIB3R/hugeval", "MATH387R/fpow10", "CLIB3R/_8087386",
+    "CLIB3R/fltused", "CLIB3R/argcv386", "CLIB3R/iob", "CLIB3R/8087cw", "CLIB3R/heapen", "CLIB3R/amblksiz",
+    "CLIB3R/umaskval", "CLIB3R/environ", "CLIB3R/chipvar", "CLIB3R/fpeint", "CLIB3R/heapmod",
+    "CLIB3R/stinit", "CLIB3R/minreal", "CLIB3R/___argc", "CLIB3R/histsplt",
+]
+
 [dosbox]
 search = ["~/opt/dosbox-staging*/dosbox", "~/data.local/work/dosbox-staging*/dosbox"]
