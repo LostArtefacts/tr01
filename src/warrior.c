@@ -89,6 +89,14 @@ enum mummy_anims
     MUMMY_DEATH
 };
 
+#define POD_EXPLODE_DIST (WALL_L * 4)
+
+enum pod_anims
+{
+    POD_SET,
+    POD_EXPLODE
+};
+
 sint16 ShardGun(sint32 x, sint32 y, sint32 z, sint16 speed, PHD_ANGLE yrot, sint16 room_number);
 sint16 RocketGun(sint32 x, sint32 y, sint32 z, sint16 speed, PHD_ANGLE yrot, sint16 room_number);
 int ExplodingDeath(sint16 item_number, sint32 mesh_bits, sint16 damage);
@@ -896,4 +904,50 @@ void InitialisePod(sint16 item_number)
     item->flags = 0;
 
     item->mesh_bits = 0xff0001ff;
+}
+
+void PodControl(sint16 item_number)
+{
+    sint32 x, y, z, explode;
+    ITEM_INFO *item, *bug;
+    sint16 bug_item;
+
+    item = &items[item_number];
+
+    if (item->goal_anim_state != POD_EXPLODE)
+    {
+        explode = 0;
+
+        if (item->flags & ONESHOT)
+            explode = 1;
+        else if (item->object_number == BIG_POD)
+            explode = 1;
+        else
+        {
+            x = lara_item->pos.x_pos - item->pos.x_pos;
+            y = lara_item->pos.y_pos - item->pos.y_pos;
+            z = lara_item->pos.z_pos - item->pos.z_pos;
+            if (x > -POD_EXPLODE_DIST && x < POD_EXPLODE_DIST && y > -POD_EXPLODE_DIST && y < POD_EXPLODE_DIST && z > -POD_EXPLODE_DIST && z < POD_EXPLODE_DIST)
+                explode = 1;
+        }
+
+        if (explode)
+        {
+            item->goal_anim_state = POD_EXPLODE;
+            item->mesh_bits = 0x00ffffff;
+            item->collidable = 0;
+            ExplodingDeath(item_number, 0x00fffe00, 0);
+
+            bug_item = *(sint16 *)(item->data);
+            bug = &items[bug_item];
+            bug->touch_bits = 0;
+            AddActiveItem(bug_item);
+            if (EnableBaddieAI(bug_item, 0))
+                bug->status = ACTIVE;
+            else
+                bug->status = INVISIBLE;
+        }
+    }
+
+    AnimateItem(item);
 }

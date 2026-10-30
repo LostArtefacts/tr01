@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">84.59% (686)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">15.41% (125)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">84.71% (687)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">15.29% (124)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="631.86" height="6" x="0" y="0" class="named"/>
-<rect width="115.14" height="6" x="631.86" y="0" class="todo"/>
+<rect width="632.79" height="6" x="0" y="0" class="named"/>
+<rect width="114.21" height="6" x="632.79" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -754,7 +754,7 @@
 <rect width="12" height="12" x="510" y="195" class="named"><title>0x0003c39c ExplodingDeath (932 bytes)</title></rect>
 <rect width="12" height="12" x="525" y="195" class="named"><title>0x0003c740 ControlBodyPart (433 bytes)</title></rect>
 <rect width="12" height="12" x="540" y="195" class="named"><title>0x0003c918 InitialisePod (229 bytes)</title></rect>
-<rect width="12" height="12" x="555" y="195" class="todo"><title>0x0003ca00 PodControl (273 bytes)</title></rect>
+<rect width="12" height="12" x="555" y="195" class="named"><title>0x0003ca00 PodControl (273 bytes)</title></rect>
 <rect width="12" height="12" x="570" y="195" class="todo"><title>0x0003cb14 InitialiseStatue (232 bytes)</title></rect>
 <rect width="12" height="12" x="585" y="195" class="todo"><title>0x0003cbfc StatueControl (228 bytes)</title></rect>
 <rect width="12" height="12" x="600" y="195" class="todo"><title>0x0003cce0 InitialiseWolf (35 bytes)</title></rect>
@@ -882,10 +882,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">80.52%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">19.48%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">80.65%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">19.35%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="601.49" height="6" x="0" y="0" class="named"/>
-<rect width="145.51" height="6" x="601.49" y="0" class="todo"/>
+<rect width="602.42" height="6" x="0" y="0" class="named"/>
+<rect width="144.58" height="6" x="602.42" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.96" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1110,7 +1110,7 @@
 <rect width="12.91" height="12.42" x="513.94" y="242.58" class="named"><title>0x0001a3e8 DrawRooms (278 bytes)</title></rect>
 <rect width="13.20" height="12.03" x="529.85" y="34.58" class="named"><title>0x0001d25c InterpolateArmMatrix (276 bytes)</title></rect>
 <rect width="13.02" height="12.03" x="546.05" y="34.58" class="named"><title>0x0002d1a0 mn_reset_sound_effects (273 bytes)</title></rect>
-<rect width="13.02" height="12.03" x="562.07" y="34.58" class="todo"><title>0x0003ca00 PodControl (273 bytes)</title></rect>
+<rect width="13.02" height="12.03" x="562.07" y="34.58" class="named"><title>0x0003ca00 PodControl (273 bytes)</title></rect>
 <rect width="13.02" height="12.03" x="578.09" y="34.58" class="todo"><title>0x00042fe8 Func42fe8 (273 bytes)</title></rect>
 <rect width="12.96" height="12.03" x="594.11" y="34.58" class="named"><title>0x00034434 SwitchCollision (272 bytes)</title></rect>
 <rect width="12.85" height="12.03" x="610.08" y="34.58" class="named"><title>0x0001ab1c DrawEffect (270 bytes)</title></rect>
