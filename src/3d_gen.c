@@ -12,6 +12,8 @@ extern PHD_ANGLE phd_ls_yaw, phd_ls_pitch;
 extern sint32 sort3d_buffer[][2];
 extern sint16 info3d_buffer[];
 extern void (*poly_draw_routines[])(sint16 *);
+extern uint8 *phd_winptr;
+extern sint32 phd_viewdist, phd_scrwidth, phd_scrheight;
 
 void phd_GetMatrixAngles(PHD_ANGLE *dest);
 void phd_UnitMatrix(void);
@@ -802,4 +804,27 @@ void phd_PrintPolyList(void)
         (*poly_draw_routines[routine])(iptr);
         sptr += 2;
     }
+}
+
+void phd_InitWindow(int x, int y, int width, int height, int nearz, int farz, int view_angle, int scrwidth, int scrheight, uint8 *scrptr)
+{
+    phd_winptr = scrptr + y * scrwidth + x;
+    phd_winxmax = width - 1;
+    phd_winymax = height - 1;
+    phd_winwidth = width;
+    phd_winheight = height;
+    phd_centerx = width / 2;
+    phd_centery = height / 2;
+    phd_znear = nearz << W2V_SHIFT;
+    phd_zfar = farz << W2V_SHIFT;
+    phd_viewdist = farz;
+    phd_scrwidth = scrwidth;
+    phd_scrheight = scrheight;
+    view_angle *= (182 / 2);
+    phd_persp = ((phd_winwidth / 2) * phd_cos(view_angle)) / phd_sin(view_angle);
+    phd_left = 0;
+    phd_top = 0;
+    phd_right = phd_winxmax;
+    phd_bottom = phd_winymax;
+    phd_mxptr = matrix_stack;
 }

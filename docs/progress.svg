@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">88.90% (721)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">11.10% (90)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">89.03% (722)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">10.97% (89)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="664.10" height="6" x="0" y="0" class="named"/>
-<rect width="82.90" height="6" x="664.10" y="0" class="todo"/>
+<rect width="665.02" height="6" x="0" y="0" class="named"/>
+<rect width="81.98" height="6" x="665.02" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -789,7 +789,7 @@
 <rect width="12" height="12" x="285" y="210" class="named"><title>0x0003ed70 phd_SortPolyList (65 bytes)</title></rect>
 <rect width="12" height="12" x="300" y="210" class="named"><title>0x0003edb4 do_quickysorty (199 bytes)</title></rect>
 <rect width="12" height="12" x="315" y="210" class="named"><title>0x0003ee7c phd_PrintPolyList (48 bytes)</title></rect>
-<rect width="12" height="12" x="330" y="210" class="todo"><title>0x0003eeac phd_InitWindow (223 bytes)</title></rect>
+<rect width="12" height="12" x="330" y="210" class="named"><title>0x0003eeac phd_InitWindow (223 bytes)</title></rect>
 <rect width="12" height="12" x="345" y="210" class="todo"><title>0x0003ef8c AlterFOV (73 bytes)</title></rect>
 <rect width="12" height="12" x="360" y="210" class="todo"><title>0x0003efe0 phd_atan (70 bytes)</title></rect>
 <rect width="12" height="12" x="375" y="210" class="todo"><title>0x0003f026 phd_cos (5 bytes)</title></rect>
@@ -882,10 +882,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">84.74%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">15.26%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">84.84%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">15.16%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="633.02" height="6" x="0" y="0" class="named"/>
-<rect width="113.98" height="6" x="633.02" y="0" class="todo"/>
+<rect width="633.77" height="6" x="0" y="0" class="named"/>
+<rect width="113.23" height="6" x="633.77" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.96" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1155,7 +1155,7 @@
 <rect width="10.95" height="11.16" x="544.58" y="91.92" class="named"><title>0x0001275c CreatureCreature (224 bytes)</title></rect>
 <rect width="10.95" height="11.16" x="544.58" y="106.08" class="named"><title>0x0002a19c LaraSurfaceCollision (224 bytes)</title></rect>
 <rect width="10.95" height="11.16" x="544.58" y="120.24" class="named"><title>0x00034544 SwitchCollision2 (224 bytes)</title></rect>
-<rect width="10.95" height="11.10" x="544.58" y="134.40" class="todo"><title>0x0003eeac phd_InitWindow (223 bytes)</title></rect>
+<rect width="10.95" height="11.10" x="544.58" y="134.40" class="named"><title>0x0003eeac phd_InitWindow (223 bytes)</title></rect>
 <rect width="10.95" height="11.10" x="544.58" y="148.50" class="todo"><title>0x0003f48c S_DrawPickup (223 bytes)</title></rect>
 <rect width="10.95" height="10.97" x="544.58" y="162.60" class="named"><title>0x0001d9e0 LaraBubbles (221 bytes)</title></rect>
 <rect width="10.95" height="10.91" x="544.58" y="176.57" class="named"><title>0x0002056c DisplayCredits (220 bytes)</title></rect>
