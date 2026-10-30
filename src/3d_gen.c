@@ -15,6 +15,10 @@ sint16 *ins_objectGT4(sint16 *objptr, int number);
 sint16 *ins_objectGT3(sint16 *objptr, int number);
 sint16 *ins_objectG4(sint16 *objptr, int number);
 sint16 *ins_objectG3(sint16 *objptr, int number);
+sint16 *calc_roomvert(sint16 *objptr);
+sint16 *ins_roomGT4(sint16 *objptr, int number);
+sint16 *ins_roomGT3(sint16 *objptr, int number);
+sint16 *ins_room_sprite(sint16 *objptr, int number);
 
 void phd_GenerateW2V(PHD_3DPOS *viewpos)
 {
@@ -417,4 +421,16 @@ void phd_PutPolygons(sint16 *objptr, int clipstatus)
             objptr = ins_objectG3(objptr + 1, *objptr);
         }
     }
+}
+
+void S_InsertRoom(sint16 *objptr)
+{
+    phd_leftfloat = (float)phd_left;
+    phd_rightfloat = (float)phd_right;
+    phd_topfloat = (float)phd_top;
+    phd_bottomfloat = (float)phd_bottom;
+    objptr = calc_roomvert(objptr);
+    objptr = ins_roomGT4(objptr + 1, *objptr);
+    objptr = ins_roomGT3(objptr + 1, *objptr);
+    objptr = ins_room_sprite(objptr + 1, *objptr);
 }
