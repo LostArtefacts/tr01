@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">82.98% (673)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">17.02% (138)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">83.11% (674)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">16.89% (137)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="619.89" height="6" x="0" y="0" class="named"/>
-<rect width="127.11" height="6" x="619.89" y="0" class="todo"/>
+<rect width="620.81" height="6" x="0" y="0" class="named"/>
+<rect width="126.19" height="6" x="620.81" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -741,7 +741,7 @@
 <rect width="12" height="12" x="315" y="195" class="named"><title>0x0003b15c LavaBurn (188 bytes)</title></rect>
 <rect width="12" height="12" x="330" y="195" class="named"><title>0x0003b218 LavaSpray (191 bytes)</title></rect>
 <rect width="12" height="12" x="345" y="195" class="named"><title>0x0003b2d8 ControlLavaBlob (292 bytes)</title></rect>
-<rect width="12" height="12" x="360" y="195" class="todo"><title>0x0003b3fc LavaWedge (311 bytes)</title></rect>
+<rect width="12" height="12" x="360" y="195" class="named"><title>0x0003b3fc LavaWedge (311 bytes)</title></rect>
 <rect width="12" height="12" x="375" y="195" class="todo"><title>0x0003b558 CentaurControl (674 bytes)</title></rect>
 <rect width="12" height="12" x="390" y="195" class="todo"><title>0x0003b7fc InitialiseWarrior2 (36 bytes)</title></rect>
 <rect width="12" height="12" x="405" y="195" class="todo"><title>0x0003b854 FlyerControl (1563 bytes)</title></rect>
@@ -882,10 +882,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">78.02%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">21.98%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">78.16%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">21.84%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="582.79" height="6" x="0" y="0" class="named"/>
-<rect width="164.21" height="6" x="582.79" y="0" class="todo"/>
+<rect width="583.85" height="6" x="0" y="0" class="named"/>
+<rect width="163.15" height="6" x="583.85" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.96" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1087,7 +1087,7 @@
 <rect width="13.96" height="13.28" x="582.85" y="18.29" class="named"><title>0x00011060 BatControl (313 bytes)</title></rect>
 <rect width="13.90" height="13.28" x="599.81" y="18.29" class="named"><title>0x0001dac0 ControlBubble1 (312 bytes)</title></rect>
 <rect width="13.90" height="13.28" x="616.72" y="18.29" class="named"><title>0x0002dc00 mn_stop_sound_effect (312 bytes)</title></rect>
-<rect width="13.85" height="13.28" x="633.62" y="18.29" class="todo"><title>0x0003b3fc LavaWedge (311 bytes)</title></rect>
+<rect width="13.85" height="13.28" x="633.62" y="18.29" class="named"><title>0x0003b3fc LavaWedge (311 bytes)</title></rect>
 <rect width="13.74" height="13.28" x="650.47" y="18.29" class="named"><title>0x0002793c LaraDeflectEdgeJump (309 bytes)</title></rect>
 <rect width="13.69" height="13.28" x="667.21" y="18.29" class="todo"><title>0x00044761 Func44761 (308 bytes)</title></rect>
 <rect width="13.63" height="13.28" x="683.90" y="18.29" class="todo"><title>0x00045868 Func45868 (307 bytes)</title></rect>

@@ -12,6 +12,8 @@
 
 #define LAVA_GLOB_DAMAGE 10
 
+#define WEDGE_SPEED 25
+
 int OnTrapDoor(ITEM_INFO *item, sint32 x, sint32 z);
 sint16 CreateItem(void);
 
@@ -854,4 +856,62 @@ void ControlLavaBlob(sint16 fx_number)
 
     if (room_number != fx->room_number)
         EffectNewRoom(fx_number, room_number);
+}
+
+void LavaWedge(sint16 item_number)
+{
+    ITEM_INFO *item;
+    FLOOR_INFO *floor;
+    sint32 x, z;
+    sint16 room_number;
+
+    item = &items[item_number];
+
+    room_number = item->room_number;
+    floor = GetFloor(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, &room_number);
+
+    if (room_number != item->room_number)
+        ItemNewRoom(item_number, room_number);
+
+    if (item->status != DEACTIVATED)
+    {
+        x = item->pos.x_pos;
+        z = item->pos.z_pos;
+        if (item->pos.y_rot == 0)
+        {
+            item->pos.z_pos += WEDGE_SPEED;
+            z += 2 * WALL_L;
+        }
+        else if (item->pos.y_rot == -0x8000)
+        {
+            item->pos.z_pos -= WEDGE_SPEED;
+            z -= 2 * WALL_L;
+        }
+        else if (item->pos.y_rot == 0x4000)
+        {
+            item->pos.x_pos += WEDGE_SPEED;
+            x += 2 * WALL_L;
+        }
+        else
+        {
+            item->pos.x_pos -= WEDGE_SPEED;
+            x -= 2 * WALL_L;
+        }
+
+        floor = GetFloor(x, item->pos.y_pos, z, &room_number);
+        if (GetHeight(floor, x, item->pos.y_pos, z) != item->pos.y_pos)
+            item->status = DEACTIVATED;
+    }
+
+    if (item->touch_bits)
+    {
+        if (lara_item->hit_points > 0)
+            LavaBurn(lara_item);
+
+        camera.item = item;
+        camera.flags = CHASE_OBJECT;
+        camera.type = FIXED_CAMERA;
+        camera.target_angle = -0x8000;
+        camera.target_distance = WALL_L * 3;
+    }
 }
