@@ -3,6 +3,8 @@
 #define SPIKE_DAMAGE 15
 #define ROLLINGBALL_DAMAGE_AIR 100
 
+int OnTrapDoor(ITEM_INFO *item, sint32 x, sint32 z);
+
 void InitialiseRollingBall(sint16 item_number)
 {
     ITEM_INFO *item;
@@ -229,4 +231,13 @@ void TrapDoorControl(sint16 item_number)
     }
 
     AnimateItem(item);
+}
+
+void TrapDoorFloor(ITEM_INFO *item, sint32 x, sint32 y, sint32 z, sint16 *height)
+{
+    if (!OnTrapDoor(item, x, z))
+        return;
+    if (y <= item->pos.y_pos)
+        if (item->current_anim_state == DOOR_CLOSED && item->pos.y_pos < *height)
+            *height = (sint16)item->pos.y_pos;
 }

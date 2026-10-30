@@ -655,7 +655,7 @@ address,size,name,symbol
 0x0003a3ec,67,TrapDoorControl,TrapDoorControl_
 0x0003a430,53,TrapDoorFloor,TrapDoorFloor_
 0x0003a468,55,TrapDoorCeiling,TrapDoorCeiling_
-0x0003a4a0,165,Func3a4a0,
+0x0003a4a0,165,OnTrapDoor,OnTrapDoor_
 0x0003a548,336,Pendulum,Pendulum_
 0x0003a698,285,FallingBlock,FallingBlock_
 0x0003a7b8,48,FallingBlockFloor,FallingBlockFloor_
