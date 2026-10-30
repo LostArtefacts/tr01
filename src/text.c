@@ -269,6 +269,17 @@ sint32 T_GetTextWidth(TEXTSTRING *textString)
     return width;
 }
 
+int T_RemovePrint(TEXTSTRING *textString)
+{
+    if (!textString)
+        return 0;
+    if (!(textString->flags & T_ACTIVE))
+        return 0;
+    textString->flags &= ~T_ACTIVE;
+    T_numStrings--;
+    return 1;
+}
+
 sint16 T_GetStringLen(char *string)
 {
     sint16 len = 1;
