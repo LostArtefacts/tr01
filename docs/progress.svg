@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">94.10% (765)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">5.90% (48)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">94.22% (766)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">5.78% (47)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="702.90" height="6" x="0" y="0" class="named"/>
-<rect width="44.10" height="6" x="702.90" y="0" class="todo"/>
+<rect width="703.82" height="6" x="0" y="0" class="named"/>
+<rect width="43.18" height="6" x="703.82" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -848,7 +848,7 @@
 <rect width="12" height="12" x="420" y="225" class="named"><title>0x00045b64 FileSize (66 bytes)</title></rect>
 <rect width="12" height="12" x="435" y="225" class="named"><title>0x00045ba8 FadeToPal (88 bytes)</title></rect>
 <rect width="12" height="12" x="450" y="225" class="named"><title>0x00045c00 FadeWait (19 bytes)</title></rect>
-<rect width="12" height="12" x="465" y="225" class="todo"><title>0x00045c14 Func45c14 (74 bytes)</title></rect>
+<rect width="12" height="12" x="465" y="225" class="named"><title>0x00045c14 VesaHasMode (74 bytes)</title></rect>
 <rect width="12" height="12" x="480" y="225" class="todo"><title>0x00045c60 Func45c60 (78 bytes)</title></rect>
 <rect width="12" height="12" x="495" y="225" class="todo"><title>0x00045cb0 VesaDetectModes (131 bytes)</title></rect>
 <rect width="12" height="12" x="510" y="225" class="todo"><title>0x00045d34 SwitchVideoMode (459 bytes)</title></rect>
@@ -884,10 +884,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">95.53%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">4.47%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">95.57%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">4.43%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="713.64" height="6" x="0" y="0" class="named"/>
-<rect width="33.36" height="6" x="713.64" y="0" class="todo"/>
+<rect width="713.89" height="6" x="0" y="0" class="named"/>
+<rect width="33.11" height="6" x="713.89" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.96" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1415,7 +1415,7 @@
 <rect width="4.93" height="5.23" x="718.28" y="160.67" class="named"><title>0x00010aa4 S_SetupBelowWater (74 bytes)</title></rect>
 <rect width="4.93" height="5.23" x="726.21" y="160.67" class="named"><title>0x0002eea0 TestBlockMovable (74 bytes)</title></rect>
 <rect width="4.93" height="5.23" x="734.14" y="160.67" class="named"><title>0x00034bc0 KeyTrigger (74 bytes)</title></rect>
-<rect width="4.93" height="5.23" x="742.07" y="160.67" class="todo"><title>0x00045c14 Func45c14 (74 bytes)</title></rect>
+<rect width="4.93" height="5.23" x="742.07" y="160.67" class="named"><title>0x00045c14 VesaHasMode (74 bytes)</title></rect>
 <rect width="4.68" height="5.38" x="653.25" y="168.90" class="named"><title>0x0003ef8c AlterFOV (73 bytes)</title></rect>
 <rect width="4.68" height="5.27" x="653.25" y="177.29" class="named"><title>0x0001a1c4 S_CopyScreenToBuffer (72 bytes)</title></rect>
 <rect width="4.68" height="5.27" x="653.25" y="185.55" class="named"><title>0x0001e064 ChainBlockFX (72 bytes)</title></rect>

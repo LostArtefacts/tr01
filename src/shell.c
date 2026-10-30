@@ -25,6 +25,15 @@ typedef struct
     uint8 *real_code_end;
 } INTERRUPT;
 
+typedef struct
+{
+    uint32 signature;
+    uint16 version;
+    uint32 oem;
+    uint32 capabilities;
+    uint32 modes;
+} VESAINFO;
+
 extern void (*int_func)(void);
 extern SETUP *gamedata;
 extern uint32 shell_flags;
@@ -56,6 +65,7 @@ typedef struct
 } TODSTUFF;
 
 extern volatile TODSTUFF toddata;
+extern VESAINFO vesa_info;
 
 void FadeTick(void);
 uint8 VgaGetMode(void);
@@ -283,6 +293,19 @@ void FadeWait(void)
 {
     while (toddata.fade_flag)
         ;
+}
+
+int VesaHasMode(uint16 mode)
+{
+    uint16 *p;
+
+    p = (uint16 *)(((vesa_info.modes >> 12) & 0xffff0) + (vesa_info.modes & 0xffff));
+    while (*p != 0xffff)
+    {
+        if (*p++ == mode)
+            return 1;
+    }
+    return 0;
 }
 
 void JoyDetect(void)

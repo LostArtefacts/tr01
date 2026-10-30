@@ -780,7 +780,7 @@ address,size,name,symbol
 0x00045b64,66,FileSize,FileSize_
 0x00045ba8,88,FadeToPal,FadeToPal_
 0x00045c00,19,FadeWait,FadeWait_
-0x00045c14,74,Func45c14,
+0x00045c14,74,VesaHasMode,VesaHasMode_
 0x00045c60,78,Func45c60,
 0x00045cb0,131,VesaDetectModes,VesaDetectModes_
 0x00045d34,459,SwitchVideoMode,SwitchVideoMode_
@@ -2054,6 +2054,7 @@ address,size,name,symbol
 0x000c5f28,4,joy1_y,_joy1_y
 0x000c5f70,4,joy_mask,_joy_mask
 0x000c5f74,4,timer_handle,_timer_handle
+0x000c61b8,256,vesa_info,_vesa_info
 0x000c64b8,114,interrupts,_interrupts
 0x000c6a40,520,__iob,___iob
 0x000cac70,768,game_palette,_game_palette
