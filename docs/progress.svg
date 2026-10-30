@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">95.20% (774)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">4.80% (39)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">95.33% (775)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">4.67% (38)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="711.17" height="6" x="0" y="0" class="named"/>
-<rect width="35.83" height="6" x="711.17" y="0" class="todo"/>
+<rect width="712.08" height="6" x="0" y="0" class="named"/>
+<rect width="34.92" height="6" x="712.08" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -653,7 +653,7 @@
 <rect width="12" height="12" x="495" y="165" class="named"><title>0x00035338 ModifyStartInfo (255 bytes)</title></rect>
 <rect width="12" height="12" x="510" y="165" class="named"><title>0x00035438 CreateStartInfo (316 bytes)</title></rect>
 <rect width="12" height="12" x="525" y="165" class="named"><title>0x00035574 CreateSaveGameInfo (1098 bytes)</title></rect>
-<rect width="12" height="12" x="540" y="165" class="todo"><title>0x000359c0 ExtractSaveGameInfo (2643 bytes)</title></rect>
+<rect width="12" height="12" x="540" y="165" class="named"><title>0x000359c0 ExtractSaveGameInfo (2643 bytes)</title></rect>
 <rect width="12" height="12" x="555" y="165" class="named"><title>0x00036414 ResetSG (24 bytes)</title></rect>
 <rect width="12" height="12" x="570" y="165" class="named"><title>0x0003642c WriteSG (77 bytes)</title></rect>
 <rect width="12" height="12" x="585" y="165" class="named"><title>0x0003647c ReadSG (39 bytes)</title></rect>
@@ -884,17 +884,17 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">96.42%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">3.58%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">97.63%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">2.37%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="720.28" height="6" x="0" y="0" class="named"/>
-<rect width="26.72" height="6" x="720.28" y="0" class="todo"/>
+<rect width="729.29" height="6" x="0" y="0" class="named"/>
+<rect width="17.71" height="6" x="729.29" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.96" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
 <rect width="49.96" height="71.31" x="0" y="74.77" class="named"><title>0x00021498 Display_Inventory (4461 bytes)</title></rect>
 <rect width="49.96" height="60.38" x="0" y="149.08" class="named"><title>0x00036808 BaddyObjects (3805 bytes)</title></rect>
 <rect width="49.96" height="42.54" x="0" y="212.46" class="named"><title>0x00012910 CreatureAnimation (2734 bytes)</title></rect>
-<rect width="40.85" height="50.17" x="52.96" y="0" class="todo"><title>0x000359c0 ExtractSaveGameInfo (2643 bytes)</title></rect>
+<rect width="40.85" height="50.17" x="52.96" y="0" class="named"><title>0x000359c0 ExtractSaveGameInfo (2643 bytes)</title></rect>
 <rect width="40.85" height="43.85" x="52.96" y="53.17" class="named"><title>0x00037adc ObjectObjects (2329 bytes)</title></rect>
 <rect width="40.85" height="43.15" x="52.96" y="100.02" class="named"><title>0x0001b224 DrawLara (2294 bytes)</title></rect>
 <rect width="40.85" height="35.12" x="52.96" y="146.17" class="named"><title>0x0004387c gtmap_persp16_fp (1895 bytes)</title></rect>
