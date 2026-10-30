@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">78.18% (634)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">21.82% (177)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">78.30% (635)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">21.70% (176)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="583.97" height="6" x="0" y="0" class="named"/>
-<rect width="163.03" height="6" x="583.97" y="0" class="todo"/>
+<rect width="584.89" height="6" x="0" y="0" class="named"/>
+<rect width="162.11" height="6" x="584.89" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -701,7 +701,7 @@
 <rect width="12" height="12" x="465" y="180" class="named"><title>0x000396f0 T_SetScale (7 bytes)</title></rect>
 <rect width="12" height="12" x="480" y="180" class="named"><title>0x000396f8 T_LetterSpacing (8 bytes)</title></rect>
 <rect width="12" height="12" x="495" y="180" class="named"><title>0x00039700 T_WordSpacing (8 bytes)</title></rect>
-<rect width="12" height="12" x="510" y="180" class="todo"><title>0x00039708 T_FlashText (25 bytes)</title></rect>
+<rect width="12" height="12" x="510" y="180" class="named"><title>0x00039708 T_FlashText (25 bytes)</title></rect>
 <rect width="12" height="12" x="525" y="180" class="todo"><title>0x00039724 T_AddBackground (58 bytes)</title></rect>
 <rect width="12" height="12" x="540" y="180" class="todo"><title>0x00039760 T_RemoveBackground (5 bytes)</title></rect>
 <rect width="12" height="12" x="555" y="180" class="todo"><title>0x00039768 T_AddOutline (27 bytes)</title></rect>
@@ -882,10 +882,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">74.68%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">25.32%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">74.69%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">25.31%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="557.88" height="6" x="0" y="0" class="named"/>
-<rect width="189.12" height="6" x="557.88" y="0" class="todo"/>
+<rect width="557.97" height="6" x="0" y="0" class="named"/>
+<rect width="189.03" height="6" x="557.97" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.96" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1602,7 +1602,7 @@
 <rect width="1.98" height="1.61" x="716.75" y="248.96" class="todo"><title>0x0003f044 Func3f044 (26 bytes)</title></rect>
 <rect width="1.98" height="1.43" x="716.75" y="253.57" class="named"><title>0x00026d0c lara_col_leftjump (25 bytes)</title></rect>
 <rect width="1.78" height="1.62" x="721.73" y="225.39" class="named"><title>0x0002a154 lara_col_surfleft (25 bytes)</title></rect>
-<rect width="1.78" height="1.62" x="726.50" y="225.39" class="todo"><title>0x00039708 T_FlashText (25 bytes)</title></rect>
+<rect width="1.78" height="1.62" x="726.50" y="225.39" class="named"><title>0x00039708 T_FlashText (25 bytes)</title></rect>
 <rect width="1.78" height="1.62" x="731.28" y="225.39" class="todo"><title>0x0003f02b phd_sin (25 bytes)</title></rect>
 <rect width="1.78" height="1.62" x="736.06" y="225.39" class="todo"><title>0x0004698f Func4698f (25 bytes)</title></rect>
 <rect width="1.58" height="1.62" x="740.83" y="225.39" class="named"><title>0x0002dd48 mn_start_sound_fade (24 bytes)</title></rect>

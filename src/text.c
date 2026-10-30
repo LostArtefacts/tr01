@@ -111,6 +111,18 @@ void T_WordSpacing(TEXTSTRING *textString, sint16 pixels)
     textString->wordSpacing = pixels * 8;
 }
 
+void T_FlashText(TEXTSTRING *textString, sint16 i_bool, sint16 rate)
+{
+    if (i_bool)
+    {
+        textString->flags |= T_FLASH;
+        textString->flashRate = rate;
+        textString->flashCount = rate;
+    }
+    else
+        textString->flags &= ~T_FLASH;
+}
+
 sint16 T_GetStringLen(char *string)
 {
     sint16 len = 1;
