@@ -10,6 +10,12 @@ and links into a DOS executable that runs the game.
 This repository contains no game code or data. You need your own copy of
 the game, see [`orig/README.md`](orig/README.md).
 
+The tools are [decomp-tools](https://github.com/LostArtefacts/decomp-tools),
+shared with tr02, checked out as a git submodule at `tools/`. Clone with
+`git clone --recursive`, or run `git submodule update --init` in an
+existing clone: the `justfile` imports its recipes from
+`tools/common.just`, so `just` needs it.
+
 ## Sources
 
 This is not a clean-room project. Core's game source, as later ported to
@@ -44,7 +50,7 @@ strings by MFC and MDV), the VGA and VESA code and the HMI sound
 library follow.
 
 ```sh
-just analyze   # writes build/functions_ghidra.csv, seeds config/symbols.csv
+just analyze   # writes build/functions_tomb.csv, seeds config/symbols.csv
 ```
 
 ## Toolchain
@@ -81,8 +87,9 @@ encodings (`89 c1` where the original has `8b c8`); MASM's match.
 These flags, the original's file names, its code range and where the
 game code ends, the Watcom libraries searched, and where Watcom, MASM,
 Ghidra and DOSBox are installed are kept in `project.toml`, which every
-tool reads; `python3 tools/project.py get KEY` prints one setting, such
-as `build.cflags`.
+tool reads; `game.format = "le"` picks decomp-tools' DOS backend.
+`python3 tools/project.py get KEY` prints one setting, such as
+`build.cflags`.
 
 ## Workflow
 
@@ -121,7 +128,7 @@ Everything runs headless. `just` lists the recipes.
    by name hash, so the order of the externs in the headers matters.
    `just bss` predicts each module's `_BSS` from that rule and shows
    where it differs from the original; see `tools/bss.py`.
-5. Play (`just run`): `tools/patch_exe.py` copies every compiled
+5. Play (`just run`): `tools/patch_le.py` copies every compiled
    function into a new LE object of the original and puts a jump to it
    at the original's entry, with fixups for its calls and references,
    so the game runs the new code whether it matches yet or not.
