@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">82% (665)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">18% (146)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">82.12% (666)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">17.88% (145)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="612.52" height="6" x="0" y="0" class="named"/>
-<rect width="134.48" height="6" x="612.52" y="0" class="todo"/>
+<rect width="613.44" height="6" x="0" y="0" class="named"/>
+<rect width="133.56" height="6" x="613.44" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -733,7 +733,7 @@
 <rect width="12" height="12" x="195" y="195" class="named"><title>0x0003a970 InitialiseDamoclesSword (69 bytes)</title></rect>
 <rect width="12" height="12" x="210" y="195" class="named"><title>0x0003a9b8 DamoclesSwordControl (338 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="195" class="named"><title>0x0003ab0c DamoclesSwordCollision (228 bytes)</title></rect>
-<rect width="12" height="12" x="240" y="195" class="todo"><title>0x0003abf0 DartEmitterControl (414 bytes)</title></rect>
+<rect width="12" height="12" x="240" y="195" class="named"><title>0x0003abf0 DartEmitterControl (414 bytes)</title></rect>
 <rect width="12" height="12" x="255" y="195" class="todo"><title>0x0003ad90 DartsControl (305 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="195" class="todo"><title>0x0003aec4 DartEffectControl (99 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="195" class="todo"><title>0x0003af28 FlameEmitterControl (167 bytes)</title></rect>
@@ -882,10 +882,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">77.08%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">22.92%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">77.27%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">22.73%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="575.81" height="6" x="0" y="0" class="named"/>
-<rect width="171.19" height="6" x="575.81" y="0" class="todo"/>
+<rect width="577.22" height="6" x="0" y="0" class="named"/>
+<rect width="169.78" height="6" x="577.22" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.96" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1040,7 +1040,7 @@
 <rect width="16.71" height="16.20" x="457.50" y="238.80" class="named"><title>0x00026084 lara_col_walk (429 bytes)</title></rect>
 <rect width="16.43" height="16.39" x="477.21" y="0" class="todo"><title>0x0003d7e0 phd_GenerateW2V (427 bytes)</title></rect>
 <rect width="16.43" height="15.80" x="477.21" y="19.39" class="named"><title>0x0002d93c mn_update_sound_effects (414 bytes)</title></rect>
-<rect width="16.43" height="15.80" x="477.21" y="38.19" class="todo"><title>0x0003abf0 DartEmitterControl (414 bytes)</title></rect>
+<rect width="16.43" height="15.80" x="477.21" y="38.19" class="named"><title>0x0003abf0 DartEmitterControl (414 bytes)</title></rect>
 <rect width="16.43" height="15.67" x="477.21" y="57" class="named"><title>0x000252f8 lara_as_stop (411 bytes)</title></rect>
 <rect width="16.43" height="15.57" x="477.21" y="75.66" class="named"><title>0x00014fe4 InGameCinematicCamera (409 bytes)</title></rect>
 <rect width="16.43" height="15.44" x="477.21" y="94.24" class="named"><title>0x00010310 S_PrintShadow (406 bytes)</title></rect>

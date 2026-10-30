@@ -1,4 +1,5 @@
 #include "game.h"
+#include <string.h>
 
 #define SPIKE_DAMAGE 15
 #define TEETHTRAP_DAMAGE 400
@@ -7,6 +8,7 @@
 #define ROLLINGBALL_DAMAGE_AIR 100
 
 int OnTrapDoor(ITEM_INFO *item, sint32 x, sint32 z);
+sint16 CreateItem(void);
 
 void InitialiseRollingBall(sint16 item_number)
 {
@@ -526,4 +528,82 @@ void DamoclesSwordCollision(sint16 item_num, ITEM_INFO *litem, COLL_INFO *coll)
         d = (GetRandomControl() - 16384) / 8 + litem->pos.y_rot;
         DoBloodSplat(x, y, z, litem->speed, d, litem->room_number);
     }
+}
+
+enum darte_types
+{
+    DARTE_IDLE,
+    DARTE_FIRE,
+    DARTE_RELOAD
+};
+
+void DartEmitterControl(sint16 item_num)
+{
+    ITEM_INFO *item, *dart;
+    FX_INFO *fx;
+    sint16 fx_num, dart_num;
+    sint32 x, z;
+
+    item = &items[item_num];
+
+    if (TriggerActive(item))
+    {
+        if (item->current_anim_state == DARTE_IDLE)
+            item->goal_anim_state = DARTE_FIRE;
+    }
+    else
+    {
+        if (item->current_anim_state == DARTE_FIRE)
+            item->goal_anim_state = DARTE_IDLE;
+    }
+    if (item->current_anim_state == DARTE_FIRE && item->frame_number == anims[item->anim_number].frame_base)
+    {
+        dart_num = CreateItem();
+        if (dart_num != NO_ITEM)
+        {
+            dart = &items[dart_num];
+
+            dart->object_number = DARTS;
+            dart->room_number = item->room_number;
+            dart->shade = -1;
+            dart->pos.y_rot = item->pos.y_rot;
+            dart->pos.y_pos = item->pos.y_pos - WALL_L / 2;
+            x = z = 0;
+            switch (dart->pos.y_rot)
+            {
+            case 0:
+                z = -WALL_L / 2 + 100;
+                break;
+
+            case 16364:
+                x = -WALL_L / 2 + 100;
+                break;
+
+            case -32768:
+                z = WALL_L / 2 - 100;
+                break;
+
+            case -16384:
+                x = WALL_L / 2 - 100;
+                break;
+            }
+            dart->pos.x_pos = item->pos.x_pos + x;
+            dart->pos.z_pos = item->pos.z_pos + z;
+            InitialiseItem(dart_num);
+            AddActiveItem(dart_num);
+            dart->status = ACTIVE;
+
+            if ((fx_num = CreateEffect(dart->room_number)) != NO_ITEM)
+            {
+                fx = &effects[fx_num];
+                memcpy(&fx->pos, &dart->pos, sizeof(PHD_3DPOS));
+                fx->speed = 0;
+                fx->frame_number = 0;
+                fx->counter = 0;
+                fx->object_number = DART_EFFECT;
+                SoundEffect(151, &fx->pos, 0);
+            }
+        }
+    }
+    AnimateItem(item);
 }
