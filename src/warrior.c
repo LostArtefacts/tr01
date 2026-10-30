@@ -92,6 +92,7 @@ enum mummy_anims
 sint16 ShardGun(sint32 x, sint32 y, sint32 z, sint16 speed, PHD_ANGLE yrot, sint16 room_number);
 sint16 RocketGun(sint32 x, sint32 y, sint32 z, sint16 speed, PHD_ANGLE yrot, sint16 room_number);
 int ExplodingDeath(sint16 item_number, sint32 mesh_bits, sint16 damage);
+sint16 CreateItem(void);
 
 void CentaurControl(sint16 item_number)
 {
@@ -844,4 +845,55 @@ void ControlBodyPart(sint16 fx_number)
 
     if (room_number != fx->room_number)
         EffectNewRoom(fx_number, room_number);
+}
+
+void InitialisePod(sint16 item_number)
+{
+    sint16 bug_item;
+    ITEM_INFO *item, *bug;
+
+    item = &items[item_number];
+
+    bug_item = CreateItem();
+    if (bug_item != NO_ITEM)
+    {
+        bug = &items[bug_item];
+        switch ((item->flags & CODE_BITS) >> 9)
+        {
+        case 1:
+            bug->object_number = WARRIOR2;
+            break;
+        case 2:
+            bug->object_number = CENTAUR;
+            break;
+        case 4:
+            bug->object_number = EVIL_NATLA;
+            break;
+        case 8:
+            bug->object_number = WARRIOR3;
+            break;
+        case 0:
+        default:
+            bug->object_number = WARRIOR1;
+            break;
+        }
+        bug->room_number = item->room_number;
+        bug->pos.x_pos = item->pos.x_pos;
+        bug->pos.y_pos = item->pos.y_pos;
+        bug->pos.z_pos = item->pos.z_pos;
+        bug->pos.y_rot = item->pos.y_rot;
+        bug->flags = NOT_VISIBLE;
+        bug->shade = -1;
+
+        InitialiseItem(bug_item);
+
+        item->data = (sint16 *)game_malloc(sizeof(sint16), 0);
+        *(sint16 *)(item->data) = bug_item;
+
+        level_items++;
+    }
+
+    item->flags = 0;
+
+    item->mesh_bits = 0xff0001ff;
 }
