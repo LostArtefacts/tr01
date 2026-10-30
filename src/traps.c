@@ -2,6 +2,7 @@
 
 #define SPIKE_DAMAGE 15
 #define TEETHTRAP_DAMAGE 400
+#define FALLING_CEILING_DAMAGE 300
 #define ROLLINGBALL_DAMAGE_AIR 100
 
 int OnTrapDoor(ITEM_INFO *item, sint32 x, sint32 z);
@@ -417,4 +418,39 @@ void TeethTrap(sint16 item_number)
         item->goal_anim_state = TT_NICE;
 
     AnimateItem(item);
+}
+
+void FallingCeiling(sint16 item_number)
+{
+    ITEM_INFO *item;
+
+    item = &items[item_number];
+
+    if (item->current_anim_state == TRAP_SET)
+    {
+        item->goal_anim_state = TRAP_ACTIVATE;
+        item->gravity_status = 1;
+    }
+    else if (item->current_anim_state == TRAP_ACTIVATE)
+    {
+        if (item->touch_bits)
+        {
+            lara_item->hit_points -= FALLING_CEILING_DAMAGE;
+            lara_item->hit_status = 1;
+        }
+    }
+
+    AnimateItem(item);
+    if (item->status == DEACTIVATED)
+    {
+        RemoveActiveItem(item_number);
+        return;
+    }
+    if (item->current_anim_state == TRAP_ACTIVATE && item->pos.y_pos >= item->floor)
+    {
+        item->goal_anim_state = TRAP_WORKING;
+        item->pos.y_pos = item->floor;
+        item->fallspeed = 0;
+        item->gravity_status = 0;
+    }
 }

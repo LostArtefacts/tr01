@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">81.50% (661)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">18.50% (150)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">81.63% (662)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">18.37% (149)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="608.84" height="6" x="0" y="0" class="named"/>
-<rect width="138.16" height="6" x="608.84" y="0" class="todo"/>
+<rect width="609.76" height="6" x="0" y="0" class="named"/>
+<rect width="137.24" height="6" x="609.76" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -729,7 +729,7 @@
 <rect width="12" height="12" x="135" y="195" class="named"><title>0x0003a7b8 FallingBlockFloor (48 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="195" class="named"><title>0x0003a7e8 FallingBlockCeiling (48 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="195" class="named"><title>0x0003a818 TeethTrap (176 bytes)</title></rect>
-<rect width="12" height="12" x="180" y="195" class="todo"><title>0x0003a8c8 FallingCeiling (168 bytes)</title></rect>
+<rect width="12" height="12" x="180" y="195" class="named"><title>0x0003a8c8 FallingCeiling (168 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="195" class="todo"><title>0x0003a970 InitialiseDamoclesSword (69 bytes)</title></rect>
 <rect width="12" height="12" x="210" y="195" class="todo"><title>0x0003a9b8 DamoclesSwordControl (338 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="195" class="todo"><title>0x0003ab0c DamoclesSwordCollision (228 bytes)</title></rect>
@@ -882,10 +882,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">76.72%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">23.28%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">76.79%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">23.21%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="573.07" height="6" x="0" y="0" class="named"/>
-<rect width="173.93" height="6" x="573.07" y="0" class="todo"/>
+<rect width="573.64" height="6" x="0" y="0" class="named"/>
+<rect width="173.36" height="6" x="573.64" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.96" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1215,7 +1215,7 @@
 <rect width="9.36" height="8.99" x="571.40" y="162.73" class="named"><title>0x00013560 InitialiseCamera (168 bytes)</title></rect>
 <rect width="9.36" height="8.99" x="571.40" y="174.72" class="named"><title>0x00014f18 InitialisePlayer1 (168 bytes)</title></rect>
 <rect width="9.36" height="8.99" x="571.40" y="186.71" class="named"><title>0x0002975c lara_as_tread (168 bytes)</title></rect>
-<rect width="9.36" height="8.99" x="571.40" y="198.70" class="todo"><title>0x0003a8c8 FallingCeiling (168 bytes)</title></rect>
+<rect width="9.36" height="8.99" x="571.40" y="198.70" class="named"><title>0x0003a8c8 FallingCeiling (168 bytes)</title></rect>
 <rect width="9.36" height="8.92" x="571.40" y="210.69" class="todo"><title>0x0003af28 FlameEmitterControl (167 bytes)</title></rect>
 <rect width="9.36" height="8.85" x="571.40" y="222.60" class="todo"><title>0x000459a4 ShellExit (166 bytes)</title></rect>
 <rect width="9.36" height="8.77" x="571.40" y="234.45" class="named"><title>0x0003a4a0 OnTrapDoor (165 bytes)</title></rect>
