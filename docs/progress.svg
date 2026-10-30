@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">85.94% (697)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">14.06% (114)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">86.07% (698)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">13.93% (113)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="642" height="6" x="0" y="0" class="named"/>
-<rect width="105" height="6" x="642" y="0" class="todo"/>
+<rect width="642.92" height="6" x="0" y="0" class="named"/>
+<rect width="104.08" height="6" x="642.92" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -765,7 +765,7 @@
 <rect width="12" height="12" x="675" y="195" class="named"><title>0x0003d5bc draw_line (52 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="195" class="named"><title>0x0003d5f0 draw_poly_line (484 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="195" class="named"><title>0x0003d7e0 phd_GenerateW2V (427 bytes)</title></rect>
-<rect width="12" height="12" x="720" y="195" class="todo"><title>0x0003d98c phd_LookAt (91 bytes)</title></rect>
+<rect width="12" height="12" x="720" y="195" class="named"><title>0x0003d98c phd_LookAt (91 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="195" class="todo"><title>0x0003d9e8 phd_GetVectorAngles (101 bytes)</title></rect>
 <rect width="12" height="12" x="0" y="210" class="todo"><title>0x0003da50 Func3da50 (132 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="210" class="todo"><title>0x0003dad4 Func3dad4 (48 bytes)</title></rect>
@@ -882,10 +882,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">82.29%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">17.71%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">82.33%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">17.67%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="614.70" height="6" x="0" y="0" class="named"/>
-<rect width="132.30" height="6" x="614.70" y="0" class="todo"/>
+<rect width="615.01" height="6" x="0" y="0" class="named"/>
+<rect width="131.99" height="6" x="615.01" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.96" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1375,7 +1375,7 @@
 <rect width="6.16" height="5.77" x="635.71" y="205.60" class="named"><title>0x00027400 lara_default_col (91 bytes)</title></rect>
 <rect width="6.16" height="5.77" x="635.71" y="214.37" class="named"><title>0x00027620 LaraHitCeiling (91 bytes)</title></rect>
 <rect width="6.16" height="5.77" x="635.71" y="223.13" class="named"><title>0x000293d4 DrawEvilLara (91 bytes)</title></rect>
-<rect width="6.16" height="5.77" x="635.71" y="231.90" class="todo"><title>0x0003d98c phd_LookAt (91 bytes)</title></rect>
+<rect width="6.16" height="5.77" x="635.71" y="231.90" class="named"><title>0x0003d98c phd_LookAt (91 bytes)</title></rect>
 <rect width="6.16" height="5.67" x="635.71" y="240.66" class="named"><title>0x00019eb0 IncreaseScreenSize (90 bytes)</title></rect>
 <rect width="6.16" height="5.67" x="635.71" y="249.33" class="named"><title>0x0001f0d0 LoadCameras (90 bytes)</title></rect>
 <rect width="6.22" height="5.61" x="644.86" y="152.43" class="named"><title>0x0001f12c LoadSoundEffects (90 bytes)</title></rect>

@@ -34,3 +34,18 @@ void phd_GenerateW2V(PHD_3DPOS *viewpos)
     *(nptr + M13) = *(mptr + M13) = viewpos->y_pos;
     *(nptr + M23) = *(mptr + M23) = viewpos->z_pos;
 }
+
+void phd_LookAt(sint32 xsrc, sint32 ysrc, sint32 zsrc, sint32 xtar, sint32 ytar, sint32 ztar, PHD_ANGLE roll)
+{
+    PHD_ANGLE angles[2];
+    PHD_3DPOS viewer;
+
+    phd_GetVectorAngles(xtar - xsrc, ytar - ysrc, ztar - zsrc, angles);
+    viewer.x_pos = xsrc;
+    viewer.y_pos = ysrc;
+    viewer.z_pos = zsrc;
+    viewer.x_rot = angles[1];
+    viewer.y_rot = angles[0];
+    viewer.z_rot = roll;
+    phd_GenerateW2V(&viewer);
+}
