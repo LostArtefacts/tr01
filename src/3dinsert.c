@@ -847,3 +847,71 @@ sint16 *ins_objectGT4(sint16 *objptr, int number)
     info3dptr = outptr;
     return objptr;
 }
+
+sint16 *ins_objectGT3(sint16 *objptr, int number)
+{
+    PHD_VBUF *vn1, *vn2, *vn3;
+    PHDTEXTURESTRUCT *tex;
+    VERTEX_INFO *v;
+    int i, npoints;
+    sint32 zdepth;
+    sint16 *outptr;
+
+    outptr = info3dptr;
+    for (; number > 0; number--, objptr += 4)
+    {
+        vn1 = &vbuf[*(objptr)];
+        vn2 = &vbuf[*(objptr + 1)];
+        vn3 = &vbuf[*(objptr + 2)];
+        if ((vn1->clip & vn2->clip & vn3->clip) || vn1->clip < 0 || vn2->clip < 0 || vn3->clip < 0)
+            continue;
+        if ((sint32)((vn3->xs - vn2->xs) * (vn1->ys - vn2->ys) - (vn1->xs - vn2->xs) * (vn3->ys - vn2->ys)) < 0)
+            continue;
+        tex = &phdtextinfo[*(objptr + 3)];
+        v = v_buffer;
+        v->x = (float)vn1->xs;
+        v->y = (float)vn1->ys;
+        v->ooz = one / vn1->zv;
+        v->g = (float)vn1->g;
+        v->u = tex->u1 * v->ooz;
+        v->v = tex->v1 * v->ooz;
+        v++;
+        v->x = (float)vn2->xs;
+        v->y = (float)vn2->ys;
+        v->ooz = one / vn2->zv;
+        v->g = (float)vn2->g;
+        v->u = tex->u2 * v->ooz;
+        v->v = tex->v2 * v->ooz;
+        v++;
+        v->x = (float)vn3->xs;
+        v->y = (float)vn3->ys;
+        v->ooz = one / vn3->zv;
+        v->g = (float)vn3->g;
+        v->u = tex->u3 * v->ooz;
+        v->v = tex->v3 * v->ooz;
+        npoints = 3;
+        if (vn1->clip || vn2->clip || vn3->clip)
+            npoints = XYGUVClipper(npoints, v_buffer);
+        if (npoints)
+        {
+            zdepth = (vn1->zv + vn2->zv + vn3->zv) / 3;
+            *(sort3dptr) = (sint32)outptr;
+            *(sort3dptr + 1) = zdepth;
+            sort3dptr += 2;
+            *((uint32 *)outptr) = *((uint32 *)&tex->drawtype);
+            *(outptr + 2) = npoints;
+            outptr += 3;
+            for (i = 0, v = v_buffer; i < npoints; i++, v++, outptr += 5)
+            {
+                *(outptr) = (sint16)v->x;
+                *(outptr + 1) = (sint16)v->y;
+                *(outptr + 2) = (sint16)v->g;
+                *(outptr + 3) = (sint16)(v->u / v->ooz);
+                *(outptr + 4) = (sint16)(v->v / v->ooz);
+            }
+            surfacenum++;
+        }
+    }
+    info3dptr = outptr;
+    return objptr;
+}
