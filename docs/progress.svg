@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">95.08% (773)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">4.92% (40)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">95.20% (774)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">4.80% (39)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="710.25" height="6" x="0" y="0" class="named"/>
-<rect width="36.75" height="6" x="710.25" y="0" class="todo"/>
+<rect width="711.17" height="6" x="0" y="0" class="named"/>
+<rect width="35.83" height="6" x="711.17" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -857,7 +857,7 @@
 <rect width="12" height="12" x="555" y="225" class="named"><title>0x00045f6c JoySetCentre (148 bytes)</title></rect>
 <rect width="12" height="12" x="570" y="225" class="named"><title>0x00046000 JoyRead (738 bytes)</title></rect>
 <rect width="12" height="12" x="585" y="225" class="named"><title>0x000462e4 MemAllocReal (147 bytes)</title></rect>
-<rect width="12" height="12" x="600" y="225" class="todo"><title>0x00046378 MemFreeReal (137 bytes)</title></rect>
+<rect width="12" height="12" x="600" y="225" class="named"><title>0x00046378 MemFreeReal (137 bytes)</title></rect>
 <rect width="12" height="12" x="615" y="225" class="todo"><title>0x00046404 InterruptSet (753 bytes)</title></rect>
 <rect width="12" height="12" x="630" y="225" class="todo"><title>0x000466f8 VgaGetMode (11 bytes)</title></rect>
 <rect width="12" height="12" x="645" y="225" class="todo"><title>0x00046703 VgaSetMode (7 bytes)</title></rect>
@@ -884,10 +884,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">96.36%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">3.64%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">96.42%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">3.58%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="719.82" height="6" x="0" y="0" class="named"/>
-<rect width="27.18" height="6" x="719.82" y="0" class="todo"/>
+<rect width="720.28" height="6" x="0" y="0" class="named"/>
+<rect width="26.72" height="6" x="720.28" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.96" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1264,7 +1264,7 @@
 <rect width="7.89" height="8.35" x="717.73" y="100.97" class="named"><title>0x0002bb1c ready_pistols (140 bytes)</title></rect>
 <rect width="7.73" height="8.35" x="728.62" y="100.97" class="named"><title>0x00010ed0 S_DisplayPicture (138 bytes)</title></rect>
 <rect width="7.65" height="8.35" x="739.35" y="100.97" class="named"><title>0x0001f044 LoadPalette (137 bytes)</title></rect>
-<rect width="7.53" height="8.48" x="595.50" y="112.31" class="todo"><title>0x00046378 MemFreeReal (137 bytes)</title></rect>
+<rect width="7.53" height="8.48" x="595.50" y="112.31" class="named"><title>0x00046378 MemFreeReal (137 bytes)</title></rect>
 <rect width="7.53" height="8.48" x="595.50" y="123.79" class="todo"><title>0x00046d28 VgaGetFont (137 bytes)</title></rect>
 <rect width="7.53" height="8.39" x="595.50" y="135.27" class="named"><title>0x0001628c EffectHit (136 bytes)</title></rect>
 <rect width="7.53" height="8.39" x="595.50" y="146.66" class="named"><title>0x00024b3c AddActiveItem (136 bytes)</title></rect>

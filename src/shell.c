@@ -620,3 +620,29 @@ void *MemAllocReal(uint32 size)
     real_blocks[i].size = size;
     return (void *)((regs.x.eax & 0xffff) << 4);
 }
+
+void MemFreeReal(void *mem)
+{
+    union REGS regs;
+    uint16 segment;
+    int i;
+
+    segment = (uint32)mem >> 4;
+    for (i = 0; i < 32; i++)
+    {
+        if (real_blocks[i].segment == segment)
+            break;
+    }
+    if (i < 32)
+    {
+        regs.x.eax = 0x101;
+        regs.x.edx = real_blocks[i].selector;
+        int386(0x31, &regs, &regs);
+        if (!regs.x.cflag)
+        {
+            real_blocks[i].segment = 0;
+            real_blocks[i].selector = 0;
+            real_blocks[i].size = 0;
+        }
+    }
+}
