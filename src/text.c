@@ -280,6 +280,11 @@ int T_RemovePrint(TEXTSTRING *textString)
     return 1;
 }
 
+void T_RemoveAllPrints(void)
+{
+    T_InitPrint();
+}
+
 sint16 T_GetStringLen(char *string)
 {
     sint16 len = 1;

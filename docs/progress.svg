@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">79.53% (645)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">20.47% (166)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">79.65% (646)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">20.35% (165)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="594.10" height="6" x="0" y="0" class="named"/>
-<rect width="152.90" height="6" x="594.10" y="0" class="todo"/>
+<rect width="595.02" height="6" x="0" y="0" class="named"/>
+<rect width="151.98" height="6" x="595.02" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -712,7 +712,7 @@
 <rect width="12" height="12" x="630" y="180" class="named"><title>0x000397bc T_BottomAlign (15 bytes)</title></rect>
 <rect width="12" height="12" x="645" y="180" class="named"><title>0x000397cc T_GetTextWidth (201 bytes)</title></rect>
 <rect width="12" height="12" x="660" y="180" class="named"><title>0x00039898 T_RemovePrint (45 bytes)</title></rect>
-<rect width="12" height="12" x="675" y="180" class="todo"><title>0x000398c8 Func398c8 (34 bytes)</title></rect>
+<rect width="12" height="12" x="675" y="180" class="named"><title>0x000398c8 T_RemoveAllPrints (34 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="180" class="named"><title>0x000398ec T_GetStringLen (26 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="180" class="todo"><title>0x00039908 T_DrawText (33 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="180" class="todo"><title>0x0003992c Func3992c (1069 bytes)</title></rect>
@@ -882,10 +882,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">74.87%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">25.13%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">74.89%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">25.11%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="559.31" height="6" x="0" y="0" class="named"/>
-<rect width="187.69" height="6" x="559.31" y="0" class="todo"/>
+<rect width="559.43" height="6" x="0" y="0" class="named"/>
+<rect width="187.57" height="6" x="559.43" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.96" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1570,7 +1570,7 @@
 <rect width="2.45" height="2.51" x="717.64" y="214.74" class="named"><title>0x0003667c CheckSumValid (34 bytes)</title></rect>
 <rect width="2.45" height="2.51" x="723.09" y="214.74" class="named"><title>0x000367e4 InitialiseLevelFlags (34 bytes)</title></rect>
 <rect width="2.45" height="2.51" x="728.53" y="214.74" class="named"><title>0x00039560 T_InitPrint (34 bytes)</title></rect>
-<rect width="2.45" height="2.51" x="733.98" y="214.74" class="todo"><title>0x000398c8 Func398c8 (34 bytes)</title></rect>
+<rect width="2.45" height="2.51" x="733.98" y="214.74" class="named"><title>0x000398c8 T_RemoveAllPrints (34 bytes)</title></rect>
 <rect width="2.29" height="2.51" x="739.43" y="214.74" class="named"><title>0x0001f4a4 GetFullPath (33 bytes)</title></rect>
 <rect width="2.29" height="2.51" x="744.71" y="214.74" class="named"><title>0x0002f264 InitialiseRollingBlock (33 bytes)</title></rect>
 <rect width="2.19" height="2.61" x="706.75" y="220.24" class="todo"><title>0x00039908 T_DrawText (33 bytes)</title></rect>

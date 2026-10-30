@@ -644,7 +644,7 @@ address,size,name,symbol
 0x000397bc,15,T_BottomAlign,T_BottomAlign_
 0x000397cc,201,T_GetTextWidth,T_GetTextWidth_
 0x00039898,45,T_RemovePrint,T_RemovePrint_
-0x000398c8,34,Func398c8,
+0x000398c8,34,T_RemoveAllPrints,T_RemoveAllPrints_
 0x000398ec,26,T_GetStringLen,T_GetStringLen_
 0x00039908,33,T_DrawText,T_DrawText_
 0x0003992c,1069,Func3992c,
