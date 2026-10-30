@@ -154,6 +154,14 @@ void T_RemoveOutline(TEXTSTRING *textString)
     textString->flags &= ~T_OUTLINE;
 }
 
+void T_CentreH(TEXTSTRING *textString, sint16 i_bool)
+{
+    if (i_bool)
+        textString->flags |= T_CENTRE_H;
+    else
+        textString->flags &= ~T_CENTRE_H;
+}
+
 sint16 T_GetStringLen(char *string)
 {
     sint16 len = 1;

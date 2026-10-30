@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">78.79% (639)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">21.21% (172)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">78.91% (640)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">21.09% (171)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="588.57" height="6" x="0" y="0" class="named"/>
-<rect width="158.43" height="6" x="588.57" y="0" class="todo"/>
+<rect width="589.49" height="6" x="0" y="0" class="named"/>
+<rect width="157.51" height="6" x="589.49" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -706,7 +706,7 @@
 <rect width="12" height="12" x="540" y="180" class="named"><title>0x00039760 T_RemoveBackground (5 bytes)</title></rect>
 <rect width="12" height="12" x="555" y="180" class="named"><title>0x00039768 T_AddOutline (27 bytes)</title></rect>
 <rect width="12" height="12" x="570" y="180" class="named"><title>0x00039784 T_RemoveOutline (5 bytes)</title></rect>
-<rect width="12" height="12" x="585" y="180" class="todo"><title>0x0003978c T_CentreH (13 bytes)</title></rect>
+<rect width="12" height="12" x="585" y="180" class="named"><title>0x0003978c T_CentreH (13 bytes)</title></rect>
 <rect width="12" height="12" x="600" y="180" class="todo"><title>0x0003979c T_CentreV (13 bytes)</title></rect>
 <rect width="12" height="12" x="615" y="180" class="todo"><title>0x000397ac T_RightAlign (13 bytes)</title></rect>
 <rect width="12" height="12" x="630" y="180" class="todo"><title>0x000397bc T_BottomAlign (15 bytes)</title></rect>
@@ -884,8 +884,8 @@
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
 <text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">74.74%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">25.26%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="558.29" height="6" x="0" y="0" class="named"/>
-<rect width="188.71" height="6" x="558.29" y="0" class="todo"/>
+<rect width="558.33" height="6" x="0" y="0" class="named"/>
+<rect width="188.67" height="6" x="558.33" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.96" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1643,7 +1643,7 @@
 <rect width="0.28" height="0.76" x="740.16" y="241.44" class="named"><title>0x00036638 CompleteSave (14 bytes)</title></rect>
 <rect width="0.28" height="0.76" x="743.44" y="241.44" class="named"><title>0x00038b00 S_get_pan (14 bytes)</title></rect>
 <rect width="0.28" height="0.76" x="746.72" y="241.44" class="named"><title>0x00038bb0 S_SoundStopAllSamples (14 bytes)</title></rect>
-<rect width="0.52" height="0.26" x="733.59" y="245.20" class="todo"><title>0x0003978c T_CentreH (13 bytes)</title></rect>
+<rect width="0.52" height="0.26" x="733.59" y="245.20" class="named"><title>0x0003978c T_CentreH (13 bytes)</title></rect>
 <rect width="0.52" height="0.26" x="733.59" y="248.46" class="todo"><title>0x0003979c T_CentreV (13 bytes)</title></rect>
 <rect width="0.52" height="0.26" x="733.59" y="251.73" class="todo"><title>0x000397ac T_RightAlign (13 bytes)</title></rect>
 <rect width="0.52" height="0.10" x="733.59" y="254.99" class="named"><title>0x0001e228 lara_hands_free (12 bytes)</title></rect>
