@@ -389,4 +389,23 @@ phd_UnitMatrix_ proc near
     ret
 phd_UnitMatrix_ endp
 
+    public phd_TransposeMatrix_
+phd_TransposeMatrix_ proc near
+    push    edi
+    push    eax
+    mov     edi,dword ptr _phd_mxptr
+    mov     eax,dword ptr [edi+4]
+    xchg    dword ptr [edi+10h],eax
+    mov     dword ptr [edi+4],eax
+    mov     eax,dword ptr [edi+8]
+    xchg    dword ptr [edi+20h],eax
+    mov     dword ptr [edi+8],eax
+    mov     eax,dword ptr [edi+18h]
+    xchg    dword ptr [edi+24h],eax
+    mov     dword ptr [edi+18h],eax
+    pop     eax
+    pop     edi
+    ret
+phd_TransposeMatrix_ endp
+
     end

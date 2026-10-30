@@ -771,6 +771,7 @@ address,size,name,symbol
 0x0004564d,30,phd_PushMatrix,phd_PushMatrix_
 0x0004566b,7,phd_PushUnitMatrix,phd_PushUnitMatrix_
 0x00045672,44,phd_UnitMatrix,phd_UnitMatrix_
+0x0004569e,38,phd_TransposeMatrix,phd_TransposeMatrix_
 0x000456d0,27,TimerTick,TimerTick_
 0x000456ec,378,ShellInit,ShellInit_
 0x00045868,307,ShellCleanup,ShellCleanup_
