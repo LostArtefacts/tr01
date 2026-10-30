@@ -178,6 +178,14 @@ void T_RightAlign(TEXTSTRING *textString, sint16 i_bool)
         textString->flags &= ~T_RIGHT;
 }
 
+void T_BottomAlign(TEXTSTRING *textString, sint16 i_bool)
+{
+    if (i_bool)
+        textString->flags |= T_BOTTOM;
+    else
+        textString->flags &= ~T_BOTTOM;
+}
+
 sint16 T_GetStringLen(char *string)
 {
     sint16 len = 1;
