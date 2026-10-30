@@ -20,8 +20,7 @@ typedef struct
     void **data;
     uint8 *real_code;
     void (*init)(void);
-    void (*handler)(void);
-    uint16 handler_sel;
+    void (__far *handler)(void);  /* 16:32, the loader fills in the selector */
     uint16 data_size;
     uint8 *real_code_end;
 } INTERRUPT;
@@ -167,9 +166,9 @@ VESAINFO vesa_info = {0};
 uint8 vesa_mode_info[248] = {0};
 REALBLOCK real_blocks[32] = {0};
 INTERRUPT interrupts[3] = {
-    {0, 0, 0, 0, 0, 0x23, (void **)&brkdata, NULL, NULL, BreakHandler, 0, 16, NULL},
-    {0, 0, 0, 0, 0, 0x24, (void **)&critdata, NULL, NULL, CritHandler, 0, 16, NULL},
-    {0, 0, 0, 0, 0, 9, (void **)&keydata, key_real_code, NULL, KeyHandler, 0, 336, key_real_code_end}
+    {0, 0, 0, 0, 0, 0x23, (void **)&brkdata, NULL, NULL, (void (__far *)(void))BreakHandler, 16, NULL},
+    {0, 0, 0, 0, 0, 0x24, (void **)&critdata, NULL, NULL, (void (__far *)(void))CritHandler, 16, NULL},
+    {0, 0, 0, 0, 0, 9, (void **)&keydata, key_real_code, NULL, (void (__far *)(void))KeyHandler, 336, key_real_code_end}
 };
 
 void FadeTick(void);
@@ -763,8 +762,8 @@ void InterruptSet(int on, uint32 which)
         memset(&regs, 0, sizeof(regs));
         memset(&sregs, 0, sizeof(sregs));
         regs.x.eax = e->number + 0x2500;
-        sregs.ds = e->handler_sel;
-        regs.x.edx = (uint32)e->handler;
+        sregs.ds = FP_SEG(e->handler);
+        regs.x.edx = FP_OFF(e->handler);
         int386x(0x21, &regs, &regs, &sregs);
         if (e->real_code)
         {
