@@ -2027,6 +2027,12 @@ address,size,name,symbol
 0x000c3ef0,110,T_textSpacing,_T_textSpacing
 0x000c3f5e,95,T_remapASCII,_T_remapASCII
 0x000c3fc0,4,base_xpos,_base_xpos
+0x000c3fc4,16,teeth1a,_teeth1a
+0x000c3fd4,16,teeth1b,_teeth1b
+0x000c3fe4,16,teeth2a,_teeth2a
+0x000c3ff4,16,teeth2b,_teeth2b
+0x000c4004,16,teeth3a,_teeth3a
+0x000c4014,16,teeth3b,_teeth3b
 0x000c409c,4,wibble_offset,_wibble_offset
 0x000c40a0,4,water_effect,_water_effect
 0x000c40a4,4,shade_effect,_shade_effect

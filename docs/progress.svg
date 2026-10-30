@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">81.38% (660)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">18.62% (151)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">81.50% (661)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">18.50% (150)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="607.92" height="6" x="0" y="0" class="named"/>
-<rect width="139.08" height="6" x="607.92" y="0" class="todo"/>
+<rect width="608.84" height="6" x="0" y="0" class="named"/>
+<rect width="138.16" height="6" x="608.84" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -728,7 +728,7 @@
 <rect width="12" height="12" x="120" y="195" class="named"><title>0x0003a698 FallingBlock (285 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="195" class="named"><title>0x0003a7b8 FallingBlockFloor (48 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="195" class="named"><title>0x0003a7e8 FallingBlockCeiling (48 bytes)</title></rect>
-<rect width="12" height="12" x="165" y="195" class="todo"><title>0x0003a818 TeethTrap (176 bytes)</title></rect>
+<rect width="12" height="12" x="165" y="195" class="named"><title>0x0003a818 TeethTrap (176 bytes)</title></rect>
 <rect width="12" height="12" x="180" y="195" class="todo"><title>0x0003a8c8 FallingCeiling (168 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="195" class="todo"><title>0x0003a970 InitialiseDamoclesSword (69 bytes)</title></rect>
 <rect width="12" height="12" x="210" y="195" class="todo"><title>0x0003a9b8 DamoclesSwordControl (338 bytes)</title></rect>
@@ -882,10 +882,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">76.64%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">23.36%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">76.72%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">23.28%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="572.47" height="6" x="0" y="0" class="named"/>
-<rect width="174.53" height="6" x="572.47" y="0" class="todo"/>
+<rect width="573.07" height="6" x="0" y="0" class="named"/>
+<rect width="173.93" height="6" x="573.07" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.96" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1206,7 +1206,7 @@
 <rect width="9.57" height="9.57" x="712.51" y="76.52" class="named"><title>0x0002fdd4 OnDrawBridge (179 bytes)</title></rect>
 <rect width="9.50" height="9.57" x="725.08" y="76.52" class="named"><title>0x0001de6c dino_stomp_effect (178 bytes)</title></rect>
 <rect width="9.43" height="9.57" x="737.57" y="76.52" class="named"><title>0x0002674c lara_col_fastfall (177 bytes)</title></rect>
-<rect width="9.36" height="9.56" x="571.40" y="89.09" class="todo"><title>0x0003a818 TeethTrap (176 bytes)</title></rect>
+<rect width="9.36" height="9.56" x="571.40" y="89.09" class="named"><title>0x0003a818 TeethTrap (176 bytes)</title></rect>
 <rect width="9.36" height="9.35" x="571.40" y="101.65" class="named"><title>0x00026978 lara_col_compress (173 bytes)</title></rect>
 <rect width="9.36" height="9.35" x="571.40" y="113.99" class="named"><title>0x00038978 S_SaveSettings (173 bytes)</title></rect>
 <rect width="9.36" height="9.20" x="571.40" y="126.34" class="named"><title>0x0002686c lara_col_reach (171 bytes)</title></rect>

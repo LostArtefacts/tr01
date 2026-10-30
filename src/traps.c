@@ -1,6 +1,7 @@
 #include "game.h"
 
 #define SPIKE_DAMAGE 15
+#define TEETHTRAP_DAMAGE 400
 #define ROLLINGBALL_DAMAGE_AIR 100
 
 int OnTrapDoor(ITEM_INFO *item, sint32 x, sint32 z);
@@ -376,4 +377,44 @@ void FallingBlockCeiling(ITEM_INFO *item, sint32 x, sint32 y, sint32 z, sint16 *
     if (y > item->pos.y_pos - (STEP_L * 2))
         if (item->current_anim_state == TRAP_SET || item->current_anim_state == TRAP_ACTIVATE)
             *height = (sint16)(item->pos.y_pos - STEP_L);
+}
+
+enum tt_states
+{
+    TT_NICE,
+    TT_NASTY
+};
+
+BITE_INFO teeth1a = {-23, 0, -1718, 0};
+BITE_INFO teeth1b = {71, 0, -1718, 1};
+BITE_INFO teeth2a = {-23, 10, -1718, 0};
+BITE_INFO teeth2b = {71, 10, -1718, 1};
+BITE_INFO teeth3a = {-23, -10, -1718, 0};
+BITE_INFO teeth3b = {71, -10, -1718, 1};
+
+void TeethTrap(sint16 item_number)
+{
+    ITEM_INFO *item;
+
+    item = &items[item_number];
+
+    if (TriggerActive(item))
+    {
+        item->goal_anim_state = TT_NASTY;
+        if (item->touch_bits && item->current_anim_state == TT_NASTY)
+        {
+            lara_item->hit_points -= TEETHTRAP_DAMAGE;
+            lara_item->hit_status = 1;
+            BaddieBiteEffect(item, &teeth1a);
+            BaddieBiteEffect(item, &teeth1b);
+            BaddieBiteEffect(item, &teeth2a);
+            BaddieBiteEffect(item, &teeth2b);
+            BaddieBiteEffect(item, &teeth3a);
+            BaddieBiteEffect(item, &teeth3b);
+        }
+    }
+    else
+        item->goal_anim_state = TT_NICE;
+
+    AnimateItem(item);
 }
