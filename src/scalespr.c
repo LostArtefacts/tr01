@@ -86,3 +86,29 @@ void S_DrawSpriteRel(sint32 x, sint32 y, sint32 z, sint16 sprnum, sint16 shade)
     info3dptr += 7;
     surfacenum++;
 }
+
+void S_DrawPickup(sint32 x, sint32 y, sint32 scale, sint16 sprnum, sint16 shade, uint16 flags)
+{
+    PHDSPRITESTRUCT *sptr;
+    sint16 x1, y1, x2, y2;
+
+    sptr = &phdsprinfo[sprnum];
+    x1 = (sint16)(((sptr->x1 * scale) >> 16) + x);
+    x2 = (sint16)(((sptr->x2 * scale) >> 16) + x);
+    y1 = (sint16)(((sptr->y1 * scale) >> 16) + y);
+    y2 = (sint16)(((sptr->y2 * scale) >> 16) + y);
+    if (x2 < 0 || y2 < 0 || x1 >= phd_winwidth || y1 >= phd_winheight)
+        return;
+    *(sort3dptr) = (sint32)(info3dptr);
+    *(sort3dptr + 1) = 0;
+    sort3dptr += 2;
+    *(info3dptr) = DRAW_SCALED_SPRITE;
+    *(info3dptr + 1) = x1;
+    *(info3dptr + 2) = y1;
+    *(info3dptr + 3) = x2;
+    *(info3dptr + 4) = y2;
+    *(info3dptr + 5) = sprnum;
+    *(info3dptr + 6) = shade;
+    info3dptr += 7;
+    surfacenum++;
+}
