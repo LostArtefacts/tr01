@@ -170,6 +170,14 @@ void T_CentreV(TEXTSTRING *textString, sint16 i_bool)
         textString->flags &= ~T_CENTRE_V;
 }
 
+void T_RightAlign(TEXTSTRING *textString, sint16 i_bool)
+{
+    if (i_bool)
+        textString->flags |= T_RIGHT;
+    else
+        textString->flags &= ~T_RIGHT;
+}
+
 sint16 T_GetStringLen(char *string)
 {
     sint16 len = 1;
