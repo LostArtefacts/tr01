@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">84.96% (689)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">15.04% (122)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">85.08% (690)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">14.92% (121)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="634.63" height="6" x="0" y="0" class="named"/>
-<rect width="112.37" height="6" x="634.63" y="0" class="todo"/>
+<rect width="635.55" height="6" x="0" y="0" class="named"/>
+<rect width="111.45" height="6" x="635.55" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -757,7 +757,7 @@
 <rect width="12" height="12" x="555" y="195" class="named"><title>0x0003ca00 PodControl (273 bytes)</title></rect>
 <rect width="12" height="12" x="570" y="195" class="named"><title>0x0003cb14 InitialiseStatue (232 bytes)</title></rect>
 <rect width="12" height="12" x="585" y="195" class="named"><title>0x0003cbfc StatueControl (228 bytes)</title></rect>
-<rect width="12" height="12" x="600" y="195" class="todo"><title>0x0003cce0 InitialiseWolf (35 bytes)</title></rect>
+<rect width="12" height="12" x="600" y="195" class="named"><title>0x0003cce0 InitialiseWolf (35 bytes)</title></rect>
 <rect width="12" height="12" x="615" y="195" class="todo"><title>0x0003cd34 WolfControl (1069 bytes)</title></rect>
 <rect width="12" height="12" x="630" y="195" class="todo"><title>0x0003d180 LionControl (797 bytes)</title></rect>
 <rect width="12" height="12" x="645" y="195" class="todo"><title>0x0003d4a0 Insert2DLine (97 bytes)</title></rect>
@@ -882,10 +882,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">80.86%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">19.14%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">80.87%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">19.13%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="603.99" height="6" x="0" y="0" class="named"/>
-<rect width="143.01" height="6" x="603.99" y="0" class="todo"/>
+<rect width="604.11" height="6" x="0" y="0" class="named"/>
+<rect width="142.89" height="6" x="604.11" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.96" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1562,7 +1562,7 @@
 <rect width="2.45" height="2.67" x="717.64" y="209.07" class="named"><title>0x0002ff8c BridgeTilt1Floor (35 bytes)</title></rect>
 <rect width="2.45" height="2.67" x="723.08" y="209.07" class="named"><title>0x0003340c InitialiseSkateKid (35 bytes)</title></rect>
 <rect width="2.45" height="2.67" x="728.53" y="209.07" class="named"><title>0x00033ac4 InitialiseBaldy (35 bytes)</title></rect>
-<rect width="2.45" height="2.67" x="733.98" y="209.07" class="todo"><title>0x0003cce0 InitialiseWolf (35 bytes)</title></rect>
+<rect width="2.45" height="2.67" x="733.98" y="209.07" class="named"><title>0x0003cce0 InitialiseWolf (35 bytes)</title></rect>
 <rect width="2.29" height="2.67" x="739.42" y="209.07" class="named"><title>0x000245c8 Inv_RingMotionCameraPos (34 bytes)</title></rect>
 <rect width="2.29" height="2.67" x="744.71" y="209.07" class="named"><title>0x00026014 lara_as_swandive (34 bytes)</title></rect>
 <rect width="2.45" height="2.51" x="706.75" y="214.74" class="named"><title>0x00028d14 InitialiseLaraLoad (34 bytes)</title></rect>
