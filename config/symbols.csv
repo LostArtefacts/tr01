@@ -768,7 +768,7 @@ address,size,name,symbol
 0x0004564d,30,phd_PushMatrix,phd_PushMatrix_
 0x0004566b,7,phd_PushUnitMatrix,phd_PushUnitMatrix_
 0x00045672,44,phd_UnitMatrix,phd_UnitMatrix_
-0x000456d0,27,Func456d0,
+0x000456d0,27,TimerTick,TimerTick_
 0x000456ec,378,ShellInit,ShellInit_
 0x00045868,307,Func45868,
 0x0004599c,5,Func4599c,
@@ -807,7 +807,7 @@ address,size,name,symbol
 0x00046a54,474,Func46a54,
 0x00046c2e,19,Func46c2e,
 0x00046c5b,22,Func46c5b,
-0x00046c71,183,Func46c71,
+0x00046c71,183,FadeTick,FadeTick_
 0x00046d28,137,Func46d28,
 0x00046db1,157,Func46db1,
 0x00046e4e,29,__CHP,__CHP
@@ -2184,5 +2184,6 @@ address,size,name,symbol
 0x0012f614,4,xgen_ymax,_xgen_ymax
 0x0012f63c,4,old_clock_ticks,_old_clock_ticks
 0x0012f644,4,clock_ticks,_clock_ticks
+0x0012f64c,4,int_func,_int_func
 0x0012f658,4,keydata,_keydata
 0x0012ffb2,1,joy_fire,_joy_fire

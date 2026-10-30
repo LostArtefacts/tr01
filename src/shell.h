@@ -81,7 +81,7 @@ enum key_codes
 #define rawkey(k) (keydata->keymap[k])
 extern int file_len;
 
-extern sint32 clock_ticks;
+extern volatile sint32 clock_ticks;
 extern sint32 old_clock_ticks;
 
 sint32 Sync(void);

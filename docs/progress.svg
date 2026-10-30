@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">92.97% (754)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">7.03% (57)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">93.09% (755)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">6.91% (56)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="694.50" height="6" x="0" y="0" class="named"/>
-<rect width="52.50" height="6" x="694.50" y="0" class="todo"/>
+<rect width="695.42" height="6" x="0" y="0" class="named"/>
+<rect width="51.58" height="6" x="695.42" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -836,7 +836,7 @@
 <rect width="12" height="12" x="240" y="225" class="todo"><title>0x0004564d phd_PushMatrix (30 bytes)</title></rect>
 <rect width="12" height="12" x="255" y="225" class="todo"><title>0x0004566b phd_PushUnitMatrix (7 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="225" class="todo"><title>0x00045672 phd_UnitMatrix (44 bytes)</title></rect>
-<rect width="12" height="12" x="285" y="225" class="todo"><title>0x000456d0 Func456d0 (27 bytes)</title></rect>
+<rect width="12" height="12" x="285" y="225" class="named"><title>0x000456d0 TimerTick (27 bytes)</title></rect>
 <rect width="12" height="12" x="300" y="225" class="todo"><title>0x000456ec ShellInit (378 bytes)</title></rect>
 <rect width="12" height="12" x="315" y="225" class="todo"><title>0x00045868 Func45868 (307 bytes)</title></rect>
 <rect width="12" height="12" x="330" y="225" class="todo"><title>0x0004599c Func4599c (5 bytes)</title></rect>
@@ -875,17 +875,17 @@
 <rect width="12" height="12" x="75" y="240" class="todo"><title>0x00046a54 Func46a54 (474 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="240" class="todo"><title>0x00046c2e Func46c2e (19 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="240" class="todo"><title>0x00046c5b Func46c5b (22 bytes)</title></rect>
-<rect width="12" height="12" x="120" y="240" class="todo"><title>0x00046c71 Func46c71 (183 bytes)</title></rect>
+<rect width="12" height="12" x="120" y="240" class="todo"><title>0x00046c71 FadeTick (183 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="240" class="todo"><title>0x00046d28 Func46d28 (137 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="240" class="todo"><title>0x00046db1 Func46db1 (157 bytes)</title></rect>
 </g>
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">94.94%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">5.06%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">94.95%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">5.05%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="709.21" height="6" x="0" y="0" class="named"/>
-<rect width="37.79" height="6" x="709.21" y="0" class="todo"/>
+<rect width="709.30" height="6" x="0" y="0" class="named"/>
+<rect width="37.70" height="6" x="709.30" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.96" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1197,7 +1197,7 @@
 <rect width="9.92" height="9.57" x="597.37" y="76.52" class="named"><title>0x00011d2c EscapeBox (184 bytes)</title></rect>
 <rect width="9.85" height="9.57" x="610.29" y="76.52" class="named"><title>0x0002ace8 AimWeapon (183 bytes)</title></rect>
 <rect width="9.85" height="9.57" x="623.14" y="76.52" class="named"><title>0x0003d504 ins_poly_line (183 bytes)</title></rect>
-<rect width="9.85" height="9.57" x="635.99" y="76.52" class="todo"><title>0x00046c71 Func46c71 (183 bytes)</title></rect>
+<rect width="9.85" height="9.57" x="635.99" y="76.52" class="todo"><title>0x00046c71 FadeTick (183 bytes)</title></rect>
 <rect width="9.78" height="9.57" x="648.83" y="76.52" class="named"><title>0x00026618 lara_col_turn_r (182 bytes)</title></rect>
 <rect width="9.78" height="9.57" x="661.61" y="76.52" class="named"><title>0x000296a4 lara_as_glide (182 bytes)</title></rect>
 <rect width="9.78" height="9.57" x="674.39" y="76.52" class="named"><title>0x0003257c GunHit (182 bytes)</title></rect>
@@ -1595,7 +1595,7 @@
 <rect width="1.63" height="2.15" x="740.74" y="220.24" class="named"><title>0x00024564 Inv_RingMotionSetup (27 bytes)</title></rect>
 <rect width="1.63" height="2.15" x="745.37" y="220.24" class="named"><title>0x0003131c do_compass_option (27 bytes)</title></rect>
 <rect width="1.98" height="1.79" x="716.75" y="225.39" class="named"><title>0x00039768 T_AddOutline (27 bytes)</title></rect>
-<rect width="1.98" height="1.79" x="716.75" y="230.18" class="todo"><title>0x000456d0 Func456d0 (27 bytes)</title></rect>
+<rect width="1.98" height="1.79" x="716.75" y="230.18" class="named"><title>0x000456d0 TimerTick (27 bytes)</title></rect>
 <rect width="1.98" height="1.79" x="716.75" y="234.96" class="todo"><title>0x00046974 Func46974 (27 bytes)</title></rect>
 <rect width="1.98" height="1.61" x="716.75" y="239.75" class="named"><title>0x00034d08 InitialiseSavegameItem (26 bytes)</title></rect>
 <rect width="1.98" height="1.61" x="716.75" y="244.35" class="named"><title>0x000398ec T_GetStringLen (26 bytes)</title></rect>
