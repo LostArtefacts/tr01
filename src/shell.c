@@ -85,6 +85,14 @@ extern uint8 *txt_screen;
 extern int txt_width;
 extern int txt_pitch;
 extern sint16 mbuttons;
+extern volatile sint16 joy_x_raw;
+extern volatile sint16 joy_y_raw;
+extern volatile sint16 joy_z_raw;
+extern volatile sint16 joy_r_raw;
+extern int joy_x_centre;
+extern int joy_y_centre;
+extern int joy_z_centre;
+extern int joy_r_centre;
 
 void FadeTick(void);
 uint8 VgaGetMode(void);
@@ -456,4 +464,32 @@ void JoyDetect(void)
     }
     joy_found = (joy_mask & 3) == 3;
     joy_failed = 0;
+}
+
+void JoySetCentre(void)
+{
+    int r;
+    int x;
+    int y;
+    int z;
+    int i;
+
+    if (!joy_found)
+        joy_x_centre = joy_y_centre = joy_z_centre = joy_r_centre = 0;
+    else
+    {
+        x = y = z = r = 0;
+        for (i = 0; i < 256; i++)
+        {
+            JoyReadAxes(joy_mask);
+            x += joy_x_raw;
+            y += joy_y_raw;
+            z += joy_z_raw;
+            r += joy_r_raw;
+        }
+        joy_x_centre = x >> 8;
+        joy_y_centre = y >> 8;
+        joy_z_centre = z >> 8;
+        joy_r_centre = r >> 8;
+    }
 }

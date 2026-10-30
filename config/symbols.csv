@@ -2052,6 +2052,10 @@ address,size,name,symbol
 0x000c5904,1568,toddata,_toddata
 0x000c5f24,4,joy1_x,_joy1_x
 0x000c5f28,4,joy1_y,_joy1_y
+0x000c5f3c,4,joy_x_centre,_joy_x_centre
+0x000c5f48,4,joy_y_centre,_joy_y_centre
+0x000c5f5c,4,joy_z_centre,_joy_z_centre
+0x000c5f68,4,joy_r_centre,_joy_r_centre
 0x000c5f70,4,joy_mask,_joy_mask
 0x000c5f74,4,timer_handle,_timer_handle
 0x000c5f78,576,video_modes,_video_modes
@@ -2207,6 +2211,10 @@ address,size,name,symbol
 0x0012f65c,2,mbuttons,_mbuttons
 0x0012f65e,1,old_video_mode,_old_video_mode
 0x0012f65f,1,old_text_rows,_old_text_rows
+0x0012ffaa,2,joy_x_raw,_joy_x_raw
+0x0012ffac,2,joy_y_raw,_joy_y_raw
+0x0012ffae,2,joy_z_raw,_joy_z_raw
+0x0012ffb0,2,joy_r_raw,_joy_r_raw
 0x0012ffb2,1,joy_fire,_joy_fire
 0x0012ffb4,4,txt_screen,_txt_screen
 0x0012ffb8,4,txt_width,_txt_width
