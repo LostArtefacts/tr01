@@ -363,4 +363,30 @@ phd_PushMatrix_ proc near
     ret
 phd_PushMatrix_ endp
 
+    public phd_PushUnitMatrix_
+phd_PushUnitMatrix_ proc near
+    add     dword ptr _phd_mxptr,30h
+phd_PushUnitMatrix_ endp
+
+    public phd_UnitMatrix_
+phd_UnitMatrix_ proc near
+    push    edi
+    push    eax
+    mov     edi,dword ptr _phd_mxptr
+    mov     eax,4000h
+    mov     dword ptr [edi],eax
+    mov     dword ptr [edi+14h],eax
+    mov     dword ptr [edi+28h],eax
+    xor     eax,eax
+    mov     dword ptr [edi+4],eax
+    mov     dword ptr [edi+8],eax
+    mov     dword ptr [edi+10h],eax
+    mov     dword ptr [edi+18h],eax
+    mov     dword ptr [edi+20h],eax
+    mov     dword ptr [edi+24h],eax
+    pop     eax
+    pop     edi
+    ret
+phd_UnitMatrix_ endp
+
     end
