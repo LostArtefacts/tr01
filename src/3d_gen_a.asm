@@ -346,4 +346,21 @@ l8:
     ret
 calc_object_verticesA_ endp
 
+    public phd_PushMatrix_
+phd_PushMatrix_ proc near
+    push    esi
+    push    edi
+    push    ecx
+    cld
+    mov     esi,dword ptr _phd_mxptr
+    mov     ecx,0ch
+    lea     edi,[esi+ecx*4]
+    rep movsd
+    mov     dword ptr _phd_mxptr,esi
+    pop     ecx
+    pop     edi
+    pop     esi
+    ret
+phd_PushMatrix_ endp
+
     end
