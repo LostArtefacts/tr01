@@ -719,7 +719,7 @@ address,size,name,symbol
 0x0003ed00,70,phd_PointLight,phd_PointLight_
 0x0003ed48,37,phd_InitPolyList,phd_InitPolyList_
 0x0003ed70,65,phd_SortPolyList,phd_SortPolyList_
-0x0003edb4,199,Func3edb4,
+0x0003edb4,199,do_quickysorty,do_quickysorty_
 0x0003ee7c,48,phd_PrintPolyList,phd_PrintPolyList_
 0x0003eeac,223,phd_InitWindow,phd_InitWindow_
 0x0003ef8c,73,AlterFOV,AlterFOV_

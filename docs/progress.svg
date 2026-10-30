@@ -61,10 +61,10 @@
 </g>
 <g transform="translate(0 116)">
 <text x="0" y="7.50">TOMB.EXE progress by function order:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">88.53% (718)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">11.47% (93)</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">88.66% (719)</tspan> · <tspan class="decompiled">0% (0)</tspan> · <tspan class="nonmatching">0% (0)</tspan> · <tspan class="todo">11.34% (92)</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="661.34" height="6" x="0" y="0" class="named"/>
-<rect width="85.66" height="6" x="661.34" y="0" class="todo"/>
+<rect width="662.26" height="6" x="0" y="0" class="named"/>
+<rect width="84.74" height="6" x="662.26" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00010010 S_InitialisePolyList (5 bytes)</title></rect>
@@ -786,8 +786,8 @@
 <rect width="12" height="12" x="240" y="210" class="named"><title>0x0003ec1c phd_RotateLight (227 bytes)</title></rect>
 <rect width="12" height="12" x="255" y="210" class="named"><title>0x0003ed00 phd_PointLight (70 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="210" class="named"><title>0x0003ed48 phd_InitPolyList (37 bytes)</title></rect>
-<rect width="12" height="12" x="285" y="210" class="todo"><title>0x0003ed70 phd_SortPolyList (65 bytes)</title></rect>
-<rect width="12" height="12" x="300" y="210" class="todo"><title>0x0003edb4 Func3edb4 (199 bytes)</title></rect>
+<rect width="12" height="12" x="285" y="210" class="named"><title>0x0003ed70 phd_SortPolyList (65 bytes)</title></rect>
+<rect width="12" height="12" x="300" y="210" class="todo"><title>0x0003edb4 do_quickysorty (199 bytes)</title></rect>
 <rect width="12" height="12" x="315" y="210" class="todo"><title>0x0003ee7c phd_PrintPolyList (48 bytes)</title></rect>
 <rect width="12" height="12" x="330" y="210" class="todo"><title>0x0003eeac phd_InitWindow (223 bytes)</title></rect>
 <rect width="12" height="12" x="345" y="210" class="todo"><title>0x0003ef8c AlterFOV (73 bytes)</title></rect>
@@ -882,10 +882,10 @@
 </g>
 <g transform="translate(0 426)">
 <text x="0" y="7.50">TOMB.EXE progress by function size:</text>
-<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">84.60%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">15.40%</tspan></tspan></text>
+<text class="todo" style="font-size: 12px; " x="747" y="9"><tspan text-anchor="end"><tspan class="named">84.63%</tspan> · <tspan class="decompiled">0%</tspan> · <tspan class="nonmatching">0%</tspan> · <tspan class="todo">15.37%</tspan></tspan></text>
 <g transform="translate(0 20)">
-<rect width="631.95" height="6" x="0" y="0" class="named"/>
-<rect width="115.05" height="6" x="631.95" y="0" class="todo"/>
+<rect width="632.17" height="6" x="0" y="0" class="named"/>
+<rect width="114.83" height="6" x="632.17" y="0" class="todo"/>
 </g>
 <g transform="translate(0 31)">
 <rect width="49.96" height="71.77" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1175,7 +1175,7 @@
 <rect width="10.52" height="10.11" x="669.67" y="63.41" class="named"><title>0x0002b7d4 FireShotgun (201 bytes)</title></rect>
 <rect width="10.52" height="10.11" x="683.20" y="63.41" class="named"><title>0x000397cc T_GetTextWidth (201 bytes)</title></rect>
 <rect width="10.39" height="10.11" x="696.72" y="63.41" class="named"><title>0x00020c0c DrawPickups (199 bytes)</title></rect>
-<rect width="10.39" height="10.11" x="710.11" y="63.41" class="todo"><title>0x0003edb4 Func3edb4 (199 bytes)</title></rect>
+<rect width="10.39" height="10.11" x="710.11" y="63.41" class="todo"><title>0x0003edb4 do_quickysorty (199 bytes)</title></rect>
 <rect width="10.32" height="10.11" x="723.49" y="63.41" class="named"><title>0x00016a04 AlignLaraPosition (198 bytes)</title></rect>
 <rect width="10.19" height="10.11" x="736.81" y="63.41" class="named"><title>0x0003e320 phd_PutPolygons (196 bytes)</title></rect>
 <rect width="9.86" height="10.38" x="558.54" y="76.52" class="named"><title>0x0001d370 GetFrames (195 bytes)</title></rect>
@@ -1438,7 +1438,7 @@
 <rect width="4.22" height="4.94" x="735.55" y="169.30" class="named"><title>0x000242c0 Inv_RingCalcAdders (65 bytes)</title></rect>
 <rect width="4.22" height="4.94" x="742.78" y="169.30" class="named"><title>0x000287ac LaraSwapMeshExtra (65 bytes)</title></rect>
 <rect width="4.40" height="4.75" x="661.31" y="177.24" class="named"><title>0x00038cb8 S_CDStop (65 bytes)</title></rect>
-<rect width="4.40" height="4.75" x="661.31" y="184.99" class="todo"><title>0x0003ed70 phd_SortPolyList (65 bytes)</title></rect>
+<rect width="4.40" height="4.75" x="661.31" y="184.99" class="named"><title>0x0003ed70 phd_SortPolyList (65 bytes)</title></rect>
 <rect width="4.40" height="4.63" x="661.31" y="192.75" class="named"><title>0x00034c0c PickupTrigger (64 bytes)</title></rect>
 <rect width="4.40" height="4.52" x="661.31" y="200.38" class="named"><title>0x0003c2b4 InitialiseMummy (63 bytes)</title></rect>
 <rect width="4.40" height="4.40" x="661.31" y="207.90" class="named"><title>0x0001cfa4 phd_RotYXZ_I (62 bytes)</title></rect>

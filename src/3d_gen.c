@@ -15,6 +15,7 @@ extern sint16 info3d_buffer[];
 void phd_GetMatrixAngles(PHD_ANGLE *dest);
 void phd_UnitMatrix(void);
 sint16 *calc_vertice_light(sint16 *objptr);
+void do_quickysorty(int left, int right);
 sint16 *ins_objectGT4persp(sint16 *objptr, int number);
 sint16 *ins_objectGT3persp(sint16 *objptr, int number);
 sint16 *ins_objectGT4(sint16 *objptr, int number);
@@ -742,4 +743,13 @@ void phd_InitPolyList(void)
     surfacenum = 0;
     sort3dptr = (sint32 *)sort3d_buffer;
     info3dptr = (sint16 *)info3d_buffer;
+}
+
+void phd_SortPolyList(void)
+{
+    sint32 i;
+
+    for (i = 0; i < surfacenum; i++)
+        sort3d_buffer[i][1] += i;
+    do_quickysorty(0, surfacenum - 1);
 }
