@@ -3,144 +3,109 @@
 A matching decompilation of Tomb Raider (Core Design, 1996), the DOS
 version, built and verified on Linux through Wine.
 
-The goal is C source that compiles, with the original toolchain, into
-functions that are byte-for-byte identical to the original executable's,
-and links into a DOS executable that runs the game.
+The goal is C source that compiles into the original machine code and
+links into a DOS executable that runs the game. During development,
+recovered functions can also replace code in a copy of the original.
 
-This repository contains no game code or data. You need your own copy of
-the game, see [`orig/README.md`](orig/README.md).
-
-The tools are [decomp-tools](https://github.com/LostArtefacts/decomp-tools),
-shared with tr02, checked out as a git submodule at `tools/`. Clone with
-`git clone --recursive`, or run `git submodule update --init` in an
-existing clone: the `justfile` imports its recipes from
-`tools/common.just`, so `just` needs it.
+![Progress](docs/progress.svg)
 
 ## Sources
 
 This is not a clean-room project. Core's game source, as later ported to
-Windows, is used as a reference for names, structures and logic. It is a
-reference only: the source here is written to match the binary, which
-differs from the port in many places, and carries none of its comments.
-
-![Progress](docs/progress.svg)
-
-`just progress` renders it: every game function, by address and as a
-treemap by size, coloured by whether it is decompiled and matching. It
-also prints a one-line summary.
+Windows, provides names, structures and logic. The source here is written
+to match the DOS binary, which differs from that port in many places.
+Ghidra provides disassembly and pseudocode for the original executable.
 
 ## Target
 
-The retail `TOMB.EXE`, dated 1996-10-30, which the GOG and Steam
-releases ship as `TOMBRAID/TOMBno3Dfx.EXE`:
+The retail `TOMB.EXE`, dated 1996-10-30, shipped by GOG and Steam as
+`TOMBRAID/TOMBno3Dfx.EXE`.
 
-- 32-bit LE executable for the DOS/4GW extender, entry point `0x4a574`
-- Object 1, code, at `0x10000`, `0x7fa3e` bytes
-- Object 2, 16-bit code, at `0x90000`
-- Objects 3 and 4, stack and small data, at `0xa0000` and `0xb0000`
-- Object 5, data, at `0xc0000`, `0x808e0` bytes of which most is
-  zero-initialized
+| Property | Value |
+| --- | --- |
+| Format | 32-bit LE, DOS/4GW extender |
+| Entry point | `0x4a574` |
+| Code object | `0x10000`, size `0x7fa3e` |
+| 16-bit code | `0x90000` |
+| Stack and small data | `0xa0000` and `0xb0000` |
+| Data object | `0xc0000`, size `0x808e0`, mostly zero-initialized |
+| Game code | `0x10010`–`0x46e00` |
 
-The game code comes first, at `0x10010`–`0x46e00`, one module after the
-other, starting with `OUTPUT`. Within a module the functions are in the
-reference source's order. Modules are aligned to 16 bytes with zeros,
-functions to 4 bytes with `lea eax,[eax+0]`, `mov eax,eax` or `nop`. The
-Watcom C library, the Escape FMV player (`RPL*.C`, `124*.ASM`, `$Id`
-strings by MFC and MDV), the VGA and VESA code and the HMI sound
-library follow.
+Game code starts with `OUTPUT`, with modules in source order. Watcom's C
+library, the Escape FMV player, VGA/VESA code and HMI sound library follow.
+The standalone executable links 156 library modules from Watcom's
+`CLIB3R.LIB`, `MATH387R.LIB` and `EMU387.LIB`, in the order recorded in
+`project.toml`. Code not yet supplied by `src/` is taken from the original.
 
-The standalone exe links that C library from the user's Watcom 10.6,
-like the compiler: `[link]` in `project.toml` lists the 156 modules of
-`CLIB3R.LIB`, `MATH387R.LIB` and `EMU387.LIB` the original holds, in
-its order. The rest that `src/` lacks is still cut out of the original.
-
-```sh
-just analyze   # writes build/functions_tomb.csv, seeds config/symbols.csv
-```
+Game files are not distributed. Supply your own copy; see
+[`orig/README.md`](orig/README.md).
 
 ## Toolchain
 
-Watcom C/C++ 10.6. Its run-time copyright strings say 1988-1995, which
-fits 10.0a through 10.6; the C library settles it. Searching the
-original for each function of each version's `CLIB3R.LIB` and
-`MATH387R.LIB`, with the bytes under fixups as wildcards, finds 199 of
-10.6's functions against 188 of 10.5's, and where the two versions'
-functions differ, 13 match 10.6 and 2 match 10.5.
+| Component | Version or configuration |
+| --- | --- |
+| Compiler | Watcom C/C++ 10.6, `wcc386` |
+| C flags | `-bt=dos -5r -oneatx` |
+| Assembler | Microsoft MASM 6.11, `ml /c /Cp` |
+| Runtime | DOS/4GW |
+| Emulator | dosbox-staging |
 
-The game is compiled with `wcc386 -bt=dos -5r -oneatx`: register
-calling convention, Pentium scheduling, and `-ox` with numerically
-unstable floating-point optimizations, inlining of user functions,
-relaxed alias checking and speed over size on top. Compiling the
-reference source with `wpp386` and each set of flags, the number of its
-functions found unchanged in the original:
+The C library identifies Watcom 10.6: fingerprinting `CLIB3R.LIB` and
+`MATH387R.LIB` finds 199 functions from 10.6 against 188 from 10.5. Where
+the versions differ, 13 functions match 10.6 and two match 10.5.
 
-| Flags | Functions |
+The flags select register calling conventions, Pentium scheduling,
+speed optimizations, relaxed alias checking and floating-point
+transformations. Compiling the reference with different flags gives:
+
+| Flags | Functions matching the original |
 | --- | ---: |
 | `-3r -ox` | 37 |
 | `-5r -ox` | 97 |
 | `-5r -oaxt` | 211 |
 | `-5r -oneatx` | 222 |
 
-`-4r`, `-fp5`, `-oe` alone and `-zp4` match fewer; `-zp1`, `-zp2`, `-fp3`,
-`-or` and `-ol+` change nothing.
+MASM reproduces the original instruction encodings; Watcom's WASM can
+encode equivalent instructions differently. Compiler, assembler,
+libraries and backend settings are configured in `project.toml`.
 
-The hand-written assembly (the maths, the scanline fillers, the matrix
-stack and much of the DOS shell) is assembled with Microsoft MASM 6.11,
-`ml /c /Cp`. Watcom's own WASM gives the same instructions with other
-encodings (`89 c1` where the original has `8b c8`); MASM's match.
+## Setup
 
-These flags, the original's file names, its code range and where the
-game code ends, the Watcom libraries searched, and where Watcom, MASM,
-Ghidra and DOSBox are installed are kept in `project.toml`, which every
-tool reads; `game.format = "le"` picks decomp-tools' DOS backend.
-`python3 tools/project.py get KEY` prints one setting, such as
-`build.cflags`.
+Clone with submodules, or run `git submodule update --init`.
+Requirements: Python 3.11+, `just`, Wine, Watcom C/C++ 10.6, MASM 6.11,
+Ghidra, Java 21 and dosbox-staging. Headless play also uses Xvfb, xdotool
+and ImageMagick.
+
+Supply the game and CD image as described in `orig/README.md`.
+Tool locations are configured in `project.toml`; `WATCOM`, `MASM`,
+`GHIDRA` and `DOSBOX` can override their searches. Game files, references
+and build outputs are local dependencies rather than repository contents.
 
 ## Workflow
 
-Everything runs headless. `just` lists the recipes.
+| Command | Purpose |
+| --- | --- |
+| `just analyze` | Flatten the LE, analyze it in Ghidra and record function sizes |
+| `just decompile ADDRESS` | Export Ghidra pseudocode |
+| `just compare [NAME]` | Build and check byte parity; optionally show a function diff |
+| `just bss` | Check module layouts for uninitialized globals |
+| `just progress` | Rebuild the progress chart |
+| `just game` | Prepare the original with compiled functions hooked in |
+| `just run wait:20 key:Return shot:menu` | Run in DOSBox and capture a screenshot |
+| `just run-orig` | Run the unmodified original |
+| `just exe` | Link the standalone executable |
 
-1. Analyze the original (`just analyze`). `tools/le.py` flattens the LE
-   into `build/tomb.elf`, with every object at its address and the
-   fixups applied, and lists the fixups in `build/tomb.elf.fixups`.
-   `tools/functions.py` finds the functions: call targets, code
-   pointers, and dead code after a return. Headless Ghidra imports the
-   ELF with them, gives every function Watcom's register calling
-   convention (`__watcall`: `eax`, `edx`, `ebx`, `ecx`, then the stack,
-   callee pops, everything but `eax` preserved) and the new ones are
-   added to `config/symbols.csv` as `FuncXXXXX`. Library functions are
-   named from the Watcom libraries.
-2. Write C89 for a function in `src/`, four-space indented and without
-   comments, one file per module of the original. `just decompile [ADDR...]` writes
-   Ghidra's pseudocode to `build/decomp/<address>.c`.
-3. Record the function and every function and global it uses in
-   [`config/symbols.csv`](config/symbols.csv): address, size, name and
-   the Watcom symbol (`Name_` for a function, `_name` for data).
-4. Compare (`just compare`): builds with `wcc386` under Wine and checks
-   each function against the original byte for byte, with nothing
-   masked. Each fixup must be at a place where the original has one
-   and resolve to the same address: externals through `symbols.csv`,
-   the module's own segments, such as its string literals, through
-   where the original puts them. The literals' bytes are compared too.
-   `just compare SYMBOL` shows a disassembly diff. A function that is
-   decompiled but does not match yet is listed in
-   [`config/nonmatching.txt`](config/nonmatching.txt): it is reported as
-   `nonmatch`, shown red in the chart and hooked into the game like the
-   others, and comes off the list when it matches.
-   wcc386 does not lay out a module's uninitialized globals in
-   definition order but by size class, then by the 25-entry block of
-   the symbol table where each was first declared, newest first, then
-   by name hash, so the order of the externs in the headers matters.
-   `just bss` predicts each module's `_BSS` from that rule and shows
-   where it differs from the original; see `tools/bss.py`.
-5. Play (`just run`): `tools/patch_le.py` copies every compiled
-   function into a new LE object of the original and puts a jump to it
-   at the original's entry, with fixups for its calls and references,
-   so the game runs the new code whether it matches yet or not.
-   `tools/play.py` runs it in dosbox-staging, headless under Xvfb, with
-   the CD image mounted. Steps drive it and take screenshots, e.g.
-   `just run wait:20 key:Return wait:2 shot:menu` writes
-   `build/shots/menu.png`. `just run-orig` runs the unmodified original.
+Write C89 or assembly in `src/`, following the original module layout.
+Record addresses and symbols in `config/symbols.csv`: `Name_` for Watcom
+functions, `_name` for data. Comparison checks instruction bytes,
+relocations and referenced literals. Functions listed in
+`config/nonmatching.txt` appear red in the progress chart and are hooked
+into the game along with matching functions.
 
-`tools/le.py roundtrip` checks the LE writer: rewriting the original
-without changes gives the same file.
+Header declaration order affects Watcom's layout of uninitialized
+globals. `just bss` predicts that layout and compares it with the original;
+see `tools/bss.py` for the ordering rule.
+
+The build tools are a submodule of
+[decomp-tools](https://github.com/LostArtefacts/decomp-tools), shared with
+other Tomb Raider decompilations. `just` lists all available commands.
