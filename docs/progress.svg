@@ -62,33 +62,33 @@
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="375" y="24"><tspan class="named">220 KB</tspan> · <tspan class="nonmatching">1 KB</tspan> · <tspan class="todo">13 bytes</tspan> · 132/132 data segments</text>
 <text text-anchor="start" x="0" y="41.50">Executable code</text>
 <g transform="translate(130 35.50)">
-<rect width="87.92" height="12" x="0" y="0" class="named"><title>270 KB · 51.71%</title></rect>
-<rect width="82.08" height="12" x="87.92" y="0" class="decompiled"><title>252 KB · 48.29%</title></rect>
+<rect width="88.94" height="12" x="0" y="0" class="named"><title>274 KB · 52.32%</title></rect>
+<rect width="81.06" height="12" x="88.94" y="0" class="decompiled"><title>249 KB · 47.68%</title></rect>
 </g>
 <text text-anchor="end" x="360" y="41.50">100.0%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="375" y="41"><tspan class="named">270 KB</tspan> · <tspan class="decompiled">252 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="375" y="41"><tspan class="named">274 KB</tspan> · <tspan class="decompiled">249 KB</tspan></text>
 <text text-anchor="start" x="0" y="58.50">Executable data</text>
 <g transform="translate(130 52.50)">
-<rect width="100.13" height="12" x="0" y="0" class="named"><title>28 KB · 58.90%</title></rect>
-<rect width="69.87" height="12" x="100.13" y="0" class="decompiled"><title>19 KB · 41.10%</title></rect>
+<rect width="100.45" height="12" x="0" y="0" class="named"><title>28 KB · 59.09%</title></rect>
+<rect width="69.55" height="12" x="100.45" y="0" class="decompiled"><title>19 KB · 40.91%</title></rect>
 </g>
 <text text-anchor="end" x="360" y="58.50">100.0%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="375" y="58"><tspan class="named">28 KB</tspan> · <tspan class="decompiled">19 KB</tspan></text>
 <text text-anchor="start" x="0" y="75.50">Executable BSS</text>
 <g transform="translate(130 69.50)">
-<rect width="169.41" height="12" x="0" y="0" class="named"><title>419 KB · 99.65%</title></rect>
-<rect width="0.59" height="12" x="169.41" y="0" class="decompiled"><title>1 KB · 0.35%</title></rect>
+<rect width="169.54" height="12" x="0" y="0" class="named"><title>420 KB · 99.73%</title></rect>
+<rect width="0.46" height="12" x="169.54" y="0" class="decompiled"><title>1 KB · 0.27%</title></rect>
 </g>
 <text text-anchor="end" x="360" y="75.50">100.0%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="375" y="75"><tspan class="named">419 KB</tspan> · <tspan class="decompiled">1 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="375" y="75"><tspan class="named">420 KB</tspan> · <tspan class="decompiled">1 KB</tspan></text>
 <text text-anchor="start" x="0" y="92.50">Executable image</text>
 <g transform="translate(130 86.50)">
-<rect width="125.78" height="12" x="0" y="0" class="named"><title>779 KB · 73.99%</title></rect>
-<rect width="44.11" height="12" x="125.78" y="0" class="decompiled"><title>273 KB · 25.95%</title></rect>
-<rect width="0.11" height="12" x="169.89" y="0" class="todo"><title>1 KB · 0.06%</title></rect>
+<rect width="126.35" height="12" x="0" y="0" class="named"><title>783 KB · 74.32%</title></rect>
+<rect width="43.54" height="12" x="126.35" y="0" class="decompiled"><title>270 KB · 25.61%</title></rect>
+<rect width="0.11" height="12" x="169.89" y="0" class="todo"><title>1 KB · 0.07%</title></rect>
 </g>
 <text text-anchor="end" x="360" y="92.50">99.9%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="375" y="92"><tspan class="named">779 KB</tspan> · <tspan class="decompiled">273 KB</tspan> · <tspan class="todo">1 KB</tspan> · 0 blob pieces left · 41 fixups differ</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="375" y="92"><tspan class="named">783 KB</tspan> · <tspan class="decompiled">270 KB</tspan> · <tspan class="todo">1 KB</tspan> · 0 blob pieces left · 41 fixups differ</text>
 </g>
 <g transform="translate(0 145)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>

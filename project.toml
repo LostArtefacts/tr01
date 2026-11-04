@@ -77,7 +77,7 @@ search = ["~/opt/dosbox-staging*/dosbox", "~/data.local/work/dosbox-staging*/dos
 # Modules the original compiled from C that src/ still has as assembly:
 # yellow in the chart however clean the assembly, until they are C.
 compiled = [
-    "sound", "player", "inifile", "sosdigi", "vidmode", "fmvscrn",
+    "player", "inifile", "sosdigi", "vidmode", "fmvscrn",
     "rplgraph", "sostimer", "soslock", "sosload", "rplfile", "decwrap",
     "decbuf", "fmvalloc", "video_a", "vga", "rpldpmi", "vesa", "sosdetect",
     "sosdata", "sosdata2",
