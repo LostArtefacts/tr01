@@ -1346,6 +1346,7 @@ address,size,name,symbol
 0x00056c7b,21,Func56c7b,Func56c7b_
 0x00056c90,133,Func56c90,Func56c90_
 0x00056d15,21,Func56d15,Func56d15_
+0x00056d2c,1,Func56d2c,Func56d2c_
 0x00056d2d,61,Func56d2d,Func56d2d_
 0x00056d6a,61,Func56d6a,Func56d6a_
 0x00056da7,169,Func56da7,Func56da7_
@@ -1382,7 +1383,8 @@ address,size,name,symbol
 0x0005750c,1,Func5750c,Func5750c_
 0x0005750d,40,_fmemcpy,_fmemcpy_
 0x00057538,1,Func57538,Func57538_
-0x00057539,1169,Func57539,Func57539_
+0x00057539,1178,Func57539,Func57539_
+0x000579d3,1,Func579d3,Func579d3_
 0x000579d4,37,memcpy,memcpy_
 0x00057a00,372,Func57a00,Func57a00_
 0x00057b74,153,Func57b74,Func57b74_
@@ -1486,7 +1488,10 @@ address,size,name,symbol
 0x0005a81f,21,Func5a81f,Func5a81f_
 0x0005a834,1,Func5a834,Func5a834_
 0x0005c71b,90,Func5c71b,Func5c71b_
+0x0005c775,1,Func5c775,Func5c775_
+0x0005c778,1,Func5c778,Func5c778_
 0x0005cfdd,80,Func5cfdd,Func5cfdd_
+0x0005d0e1,1,Func5d0e1,Func5d0e1_
 0x0005d0e2,51,strcat,strcat_
 0x0005d115,251,read,read_
 0x0005d210,42,_dos_read,_dos_read_
