@@ -11,6 +11,43 @@ sint16 layout[2][13] = {
     {K_NUMUP, K_NUMDOWN, K_NUMLEFT, K_NUMRIGHT, K_NUMHOME, K_NUMPGUP, K_NUMEND, K_NUMPLUS, K_NUMENTER, K_NUMPGDN, K_NUM0, K_NUM5, K_NUMDEL}
 };
 
+char *kname[] = {
+    NULL, "ESC", "1", "2", "3", "4", "5", "6",
+    "7", "8", "9", "0", "-", "+", "BKSP", "TAB",
+    "Q", "W", "E", "R", "T", "Y", "U", "I",
+    "O", "P", "<", ">", "RET", "CTRL", "A", "S",
+    "D", "F", "G", "H", "J", "K", "L", ";",
+    "'", "`", "SHIFT", "#", "Z", "X", "C", "V",
+    "B", "N", "M", ",", ".", "/", "SHIFT", "PADx",
+    "ALT", "SPACE", "CAPS", NULL, NULL, NULL, NULL, NULL,
+    NULL, NULL, NULL, NULL, NULL, "NMLK", NULL, "PAD7",
+    "PAD8", "PAD9", "PAD-", "PAD4", "PAD5", "PAD6", "PAD+", "PAD1",
+    "PAD2", "PAD3", "PAD0", "PAD.", NULL, NULL, "\\", NULL,
+    NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL,
+    NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL,
+    NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL,
+    NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL,
+    NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL,
+    NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL,
+    NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL,
+    NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL,
+    NULL, NULL, NULL, NULL, "ENTER", "CTRL", NULL, NULL,
+    NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL,
+    NULL, NULL, "SHIFT", NULL, NULL, NULL, NULL, NULL,
+    NULL, NULL, NULL, NULL, NULL, "PAD/", NULL, NULL,
+    "ALT", NULL, NULL, NULL, NULL, NULL, NULL, NULL,
+    NULL, NULL, NULL, NULL, NULL, NULL, NULL, "HOME",
+    "UP", "PGUP", NULL, "LEFT", NULL, "RIGHT", NULL, "END",
+    "DOWN", "PGDN", "INS", "DEL", NULL, NULL, NULL, NULL,
+    NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL,
+    NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL,
+    NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL,
+    NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL,
+    NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL,
+    "JOY1", "JOY2", "JOY3", "JOY4", "JOY5", "JOY6", "JOY7", "JOY8",
+    "JOY9", "JOY10", "JOY11", "JOY12", "JOY13", "JOY14", "JOY15", "JOY16"
+};
+
 int Key(int number)
 {
     sint16 key;

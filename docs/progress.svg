@@ -59,7 +59,7 @@
 <rect width="0.10" height="12" x="201.99" y="0" class="todo"><title>13 bytes · 0.01%</title></rect>
 </g>
 <text text-anchor="end" x="382" y="24.50">99.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="397" y="24"><tspan class="named">220 KB</tspan> · <tspan class="nonmatching">1 KB</tspan> · <tspan class="todo">13 bytes</tspan> · 87/87 data segments</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="397" y="24"><tspan class="named">220 KB</tspan> · <tspan class="nonmatching">1 KB</tspan> · <tspan class="todo">13 bytes</tspan> · 88/88 data segments</text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
