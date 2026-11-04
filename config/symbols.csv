@@ -956,7 +956,8 @@ address,size,name,symbol
 0x0004a84c,296,KeyHandler,KeyHandler_
 0x0004a974,19,BreakHandler,BreakHandler_
 0x0004a987,31,CritHandler,CritHandler_
-0x0004a9b3,71,Func4a9b3,
+0x0004a9a6,13,TimerReadCount,TimerReadCount_
+0x0004a9b3,71,BcdToBin,BcdToBin_
 0x0004a9fa,98,TimeRestore,TimeRestore_
 0x0004aa5c,5,Func4aa5c,
 0x0004aa61,16,Func4aa61,
