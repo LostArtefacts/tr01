@@ -20,7 +20,7 @@ typedef struct
     void **data;
     uint8 *real_code;
     void (*init)(void);
-    void (__far *handler)(void);  /* 16:32, the loader fills in the selector */
+    void (__far *handler)(void);
     uint16 data_size;
     uint8 *real_code_end;
 } INTERRUPT;
