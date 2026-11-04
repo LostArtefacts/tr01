@@ -35,7 +35,12 @@ Game code starts with `OUTPUT`, with modules in source order. Watcom's C
 library, the Escape FMV player, VGA/VESA code and HMI sound library follow.
 The standalone executable links 156 library modules from Watcom's
 `CLIB3R.LIB`, `MATH387R.LIB` and `EMU387.LIB`, in the order recorded in
-`project.toml`. Code not yet supplied by `src/` is taken from the original.
+`project.toml`. Every byte of its image comes from `src/` and those libraries:
+`just exe` links it without the retail executable, in the order
+`config/link_order.txt` records, with Watcom's `WSTUB.EXE` as the DOS stub
+and its `DOS4GW.EXE` if the game folder has none. The game data is still
+needed to play. With the retail executable present, the link checks its
+placement against it and rewrites `config/link_order.txt`.
 
 Game files are not distributed. Supply your own copy; see
 [`orig/README.md`](orig/README.md).
