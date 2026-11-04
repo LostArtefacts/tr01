@@ -18,6 +18,8 @@ typedef struct
     float v;
 } OUTPUT_INFO;
 
+VERTEX_INFO v_buffer[20];
+
 extern float phd_leftfloat;
 extern float phd_rightfloat;
 extern float phd_topfloat;
