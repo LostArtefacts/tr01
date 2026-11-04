@@ -883,7 +883,7 @@ address,size,name,symbol
 0x00048ca4,41,Func48ca4,Func48ca4_
 0x00048cd0,43,SoundSetPan,SoundSetPan_
 0x00048cfc,41,Func48cfc,Func48cfc_
-0x00048d28,52,SoundSampleIsPlaying,SoundSampleIsPlaying_
+0x00048d28,53,SoundSampleIsPlaying,SoundSampleIsPlaying_
 0x00048d60,90,Func48d60,Func48d60_
 0x00048dbc,86,Func48dbc,Func48dbc_
 0x00048e14,142,Func48e14,Func48e14_
