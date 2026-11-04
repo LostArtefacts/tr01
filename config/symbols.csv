@@ -1687,6 +1687,7 @@ address,size,name,symbol
 0x00075e12,57,Func75e12,Func75e12_
 0x00075e4b,300,Func75e4b,Func75e4b_
 0x00075f7c,4314,Func75f7c,Func75f7c_
+0x00077058,0,Data77058,_Data77058
 0x000779a0,2998,Func779a0,Func779a0_
 0x00078656,1777,Func78656,Func78656_
 0x00078e07,1899,Func78e07,Func78e07_
@@ -2435,6 +2436,7 @@ address,size,name,symbol
 0x000c85fc,4,Datac85fc,_Datac85fc
 0x000c8600,4,Datac8600,_Datac8600
 0x000c89e0,80,Datac89e0,_Datac89e0
+0x000ca6f0,80,Dataca6f0,_Dataca6f0
 0x000ca814,4,MaxPrec,_MaxPrec
 0x000ca818,4,environ,_environ
 0x000ca81c,4,__env_mask,___env_mask
