@@ -2386,6 +2386,7 @@ address,size,name,symbol
 0x000c85f4,8,Datac85f4,_Datac85f4
 0x000c85fc,4,Datac85fc,_Datac85fc
 0x000c8600,4,Datac8600,_Datac8600
+0x000c89e0,80,Datac89e0,_Datac89e0
 0x000ca814,4,MaxPrec,_MaxPrec
 0x000ca818,4,environ,_environ
 0x000ca81c,4,__env_mask,___env_mask
