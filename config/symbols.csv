@@ -1446,8 +1446,11 @@ address,size,name,symbol
 0x00058b34,34,Func58b34,Func58b34_
 0x00058b58,223,Func58b58,Func58b58_
 0x00058c38,50,Func58c38,Func58c38_
+0x00058c6c,69,Func58c6c,Func58c6c_
 0x00058cb4,98,Func58cb4,Func58cb4_
 0x00058d18,49,Func58d18,Func58d18_
+0x00058d4c,42,Func58d4c,Func58d4c_
+0x00058d78,48,Func58d78,Func58d78_
 0x00058da8,63,Func58da8,Func58da8_
 0x00058de8,63,Func58de8,Func58de8_
 0x00058e28,77,Func58e28,Func58e28_
