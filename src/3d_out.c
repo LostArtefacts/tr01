@@ -3,50 +3,6 @@
 static sint32 xgen_ymin;
 static sint32 xgen_ymax;
 
-typedef struct
-{
-    sint32 Xleft;
-    sint32 Xright;
-} XBUF_X;
-
-typedef struct
-{
-    sint32 Xleft;
-    sint32 Gleft;
-    sint32 Xright;
-    sint32 Gright;
-} XBUF_XG;
-
-typedef struct
-{
-    sint32 Xleft;
-    sint32 Gleft;
-    sint32 Uleft;
-    sint32 Vleft;
-    sint32 Xright;
-    sint32 Gright;
-    sint32 Uright;
-    sint32 Vright;
-} XBUF_XGUV;
-
-typedef struct
-{
-    sint32 Xleft;
-    sint32 Gleft;
-    float UOZleft;
-    float VOZleft;
-    float OOZleft;
-    sint32 Xright;
-    sint32 Gright;
-    float UOZright;
-    float VOZright;
-    float OOZright;
-} XBUF_PERSP_FP;
-
-extern XBUF_X xbuffer[];
-extern uint8 *phd_winptr;
-extern sint32 phd_scrwidth;
-
 int xgen_x(sint16 *iptr);
 int xgen_xg(sint16 *iptr);
 int xgen_xguv(sint16 *iptr);
@@ -133,7 +89,7 @@ int xgen_x(sint16 *iptr)
             x = ptr1->xs;
             x_add = ((ptr2->xs - x) << 16) / ydif;
             x = (x << 16) + 0x0ffff;
-            xptr = xbuffer + y1;
+            xptr = ((XBUF_X *)xbuffer) + y1;
             for (; y1 < y2; y1++, xptr++)
             {
                 x += x_add;
@@ -148,7 +104,7 @@ int xgen_x(sint16 *iptr)
             x = ptr2->xs;
             x_add = ((ptr1->xs - x) << 16) / ydif;
             x = (x << 16) + 0x0001;
-            xptr = xbuffer + y2;
+            xptr = ((XBUF_X *)xbuffer) + y2;
             for (; y2 < y1; y2++, xptr++)
             {
                 x += x_add;

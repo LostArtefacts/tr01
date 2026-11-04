@@ -1,29 +1,6 @@
 #include "3dglodef.h"
 
-typedef struct
-{
-    float xv, yv, zv;
-    float xs, ys;
-    float u, v;
-    float g;
-} POINT_INFO;
-
-typedef struct
-{
-    sint16 xs;
-    sint16 ys;
-    sint16 g;
-    float ooz;
-    float u;
-    float v;
-} OUTPUT_INFO;
-
 VERTEX_INFO v_buffer[20];
-
-extern float phd_leftfloat;
-extern float phd_rightfloat;
-extern float phd_topfloat;
-extern float phd_bottomfloat;
 
 int visible_zclip(PHD_VBUF *vn1, PHD_VBUF *vn2, PHD_VBUF *vn3);
 

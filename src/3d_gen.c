@@ -5,17 +5,8 @@
 #define CLAMP_XY 32760
 #define DPQ_START 12288
 
-extern sint32 matrix_stack[];
-extern float phd_leftfloat, phd_rightfloat, phd_topfloat, phd_bottomfloat;
-extern PHD_VECTOR ls_vector_view;
-extern PHD_ANGLE phd_ls_yaw, phd_ls_pitch;
-extern sint32 sort3d_buffer[][2];
-extern sint16 info3d_buffer[];
 extern void (*poly_draw_routines[])(sint16 *);
-extern uint8 *phd_winptr;
-extern sint32 phd_viewdist, phd_scrwidth, phd_scrheight;
 
-void phd_GetMatrixAngles(PHD_ANGLE *dest);
 void phd_UnitMatrix(void);
 sint16 *calc_vertice_light(sint16 *objptr);
 void do_quickysorty(int left, int right);

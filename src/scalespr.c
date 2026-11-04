@@ -2,10 +2,6 @@
 
 #define DPQ_START 12288
 
-extern sint32 phd_viewdist;
-extern uint8 *phd_winptr;
-extern sint32 phd_scrwidth;
-
 void S_DrawSpriteAbs(sint32 x, sint32 y, sint32 z, sint16 sprnum, sint16 shade)
 {
     PHDSPRITESTRUCT *dptr;

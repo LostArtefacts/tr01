@@ -1,8 +1,5 @@
 #include "3dglodef.h"
 
-extern uint8 *phd_winptr;
-extern sint32 phd_scrwidth;
-
 void draw_poly_line(sint16 *iptr);
 
 void Insert2DLine(sint32 x1, sint32 y1, sint32 x2, sint32 y2, sint32 z, char color)
