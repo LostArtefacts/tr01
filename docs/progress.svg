@@ -1,7 +1,7 @@
 <svg version="1.1"
-    width="751" height="674"
+    width="751" height="662"
     style="display: block; margin: 0 auto"
-    viewBox="-2 -2 751 674"
+    viewBox="-2 -2 751 662"
     xmlns="http://www.w3.org/2000/svg">
     <style>
         .todo {
@@ -46,20 +46,20 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="201.51" height="12" x="0" y="0" class="named"><title>820 · 99.76%</title></rect>
-<rect width="0.25" height="12" x="201.51" y="0" class="nonmatching"><title>1 · 0.12%</title></rect>
-<rect width="0.25" height="12" x="201.75" y="0" class="todo"><title>1 · 0.12%</title></rect>
+<rect width="275.33" height="12" x="0" y="0" class="named"><title>820 · 99.76%</title></rect>
+<rect width="0.34" height="12" x="275.33" y="0" class="nonmatching"><title>1 · 0.12%</title></rect>
+<rect width="0.34" height="12" x="275.66" y="0" class="todo"><title>1 · 0.12%</title></rect>
 </g>
-<text text-anchor="end" x="382" y="7.50">99.8%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="397" y="7"><tspan class="named">820</tspan> · <tspan class="nonmatching">1</tspan> · <tspan class="todo">1</tspan></text>
+<text text-anchor="end" x="456" y="7.50">99.8%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="471" y="7"><tspan class="named">820</tspan> · <tspan class="nonmatching">1</tspan> · <tspan class="todo">1</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="201.30" height="12" x="0" y="0" class="named"><title>220 KB · 99.65%</title></rect>
-<rect width="0.69" height="12" x="201.30" y="0" class="nonmatching"><title>1 KB · 0.34%</title></rect>
-<rect width="0.10" height="12" x="201.99" y="0" class="todo"><title>13 bytes · 0.01%</title></rect>
+<rect width="275.04" height="12" x="0" y="0" class="named"><title>220 KB · 99.65%</title></rect>
+<rect width="0.94" height="12" x="275.04" y="0" class="nonmatching"><title>1 KB · 0.34%</title></rect>
+<rect width="0.10" height="12" x="275.98" y="0" class="todo"><title>13 bytes · 0.01%</title></rect>
 </g>
-<text text-anchor="end" x="382" y="24.50">99.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="397" y="24"><tspan class="named">220 KB</tspan> · <tspan class="nonmatching">1 KB</tspan> · <tspan class="todo">13 bytes</tspan> · 93/93 data segments</text>
+<text text-anchor="end" x="456" y="24.50">99.7%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="471" y="24"><tspan class="named">220 KB</tspan> · <tspan class="nonmatching">1 KB</tspan> · <tspan class="todo">13 bytes</tspan> · 93/93 data segments</text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -888,7 +888,7 @@
 <rect width="12" height="12" x="315" y="240" class="named"><title>0x00046db1 VgaSetFont (157 bytes)</title></rect>
 </g>
 </g>
-<g transform="translate(0 376)">
+<g transform="translate(0 364)">
 <text text-anchor="start" x="0" y="7.50">By function size</text>
 <g transform="translate(0 20)">
 <rect width="45.31" height="59.41" x="0" y="0" class="named"><title>0x0001bc98 DrawLaraInt (4489 bytes)</title></rect>
@@ -1702,7 +1702,7 @@
 <rect width="1.87" height="1" x="745.13" y="251" class="named"><title>0x00038edc S_StartSyncedAudio (1 bytes)</title></rect>
 </g>
 </g>
-<g transform="translate(0 658)">
+<g transform="translate(0 646)">
 <g transform="translate(0 0)">
 <text style="font-size: 12px; " text-anchor="start" x="17" y="6">Matching, named</text>
 <rect width="12" height="12" x="0" y="0" class="named"/>
