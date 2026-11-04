@@ -2515,6 +2515,7 @@ address,size,name,symbol
 0x001300d4,1,__nheap_clean,___nheap_clean
 0x001300d5,1,__fheap_clean,___fheap_clean
 0x001300d8,4,__OpenStreams,___OpenStreams
+0x001300e8,8,Data1300e8,_Data1300e8
 0x00130380,128,FPArea,_FPArea
 0x00130400,4,loop_count,_loop_count
 0x00130404,4,__minreal,___minreal
