@@ -2201,6 +2201,7 @@ address,size,name,symbol
 0x000c66e0,4,__argc,___argc
 0x000c66e4,4,_argv,__argv
 0x000c66e4,4,__argv,___argv
+0x000c66e8,856,Datac66e8,_Datac66e8
 0x000c6a40,520,__iob,___iob
 0x000c6c48,1,__tmpfnext,___tmpfnext
 0x000c6c49,4,_fmode,__fmode
