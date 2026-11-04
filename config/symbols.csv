@@ -1323,7 +1323,7 @@ address,size,name,symbol
 0x00056075,14,toupper,toupper_
 0x00056075,14,_toupper,_toupper_
 0x00056083,29,getche,getche_
-0x000560a0,109,Func560a0,Func560a0_
+0x000560a0,109,atoi,atoi_
 0x0005610d,77,memmove,memmove_
 0x0005615a,71,stricmp,stricmp_
 0x0005615a,71,strcmpi,strcmpi_
@@ -1571,7 +1571,7 @@ address,size,name,symbol
 0x0006f597,105,fgets,fgets_
 0x0006f600,69,strdup,strdup_
 0x0006f600,69,_strdup,_strdup_
-0x0006f645,109,Func6f645,
+0x0006f645,109,atol,atol_
 0x0006f6b2,499,strtod,strtod_
 0x00070d17,15896,Func70d17,
 0x00074188,2532,Func74188,
@@ -1825,6 +1825,7 @@ address,size,name,symbol
 0x000c1410,20,Datac1410,_Datac1410
 0x000c15d4,26,__diyr,___diyr
 0x000c15ee,26,__dilyr,___dilyr
+0x000c1608,257,_IsTable,__IsTable
 0x000c170c,8,_HugeValue,__HugeValue
 0x000c1734,80,_BigPow10Table,__BigPow10Table
 0x000c1784,28,Msgs,_Msgs
