@@ -1168,12 +1168,14 @@ address,size,name,symbol
 0x00051f48,193,__Init_Argv,__Init_Argv_
 0x00052009,271,_SplitParms,_SplitParms_
 0x00052118,1,Func52118,Func52118_
+0x00052119,103,Func52119,Func52119_
 0x00052180,70,Func52180,Func52180_
-0x000521c6,184,Func521c6,Func521c6_
+0x000521c6,187,Func521c6,Func521c6_
 0x00052281,44,Func52281,Func52281_
 0x000522ad,44,Func522ad,Func522ad_
-0x000522d9,121,Func522d9,Func522d9_
+0x000522d9,124,Func522d9,Func522d9_
 0x00052355,89,Func52355,Func52355_
+0x000523ae,1,Func523ae,Func523ae_
 0x000523af,5,flushall,flushall_
 0x000523b4,47,__flushall,__flushall_
 0x000523e3,40,segread,segread_
