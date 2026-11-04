@@ -1408,6 +1408,7 @@ address,size,name,symbol
 0x00058264,306,Func58264,Func58264_
 0x00058398,30,Func58398,Func58398_
 0x000583b8,35,Func583b8,Func583b8_
+0x000583dc,5,Func583dc,Func583dc_
 0x000583e4,96,Func583e4,Func583e4_
 0x00058444,89,Func58444,Func58444_
 0x000584a0,13,Func584a0,Func584a0_
@@ -2244,6 +2245,7 @@ address,size,name,symbol
 0x000c6d20,1,_osminor,__osminor
 0x000c6d21,4,_FPE_handler,__FPE_handler
 0x000c6d21,4,__FPE_handler,___FPE_handler
+0x000c6d58,4,Datac6d58,_Datac6d58
 0x000c6d70,36,__start_dst,___start_dst
 0x000c6d94,36,__end_dst,___end_dst
 0x000c6db8,4,timezone,_timezone
