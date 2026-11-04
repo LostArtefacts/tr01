@@ -1878,6 +1878,7 @@ address,size,name,symbol
 0x00090000,616,key_real_code,_key_real_code
 0x00090268,0,key_real_code_end,_key_real_code_end
 0x000a0000,8,Dataa0000,_Dataa0000
+0x000b0000,0,Datab0000,_Datab0000
 0x000c0000,4,_nullarea,__nullarea
 0x000c11f0,38,Datac11f0,_Datac11f0
 0x000c1216,31,Datac1216,_Datac1216
@@ -2439,6 +2440,7 @@ address,size,name,symbol
 0x000c85fc,4,Datac85fc,_Datac85fc
 0x000c8600,4,Datac8600,_Datac8600
 0x000c89e0,80,Datac89e0,_Datac89e0
+0x000c8a30,56,Datac8a30,_Datac8a30
 0x000ca6f0,80,Dataca6f0,_Dataca6f0
 0x000ca740,80,Dataca740,_Dataca740
 0x000ca790,80,Dataca790,_Dataca790
