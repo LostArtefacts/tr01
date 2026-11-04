@@ -4,6 +4,8 @@ _TEXT segment para public use32 'CODE'
 _TEXT ends
 _BSS segment dword public use32 'BSS'
 _BSS ends
+OBJ3 segment para public use32 'OBJ3DATA'
+OBJ3 ends
 
     assume cs:FLAT, ds:FLAT, es:FLAT, ss:FLAT
 
@@ -12,7 +14,6 @@ _BSS ends
     extrn Func59064_:near
     extrn Func591ac_:near
     extrn Func59228_:near
-    extrn _Dataa0000:byte
 
     public Func59290_
     public Func59338_
@@ -35,6 +36,7 @@ _BSS ends
     public Func59885_
     public Func59891_
     public Func598b1_
+    public _Dataa0000
 
 _TEXT segment
     db "$Id: VESA.C 1.5 1995/06/15 11:50:08 MFC Exp $"
@@ -394,7 +396,7 @@ Func595f3_ proc near
 Func595f3_ endp
 Func59604_ proc near
     pusha
-    mov dword ptr [_Dataa0000+4], ebx
+    mov dword ptr [Da0004], ebx
     cld
     db 089h, 0f5h
     mov ah, 01h
@@ -402,7 +404,7 @@ Func59604_ proc near
     mov dx, 03c4h
     out dx, ax
     mov edi, 0a0000h
-    add edi, dword ptr [_Dataa0000+4]
+    add edi, dword ptr [Da0004]
     mov ecx, 0fa0h
 L59628::
     movs byte ptr es:[edi], byte ptr ds:[esi]
@@ -421,7 +423,7 @@ L59628::
     mov dx, 03c4h
     out dx, ax
     mov edi, 0a0000h
-    add edi, dword ptr [_Dataa0000+4]
+    add edi, dword ptr [Da0004]
     mov ecx, 0fa0h
 L59657::
     movs byte ptr es:[edi], byte ptr ds:[esi]
@@ -440,7 +442,7 @@ L59657::
     mov dx, 03c4h
     out dx, ax
     mov edi, 0a0000h
-    add edi, dword ptr [_Dataa0000+4]
+    add edi, dword ptr [Da0004]
     mov ecx, 0fa0h
 L59686::
     movs byte ptr es:[edi], byte ptr ds:[esi]
@@ -459,7 +461,7 @@ L59686::
     mov dx, 03c4h
     out dx, ax
     mov edi, 0a0000h
-    add edi, dword ptr [_Dataa0000+4]
+    add edi, dword ptr [Da0004]
     mov ecx, 0fa0h
 L596b5::
     movs byte ptr es:[edi], byte ptr ds:[esi]
@@ -476,7 +478,7 @@ L596b5::
 Func59604_ endp
 Func596c9_ proc near
     pusha
-    mov dword ptr [_Dataa0000+4], ebx
+    mov dword ptr [Da0004], ebx
     cld
     db 089h, 0f5h
     mov ah, 01h
@@ -484,7 +486,7 @@ Func596c9_ proc near
     mov dx, 03c4h
     out dx, ax
     mov edi, 0a0000h
-    add edi, dword ptr [_Dataa0000+4]
+    add edi, dword ptr [Da0004]
     mov ecx, 012c0h
 L596ed::
     movs byte ptr es:[edi], byte ptr ds:[esi]
@@ -503,7 +505,7 @@ L596ed::
     mov dx, 03c4h
     out dx, ax
     mov edi, 0a0000h
-    add edi, dword ptr [_Dataa0000+4]
+    add edi, dword ptr [Da0004]
     mov ecx, 012c0h
 L5971c::
     movs byte ptr es:[edi], byte ptr ds:[esi]
@@ -522,7 +524,7 @@ L5971c::
     mov dx, 03c4h
     out dx, ax
     mov edi, 0a0000h
-    add edi, dword ptr [_Dataa0000+4]
+    add edi, dword ptr [Da0004]
     mov ecx, 012c0h
 L5974b::
     movs byte ptr es:[edi], byte ptr ds:[esi]
@@ -541,7 +543,7 @@ L5974b::
     mov dx, 03c4h
     out dx, ax
     mov edi, 0a0000h
-    add edi, dword ptr [_Dataa0000+4]
+    add edi, dword ptr [Da0004]
     mov ecx, 012c0h
 L5977a::
     movs byte ptr es:[edi], byte ptr ds:[esi]
@@ -558,7 +560,7 @@ L5977a::
 Func596c9_ endp
 Func5978e_ proc near
     pusha
-    mov dword ptr [_Dataa0000+4], ebx
+    mov dword ptr [Da0004], ebx
     cld
     add esi, 03020h
     db 089h, 0f5h
@@ -567,7 +569,7 @@ Func5978e_ proc near
     mov dx, 03c4h
     out dx, ax
     mov edi, 0a0000h
-    add edi, dword ptr [_Dataa0000+4]
+    add edi, dword ptr [Da0004]
     mov dx, 0c8h
 L597b7::
     mov ecx, 014h
@@ -591,7 +593,7 @@ L597bc::
     mov dx, 03c4h
     out dx, ax
     mov edi, 0a0000h
-    add edi, dword ptr [_Dataa0000+4]
+    add edi, dword ptr [Da0004]
     mov dx, 0c8h
 L597f1::
     mov ecx, 014h
@@ -615,7 +617,7 @@ L597f6::
     mov dx, 03c4h
     out dx, ax
     mov edi, 0a0000h
-    add edi, dword ptr [_Dataa0000+4]
+    add edi, dword ptr [Da0004]
     mov dx, 0c8h
 L5982b::
     mov ecx, 014h
@@ -639,7 +641,7 @@ L59830::
     mov dx, 03c4h
     out dx, ax
     mov edi, 0a0000h
-    add edi, dword ptr [_Dataa0000+4]
+    add edi, dword ptr [Da0004]
     mov dx, 0c8h
 L59865::
     mov ecx, 014h
@@ -732,5 +734,12 @@ B1304b8 label byte
 B1304c0 label byte
     db 8 dup(?)
 _BSS ends
+
+OBJ3 segment
+_Dataa0000 label byte
+    db 000h, 000h, 000h, 000h
+Da0004 label byte
+    db 000h, 000h, 000h, 000h
+OBJ3 ends
 
     end
