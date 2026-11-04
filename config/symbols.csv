@@ -1513,6 +1513,7 @@ address,size,name,symbol
 0x0005c778,1,Func5c778,Func5c778_
 0x0005c779,0,Data5c779,_Data5c779
 0x0005cfdd,80,Func5cfdd,Func5cfdd_
+0x0005d02d,180,Func5d02d,Func5d02d_
 0x0005d0e1,1,Func5d0e1,Func5d0e1_
 0x0005d0e2,51,strcat,strcat_
 0x0005d115,251,read,read_
