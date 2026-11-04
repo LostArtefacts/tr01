@@ -35,10 +35,33 @@ typedef struct
     uint8 keys_held;
 } KEYSTUFF;
 
-extern volatile KEYSTUFF *keydata;
-extern uint8 joy_fire;
-extern int joy1_x;
-extern int joy1_y;
+typedef struct
+{
+    uint8 ctrl_break;
+} BRKSTUFF;
+
+typedef struct
+{
+    uint8 crit_err;
+} CRITSTUFF;
+
+typedef struct
+{
+    uint32 old_pmoff;
+    uint16 old_pmseg;
+    uint32 clock;
+    uint16 vbl_count;
+    uint16 timer;
+    uint16 vbl_overflow;
+    uint16 vbl_max;
+    uint8 palette[256 * 3];
+    uint8 temp_pal[256 * 3];
+    void *pal_ptr;
+    uint32 fade_cnt;
+    uint32 fade_dec;
+    uint8 fade_flag;
+    uint8 pal_flag;
+} TODSTUFF;
 
 enum key_codes
 {
@@ -84,7 +107,34 @@ enum key_codes
     K_DELETE = 0xd3
 };
 #define rawkey(k) (keydata->keymap[k])
+
 extern int file_len;
+extern volatile TODSTUFF toddata;
+extern volatile KEYSTUFF *keydata;
+extern volatile BRKSTUFF *brkdata;
+extern volatile CRITSTUFF *critdata;
+extern SETUP *gamedata;
+extern void (*int_func)(void);
+extern sint16 mbuttons;
+extern int joy1_x;
+extern int joy1_y;
+extern uint8 joy_fire;
+extern int joy_hat;
+extern int joy_throttle;
+extern int joy_failed;
+extern char txt_col;
+extern uint8 *txt_screen;
+
+void CDLoop(void);
+uint8 *FileLoad(char *name, void *where, uint32 flags);
+int SwitchVideoMode(SETUP *pSetup);
+void ScreenClear(void);
+void ScreenDump(void);
+void ScreenPartialDump(void);
+void TempVideoRemove(void);
+void FadeToPal(uint32 count, uint8 *pal);
+void FadeWait(void);
+void JoyRead(void);
 
 extern volatile sint32 clock_ticks;
 extern sint32 old_clock_ticks;
@@ -98,20 +148,11 @@ sint32 Sync(void);
     value [eax] \
     modify [ebx];
 
-void CDLoop(void);
-uint8 *FileLoad(char *name, void *where, uint32 flags);
-int SwitchVideoMode(SETUP *pSetup);
-void ScreenClear(void);
-void ScreenDump(void);
-void ScreenPartialDump(void);
-void TempVideoRemove(void);
-void FadeToPal(uint32 count, uint8 *pal);
-void FadeWait(void);
-void JoyRead(void);
 void ShellInit(SETUP *pSetup, uint32 dwFlags);
 void ShellExit(char *szFormat, ...);
 #pragma aux ShellExit aborts;
 uint32 SoundGetSOSHandle(void);
 uint32 SoundGetSOSDriver(void);
+int JoyReadAxes(uint32 mask);
 
 #endif

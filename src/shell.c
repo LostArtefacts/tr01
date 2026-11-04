@@ -38,16 +38,6 @@ typedef struct
 
 typedef struct
 {
-    uint8 ctrl_break;
-} BRKSTUFF;
-
-typedef struct
-{
-    uint8 crit_err;
-} CRITSTUFF;
-
-typedef struct
-{
     int mode;
     int width;
     int height;
@@ -63,49 +53,10 @@ typedef struct
     uint32 size;
 } REALBLOCK;
 
-extern void (*int_func)(void);
-extern SETUP *gamedata;
-extern uint32 shell_flags;
-extern uint8 old_video_mode;
-extern uint8 old_text_rows;
-extern void *dos_buffer;
-extern int joy_found;
-extern int joy_failed;
-extern char txt_col;
-typedef struct
-{
-    uint32 old_pmoff;
-    uint16 old_pmseg;
-    uint32 clock;
-    uint16 vbl_count;
-    uint16 timer;
-    uint16 vbl_overflow;
-    uint16 vbl_max;
-    uint8 palette[256 * 3];
-    uint8 temp_pal[256 * 3];
-    void *pal_ptr;
-    uint32 fade_cnt;
-    uint32 fade_dec;
-    uint8 fade_flag;
-    uint8 pal_flag;
-} TODSTUFF;
-
 extern int video_depth;
-extern int video_aspect;
 extern uint16 bank_cnt;
-extern uint8 *txt_screen;
 extern int txt_width;
 extern int txt_pitch;
-extern sint16 mbuttons;
-extern volatile sint16 joy_x_raw;
-extern volatile sint16 joy_y_raw;
-extern volatile sint16 joy_z_raw;
-extern volatile sint16 joy_r_raw;
-extern int joy_x;
-extern int joy_y;
-extern int joy_z;
-extern volatile BRKSTUFF *brkdata;
-extern volatile CRITSTUFF *critdata;
 extern uint8 key_real_code[];
 extern uint8 key_real_code_end[];
 
@@ -113,6 +64,16 @@ void KeyHandler(void);
 void BreakHandler(void);
 void CritHandler(void);
 
+volatile KEYSTUFF *keydata;
+volatile BRKSTUFF *brkdata;
+volatile CRITSTUFF *critdata;
+SETUP *gamedata;
+void (*int_func)(void);
+volatile sint32 clock_ticks;
+sint32 old_clock_ticks;
+sint16 mbuttons;
+int joy_failed;
+int joy_found;
 int file_len = 0;
 volatile TODSTUFF toddata = {0};
 int joy1_x = 0;
@@ -171,6 +132,18 @@ INTERRUPT interrupts[3] = {
     {0, 0, 0, 0, 0, 9, (void **)&keydata, key_real_code, NULL, (void (__far *)(void))KeyHandler, 336, key_real_code_end}
 };
 
+extern volatile sint16 joy_x_raw;
+extern volatile sint16 joy_y_raw;
+extern volatile sint16 joy_z_raw;
+extern volatile sint16 joy_r_raw;
+
+uint8 old_text_rows;
+int joy_x;
+int joy_y;
+int joy_z;
+void *dos_buffer;
+int video_aspect;
+
 void FadeTick(void);
 uint8 VgaGetMode(void);
 uint8 VgaGetRows(void);
@@ -186,7 +159,6 @@ void CDInit(void);
 void *MemAllocReal(uint32 size);
 void VesaDetectModes(void);
 void InterruptSet(int on, uint32 which);
-int JoyReadAxes(uint32 mask);
 void JoyDetect(void);
 void JoySetCentre(void);
 int VesaBiosGetInfo(VESAINFO *info);
@@ -209,6 +181,9 @@ void ShellExitErrno(char *szFormat, ...);
 #pragma aux ShellExitErrno aborts;
 void ShellExitMemErr(void);
 #pragma aux ShellExitMemErr aborts;
+
+uint8 old_video_mode;
+uint32 shell_flags;
 
 void TimerTick(void)
 {
