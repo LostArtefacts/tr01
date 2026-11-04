@@ -1,7 +1,13 @@
     .386p
-    .model flat
 
-    .code
+_TEXT segment para public use32 'CODE'
+_TEXT ends
+_DATA segment dword public use32 'DATA'
+_DATA ends
+
+    assume cs:FLAT, ds:FLAT, es:FLAT, ss:FLAT
+
+_TEXT segment
 
     public phd_atan_
 phd_atan_ proc near
@@ -101,7 +107,9 @@ exit:
     ret
 phd_sqrt_ endp
 
-    .data
+_TEXT ends
+
+_DATA segment
 
     public _phdtan2
 _phdtan2 label dword
@@ -498,5 +506,7 @@ _phdsintab label word
     dw 03ffbh, 03ffch, 03ffch, 03ffdh, 03ffdh, 03ffeh, 03ffeh, 03ffeh
     dw 03fffh, 03fffh, 03fffh, 04000h, 04000h, 04000h, 04000h, 04000h
     dw 04000h, 04000h
+
+_DATA ends
 
     end

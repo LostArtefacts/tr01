@@ -1,5 +1,9 @@
     .386p
-    .model flat
+
+_TEXT segment para public use32 'CODE'
+_TEXT ends
+
+    assume cs:FLAT, ds:FLAT, es:FLAT, ss:FLAT
 
     extrn _phd_bottom:dword
     extrn _phd_centerx:dword
@@ -14,7 +18,7 @@
     extrn _phd_znear:dword
     extrn _vbuf:byte
 
-    .code
+_TEXT segment
 
     public phd_FixedDivide_
 phd_FixedDivide_ proc near
@@ -407,5 +411,7 @@ phd_TransposeMatrix_ proc near
     pop     edi
     ret
 phd_TransposeMatrix_ endp
+
+_TEXT ends
 
     end
