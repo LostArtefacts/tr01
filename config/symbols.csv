@@ -1490,9 +1490,11 @@ address,size,name,symbol
 0x0005a7f5,42,Func5a7f5,Func5a7f5_
 0x0005a81f,21,Func5a81f,Func5a81f_
 0x0005a834,1,Func5a834,Func5a834_
+0x0005a835,0,Data5a835,_Data5a835
 0x0005c71b,90,Func5c71b,Func5c71b_
 0x0005c775,1,Func5c775,Func5c775_
 0x0005c778,1,Func5c778,Func5c778_
+0x0005c779,0,Data5c779,_Data5c779
 0x0005cfdd,80,Func5cfdd,Func5cfdd_
 0x0005d0e1,1,Func5d0e1,Func5d0e1_
 0x0005d0e2,51,strcat,strcat_
