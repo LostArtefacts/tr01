@@ -58,15 +58,15 @@
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="24"><tspan class="named">221 KB</tspan> · 132/132 data segments</text>
 <text text-anchor="start" x="0" y="41.50">Executable code</text>
 <g transform="translate(130 35.50)">
-<rect width="194.72" height="12" x="0" y="0" class="named"><title>312 KB · 59.73%</title></rect>
-<rect width="131.28" height="12" x="194.72" y="0" class="decompiled"><title>211 KB · 40.27%</title></rect>
+<rect width="235.88" height="12" x="0" y="0" class="named"><title>378 KB · 72.35%</title></rect>
+<rect width="90.12" height="12" x="235.88" y="0" class="decompiled"><title>145 KB · 27.65%</title></rect>
 </g>
 <text text-anchor="end" x="516" y="41.50">100.0%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="41"><tspan class="named">312 KB</tspan> · <tspan class="decompiled">211 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="41"><tspan class="named">378 KB</tspan> · <tspan class="decompiled">145 KB</tspan></text>
 <text text-anchor="start" x="0" y="58.50">Executable data</text>
 <g transform="translate(130 52.50)">
-<rect width="209.13" height="12" x="0" y="0" class="named"><title>30 KB · 64.15%</title></rect>
-<rect width="116.87" height="12" x="209.13" y="0" class="decompiled"><title>17 KB · 35.85%</title></rect>
+<rect width="210.24" height="12" x="0" y="0" class="named"><title>30 KB · 64.49%</title></rect>
+<rect width="115.76" height="12" x="210.24" y="0" class="decompiled"><title>17 KB · 35.51%</title></rect>
 </g>
 <text text-anchor="end" x="516" y="58.50">100.0%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="58"><tspan class="named">30 KB</tspan> · <tspan class="decompiled">17 KB</tspan></text>
@@ -79,11 +79,11 @@
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="75"><tspan class="named">420 KB</tspan> · <tspan class="decompiled">1 KB</tspan></text>
 <text text-anchor="start" x="0" y="92.50">Executable image</text>
 <g transform="translate(130 86.50)">
-<rect width="255.41" height="12" x="0" y="0" class="named"><title>825 KB · 78.35%</title></rect>
-<rect width="70.59" height="12" x="255.41" y="0" class="decompiled"><title>228 KB · 21.65%</title></rect>
+<rect width="275.90" height="12" x="0" y="0" class="named"><title>891 KB · 84.63%</title></rect>
+<rect width="50.10" height="12" x="275.90" y="0" class="decompiled"><title>162 KB · 15.37%</title></rect>
 </g>
 <text text-anchor="end" x="516" y="92.50">100.0%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="92"><tspan class="named">825 KB</tspan> · <tspan class="decompiled">228 KB</tspan> · 0 blob pieces left</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="92"><tspan class="named">891 KB</tspan> · <tspan class="decompiled">162 KB</tspan> · 0 blob pieces left</text>
 </g>
 <g transform="translate(0 145)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
