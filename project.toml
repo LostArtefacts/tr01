@@ -37,6 +37,7 @@ sosload = ["-bt=dos", "-od", "-s", "-3r", "-zq"]
 sostimer = ["-bt=dos", "-od", "-s", "-3r", "-zq"]
 sosdetect = ["-bt=dos", "-od", "-s", "-3r", "-zq"]
 sosdigi = ["-bt=dos", "-od", "-s", "-3r", "-zq"]
+player = ["-bt=dos", "-ot", "-od", "-s", "-5r", "-d2", "-zq"]
 
 [symbols]
 libs = ["LIB386/DOS/CLIB3R.LIB", "LIB386/MATH387R.LIB"]  # in the Watcom directory
@@ -88,7 +89,7 @@ search = ["~/opt/dosbox-staging*/dosbox", "~/data.local/work/dosbox-staging*/dos
 # Modules the original compiled from C that src/ still has as assembly:
 # yellow in the chart however clean the assembly, until they are C.
 compiled = [
-    "player", "fmvscrn",
+    "fmvscrn",
     "rplgraph",
     "sosdata",
 ]

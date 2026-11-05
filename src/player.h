@@ -26,12 +26,27 @@ typedef struct
 typedef struct
 {
     MOVIEHEADER header;
-    char reserved[0xc8];
+    char reserved[0x20];
+    float frame_rate;
+    char reserved2[0x80];
+    int start_ticks;
+    int fielde4;
+    int elapsed;
+    int resume_ticks;
+    int pause_ticks;
+    int fieldf4;
+    char reserved3[0xc];
     int vdf;
+    int field108;
+    char reserved4[0x28];
+    int paused;
+    int field138;
+    char reserved5[0x28];
+    int timer_started;
 } MOVIEHANDLE, *LPMOVIEHANDLE;
 
-typedef void *LPVIDEOHANDLE;
-typedef void *LPSOUNDHANDLE;
+typedef struct VIDEOHANDLE *LPVIDEOHANDLE;
+typedef struct SOUNDHANDLE *LPSOUNDHANDLE;
 
 PLRESULT Player_InitPlaybackSystem(ULONG sos_handle, void *sos_driver);
 PLRESULT Player_ShutDownPlaybackSystem(void);
@@ -39,7 +54,7 @@ PLRESULT Player_InitMovie(LPMOVIEHANDLE *mhandle, void *a, void *b, char *filena
 PLRESULT Player_ShutDownMovie(LPMOVIEHANDLE mhandle);
 PLRESULT Player_InitVideo(LPVIDEOHANDLE *vhandle, int x_size, int y_size, int xoffset, int yoffset, int a, int b, int width, int height, int c, int flags);
 PLRESULT Player_ShutDownVideo(LPVIDEOHANDLE vhandle);
-PLRESULT Player_InitSound(LPSOUNDHANDLE *shandle, int buffer_size, int compression, int pcm, int a, int channels, int rate, int precision);
+PLRESULT Player_InitSound(LPSOUNDHANDLE *shandle, int buffer_size, int compression, int pcm, int a, int channels, int rate, ULONG precision);
 PLRESULT Player_ShutDownSound(LPSOUNDHANDLE shandle);
 PLRESULT Player_InitMoviePlayback(LPMOVIEHANDLE mhandle, LPVIDEOHANDLE vhandle, LPSOUNDHANDLE shandle);
 PLRESULT Player_InitPlaybackMode(void);

@@ -902,7 +902,7 @@ address,size,name,symbol
 0x00049300,625,Player_InitSound,Player_InitSound_
 0x00049574,77,Player_StartSound,Player_StartSound_
 0x000495c4,51,Func495c4,Func495c4_
-0x000495f8,127,Func495f8,Func495f8_
+0x000495f8,127,Func495f8,_Func495f8
 0x00049678,43,Player_ShutDownPlaybackSystem,Player_ShutDownPlaybackSystem_
 0x000496a4,168,Player_ShutDownSound,Player_ShutDownSound_
 0x0004974c,185,Player_StartTimer,Player_StartTimer_
@@ -2301,6 +2301,8 @@ address,size,name,symbol
 0x000c66c0,4,digi_inst,_digi_inst
 0x000c66c4,1,setup_path,_setup_path
 0x000c66c8,4,GpSetupFilePath,_GpSetupFilePath
+0x000c66cc,4,player_ticks,_player_ticks
+0x000c66d0,4,player_mode,_player_mode
 0x000c66d8,4,_GDAptr,__GDAptr
 0x000c66dc,2,_D16Infoseg,__D16Infoseg
 0x000c66de,2,_x386_zero_base_selector,__x386_zero_base_selector
@@ -2662,6 +2664,10 @@ address,size,name,symbol
 0x0012ff54,4,digi_ready,_digi_ready
 0x0012ff58,4,sound_extra,_sound_extra
 0x0012ff5c,4,sound_spare,_sound_spare
+0x0012ff60,4,player_sound,_player_sound
+0x0012ff64,4,player_sound_driver_handle,_player_sound_driver_handle
+0x0012ff68,4,player_driver,_player_driver
+0x0012ff6c,4,player_timer_handle,_player_timer_handle
 0x0012ff70,4,__MiniHeapFreeRover,___MiniHeapFreeRover
 0x0012ff74,36,The_time,
 0x0012ffaa,2,joy_x_raw,_joy_x_raw

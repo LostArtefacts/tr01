@@ -89,7 +89,7 @@ file build/lib/clib3r_printf.obj
 file build/lib/clib3r_exit.obj
 file build/lib/clib3r_remove.obj
 file build/obj/sound.obj
-file build/obj/player.obj
+file build/obj/player.obj empty 6 7 8
 file build/lib/clib3r_nfree.obj
 file build/lib/clib3r_fwrite.obj
 file build/lib/clib3r_time.obj
