@@ -1,112 +1,127 @@
-    .586p
+    .386p
+
+KEYSTUFF struct
+keymap      db 256 dup(?)
+keybuf      db 64 dup(?)
+bufin       db ?
+bufout      db ?
+bufchars    db ?
+extended    db ?
+last_key    db ?
+keys_held   db ?
+KEYSTUFF ends
+
+KEYDATA segment use32 at 0
+KEYDATA ends
 
 OBJ2 segment para public use16 'OBJ2CODE'
-    assume cs:OBJ2, ds:OBJ2
+    assume cs:OBJ2, ds:KEYDATA
 
     public _key_real_code
     public _key_real_code_end
 
-_key_real_code label byte
-    db 336 dup(0)
+_key_real_code KEYSTUFF <>
+    org 150h
 
+key_handler:
     push ax
     push bx
     push cx
     push ds
     mov ax, cs
-    db 02dh, 015h, 000h
+    sub ax, (key_handler - _key_real_code) shr 4
     mov ds, ax
     xor ax, ax
     xor bx, bx
     in al, 60h
     mov bl, al
-    db 067h, 0a0h, 043h, 001h, 000h, 000h
+    mov al, ds:[KEYSTUFF.extended]
     mov cx, bx
     test al, al
-    jne L901b3
+    jne prefixed_code
     inc al
     cmp bl, 0e0h
-    je L90217
+    je set_prefix
     inc al
     cmp bl, 0e1h
-    je L90217
+    je set_prefix
     test bl, 80h
-    jne L9019d
+    jne key_released
     mov al, byte ptr [bx]
     test al, al
     mov al, bh
-    jne L9021d
-    db 067h, 0feh, 005h, 045h, 001h, 000h, 000h
+    jne buffer_key
+    inc ds:[KEYSTUFF.keys_held]
     mov byte ptr [bx], 1h
-    jmp L9021d
-L9019d:
+    jmp buffer_key
+key_released:
     and bl, 7fh
     mov al, byte ptr [bx]
     test al, al
-    je L9021d
+    je buffer_key
     mov al, bh
-    db 067h, 0feh, 00dh, 045h, 001h, 000h, 000h
+    dec ds:[KEYSTUFF.keys_held]
     mov byte ptr [bx], al
-    jmp L9021d
-L901b3:
+    jmp buffer_key
+prefixed_code:
     dec al
-    jne L901df
+    jne pause_sequence
     test bl, 80h
-    jne L901d0
+    jne prefixed_release
     or bl, 80h
     or al, byte ptr [bx]
-    jne L90215
+    jne end_prefix
     inc al
-    db 067h, 0feh, 005h, 045h, 001h, 000h, 000h
+    inc ds:[KEYSTUFF.keys_held]
     mov byte ptr [bx], al
-    jmp L90215
-L901d0:
+    jmp end_prefix
+prefixed_release:
     or al, byte ptr [bx]
-    je L90217
-    db 067h, 0feh, 00dh, 045h, 001h, 000h, 000h
+    je set_prefix
+    dec ds:[KEYSTUFF.keys_held]
     mov byte ptr [bx], bh
-    jmp L90215
-L901df:
+    jmp end_prefix
+pause_sequence:
     add al, 2h
     cmp al, 3h
-    je L90217
+    je set_prefix
     inc ch
     cmp bl, 45h
-    jne L90215
-    db 067h, 0a0h, 0c5h, 000h, 000h, 000h
+    jne end_prefix
+    mov al, ds:[KEYSTUFF.keymap+0c5h]
     test al, al
-    jne L90207
+    jne pause_released
     inc al
-    db 067h, 0feh, 005h, 045h, 001h, 000h, 000h
-    db 067h, 0a2h, 0c5h, 000h, 000h, 000h
-    jmp L90215
-L90207:
-    db 067h, 0feh, 00dh, 045h, 001h, 000h, 000h
-    db 067h, 088h, 03dh, 0c5h, 000h, 000h, 000h
-L90215:
+    inc ds:[KEYSTUFF.keys_held]
+    mov ds:[KEYSTUFF.keymap+0c5h], al
+    jmp end_prefix
+pause_released:
+    dec ds:[KEYSTUFF.keys_held]
+    mov ds:[KEYSTUFF.keymap+0c5h], bh
+end_prefix:
     xor al, al
-L90217:
-    db 067h, 0a2h, 043h, 001h, 000h, 000h
-L9021d:
+set_prefix:
+    mov ds:[KEYSTUFF.extended], al
+buffer_key:
     or al, ch
-    jne L9025f
+    jne acknowledge
     test cl, 80h
-    jne L9025f
+    jne acknowledge
     cmp bl, 0aah
-    je L9025f
-    db 067h, 08ah, 00dh, 042h, 001h, 000h, 000h
+    je acknowledge
+    mov cl, ds:[KEYSTUFF.bufchars]
     cmp cl, 40h
-    je L9025f
+    je acknowledge
     inc cl
     mov al, bl
-    db 067h, 08ah, 01dh, 040h, 001h, 000h, 000h
-    db 067h, 0a2h, 044h, 001h, 000h, 000h
-    db 067h, 088h, 00dh, 042h, 001h, 000h, 000h
-    mov byte ptr [bx+100h], al
+    mov bl, ds:[KEYSTUFF.bufin]
+    mov ds:[KEYSTUFF.last_key], al
+    mov ds:[KEYSTUFF.bufchars], cl
+    mov [bx].KEYSTUFF.keybuf, al
     inc bl
     and bl, 3fh
-    db 067h, 088h, 01dh, 040h, 001h, 000h, 000h
-L9025f:
+    mov ds:[KEYSTUFF.bufin], bl
+acknowledge:
     mov al, 20h
     out 20h, al
     pop ds
