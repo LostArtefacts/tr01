@@ -58,11 +58,11 @@
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="24"><tspan class="named">221 KB</tspan> · 132/132 data segments</text>
 <text text-anchor="start" x="0" y="41.50">Executable code</text>
 <g transform="translate(130 35.50)">
-<rect width="189.73" height="12" x="0" y="0" class="named"><title>304 KB · 58.20%</title></rect>
-<rect width="136.27" height="12" x="189.73" y="0" class="decompiled"><title>219 KB · 41.80%</title></rect>
+<rect width="194.72" height="12" x="0" y="0" class="named"><title>312 KB · 59.73%</title></rect>
+<rect width="131.28" height="12" x="194.72" y="0" class="decompiled"><title>211 KB · 40.27%</title></rect>
 </g>
 <text text-anchor="end" x="516" y="41.50">100.0%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="41"><tspan class="named">304 KB</tspan> · <tspan class="decompiled">219 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="41"><tspan class="named">312 KB</tspan> · <tspan class="decompiled">211 KB</tspan></text>
 <text text-anchor="start" x="0" y="58.50">Executable data</text>
 <g transform="translate(130 52.50)">
 <rect width="209.13" height="12" x="0" y="0" class="named"><title>30 KB · 64.15%</title></rect>
@@ -79,11 +79,11 @@
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="75"><tspan class="named">420 KB</tspan> · <tspan class="decompiled">1 KB</tspan></text>
 <text text-anchor="start" x="0" y="92.50">Executable image</text>
 <g transform="translate(130 86.50)">
-<rect width="252.94" height="12" x="0" y="0" class="named"><title>817 KB · 77.59%</title></rect>
-<rect width="73.06" height="12" x="252.94" y="0" class="decompiled"><title>236 KB · 22.41%</title></rect>
+<rect width="255.41" height="12" x="0" y="0" class="named"><title>825 KB · 78.35%</title></rect>
+<rect width="70.59" height="12" x="255.41" y="0" class="decompiled"><title>228 KB · 21.65%</title></rect>
 </g>
 <text text-anchor="end" x="516" y="92.50">100.0%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="92"><tspan class="named">817 KB</tspan> · <tspan class="decompiled">236 KB</tspan> · 0 blob pieces left</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="92"><tspan class="named">825 KB</tspan> · <tspan class="decompiled">228 KB</tspan> · 0 blob pieces left</text>
 </g>
 <g transform="translate(0 145)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
