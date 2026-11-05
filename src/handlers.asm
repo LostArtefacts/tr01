@@ -1,13 +1,20 @@
-    .586p
+    .386p
+    .model flat
 
-_TEXT segment dword public use32 'CODE'
-_TEXT ends
+KEYSTUFF struct
+keymap      db 256 dup(?)
+keybuf      db 64 dup(?)
+bufin       db ?
+bufout      db ?
+bufchars    db ?
+extended    db ?
+last_key    db ?
+keys_held   db ?
+KEYSTUFF ends
 
-    assume cs:FLAT, ds:FLAT, es:FLAT, ss:FLAT
-
-    extrn _brkdata:byte
-    extrn _critdata:byte
-    extrn _keydata:byte
+    extrn _brkdata:dword
+    extrn _critdata:dword
+    extrn _keydata:dword
 
     public KeyHandler_
     public BreakHandler_
@@ -16,7 +23,7 @@ _TEXT ends
     public BcdToBin_
     public TimeRestore_
 
-_TEXT segment
+    .code
 KeyHandler_ proc near
     push eax
     push ebx
@@ -30,93 +37,93 @@ KeyHandler_ proc near
     mov edi, dword ptr [_keydata]
     in al, 060h
     mov bl, al
-    mov al, byte ptr [edi+0143h]
+    mov al, byte ptr [edi].KEYSTUFF.extended
     mov ecx, ebx
     test al, al
-    jne short L4a8c0
+    jne prefixed_code
     inc al
     cmp bl, 0e0h
-    je near ptr L4a923
+    je set_prefix
     inc al
     cmp bl, 0e1h
-    je near ptr L4a923
+    je set_prefix
     test bl, 080h
-    jne short L4a8a9
+    jne key_released
     mov al, byte ptr [ebx+edi*1]
     test al, al
     mov al, bh
-    jne near ptr L4a929
-    inc byte ptr [edi+0145h]
+    jne buffer_key
+    inc byte ptr [edi].KEYSTUFF.keys_held
     mov byte ptr [ebx+edi*1], 01h
-    jmp near ptr L4a929
-L4a8a9:
+    jmp buffer_key
+key_released:
     and bl, 07fh
     mov al, byte ptr [ebx+edi*1]
     test al, al
-    je short L4a929
+    je buffer_key
     mov al, bh
-    dec byte ptr [edi+0145h]
+    dec byte ptr [edi].KEYSTUFF.keys_held
     mov byte ptr [ebx+edi*1], al
-    jmp short L4a929
-L4a8c0:
+    jmp buffer_key
+prefixed_code:
     dec al
-    jne short L4a8ee
+    jne pause_sequence
     test bl, 080h
-    jne short L4a8de
+    jne prefixed_release
     or bl, 080h
     or al, byte ptr [ebx+edi*1]
-    jne short L4a921
+    jne end_prefix
     inc al
-    inc byte ptr [edi+0145h]
+    inc byte ptr [edi].KEYSTUFF.keys_held
     mov byte ptr [ebx+edi*1], al
-    jmp short L4a921
-L4a8de:
+    jmp end_prefix
+prefixed_release:
     or al, byte ptr [ebx+edi*1]
-    je short L4a923
-    dec byte ptr [edi+0145h]
+    je set_prefix
+    dec byte ptr [edi].KEYSTUFF.keys_held
     mov byte ptr [ebx+edi*1], ah
-    jmp short L4a921
-L4a8ee:
+    jmp end_prefix
+pause_sequence:
     add al, 02h
     cmp al, 03h
-    je short L4a923
+    je set_prefix
     inc ch
     cmp bl, 045h
-    jne short L4a921
-    mov al, byte ptr [edi+0c5h]
+    jne end_prefix
+    mov al, byte ptr [edi].KEYSTUFF.keymap+0c5h
     test al, al
-    jne short L4a915
+    jne pause_released
     inc al
-    inc byte ptr [edi+0145h]
-    mov byte ptr [edi+0c5h], al
-    jmp short L4a921
-L4a915:
-    dec byte ptr [edi+0145h]
-    mov byte ptr [edi+0c5h], bh
-L4a921:
+    inc byte ptr [edi].KEYSTUFF.keys_held
+    mov byte ptr [edi].KEYSTUFF.keymap+0c5h, al
+    jmp end_prefix
+pause_released:
+    dec byte ptr [edi].KEYSTUFF.keys_held
+    mov byte ptr [edi].KEYSTUFF.keymap+0c5h, bh
+end_prefix:
     xor al, al
-L4a923:
-    mov byte ptr [edi+0143h], al
-L4a929:
+set_prefix:
+    mov byte ptr [edi].KEYSTUFF.extended, al
+buffer_key:
     or al, ch
-    jne short L4a96a
+    jne acknowledge
     test cl, 080h
-    jne short L4a96a
+    jne acknowledge
     cmp bl, 0aah
-    je short L4a96a
-    mov cl, byte ptr [edi+0142h]
+    je acknowledge
+    mov cl, byte ptr [edi].KEYSTUFF.bufchars
     cmp cl, 040h
-    je short L4a96a
+    je acknowledge
     inc cl
     mov al, bl
-    mov bl, byte ptr [edi+0140h]
-    mov byte ptr [edi+0144h], al
-    mov byte ptr [edi+0142h], cl
-    mov byte ptr [ebx+edi*1+0100h], al
+    mov bl, byte ptr [edi].KEYSTUFF.bufin
+    mov byte ptr [edi].KEYSTUFF.last_key, al
+    mov byte ptr [edi].KEYSTUFF.bufchars, cl
+    mov byte ptr [ebx+edi*1].KEYSTUFF.keybuf, al
     inc bl
     and bl, 03fh
-    mov byte ptr [edi+0140h], bl
-L4a96a:
+    mov byte ptr [edi].KEYSTUFF.bufin, bl
+acknowledge:
     mov al, 020h
     out 020h, al
     pop ds
@@ -124,69 +131,67 @@ L4a96a:
     pop ecx
     pop ebx
     pop eax
-    db 0cfh
+    iretd
 KeyHandler_ endp
 BreakHandler_ proc near
-    db 050h
-    db 01eh
-    db 066h, 0b8h, 000h, 000h
-    db 066h, 08eh, 0d8h
-    db 0a1h
-    dd offset _brkdata
-    db 0feh, 000h
-    db 01fh
-    db 058h
-    db 0cfh
+    push eax
+    push ds
+    mov ax, 00h
+    mov ds, ax
+    mov eax, dword ptr [_brkdata]
+    inc byte ptr [eax]
+    pop ds
+    pop eax
+    iretd
 BreakHandler_ endp
 CritHandler_ proc near
-    db 050h
-    db 053h
-    db 01eh
-    db 066h, 0b8h, 000h, 000h
-    db 066h, 08eh, 0d8h
-    db 066h, 08bh, 0c7h
-    db 0feh, 0c0h
-    db 032h, 0e4h
-    db 08bh, 01dh
-    dd offset _critdata
+    push eax
+    push ebx
+    push ds
+    mov ax, 00h
+    mov ds, ax
+    mov ax, di
+    inc al
+    xor ah, ah
+    mov ebx, dword ptr [_critdata]
     mov byte ptr [ebx], al
-    db 01fh
-    db 05bh
-    db 058h
-    db 0b0h, 003h
-    db 0cfh
+    pop ds
+    pop ebx
+    pop eax
+    mov al, 03h
+    iretd
 CritHandler_ endp
 TimerReadCount_ proc near
-    db 032h, 0c0h
-    db 0e6h, 043h
-    db 0e4h, 040h
-    db 08ah, 0e0h
-    db 0e4h, 040h
-    db 086h, 0c4h
-    db 0c3h
+    xor al, al
+    out 043h, al
+    in al, 040h
+    mov ah, al
+    in al, 040h
+    xchg al, ah
+    ret
 TimerReadCount_ endp
 BcdToBin_ proc near
-    db 055h
-    db 08bh, 0ech
-    db 083h, 0c4h, 0fch
-    db 060h
-    db 066h, 0c7h, 045h, 0fch, 001h, 000h
-    db 066h, 0c7h, 045h, 0feh, 000h, 000h
-    db 066h, 08bh, 0d8h
-    db 066h, 0b9h, 002h, 000h
-L4a9cd:
-    db 066h, 08bh, 0c3h
-    db 066h, 083h, 0e0h, 00fh
-    db 066h, 0f7h, 065h, 0fch
-    db 066h, 001h, 045h, 0feh
-    db 066h, 08bh, 045h, 0fch
-    db 066h, 0bah, 00ah, 000h
-    db 066h, 0f7h, 0e2h
-    db 066h, 089h, 045h, 0fch
-    db 066h, 0c1h, 0fbh, 004h
-    db 066h, 049h
-    db 075h, 0dah
-    db 061h
+    push ebp
+    mov ebp, esp
+    add esp, -4
+    pusha
+    mov word ptr [ebp-04h], 01h
+    mov word ptr [ebp-02h], 00h
+    mov bx, ax
+    mov cx, 02h
+next_digit:
+    mov ax, bx
+    and ax, 0fh
+    mul word ptr [ebp-04h]
+    add word ptr [ebp-02h], ax
+    mov ax, word ptr [ebp-04h]
+    mov dx, 0ah
+    mul dx
+    mov word ptr [ebp-04h], ax
+    sar bx, 04h
+    dec cx
+    jne next_digit
+    popa
     mov ax, word ptr [ebp-02h]
     leave
     ret
@@ -229,6 +234,5 @@ TimeRestore_ proc near
     popa
     ret
 TimeRestore_ endp
-_TEXT ends
 
     end
