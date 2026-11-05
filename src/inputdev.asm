@@ -1,16 +1,19 @@
-    .586p
+    .386p
+    .model flat
 
-_TEXT segment dword public use32 'CODE'
-_TEXT ends
-_DATA segment dword public use32 'DATA'
-_DATA ends
-_BSS segment dword public use32 'BSS'
-_BSS ends
+KEYSTUFF struct
+keymap      db 256 dup(?)
+keybuf      db 64 dup(?)
+bufin       db ?
+bufout      db ?
+bufchars    db ?
+extended    db ?
+last_key    db ?
+keys_held   db ?
+KEYSTUFF ends
 
-    assume cs:FLAT, ds:FLAT, es:FLAT, ss:FLAT
-
-    extrn _gamedata:byte
-    extrn _keydata:byte
+    extrn _gamedata:dword
+    extrn _keydata:dword
 
     public KeyGet_
     public MouseInit_
@@ -26,24 +29,24 @@ _BSS ends
     public _txt_pitch
     public _txt_col
 
-_TEXT segment
+    .code
 KeyGet_ proc near
     push edi
     push ebx
     mov edi, dword ptr [_keydata]
     xor eax, eax
-    mov al, byte ptr [edi+0142h]
+    mov al, byte ptr [edi].KEYSTUFF.bufchars
     test al, al
-    je short L4a20a
+    je key_done
     dec al
-    mov byte ptr [edi+0142h], al
+    mov byte ptr [edi].KEYSTUFF.bufchars, al
     xor ebx, ebx
-    mov bl, byte ptr [edi+0141h]
-    mov al, byte ptr [ebx+edi*1+0100h]
+    mov bl, byte ptr [edi].KEYSTUFF.bufout
+    mov al, byte ptr [ebx+edi*1].KEYSTUFF.keybuf
     inc bl
     and bl, 03fh
-    mov byte ptr [edi+0141h], bl
-L4a20a:
+    mov byte ptr [edi].KEYSTUFF.bufout, bl
+key_done:
     pop ebx
     pop edi
     ret
@@ -57,109 +60,99 @@ MouseInit_ proc near
     xor eax, eax
     mov word ptr [esp+01ch], ax
     test ebx, ebx
-    db 00fh, 084h, 09ch, 000h, 000h, 000h
+    je mouse_init_done
     cmp byte ptr es:[ebx], 0cfh
-    db 00fh, 084h, 092h, 000h, 000h, 000h
-    db 08eh, "D$ "
-    db 033h, 0c0h
-    db 066h, 0a3h
-    dd offset B12ffa2
-    db 066h, 0a3h
-    dd offset B12ffa6
-    db 066h, 0a3h
-    dd offset B12ff9a
-    db 066h, 0a3h
-    dd offset B12ff9c
-    db 066h, 0a3h
-    dd offset B12ff98
-    mov al, byte ptr [Dc66d4]
-    db 084h, 0c0h
-    db 075h, 013h
-    db 0cdh, 033h
-    db 066h, 085h, 0c0h
-    db 074h, 05eh
-    db 066h, 089h, 05ch, 024h, 01ch
-    db 0c6h, 005h
-    dd offset Dc66d4
-    db 001h
-L4a275:
-    db 066h, 0b8h, 01ch, 000h
-    db 066h, 0bbh, 002h, 000h
-    db 0cdh, 033h
-    db 0b8h, 007h, 000h, 000h, 000h
-    db 033h, 0c9h
-    db 066h, 08bh, 017h
-    db 066h, 04ah
-    db 066h, 089h, 015h
-    dd offset B12ffa4
-    db 066h, 081h, 03fh, 040h, 001h
-    db 07fh, 003h
-    db 066h, 0d1h, 0e2h
-L4a29c:
-    db 0cdh, 033h
-    db 0b8h, 008h, 000h, 000h, 000h
-    db 033h, 0c9h
-    db 066h, 08bh, 057h, 002h
-    db 066h, 04ah
-    db 066h, 089h, 015h
-    dd offset B12ffa8
-    db 0cdh, 033h
-    db 0b8h, 01ah, 000h, 000h, 000h
-    db 066h, 08bh, 05fh, 004h
-    db 066h, 08bh, 04fh, 006h
-    db 066h, 08bh, 057h, 008h
-    db 0cdh, 033h
-L4a2c7:
-    db 061h
-    db 007h
-    db 0c3h
+    je mouse_init_done
+    mov es, dword ptr [esp+020h]
+    xor eax, eax
+    mov word ptr [mouse_min_x], ax
+    mov word ptr [mouse_min_y], ax
+    mov word ptr [mouse_x], ax
+    mov word ptr [mouse_y], ax
+    mov word ptr [mouse_buttons], ax
+    mov al, byte ptr [mouse_ready]
+    test al, al
+    jne driver_ready
+    int 033h
+    test ax, ax
+    je mouse_init_done
+    mov word ptr [esp+01ch], bx
+    mov byte ptr [mouse_ready], 01h
+driver_ready:
+    mov ax, 01ch
+    mov bx, 02h
+    int 033h
+    mov eax, 07h
+    xor ecx, ecx
+    mov dx, word ptr [edi]
+    dec dx
+    mov word ptr [mouse_max_x], dx
+    cmp word ptr [edi], 0140h
+    jg set_x_range
+    shl dx, 1
+set_x_range:
+    int 033h
+    mov eax, 08h
+    xor ecx, ecx
+    mov dx, word ptr [edi+02h]
+    dec dx
+    mov word ptr [mouse_max_y], dx
+    int 033h
+    mov eax, 01ah
+    mov bx, word ptr [edi+04h]
+    mov cx, word ptr [edi+06h]
+    mov dx, word ptr [edi+08h]
+    int 033h
+mouse_init_done:
+    popa
+    pop es
+    ret
 MouseInit_ endp
 MouseRead_ proc near
-    db 01eh
-    db 006h
-    db 00fh, 0a0h
-    db 00fh, 0a8h
-    db 060h
-    db 033h, 0c0h
-    db 0a0h
-    dd offset Dc66d4
-    db 084h, 0c0h
-    db 075h, 020h
-    mov word ptr [B12ff98], ax
-    mov word ptr [B12ff9e], ax
-    mov word ptr [B12ffa0], ax
-    mov word ptr [B12ff9a], ax
-    mov word ptr [B12ff9c], ax
-    jmp short L4a363
-L4a2fc:
+    push ds
+    push es
+    push fs
+    push gs
+    pusha
+    xor eax, eax
+    mov al, byte ptr [mouse_ready]
+    test al, al
+    jne read_mouse
+    mov word ptr [mouse_buttons], ax
+    mov word ptr [mouse_dx], ax
+    mov word ptr [mouse_dy], ax
+    mov word ptr [mouse_x], ax
+    mov word ptr [mouse_y], ax
+    jmp mouse_read_done
+read_mouse:
     mov ax, 03h
     int 033h
-    mov word ptr [B12ff98], bx
+    mov word ptr [mouse_buttons], bx
     mov ax, 0bh
     int 033h
-    mov word ptr [B12ff9e], cx
-    mov word ptr [B12ffa0], dx
-    mov ax, word ptr [B12ff9a]
+    mov word ptr [mouse_dx], cx
+    mov word ptr [mouse_dy], dx
+    mov ax, word ptr [mouse_x]
     add ax, cx
-    jns short L4a32b
+    jns x_not_negative
     xor ax, ax
-L4a32b:
-    cmp ax, word ptr [B12ffa4]
-    jb short L4a33a
-    mov ax, word ptr [B12ffa4]
-L4a33a:
-    mov word ptr [B12ff9a], ax
-    mov ax, word ptr [B12ff9c]
+x_not_negative:
+    cmp ax, word ptr [mouse_max_x]
+    jb store_x
+    mov ax, word ptr [mouse_max_x]
+store_x:
+    mov word ptr [mouse_x], ax
+    mov ax, word ptr [mouse_y]
     add ax, dx
-    jns short L4a34e
+    jns y_not_negative
     xor ax, ax
-L4a34e:
-    cmp ax, word ptr [B12ffa8]
-    jb short L4a35d
-    mov ax, word ptr [B12ffa8]
-L4a35d:
-    mov word ptr [B12ff9c], ax
-L4a363:
+y_not_negative:
+    cmp ax, word ptr [mouse_max_y]
+    jb store_y
+    mov ax, word ptr [mouse_max_y]
+store_y:
+    mov word ptr [mouse_y], ax
+mouse_read_done:
     popa
     pop gs
     pop fs
@@ -179,29 +172,29 @@ JoyReadAxes_ proc near
     xor esi, esi
     xor edi, edi
     xor ebp, ebp
-L4a381:
+poll_axes:
     in al, dx
     test al, 01h
-    je short L4a388
+    je check_y
     mov ecx, ebx
-L4a388:
+check_y:
     test al, 02h
-    je short L4a38e
+    je check_z
     mov esi, ebx
-L4a38e:
+check_z:
     test al, 04h
-    je short L4a394
+    je check_r
     mov edi, ebx
-L4a394:
+check_r:
     test al, 08h
-    je short L4a39a
+    je next_poll
     mov ebp, ebx
-L4a39a:
+next_poll:
     inc ebx
     cmp ebx, 07d0h
-    jae short L4a3d9
-    db 084h, 0c4h
-    jne short L4a381
+    jae timed_out
+    test al, ah
+    jne poll_axes
     not al
     shr al, 04h
     mov byte ptr [_joy_fire], al
@@ -214,7 +207,7 @@ L4a39a:
     sti
     popa
     ret
-L4a3d9:
+timed_out:
     xor eax, eax
     mov word ptr [_joy_x_raw], ax
     mov word ptr [_joy_y_raw], ax
@@ -226,50 +219,30 @@ L4a3d9:
     popa
     ret
 JoyReadAxes_ endp
-_TEXT ends
 
-_DATA segment
-Dc66d4 label byte
-    db 000h, 000h, 000h, 000h
-_DATA ends
+    .data
+mouse_ready dd 0
 
-_BSS segment
-B12ff98 label byte
-    db 2 dup(?)
-B12ff9a label byte
-    db 2 dup(?)
-B12ff9c label byte
-    db 2 dup(?)
-B12ff9e label byte
-    db 2 dup(?)
-B12ffa0 label byte
-    db 2 dup(?)
-B12ffa2 label byte
-    db 2 dup(?)
-B12ffa4 label byte
-    db 2 dup(?)
-B12ffa6 label byte
-    db 2 dup(?)
-B12ffa8 label byte
-    db 2 dup(?)
-_joy_x_raw label byte
-    db 2 dup(?)
-_joy_y_raw label byte
-    db 2 dup(?)
-_joy_z_raw label byte
-    db 2 dup(?)
-_joy_r_raw label byte
-    db 2 dup(?)
-_joy_fire label byte
-    db 2 dup(?)
-_txt_screen label byte
-    db 4 dup(?)
-_txt_width label byte
-    db 4 dup(?)
-_txt_pitch label byte
-    db 4 dup(?)
-_txt_col label byte
-    db 264 dup(?)
-_BSS ends
+    .data?
+mouse_buttons dw ?
+mouse_x dw ?
+mouse_y dw ?
+mouse_dx dw ?
+mouse_dy dw ?
+mouse_min_x dw ?
+mouse_max_x dw ?
+mouse_min_y dw ?
+mouse_max_y dw ?
+_joy_x_raw dw ?
+_joy_y_raw dw ?
+_joy_z_raw dw ?
+_joy_r_raw dw ?
+_joy_fire db ?
+    db ?
+_txt_screen dd ?
+_txt_width dd ?
+_txt_pitch dd ?
+_txt_col db ?
+    db 263 dup(?)
 
     end
