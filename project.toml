@@ -26,7 +26,7 @@ watcom = ["~/opt/watcom10.6", "~/data.local/watcom/10.6"]  # Watcom C 10.6
 masm = ["~/opt/masm611", "~/data.frost/blob/cirno-labs/masm611/6.11"]  # MASM 6.11
 cflags = ["-bt=dos", "-5r", "-oneatx", "-zq"]
 asflags = ["/nologo", "/c", "/Cp"]
-file_assemblers = { vesa_a = "wasm" }
+file_assemblers = { vesa_a = "wasm", sosdpmi = "gas" }
 hook_base = 0x200000  # patch_exe.py loads the compiled functions here
 
 [build.file_cflags]
