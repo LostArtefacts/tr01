@@ -1,9 +1,5 @@
-    .586p
-
-_TEXT segment dword public use32 'CODE'
-_TEXT ends
-
-    assume cs:FLAT, ds:FLAT, es:FLAT, ss:FLAT
+    .386p
+    .model flat
 
     extrn _Datac6e14:byte
     extrn _Datac6e18:byte
@@ -30,7 +26,7 @@ _TEXT ends
     public Func52355_
     public Func523ae_
 
-_TEXT segment
+    .code
 Func52118_ proc near
     ret
 Func52118_ endp
@@ -38,7 +34,7 @@ Func52119_ proc near
     push ds
     call ___GETDSStart_
     cmp word ptr [_Datac7e3e], 01h
-    je short L5217e
+    je short handler_busy
     nop
     nop
     nop
@@ -49,8 +45,7 @@ Func52119_ proc near
     pop ax
     mov word ptr [_Datac7e3e], 01h
     mov dword ptr [_Datac6e2e], esp
-    db 066h, 08ch, 015h
-    dd offset _Datac6e32
+    mov word ptr [_Datac6e32], ss
     lss esp, fword ptr [_Datac6e26]
     pusha
     push es
@@ -66,80 +61,75 @@ Func52119_ proc near
     popa
     lss esp, fword ptr [_Datac6e2e]
     mov word ptr [_Datac7e3e], 00h
-L5217e:
+handler_busy:
     pop ds
-    db 0cfh
+    iretd
 Func52119_ endp
 Func52180_ proc near
-    db 055h
-    db 08bh, 0ech
-    db 056h
-    db 057h
-    db 053h
-    db 051h
-    db 00fh, 0a0h
-    db 00fh, 0a8h
-    db 006h
-    db 083h, 03dh
-    dd offset _Datac7e40
-    db 000h
-    db 074h, 026h
-    db 090h
+    push ebp
+    mov ebp, esp
+    push esi
+    push edi
+    push ebx
+    push ecx
+    push fs
+    push gs
+    push es
+    cmp dword ptr [_Datac7e40], 00h
+    je short set_rate_done
     nop
     nop
     nop
-    db 066h, 0bah, 021h, 000h
-    db 0ech
-    db 00ch, 001h
-    db 0eeh
-    db 066h, 0bah, 043h, 000h
-    db 0b0h, 036h
-    db 0eeh
-    db 066h, 0bah, 040h, 000h
-    db 08bh, 045h, 008h
-    db 0eeh
-    db 08ah, 0c4h
-    db 0eeh
-    db 066h, 0bah, 021h, 000h
-    db 0ech
-    db 024h, 0feh
-    db 0eeh
-L521bb:
-    db 007h
-    db 00fh, 0a9h
-    db 00fh, 0a1h
-    db 059h
-    db 05bh
-    db 05fh
-    db 05eh
-    db 05dh
-    db 0c3h
+    nop
+    mov dx, 021h
+    in al, dx
+    or al, 01h
+    out dx, al
+    mov dx, 043h
+    mov al, 036h
+    out dx, al
+    mov dx, 040h
+    mov eax, dword ptr [ebp+08h]
+    out dx, al
+    mov al, ah
+    out dx, al
+    mov dx, 021h
+    in al, dx
+    and al, 0feh
+    out dx, al
+set_rate_done:
+    pop es
+    pop gs
+    pop fs
+    pop ecx
+    pop ebx
+    pop edi
+    pop esi
+    pop ebp
+    ret
 Func52180_ endp
 Func521c6_ proc near
-    db 055h
-    db 08bh, 0ech
-    db 056h
-    db 057h
-    db 053h
-    db 051h
-    db 00fh, 0a0h
-    db 00fh, 0a8h
-    db 006h
-    db 08bh, 07dh, 00ch
-    db 089h, 03dh
-    dd offset _Datac6e20
-    db 066h, 08ch, 01dh
-    dd offset _Datac6e24
-    db 066h, 08ch, 01dh
-    dd offset _Datac6e2a
+    push ebp
+    mov ebp, esp
+    push esi
+    push edi
+    push ebx
+    push ecx
+    push fs
+    push gs
+    push es
+    mov edi, dword ptr [ebp+0ch]
+    mov dword ptr [_Datac6e20], edi
+    mov word ptr [_Datac6e24], ds
+    mov word ptr [_Datac6e2a], ds
     cmp dword ptr [_Datac7e40], 00h
-    je near ptr L52276
+    je install_done
     mov dx, 021h
     in al, dx
     or al, 01h
     out dx, al
     cmp dword ptr [_Datac7e44], 00h
-    je short L52235
+    je short install_dos
     nop
     nop
     nop
@@ -154,16 +144,15 @@ Func521c6_ proc near
     mov edx, offset Func52119_
     mov cx, cs
     int 031h
-    jmp short L5225c
+    jmp short program_timer
     nop
     nop
     nop
-L52235:
+install_dos:
     mov ax, 03508h
     int 021h
     mov dword ptr [_Datac6e14], ebx
-    db 066h, 08ch, 005h
-    dd offset _Datac6e18
+    mov word ptr [_Datac6e18], es
     push ds
     xor ax, ax
     mov es, eax
@@ -173,7 +162,7 @@ L52235:
     pop ds
     int 021h
     pop ds
-L5225c:
+program_timer:
     mov dx, 043h
     mov al, 036h
     out dx, al
@@ -186,7 +175,7 @@ L5225c:
     in al, dx
     and al, 0feh
     out dx, al
-L52276:
+install_done:
     pop es
     pop gs
     pop fs
@@ -208,7 +197,7 @@ Func52281_ proc near
     push gs
     push es
     cmp dword ptr [_Datac7e40], 00h
-    je short L522a2
+    je short mask_done
     nop
     nop
     nop
@@ -217,7 +206,7 @@ Func52281_ proc near
     in al, dx
     or al, 01h
     out dx, al
-L522a2:
+mask_done:
     pop es
     pop gs
     pop fs
@@ -239,7 +228,7 @@ Func522ad_ proc near
     push gs
     push es
     cmp dword ptr [_Datac7e40], 00h
-    je short L522ce
+    je short unmask_done
     nop
     nop
     nop
@@ -248,7 +237,7 @@ Func522ad_ proc near
     in al, dx
     and al, 0feh
     out dx, al
-L522ce:
+unmask_done:
     pop es
     pop gs
     pop fs
@@ -270,7 +259,7 @@ Func522d9_ proc near
     push gs
     push es
     cmp dword ptr [_Datac7e40], 00h
-    je short L5234a
+    je short remove_done
     nop
     nop
     nop
@@ -280,7 +269,7 @@ Func522d9_ proc near
     or al, 01h
     out dx, al
     cmp dword ptr [_Datac7e44], 00h
-    je short L52321
+    je short restore_dos
     nop
     nop
     nop
@@ -290,11 +279,11 @@ Func522d9_ proc near
     mov cx, word ptr [_Datac6e18]
     mov edx, dword ptr [_Datac6e14]
     int 031h
-    jmp short L52338
+    jmp short reset_timer
     nop
     nop
     nop
-L52321:
+restore_dos:
     push ds
     mov ax, 02508h
     mov cx, word ptr [_Datac6e18]
@@ -302,7 +291,7 @@ L52321:
     mov ds, ecx
     int 021h
     pop ds
-L52338:
+reset_timer:
     mov dx, 040h
     mov ax, 00h
     out dx, al
@@ -311,7 +300,7 @@ L52338:
     in al, dx
     and al, 0feh
     out dx, al
-L5234a:
+remove_done:
     pop es
     pop gs
     pop fs
@@ -324,7 +313,7 @@ L5234a:
 Func522d9_ endp
 Func52355_ proc near
     cmp dword ptr [_Datac7e40], 00h
-    je short L523ad
+    je short no_timer
     nop
     nop
     nop
@@ -351,12 +340,11 @@ Func52355_ proc near
     mov ds, eax
     pop eax
     retf
-L523ad:
+no_timer:
     ret
 Func52355_ endp
 Func523ae_ proc near
     ret
 Func523ae_ endp
-_TEXT ends
 
     end
