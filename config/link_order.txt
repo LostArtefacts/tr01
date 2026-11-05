@@ -136,10 +136,10 @@ file build/lib/clib3r__clse.obj
 file build/lib/clib3r_tell.obj
 file build/lib/clib3r_fprtf.obj
 file build/lib/clib3r_unlnk.obj
-file build/lib/clib3r_heapmod.obj
 file build/obj/inifile.obj
-file build/lib/clib3r_stinit.obj
 file build/obj/sosdigi.obj
+file build/lib/clib3r_heapmod.obj
+file build/lib/clib3r_stinit.obj
 file build/obj/vidmode.obj
 file build/lib/clib3r_calloc.obj
 file build/obj/fmvscrn.obj
@@ -177,10 +177,10 @@ file build/lib/clib3r_initfile.obj
 file build/lib/clib3r_ioexit.obj
 file build/lib/clib3r_itoa.obj
 file build/lib/clib3r_noefgfmt.obj
-file build/obj/sosdata2.obj
 file build/lib/clib3r_ltoa.obj
 file build/lib/clib3r_toupper.obj
 file build/lib/clib3r_gtche.obj
+file build/obj/sosdata2.obj
 file build/lib/clib3r_atoi.obj
 file build/lib/clib3r_memmove.obj
 file build/lib/clib3r_stricmp.obj
@@ -191,7 +191,10 @@ file build/obj/sosdpmi.obj
 file build/lib/clib3r_fmemcpy.obj
 file build/obj/sosmix.obj
 file build/lib/clib3r_memcpy.obj
+file build/obj/dectable.obj
+file build/obj/dec8wrap.obj
 file build/obj/rplfile.obj
+file build/obj/decdouble.obj
 file build/obj/decwrap.obj
 file build/obj/decbuf.obj
 file build/obj/fmvalloc.obj
@@ -203,6 +206,7 @@ file build/obj/rpldpmi.obj
 file build/obj/vesa.obj
 file build/lib/clib3r____argc.obj
 file build/lib/clib3r_histsplt.obj
+file build/obj/vesa_a.obj
 file build/lib/clib3r_efgfmt.obj
 file build/lib/math387r_cnvs2d.obj
 file build/lib/clib3r_getenv.obj

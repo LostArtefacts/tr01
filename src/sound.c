@@ -236,13 +236,11 @@ void Func48538(SOS_SAMPLE *s)
 
 SOS_SAMPLE *Func485bc(char *name, byte *(*loader)(char *))
 {
-    SOS_SAMPLE *s;
-    byte *data;
-    byte *buffer;
-    FILE *fp;
-    int convert;
     int stream;
+    int convert;
+    byte *buffer;
     int i;
+    FILE *fp;
 
     if (*name == '~') {
         convert = 1;
@@ -250,77 +248,82 @@ SOS_SAMPLE *Func485bc(char *name, byte *(*loader)(char *))
     } else {
         convert = 0;
     }
-    data = 0;
-    stream = 0;
-    if (!loader) {
-        if (*name == '*') {
-            name++;
-            data = (byte *)malloc(0x10000);
-            fp = fopen(name, "rb");
-            if (!fp) {
-                return 0;
-            }
-            if (fseek(fp, 0, SEEK_END) || ftell(fp) == -1 || fseek(fp, 0, SEEK_SET)
-                || fread(data, 44, 1, fp) != 1 && *(dword *)data == 0x46464952) {
-                fclose(fp);
-                free(data);
-                return 0;
-            }
-            stream = 1;
-        } else {
-            data = FileLoad(name, 0, 1);
-            if (!data) {
-                return 0;
-            }
-        }
-        buffer = data;
-    } else {
-        data = loader(name);
-        buffer = 0;
-    }
-    s = (SOS_SAMPLE *)malloc(sizeof(SOS_SAMPLE));
-    memset(s, 0, sizeof(SOS_SAMPLE));
-    s->pBuffer = buffer;
-    if (*(dword *)data == 0x46464952) {
-        byte *hdr;
+    {
+        SOS_SAMPLE *s;
+        byte *data;
 
-        hdr = data;
-        s->pSample = data + 44;
-        s->wLength = *(dword *)(data + 40) - 44;
-        s->wBitsPerSample = *(int *)(data + 32) >> 16;
-        s->wChannels = *(int *)(data + 20) >> 16;
-        if (*(word *)(data + 34) == 8) {
-            s->wFormat = 0x8000;
-            s->dwBytesPerSample = s->wChannels;
+        data = 0;
+        stream = 0;
+        if (!loader) {
+            if (*name == '*') {
+                name++;
+                data = (byte *)malloc(0x10000);
+                fp = fopen(name, "rb");
+                if (!fp) {
+                    return 0;
+                }
+                if (fseek(fp, 0, SEEK_END) || ftell(fp) == -1 || fseek(fp, 0, SEEK_SET)
+                    || fread(data, 44, 1, fp) != 1 && *(dword *)data == 0x46464952) {
+                    fclose(fp);
+                    free(data);
+                    return 0;
+                }
+                stream = 1;
+            } else {
+                data = FileLoad(name, 0, 1);
+                if (!data) {
+                    return 0;
+                }
+            }
+            buffer = data;
         } else {
-            s->wFormat = 0;
-            s->dwBytesPerSample = s->wChannels * 2;
+            data = loader(name);
+            buffer = 0;
         }
-        s->wRate = *(dword *)(hdr + 24);
-    } else {
-        s->wBitsPerSample = 8;
-        s->wChannels = 1;
-        s->wFormat = 0x8000;
-        s->wRate = 11025;
-        s->dwBytesPerSample = 1;
-        s->pSample = data;
-        s->wLength = file_len;
-        if (convert) {
-            for (i = 0; i < file_len; i++) {
-                data[i] ^= 0x80;
+        s = (SOS_SAMPLE *)malloc(sizeof(SOS_SAMPLE));
+        memset(s, 0, sizeof(SOS_SAMPLE));
+        s->pBuffer = buffer;
+        if (*(dword *)data == 0x46464952) {
+            byte *hdr;
+
+            hdr = data;
+            s->pSample = data + 44;
+            s->wLength = *(dword *)(data + 40) - 44;
+            s->wBitsPerSample = *(int *)(data + 32) >> 16;
+            s->wChannels = *(int *)(data + 20) >> 16;
+            if (*(word *)(data + 34) == 8) {
+                s->wFormat = 0x8000;
+                s->dwBytesPerSample = s->wChannels;
+            } else {
+                s->wFormat = 0;
+                s->dwBytesPerSample = s->wChannels * 2;
+            }
+            s->wRate = *(dword *)(hdr + 24);
+        } else {
+            s->wBitsPerSample = 8;
+            s->wChannels = 1;
+            s->wFormat = 0x8000;
+            s->wRate = 11025;
+            s->dwBytesPerSample = 1;
+            s->pSample = data;
+            s->wLength = file_len;
+            if (convert) {
+                for (i = 0; i < file_len; i++) {
+                    data[i] ^= 0x80;
+                }
             }
         }
+        s->wPanPosition = 0x8000;
+        s->wVolume = 0x7fff7fff;
+        if (stream) {
+            s->pFile = fp;
+            s->dwStreamLength = s->wLength;
+            s->dwDataOffset = s->pSample - data;
+            s->pfnSampleProcessed = Func48e14;
+            Func48538(s);
+        }
+        return s;
     }
-    s->wPanPosition = 0x8000;
-    s->wVolume = 0x7fff7fff;
-    if (stream) {
-        s->pFile = fp;
-        s->dwStreamLength = s->wLength;
-        s->dwDataOffset = s->pSample - data;
-        s->pfnSampleProcessed = Func48e14;
-        Func48538(s);
-    }
-    return s;
 }
 
 void Func487f8(SOS_SAMPLE *s)
@@ -623,8 +626,20 @@ void SoundStreamUpdate(dword handle)
             if (len > 0x8000) {
                 len = 0x8000;
             }
-            fread(s->pBuffer + (s->dwHalf ? 0 : 0x8000), len, 1, s->pFile);
-            s->dwRefill = 0;
+            {
+                byte *data;
+                dword count;
+                dword bytes;
+                FILE *file;
+
+                file = s->pFile;
+                bytes = len;
+                count = 1;
+                data = (byte *)((s->dwHalf ? 0 : 0x8000) + (dword)s->pBuffer);
+
+                fread(data, bytes, count, file);
+                s->dwRefill = 0;
+            }
         }
     }
 }

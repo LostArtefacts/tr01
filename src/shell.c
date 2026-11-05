@@ -701,6 +701,7 @@ void InterruptSet(int on, uint32 which)
     uint8 *mem;
     uint16 size;
     INTERRUPT *e;
+    void (__far *handler)(void);
 
     e = (INTERRUPT *)(which * sizeof(INTERRUPT) + (uint32)&interrupts);
     if (on == 1)
@@ -737,8 +738,9 @@ void InterruptSet(int on, uint32 which)
         memset(&regs, 0, sizeof(regs));
         memset(&sregs, 0, sizeof(sregs));
         regs.x.eax = e->number + 0x2500;
-        sregs.ds = FP_SEG(e->handler);
-        regs.x.edx = FP_OFF(e->handler);
+        handler = e->handler;
+        regs.x.edx = FP_OFF(handler);
+        sregs.ds = FP_SEG(handler);
         int386x(0x21, &regs, &regs, &sregs);
         if (e->real_code)
         {

@@ -1,5 +1,5 @@
 address,size,name,symbol
-0x00010003,13,___begtext,___begtext
+0x00010003,0,___begtext,___begtext
 0x00010010,5,S_InitialisePolyList,S_InitialisePolyList_
 0x00010018,65,S_DumpScreen,S_DumpScreen_
 0x0001005c,5,S_ClearScreen,S_ClearScreen_
@@ -2679,7 +2679,7 @@ address,size,name,symbol
 0x001300d4,1,__nheap_clean,___nheap_clean
 0x001300d5,1,__fheap_clean,___fheap_clean
 0x001300d8,4,__OpenStreams,___OpenStreams
-0x001300e8,8,Data1300e8,_Data1300e8
+0x001300dc,68,vidmode_state,_vidmode_state
 0x00130380,128,FPArea,_FPArea
 0x00130400,4,loop_count,_loop_count
 0x00130404,4,__minreal,___minreal
@@ -2688,3 +2688,13 @@ address,size,name,symbol
 0x001304d0,4,__historical_splitparms,___historical_splitparms
 0x001304d4,1024,my_stack,_my_stack
 0x001308d4,0,_end,_end
+0x00130408,56,vga_state,_vga_state
+0x00058ae0,0,vga_rcsid,_vga_rcsid
+0x00058f00,0,rpldpmi_rcsid,_rpldpmi_rcsid
+0x00130440,96,dpmi_state,_dpmi_state
+0x00059260,0,vesa_rcsid,_vesa_rcsid
+0x001304a0,40,vesa_state,_vesa_state
+0x000c6d28,4,hex_digits,_hex_digits
+0x000c6d2c,32,hex_powers,_hex_powers
+0x000c6d4c,4,display_mode,_display_mode
+0x000c6d50,4,next_video_id,_next_video_id

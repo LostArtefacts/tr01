@@ -9,6 +9,7 @@ exe = "TOMBRAID/TOMBno3Dfx.EXE"
 checksums = "orig/tomb.sha1"
 original = "build/tomb.exe"
 game_end = 0x46E00  # Watcom's C library follows
+progress_exclude = ["___begtext"]  # runtime alignment label, not a function
 code = [0x10000, 0x8FA3E]  # the code object in the flattened executable
 copy = ["TOMBRAID/DOS4GW.EXE", "TOMBRAID/HMIDET.386", "TOMBRAID/HMIDRV.386",
         "TOMBRAID/HMISET.CFG", "TOMBRAID/SETTINGS.DAT", "TOMBRAID/TOMB.SP"]
@@ -25,7 +26,17 @@ watcom = ["~/opt/watcom10.6", "~/data.local/watcom/10.6"]  # Watcom C 10.6
 masm = ["~/opt/masm611", "~/data.frost/blob/cirno-labs/masm611/6.11"]  # MASM 6.11
 cflags = ["-bt=dos", "-5r", "-oneatx", "-zq"]
 asflags = ["/nologo", "/c", "/Cp"]
+file_assemblers = { vesa_a = "wasm" }
 hook_base = 0x200000  # patch_exe.py loads the compiled functions here
+
+[build.file_cflags]
+decbuf = ["-bt=dos", "-5r", "-onatx", "-zq"]
+video_a = ["-bt=dos", "-5r", "-onatx", "-zq"]
+soslock = ["-bt=dos", "-od", "-s", "-3r", "-zq"]
+sosload = ["-bt=dos", "-od", "-s", "-3r", "-zq"]
+sostimer = ["-bt=dos", "-od", "-s", "-3r", "-zq"]
+sosdetect = ["-bt=dos", "-od", "-s", "-3r", "-zq"]
+sosdigi = ["-bt=dos", "-od", "-s", "-3r", "-zq"]
 
 [symbols]
 libs = ["LIB386/DOS/CLIB3R.LIB", "LIB386/MATH387R.LIB"]  # in the Watcom directory
@@ -77,8 +88,7 @@ search = ["~/opt/dosbox-staging*/dosbox", "~/data.local/work/dosbox-staging*/dos
 # Modules the original compiled from C that src/ still has as assembly:
 # yellow in the chart however clean the assembly, until they are C.
 compiled = [
-    "player", "inifile", "sosdigi", "vidmode", "fmvscrn",
-    "rplgraph", "sostimer", "soslock", "sosload", "rplfile", "decwrap",
-    "decbuf", "fmvalloc", "video_a", "vga", "rpldpmi", "vesa", "sosdetect",
-    "sosdata", "sosdata2",
+    "player", "fmvscrn",
+    "rplgraph",
+    "sosdata",
 ]

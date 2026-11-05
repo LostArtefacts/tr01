@@ -1,4 +1,0 @@
-InterruptSet
-CDInit
-Func485bc
-SoundStreamUpdate

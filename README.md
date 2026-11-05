@@ -51,7 +51,7 @@ Game files are not distributed. Supply your own copy; see
 | --- | --- |
 | Compiler | Watcom C/C++ 10.6, `wcc386` |
 | C flags | `-bt=dos -5r -oneatx` |
-| Assembler | Microsoft MASM 6.11, `ml /c /Cp` |
+| Assemblers | Microsoft MASM 6.11 and Watcom WASM 10.6, selected per module |
 | Runtime | DOS/4GW |
 | Emulator | dosbox-staging |
 
@@ -70,9 +70,10 @@ transformations. Compiling the reference with different flags gives:
 | `-5r -oaxt` | 211 |
 | `-5r -oneatx` | 222 |
 
-MASM reproduces the original instruction encodings; Watcom's WASM can
-encode equivalent instructions differently. Compiler, assembler,
-libraries and backend settings are configured in `project.toml`.
+MASM and Watcom WASM choose different encodings for some equivalent
+instructions. Each assembly module uses the assembler that reproduces its
+original bytes. Compiler, assembler, libraries and backend settings are
+configured in `project.toml`.
 
 ## Setup
 

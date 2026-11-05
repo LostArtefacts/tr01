@@ -16,7 +16,7 @@ _BSS ends
     extrn Func4fbf4_:near
     extrn Func5056c_:near
     extrn Func50d04_:near
-    extrn _Data1300e8:byte
+    extrn _vidmode_state:byte
     extrn __CHP:near
     extrn _nmalloc_:near
     extrn calloc_:near
@@ -1119,7 +1119,7 @@ L49a79:
     push eax
     mov eax, dword ptr [ebp+018h]
     push eax
-    push dword ptr [_Data1300e8]
+    push dword ptr [_vidmode_state+0ch]
     push 01h
     mov ecx, dword ptr [ebp-018h]
     mov ebx, dword ptr [ebp-01ch]
@@ -1293,7 +1293,7 @@ Player_MapVideo_ proc near
     db 0ebh, 014h
 L49c61:
     db 08bh, 05dh, 0f8h
-    mov edx, dword ptr [_Data1300e8]
+    mov edx, dword ptr [_vidmode_state+0ch]
     db 08bh, 045h, 0f4h
     db 0e8h, 0ceh, 054h, 000h, 000h
     db 089h, 045h, 0fch

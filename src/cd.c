@@ -20,7 +20,7 @@ typedef struct
     RQSTHDR RHdr;
     byte MediaDesc;
     dword TransAddr;
-    short TransBytes;
+    word TransBytes;
     short StartSecTot;
     dword VolIDPtr;
     byte CtrlSubcode;
@@ -211,44 +211,98 @@ int CDInit(void)
     if (cd_rmregs.EBX == 0)
         return 1;
     cdrom_drive = cd_rmregs.ECX;
-    cd_audioinfo.TransAddr = (cd_seg << 16) + 0x1a;
-    cd_volume.TransAddr = (cd_seg << 16) + 0x1a;
-    cd_qchan.TransAddr = (cd_seg << 16) + 0x1a;
-    cd_drvinfo.TransAddr = (cd_seg << 16) + 0x1a;
-    cd_trackinfo.TransAddr = (cd_seg << 16) + 0x1a;
-    cd_medchg.TransAddr = (cd_seg << 16) + 0x1a;
-    cd_qchan.CtrlSubcode = 0xc;
-    cd_volume.CtrlSubcode = 3;
-    cd_drvinfo.CtrlSubcode = 6;
-    cd_qchan.TransBytes = 0xb;
-    cd_seek.RHdr.Length = 0x18;
-    cd_trackinfo.CtrlSubcode = 0xb;
-    cd_medchg.TransBytes = 2;
-    cd_trackinfo.TransBytes = 7;
-    cd_resume.RHdr.CommandCode = 0x88;
-    cd_volume.TransBytes = 9;
-    cd_audioinfo.TransBytes = 7;
-    cd_audioinfo.CtrlSubcode = 0xa;
-    cd_drvinfo.TransBytes = 5;
-    cd_drvinfo.RHdr.CommandCode = 3;
-    cd_medchg.RHdr.CommandCode = 3;
-    cd_qchan.RHdr.CommandCode = 3;
-    cd_trackinfo.RHdr.CommandCode = 3;
-    cd_play.RHdr.CommandCode = 0x84;
-    cd_volume.RHdr.CommandCode = 0xc;
-    cd_stop.RHdr.CommandCode = 0x85;
+    {
+        DRVINFORQ *p = &cd_drvinfo;
+        byte length = 0x1a;
+        byte command = 3;
+        dword address = (cd_seg << 16) + 0x1a;
+        word count = 5;
+        byte subcode = 6;
+
+        p->RHdr.CommandCode = command;
+        p->RHdr.Length = length;
+        p->TransAddr = address;
+        p->TransBytes = count;
+        p->CtrlSubcode = subcode;
+    }
+    {
+        QCHANRQ *p = &cd_qchan;
+        byte length = 0x1a;
+        byte command = 3;
+        dword address = (cd_seg << 16) + 0x1a;
+        word count = 0xb;
+        byte subcode = 0xc;
+
+        p->RHdr.CommandCode = command;
+        p->RHdr.Length = length;
+        p->TransAddr = address;
+        p->TransBytes = count;
+        p->CtrlSubcode = subcode;
+    }
+    {
+        TRACKINFRQ *p = &cd_trackinfo;
+        byte length = 0x1a;
+        byte command = 3;
+        dword address = (cd_seg << 16) + 0x1a;
+        word count = 7;
+        byte subcode = 0xb;
+
+        p->RHdr.CommandCode = command;
+        p->RHdr.Length = length;
+        p->TransAddr = address;
+        p->TransBytes = count;
+        p->CtrlSubcode = subcode;
+    }
+    {
+        AUDIOINFRQ *p = &cd_audioinfo;
+        byte length = 0x1a;
+        byte command = 3;
+        dword address = (cd_seg << 16) + 0x1a;
+        word count = 7;
+        byte subcode = 0xa;
+
+        p->RHdr.CommandCode = command;
+        p->RHdr.Length = length;
+        p->TransAddr = address;
+        p->TransBytes = count;
+        p->CtrlSubcode = subcode;
+    }
+    {
+        MEDCHGRQ *p = &cd_medchg;
+        byte length = 0x1a;
+        byte command = 3;
+        dword address = (cd_seg << 16) + 0x1a;
+        word count = 2;
+        byte subcode = 9;
+
+        p->RHdr.CommandCode = command;
+        p->RHdr.Length = length;
+        p->TransAddr = address;
+        p->TransBytes = count;
+        p->CtrlSubcode = subcode;
+    }
+    {
+        VOLUMERQ *p = &cd_volume;
+        byte length = 0x1c;
+        byte command = 0xc;
+        dword address = (cd_seg << 16) + 0x1a;
+        word count = 9;
+        byte subcode = 3;
+
+        p->RHdr.CommandCode = command;
+        p->RHdr.Length = length;
+        p->TransAddr = address;
+        p->TransBytes = count;
+        p->CtrlSubcode = subcode;
+    }
     cd_seek.RHdr.CommandCode = 0x83;
-    cd_audioinfo.RHdr.CommandCode = 3;
-    cd_resume.RHdr.Length = 0xd;
-    cd_qchan.RHdr.Length = 0x1a;
-    cd_trackinfo.RHdr.Length = 0x1a;
+    cd_seek.RHdr.Length = 0x18;
+    cd_play.RHdr.CommandCode = 0x84;
     cd_play.RHdr.Length = 0x16;
+    cd_stop.RHdr.CommandCode = 0x85;
     cd_stop.RHdr.Length = 0xd;
-    cd_volume.RHdr.Length = 0x1c;
-    cd_medchg.RHdr.Length = 0x1a;
-    cd_medchg.CtrlSubcode = 9;
-    cd_audioinfo.RHdr.Length = 0x1a;
-    cd_drvinfo.RHdr.Length = 0x1a;
+    cd_resume.RHdr.CommandCode = 0x88;
+    cd_resume.RHdr.Length = 0xd;
     cd_present = 1;
     CDStop();
     for (i = 0; i <= 5; i++) {
