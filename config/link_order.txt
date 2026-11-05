@@ -149,7 +149,6 @@ file build/lib/clib3r_setefg.obj
 file build/lib/clib3r_gtctm.obj
 file build/lib/clib3r_mktime.obj
 file build/lib/clib3r_tzset.obj
-file build/obj/sosdata.obj
 file build/lib/clib3r_gmtime.obj
 file build/lib/clib3r_timeutil.obj
 file build/lib/clib3r_cmain386.obj
@@ -158,6 +157,7 @@ file build/lib/clib3r_initargv.obj
 file build/obj/timerint.obj
 file build/lib/clib3r_flushall.obj
 file build/lib/clib3r_segread.obj
+file build/obj/sosdata.obj
 file build/lib/clib3r_intxa386.obj
 file build/lib/emu387_emu387.obj
 file build/lib/clib3r_hook387.obj

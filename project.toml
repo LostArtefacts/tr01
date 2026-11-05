@@ -37,6 +37,7 @@ sosload = ["-bt=dos", "-od", "-s", "-3r", "-zq"]
 sostimer = ["-bt=dos", "-od", "-s", "-3r", "-zq"]
 sosdetect = ["-bt=dos", "-od", "-s", "-3r", "-zq"]
 sosdigi = ["-bt=dos", "-od", "-s", "-3r", "-zq"]
+sosdata = ["-bt=dos", "-od", "-s", "-3r", "-zq"]
 player = ["-bt=dos", "-ot", "-od", "-s", "-5r", "-d2", "-zq"]
 
 [symbols]
@@ -91,5 +92,4 @@ search = ["~/opt/dosbox-staging*/dosbox", "~/data.local/work/dosbox-staging*/dos
 compiled = [
     "fmvscrn",
     "rplgraph",
-    "sosdata",
 ]

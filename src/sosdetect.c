@@ -24,18 +24,29 @@ typedef struct
     byte reserved4[0x30];
     dword loaded_device_id;
 } SOSDRIVER;
+
+typedef struct
+{
+    byte reserved[32];
+    dword count;
+    byte reserved2[8];
+} SOSFILEHEADER;
+
+typedef struct
+{
+    byte reserved[36];
+    dword size;
+    dword id;
+    word flags;
+    word reserved2;
+} SOSFILEENTRY;
 #pragma pack()
 
 extern dword Datac8128;
 extern char Datac81ac[128];
-extern byte Datac822c[44];
-extern dword Datac824c;
-extern byte Datac8258[48];
-extern dword Datac827c;
-extern dword Datac8280;
-extern byte Datac8285;
-extern byte Datac8288[0x6a];
-extern byte Datac82c5;
+extern SOSFILEHEADER Datac822c;
+extern SOSFILEENTRY Datac8258;
+extern byte Datac8288[0x6c];
 extern byte *Datac82f4;
 extern void __far *Datac82f8;
 extern void __far *Datac8300;
@@ -101,7 +112,7 @@ int Func59b7c(char *path)
     if (Datac8308 == -1) {
         return 15;
     }
-    read(Datac8308, Datac822c, 44);
+    read(Datac8308, &Datac822c, sizeof(SOSFILEHEADER));
     Datac82f8 = Func56da7(0x1000, &Datac8314, &Datac8318);
     if (Datac82f8 == 0) {
         return 5;
@@ -149,12 +160,12 @@ int Func59d51(dword id, SOSDRIVER *driver)
     }
     Datac8310 = 0;
     _lseek(Datac8308, 0, 0);
-    read(Datac8308, Datac822c, 44);
-    while (Datac8310 <= Datac824c && !found) {
+    read(Datac8308, &Datac822c, sizeof(SOSFILEHEADER));
+    while (Datac8310 <= Datac822c.count && !found) {
         position = _lseek(Datac8308, 0, 1);
-        read(Datac8308, Datac8258, 48);
-        size = Datac827c;
-        if (Datac8280 == id && (Datac8285 & 0x80)) {
+        read(Datac8308, &Datac8258, sizeof(SOSFILEENTRY));
+        size = Datac8258.size;
+        if (Datac8258.id == id && (Datac8258.flags & 0x8000)) {
             found = 1;
             _dos_read(Datac8308, Datac82f8, size, &bytes_read);
         } else {
@@ -164,7 +175,7 @@ int Func59d51(dword id, SOSDRIVER *driver)
     }
     if (found) {
         Func57067(Datac8300, Datac82f8, Datac8288);
-        if (Datac82c5 & 1) {
+        if (Datac8288[0x3d] & 1) {
             Func5724f(Datac8300, Datac82f8);
             env_index = 0;
             while (Func5728e(env_index)) {
@@ -205,12 +216,12 @@ int Func59fc8(dword id, SOSDRIVER *driver)
     }
     Datac8310 = 0;
     _lseek(Datac8308, 0, 0);
-    read(Datac8308, Datac822c, 44);
-    while (Datac8310 <= Datac824c && !found) {
+    read(Datac8308, &Datac822c, sizeof(SOSFILEHEADER));
+    while (Datac8310 <= Datac822c.count && !found) {
         position = _lseek(Datac8308, 0, 1);
-        read(Datac8308, Datac8258, 48);
-        size = Datac827c;
-        if (Datac8280 == id && (Datac8285 & 0x80)) {
+        read(Datac8308, &Datac8258, sizeof(SOSFILEENTRY));
+        size = Datac8258.size;
+        if (Datac8258.id == id && (Datac8258.flags & 0x8000)) {
             found = 1;
             _dos_read(Datac8308, Datac82f8, size, &bytes_read);
         } else {
@@ -248,15 +259,15 @@ int Func5a142(SOSDRIVER *driver)
     port = 0;
     Datac8310 = 0;
     _lseek(Datac8308, 0, 0);
-    read(Datac8308, Datac822c, 44);
-    while (Datac8310 <= Datac824c && !found) {
+    read(Datac8308, &Datac822c, sizeof(SOSFILEHEADER));
+    while (Datac8310 <= Datac822c.count && !found) {
         position = _lseek(Datac8308, 0, 1);
-        read(Datac8308, Datac8258, 48);
-        size = Datac827c;
-        if (Datac8285 & 0x80) {
+        read(Datac8308, &Datac8258, sizeof(SOSFILEENTRY));
+        size = Datac8258.size;
+        if (Datac8258.flags & 0x8000) {
             _dos_read(Datac8308, Datac82f8, size, &bytes_read);
             Func57067(Datac8300, Datac82f8, Datac8288);
-            if (Datac82c5 & 1) {
+            if (Datac8288[0x3d] & 1) {
                 Func5724f(Datac8300, Datac82f8);
                 env_index = 0;
                 while (Func5728e(env_index)) {
@@ -300,14 +311,14 @@ int Func5a37f(SOSDRIVER *driver)
         return 2;
     }
     port = 0;
-    while (Datac8310 <= Datac824c && !found) {
+    while (Datac8310 <= Datac822c.count && !found) {
         position = _lseek(Datac8308, 0, 1);
-        read(Datac8308, Datac8258, 48);
-        size = Datac827c;
-        if (Datac8285 & 0x80) {
+        read(Datac8308, &Datac8258, sizeof(SOSFILEENTRY));
+        size = Datac8258.size;
+        if (Datac8258.flags & 0x8000) {
             _dos_read(Datac8308, Datac82f8, size, &bytes_read);
             Func57067(Datac8300, Datac82f8, Datac8288);
-            if (Datac82c5 & 1) {
+            if (Datac8288[0x3d] & 1) {
                 Func5724f(Datac8300, Datac82f8);
                 env_index = 0;
                 while (Func5728e(env_index)) {

@@ -65,11 +65,11 @@
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="41"><tspan class="named">513 KB</tspan> · <tspan class="decompiled">10 KB</tspan></text>
 <text text-anchor="start" x="0" y="58.50">Executable data</text>
 <g transform="translate(130 52.50)">
-<rect width="283.55" height="12" x="0" y="0" class="named"><title>41 KB · 86.98%</title></rect>
-<rect width="42.45" height="12" x="283.55" y="0" class="decompiled"><title>6 KB · 13.02%</title></rect>
+<rect width="325.81" height="12" x="0" y="0" class="named"><title>47 KB · 99.94%</title></rect>
+<rect width="0.19" height="12" x="325.81" y="0" class="decompiled"><title>28 bytes · 0.06%</title></rect>
 </g>
 <text text-anchor="end" x="516" y="58.50">100.0%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="58"><tspan class="named">41 KB</tspan> · <tspan class="decompiled">6 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="58"><tspan class="named">47 KB</tspan> · <tspan class="decompiled">28 bytes</tspan></text>
 <text text-anchor="start" x="0" y="75.50">Executable BSS</text>
 <g transform="translate(130 69.50)">
 <rect width="325.56" height="12" x="0" y="0" class="named"><title>420 KB · 99.86%</title></rect>
@@ -79,11 +79,11 @@
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="75"><tspan class="named">420 KB</tspan> · <tspan class="decompiled">1 KB</tspan></text>
 <text text-anchor="start" x="0" y="92.50">Executable image</text>
 <g transform="translate(130 86.50)">
-<rect width="320.92" height="12" x="0" y="0" class="named"><title>1037 KB · 98.44%</title></rect>
-<rect width="5.08" height="12" x="320.92" y="0" class="decompiled"><title>16 KB · 1.56%</title></rect>
+<rect width="322.81" height="12" x="0" y="0" class="named"><title>1043 KB · 99.02%</title></rect>
+<rect width="3.19" height="12" x="322.81" y="0" class="decompiled"><title>10 KB · 0.98%</title></rect>
 </g>
 <text text-anchor="end" x="516" y="92.50">100.0%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="92"><tspan class="named">1037 KB</tspan> · <tspan class="decompiled">16 KB</tspan> · 0 blob pieces left</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="92"><tspan class="named">1043 KB</tspan> · <tspan class="decompiled">10 KB</tspan> · 0 blob pieces left</text>
 </g>
 <g transform="translate(0 145)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
