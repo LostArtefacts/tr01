@@ -1,9 +1,5 @@
-    .586p
-
-_TEXT segment dword public use32 'CODE'
-_TEXT ends
-
-    assume cs:FLAT, ds:FLAT, es:FLAT, ss:FLAT
+    .386p
+    .model flat
 
     extrn _Data5a835:near
     extrn _Data5c779:near
@@ -26,7 +22,7 @@ _TEXT ends
     public Func57539_
     public Func579d3_
 
-_TEXT segment
+    .code
 Func57538_ proc near
     ret
 Func57538_ endp
@@ -42,7 +38,7 @@ Func57539_ proc near
     mov eax, dword ptr [ebp+08h]
     mov ebp, eax
     cmp dword ptr [ebp+034h], 00h
-    je short L57572
+    je short read_dma_count
     push es
     xor edx, edx
     mov edi, dword ptr [ebp+03ch]
@@ -56,74 +52,68 @@ Func57539_ proc near
     pop es
     movzx ebx, ax
     cmp ebx, dword ptr [ebp+020h]
-    jne short L575bc
+    jne short check_position
     nop
     nop
     nop
     nop
-    jmp near ptr L579cb
-L57572:
+    jmp mix_done
+read_dma_count:
     xor eax, eax
     mov edx, 0ch
     out dx, al
-    jmp short L5757c
-L5757c:
+    jmp short $+2
     mov edx, dword ptr [ebp+018h]
     in al, dx
-    jmp short L57582
-L57582:
-    db 086h, 0c4h
+    jmp short $+2
+    xchg al, ah
     in al, dx
-    jmp short L57587
-L57587:
-    db 086h, 0c4h
+    jmp short $+2
+    xchg al, ah
     inc eax
     cmp edx, 07h
-    jbe short L57591
+    jbe short have_dma_count
     add eax, eax
-L57591:
+have_dma_count:
     cmp eax, dword ptr [ebp+044h]
-    jbe short L575b1
+    jbe short have_dma_position
     xor eax, eax
     mov edx, 0ch
     out dx, al
-    jmp short L575a0
-L575a0:
+    jmp short $+2
     mov eax, dword ptr [ebp+044h]
     dec eax
     mov edx, dword ptr [ebp+018h]
     out dx, al
-    jmp short L575aa
-L575aa:
-    db 086h, 0c4h
+    jmp short $+2
+    xchg al, ah
     out dx, al
-    jmp short L575af
-L575af:
-    db 086h, 0c4h
-L575b1:
+    jmp short $+2
+    xchg al, ah
+have_dma_position:
     mov ebx, dword ptr [ebp+044h]
     sub ebx, eax
     and ebx, 0fffch
-L575bc:
+check_position:
     or ebx, ebx
-    jne short L575c3
+    jne short position_ready
     add ebx, 020h
-L575c3:
+position_ready:
     cmp ebx, dword ptr [ebp+020h]
-    je near ptr L579cb
+    je mix_done
     mov dword ptr [ebp+01ch], ebx
     mov eax, dword ptr [ebp+01ch]
     sub eax, dword ptr [ebp+020h]
-    jae short L575e0
+    jae short have_length
     mov eax, dword ptr [ebp+044h]
     sub eax, dword ptr [ebp+020h]
     add eax, dword ptr [ebp+01ch]
-L575e0:
+have_length:
     mov dword ptr [ebp+024h], eax
     cmp dword ptr [ebp+0ch], 010h
-    je short L575eb
+    je short length_in_bytes
     shl eax, 1
-L575eb:
+length_in_bytes:
     shl eax, 1
     mov dword ptr [_Datac85c8], eax
     add eax, dword ptr [ebp+048h]
@@ -136,43 +126,43 @@ L575eb:
     xor eax, eax
     push ecx
     shr ecx, 02h
-    db 0f3h, 0abh
+    rep stosd
     pop ecx
     and ecx, 03h
-    db 0f3h, 0aah
+    rep stosb
     mov eax, dword ptr [ebp+01ch]
     mov dword ptr [ebp+020h], eax
     mov dword ptr [ebp+054h], 00h
     mov dword ptr [_Datac85d0], 00h
     mov esi, dword ptr [ebp+030h]
     or esi, esi
-    je near ptr L578e1
-L5763a:
+    je select_converter
+next_sample:
     mov dword ptr [_Datac85c0], esi
     test dword ptr [esi+020h], 04000h
-    jne near ptr L5784d
+    jne remove_sample
     inc dword ptr [ebp+054h]
     mov edi, dword ptr [ebp+048h]
-L57653:
+mix_chunk:
     mov dword ptr [_Datac85e4], 00h
     test dword ptr [esi+040h], 08000h
-    je short L57671
+    je short check_flag_4000
     nop
     nop
     nop
     nop
     or dword ptr [_Datac85e4], 01h
-L57671:
+check_flag_4000:
     test dword ptr [esi+040h], 04000h
-    je short L57685
+    je short check_volume
     nop
     nop
     nop
     nop
     or dword ptr [_Datac85e4], 040h
-L57685:
+check_volume:
     cmp dword ptr [esi+044h], 08000h
-    jne short L576ad
+    jne short split_pan
     mov eax, dword ptr [esi+02ch]
     and eax, 07fffh
     mov dword ptr [_Datac85f0], eax
@@ -180,18 +170,18 @@ L57685:
     shr eax, 010h
     and eax, 07fffh
     mov dword ptr [_Datac85f4], eax
-    jmp short L576ed
-L576ad:
+    jmp short check_full_volume
+split_pan:
     mov ebx, 07fffh
     mov ecx, 07fffh
     test dword ptr [esi+044h], 08000h
-    jne short L576c5
+    jne short pan_right
     mov ecx, dword ptr [esi+044h]
-    jmp short L576cd
-L576c5:
+    jmp short scale_volume
+pan_right:
     mov ebx, 0ffffh
     sub ebx, dword ptr [esi+044h]
-L576cd:
+scale_volume:
     xor edx, edx
     mov eax, dword ptr [esi+02ch]
     imul bx
@@ -202,30 +192,30 @@ L576cd:
     imul cx
     add edx, edx
     mov dword ptr [_Datac85f4], edx
-L576ed:
+check_full_volume:
     cmp dword ptr [_Datac85f0], 07ff0h
-    jb short L57705
+    jb short set_volume_bit
     cmp dword ptr [_Datac85f4], 07ff0h
-    jae short L5770c
-L57705:
+    jae short check_sample_bits
+set_volume_bit:
     or dword ptr [_Datac85e4], 020h
-L5770c:
+check_sample_bits:
     cmp dword ptr [esi+038h], 08h
-    je short L57719
+    je short check_sample_channels
     or dword ptr [_Datac85e4], 02h
-L57719:
+check_sample_channels:
     cmp dword ptr [esi+03ch], 01h
-    je short L57726
+    je short check_output_channels
     or dword ptr [_Datac85e4], 08h
-L57726:
+check_output_channels:
     cmp dword ptr [ebp+08h], 01h
-    je short L57733
+    je short check_rate
     or dword ptr [_Datac85e4], 04h
-L57733:
+check_rate:
     xor eax, eax
     mov edx, dword ptr [esi+034h]
     cmp edx, dword ptr [ebp+04h]
-    je short L5778d
+    je short call_mixer
     mov ecx, dword ptr [ebp+04h]
     shl ecx, 010h
     div ecx
@@ -236,23 +226,23 @@ L57733:
     mov eax, ebx
     inc ebx
     test dword ptr [_Datac85e4], 08h
-    je short L57765
+    je short check_16bit_step
     shl eax, 1
     shl ebx, 1
-L57765:
+check_16bit_step:
     test dword ptr [_Datac85e4], 02h
-    je short L57779
+    je short store_step
     nop
     nop
     nop
     nop
     shl eax, 1
     shl ebx, 1
-L57779:
+store_step:
     mov word ptr [_Datac85dc], ax
     mov word ptr [_Datac85e0], bx
     or dword ptr [_Datac85e4], 010h
-L5778d:
+call_mixer:
     mov eax, dword ptr [_Datac85e4]
     shl eax, 02h
     add eax, offset _Data5a835
@@ -280,21 +270,21 @@ L5778d:
     add dword ptr [esi+058h], eax
     mov eax, dword ptr [esi+04h]
     cmp eax, dword ptr [_Datac85d4]
-    jb near ptr L578c1
+    jb check_sample_limit
     cmp dword ptr [esi+030h], 0ffffffffh
-    je near ptr L578ad
+    je restart_sample
     cmp dword ptr [esi+030h], 00h
-    je short L5780e
+    je short sample_ended
     nop
     nop
     nop
     nop
     dec dword ptr [esi+030h]
-    jmp near ptr L578ad
-L5780e:
+    jmp restart_sample
+sample_ended:
     or dword ptr [esi+020h], 04000h
     cmp dword ptr [esi+05ch], 00h
-    je near ptr L578c1
+    je check_sample_limit
     mov dword ptr [esi], 00h
     push ebx
     push ecx
@@ -312,16 +302,16 @@ L5780e:
     pop ecx
     pop ebx
     cmp dword ptr [esi], 00h
-    je near ptr L578c1
+    je check_sample_limit
     and dword ptr [esi+020h], 0ffffbfffh
-    jmp short L578ad
+    jmp short restart_sample
     nop
     nop
     nop
-L5784d:
+remove_sample:
     mov dword ptr [esi+020h], 00h
     cmp dword ptr [esi+060h], 00h
-    je short L57871
+    je short unlink_sample
     nop
     nop
     nop
@@ -341,75 +331,75 @@ L5784d:
     pop edx
     pop ecx
     pop ebx
-L57871:
+unlink_sample:
     and dword ptr [esi+020h], 0ffff7fffh
     or dword ptr [esi+020h], 02000h
     cmp dword ptr [_Datac85d0], 00h
-    jne short L57896
+    jne short unlink_from_previous
     mov eax, dword ptr [esi+0ech]
     mov dword ptr [ebp+030h], eax
-    jmp short L578d3
+    jmp short advance_list
     nop
     nop
     nop
-L57896:
+unlink_from_previous:
     mov eax, dword ptr [esi+0ech]
     mov edi, dword ptr [_Datac85d0]
     mov dword ptr [edi+0ech], eax
-    jmp short L578d3
+    jmp short advance_list
     nop
     nop
     nop
-L578ad:
+restart_sample:
     mov eax, dword ptr [esi]
     mov dword ptr [esi+04h], eax
     mov edi, dword ptr [_Datac85cc]
     cmp edi, dword ptr [ebp+04ch]
-    jb near ptr L57653
-L578c1:
+    jb mix_chunk
+check_sample_limit:
     mov eax, dword ptr [ebp+054h]
     cmp eax, dword ptr [ebp+014h]
-    jae short L578e1
+    jae short select_converter
     nop
     nop
     nop
     nop
     mov dword ptr [_Datac85d0], esi
-L578d3:
+advance_list:
     mov esi, dword ptr [esi+0ech]
     or esi, esi
-    jne near ptr L5763a
-L578e1:
+    jne next_sample
+select_converter:
     xor eax, eax
     test dword ptr [ebp+010h], 08000h
-    je short L578f3
+    je short check_swap
     nop
     nop
     nop
     nop
     or eax, 02h
-L578f3:
+check_swap:
     test dword ptr [ebp+010h], 04000h
-    je short L57903
+    je short check_output_bits
     nop
     nop
     nop
     nop
     or eax, 08h
-L57903:
+check_output_bits:
     cmp dword ptr [ebp+0ch], 08h
-    je short L5790f
+    je short check_output_stereo
     and eax, 0fffffffdh
     or eax, 01h
-L5790f:
+check_output_stereo:
     cmp dword ptr [ebp+08h], 01h
-    je short L57918
+    je short check_clip
     or eax, 04h
-L57918:
+check_clip:
     cmp dword ptr [ebp+054h], 01h
-    jbe short L57921
+    jbe short store_format
     or eax, 010h
-L57921:
+store_format:
     mov dword ptr [_Datac85ec], eax
     shl eax, 02h
     add eax, offset _Data5c779
@@ -421,17 +411,17 @@ L57921:
     shr ecx, 02h
     mov edx, ecx
     cmp dword ptr [ebp+08h], 01h
-    je short L5794e
+    je short check_16bit_output
     shr ecx, 1
-L5794e:
+check_16bit_output:
     cmp dword ptr [ebp+0ch], 010h
-    jne short L57956
+    jne short check_wrap
     shl edx, 1
-L57956:
+check_wrap:
     mov eax, edi
     add eax, edx
     cmp eax, dword ptr [ebp+040h]
-    jb short L579a4
+    jb short convert_whole
     nop
     nop
     nop
@@ -442,47 +432,47 @@ L57956:
     sub eax, ecx
     push eax
     cmp dword ptr [ebp+0ch], 08h
-    je short L57976
+    je short first_part_channels
     shr ecx, 1
-L57976:
+first_part_channels:
     cmp dword ptr [ebp+08h], 01h
-    je short L5797e
+    je short convert_first_part
     shr ecx, 1
-L5797e:
+convert_first_part:
     call dword ptr [_Datac85fc]
     pop ecx
     mov edi, dword ptr [ebp+03ch]
     or ecx, ecx
-    je short L579aa
+    je short converted
     cmp dword ptr [ebp+0ch], 08h
-    je short L57994
+    je short second_part_bits
     shr ecx, 1
-L57994:
+second_part_bits:
     cmp dword ptr [ebp+08h], 01h
-    je short L5799c
+    je short convert_second_part
     shr ecx, 1
-L5799c:
+convert_second_part:
     call dword ptr [_Datac85fc]
-    jmp short L579aa
-L579a4:
+    jmp short converted
+convert_whole:
     call dword ptr [_Datac85fc]
-L579aa:
+converted:
     mov dword ptr [ebp+028h], edi
     cmp dword ptr [ebp+054h], 00h
-    jne short L579cb
+    jne short mix_done
     mov eax, dword ptr [ebp+03ch]
     add eax, dword ptr [ebp+01ch]
     add eax, dword ptr [ebp+02ch]
     cmp eax, dword ptr [ebp+040h]
-    jb short L579c8
+    jb short store_write_position
     nop
     nop
     nop
     nop
     sub eax, dword ptr [ebp+044h]
-L579c8:
+store_write_position:
     mov dword ptr [ebp+028h], eax
-L579cb:
+mix_done:
     pop ebp
     pop edi
     pop esi
@@ -495,6 +485,5 @@ Func57539_ endp
 Func579d3_ proc near
     ret
 Func579d3_ endp
-_TEXT ends
 
     end
