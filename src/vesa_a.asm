@@ -9,24 +9,24 @@ OBJ3 ends
 
     assume cs:FLAT, ds:FLAT, es:FLAT, ss:FLAT
 
-    public Func59526_
-    public Func5954a_
-    public Func59577_
-    public Func59588_
-    public Func59597_
-    public Func595a4_
-    public Func595b1_
-    public Func595f3_
-    public Func59604_
-    public Func596c9_
-    public Func5978e_
-    public Func59885_
-    public Func59891_
-    public Func598b1_
-    public _Dataa0000
+    public RPLVGA_WriteDACPalette_
+    public RPLVGA_WriteDACPaletteAfterRetrace_
+    public RPLVGA_WaitVSync_
+    public RPLVGA_ResetKeyboardLatch_
+    public RPLVGA_DisableDisplay_
+    public RPLVGA_EnableDisplay_
+    public RPLVGA_UnchainRegisters_
+    public RPLVGA_SelectPage_
+    public RPLVGA_Blit320x200Planar_
+    public RPLVGA_Blit320x240Planar_
+    public RPLVGA_Blit320x200PlanarCropped_
+    public RPLVGA_WaitRetraceActive_
+    public RPLVGA_BlitChanged320x200_
+    public RPLVGA_BlitChanged320x200Cropped_
+    public _rpl_vga_copy_state
 
 _TEXT segment
-Func59526_ proc near
+RPLVGA_WriteDACPalette_ proc near
     pushad
     mov dx, 03c8h
     mov al, 00h
@@ -45,8 +45,8 @@ L59536:
     jne short L59536
     popad
     ret
-Func59526_ endp
-Func5954a_ proc near
+RPLVGA_WriteDACPalette_ endp
+RPLVGA_WriteDACPaletteAfterRetrace_ proc near
     pushad
     mov dx, 03dah
 L5954f:
@@ -70,8 +70,8 @@ L59563:
     jne short L59563
     popad
     ret
-Func5954a_ endp
-Func59577_ proc near
+RPLVGA_WriteDACPaletteAfterRetrace_ endp
+RPLVGA_WaitVSync_ proc near
     cli
     mov dx, 03dah
 L5957c:
@@ -84,8 +84,8 @@ L59581:
     je short L59581
     sti
     ret
-Func59577_ endp
-Func59588_ proc near
+RPLVGA_WaitVSync_ endp
+RPLVGA_ResetKeyboardLatch_ proc near
     pushad
     in al, 061h
     mov ah,al
@@ -95,24 +95,24 @@ Func59588_ proc near
     out 061h, al
     popad
     ret
-Func59588_ endp
-Func59597_ proc near
+RPLVGA_ResetKeyboardLatch_ endp
+RPLVGA_DisableDisplay_ proc near
     mov dx, 03dah
     in al, dx
     mov dx, 03c0h
     mov al, 00h
     out dx, al
     ret
-Func59597_ endp
-Func595a4_ proc near
+RPLVGA_DisableDisplay_ endp
+RPLVGA_EnableDisplay_ proc near
     mov dx, 03dah
     in al, dx
     mov dx, 03c0h
     mov al, 020h
     out dx, al
     ret
-Func595a4_ endp
-Func595b1_ proc near
+RPLVGA_EnableDisplay_ endp
+RPLVGA_UnchainRegisters_ proc near
     pushad
     mov dx, 03ceh
     mov al, 05h
@@ -152,8 +152,8 @@ Func595b1_ proc near
     out dx, al
     popad
     ret
-Func595b1_ endp
-Func595f3_ proc near
+RPLVGA_UnchainRegisters_ endp
+RPLVGA_SelectPage_ proc near
     pushad
     mov cl, 040h
     mul cl
@@ -163,10 +163,10 @@ Func595f3_ proc near
     out dx, ax
     popad
     ret
-Func595f3_ endp
-Func59604_ proc near
+RPLVGA_SelectPage_ endp
+RPLVGA_Blit320x200Planar_ proc near
     pushad
-    mov dword ptr [Da0004], ebx
+    mov dword ptr [rpl_vga_copy_page_offset], ebx
     cld
     mov ebp,esi
     mov ah, 01h
@@ -174,7 +174,7 @@ Func59604_ proc near
     mov dx, 03c4h
     out dx, ax
     mov edi, 0a0000h
-    add edi, dword ptr [Da0004]
+    add edi, dword ptr [rpl_vga_copy_page_offset]
     mov ecx, 0fa0h
 L59628:
     movs byte ptr es:[edi], byte ptr ds:[esi]
@@ -193,7 +193,7 @@ L59628:
     mov dx, 03c4h
     out dx, ax
     mov edi, 0a0000h
-    add edi, dword ptr [Da0004]
+    add edi, dword ptr [rpl_vga_copy_page_offset]
     mov ecx, 0fa0h
 L59657:
     movs byte ptr es:[edi], byte ptr ds:[esi]
@@ -212,7 +212,7 @@ L59657:
     mov dx, 03c4h
     out dx, ax
     mov edi, 0a0000h
-    add edi, dword ptr [Da0004]
+    add edi, dword ptr [rpl_vga_copy_page_offset]
     mov ecx, 0fa0h
 L59686:
     movs byte ptr es:[edi], byte ptr ds:[esi]
@@ -231,7 +231,7 @@ L59686:
     mov dx, 03c4h
     out dx, ax
     mov edi, 0a0000h
-    add edi, dword ptr [Da0004]
+    add edi, dword ptr [rpl_vga_copy_page_offset]
     mov ecx, 0fa0h
 L596b5:
     movs byte ptr es:[edi], byte ptr ds:[esi]
@@ -245,10 +245,10 @@ L596b5:
     loop L596b5
     popad
     ret
-Func59604_ endp
-Func596c9_ proc near
+RPLVGA_Blit320x200Planar_ endp
+RPLVGA_Blit320x240Planar_ proc near
     pushad
-    mov dword ptr [Da0004], ebx
+    mov dword ptr [rpl_vga_copy_page_offset], ebx
     cld
     mov ebp,esi
     mov ah, 01h
@@ -256,7 +256,7 @@ Func596c9_ proc near
     mov dx, 03c4h
     out dx, ax
     mov edi, 0a0000h
-    add edi, dword ptr [Da0004]
+    add edi, dword ptr [rpl_vga_copy_page_offset]
     mov ecx, 012c0h
 L596ed:
     movs byte ptr es:[edi], byte ptr ds:[esi]
@@ -275,7 +275,7 @@ L596ed:
     mov dx, 03c4h
     out dx, ax
     mov edi, 0a0000h
-    add edi, dword ptr [Da0004]
+    add edi, dword ptr [rpl_vga_copy_page_offset]
     mov ecx, 012c0h
 L5971c:
     movs byte ptr es:[edi], byte ptr ds:[esi]
@@ -294,7 +294,7 @@ L5971c:
     mov dx, 03c4h
     out dx, ax
     mov edi, 0a0000h
-    add edi, dword ptr [Da0004]
+    add edi, dword ptr [rpl_vga_copy_page_offset]
     mov ecx, 012c0h
 L5974b:
     movs byte ptr es:[edi], byte ptr ds:[esi]
@@ -313,7 +313,7 @@ L5974b:
     mov dx, 03c4h
     out dx, ax
     mov edi, 0a0000h
-    add edi, dword ptr [Da0004]
+    add edi, dword ptr [rpl_vga_copy_page_offset]
     mov ecx, 012c0h
 L5977a:
     movs byte ptr es:[edi], byte ptr ds:[esi]
@@ -327,10 +327,10 @@ L5977a:
     loop L5977a
     popad
     ret
-Func596c9_ endp
-Func5978e_ proc near
+RPLVGA_Blit320x240Planar_ endp
+RPLVGA_Blit320x200PlanarCropped_ proc near
     pushad
-    mov dword ptr [Da0004], ebx
+    mov dword ptr [rpl_vga_copy_page_offset], ebx
     cld
     add esi, 03020h
     mov ebp,esi
@@ -339,7 +339,7 @@ Func5978e_ proc near
     mov dx, 03c4h
     out dx, ax
     mov edi, 0a0000h
-    add edi, dword ptr [Da0004]
+    add edi, dword ptr [rpl_vga_copy_page_offset]
     mov dx, 0c8h
 L597b7:
     mov ecx, 014h
@@ -363,7 +363,7 @@ L597bc:
     mov dx, 03c4h
     out dx, ax
     mov edi, 0a0000h
-    add edi, dword ptr [Da0004]
+    add edi, dword ptr [rpl_vga_copy_page_offset]
     mov dx, 0c8h
 L597f1:
     mov ecx, 014h
@@ -387,7 +387,7 @@ L597f6:
     mov dx, 03c4h
     out dx, ax
     mov edi, 0a0000h
-    add edi, dword ptr [Da0004]
+    add edi, dword ptr [rpl_vga_copy_page_offset]
     mov dx, 0c8h
 L5982b:
     mov ecx, 014h
@@ -411,7 +411,7 @@ L59830:
     mov dx, 03c4h
     out dx, ax
     mov edi, 0a0000h
-    add edi, dword ptr [Da0004]
+    add edi, dword ptr [rpl_vga_copy_page_offset]
     mov dx, 0c8h
 L59865:
     mov ecx, 014h
@@ -430,8 +430,8 @@ L5986a:
     jne short L59865
     popad
     ret
-Func5978e_ endp
-Func59885_ proc near
+RPLVGA_Blit320x200PlanarCropped_ endp
+RPLVGA_WaitRetraceActive_ proc near
     pushad
 L59886:
     mov dx, 03dah
@@ -440,8 +440,8 @@ L59886:
     je short L59886
     popad
     ret
-Func59885_ endp
-Func59891_ proc near
+RPLVGA_WaitRetraceActive_ endp
+RPLVGA_BlitChanged320x200_ proc near
     pushad
     cld
     mov edx,edi
@@ -457,8 +457,8 @@ L598a2:
 L598af:
     popad
     ret
-Func59891_ endp
-Func598b1_ proc near
+RPLVGA_BlitChanged320x200_ endp
+RPLVGA_BlitChanged320x200Cropped_ proc near
     pushad
     cld
     add esi, 03020h
@@ -483,12 +483,12 @@ L598e0:
     jne short L598ce
     popad
     ret
-Func598b1_ endp
+RPLVGA_BlitChanged320x200Cropped_ endp
 _TEXT ends
 
 OBJ3 segment
-_Dataa0000 dd 0
-Da0004 dd 0
+_rpl_vga_copy_state dd 0
+rpl_vga_copy_page_offset dd 0
 OBJ3 ends
 
     end

@@ -3,19 +3,19 @@
 typedef struct
 {
     void *buffer;
-    int reserved;
-    int field8;
-    int fieldc;
-    int format;
-    int flags;
+    int reference_frame;
+    int x_offset;
+    int y_offset;
+    int source_width;
+    int source_height;
     int width;
     int height;
 } DECBUFFER;
 
-int Func57c10(int format, int flags, int *width, int *height);
-int Func586ac(DECBUFFER *buffer);
+int RPLDecode_GetFrameBufferSize(int source_width, int source_height, int *width, int *height);
+int RPLBuffer_GetHeight(DECBUFFER *buffer);
 
-DECBUFFER *Func58600(int format, int flags)
+DECBUFFER *RPLBuffer_Create(int source_width, int source_height)
 {
     DECBUFFER *buffer;
 
@@ -23,9 +23,9 @@ DECBUFFER *Func58600(int format, int flags)
     if (!buffer) {
         return 0;
     }
-    buffer->format = format;
-    buffer->flags = flags;
-    buffer->buffer = calloc(1, Func57c10(buffer->format, buffer->flags, &buffer->width, &buffer->height));
+    buffer->source_width = source_width;
+    buffer->source_height = source_height;
+    buffer->buffer = calloc(1, RPLDecode_GetFrameBufferSize(buffer->source_width, buffer->source_height, &buffer->width, &buffer->height));
     if (!buffer->buffer) {
         free(buffer);
         return 0;
@@ -33,7 +33,7 @@ DECBUFFER *Func58600(int format, int flags)
     return buffer;
 }
 
-void Func58658(DECBUFFER *buffer)
+void RPLBuffer_Destroy(DECBUFFER *buffer)
 {
     if (buffer) {
         free(buffer ? buffer->buffer : 0);
@@ -41,7 +41,7 @@ void Func58658(DECBUFFER *buffer)
     }
 }
 
-void *Func58674(DECBUFFER *buffer)
+void *RPLBuffer_GetData(DECBUFFER *buffer)
 {
     if (!buffer) {
         return 0;
@@ -49,52 +49,52 @@ void *Func58674(DECBUFFER *buffer)
     return buffer->buffer;
 }
 
-int Func5867c(DECBUFFER *buffer)
+int RPLBuffer_GetPixelCount(DECBUFFER *buffer)
 {
     int width;
 
     if (buffer) {
         width = buffer->width;
-        return width * Func586ac(buffer);
+        return width * RPLBuffer_GetHeight(buffer);
     }
     return 0;
 }
 
-void Func58690(DECBUFFER *buffer, int value)
+void RPLBuffer_SetXOffset(DECBUFFER *buffer, int value)
 {
     if (buffer) {
-        buffer->field8 = value;
+        buffer->x_offset = value;
     }
 }
 
-int Func58698(DECBUFFER *buffer)
+int RPLBuffer_GetXOffset(DECBUFFER *buffer)
 {
-    return buffer->field8;
+    return buffer->x_offset;
 }
 
-void Func5869c(DECBUFFER *buffer, int value)
+void RPLBuffer_SetYOffset(DECBUFFER *buffer, int value)
 {
     if (buffer) {
-        buffer->fieldc = value;
+        buffer->y_offset = value;
     }
 }
 
-int Func586a4(DECBUFFER *buffer)
+int RPLBuffer_GetYOffset(DECBUFFER *buffer)
 {
-    return buffer->fieldc;
+    return buffer->y_offset;
 }
 
-int Func586a8(DECBUFFER *buffer)
+int RPLBuffer_GetWidth(DECBUFFER *buffer)
 {
     return buffer->width;
 }
 
-int Func586ac(DECBUFFER *buffer)
+int RPLBuffer_GetHeight(DECBUFFER *buffer)
 {
     return buffer->height;
 }
 
-int Func586b0(DECBUFFER *buffer)
+int RPLBuffer_GetAllocationSize(DECBUFFER *buffer)
 {
-    return Func57c10(buffer->format, buffer->flags, &buffer->width, &buffer->height);
+    return RPLDecode_GetFrameBufferSize(buffer->source_width, buffer->source_height, &buffer->width, &buffer->height);
 }

@@ -17,35 +17,35 @@ struct
     int reserved2;
 } vga_state;
 
-void *Func58f34(word segment, word shift);
-void Func58f48(int int_number, union REGS *in, union REGS *out);
-void Func59064(int int_number, union REGS *in, union REGS *out, struct SREGS *segments);
-byte Func591ac(word size, word *selector, word *segment);
-void Func59228(word selector);
-void Func58e78(void);
+void *RPLDPMI_SegmentToPointer(word segment, word shift);
+void RPLDPMI_RealInterrupt(int int_number, union REGS *in, union REGS *out);
+void RPLDPMI_RealInterruptWithSegments(int int_number, union REGS *in, union REGS *out, struct SREGS *segments);
+byte RPLDPMI_AllocateDOSMemory(word size, word *selector, word *segment);
+void RPLDPMI_FreeDOSMemory(word selector);
+void RPLVGA_Unchain(void);
 
-void Func58b10(void)
+void RPLVGA_SetMode13(void)
 {
     vga_state.regs.w.ax = 0x13;
-    Func58f48(0x10, &vga_state.regs, &vga_state.regs);
+    RPLDPMI_RealInterrupt(0x10, &vga_state.regs, &vga_state.regs);
 }
 
-void Func58b34(void)
+void RPLVGA_SetTextMode(void)
 {
     vga_state.regs.w.ax = 3;
-    Func58f48(0x10, &vga_state.regs, &vga_state.regs);
+    RPLDPMI_RealInterrupt(0x10, &vga_state.regs, &vga_state.regs);
 }
 
-byte Func58b58(const void *palette, int first, int count)
+byte RPLVGA_SetPalette(const void *palette, int first, int count)
 {
     int size;
     void *buffer;
 
     size = (count < 256 ? count : 256) * 3;
-    if (!Func591ac(size, &vga_state.selector, &vga_state.segment)) {
+    if (!RPLDPMI_AllocateDOSMemory(size, &vga_state.selector, &vga_state.segment)) {
         return 0;
     }
-    buffer = Func58f34(vga_state.segment, 0);
+    buffer = RPLDPMI_SegmentToPointer(vga_state.segment, 0);
     memcpy(buffer, palette, size);
     vga_state.regs.w.dx = 0;
     vga_state.segments.es = vga_state.segment;
@@ -53,27 +53,27 @@ byte Func58b58(const void *palette, int first, int count)
     vga_state.regs.w.ax = 0x1012;
     vga_state.regs.w.bx = first;
     vga_state.regs.w.cx = count;
-    Func59064(0x10, &vga_state.regs, &vga_state.regs, &vga_state.segments);
-    Func59228(vga_state.selector);
+    RPLDPMI_RealInterruptWithSegments(0x10, &vga_state.regs, &vga_state.regs, &vga_state.segments);
+    RPLDPMI_FreeDOSMemory(vga_state.selector);
     return 1;
 }
 
-void Func58c38(byte page, byte column, byte row)
+void RPLVGA_SetCursorPosition(byte page, byte column, byte row)
 {
     vga_state.regs.h.ah = 2;
     vga_state.regs.h.al = 0;
     vga_state.regs.h.bh = page;
     vga_state.regs.h.dl = column;
     vga_state.regs.h.dh = row;
-    Func58f48(0x10, &vga_state.regs, &vga_state.regs);
+    RPLDPMI_RealInterrupt(0x10, &vga_state.regs, &vga_state.regs);
 }
 
-void Func58c6c(byte page, byte *column, byte *row)
+void RPLVGA_GetCursorPosition(byte page, byte *column, byte *row)
 {
     vga_state.regs.h.ah = 3;
     vga_state.regs.h.al = 0;
     vga_state.regs.h.bh = page;
-    Func58f48(0x10, &vga_state.regs, &vga_state.regs);
+    RPLDPMI_RealInterrupt(0x10, &vga_state.regs, &vga_state.regs);
     if (row) {
         *row = vga_state.regs.h.dh;
     }
@@ -82,7 +82,7 @@ void Func58c6c(byte page, byte *column, byte *row)
     }
 }
 
-void Func58cb4(signed char lines, byte attribute, byte top, byte left, byte bottom, byte right)
+void RPLVGA_ScrollWindow(signed char lines, byte attribute, byte top, byte left, byte bottom, byte right)
 {
     if (lines >= 0) {
         vga_state.regs.h.ah = 6;
@@ -97,37 +97,37 @@ void Func58cb4(signed char lines, byte attribute, byte top, byte left, byte bott
     vga_state.regs.h.cl = left;
     vga_state.regs.h.dh = bottom;
     vga_state.regs.h.dl = right;
-    Func58f48(0x10, &vga_state.regs, &vga_state.regs);
+    RPLDPMI_RealInterrupt(0x10, &vga_state.regs, &vga_state.regs);
 }
 
-void Func58d18(byte character, byte page, byte attribute, word count)
+void RPLVGA_WriteCharacter(byte character, byte page, byte attribute, word count)
 {
     vga_state.regs.h.ah = 9;
     vga_state.regs.h.al = character;
     vga_state.regs.h.bh = page;
     vga_state.regs.h.bl = attribute;
     vga_state.regs.w.cx = count;
-    Func58f48(0x10, &vga_state.regs, &vga_state.regs);
+    RPLDPMI_RealInterrupt(0x10, &vga_state.regs, &vga_state.regs);
 }
 
-void Func58d4c(byte character, byte page, byte color)
+void RPLVGA_WriteTeletype(byte character, byte page, byte color)
 {
     vga_state.regs.h.ah = 0xe;
     vga_state.regs.h.al = character;
     vga_state.regs.h.bh = page;
     vga_state.regs.h.bl = color;
-    Func58f48(0x10, &vga_state.regs, &vga_state.regs);
+    RPLDPMI_RealInterrupt(0x10, &vga_state.regs, &vga_state.regs);
 }
 
-void Func58d78(byte first, byte count)
+void RPLVGA_GrayScalePalette(byte first, byte count)
 {
     vga_state.regs.w.ax = 0x101b;
     vga_state.regs.w.bx = first;
     vga_state.regs.w.cx = count;
-    Func58f48(0x10, &vga_state.regs, &vga_state.regs);
+    RPLDPMI_RealInterrupt(0x10, &vga_state.regs, &vga_state.regs);
 }
 
-byte Func58da8(byte enabled)
+byte RPLVGA_SetGrayScaleSumming(byte enabled)
 {
     int flag;
 
@@ -135,11 +135,11 @@ byte Func58da8(byte enabled)
     vga_state.regs.h.bl = 0x33;
     flag = enabled != 0;
     vga_state.regs.h.al = flag;
-    Func58f48(0x10, &vga_state.regs, &vga_state.regs);
+    RPLDPMI_RealInterrupt(0x10, &vga_state.regs, &vga_state.regs);
     return vga_state.regs.h.al == 0x12;
 }
 
-byte Func58de8(byte enabled)
+byte RPLVGA_SetCursorEmulation(byte enabled)
 {
     int flag;
 
@@ -147,13 +147,13 @@ byte Func58de8(byte enabled)
     vga_state.regs.h.bl = 0x34;
     flag = enabled != 0;
     vga_state.regs.h.al = flag;
-    Func58f48(0x10, &vga_state.regs, &vga_state.regs);
+    RPLDPMI_RealInterrupt(0x10, &vga_state.regs, &vga_state.regs);
     return vga_state.regs.h.al == 0x12;
 }
 
-void Func58e28(void)
+void RPLVGA_Set320x240(void)
 {
-    Func58e78();
+    RPLVGA_Unchain();
     outp(0x3c2, 0xe3);
     outpw(0x3d4, 0x2c11);
     outpw(0x3d4, 0x0d06);
@@ -165,11 +165,11 @@ void Func58e28(void)
     outpw(0x3d4, 0x0616);
 }
 
-void Func58e78(void)
+void RPLVGA_Unchain(void)
 {
     byte *buffer;
 
-    buffer = Func58f34(0xa000, 0);
+    buffer = RPLDPMI_SegmentToPointer(0xa000, 0);
     outpw(0x3c4, 0x0604);
     outpw(0x3d4, 0xe317);
     outpw(0x3d4, 0x0014);
@@ -178,7 +178,7 @@ void Func58e78(void)
     buffer[0] = 0;
 }
 
-void Func58ecc(unsigned int start)
+void RPLVGA_SetDisplayStart(unsigned int start)
 {
     outp(0x3d4, 0x0c);
     outp(0x3d5, start >> 8);

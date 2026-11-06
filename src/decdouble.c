@@ -1,31 +1,31 @@
 #include "rplfile_internal.h"
 
-int Func584a0(int a0, int a1, int a2, int a3)
+int RPL124_DecodeRGB555Doubled(int compressed_data, int destination, int codebooks, int block_list)
 {
-    return Func70d17(a0, a1, a2, a3);
+    return RPL124D555_DecodeFrame(compressed_data, destination, codebooks, block_list);
 }
 
-int Func584b0(int a0, int a1, int a2, int a3)
+int RPL124_DecodeRGB565Doubled(int compressed_data, int destination, int codebooks, int block_list)
 {
-    return Func78e07(a0, a1, a2, a3);
+    return RPL124D565_DecodeFrame(compressed_data, destination, codebooks, block_list);
 }
 
-int Func584c0(int a0, int a1, int a2)
+int RPL124_SetBankModeRGB555Doubled(int bank_window, int granularity, int unused)
 {
-    return Func75e12(a0, a1);
+    return RPL124D555_SetBankMode(bank_window, granularity);
 }
 
-int Func584d0(int a0, int a1, int a2)
+int RPL124_SetBankModeRGB565Doubled(int bank_window, int granularity, int unused)
 {
-    return Func7df02(a0, a1);
+    return RPL124D565_SetBankMode(bank_window, granularity);
 }
 
-int Func584e0(int a0, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9)
+int RPL124_BuildRGB555DoubledBlockList(int width, int height, int x_offset, int y_offset, int clip_x, int clip_y, int clip_width, int clip_height, int flags, int block_list)
 {
-    return Func75e4b(a0, a1, a2, a3, a4, a5, a6, a7, a8, a9);
+    return RPL124D555_BuildBlockList(width, height, x_offset, y_offset, clip_x, clip_y, clip_width, clip_height, flags, block_list);
 }
 
-int Func58514(int a0, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9)
+int RPL124_BuildRGB565DoubledBlockList(int width, int height, int x_offset, int y_offset, int clip_x, int clip_y, int clip_width, int clip_height, int flags, int block_list)
 {
-    return Func7df3b(a0, a1, a2, a3, a4, a5, a6, a7, a8, a9);
+    return RPL124D565_BuildBlockList(width, height, x_offset, y_offset, clip_x, clip_y, clip_width, clip_height, flags, block_list);
 }

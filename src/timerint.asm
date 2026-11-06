@@ -1,39 +1,39 @@
     .386p
     .model flat
 
-    extrn _Datac6e14:byte
-    extrn _Datac6e18:byte
-    extrn _Datac6e20:byte
-    extrn _Datac6e24:byte
-    extrn _Datac6e26:byte
-    extrn _Datac6e2a:byte
-    extrn _Datac6e2e:byte
-    extrn _Datac6e32:byte
-    extrn _Datac7e36:byte
-    extrn _Datac7e3a:byte
-    extrn _Datac7e3e:byte
-    extrn _Datac7e40:byte
-    extrn _Datac7e44:byte
+    extrn _sos_timer_previous_offset:byte
+    extrn _sos_timer_previous_selector:byte
+    extrn _sos_timer_irq_callback:byte
+    extrn _sos_timer_callback_selector:byte
+    extrn _sos_timer_private_stack_pointer:byte
+    extrn _sos_timer_private_stack_selector:byte
+    extrn _sos_timer_saved_esp:byte
+    extrn _sos_timer_saved_ss_and_stack:byte
+    extrn _sos_timer_dispatch_esp:byte
+    extrn _sos_timer_chain_eax:byte
+    extrn _sos_timer_irq_busy:byte
+    extrn _sos_timer_irq_enabled:byte
+    extrn _sos_timer_use_dpmi_vector:byte
     extrn ___GETDSStart_:near
 
-    public Func52118_
-    public Func52119_
-    public Func52180_
-    public Func521c6_
-    public Func52281_
-    public Func522ad_
-    public Func522d9_
-    public Func52355_
-    public Func523ae_
+    public sosTIMERInterruptCodeStart_
+    public sosTIMERInterruptHandler_
+    public sosTIMERProgramPIT_
+    public sosTIMERInstallInterrupt_
+    public sosTIMERMaskInterrupt_
+    public sosTIMERUnmaskInterrupt_
+    public sosTIMERRestoreInterrupt_
+    public sosTIMERChainInterrupt_
+    public sosTIMERInterruptCodeEnd_
 
     .code
-Func52118_ proc near
+sosTIMERInterruptCodeStart_ proc near
     ret
-Func52118_ endp
-Func52119_ proc near
+sosTIMERInterruptCodeStart_ endp
+sosTIMERInterruptHandler_ proc near
     push ds
     call ___GETDSStart_
-    cmp word ptr [_Datac7e3e], 01h
+    cmp word ptr [_sos_timer_irq_busy], 01h
     je short handler_busy
     nop
     nop
@@ -43,29 +43,29 @@ Func52119_ proc near
     mov ax, 020h
     out 020h, al
     pop ax
-    mov word ptr [_Datac7e3e], 01h
-    mov dword ptr [_Datac6e2e], esp
-    mov word ptr [_Datac6e32], ss
-    lss esp, fword ptr [_Datac6e26]
+    mov word ptr [_sos_timer_irq_busy], 01h
+    mov dword ptr [_sos_timer_saved_esp], esp
+    mov word ptr [_sos_timer_saved_ss_and_stack], ss
+    lss esp, fword ptr [_sos_timer_private_stack_pointer]
     pusha
     push es
     push fs
     push gs
     push ds
     pop es
-    mov dword ptr [_Datac7e36], esp
-    call dword ptr [_Datac6e20]
+    mov dword ptr [_sos_timer_dispatch_esp], esp
+    call dword ptr [_sos_timer_irq_callback]
     pop gs
     pop fs
     pop es
     popa
-    lss esp, fword ptr [_Datac6e2e]
-    mov word ptr [_Datac7e3e], 00h
+    lss esp, fword ptr [_sos_timer_saved_esp]
+    mov word ptr [_sos_timer_irq_busy], 00h
 handler_busy:
     pop ds
     iretd
-Func52119_ endp
-Func52180_ proc near
+sosTIMERInterruptHandler_ endp
+sosTIMERProgramPIT_ proc near
     push ebp
     mov ebp, esp
     push esi
@@ -75,7 +75,7 @@ Func52180_ proc near
     push fs
     push gs
     push es
-    cmp dword ptr [_Datac7e40], 00h
+    cmp dword ptr [_sos_timer_irq_enabled], 00h
     je short set_rate_done
     nop
     nop
@@ -107,8 +107,8 @@ set_rate_done:
     pop esi
     pop ebp
     ret
-Func52180_ endp
-Func521c6_ proc near
+sosTIMERProgramPIT_ endp
+sosTIMERInstallInterrupt_ proc near
     push ebp
     mov ebp, esp
     push esi
@@ -119,16 +119,16 @@ Func521c6_ proc near
     push gs
     push es
     mov edi, dword ptr [ebp+0ch]
-    mov dword ptr [_Datac6e20], edi
-    mov word ptr [_Datac6e24], ds
-    mov word ptr [_Datac6e2a], ds
-    cmp dword ptr [_Datac7e40], 00h
+    mov dword ptr [_sos_timer_irq_callback], edi
+    mov word ptr [_sos_timer_callback_selector], ds
+    mov word ptr [_sos_timer_private_stack_selector], ds
+    cmp dword ptr [_sos_timer_irq_enabled], 00h
     je install_done
     mov dx, 021h
     in al, dx
     or al, 01h
     out dx, al
-    cmp dword ptr [_Datac7e44], 00h
+    cmp dword ptr [_sos_timer_use_dpmi_vector], 00h
     je short install_dos
     nop
     nop
@@ -137,11 +137,11 @@ Func521c6_ proc near
     mov ax, 0204h
     mov bl, 08h
     int 031h
-    mov dword ptr [_Datac6e14], edx
-    mov word ptr [_Datac6e18], cx
+    mov dword ptr [_sos_timer_previous_offset], edx
+    mov word ptr [_sos_timer_previous_selector], cx
     mov ax, 0205h
     mov bl, 08h
-    mov edx, offset Func52119_
+    mov edx, offset sosTIMERInterruptHandler_
     mov cx, cs
     int 031h
     jmp short program_timer
@@ -151,13 +151,13 @@ Func521c6_ proc near
 install_dos:
     mov ax, 03508h
     int 021h
-    mov dword ptr [_Datac6e14], ebx
-    mov word ptr [_Datac6e18], es
+    mov dword ptr [_sos_timer_previous_offset], ebx
+    mov word ptr [_sos_timer_previous_selector], es
     push ds
     xor ax, ax
     mov es, eax
     mov ax, 02508h
-    mov edx, offset Func52119_
+    mov edx, offset sosTIMERInterruptHandler_
     push cs
     pop ds
     int 021h
@@ -185,8 +185,8 @@ install_done:
     pop esi
     pop ebp
     ret
-Func521c6_ endp
-Func52281_ proc near
+sosTIMERInstallInterrupt_ endp
+sosTIMERMaskInterrupt_ proc near
     push ebp
     mov ebp, esp
     push esi
@@ -196,7 +196,7 @@ Func52281_ proc near
     push fs
     push gs
     push es
-    cmp dword ptr [_Datac7e40], 00h
+    cmp dword ptr [_sos_timer_irq_enabled], 00h
     je short mask_done
     nop
     nop
@@ -216,8 +216,8 @@ mask_done:
     pop esi
     pop ebp
     ret
-Func52281_ endp
-Func522ad_ proc near
+sosTIMERMaskInterrupt_ endp
+sosTIMERUnmaskInterrupt_ proc near
     push ebp
     mov ebp, esp
     push esi
@@ -227,7 +227,7 @@ Func522ad_ proc near
     push fs
     push gs
     push es
-    cmp dword ptr [_Datac7e40], 00h
+    cmp dword ptr [_sos_timer_irq_enabled], 00h
     je short unmask_done
     nop
     nop
@@ -247,8 +247,8 @@ unmask_done:
     pop esi
     pop ebp
     ret
-Func522ad_ endp
-Func522d9_ proc near
+sosTIMERUnmaskInterrupt_ endp
+sosTIMERRestoreInterrupt_ proc near
     push ebp
     mov ebp, esp
     push esi
@@ -258,7 +258,7 @@ Func522d9_ proc near
     push fs
     push gs
     push es
-    cmp dword ptr [_Datac7e40], 00h
+    cmp dword ptr [_sos_timer_irq_enabled], 00h
     je short remove_done
     nop
     nop
@@ -268,7 +268,7 @@ Func522d9_ proc near
     in al, dx
     or al, 01h
     out dx, al
-    cmp dword ptr [_Datac7e44], 00h
+    cmp dword ptr [_sos_timer_use_dpmi_vector], 00h
     je short restore_dos
     nop
     nop
@@ -276,8 +276,8 @@ Func522d9_ proc near
     nop
     mov ax, 0205h
     mov bl, 08h
-    mov cx, word ptr [_Datac6e18]
-    mov edx, dword ptr [_Datac6e14]
+    mov cx, word ptr [_sos_timer_previous_selector]
+    mov edx, dword ptr [_sos_timer_previous_offset]
     int 031h
     jmp short reset_timer
     nop
@@ -286,8 +286,8 @@ Func522d9_ proc near
 restore_dos:
     push ds
     mov ax, 02508h
-    mov cx, word ptr [_Datac6e18]
-    mov edx, dword ptr [_Datac6e14]
+    mov cx, word ptr [_sos_timer_previous_selector]
+    mov edx, dword ptr [_sos_timer_previous_offset]
     mov ds, ecx
     int 021h
     pop ds
@@ -310,41 +310,41 @@ remove_done:
     pop esi
     pop ebp
     ret
-Func522d9_ endp
-Func52355_ proc near
-    cmp dword ptr [_Datac7e40], 00h
+sosTIMERRestoreInterrupt_ endp
+sosTIMERChainInterrupt_ proc near
+    cmp dword ptr [_sos_timer_irq_enabled], 00h
     je short no_timer
     nop
     nop
     nop
     nop
-    mov word ptr [_Datac7e3e], 00h
-    mov esp, dword ptr [_Datac7e36]
+    mov word ptr [_sos_timer_irq_busy], 00h
+    mov esp, dword ptr [_sos_timer_dispatch_esp]
     pop gs
     pop fs
     pop es
     popa
-    lss esp, fword ptr [_Datac6e2e]
-    mov dword ptr [_Datac7e3a], eax
+    lss esp, fword ptr [_sos_timer_saved_esp]
+    mov dword ptr [_sos_timer_chain_eax], eax
     pop eax
-    mov word ptr [_Datac7e36], ax
+    mov word ptr [_sos_timer_dispatch_esp], ax
     push eax
     push eax
-    mov eax, dword ptr [_Datac6e14]
+    mov eax, dword ptr [_sos_timer_previous_offset]
     mov dword ptr [esp], eax
-    mov eax, dword ptr [_Datac6e18]
+    mov eax, dword ptr [_sos_timer_previous_selector]
     mov dword ptr [esp+04h], eax
-    mov eax, dword ptr [_Datac7e3a]
+    mov eax, dword ptr [_sos_timer_chain_eax]
     push eax
-    mov ax, word ptr [_Datac7e36]
+    mov ax, word ptr [_sos_timer_dispatch_esp]
     mov ds, eax
     pop eax
     retf
 no_timer:
     ret
-Func52355_ endp
-Func523ae_ proc near
+sosTIMERChainInterrupt_ endp
+sosTIMERInterruptCodeEnd_ proc near
     ret
-Func523ae_ endp
+sosTIMERInterruptCodeEnd_ endp
 
     end

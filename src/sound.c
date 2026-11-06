@@ -97,23 +97,23 @@ typedef struct
 extern int file_len;
 
 byte *FileLoad(char *name, void *where, dword flags);
-int Func4d170(_INI_INSTANCE *ini, char *name);
-int Func4d224(_INI_INSTANCE *ini);
-int Func4d258(_INI_INSTANCE *ini, char *section);
-int Func4d7d8(_INI_INSTANCE *ini, char *item, dword *value);
-dword Func4dc8f(char *path, dword flags);
-dword Func4dceb(void);
-dword Func4dd52(SOS_DIGI_DRIVER *driver, dword *handle);
-dword Func4e1b5(dword handle, dword close, dword unload);
-dword Func4e6b6(dword handle, SOS_SAMPLE *sample);
-dword Func4e836(dword handle, dword sample);
-dword Func4e982(dword handle, dword sample, dword volume);
-dword Func4eb6c(dword handle, dword sample, dword pan);
-dword Func4ec68(dword handle, dword sample, dword rate);
-dword Func4ecee(dword handle, dword sample);
-SOS_SAMPLE *Func4edda(dword handle, dword sample);
-dword Func4eec8(dword handle);
-dword Func4ef0a(dword handle, dword sample);
+int INI_Open(_INI_INSTANCE *ini, char *name);
+int INI_Close(_INI_INSTANCE *ini);
+int INI_FindSection(_INI_INSTANCE *ini, char *section);
+int INI_GetInteger(_INI_INSTANCE *ini, char *item, dword *value);
+dword sosDIGIInitSystem(char *path, dword flags);
+dword sosDIGIUninitSystem(void);
+dword sosDIGIInitDriver(SOS_DIGI_DRIVER *driver, dword *handle);
+dword sosDIGIUninitDriver(dword handle, dword close, dword unload);
+dword sosDIGIStartSample(dword handle, SOS_SAMPLE *sample);
+dword sosDIGIStopSample(dword handle, dword sample);
+dword sosDIGISetSampleVolume(dword handle, dword sample, dword volume);
+dword sosDIGISetSamplePan(dword handle, dword sample, dword pan);
+dword sosDIGISetSampleRate(dword handle, dword sample, dword rate);
+dword sosDIGIGetSampleRate(dword handle, dword sample);
+SOS_SAMPLE *sosDIGIGetSampleID(dword handle, dword sample);
+dword sosDIGIGetActiveSampleCount(dword handle);
+dword sosDIGISampleDone(dword handle, dword sample);
 dword sosTIMERRegisterEvent(dword rate, void (*event)(void), dword *handle);
 dword sosTIMERRemoveEvent(dword handle);
 
@@ -141,9 +141,9 @@ void EnableInterrupts(void);
 
 void SoundStopAllSamples(void);
 void SoundFreeSamples(void);
-void __cdecl Func48e14(SOS_SAMPLE *s);
+void __cdecl SoundStreamProcessed(SOS_SAMPLE *s);
 
-int Func48300(char *name)
+int SoundLoadSettings(char *name)
 {
     _INI_INSTANCE ini;
     char path[144];
@@ -152,18 +152,18 @@ int Func48300(char *name)
     strcpy(path, GpSetupFilePath);
     strcat(path, name);
     memset(&sound_drv, 0, sizeof(sound_drv));
-    if (!Func4d170(&ini, path)) {
+    if (!INI_Open(&ini, path)) {
         return 0;
     }
-    if (!Func4d258(&ini, "DIGITAL")
-        || !Func4d7d8(&ini, "DeviceID", &digi_device)
-        || !Func4d7d8(&ini, "DevicePort", &sound_drv.wPort)
-        || !Func4d7d8(&ini, "DeviceDMA", &sound_drv.wDMA)
-        || !Func4d7d8(&ini, "DeviceIRQ", &sound_drv.wIRQ)) {
-        Func4d224(&ini);
+    if (!INI_FindSection(&ini, "DIGITAL")
+        || !INI_GetInteger(&ini, "DeviceID", &digi_device)
+        || !INI_GetInteger(&ini, "DevicePort", &sound_drv.wPort)
+        || !INI_GetInteger(&ini, "DeviceDMA", &sound_drv.wDMA)
+        || !INI_GetInteger(&ini, "DeviceIRQ", &sound_drv.wIRQ)) {
+        INI_Close(&ini);
         return 0;
     }
-    Func4d224(&ini);
+    INI_Close(&ini);
     return 1;
 }
 
@@ -176,19 +176,19 @@ int SoundInit(int flags)
     digi_ready = 0;
     ok = !(flags & 2);
     if (ok) {
-        Func48300("hmiset.cfg");
+        SoundLoadSettings("hmiset.cfg");
         if (digi_device == -1) {
             ok = 0;
         }
         if (!ok) {
             return 0;
         }
-        Func4dc8f(0, 0);
+        sosDIGIInitSystem(0, 0);
         sound_drv.wDriverRate = 22050;
         sound_drv.wDMABufferSize = 0x1000;
         if (ok) {
             sound_drv.wID = digi_device;
-            if (!Func4dd52(&sound_drv, &sound_handle)) {
+            if (!sosDIGIInitDriver(&sound_drv, &sound_handle)) {
                 digi_inst = 1;
                 sosTIMERRegisterEvent(120, sound_drv.pfnTimer, &sound_timer_handle);
                 if (sound_drv.wDriverBitsPerSample == 16) {
@@ -208,14 +208,14 @@ void SoundExit(void)
     if (digi_inst) {
         SoundFreeSamples();
         sosTIMERRemoveEvent(sound_timer_handle);
-        Func4e1b5(sound_handle, 1, 1);
+        sosDIGIUninitDriver(sound_handle, 1, 1);
         digi_inst = 0;
     }
-    Func4dceb();
+    sosDIGIUninitSystem();
     digi_ready = 0;
 }
 
-void Func48538(SOS_SAMPLE *s)
+void SoundResetStream(SOS_SAMPLE *s)
 {
     dword len;
 
@@ -234,7 +234,7 @@ void Func48538(SOS_SAMPLE *s)
     s->pSample = s->pBuffer;
 }
 
-SOS_SAMPLE *Func485bc(char *name, byte *(*loader)(char *))
+SOS_SAMPLE *SoundLoadSample(char *name, byte *(*loader)(char *))
 {
     int stream;
     int convert;
@@ -319,18 +319,18 @@ SOS_SAMPLE *Func485bc(char *name, byte *(*loader)(char *))
             s->pFile = fp;
             s->dwStreamLength = s->wLength;
             s->dwDataOffset = s->pSample - data;
-            s->pfnSampleProcessed = Func48e14;
-            Func48538(s);
+            s->pfnSampleProcessed = SoundStreamProcessed;
+            SoundResetStream(s);
         }
         return s;
     }
 }
 
-void Func487f8(SOS_SAMPLE *s)
+void SoundFreeSample(SOS_SAMPLE *s)
 {
     if (s) {
         if (!(s->wFlags & 0x2000)) {
-            Func4e836(sound_handle, s->hSample);
+            sosDIGIStopSample(sound_handle, s->hSample);
         }
         if (s->pBuffer) {
             free(s->pBuffer);
@@ -363,11 +363,11 @@ void SoundLoadSamples(char **names, int count)
     if (count < 0) {
         loader = (byte *(*)(char *))names[0];
         for (i = 0; i < digi_count; i++) {
-            digi_sample_list[i] = Func485bc(names[i + 1], loader);
+            digi_sample_list[i] = SoundLoadSample(names[i + 1], loader);
         }
     } else {
         for (i = 0; i < digi_count; i++) {
-            digi_sample_list[i] = Func485bc(names[i], 0);
+            digi_sample_list[i] = SoundLoadSample(names[i], 0);
         }
     }
 }
@@ -379,7 +379,7 @@ void SoundFreeSamples(void)
     SoundStopAllSamples();
     if (digi_sample_list) {
         for (i = 0; i < digi_count; i++) {
-            Func487f8(digi_sample_list[i]);
+            SoundFreeSample(digi_sample_list[i]);
         }
         free(digi_sample_list);
         digi_sample_list = 0;
@@ -416,10 +416,10 @@ dword SoundPlaySample(dword sample, word vol, short pitch, short pan)
     }
     s.wID = (dword)digi_sample_list[sample];
     if (s.pFile) {
-        Func48538(&s);
+        SoundResetStream(&s);
     }
     DisableInterrupts();
-    handle = Func4e6b6(sound_handle, &s);
+    handle = sosDIGIStartSample(sound_handle, &s);
     EnableInterrupts();
     return handle;
 }
@@ -471,10 +471,10 @@ dword SoundPlaySampleLooped(dword sample, word vol, short pitch, short pan, dwor
     s.wLoopCount = count;
     s.wID = (dword)digi_sample_list[sample];
     if (s.pFile) {
-        Func48538(&s);
+        SoundResetStream(&s);
     }
     DisableInterrupts();
-    handle = Func4e6b6(sound_handle, &s);
+    handle = sosDIGIStartSample(sound_handle, &s);
     EnableInterrupts();
     return handle;
 }
@@ -483,10 +483,10 @@ void SoundStopAllSamples(void)
 {
     dword i;
 
-    if (digi_inst && Func4eec8(sound_handle)) {
+    if (digi_inst && sosDIGIGetActiveSampleCount(sound_handle)) {
         for (i = 0; i < 32; i++) {
             DisableInterrupts();
-            Func4e836(sound_handle, i);
+            sosDIGIStopSample(sound_handle, i);
             EnableInterrupts();
         }
     }
@@ -496,7 +496,7 @@ void SoundStopSample(dword handle)
 {
     if (digi_inst && digi_ready) {
         DisableInterrupts();
-        Func4e836(sound_handle, handle);
+        sosDIGIStopSample(sound_handle, handle);
         EnableInterrupts();
     }
 }
@@ -504,7 +504,7 @@ void SoundStopSample(dword handle)
 void SoundSetPitch(dword handle, word pitch)
 {
     if (digi_inst && digi_ready && pitch > 0 && pitch < 400) {
-        Func4ec68(sound_handle, handle, Func4edda(sound_handle, handle)->wRate * pitch / 100);
+        sosDIGISetSampleRate(sound_handle, handle, sosDIGIGetSampleID(sound_handle, handle)->wRate * pitch / 100);
     }
 }
 
@@ -513,7 +513,7 @@ void SoundSetSampleVolume(dword handle, word volume)
     if (volume > 0x7fff) {
         volume = 0x7fff;
     }
-    Func4e982(sound_handle, handle, ((short)volume << 16) | (short)volume);
+    sosDIGISetSampleVolume(sound_handle, handle, ((short)volume << 16) | (short)volume);
 }
 
 dword SoundPauseSample(dword handle)
@@ -523,15 +523,15 @@ dword SoundPauseSample(dword handle)
     if (!digi_inst || !digi_ready) {
         return 0;
     }
-    rate = Func4ecee(sound_handle, handle);
-    Func4ec68(sound_handle, handle, 0);
+    rate = sosDIGIGetSampleRate(sound_handle, handle);
+    sosDIGISetSampleRate(sound_handle, handle, 0);
     return rate;
 }
 
 void SoundUnpauseSample(dword handle, dword rate)
 {
     if (digi_inst && digi_ready) {
-        Func4ec68(sound_handle, handle, rate);
+        sosDIGISetSampleRate(sound_handle, handle, rate);
     }
 }
 
@@ -542,14 +542,14 @@ void SoundSetMasterVolume(word volume)
 void SoundSetPan(dword handle, word pan)
 {
     if (digi_inst && digi_ready) {
-        Func4eb6c(sound_handle, handle, pan);
+        sosDIGISetSamplePan(sound_handle, handle, pan);
     }
 }
 
 void SoundWaitSample(dword handle)
 {
     if (digi_inst && digi_ready) {
-        while (!Func4ef0a(sound_handle, handle)) {
+        while (!sosDIGISampleDone(sound_handle, handle)) {
         }
     }
 }
@@ -559,7 +559,7 @@ int SoundSampleIsPlaying(dword handle)
     if (!digi_inst || !digi_ready) {
         return 0;
     }
-    return !Func4ef0a(sound_handle, handle);
+    return !sosDIGISampleDone(sound_handle, handle);
 }
 
 dword SoundSamplePosition(dword handle)
@@ -593,7 +593,7 @@ int SoundGetSampleInfo(dword sample, SampleInfo *info)
     return 1;
 }
 
-void __cdecl Func48e14(SOS_SAMPLE *s)
+void __cdecl SoundStreamProcessed(SOS_SAMPLE *s)
 {
     s->dwStreamPos += s->wLength;
     if (s->dwStreamPos >= s->dwStreamLength) {

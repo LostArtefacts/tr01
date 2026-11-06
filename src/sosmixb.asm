@@ -1,17 +1,17 @@
     .386p
     .model flat
 
-    public Func5c778_
-    public _Data5c779
-    public Func5cfdd_
-    public Func5d02d_
-    public Func5d0e1_
+    public sosMIXConvertCodeStart_
+    public _sos_mix_convert_routines
+    public sosMIXConvertS16StereoSwappedClipped_
+    public sosMIXConvertU8StereoSwappedClipped_
+    public sosMIXConvertCodeEnd_
 
     .code
-Func5c778_ proc near
+sosMIXConvertCodeStart_ proc near
     ret
-Func5c778_ endp
-_Data5c779 label dword
+sosMIXConvertCodeStart_ endp
+_sos_mix_convert_routines label dword
     dd convert_s8_mono
     dd convert_s16_mono
     dd convert_u8_mono
@@ -41,8 +41,8 @@ _Data5c779 label dword
     dd convert_u8_mono_swapped_clipped
     dd convert_u16_mono_swapped_clipped
     dd convert_s8_stereo_swapped_clipped
-    dd Func5cfdd_
-    dd Func5d02d_
+    dd sosMIXConvertS16StereoSwappedClipped_
+    dd sosMIXConvertU8StereoSwappedClipped_
     dd convert_u16_stereo_swapped_clipped
     dd 224 dup(0)
 convert_s8_mono:
@@ -521,7 +521,7 @@ s8_stereo_swapped_clipped_right_high:
 s8_stereo_swapped_clipped_right_low:
     mov ebx, -8000h
     jmp s8_stereo_swapped_clipped_store
-Func5cfdd_ proc near
+sosMIXConvertS16StereoSwappedClipped_ proc near
     mov eax, dword ptr [esi]
     mov ebx, dword ptr [esi+04h]
     add esi, 08h
@@ -539,7 +539,7 @@ store:
     mov word ptr [edi+02h], ax
     add edi, 04h
     dec ecx
-    jne Func5cfdd_
+    jne sosMIXConvertS16StereoSwappedClipped_
     ret
 left_high:
     mov eax, 07fffh
@@ -553,8 +553,8 @@ right_high:
 right_low:
     mov ebx, -8000h
     jmp store
-Func5cfdd_ endp
-Func5d02d_ proc near
+sosMIXConvertS16StereoSwappedClipped_ endp
+sosMIXConvertU8StereoSwappedClipped_ proc near
     mov eax, dword ptr [esi]
     mov ebx, dword ptr [esi+04h]
     add esi, 08h
@@ -574,7 +574,7 @@ store:
     mov word ptr [edi], ax
     add edi, 02h
     dec ecx
-    jne Func5d02d_
+    jne sosMIXConvertU8StereoSwappedClipped_
     ret
 left_high:
     mov eax, 07fffh
@@ -622,9 +622,9 @@ right_high2:
 right_low2:
     mov ebx, -8000h
     jmp store2
-Func5d02d_ endp
-Func5d0e1_ proc near
+sosMIXConvertU8StereoSwappedClipped_ endp
+sosMIXConvertCodeEnd_ proc near
     ret
-Func5d0e1_ endp
+sosMIXConvertCodeEnd_ endp
 
     end

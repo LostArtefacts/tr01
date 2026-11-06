@@ -7,10 +7,10 @@ _DATA ends
 
     assume cs:FLAT, ds:FLAT, es:FLAT, ss:FLAT
 
-    public Func588e0_
+    public RPLADPCM_DecodeMono_
 
 _TEXT segment
-Func588e0_ proc near
+RPLADPCM_DecodeMono_ proc near
     push ebp
     mov ebp, esp
     push eax
@@ -148,7 +148,7 @@ low_store_sample:
     pop eax
     leave
     ret
-Func588e0_ endp
+RPLADPCM_DecodeMono_ endp
 _TEXT ends
 
 _DATA segment

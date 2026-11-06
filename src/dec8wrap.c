@@ -1,31 +1,31 @@
 #include "rplfile_internal.h"
 
-int Func57c10(int a0, int a1, int a2, int a3)
+int RPLDecode_GetFrameBufferSize(int width, int height, int width_out, int height_out)
 {
-    return Func5f305(a0, a1, a2, a3);
+    return RPL124_FrameBufferSize(width, height, width_out, height_out);
 }
 
-int Func57c20(int a0, int a1, int a2, int a3, int a4, int a5, int a6, int a7)
+int RPLDecode_SetBackground(int decode_state, int background_blocks, int destination, int x_offset, int y_offset, int width, int height, int background_frame)
 {
-    return Func5eac6(a0, a1, a2, a3, a4, a5, a6, a7);
+    return RPL124_SetBackground(decode_state, background_blocks, destination, x_offset, y_offset, width, height, background_frame);
 }
 
-int Func57c4c(int a0, int a1, int a2)
+int RPLDecode_ClearBackground(int decode_state, int background_blocks, int destination)
 {
-    return Func5f0ab(a0, a1, a2);
+    return RPL124_ClearBackground(decode_state, background_blocks, destination);
 }
 
-int Func57c5c(int a0, int a1, int a2, int a3)
+int RPLDecode_GetDecodeInfoSize(int width, int height, int width_out, int height_out)
 {
-    return Func5f2ce(a0, a1, a2, a3);
+    return RPL124_DecodeInfoSize(width, height, width_out, height_out);
 }
 
-int Func57c6c(int a0, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10, int a11, int a12, int a13, int a14, int a15, int a16)
+int RPLDecode_DrawFrame(int width, int height, int x_offset, int y_offset, int clip_x, int clip_y, int clip_width, int clip_height, int flags, int decode_state, int frame_width, int frame_height, int destination, int pixel_format, int colour_mode, int unused0, int unused1)
 {
-    return Func67e27(a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16);
+    return RPL124_DrawFrame(width, height, x_offset, y_offset, clip_x, clip_y, clip_width, clip_height, flags, decode_state, frame_width, frame_height, destination, pixel_format, colour_mode, unused0, unused1);
 }
 
-int Func57cc4(int a0, int a1, int a2, int a3, int a4, int a5, int a6, int a7)
+int RPLDecode_DecodeFrame(int compressed_data, int destination, int codebooks, int decode_state, int reference_blocks, int reference_frame, int blend_mode, int unused)
 {
-    return Func5ffed(a0, a1, a2, a3, a4, a5, a6, a7);
+    return RPL124_DecodeFrame(compressed_data, destination, codebooks, decode_state, reference_blocks, reference_frame, blend_mode, unused);
 }

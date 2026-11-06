@@ -7,10 +7,10 @@ _DATA ends
 
     assume cs:FLAT, ds:FLAT, es:FLAT, ss:FLAT
 
-    public Func58770_
+    public RPLADPCM_DecodeStereo_
 
 _TEXT segment
-Func58770_ proc near
+RPLADPCM_DecodeStereo_ proc near
     push ebp
     mov ebp, esp
     push eax
@@ -148,7 +148,7 @@ right_store_sample:
     pop eax
     leave
     ret
-Func58770_ endp
+RPLADPCM_DecodeStereo_ endp
 _TEXT ends
 
 _DATA segment

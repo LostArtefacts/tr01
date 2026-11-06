@@ -1,12 +1,12 @@
     .486p
 
-frame_buffer_size textequ <Func5f305_>
-decode_info_size  textequ <Func5f2ce_>
-decode_frame      textequ <Func5ffed_>
-draw_frame        textequ <Func67e27_>
-average_colour    textequ <Func5e39e_>
-bit_masks         textequ <_Datab0000>
-id_string         textequ <_Datac8a30>
+frame_buffer_size textequ <RPL124_FrameBufferSize_>
+decode_info_size  textequ <RPL124_DecodeInfoSize_>
+decode_frame      textequ <RPL124_DecodeFrame_>
+draw_frame        textequ <RPL124_DrawFrame_>
+average_colour    textequ <RPL124_AverageColour_>
+bit_masks         textequ <_rpl124_bit_masks>
+id_string         textequ <_rpl124_rcsid>
 
 _TEXT segment para public use32 'CODE'
 _TEXT ends
@@ -17,163 +17,163 @@ OBJ4 ends
 
     assume cs:FLAT, ds:FLAT, es:FLAT, ss:FLAT
 
-    public Func5d270_
-    public Func5d2f6_
-    public Func5d4ae_
-    public Func5d5c2_
-    public Func5d603_
-    public Func5d635_
-    public Func5d6b0_
-    public Func5e272_
-    public Func5e287_
-    public Func5e294_
-    public Func5e2a8_
-    public Func5e2af_
-    public Func5e2b6_
-    public Func5e2bd_
-    public Func5e2c4_
-    public Func5e2cb_
-    public Func5e2d2_
-    public Func5e2db_
-    public Func5e2e1_
-    public Func5e2e2_
-    public Func5e2eb_
-    public Func5e2f4_
-    public Func5e2fd_
-    public Func5e306_
-    public Func5e30f_
-    public Func5e318_
-    public Func5e323_
-    public Func5e32a_
-    public Func5e331_
-    public Func5e338_
-    public Func5e33f_
-    public Func5e346_
-    public Func5e34d_
-    public Func5e356_
-    public Func5e35c_
-    public Func5e35d_
-    public Func5e366_
-    public Func5e36f_
-    public Func5e378_
-    public Func5e381_
-    public Func5e38a_
-    public Func5e393_
+    public RPL124_DecodePaletteEntry_
+    public RPL124_DecodeHalfIntensityPalettePair_
+    public RPL124_WriteSolidPaletteQuad_
+    public RPL124_GrayscalePair_
+    public RPL124_CopyFrameRegion_
+    public RPL124_ClipFrameRegion_
+    public RPL124_CopyBlock8x8_
+    public RPL124_ClearOutputPair_
+    public RPL124_NoOpSaveFourRegisters_
+    public RPL124_NoOpSaveSixRegisters_
+    public RPL124_FilterEBXRed_
+    public RPL124_FilterEBXGreen_
+    public RPL124_FilterEBXBlue_
+    public RPL124_FilterEBXYellow_
+    public RPL124_FilterEBXMagenta_
+    public RPL124_FilterEBXCyan_
+    public RPL124_FilterEBXHalf_
+    public RPL124_FilterEBXInvert_
+    public RPL124_FilterEBXIdentity_
+    public RPL124_FilterEBXInvertRed_
+    public RPL124_FilterEBXInvertGreen_
+    public RPL124_FilterEBXInvertBlue_
+    public RPL124_FilterEBXInvertYellow_
+    public RPL124_FilterEBXInvertMagenta_
+    public RPL124_FilterEBXInvertCyan_
+    public RPL124_FilterEBXGray5_
+    public RPL124_FilterESIRed_
+    public RPL124_FilterESIGreen_
+    public RPL124_FilterESIBlue_
+    public RPL124_FilterESIYellow_
+    public RPL124_FilterESIMagenta_
+    public RPL124_FilterESICyan_
+    public RPL124_FilterESIHalf_
+    public RPL124_FilterESIInvert_
+    public RPL124_FilterESIIdentity_
+    public RPL124_FilterESIInvertRed_
+    public RPL124_FilterESIInvertGreen_
+    public RPL124_FilterESIInvertBlue_
+    public RPL124_FilterESIInvertYellow_
+    public RPL124_FilterESIInvertMagenta_
+    public RPL124_FilterESIInvertCyan_
+    public RPL124_FilterESIGray5_
     public average_colour
-    public Func5e449_
-    public Func5e620_
-    public Func5e6d6_
-    public Func5ea37_
-    public Func5eac6_
-    public Func5f0ab_
+    public RPL124_DoubleFrameEdgeAware_
+    public RPL124_InterpolateHorizontalDoubledRows_
+    public RPL124_DoubleFrameBilinear_
+    public RPL124_DoubleRowsNearest_
+    public RPL124_SetBackground_
+    public RPL124_ClearBackground_
     public decode_info_size
     public frame_buffer_size
-    public Func5f33c_
-    public Func5f33d_
-    public Func5f39e_
-    public Func5f402_
-    public Func5f46c_
-    public Func5f4d0_
-    public Func5f53d_
-    public Func5f5aa_
-    public Func5f614_
-    public Func5f684_
-    public Func5f6ee_
-    public Func5f75b_
-    public Func5f7c8_
-    public Func5f841_
-    public Func5f8ae_
-    public Func5f91b_
-    public Func5f985_
-    public Func5f9a2_
-    public Func5fa0c_
-    public Func5fa79_
-    public Func5fae6_
-    public Func5fb5f_
-    public Func5fbcc_
-    public Func5fc39_
-    public Func5fca3_
-    public Func5fd13_
-    public Func5fd7d_
-    public Func5fdea_
-    public Func5fe57_
-    public Func5febb_
-    public Func5ff25_
-    public Func5ff89_
-    public Func5ffea_
+    public RPL124_Blend00Of32_
+    public RPL124_Blend01Of32_
+    public RPL124_Blend02Of32_
+    public RPL124_Blend03Of32_
+    public RPL124_Blend04Of32_
+    public RPL124_Blend05Of32_
+    public RPL124_Blend06Of32_
+    public RPL124_Blend07Of32_
+    public RPL124_Blend08Of32_
+    public RPL124_Blend09Of32_
+    public RPL124_Blend10Of32_
+    public RPL124_Blend11Of32_
+    public RPL124_Blend12Of32_
+    public RPL124_Blend13Of32_
+    public RPL124_Blend14Of32_
+    public RPL124_Blend15Of32_
+    public RPL124_Blend16Of32_
+    public RPL124_Blend17Of32_
+    public RPL124_Blend18Of32_
+    public RPL124_Blend19Of32_
+    public RPL124_Blend20Of32_
+    public RPL124_Blend21Of32_
+    public RPL124_Blend22Of32_
+    public RPL124_Blend23Of32_
+    public RPL124_Blend24Of32_
+    public RPL124_Blend25Of32_
+    public RPL124_Blend26Of32_
+    public RPL124_Blend27Of32_
+    public RPL124_Blend28Of32_
+    public RPL124_Blend29Of32_
+    public RPL124_Blend30Of32_
+    public RPL124_Blend31Of32_
+    public RPL124_Blend32Of32_
     public decode_frame
-    public Func605d8_
-    public Func61872_
-    public Func62bfb_
-    public Func62d3f_
-    public Func62e8a_
-    public Func62fd6_
-    public Func63135_
-    public Func63274_
-    public Func633b5_
-    public Func634fc_
-    public Func6365b_
-    public Func6379a_
-    public Func638db_
-    public Func63a22_
-    public Func63b81_
-    public Func63cc0_
-    public Func63e04_
-    public Func63f4b_
-    public Func640b0_
-    public Func641ea_
-    public Func6432b_
-    public Func6446d_
-    public Func645cc_
-    public Func6470b_
-    public Func6484c_
-    public Func64993_
-    public Func64af2_
-    public Func64c31_
-    public Func64d72_
-    public Func64eb9_
-    public Func65018_
-    public Func65157_
-    public Func6529b_
-    public Func653e2_
-    public Func65547_
-    public Func65681_
-    public Func657c2_
-    public Func65904_
-    public Func65a63_
-    public Func65ba2_
-    public Func65ce3_
-    public Func65e2a_
-    public Func65f89_
-    public Func660c8_
-    public Func66209_
-    public Func66350_
-    public Func664af_
-    public Func665ee_
-    public Func66732_
-    public Func66879_
-    public Func669de_
-    public Func66b18_
-    public Func66c59_
-    public Func66da5_
-    public Func66f0e_
-    public Func6704d_
-    public Func6718e_
-    public Func672df_
-    public Func67448_
-    public Func67587_
-    public Func676c8_
-    public Func67819_
-    public Func67982_
-    public Func67ac1_
-    public Func67c05_
-    public Func67d56_
+    public RPL124_Xor16BlockMaskCachedLookahead_
+    public RPL124_Xor16BlockMaskReloadLookahead_
+    public RPL124_BlendPixelR0C0_
+    public RPL124_BlendPixelR0C1_
+    public RPL124_BlendPixelR1C0_
+    public RPL124_BlendPixelR1C1_
+    public RPL124_BlendPixelR0C2_
+    public RPL124_BlendPixelR0C3_
+    public RPL124_BlendPixelR1C2_
+    public RPL124_BlendPixelR1C3_
+    public RPL124_BlendPixelR0C4_
+    public RPL124_BlendPixelR0C5_
+    public RPL124_BlendPixelR1C4_
+    public RPL124_BlendPixelR1C5_
+    public RPL124_BlendPixelR0C6_
+    public RPL124_BlendPixelR0C7_
+    public RPL124_BlendPixelR1C6_
+    public RPL124_BlendPixelR1C7_
+    public RPL124_BlendPixelR2C0_
+    public RPL124_BlendPixelR2C1_
+    public RPL124_BlendPixelR3C0_
+    public RPL124_BlendPixelR3C1_
+    public RPL124_BlendPixelR2C2_
+    public RPL124_BlendPixelR2C3_
+    public RPL124_BlendPixelR3C2_
+    public RPL124_BlendPixelR3C3_
+    public RPL124_BlendPixelR2C4_
+    public RPL124_BlendPixelR2C5_
+    public RPL124_BlendPixelR3C4_
+    public RPL124_BlendPixelR3C5_
+    public RPL124_BlendPixelR2C6_
+    public RPL124_BlendPixelR2C7_
+    public RPL124_BlendPixelR3C6_
+    public RPL124_BlendPixelR3C7_
+    public RPL124_BlendPixelR4C0_
+    public RPL124_BlendPixelR4C1_
+    public RPL124_BlendPixelR5C0_
+    public RPL124_BlendPixelR5C1_
+    public RPL124_BlendPixelR4C2_
+    public RPL124_BlendPixelR4C3_
+    public RPL124_BlendPixelR5C2_
+    public RPL124_BlendPixelR5C3_
+    public RPL124_BlendPixelR4C4_
+    public RPL124_BlendPixelR4C5_
+    public RPL124_BlendPixelR5C4_
+    public RPL124_BlendPixelR5C5_
+    public RPL124_BlendPixelR4C6_
+    public RPL124_BlendPixelR4C7_
+    public RPL124_BlendPixelR5C6_
+    public RPL124_BlendPixelR5C7_
+    public RPL124_BlendPixelR6C0_
+    public RPL124_BlendPixelR6C1_
+    public RPL124_BlendPixelR7C0_
+    public RPL124_BlendPixelR7C1_
+    public RPL124_BlendPixelR6C2_
+    public RPL124_BlendPixelR6C3_
+    public RPL124_BlendPixelR7C2_
+    public RPL124_BlendPixelR7C3_
+    public RPL124_BlendPixelR6C4_
+    public RPL124_BlendPixelR6C5_
+    public RPL124_BlendPixelR7C4_
+    public RPL124_BlendPixelR7C5_
+    public RPL124_BlendPixelR6C6_
+    public RPL124_BlendPixelR6C7_
+    public RPL124_BlendPixelR7C6_
+    public RPL124_BlendPixelR7C7_
     public draw_frame
     public bit_masks
     public id_string
 
 _TEXT segment
-Func5d270_ proc near
+RPL124_DecodePaletteEntry_ proc near
     mov edx, dword ptr [esi]
     mov ebx, dword ptr [esi+04h]
     shrd edx, ebx, cl
@@ -195,7 +195,7 @@ L5d297::
     shr ah, 1
     rcr al, 1
     jmp dword ptr [ebx+D5d2ae]
-Func5d270_ endp
+RPL124_DecodePaletteEntry_ endp
 D5d2ae dword offset L5d3d5
     dword offset L5d3d0
     dword offset L5d373
@@ -206,7 +206,7 @@ D5d2ae dword offset L5d3d5
     dword offset L5d336
     dword offset L5d327
     dword offset L5d318
-    dword offset Func5d2f6_
+    dword offset RPL124_DecodeHalfIntensityPalettePair_
     dword offset L5d308
     dword offset L5d3c2
     dword offset L5d3b4
@@ -214,73 +214,73 @@ D5d2ae dword offset L5d3d5
     dword offset L5d398
     dword offset L5d38a
     dword offset L5d37c
-Func5d2f6_ proc near
-    call Func5d5c2_
+RPL124_DecodeHalfIntensityPalettePair_ proc near
+    call RPL124_GrayscalePair_
     and eax, dword ptr [Dc9cc0]
     shr eax, 1
     jmp L5d3d5
 L5d308::
-    call Func5d5c2_
+    call RPL124_GrayscalePair_
     xor eax, dword ptr [Dc9cc4]
     jmp L5d3d5
 L5d318::
-    call Func5d5c2_
+    call RPL124_GrayscalePair_
     and eax, 03ff03ffh
     jmp L5d3d5
 L5d327::
-    call Func5d5c2_
+    call RPL124_GrayscalePair_
     and eax, 07c1f7c1fh
     jmp L5d3d5
 L5d336::
-    call Func5d5c2_
+    call RPL124_GrayscalePair_
     and eax, 07fe07fe0h
     jmp L5d3d5
 L5d345::
-    call Func5d5c2_
+    call RPL124_GrayscalePair_
     and eax, 01f001fh
     jmp L5d3d5
 L5d354::
-    call Func5d5c2_
+    call RPL124_GrayscalePair_
     and eax, 03e003e0h
     jmp L5d3d5
 L5d360::
-    call Func5d5c2_
+    call RPL124_GrayscalePair_
     and eax, 07c007c00h
     jmp L5d3d5
 L5d36c::
-    call Func5d5c2_
+    call RPL124_GrayscalePair_
     jmp L5d3d5
 L5d373::
     and eax, 07bde7bdeh
     shr eax, 1
     jmp L5d3d5
 L5d37c::
-    call Func5d5c2_
+    call RPL124_GrayscalePair_
     not eax
     and eax, 03ff03ffh
     jmp L5d3d5
 L5d38a::
-    call Func5d5c2_
+    call RPL124_GrayscalePair_
     not eax
     and eax, 07c1f7c1fh
     jmp L5d3d5
 L5d398::
-    call Func5d5c2_
+    call RPL124_GrayscalePair_
     not eax
     and eax, 07fe07fe0h
     jmp L5d3d5
 L5d3a6::
-    call Func5d5c2_
+    call RPL124_GrayscalePair_
     not eax
     and eax, 01f001fh
     jmp L5d3d5
 L5d3b4::
-    call Func5d5c2_
+    call RPL124_GrayscalePair_
     not eax
     and eax, 03e003e0h
     jmp L5d3d5
 L5d3c2::
-    call Func5d5c2_
+    call RPL124_GrayscalePair_
     not eax
     and eax, 07c007c00h
     jmp L5d3d5
@@ -342,8 +342,8 @@ L5d450::
     pop edx
     add edi, 08h
     jmp dword ptr [edx*4+D5d46e]
-Func5d2f6_ endp
-D5d46e dword offset Func5d4ae_
+RPL124_DecodeHalfIntensityPalettePair_ endp
+D5d46e dword offset RPL124_WriteSolidPaletteQuad_
     dword offset L5d4c1
     dword offset L5d4d7
     dword offset L5d4ea
@@ -359,7 +359,7 @@ D5d46e dword offset Func5d4ae_
     dword offset L5d581
     dword offset L5d591
     dword offset L5d5a2
-Func5d4ae_ proc near
+RPL124_WriteSolidPaletteQuad_ proc near
     mov edx, eax
     shl edx, 010h
     mov dx, ax
@@ -466,10 +466,10 @@ L5d5a2::
     mov dword ptr [edi-04h], edx
 L5d5b5::
     dec dword ptr [Dc9a88]
-    jne Func5d270_
+    jne RPL124_DecodePaletteEntry_
     ret
-Func5d4ae_ endp
-Func5d5c2_ proc near
+RPL124_WriteSolidPaletteQuad_ endp
+RPL124_GrayscalePair_ proc near
     push edx
     push ebx
     xor edx, edx
@@ -488,8 +488,8 @@ Func5d5c2_ proc near
     pop ebx
     pop edx
     ret
-Func5d5c2_ endp
-Func5d603_ proc near
+RPL124_GrayscalePair_ endp
+RPL124_CopyFrameRegion_ proc near
     push ebp
     mov ebp, esp
     push esi
@@ -505,11 +505,11 @@ Func5d603_ proc near
     mov edx, dword ptr [ebp+014h]
     mov ecx, dword ptr [ebp+08h]
     jmp dword ptr [edx*4+D5d629]
-Func5d603_ endp
+RPL124_CopyFrameRegion_ endp
 D5d629 dword offset L5d651
-    dword offset Func5d635_
-    dword offset Func5d635_
-Func5d635_ proc near
+    dword offset RPL124_ClipFrameRegion_
+    dword offset RPL124_ClipFrameRegion_
+RPL124_ClipFrameRegion_ proc near
     mov eax, dword ptr [ebp+018h]
     add eax, dword ptr [ebp+020h]
     sub eax, dword ptr [ecx+08h]
@@ -538,20 +538,20 @@ L5d672::
     and edi, 03fffffffh
     mov ebx, dword ptr [ecx+044h]
     sub ebx, dword ptr [ebp+01ch]
-    jl Func5d6b0_
+    jl RPL124_CopyBlock8x8_
     cmp ebx, dword ptr [ebp+024h]
-    jge Func5d6b0_
+    jge RPL124_CopyBlock8x8_
     mov ebx, dword ptr [ecx+040h]
     sub ebx, dword ptr [ebp+018h]
-    jl Func5d6b0_
+    jl RPL124_CopyBlock8x8_
     cmp ebx, dword ptr [ebp+020h]
-    jge Func5d6b0_
+    jge RPL124_CopyBlock8x8_
     jmp dword ptr [edx*4+D5d6a4]
-Func5d635_ endp
-D5d6a4 dword offset Func5d6b0_
+RPL124_ClipFrameRegion_ endp
+D5d6a4 dword offset RPL124_CopyBlock8x8_
     dword offset L5d7c0
     dword offset L5dd79
-Func5d6b0_ proc near
+RPL124_CopyBlock8x8_ proc near
     push edx
     mov ebx, edi
     add edi, dword ptr [ebp+0ch]
@@ -1416,8 +1416,8 @@ L5dd79::
     pop edx
     pop ecx
     jmp L5d7a9
-Func5d6b0_ endp
-Func5e272_ proc near
+RPL124_CopyBlock8x8_ endp
+RPL124_ClearOutputPair_ proc near
     push ebp
     mov ebp, esp
     push edi
@@ -1431,8 +1431,8 @@ Func5e272_ proc near
     pop edi
     leave
     ret
-Func5e272_ endp
-Func5e287_ proc near
+RPL124_ClearOutputPair_ endp
+RPL124_NoOpSaveFourRegisters_ proc near
     push ebp
     mov ebp, esp
     push edi
@@ -1445,8 +1445,8 @@ Func5e287_ proc near
     pop edi
     leave
     ret
-Func5e287_ endp
-Func5e294_ proc near
+RPL124_NoOpSaveFourRegisters_ endp
+RPL124_NoOpSaveSixRegisters_ proc near
     push ebp
     mov ebp, esp
     add esp, 0fffffff4h
@@ -1464,147 +1464,147 @@ Func5e294_ proc near
     pop esi
     leave
     ret
-Func5e294_ endp
-Func5e2a8_ proc near
+RPL124_NoOpSaveSixRegisters_ endp
+RPL124_FilterEBXRed_ proc near
     and ebx, dword ptr [red_mask]
     ret
-Func5e2a8_ endp
-Func5e2af_ proc near
+RPL124_FilterEBXRed_ endp
+RPL124_FilterEBXGreen_ proc near
     and ebx, dword ptr [green_mask]
     ret
-Func5e2af_ endp
-Func5e2b6_ proc near
+RPL124_FilterEBXGreen_ endp
+RPL124_FilterEBXBlue_ proc near
     and ebx, dword ptr [blue_mask]
     ret
-Func5e2b6_ endp
-Func5e2bd_ proc near
+RPL124_FilterEBXBlue_ endp
+RPL124_FilterEBXYellow_ proc near
     and ebx, dword ptr [Dc9c04]
     ret
-Func5e2bd_ endp
-Func5e2c4_ proc near
+RPL124_FilterEBXYellow_ endp
+RPL124_FilterEBXMagenta_ proc near
     and ebx, dword ptr [Dc9c08]
     ret
-Func5e2c4_ endp
-Func5e2cb_ proc near
+RPL124_FilterEBXMagenta_ endp
+RPL124_FilterEBXCyan_ proc near
     and ebx, dword ptr [Dc9c0c]
     ret
-Func5e2cb_ endp
-Func5e2d2_ proc near
+RPL124_FilterEBXCyan_ endp
+RPL124_FilterEBXHalf_ proc near
     and ebx, dword ptr [Dc9cc0]
     shr ebx, 1
     ret
-Func5e2d2_ endp
-Func5e2db_ proc near
+RPL124_FilterEBXHalf_ endp
+RPL124_FilterEBXInvert_ proc near
     xor ebx, dword ptr [Dc9cc4]
-Func5e2db_ endp
-Func5e2e1_ proc near
+RPL124_FilterEBXInvert_ endp
+RPL124_FilterEBXIdentity_ proc near
     ret
-Func5e2e1_ endp
-Func5e2e2_ proc near
+RPL124_FilterEBXIdentity_ endp
+RPL124_FilterEBXInvertRed_ proc near
     not ebx
     and ebx, dword ptr [red_mask]
     ret
-Func5e2e2_ endp
-Func5e2eb_ proc near
+RPL124_FilterEBXInvertRed_ endp
+RPL124_FilterEBXInvertGreen_ proc near
     not ebx
     and ebx, dword ptr [green_mask]
     ret
-Func5e2eb_ endp
-Func5e2f4_ proc near
+RPL124_FilterEBXInvertGreen_ endp
+RPL124_FilterEBXInvertBlue_ proc near
     not ebx
     and ebx, dword ptr [blue_mask]
     ret
-Func5e2f4_ endp
-Func5e2fd_ proc near
+RPL124_FilterEBXInvertBlue_ endp
+RPL124_FilterEBXInvertYellow_ proc near
     not ebx
     and ebx, dword ptr [Dc9c04]
     ret
-Func5e2fd_ endp
-Func5e306_ proc near
+RPL124_FilterEBXInvertYellow_ endp
+RPL124_FilterEBXInvertMagenta_ proc near
     not ebx
     and ebx, dword ptr [Dc9c08]
     ret
-Func5e306_ endp
-Func5e30f_ proc near
+RPL124_FilterEBXInvertMagenta_ endp
+RPL124_FilterEBXInvertCyan_ proc near
     not ebx
     and ebx, dword ptr [Dc9c0c]
     ret
-Func5e30f_ endp
-Func5e318_ proc near
+RPL124_FilterEBXInvertCyan_ endp
+RPL124_FilterEBXGray5_ proc near
     and ebx, 01fh
     mov ebx, dword ptr [ebx*4+Dc9c40]
     ret
-Func5e318_ endp
-Func5e323_ proc near
+RPL124_FilterEBXGray5_ endp
+RPL124_FilterESIRed_ proc near
     and esi, dword ptr [red_mask]
     ret
-Func5e323_ endp
-Func5e32a_ proc near
+RPL124_FilterESIRed_ endp
+RPL124_FilterESIGreen_ proc near
     and esi, dword ptr [green_mask]
     ret
-Func5e32a_ endp
-Func5e331_ proc near
+RPL124_FilterESIGreen_ endp
+RPL124_FilterESIBlue_ proc near
     and esi, dword ptr [blue_mask]
     ret
-Func5e331_ endp
-Func5e338_ proc near
+RPL124_FilterESIBlue_ endp
+RPL124_FilterESIYellow_ proc near
     and esi, dword ptr [Dc9c04]
     ret
-Func5e338_ endp
-Func5e33f_ proc near
+RPL124_FilterESIYellow_ endp
+RPL124_FilterESIMagenta_ proc near
     and esi, dword ptr [Dc9c08]
     ret
-Func5e33f_ endp
-Func5e346_ proc near
+RPL124_FilterESIMagenta_ endp
+RPL124_FilterESICyan_ proc near
     and esi, dword ptr [Dc9c0c]
     ret
-Func5e346_ endp
-Func5e34d_ proc near
+RPL124_FilterESICyan_ endp
+RPL124_FilterESIHalf_ proc near
     and esi, dword ptr [Dc9cc0]
     shr esi, 1
     ret
-Func5e34d_ endp
-Func5e356_ proc near
+RPL124_FilterESIHalf_ endp
+RPL124_FilterESIInvert_ proc near
     xor esi, dword ptr [Dc9cc4]
-Func5e356_ endp
-Func5e35c_ proc near
+RPL124_FilterESIInvert_ endp
+RPL124_FilterESIIdentity_ proc near
     ret
-Func5e35c_ endp
-Func5e35d_ proc near
+RPL124_FilterESIIdentity_ endp
+RPL124_FilterESIInvertRed_ proc near
     not esi
     and esi, dword ptr [red_mask]
     ret
-Func5e35d_ endp
-Func5e366_ proc near
+RPL124_FilterESIInvertRed_ endp
+RPL124_FilterESIInvertGreen_ proc near
     not esi
     and esi, dword ptr [green_mask]
     ret
-Func5e366_ endp
-Func5e36f_ proc near
+RPL124_FilterESIInvertGreen_ endp
+RPL124_FilterESIInvertBlue_ proc near
     not esi
     and esi, dword ptr [blue_mask]
     ret
-Func5e36f_ endp
-Func5e378_ proc near
+RPL124_FilterESIInvertBlue_ endp
+RPL124_FilterESIInvertYellow_ proc near
     not esi
     and esi, dword ptr [Dc9c04]
     ret
-Func5e378_ endp
-Func5e381_ proc near
+RPL124_FilterESIInvertYellow_ endp
+RPL124_FilterESIInvertMagenta_ proc near
     not esi
     and esi, dword ptr [Dc9c08]
     ret
-Func5e381_ endp
-Func5e38a_ proc near
+RPL124_FilterESIInvertMagenta_ endp
+RPL124_FilterESIInvertCyan_ proc near
     not esi
     and esi, dword ptr [Dc9c0c]
     ret
-Func5e38a_ endp
-Func5e393_ proc near
+RPL124_FilterESIInvertCyan_ endp
+RPL124_FilterESIGray5_ proc near
     and esi, 01fh
     mov esi, dword ptr [esi*4+Dc9c40]
     ret
-Func5e393_ endp
+RPL124_FilterESIGray5_ endp
 average_colour proc near
     push eax
     push ecx
@@ -1650,7 +1650,7 @@ L5e3c3::
     mov dword ptr [Dc9c2c], esi
     ret
 average_colour endp
-Func5e449_ proc near
+RPL124_DoubleFrameEdgeAware_ proc near
     push ebp
     mov ebp, esp
     push esi
@@ -1823,8 +1823,8 @@ L5e60c::
     pop esi
     leave
     ret
-Func5e449_ endp
-Func5e620_ proc near
+RPL124_DoubleFrameEdgeAware_ endp
+RPL124_InterpolateHorizontalDoubledRows_ proc near
     push ebp
     mov ebp, esp
     push esi
@@ -1900,8 +1900,8 @@ L5e641::
     pop esi
     leave
     ret
-Func5e620_ endp
-Func5e6d6_ proc near
+RPL124_InterpolateHorizontalDoubledRows_ endp
+RPL124_DoubleFrameBilinear_ proc near
     push ebp
     mov ebp, esp
     push esi
@@ -2190,8 +2190,8 @@ L5e909::
     pop esi
     leave
     ret
-Func5e6d6_ endp
-Func5ea37_ proc near
+RPL124_DoubleFrameBilinear_ endp
+RPL124_DoubleRowsNearest_ proc near
     push ebp
     mov ebp, esp
     push esi
@@ -2251,8 +2251,8 @@ L5ea56::
     pop esi
     leave
     ret
-Func5ea37_ endp
-Func5eac6_ proc near
+RPL124_DoubleRowsNearest_ endp
+RPL124_SetBackground_ proc near
     push ebp
     mov ebp, esp
     add esp, 0ffffffdch
@@ -2728,8 +2728,8 @@ L5f0a3::
     pop esi
     leave
     ret
-Func5eac6_ endp
-Func5f0ab_ proc near
+RPL124_SetBackground_ endp
+RPL124_ClearBackground_ proc near
     push ebp
     mov ebp, esp
     add esp, 0fffffff0h
@@ -2920,7 +2920,7 @@ L5f2c6::
     pop esi
     leave
     ret
-Func5f0ab_ endp
+RPL124_ClearBackground_ endp
 decode_info_size proc near
     push ebp
     mov ebp, esp
@@ -2978,10 +2978,10 @@ frame_buffer_size proc near
     leave
     ret
 frame_buffer_size endp
-Func5f33c_ proc near
+RPL124_Blend00Of32_ proc near
     ret
-Func5f33c_ endp
-Func5f33d_ proc near
+RPL124_Blend00Of32_ endp
+RPL124_Blend01Of32_ proc near
     push edx
     push eax
     push edi
@@ -3014,8 +3014,8 @@ Func5f33d_ proc near
     pop eax
     pop edx
     ret
-Func5f33d_ endp
-Func5f39e_ proc near
+RPL124_Blend01Of32_ endp
+RPL124_Blend02Of32_ proc near
     push edx
     push eax
     push edi
@@ -3048,8 +3048,8 @@ Func5f39e_ proc near
     pop eax
     pop edx
     ret
-Func5f39e_ endp
-Func5f402_ proc near
+RPL124_Blend02Of32_ endp
+RPL124_Blend03Of32_ proc near
     push edx
     push eax
     push edi
@@ -3085,8 +3085,8 @@ Func5f402_ proc near
     shr esi, 05h
     pop edx
     ret
-Func5f402_ endp
-Func5f46c_ proc near
+RPL124_Blend03Of32_ endp
+RPL124_Blend04Of32_ proc near
     push edx
     push eax
     push edi
@@ -3119,8 +3119,8 @@ Func5f46c_ proc near
     pop eax
     pop edx
     ret
-Func5f46c_ endp
-Func5f4d0_ proc near
+RPL124_Blend04Of32_ endp
+RPL124_Blend05Of32_ proc near
     push edx
     push eax
     push edi
@@ -3156,8 +3156,8 @@ Func5f4d0_ proc near
     shr esi, 05h
     pop edx
     ret
-Func5f4d0_ endp
-Func5f53d_ proc near
+RPL124_Blend05Of32_ endp
+RPL124_Blend06Of32_ proc near
     push edx
     push eax
     push edi
@@ -3193,8 +3193,8 @@ Func5f53d_ proc near
     shr esi, 05h
     pop edx
     ret
-Func5f53d_ endp
-Func5f5aa_ proc near
+RPL124_Blend06Of32_ endp
+RPL124_Blend07Of32_ proc near
     push edx
     push eax
     push edi
@@ -3230,8 +3230,8 @@ Func5f5aa_ proc near
     shr esi, 05h
     pop edx
     ret
-Func5f5aa_ endp
-Func5f614_ proc near
+RPL124_Blend07Of32_ endp
+RPL124_Blend08Of32_ proc near
     push edx
     push eax
     push edi
@@ -3264,8 +3264,8 @@ Func5f614_ proc near
     pop edx
     shr esi, 05h
     ret
-Func5f614_ endp
-Func5f684_ proc near
+RPL124_Blend08Of32_ endp
+RPL124_Blend09Of32_ proc near
     push edx
     push eax
     push edi
@@ -3301,8 +3301,8 @@ Func5f684_ proc near
     shr esi, 05h
     pop edx
     ret
-Func5f684_ endp
-Func5f6ee_ proc near
+RPL124_Blend09Of32_ endp
+RPL124_Blend10Of32_ proc near
     push edx
     push eax
     push edi
@@ -3338,8 +3338,8 @@ Func5f6ee_ proc near
     shr esi, 05h
     pop edx
     ret
-Func5f6ee_ endp
-Func5f75b_ proc near
+RPL124_Blend10Of32_ endp
+RPL124_Blend11Of32_ proc near
     push edx
     push eax
     push edi
@@ -3375,8 +3375,8 @@ Func5f75b_ proc near
     shr esi, 05h
     pop edx
     ret
-Func5f75b_ endp
-Func5f7c8_ proc near
+RPL124_Blend11Of32_ endp
+RPL124_Blend12Of32_ proc near
     push edx
     push eax
     push edi
@@ -3412,8 +3412,8 @@ Func5f7c8_ proc near
     shr esi, 05h
     pop edx
     ret
-Func5f7c8_ endp
-Func5f841_ proc near
+RPL124_Blend12Of32_ endp
+RPL124_Blend13Of32_ proc near
     push edx
     push eax
     push edi
@@ -3449,8 +3449,8 @@ Func5f841_ proc near
     shr esi, 05h
     pop edx
     ret
-Func5f841_ endp
-Func5f8ae_ proc near
+RPL124_Blend13Of32_ endp
+RPL124_Blend14Of32_ proc near
     push edx
     push eax
     push edi
@@ -3486,8 +3486,8 @@ Func5f8ae_ proc near
     shr esi, 05h
     pop edx
     ret
-Func5f8ae_ endp
-Func5f91b_ proc near
+RPL124_Blend14Of32_ endp
+RPL124_Blend15Of32_ proc near
     push edx
     push eax
     push edi
@@ -3523,8 +3523,8 @@ Func5f91b_ proc near
     shr esi, 05h
     pop edx
     ret
-Func5f91b_ endp
-Func5f985_ proc near
+RPL124_Blend15Of32_ endp
+RPL124_Blend16Of32_ proc near
     mov ecx, ebx
     and ecx, dword ptr [Dc9cc8]
     and ecx, esi
@@ -3534,8 +3534,8 @@ Func5f985_ proc near
     rcr esi, 1
     add esi, ecx
     ret
-Func5f985_ endp
-Func5f9a2_ proc near
+RPL124_Blend16Of32_ endp
+RPL124_Blend17Of32_ proc near
     push edx
     push eax
     push edi
@@ -3571,8 +3571,8 @@ Func5f9a2_ proc near
     shr esi, 05h
     pop edx
     ret
-Func5f9a2_ endp
-Func5fa0c_ proc near
+RPL124_Blend17Of32_ endp
+RPL124_Blend18Of32_ proc near
     push edx
     push eax
     push edi
@@ -3608,8 +3608,8 @@ Func5fa0c_ proc near
     shr esi, 05h
     pop edx
     ret
-Func5fa0c_ endp
-Func5fa79_ proc near
+RPL124_Blend18Of32_ endp
+RPL124_Blend19Of32_ proc near
     push edx
     push eax
     push edi
@@ -3645,8 +3645,8 @@ Func5fa79_ proc near
     shr esi, 05h
     pop edx
     ret
-Func5fa79_ endp
-Func5fae6_ proc near
+RPL124_Blend19Of32_ endp
+RPL124_Blend20Of32_ proc near
     push edx
     push eax
     push edi
@@ -3682,8 +3682,8 @@ Func5fae6_ proc near
     pop edx
     shr esi, 05h
     ret
-Func5fae6_ endp
-Func5fb5f_ proc near
+RPL124_Blend20Of32_ endp
+RPL124_Blend21Of32_ proc near
     push edx
     push eax
     push edi
@@ -3719,8 +3719,8 @@ Func5fb5f_ proc near
     shr esi, 05h
     pop edx
     ret
-Func5fb5f_ endp
-Func5fbcc_ proc near
+RPL124_Blend21Of32_ endp
+RPL124_Blend22Of32_ proc near
     push edx
     push eax
     push edi
@@ -3756,8 +3756,8 @@ Func5fbcc_ proc near
     shr esi, 05h
     pop edx
     ret
-Func5fbcc_ endp
-Func5fc39_ proc near
+RPL124_Blend22Of32_ endp
+RPL124_Blend23Of32_ proc near
     push edx
     push eax
     push edi
@@ -3793,8 +3793,8 @@ Func5fc39_ proc near
     shr esi, 05h
     pop edx
     ret
-Func5fc39_ endp
-Func5fca3_ proc near
+RPL124_Blend23Of32_ endp
+RPL124_Blend24Of32_ proc near
     push edx
     push eax
     push edi
@@ -3827,8 +3827,8 @@ Func5fca3_ proc near
     pop edx
     shr esi, 05h
     ret
-Func5fca3_ endp
-Func5fd13_ proc near
+RPL124_Blend24Of32_ endp
+RPL124_Blend25Of32_ proc near
     push edx
     push eax
     push edi
@@ -3864,8 +3864,8 @@ Func5fd13_ proc near
     shr esi, 05h
     pop edx
     ret
-Func5fd13_ endp
-Func5fd7d_ proc near
+RPL124_Blend25Of32_ endp
+RPL124_Blend26Of32_ proc near
     push edx
     push eax
     push edi
@@ -3901,8 +3901,8 @@ Func5fd7d_ proc near
     shr esi, 05h
     pop edx
     ret
-Func5fd7d_ endp
-Func5fdea_ proc near
+RPL124_Blend26Of32_ endp
+RPL124_Blend27Of32_ proc near
     push edx
     push eax
     push edi
@@ -3938,8 +3938,8 @@ Func5fdea_ proc near
     shr esi, 05h
     pop edx
     ret
-Func5fdea_ endp
-Func5fe57_ proc near
+RPL124_Blend27Of32_ endp
+RPL124_Blend28Of32_ proc near
     push edx
     push eax
     push edi
@@ -3972,8 +3972,8 @@ Func5fe57_ proc near
     pop edx
     shr esi, 05h
     ret
-Func5fe57_ endp
-Func5febb_ proc near
+RPL124_Blend28Of32_ endp
+RPL124_Blend29Of32_ proc near
     push edx
     push eax
     push edi
@@ -4009,8 +4009,8 @@ Func5febb_ proc near
     shr esi, 05h
     pop edx
     ret
-Func5febb_ endp
-Func5ff25_ proc near
+RPL124_Blend29Of32_ endp
+RPL124_Blend30Of32_ proc near
     push edx
     push eax
     push edi
@@ -4043,8 +4043,8 @@ Func5ff25_ proc near
     pop edx
     shr esi, 05h
     ret
-Func5ff25_ endp
-Func5ff89_ proc near
+RPL124_Blend30Of32_ endp
+RPL124_Blend31Of32_ proc near
     push edx
     push eax
     push edi
@@ -4077,11 +4077,11 @@ Func5ff89_ proc near
     pop edx
     shr esi, 05h
     ret
-Func5ff89_ endp
-Func5ffea_ proc near
+RPL124_Blend31Of32_ endp
+RPL124_Blend32Of32_ proc near
     mov esi, ebx
     ret
-Func5ffea_ endp
+RPL124_Blend32Of32_ endp
 decode_frame proc near
     push ebp
     mov ebp, esp
@@ -4190,7 +4190,7 @@ L60190::
     mov eax, dword ptr [eax*4+bit_masks]
     mov edi, dword ptr [Dc9a78]
     mov dword ptr [Dc9a88], eax
-    call Func5d270_
+    call RPL124_DecodePaletteEntry_
 L601af::
     test dword ptr [Dc9a94], 040000h
     je L601f1
@@ -4206,7 +4206,7 @@ L601cc::
     mul dword ptr [Dc9a84]
     mov edi, dword ptr [Dc9a7c]
     mov dword ptr [Dc9a88], eax
-    call Func5d270_
+    call RPL124_DecodePaletteEntry_
 L601f1::
     test dword ptr [Dc9a94], 080000h
     je L60238
@@ -4230,7 +4230,7 @@ L60221::
     jne L60221
     mov byte ptr [Dc9afa], ch
     mov edi, dword ptr [Dc9a80]
-    call Func5d270_
+    call RPL124_DecodePaletteEntry_
 L60238::
     mov edx, dword ptr [Dc9a7c]
     mov dword ptr [Dc9a90], edx
@@ -4482,7 +4482,7 @@ L6058e::
     and eax, 0fh
     jmp dword ptr [eax*4+D60598]
 decode_frame endp
-D60598 dword offset Func605d8_
+D60598 dword offset RPL124_Xor16BlockMaskCachedLookahead_
     dword offset L605f2
     dword offset L6060c
     dword offset L60629
@@ -4498,7 +4498,7 @@ D60598 dword offset Func605d8_
     dword offset L60731
     dword offset L6074b
     dword offset L60762
-Func605d8_ proc near
+RPL124_Xor16BlockMaskCachedLookahead_ proc near
     mov eax, dword ptr [esi]
     shrd eax, ebx, cl
     add cl, 010h
@@ -6061,8 +6061,8 @@ L61809::
 L61828::
     and eax, 0fh
     jmp dword ptr [eax*4+D61832]
-Func605d8_ endp
-D61832 dword offset Func61872_
+RPL124_Xor16BlockMaskCachedLookahead_ endp
+D61832 dword offset RPL124_Xor16BlockMaskReloadLookahead_
     dword offset L6188c
     dword offset L618a9
     dword offset L618c9
@@ -6078,7 +6078,7 @@ D61832 dword offset Func61872_
     dword offset L619f2
     dword offset L61a0f
     dword offset L61a29
-Func61872_ proc near
+RPL124_Xor16BlockMaskReloadLookahead_ proc near
     mov eax, dword ptr [esi]
     mov ebx, dword ptr [esi+04h]
     shrd eax, ebx, cl
@@ -7603,45 +7603,45 @@ L62b4e::
     xor ebx, ebx
     add bl, dl
     jmp dword ptr [ebx*4+D62b67-80h*4]
-Func61872_ endp
+RPL124_Xor16BlockMaskReloadLookahead_ endp
 D62b67 dword offset L62c5d
     dword offset L62c3f
     dword offset L62c52
     dword offset L62c24
     dword offset L62c1c
-    dword offset Func62bfb_
-    dword offset Func62bfb_
-    dword offset Func62bfb_
-    dword offset Func62bfb_
-    dword offset Func62bfb_
-    dword offset Func62bfb_
-    dword offset Func62bfb_
-    dword offset Func62bfb_
-    dword offset Func62bfb_
-    dword offset Func62bfb_
-    dword offset Func62bfb_
-    dword offset Func62bfb_
-    dword offset Func62bfb_
-    dword offset Func62bfb_
-    dword offset Func62bfb_
-    dword offset Func62bfb_
-    dword offset Func62bfb_
-    dword offset Func62bfb_
-    dword offset Func62bfb_
-    dword offset Func62bfb_
-    dword offset Func62bfb_
-    dword offset Func62bfb_
-    dword offset Func62bfb_
-    dword offset Func62bfb_
-    dword offset Func62bfb_
-    dword offset Func62bfb_
-    dword offset Func62bfb_
-    dword offset Func62bfb_
-    dword offset Func62bfb_
-    dword offset Func62bfb_
-    dword offset Func62bfb_
-    dword offset Func62bfb_
-Func62bfb_ proc near
+    dword offset RPL124_BlendPixelR0C0_
+    dword offset RPL124_BlendPixelR0C0_
+    dword offset RPL124_BlendPixelR0C0_
+    dword offset RPL124_BlendPixelR0C0_
+    dword offset RPL124_BlendPixelR0C0_
+    dword offset RPL124_BlendPixelR0C0_
+    dword offset RPL124_BlendPixelR0C0_
+    dword offset RPL124_BlendPixelR0C0_
+    dword offset RPL124_BlendPixelR0C0_
+    dword offset RPL124_BlendPixelR0C0_
+    dword offset RPL124_BlendPixelR0C0_
+    dword offset RPL124_BlendPixelR0C0_
+    dword offset RPL124_BlendPixelR0C0_
+    dword offset RPL124_BlendPixelR0C0_
+    dword offset RPL124_BlendPixelR0C0_
+    dword offset RPL124_BlendPixelR0C0_
+    dword offset RPL124_BlendPixelR0C0_
+    dword offset RPL124_BlendPixelR0C0_
+    dword offset RPL124_BlendPixelR0C0_
+    dword offset RPL124_BlendPixelR0C0_
+    dword offset RPL124_BlendPixelR0C0_
+    dword offset RPL124_BlendPixelR0C0_
+    dword offset RPL124_BlendPixelR0C0_
+    dword offset RPL124_BlendPixelR0C0_
+    dword offset RPL124_BlendPixelR0C0_
+    dword offset RPL124_BlendPixelR0C0_
+    dword offset RPL124_BlendPixelR0C0_
+    dword offset RPL124_BlendPixelR0C0_
+    dword offset RPL124_BlendPixelR0C0_
+    dword offset RPL124_BlendPixelR0C0_
+    dword offset RPL124_BlendPixelR0C0_
+    dword offset RPL124_BlendPixelR0C0_
+RPL124_BlendPixelR0C0_ proc near
     lea ecx, [ebx-085h]
     add ecx, dword ptr [Dc9bf0]
     mov ebx, dword ptr [Dc9bec]
@@ -7696,45 +7696,45 @@ L62c92::
     xor ebx, ebx
     add bl, dh
     jmp dword ptr [ebx*4+D62b67-2fh*4]
-Func62bfb_ endp
+RPL124_BlendPixelR0C0_ endp
     dword offset L62da5
     dword offset L62d85
     dword offset L62d99
     dword offset L62d69
     dword offset L62d61
-    dword offset Func62d3f_
-    dword offset Func62d3f_
-    dword offset Func62d3f_
-    dword offset Func62d3f_
-    dword offset Func62d3f_
-    dword offset Func62d3f_
-    dword offset Func62d3f_
-    dword offset Func62d3f_
-    dword offset Func62d3f_
-    dword offset Func62d3f_
-    dword offset Func62d3f_
-    dword offset Func62d3f_
-    dword offset Func62d3f_
-    dword offset Func62d3f_
-    dword offset Func62d3f_
-    dword offset Func62d3f_
-    dword offset Func62d3f_
-    dword offset Func62d3f_
-    dword offset Func62d3f_
-    dword offset Func62d3f_
-    dword offset Func62d3f_
-    dword offset Func62d3f_
-    dword offset Func62d3f_
-    dword offset Func62d3f_
-    dword offset Func62d3f_
-    dword offset Func62d3f_
-    dword offset Func62d3f_
-    dword offset Func62d3f_
-    dword offset Func62d3f_
-    dword offset Func62d3f_
-    dword offset Func62d3f_
-    dword offset Func62d3f_
-Func62d3f_ proc near
+    dword offset RPL124_BlendPixelR0C1_
+    dword offset RPL124_BlendPixelR0C1_
+    dword offset RPL124_BlendPixelR0C1_
+    dword offset RPL124_BlendPixelR0C1_
+    dword offset RPL124_BlendPixelR0C1_
+    dword offset RPL124_BlendPixelR0C1_
+    dword offset RPL124_BlendPixelR0C1_
+    dword offset RPL124_BlendPixelR0C1_
+    dword offset RPL124_BlendPixelR0C1_
+    dword offset RPL124_BlendPixelR0C1_
+    dword offset RPL124_BlendPixelR0C1_
+    dword offset RPL124_BlendPixelR0C1_
+    dword offset RPL124_BlendPixelR0C1_
+    dword offset RPL124_BlendPixelR0C1_
+    dword offset RPL124_BlendPixelR0C1_
+    dword offset RPL124_BlendPixelR0C1_
+    dword offset RPL124_BlendPixelR0C1_
+    dword offset RPL124_BlendPixelR0C1_
+    dword offset RPL124_BlendPixelR0C1_
+    dword offset RPL124_BlendPixelR0C1_
+    dword offset RPL124_BlendPixelR0C1_
+    dword offset RPL124_BlendPixelR0C1_
+    dword offset RPL124_BlendPixelR0C1_
+    dword offset RPL124_BlendPixelR0C1_
+    dword offset RPL124_BlendPixelR0C1_
+    dword offset RPL124_BlendPixelR0C1_
+    dword offset RPL124_BlendPixelR0C1_
+    dword offset RPL124_BlendPixelR0C1_
+    dword offset RPL124_BlendPixelR0C1_
+    dword offset RPL124_BlendPixelR0C1_
+    dword offset RPL124_BlendPixelR0C1_
+    dword offset RPL124_BlendPixelR0C1_
+RPL124_BlendPixelR0C1_ proc near
     lea ecx, [ebx-085h]
     add ecx, dword ptr [Dc9bf0]
     mov ebx, dword ptr [Dc9bec]
@@ -7790,45 +7790,45 @@ L62ddd::
     xor ebx, ebx
     add bl, dh
     jmp dword ptr [ebx*4+D62df6-80h*4]
-Func62d3f_ endp
+RPL124_BlendPixelR0C1_ endp
 D62df6 dword offset L62ef3
     dword offset L62ed2
     dword offset L62ee6
     dword offset L62eb5
     dword offset L62ead
-    dword offset Func62e8a_
-    dword offset Func62e8a_
-    dword offset Func62e8a_
-    dword offset Func62e8a_
-    dword offset Func62e8a_
-    dword offset Func62e8a_
-    dword offset Func62e8a_
-    dword offset Func62e8a_
-    dword offset Func62e8a_
-    dword offset Func62e8a_
-    dword offset Func62e8a_
-    dword offset Func62e8a_
-    dword offset Func62e8a_
-    dword offset Func62e8a_
-    dword offset Func62e8a_
-    dword offset Func62e8a_
-    dword offset Func62e8a_
-    dword offset Func62e8a_
-    dword offset Func62e8a_
-    dword offset Func62e8a_
-    dword offset Func62e8a_
-    dword offset Func62e8a_
-    dword offset Func62e8a_
-    dword offset Func62e8a_
-    dword offset Func62e8a_
-    dword offset Func62e8a_
-    dword offset Func62e8a_
-    dword offset Func62e8a_
-    dword offset Func62e8a_
-    dword offset Func62e8a_
-    dword offset Func62e8a_
-    dword offset Func62e8a_
-Func62e8a_ proc near
+    dword offset RPL124_BlendPixelR1C0_
+    dword offset RPL124_BlendPixelR1C0_
+    dword offset RPL124_BlendPixelR1C0_
+    dword offset RPL124_BlendPixelR1C0_
+    dword offset RPL124_BlendPixelR1C0_
+    dword offset RPL124_BlendPixelR1C0_
+    dword offset RPL124_BlendPixelR1C0_
+    dword offset RPL124_BlendPixelR1C0_
+    dword offset RPL124_BlendPixelR1C0_
+    dword offset RPL124_BlendPixelR1C0_
+    dword offset RPL124_BlendPixelR1C0_
+    dword offset RPL124_BlendPixelR1C0_
+    dword offset RPL124_BlendPixelR1C0_
+    dword offset RPL124_BlendPixelR1C0_
+    dword offset RPL124_BlendPixelR1C0_
+    dword offset RPL124_BlendPixelR1C0_
+    dword offset RPL124_BlendPixelR1C0_
+    dword offset RPL124_BlendPixelR1C0_
+    dword offset RPL124_BlendPixelR1C0_
+    dword offset RPL124_BlendPixelR1C0_
+    dword offset RPL124_BlendPixelR1C0_
+    dword offset RPL124_BlendPixelR1C0_
+    dword offset RPL124_BlendPixelR1C0_
+    dword offset RPL124_BlendPixelR1C0_
+    dword offset RPL124_BlendPixelR1C0_
+    dword offset RPL124_BlendPixelR1C0_
+    dword offset RPL124_BlendPixelR1C0_
+    dword offset RPL124_BlendPixelR1C0_
+    dword offset RPL124_BlendPixelR1C0_
+    dword offset RPL124_BlendPixelR1C0_
+    dword offset RPL124_BlendPixelR1C0_
+    dword offset RPL124_BlendPixelR1C0_
+RPL124_BlendPixelR1C0_ proc near
     lea ecx, [ebx-085h]
     add ecx, dword ptr [Dc9bf0]
     mov ebx, edi
@@ -7886,45 +7886,45 @@ L62f29::
     xor ebx, ebx
     add bl, dl
     jmp dword ptr [ebx*4+D62df6-2dh*4]
-Func62e8a_ endp
+RPL124_BlendPixelR1C0_ endp
     dword offset L63043
     dword offset L63020
     dword offset L63035
     dword offset L63002
     dword offset L62ffa
-    dword offset Func62fd6_
-    dword offset Func62fd6_
-    dword offset Func62fd6_
-    dword offset Func62fd6_
-    dword offset Func62fd6_
-    dword offset Func62fd6_
-    dword offset Func62fd6_
-    dword offset Func62fd6_
-    dword offset Func62fd6_
-    dword offset Func62fd6_
-    dword offset Func62fd6_
-    dword offset Func62fd6_
-    dword offset Func62fd6_
-    dword offset Func62fd6_
-    dword offset Func62fd6_
-    dword offset Func62fd6_
-    dword offset Func62fd6_
-    dword offset Func62fd6_
-    dword offset Func62fd6_
-    dword offset Func62fd6_
-    dword offset Func62fd6_
-    dword offset Func62fd6_
-    dword offset Func62fd6_
-    dword offset Func62fd6_
-    dword offset Func62fd6_
-    dword offset Func62fd6_
-    dword offset Func62fd6_
-    dword offset Func62fd6_
-    dword offset Func62fd6_
-    dword offset Func62fd6_
-    dword offset Func62fd6_
-    dword offset Func62fd6_
-Func62fd6_ proc near
+    dword offset RPL124_BlendPixelR1C1_
+    dword offset RPL124_BlendPixelR1C1_
+    dword offset RPL124_BlendPixelR1C1_
+    dword offset RPL124_BlendPixelR1C1_
+    dword offset RPL124_BlendPixelR1C1_
+    dword offset RPL124_BlendPixelR1C1_
+    dword offset RPL124_BlendPixelR1C1_
+    dword offset RPL124_BlendPixelR1C1_
+    dword offset RPL124_BlendPixelR1C1_
+    dword offset RPL124_BlendPixelR1C1_
+    dword offset RPL124_BlendPixelR1C1_
+    dword offset RPL124_BlendPixelR1C1_
+    dword offset RPL124_BlendPixelR1C1_
+    dword offset RPL124_BlendPixelR1C1_
+    dword offset RPL124_BlendPixelR1C1_
+    dword offset RPL124_BlendPixelR1C1_
+    dword offset RPL124_BlendPixelR1C1_
+    dword offset RPL124_BlendPixelR1C1_
+    dword offset RPL124_BlendPixelR1C1_
+    dword offset RPL124_BlendPixelR1C1_
+    dword offset RPL124_BlendPixelR1C1_
+    dword offset RPL124_BlendPixelR1C1_
+    dword offset RPL124_BlendPixelR1C1_
+    dword offset RPL124_BlendPixelR1C1_
+    dword offset RPL124_BlendPixelR1C1_
+    dword offset RPL124_BlendPixelR1C1_
+    dword offset RPL124_BlendPixelR1C1_
+    dword offset RPL124_BlendPixelR1C1_
+    dword offset RPL124_BlendPixelR1C1_
+    dword offset RPL124_BlendPixelR1C1_
+    dword offset RPL124_BlendPixelR1C1_
+    dword offset RPL124_BlendPixelR1C1_
+RPL124_BlendPixelR1C1_ proc near
     lea ecx, [ebx-085h]
     add ecx, dword ptr [Dc9bf0]
     mov ebx, edi
@@ -7988,45 +7988,45 @@ L63074::
     xor ebx, ebx
     add bl, dl
     jmp dword ptr [ebx*4+D630a1-80h*4]
-Func62fd6_ endp
+RPL124_BlendPixelR1C1_ endp
 D630a1 dword offset L6319b
     dword offset L6317b
     dword offset L6318f
     dword offset L6315f
     dword offset L63157
-    dword offset Func63135_
-    dword offset Func63135_
-    dword offset Func63135_
-    dword offset Func63135_
-    dword offset Func63135_
-    dword offset Func63135_
-    dword offset Func63135_
-    dword offset Func63135_
-    dword offset Func63135_
-    dword offset Func63135_
-    dword offset Func63135_
-    dword offset Func63135_
-    dword offset Func63135_
-    dword offset Func63135_
-    dword offset Func63135_
-    dword offset Func63135_
-    dword offset Func63135_
-    dword offset Func63135_
-    dword offset Func63135_
-    dword offset Func63135_
-    dword offset Func63135_
-    dword offset Func63135_
-    dword offset Func63135_
-    dword offset Func63135_
-    dword offset Func63135_
-    dword offset Func63135_
-    dword offset Func63135_
-D63121 dword offset Func63135_
-    dword offset Func63135_
-    dword offset Func63135_
-    dword offset Func63135_
-    dword offset Func63135_
-Func63135_ proc near
+    dword offset RPL124_BlendPixelR0C2_
+    dword offset RPL124_BlendPixelR0C2_
+    dword offset RPL124_BlendPixelR0C2_
+    dword offset RPL124_BlendPixelR0C2_
+    dword offset RPL124_BlendPixelR0C2_
+    dword offset RPL124_BlendPixelR0C2_
+    dword offset RPL124_BlendPixelR0C2_
+    dword offset RPL124_BlendPixelR0C2_
+    dword offset RPL124_BlendPixelR0C2_
+    dword offset RPL124_BlendPixelR0C2_
+    dword offset RPL124_BlendPixelR0C2_
+    dword offset RPL124_BlendPixelR0C2_
+    dword offset RPL124_BlendPixelR0C2_
+    dword offset RPL124_BlendPixelR0C2_
+    dword offset RPL124_BlendPixelR0C2_
+    dword offset RPL124_BlendPixelR0C2_
+    dword offset RPL124_BlendPixelR0C2_
+    dword offset RPL124_BlendPixelR0C2_
+    dword offset RPL124_BlendPixelR0C2_
+    dword offset RPL124_BlendPixelR0C2_
+    dword offset RPL124_BlendPixelR0C2_
+    dword offset RPL124_BlendPixelR0C2_
+    dword offset RPL124_BlendPixelR0C2_
+    dword offset RPL124_BlendPixelR0C2_
+    dword offset RPL124_BlendPixelR0C2_
+    dword offset RPL124_BlendPixelR0C2_
+    dword offset RPL124_BlendPixelR0C2_
+D63121 dword offset RPL124_BlendPixelR0C2_
+    dword offset RPL124_BlendPixelR0C2_
+    dword offset RPL124_BlendPixelR0C2_
+    dword offset RPL124_BlendPixelR0C2_
+    dword offset RPL124_BlendPixelR0C2_
+RPL124_BlendPixelR0C2_ proc near
     lea ecx, [ebx-085h]
     add ecx, dword ptr [Dc9bf0]
     mov ebx, dword ptr [Dc9bec]
@@ -8077,45 +8077,45 @@ L631c7::
     xor ebx, ebx
     add bl, dh
     jmp dword ptr [ebx*4+D631e0-80h*4]
-Func63135_ endp
+RPL124_BlendPixelR0C2_ endp
 D631e0 dword offset L632da
     dword offset L632ba
     dword offset L632ce
     dword offset L6329e
     dword offset L63296
-    dword offset Func63274_
-    dword offset Func63274_
-    dword offset Func63274_
-    dword offset Func63274_
-    dword offset Func63274_
-    dword offset Func63274_
-    dword offset Func63274_
-    dword offset Func63274_
-    dword offset Func63274_
-    dword offset Func63274_
-    dword offset Func63274_
-    dword offset Func63274_
-    dword offset Func63274_
-    dword offset Func63274_
-    dword offset Func63274_
-    dword offset Func63274_
-    dword offset Func63274_
-    dword offset Func63274_
-    dword offset Func63274_
-    dword offset Func63274_
-    dword offset Func63274_
-    dword offset Func63274_
-    dword offset Func63274_
-    dword offset Func63274_
-    dword offset Func63274_
-    dword offset Func63274_
-    dword offset Func63274_
-    dword offset Func63274_
-    dword offset Func63274_
-D63268 dword offset Func63274_
-    dword offset Func63274_
-    dword offset Func63274_
-Func63274_ proc near
+    dword offset RPL124_BlendPixelR0C3_
+    dword offset RPL124_BlendPixelR0C3_
+    dword offset RPL124_BlendPixelR0C3_
+    dword offset RPL124_BlendPixelR0C3_
+    dword offset RPL124_BlendPixelR0C3_
+    dword offset RPL124_BlendPixelR0C3_
+    dword offset RPL124_BlendPixelR0C3_
+    dword offset RPL124_BlendPixelR0C3_
+    dword offset RPL124_BlendPixelR0C3_
+    dword offset RPL124_BlendPixelR0C3_
+    dword offset RPL124_BlendPixelR0C3_
+    dword offset RPL124_BlendPixelR0C3_
+    dword offset RPL124_BlendPixelR0C3_
+    dword offset RPL124_BlendPixelR0C3_
+    dword offset RPL124_BlendPixelR0C3_
+    dword offset RPL124_BlendPixelR0C3_
+    dword offset RPL124_BlendPixelR0C3_
+    dword offset RPL124_BlendPixelR0C3_
+    dword offset RPL124_BlendPixelR0C3_
+    dword offset RPL124_BlendPixelR0C3_
+    dword offset RPL124_BlendPixelR0C3_
+    dword offset RPL124_BlendPixelR0C3_
+    dword offset RPL124_BlendPixelR0C3_
+    dword offset RPL124_BlendPixelR0C3_
+    dword offset RPL124_BlendPixelR0C3_
+    dword offset RPL124_BlendPixelR0C3_
+    dword offset RPL124_BlendPixelR0C3_
+    dword offset RPL124_BlendPixelR0C3_
+    dword offset RPL124_BlendPixelR0C3_
+D63268 dword offset RPL124_BlendPixelR0C3_
+    dword offset RPL124_BlendPixelR0C3_
+    dword offset RPL124_BlendPixelR0C3_
+RPL124_BlendPixelR0C3_ proc near
     lea ecx, [ebx-085h]
     add ecx, dword ptr [Dc9bf0]
     mov ebx, dword ptr [Dc9bec]
@@ -8167,45 +8167,45 @@ L63306::
     xor ebx, ebx
     add bl, dh
     jmp dword ptr [ebx*4+D63121]
-Func63274_ endp
+RPL124_BlendPixelR0C3_ endp
     dword offset L63422
     dword offset L633ff
     dword offset L63414
     dword offset L633e1
     dword offset L633d9
-    dword offset Func633b5_
-    dword offset Func633b5_
-    dword offset Func633b5_
-    dword offset Func633b5_
-    dword offset Func633b5_
-    dword offset Func633b5_
-    dword offset Func633b5_
-    dword offset Func633b5_
-    dword offset Func633b5_
-    dword offset Func633b5_
-    dword offset Func633b5_
-    dword offset Func633b5_
-    dword offset Func633b5_
-    dword offset Func633b5_
-    dword offset Func633b5_
-    dword offset Func633b5_
-    dword offset Func633b5_
-    dword offset Func633b5_
-    dword offset Func633b5_
-    dword offset Func633b5_
-    dword offset Func633b5_
-    dword offset Func633b5_
-    dword offset Func633b5_
-    dword offset Func633b5_
-    dword offset Func633b5_
-    dword offset Func633b5_
-    dword offset Func633b5_
-    dword offset Func633b5_
-    dword offset Func633b5_
-    dword offset Func633b5_
-    dword offset Func633b5_
-    dword offset Func633b5_
-Func633b5_ proc near
+    dword offset RPL124_BlendPixelR1C2_
+    dword offset RPL124_BlendPixelR1C2_
+    dword offset RPL124_BlendPixelR1C2_
+    dword offset RPL124_BlendPixelR1C2_
+    dword offset RPL124_BlendPixelR1C2_
+    dword offset RPL124_BlendPixelR1C2_
+    dword offset RPL124_BlendPixelR1C2_
+    dword offset RPL124_BlendPixelR1C2_
+    dword offset RPL124_BlendPixelR1C2_
+    dword offset RPL124_BlendPixelR1C2_
+    dword offset RPL124_BlendPixelR1C2_
+    dword offset RPL124_BlendPixelR1C2_
+    dword offset RPL124_BlendPixelR1C2_
+    dword offset RPL124_BlendPixelR1C2_
+    dword offset RPL124_BlendPixelR1C2_
+    dword offset RPL124_BlendPixelR1C2_
+    dword offset RPL124_BlendPixelR1C2_
+    dword offset RPL124_BlendPixelR1C2_
+    dword offset RPL124_BlendPixelR1C2_
+    dword offset RPL124_BlendPixelR1C2_
+    dword offset RPL124_BlendPixelR1C2_
+    dword offset RPL124_BlendPixelR1C2_
+    dword offset RPL124_BlendPixelR1C2_
+    dword offset RPL124_BlendPixelR1C2_
+    dword offset RPL124_BlendPixelR1C2_
+    dword offset RPL124_BlendPixelR1C2_
+    dword offset RPL124_BlendPixelR1C2_
+    dword offset RPL124_BlendPixelR1C2_
+    dword offset RPL124_BlendPixelR1C2_
+    dword offset RPL124_BlendPixelR1C2_
+    dword offset RPL124_BlendPixelR1C2_
+    dword offset RPL124_BlendPixelR1C2_
+RPL124_BlendPixelR1C2_ proc near
     lea ecx, [ebx-085h]
     add ecx, dword ptr [Dc9bf0]
     mov ebx, edi
@@ -8259,45 +8259,45 @@ L6344f::
     xor ebx, ebx
     add bl, dl
     jmp dword ptr [ebx*4+D63268]
-Func633b5_ endp
+RPL124_BlendPixelR1C2_ endp
     dword offset L63569
     dword offset L63546
     dword offset L6355b
     dword offset L63528
     dword offset L63520
-    dword offset Func634fc_
-    dword offset Func634fc_
-    dword offset Func634fc_
-    dword offset Func634fc_
-    dword offset Func634fc_
-    dword offset Func634fc_
-    dword offset Func634fc_
-    dword offset Func634fc_
-    dword offset Func634fc_
-    dword offset Func634fc_
-    dword offset Func634fc_
-    dword offset Func634fc_
-    dword offset Func634fc_
-    dword offset Func634fc_
-    dword offset Func634fc_
-    dword offset Func634fc_
-    dword offset Func634fc_
-    dword offset Func634fc_
-    dword offset Func634fc_
-    dword offset Func634fc_
-    dword offset Func634fc_
-    dword offset Func634fc_
-    dword offset Func634fc_
-    dword offset Func634fc_
-    dword offset Func634fc_
-    dword offset Func634fc_
-    dword offset Func634fc_
-    dword offset Func634fc_
-    dword offset Func634fc_
-    dword offset Func634fc_
-    dword offset Func634fc_
-    dword offset Func634fc_
-Func634fc_ proc near
+    dword offset RPL124_BlendPixelR1C3_
+    dword offset RPL124_BlendPixelR1C3_
+    dword offset RPL124_BlendPixelR1C3_
+    dword offset RPL124_BlendPixelR1C3_
+    dword offset RPL124_BlendPixelR1C3_
+    dword offset RPL124_BlendPixelR1C3_
+    dword offset RPL124_BlendPixelR1C3_
+    dword offset RPL124_BlendPixelR1C3_
+    dword offset RPL124_BlendPixelR1C3_
+    dword offset RPL124_BlendPixelR1C3_
+    dword offset RPL124_BlendPixelR1C3_
+    dword offset RPL124_BlendPixelR1C3_
+    dword offset RPL124_BlendPixelR1C3_
+    dword offset RPL124_BlendPixelR1C3_
+    dword offset RPL124_BlendPixelR1C3_
+    dword offset RPL124_BlendPixelR1C3_
+    dword offset RPL124_BlendPixelR1C3_
+    dword offset RPL124_BlendPixelR1C3_
+    dword offset RPL124_BlendPixelR1C3_
+    dword offset RPL124_BlendPixelR1C3_
+    dword offset RPL124_BlendPixelR1C3_
+    dword offset RPL124_BlendPixelR1C3_
+    dword offset RPL124_BlendPixelR1C3_
+    dword offset RPL124_BlendPixelR1C3_
+    dword offset RPL124_BlendPixelR1C3_
+    dword offset RPL124_BlendPixelR1C3_
+    dword offset RPL124_BlendPixelR1C3_
+    dword offset RPL124_BlendPixelR1C3_
+    dword offset RPL124_BlendPixelR1C3_
+    dword offset RPL124_BlendPixelR1C3_
+    dword offset RPL124_BlendPixelR1C3_
+    dword offset RPL124_BlendPixelR1C3_
+RPL124_BlendPixelR1C3_ proc near
     lea ecx, [ebx-085h]
     add ecx, dword ptr [Dc9bf0]
     mov ebx, edi
@@ -8361,45 +8361,45 @@ L6359a::
     xor ebx, ebx
     add bl, dl
     jmp dword ptr [ebx*4+D635c7-80h*4]
-Func634fc_ endp
+RPL124_BlendPixelR1C3_ endp
 D635c7 dword offset L636c1
     dword offset L636a1
     dword offset L636b5
     dword offset L63685
     dword offset L6367d
-    dword offset Func6365b_
-    dword offset Func6365b_
-    dword offset Func6365b_
-    dword offset Func6365b_
-    dword offset Func6365b_
-    dword offset Func6365b_
-    dword offset Func6365b_
-    dword offset Func6365b_
-    dword offset Func6365b_
-    dword offset Func6365b_
-    dword offset Func6365b_
-    dword offset Func6365b_
-    dword offset Func6365b_
-    dword offset Func6365b_
-    dword offset Func6365b_
-    dword offset Func6365b_
-    dword offset Func6365b_
-    dword offset Func6365b_
-    dword offset Func6365b_
-    dword offset Func6365b_
-    dword offset Func6365b_
-    dword offset Func6365b_
-    dword offset Func6365b_
-    dword offset Func6365b_
-    dword offset Func6365b_
-    dword offset Func6365b_
-    dword offset Func6365b_
-D63647 dword offset Func6365b_
-    dword offset Func6365b_
-    dword offset Func6365b_
-    dword offset Func6365b_
-    dword offset Func6365b_
-Func6365b_ proc near
+    dword offset RPL124_BlendPixelR0C4_
+    dword offset RPL124_BlendPixelR0C4_
+    dword offset RPL124_BlendPixelR0C4_
+    dword offset RPL124_BlendPixelR0C4_
+    dword offset RPL124_BlendPixelR0C4_
+    dword offset RPL124_BlendPixelR0C4_
+    dword offset RPL124_BlendPixelR0C4_
+    dword offset RPL124_BlendPixelR0C4_
+    dword offset RPL124_BlendPixelR0C4_
+    dword offset RPL124_BlendPixelR0C4_
+    dword offset RPL124_BlendPixelR0C4_
+    dword offset RPL124_BlendPixelR0C4_
+    dword offset RPL124_BlendPixelR0C4_
+    dword offset RPL124_BlendPixelR0C4_
+    dword offset RPL124_BlendPixelR0C4_
+    dword offset RPL124_BlendPixelR0C4_
+    dword offset RPL124_BlendPixelR0C4_
+    dword offset RPL124_BlendPixelR0C4_
+    dword offset RPL124_BlendPixelR0C4_
+    dword offset RPL124_BlendPixelR0C4_
+    dword offset RPL124_BlendPixelR0C4_
+    dword offset RPL124_BlendPixelR0C4_
+    dword offset RPL124_BlendPixelR0C4_
+    dword offset RPL124_BlendPixelR0C4_
+    dword offset RPL124_BlendPixelR0C4_
+    dword offset RPL124_BlendPixelR0C4_
+    dword offset RPL124_BlendPixelR0C4_
+D63647 dword offset RPL124_BlendPixelR0C4_
+    dword offset RPL124_BlendPixelR0C4_
+    dword offset RPL124_BlendPixelR0C4_
+    dword offset RPL124_BlendPixelR0C4_
+    dword offset RPL124_BlendPixelR0C4_
+RPL124_BlendPixelR0C4_ proc near
     lea ecx, [ebx-085h]
     add ecx, dword ptr [Dc9bf0]
     mov ebx, dword ptr [Dc9bec]
@@ -8450,45 +8450,45 @@ L636ed::
     xor ebx, ebx
     add bl, dh
     jmp dword ptr [ebx*4+D63706-80h*4]
-Func6365b_ endp
+RPL124_BlendPixelR0C4_ endp
 D63706 dword offset L63800
     dword offset L637e0
     dword offset L637f4
     dword offset L637c4
     dword offset L637bc
-    dword offset Func6379a_
-    dword offset Func6379a_
-    dword offset Func6379a_
-    dword offset Func6379a_
-    dword offset Func6379a_
-    dword offset Func6379a_
-    dword offset Func6379a_
-    dword offset Func6379a_
-    dword offset Func6379a_
-    dword offset Func6379a_
-    dword offset Func6379a_
-    dword offset Func6379a_
-    dword offset Func6379a_
-    dword offset Func6379a_
-    dword offset Func6379a_
-    dword offset Func6379a_
-    dword offset Func6379a_
-    dword offset Func6379a_
-    dword offset Func6379a_
-    dword offset Func6379a_
-    dword offset Func6379a_
-    dword offset Func6379a_
-    dword offset Func6379a_
-    dword offset Func6379a_
-    dword offset Func6379a_
-    dword offset Func6379a_
-    dword offset Func6379a_
-    dword offset Func6379a_
-    dword offset Func6379a_
-D6378e dword offset Func6379a_
-    dword offset Func6379a_
-    dword offset Func6379a_
-Func6379a_ proc near
+    dword offset RPL124_BlendPixelR0C5_
+    dword offset RPL124_BlendPixelR0C5_
+    dword offset RPL124_BlendPixelR0C5_
+    dword offset RPL124_BlendPixelR0C5_
+    dword offset RPL124_BlendPixelR0C5_
+    dword offset RPL124_BlendPixelR0C5_
+    dword offset RPL124_BlendPixelR0C5_
+    dword offset RPL124_BlendPixelR0C5_
+    dword offset RPL124_BlendPixelR0C5_
+    dword offset RPL124_BlendPixelR0C5_
+    dword offset RPL124_BlendPixelR0C5_
+    dword offset RPL124_BlendPixelR0C5_
+    dword offset RPL124_BlendPixelR0C5_
+    dword offset RPL124_BlendPixelR0C5_
+    dword offset RPL124_BlendPixelR0C5_
+    dword offset RPL124_BlendPixelR0C5_
+    dword offset RPL124_BlendPixelR0C5_
+    dword offset RPL124_BlendPixelR0C5_
+    dword offset RPL124_BlendPixelR0C5_
+    dword offset RPL124_BlendPixelR0C5_
+    dword offset RPL124_BlendPixelR0C5_
+    dword offset RPL124_BlendPixelR0C5_
+    dword offset RPL124_BlendPixelR0C5_
+    dword offset RPL124_BlendPixelR0C5_
+    dword offset RPL124_BlendPixelR0C5_
+    dword offset RPL124_BlendPixelR0C5_
+    dword offset RPL124_BlendPixelR0C5_
+    dword offset RPL124_BlendPixelR0C5_
+    dword offset RPL124_BlendPixelR0C5_
+D6378e dword offset RPL124_BlendPixelR0C5_
+    dword offset RPL124_BlendPixelR0C5_
+    dword offset RPL124_BlendPixelR0C5_
+RPL124_BlendPixelR0C5_ proc near
     lea ecx, [ebx-085h]
     add ecx, dword ptr [Dc9bf0]
     mov ebx, dword ptr [Dc9bec]
@@ -8540,45 +8540,45 @@ L6382c::
     xor ebx, ebx
     add bl, dh
     jmp dword ptr [ebx*4+D63647]
-Func6379a_ endp
+RPL124_BlendPixelR0C5_ endp
     dword offset L63948
     dword offset L63925
     dword offset L6393a
     dword offset L63907
     dword offset L638ff
-    dword offset Func638db_
-    dword offset Func638db_
-    dword offset Func638db_
-    dword offset Func638db_
-    dword offset Func638db_
-    dword offset Func638db_
-    dword offset Func638db_
-    dword offset Func638db_
-    dword offset Func638db_
-    dword offset Func638db_
-    dword offset Func638db_
-    dword offset Func638db_
-    dword offset Func638db_
-    dword offset Func638db_
-    dword offset Func638db_
-    dword offset Func638db_
-    dword offset Func638db_
-    dword offset Func638db_
-    dword offset Func638db_
-    dword offset Func638db_
-    dword offset Func638db_
-    dword offset Func638db_
-    dword offset Func638db_
-    dword offset Func638db_
-    dword offset Func638db_
-    dword offset Func638db_
-    dword offset Func638db_
-    dword offset Func638db_
-    dword offset Func638db_
-    dword offset Func638db_
-    dword offset Func638db_
-    dword offset Func638db_
-Func638db_ proc near
+    dword offset RPL124_BlendPixelR1C4_
+    dword offset RPL124_BlendPixelR1C4_
+    dword offset RPL124_BlendPixelR1C4_
+    dword offset RPL124_BlendPixelR1C4_
+    dword offset RPL124_BlendPixelR1C4_
+    dword offset RPL124_BlendPixelR1C4_
+    dword offset RPL124_BlendPixelR1C4_
+    dword offset RPL124_BlendPixelR1C4_
+    dword offset RPL124_BlendPixelR1C4_
+    dword offset RPL124_BlendPixelR1C4_
+    dword offset RPL124_BlendPixelR1C4_
+    dword offset RPL124_BlendPixelR1C4_
+    dword offset RPL124_BlendPixelR1C4_
+    dword offset RPL124_BlendPixelR1C4_
+    dword offset RPL124_BlendPixelR1C4_
+    dword offset RPL124_BlendPixelR1C4_
+    dword offset RPL124_BlendPixelR1C4_
+    dword offset RPL124_BlendPixelR1C4_
+    dword offset RPL124_BlendPixelR1C4_
+    dword offset RPL124_BlendPixelR1C4_
+    dword offset RPL124_BlendPixelR1C4_
+    dword offset RPL124_BlendPixelR1C4_
+    dword offset RPL124_BlendPixelR1C4_
+    dword offset RPL124_BlendPixelR1C4_
+    dword offset RPL124_BlendPixelR1C4_
+    dword offset RPL124_BlendPixelR1C4_
+    dword offset RPL124_BlendPixelR1C4_
+    dword offset RPL124_BlendPixelR1C4_
+    dword offset RPL124_BlendPixelR1C4_
+    dword offset RPL124_BlendPixelR1C4_
+    dword offset RPL124_BlendPixelR1C4_
+    dword offset RPL124_BlendPixelR1C4_
+RPL124_BlendPixelR1C4_ proc near
     lea ecx, [ebx-085h]
     add ecx, dword ptr [Dc9bf0]
     mov ebx, edi
@@ -8632,45 +8632,45 @@ L63975::
     xor ebx, ebx
     add bl, dl
     jmp dword ptr [ebx*4+D6378e]
-Func638db_ endp
+RPL124_BlendPixelR1C4_ endp
     dword offset L63a8f
     dword offset L63a6c
     dword offset L63a81
     dword offset L63a4e
     dword offset L63a46
-    dword offset Func63a22_
-    dword offset Func63a22_
-    dword offset Func63a22_
-    dword offset Func63a22_
-    dword offset Func63a22_
-    dword offset Func63a22_
-    dword offset Func63a22_
-    dword offset Func63a22_
-    dword offset Func63a22_
-    dword offset Func63a22_
-    dword offset Func63a22_
-    dword offset Func63a22_
-    dword offset Func63a22_
-    dword offset Func63a22_
-    dword offset Func63a22_
-    dword offset Func63a22_
-    dword offset Func63a22_
-    dword offset Func63a22_
-    dword offset Func63a22_
-    dword offset Func63a22_
-    dword offset Func63a22_
-    dword offset Func63a22_
-    dword offset Func63a22_
-    dword offset Func63a22_
-    dword offset Func63a22_
-    dword offset Func63a22_
-    dword offset Func63a22_
-    dword offset Func63a22_
-    dword offset Func63a22_
-    dword offset Func63a22_
-    dword offset Func63a22_
-    dword offset Func63a22_
-Func63a22_ proc near
+    dword offset RPL124_BlendPixelR1C5_
+    dword offset RPL124_BlendPixelR1C5_
+    dword offset RPL124_BlendPixelR1C5_
+    dword offset RPL124_BlendPixelR1C5_
+    dword offset RPL124_BlendPixelR1C5_
+    dword offset RPL124_BlendPixelR1C5_
+    dword offset RPL124_BlendPixelR1C5_
+    dword offset RPL124_BlendPixelR1C5_
+    dword offset RPL124_BlendPixelR1C5_
+    dword offset RPL124_BlendPixelR1C5_
+    dword offset RPL124_BlendPixelR1C5_
+    dword offset RPL124_BlendPixelR1C5_
+    dword offset RPL124_BlendPixelR1C5_
+    dword offset RPL124_BlendPixelR1C5_
+    dword offset RPL124_BlendPixelR1C5_
+    dword offset RPL124_BlendPixelR1C5_
+    dword offset RPL124_BlendPixelR1C5_
+    dword offset RPL124_BlendPixelR1C5_
+    dword offset RPL124_BlendPixelR1C5_
+    dword offset RPL124_BlendPixelR1C5_
+    dword offset RPL124_BlendPixelR1C5_
+    dword offset RPL124_BlendPixelR1C5_
+    dword offset RPL124_BlendPixelR1C5_
+    dword offset RPL124_BlendPixelR1C5_
+    dword offset RPL124_BlendPixelR1C5_
+    dword offset RPL124_BlendPixelR1C5_
+    dword offset RPL124_BlendPixelR1C5_
+    dword offset RPL124_BlendPixelR1C5_
+    dword offset RPL124_BlendPixelR1C5_
+    dword offset RPL124_BlendPixelR1C5_
+    dword offset RPL124_BlendPixelR1C5_
+    dword offset RPL124_BlendPixelR1C5_
+RPL124_BlendPixelR1C5_ proc near
     lea ecx, [ebx-085h]
     add ecx, dword ptr [Dc9bf0]
     mov ebx, edi
@@ -8734,45 +8734,45 @@ L63ac0::
     xor ebx, ebx
     add bl, dl
     jmp dword ptr [ebx*4+D63aed-80h*4]
-Func63a22_ endp
+RPL124_BlendPixelR1C5_ endp
 D63aed dword offset L63be7
     dword offset L63bc7
     dword offset L63bdb
     dword offset L63bab
     dword offset L63ba3
-    dword offset Func63b81_
-    dword offset Func63b81_
-    dword offset Func63b81_
-    dword offset Func63b81_
-    dword offset Func63b81_
-    dword offset Func63b81_
-    dword offset Func63b81_
-    dword offset Func63b81_
-    dword offset Func63b81_
-    dword offset Func63b81_
-    dword offset Func63b81_
-    dword offset Func63b81_
-    dword offset Func63b81_
-    dword offset Func63b81_
-    dword offset Func63b81_
-    dword offset Func63b81_
-    dword offset Func63b81_
-    dword offset Func63b81_
-    dword offset Func63b81_
-    dword offset Func63b81_
-    dword offset Func63b81_
-    dword offset Func63b81_
-    dword offset Func63b81_
-    dword offset Func63b81_
-    dword offset Func63b81_
-    dword offset Func63b81_
-    dword offset Func63b81_
-    dword offset Func63b81_
-    dword offset Func63b81_
-    dword offset Func63b81_
-    dword offset Func63b81_
-    dword offset Func63b81_
-Func63b81_ proc near
+    dword offset RPL124_BlendPixelR0C6_
+    dword offset RPL124_BlendPixelR0C6_
+    dword offset RPL124_BlendPixelR0C6_
+    dword offset RPL124_BlendPixelR0C6_
+    dword offset RPL124_BlendPixelR0C6_
+    dword offset RPL124_BlendPixelR0C6_
+    dword offset RPL124_BlendPixelR0C6_
+    dword offset RPL124_BlendPixelR0C6_
+    dword offset RPL124_BlendPixelR0C6_
+    dword offset RPL124_BlendPixelR0C6_
+    dword offset RPL124_BlendPixelR0C6_
+    dword offset RPL124_BlendPixelR0C6_
+    dword offset RPL124_BlendPixelR0C6_
+    dword offset RPL124_BlendPixelR0C6_
+    dword offset RPL124_BlendPixelR0C6_
+    dword offset RPL124_BlendPixelR0C6_
+    dword offset RPL124_BlendPixelR0C6_
+    dword offset RPL124_BlendPixelR0C6_
+    dword offset RPL124_BlendPixelR0C6_
+    dword offset RPL124_BlendPixelR0C6_
+    dword offset RPL124_BlendPixelR0C6_
+    dword offset RPL124_BlendPixelR0C6_
+    dword offset RPL124_BlendPixelR0C6_
+    dword offset RPL124_BlendPixelR0C6_
+    dword offset RPL124_BlendPixelR0C6_
+    dword offset RPL124_BlendPixelR0C6_
+    dword offset RPL124_BlendPixelR0C6_
+    dword offset RPL124_BlendPixelR0C6_
+    dword offset RPL124_BlendPixelR0C6_
+    dword offset RPL124_BlendPixelR0C6_
+    dword offset RPL124_BlendPixelR0C6_
+    dword offset RPL124_BlendPixelR0C6_
+RPL124_BlendPixelR0C6_ proc near
     lea ecx, [ebx-085h]
     add ecx, dword ptr [Dc9bf0]
     mov ebx, dword ptr [Dc9bec]
@@ -8823,45 +8823,45 @@ L63c13::
     xor ebx, ebx
     add bl, dh
     jmp dword ptr [ebx*4+D63c2c-80h*4]
-Func63b81_ endp
+RPL124_BlendPixelR0C6_ endp
 D63c2c dword offset L63d26
     dword offset L63d06
     dword offset L63d1a
     dword offset L63cea
     dword offset L63ce2
-    dword offset Func63cc0_
-    dword offset Func63cc0_
-    dword offset Func63cc0_
-    dword offset Func63cc0_
-    dword offset Func63cc0_
-    dword offset Func63cc0_
-    dword offset Func63cc0_
-    dword offset Func63cc0_
-    dword offset Func63cc0_
-    dword offset Func63cc0_
-    dword offset Func63cc0_
-    dword offset Func63cc0_
-    dword offset Func63cc0_
-    dword offset Func63cc0_
-    dword offset Func63cc0_
-    dword offset Func63cc0_
-    dword offset Func63cc0_
-    dword offset Func63cc0_
-    dword offset Func63cc0_
-    dword offset Func63cc0_
-    dword offset Func63cc0_
-    dword offset Func63cc0_
-    dword offset Func63cc0_
-    dword offset Func63cc0_
-    dword offset Func63cc0_
-    dword offset Func63cc0_
-    dword offset Func63cc0_
-    dword offset Func63cc0_
-    dword offset Func63cc0_
-    dword offset Func63cc0_
-    dword offset Func63cc0_
-    dword offset Func63cc0_
-Func63cc0_ proc near
+    dword offset RPL124_BlendPixelR0C7_
+    dword offset RPL124_BlendPixelR0C7_
+    dword offset RPL124_BlendPixelR0C7_
+    dword offset RPL124_BlendPixelR0C7_
+    dword offset RPL124_BlendPixelR0C7_
+    dword offset RPL124_BlendPixelR0C7_
+    dword offset RPL124_BlendPixelR0C7_
+    dword offset RPL124_BlendPixelR0C7_
+    dword offset RPL124_BlendPixelR0C7_
+    dword offset RPL124_BlendPixelR0C7_
+    dword offset RPL124_BlendPixelR0C7_
+    dword offset RPL124_BlendPixelR0C7_
+    dword offset RPL124_BlendPixelR0C7_
+    dword offset RPL124_BlendPixelR0C7_
+    dword offset RPL124_BlendPixelR0C7_
+    dword offset RPL124_BlendPixelR0C7_
+    dword offset RPL124_BlendPixelR0C7_
+    dword offset RPL124_BlendPixelR0C7_
+    dword offset RPL124_BlendPixelR0C7_
+    dword offset RPL124_BlendPixelR0C7_
+    dword offset RPL124_BlendPixelR0C7_
+    dword offset RPL124_BlendPixelR0C7_
+    dword offset RPL124_BlendPixelR0C7_
+    dword offset RPL124_BlendPixelR0C7_
+    dword offset RPL124_BlendPixelR0C7_
+    dword offset RPL124_BlendPixelR0C7_
+    dword offset RPL124_BlendPixelR0C7_
+    dword offset RPL124_BlendPixelR0C7_
+    dword offset RPL124_BlendPixelR0C7_
+    dword offset RPL124_BlendPixelR0C7_
+    dword offset RPL124_BlendPixelR0C7_
+    dword offset RPL124_BlendPixelR0C7_
+RPL124_BlendPixelR0C7_ proc near
     lea ecx, [ebx-085h]
     add ecx, dword ptr [Dc9bf0]
     mov ebx, dword ptr [Dc9bec]
@@ -8913,45 +8913,45 @@ L63d55::
     xor ebx, ebx
     add bl, dh
     jmp dword ptr [ebx*4+D63c2c-2fh*4]
-Func63cc0_ endp
+RPL124_BlendPixelR0C7_ endp
     dword offset L63e71
     dword offset L63e4e
     dword offset L63e63
     dword offset L63e30
     dword offset L63e28
-    dword offset Func63e04_
-    dword offset Func63e04_
-    dword offset Func63e04_
-    dword offset Func63e04_
-    dword offset Func63e04_
-    dword offset Func63e04_
-    dword offset Func63e04_
-    dword offset Func63e04_
-    dword offset Func63e04_
-    dword offset Func63e04_
-    dword offset Func63e04_
-    dword offset Func63e04_
-    dword offset Func63e04_
-    dword offset Func63e04_
-    dword offset Func63e04_
-    dword offset Func63e04_
-    dword offset Func63e04_
-    dword offset Func63e04_
-    dword offset Func63e04_
-    dword offset Func63e04_
-    dword offset Func63e04_
-    dword offset Func63e04_
-    dword offset Func63e04_
-    dword offset Func63e04_
-    dword offset Func63e04_
-    dword offset Func63e04_
-    dword offset Func63e04_
-    dword offset Func63e04_
-    dword offset Func63e04_
-    dword offset Func63e04_
-    dword offset Func63e04_
-    dword offset Func63e04_
-Func63e04_ proc near
+    dword offset RPL124_BlendPixelR1C6_
+    dword offset RPL124_BlendPixelR1C6_
+    dword offset RPL124_BlendPixelR1C6_
+    dword offset RPL124_BlendPixelR1C6_
+    dword offset RPL124_BlendPixelR1C6_
+    dword offset RPL124_BlendPixelR1C6_
+    dword offset RPL124_BlendPixelR1C6_
+    dword offset RPL124_BlendPixelR1C6_
+    dword offset RPL124_BlendPixelR1C6_
+    dword offset RPL124_BlendPixelR1C6_
+    dword offset RPL124_BlendPixelR1C6_
+    dword offset RPL124_BlendPixelR1C6_
+    dword offset RPL124_BlendPixelR1C6_
+    dword offset RPL124_BlendPixelR1C6_
+    dword offset RPL124_BlendPixelR1C6_
+    dword offset RPL124_BlendPixelR1C6_
+    dword offset RPL124_BlendPixelR1C6_
+    dword offset RPL124_BlendPixelR1C6_
+    dword offset RPL124_BlendPixelR1C6_
+    dword offset RPL124_BlendPixelR1C6_
+    dword offset RPL124_BlendPixelR1C6_
+    dword offset RPL124_BlendPixelR1C6_
+    dword offset RPL124_BlendPixelR1C6_
+    dword offset RPL124_BlendPixelR1C6_
+    dword offset RPL124_BlendPixelR1C6_
+    dword offset RPL124_BlendPixelR1C6_
+    dword offset RPL124_BlendPixelR1C6_
+    dword offset RPL124_BlendPixelR1C6_
+    dword offset RPL124_BlendPixelR1C6_
+    dword offset RPL124_BlendPixelR1C6_
+    dword offset RPL124_BlendPixelR1C6_
+    dword offset RPL124_BlendPixelR1C6_
+RPL124_BlendPixelR1C6_ proc near
     lea ecx, [ebx-085h]
     add ecx, dword ptr [Dc9bf0]
     mov ebx, edi
@@ -9005,45 +9005,45 @@ L63e9e::
     xor ebx, ebx
     add bl, dl
     jmp dword ptr [ebx*4+D63eb7-80h*4]
-Func63e04_ endp
+RPL124_BlendPixelR1C6_ endp
 D63eb7 dword offset L63fb8
     dword offset L63f95
     dword offset L63faa
     dword offset L63f77
     dword offset L63f6f
-    dword offset Func63f4b_
-    dword offset Func63f4b_
-    dword offset Func63f4b_
-    dword offset Func63f4b_
-    dword offset Func63f4b_
-    dword offset Func63f4b_
-    dword offset Func63f4b_
-    dword offset Func63f4b_
-    dword offset Func63f4b_
-    dword offset Func63f4b_
-    dword offset Func63f4b_
-    dword offset Func63f4b_
-    dword offset Func63f4b_
-    dword offset Func63f4b_
-    dword offset Func63f4b_
-    dword offset Func63f4b_
-    dword offset Func63f4b_
-    dword offset Func63f4b_
-    dword offset Func63f4b_
-    dword offset Func63f4b_
-    dword offset Func63f4b_
-    dword offset Func63f4b_
-    dword offset Func63f4b_
-    dword offset Func63f4b_
-    dword offset Func63f4b_
-    dword offset Func63f4b_
-    dword offset Func63f4b_
-    dword offset Func63f4b_
-    dword offset Func63f4b_
-    dword offset Func63f4b_
-    dword offset Func63f4b_
-    dword offset Func63f4b_
-Func63f4b_ proc near
+    dword offset RPL124_BlendPixelR1C7_
+    dword offset RPL124_BlendPixelR1C7_
+    dword offset RPL124_BlendPixelR1C7_
+    dword offset RPL124_BlendPixelR1C7_
+    dword offset RPL124_BlendPixelR1C7_
+    dword offset RPL124_BlendPixelR1C7_
+    dword offset RPL124_BlendPixelR1C7_
+    dword offset RPL124_BlendPixelR1C7_
+    dword offset RPL124_BlendPixelR1C7_
+    dword offset RPL124_BlendPixelR1C7_
+    dword offset RPL124_BlendPixelR1C7_
+    dword offset RPL124_BlendPixelR1C7_
+    dword offset RPL124_BlendPixelR1C7_
+    dword offset RPL124_BlendPixelR1C7_
+    dword offset RPL124_BlendPixelR1C7_
+    dword offset RPL124_BlendPixelR1C7_
+    dword offset RPL124_BlendPixelR1C7_
+    dword offset RPL124_BlendPixelR1C7_
+    dword offset RPL124_BlendPixelR1C7_
+    dword offset RPL124_BlendPixelR1C7_
+    dword offset RPL124_BlendPixelR1C7_
+    dword offset RPL124_BlendPixelR1C7_
+    dword offset RPL124_BlendPixelR1C7_
+    dword offset RPL124_BlendPixelR1C7_
+    dword offset RPL124_BlendPixelR1C7_
+    dword offset RPL124_BlendPixelR1C7_
+    dword offset RPL124_BlendPixelR1C7_
+    dword offset RPL124_BlendPixelR1C7_
+    dword offset RPL124_BlendPixelR1C7_
+    dword offset RPL124_BlendPixelR1C7_
+    dword offset RPL124_BlendPixelR1C7_
+    dword offset RPL124_BlendPixelR1C7_
+RPL124_BlendPixelR1C7_ proc near
     lea ecx, [ebx-085h]
     add ecx, dword ptr [Dc9bf0]
     mov ebx, edi
@@ -9108,45 +9108,45 @@ L63fec::
     xor ebx, ebx
     add bl, dl
     jmp dword ptr [ebx*4+D6401c-80h*4]
-Func63f4b_ endp
+RPL124_BlendPixelR1C7_ endp
 D6401c dword offset L64112
     dword offset L640f4
     dword offset L64107
     dword offset L640d9
     dword offset L640d1
-    dword offset Func640b0_
-    dword offset Func640b0_
-    dword offset Func640b0_
-    dword offset Func640b0_
-    dword offset Func640b0_
-    dword offset Func640b0_
-    dword offset Func640b0_
-    dword offset Func640b0_
-    dword offset Func640b0_
-    dword offset Func640b0_
-    dword offset Func640b0_
-    dword offset Func640b0_
-    dword offset Func640b0_
-    dword offset Func640b0_
-    dword offset Func640b0_
-    dword offset Func640b0_
-    dword offset Func640b0_
-    dword offset Func640b0_
-    dword offset Func640b0_
-    dword offset Func640b0_
-    dword offset Func640b0_
-    dword offset Func640b0_
-    dword offset Func640b0_
-    dword offset Func640b0_
-    dword offset Func640b0_
-    dword offset Func640b0_
-    dword offset Func640b0_
-    dword offset Func640b0_
-    dword offset Func640b0_
-    dword offset Func640b0_
-    dword offset Func640b0_
-    dword offset Func640b0_
-Func640b0_ proc near
+    dword offset RPL124_BlendPixelR2C0_
+    dword offset RPL124_BlendPixelR2C0_
+    dword offset RPL124_BlendPixelR2C0_
+    dword offset RPL124_BlendPixelR2C0_
+    dword offset RPL124_BlendPixelR2C0_
+    dword offset RPL124_BlendPixelR2C0_
+    dword offset RPL124_BlendPixelR2C0_
+    dword offset RPL124_BlendPixelR2C0_
+    dword offset RPL124_BlendPixelR2C0_
+    dword offset RPL124_BlendPixelR2C0_
+    dword offset RPL124_BlendPixelR2C0_
+    dword offset RPL124_BlendPixelR2C0_
+    dword offset RPL124_BlendPixelR2C0_
+    dword offset RPL124_BlendPixelR2C0_
+    dword offset RPL124_BlendPixelR2C0_
+    dword offset RPL124_BlendPixelR2C0_
+    dword offset RPL124_BlendPixelR2C0_
+    dword offset RPL124_BlendPixelR2C0_
+    dword offset RPL124_BlendPixelR2C0_
+    dword offset RPL124_BlendPixelR2C0_
+    dword offset RPL124_BlendPixelR2C0_
+    dword offset RPL124_BlendPixelR2C0_
+    dword offset RPL124_BlendPixelR2C0_
+    dword offset RPL124_BlendPixelR2C0_
+    dword offset RPL124_BlendPixelR2C0_
+    dword offset RPL124_BlendPixelR2C0_
+    dword offset RPL124_BlendPixelR2C0_
+    dword offset RPL124_BlendPixelR2C0_
+    dword offset RPL124_BlendPixelR2C0_
+    dword offset RPL124_BlendPixelR2C0_
+    dword offset RPL124_BlendPixelR2C0_
+    dword offset RPL124_BlendPixelR2C0_
+RPL124_BlendPixelR2C0_ proc near
     lea ecx, [ebx-085h]
     add ecx, dword ptr [Dc9bf0]
     mov ebx, dword ptr [Dc9bec]
@@ -9197,45 +9197,45 @@ L6413d::
     xor ebx, ebx
     add bl, dh
     jmp dword ptr [ebx*4+D64156-80h*4]
-Func640b0_ endp
+RPL124_BlendPixelR2C0_ endp
 D64156 dword offset L64250
     dword offset L64230
     dword offset L64244
     dword offset L64214
     dword offset L6420c
-    dword offset Func641ea_
-    dword offset Func641ea_
-    dword offset Func641ea_
-    dword offset Func641ea_
-    dword offset Func641ea_
-    dword offset Func641ea_
-    dword offset Func641ea_
-    dword offset Func641ea_
-    dword offset Func641ea_
-    dword offset Func641ea_
-    dword offset Func641ea_
-    dword offset Func641ea_
-    dword offset Func641ea_
-    dword offset Func641ea_
-    dword offset Func641ea_
-    dword offset Func641ea_
-    dword offset Func641ea_
-    dword offset Func641ea_
-    dword offset Func641ea_
-    dword offset Func641ea_
-    dword offset Func641ea_
-    dword offset Func641ea_
-    dword offset Func641ea_
-    dword offset Func641ea_
-    dword offset Func641ea_
-    dword offset Func641ea_
-    dword offset Func641ea_
-    dword offset Func641ea_
-    dword offset Func641ea_
-    dword offset Func641ea_
-    dword offset Func641ea_
-    dword offset Func641ea_
-Func641ea_ proc near
+    dword offset RPL124_BlendPixelR2C1_
+    dword offset RPL124_BlendPixelR2C1_
+    dword offset RPL124_BlendPixelR2C1_
+    dword offset RPL124_BlendPixelR2C1_
+    dword offset RPL124_BlendPixelR2C1_
+    dword offset RPL124_BlendPixelR2C1_
+    dword offset RPL124_BlendPixelR2C1_
+    dword offset RPL124_BlendPixelR2C1_
+    dword offset RPL124_BlendPixelR2C1_
+    dword offset RPL124_BlendPixelR2C1_
+    dword offset RPL124_BlendPixelR2C1_
+    dword offset RPL124_BlendPixelR2C1_
+    dword offset RPL124_BlendPixelR2C1_
+    dword offset RPL124_BlendPixelR2C1_
+    dword offset RPL124_BlendPixelR2C1_
+    dword offset RPL124_BlendPixelR2C1_
+    dword offset RPL124_BlendPixelR2C1_
+    dword offset RPL124_BlendPixelR2C1_
+    dword offset RPL124_BlendPixelR2C1_
+    dword offset RPL124_BlendPixelR2C1_
+    dword offset RPL124_BlendPixelR2C1_
+    dword offset RPL124_BlendPixelR2C1_
+    dword offset RPL124_BlendPixelR2C1_
+    dword offset RPL124_BlendPixelR2C1_
+    dword offset RPL124_BlendPixelR2C1_
+    dword offset RPL124_BlendPixelR2C1_
+    dword offset RPL124_BlendPixelR2C1_
+    dword offset RPL124_BlendPixelR2C1_
+    dword offset RPL124_BlendPixelR2C1_
+    dword offset RPL124_BlendPixelR2C1_
+    dword offset RPL124_BlendPixelR2C1_
+    dword offset RPL124_BlendPixelR2C1_
+RPL124_BlendPixelR2C1_ proc near
     lea ecx, [ebx-085h]
     add ecx, dword ptr [Dc9bf0]
     mov ebx, dword ptr [Dc9bec]
@@ -9287,45 +9287,45 @@ L6427c::
     xor ebx, ebx
     add bl, dh
     jmp dword ptr [ebx*4+D64297-80h*4]
-Func641ea_ endp
+RPL124_BlendPixelR2C1_ endp
 D64297 dword offset L64394
     dword offset L64373
     dword offset L64387
     dword offset L64356
     dword offset L6434e
-    dword offset Func6432b_
-    dword offset Func6432b_
-    dword offset Func6432b_
-    dword offset Func6432b_
-    dword offset Func6432b_
-    dword offset Func6432b_
-    dword offset Func6432b_
-    dword offset Func6432b_
-    dword offset Func6432b_
-    dword offset Func6432b_
-    dword offset Func6432b_
-    dword offset Func6432b_
-    dword offset Func6432b_
-    dword offset Func6432b_
-    dword offset Func6432b_
-    dword offset Func6432b_
-    dword offset Func6432b_
-    dword offset Func6432b_
-    dword offset Func6432b_
-    dword offset Func6432b_
-    dword offset Func6432b_
-    dword offset Func6432b_
-    dword offset Func6432b_
-    dword offset Func6432b_
-    dword offset Func6432b_
-    dword offset Func6432b_
-    dword offset Func6432b_
-    dword offset Func6432b_
-    dword offset Func6432b_
-    dword offset Func6432b_
-    dword offset Func6432b_
-    dword offset Func6432b_
-Func6432b_ proc near
+    dword offset RPL124_BlendPixelR3C0_
+    dword offset RPL124_BlendPixelR3C0_
+    dword offset RPL124_BlendPixelR3C0_
+    dword offset RPL124_BlendPixelR3C0_
+    dword offset RPL124_BlendPixelR3C0_
+    dword offset RPL124_BlendPixelR3C0_
+    dword offset RPL124_BlendPixelR3C0_
+    dword offset RPL124_BlendPixelR3C0_
+    dword offset RPL124_BlendPixelR3C0_
+    dword offset RPL124_BlendPixelR3C0_
+    dword offset RPL124_BlendPixelR3C0_
+    dword offset RPL124_BlendPixelR3C0_
+    dword offset RPL124_BlendPixelR3C0_
+    dword offset RPL124_BlendPixelR3C0_
+    dword offset RPL124_BlendPixelR3C0_
+    dword offset RPL124_BlendPixelR3C0_
+    dword offset RPL124_BlendPixelR3C0_
+    dword offset RPL124_BlendPixelR3C0_
+    dword offset RPL124_BlendPixelR3C0_
+    dword offset RPL124_BlendPixelR3C0_
+    dword offset RPL124_BlendPixelR3C0_
+    dword offset RPL124_BlendPixelR3C0_
+    dword offset RPL124_BlendPixelR3C0_
+    dword offset RPL124_BlendPixelR3C0_
+    dword offset RPL124_BlendPixelR3C0_
+    dword offset RPL124_BlendPixelR3C0_
+    dword offset RPL124_BlendPixelR3C0_
+    dword offset RPL124_BlendPixelR3C0_
+    dword offset RPL124_BlendPixelR3C0_
+    dword offset RPL124_BlendPixelR3C0_
+    dword offset RPL124_BlendPixelR3C0_
+    dword offset RPL124_BlendPixelR3C0_
+RPL124_BlendPixelR3C0_ proc near
     lea ecx, [ebx-085h]
     add ecx, dword ptr [Dc9bf0]
     mov ebx, edi
@@ -9379,45 +9379,45 @@ L643c0::
     xor ebx, ebx
     add bl, dl
     jmp dword ptr [ebx*4+D643d9-80h*4]
-Func6432b_ endp
+RPL124_BlendPixelR3C0_ endp
 D643d9 dword offset L644da
     dword offset L644b7
     dword offset L644cc
     dword offset L64499
     dword offset L64491
-    dword offset Func6446d_
-    dword offset Func6446d_
-    dword offset Func6446d_
-    dword offset Func6446d_
-    dword offset Func6446d_
-    dword offset Func6446d_
-    dword offset Func6446d_
-    dword offset Func6446d_
-    dword offset Func6446d_
-    dword offset Func6446d_
-    dword offset Func6446d_
-    dword offset Func6446d_
-    dword offset Func6446d_
-    dword offset Func6446d_
-    dword offset Func6446d_
-    dword offset Func6446d_
-    dword offset Func6446d_
-    dword offset Func6446d_
-    dword offset Func6446d_
-    dword offset Func6446d_
-    dword offset Func6446d_
-    dword offset Func6446d_
-    dword offset Func6446d_
-    dword offset Func6446d_
-    dword offset Func6446d_
-    dword offset Func6446d_
-    dword offset Func6446d_
-    dword offset Func6446d_
-    dword offset Func6446d_
-    dword offset Func6446d_
-    dword offset Func6446d_
-    dword offset Func6446d_
-Func6446d_ proc near
+    dword offset RPL124_BlendPixelR3C1_
+    dword offset RPL124_BlendPixelR3C1_
+    dword offset RPL124_BlendPixelR3C1_
+    dword offset RPL124_BlendPixelR3C1_
+    dword offset RPL124_BlendPixelR3C1_
+    dword offset RPL124_BlendPixelR3C1_
+    dword offset RPL124_BlendPixelR3C1_
+    dword offset RPL124_BlendPixelR3C1_
+    dword offset RPL124_BlendPixelR3C1_
+    dword offset RPL124_BlendPixelR3C1_
+    dword offset RPL124_BlendPixelR3C1_
+    dword offset RPL124_BlendPixelR3C1_
+    dword offset RPL124_BlendPixelR3C1_
+    dword offset RPL124_BlendPixelR3C1_
+    dword offset RPL124_BlendPixelR3C1_
+    dword offset RPL124_BlendPixelR3C1_
+    dword offset RPL124_BlendPixelR3C1_
+    dword offset RPL124_BlendPixelR3C1_
+    dword offset RPL124_BlendPixelR3C1_
+    dword offset RPL124_BlendPixelR3C1_
+    dword offset RPL124_BlendPixelR3C1_
+    dword offset RPL124_BlendPixelR3C1_
+    dword offset RPL124_BlendPixelR3C1_
+    dword offset RPL124_BlendPixelR3C1_
+    dword offset RPL124_BlendPixelR3C1_
+    dword offset RPL124_BlendPixelR3C1_
+    dword offset RPL124_BlendPixelR3C1_
+    dword offset RPL124_BlendPixelR3C1_
+    dword offset RPL124_BlendPixelR3C1_
+    dword offset RPL124_BlendPixelR3C1_
+    dword offset RPL124_BlendPixelR3C1_
+    dword offset RPL124_BlendPixelR3C1_
+RPL124_BlendPixelR3C1_ proc near
     lea ecx, [ebx-085h]
     add ecx, dword ptr [Dc9bf0]
     mov ebx, edi
@@ -9481,45 +9481,45 @@ L6450b::
     xor ebx, ebx
     add bl, dl
     jmp dword ptr [ebx*4+D64538-80h*4]
-Func6446d_ endp
+RPL124_BlendPixelR3C1_ endp
 D64538 dword offset L64632
     dword offset L64612
     dword offset L64626
     dword offset L645f6
     dword offset L645ee
-    dword offset Func645cc_
-    dword offset Func645cc_
-    dword offset Func645cc_
-    dword offset Func645cc_
-    dword offset Func645cc_
-    dword offset Func645cc_
-    dword offset Func645cc_
-    dword offset Func645cc_
-    dword offset Func645cc_
-    dword offset Func645cc_
-    dword offset Func645cc_
-    dword offset Func645cc_
-    dword offset Func645cc_
-    dword offset Func645cc_
-    dword offset Func645cc_
-    dword offset Func645cc_
-    dword offset Func645cc_
-    dword offset Func645cc_
-    dword offset Func645cc_
-    dword offset Func645cc_
-    dword offset Func645cc_
-    dword offset Func645cc_
-    dword offset Func645cc_
-    dword offset Func645cc_
-    dword offset Func645cc_
-    dword offset Func645cc_
-    dword offset Func645cc_
-D645b8 dword offset Func645cc_
-    dword offset Func645cc_
-    dword offset Func645cc_
-    dword offset Func645cc_
-    dword offset Func645cc_
-Func645cc_ proc near
+    dword offset RPL124_BlendPixelR2C2_
+    dword offset RPL124_BlendPixelR2C2_
+    dword offset RPL124_BlendPixelR2C2_
+    dword offset RPL124_BlendPixelR2C2_
+    dword offset RPL124_BlendPixelR2C2_
+    dword offset RPL124_BlendPixelR2C2_
+    dword offset RPL124_BlendPixelR2C2_
+    dword offset RPL124_BlendPixelR2C2_
+    dword offset RPL124_BlendPixelR2C2_
+    dword offset RPL124_BlendPixelR2C2_
+    dword offset RPL124_BlendPixelR2C2_
+    dword offset RPL124_BlendPixelR2C2_
+    dword offset RPL124_BlendPixelR2C2_
+    dword offset RPL124_BlendPixelR2C2_
+    dword offset RPL124_BlendPixelR2C2_
+    dword offset RPL124_BlendPixelR2C2_
+    dword offset RPL124_BlendPixelR2C2_
+    dword offset RPL124_BlendPixelR2C2_
+    dword offset RPL124_BlendPixelR2C2_
+    dword offset RPL124_BlendPixelR2C2_
+    dword offset RPL124_BlendPixelR2C2_
+    dword offset RPL124_BlendPixelR2C2_
+    dword offset RPL124_BlendPixelR2C2_
+    dword offset RPL124_BlendPixelR2C2_
+    dword offset RPL124_BlendPixelR2C2_
+    dword offset RPL124_BlendPixelR2C2_
+    dword offset RPL124_BlendPixelR2C2_
+D645b8 dword offset RPL124_BlendPixelR2C2_
+    dword offset RPL124_BlendPixelR2C2_
+    dword offset RPL124_BlendPixelR2C2_
+    dword offset RPL124_BlendPixelR2C2_
+    dword offset RPL124_BlendPixelR2C2_
+RPL124_BlendPixelR2C2_ proc near
     lea ecx, [ebx-085h]
     add ecx, dword ptr [Dc9bf0]
     mov ebx, dword ptr [Dc9bec]
@@ -9570,45 +9570,45 @@ L6465e::
     xor ebx, ebx
     add bl, dh
     jmp dword ptr [ebx*4+D64677-80h*4]
-Func645cc_ endp
+RPL124_BlendPixelR2C2_ endp
 D64677 dword offset L64771
     dword offset L64751
     dword offset L64765
     dword offset L64735
     dword offset L6472d
-    dword offset Func6470b_
-    dword offset Func6470b_
-    dword offset Func6470b_
-    dword offset Func6470b_
-    dword offset Func6470b_
-    dword offset Func6470b_
-    dword offset Func6470b_
-    dword offset Func6470b_
-    dword offset Func6470b_
-    dword offset Func6470b_
-    dword offset Func6470b_
-    dword offset Func6470b_
-    dword offset Func6470b_
-    dword offset Func6470b_
-    dword offset Func6470b_
-    dword offset Func6470b_
-    dword offset Func6470b_
-    dword offset Func6470b_
-    dword offset Func6470b_
-    dword offset Func6470b_
-    dword offset Func6470b_
-    dword offset Func6470b_
-    dword offset Func6470b_
-    dword offset Func6470b_
-    dword offset Func6470b_
-    dword offset Func6470b_
-    dword offset Func6470b_
-    dword offset Func6470b_
-    dword offset Func6470b_
-D646ff dword offset Func6470b_
-    dword offset Func6470b_
-    dword offset Func6470b_
-Func6470b_ proc near
+    dword offset RPL124_BlendPixelR2C3_
+    dword offset RPL124_BlendPixelR2C3_
+    dword offset RPL124_BlendPixelR2C3_
+    dword offset RPL124_BlendPixelR2C3_
+    dword offset RPL124_BlendPixelR2C3_
+    dword offset RPL124_BlendPixelR2C3_
+    dword offset RPL124_BlendPixelR2C3_
+    dword offset RPL124_BlendPixelR2C3_
+    dword offset RPL124_BlendPixelR2C3_
+    dword offset RPL124_BlendPixelR2C3_
+    dword offset RPL124_BlendPixelR2C3_
+    dword offset RPL124_BlendPixelR2C3_
+    dword offset RPL124_BlendPixelR2C3_
+    dword offset RPL124_BlendPixelR2C3_
+    dword offset RPL124_BlendPixelR2C3_
+    dword offset RPL124_BlendPixelR2C3_
+    dword offset RPL124_BlendPixelR2C3_
+    dword offset RPL124_BlendPixelR2C3_
+    dword offset RPL124_BlendPixelR2C3_
+    dword offset RPL124_BlendPixelR2C3_
+    dword offset RPL124_BlendPixelR2C3_
+    dword offset RPL124_BlendPixelR2C3_
+    dword offset RPL124_BlendPixelR2C3_
+    dword offset RPL124_BlendPixelR2C3_
+    dword offset RPL124_BlendPixelR2C3_
+    dword offset RPL124_BlendPixelR2C3_
+    dword offset RPL124_BlendPixelR2C3_
+    dword offset RPL124_BlendPixelR2C3_
+    dword offset RPL124_BlendPixelR2C3_
+D646ff dword offset RPL124_BlendPixelR2C3_
+    dword offset RPL124_BlendPixelR2C3_
+    dword offset RPL124_BlendPixelR2C3_
+RPL124_BlendPixelR2C3_ proc near
     lea ecx, [ebx-085h]
     add ecx, dword ptr [Dc9bf0]
     mov ebx, dword ptr [Dc9bec]
@@ -9660,45 +9660,45 @@ L6479d::
     xor ebx, ebx
     add bl, dh
     jmp dword ptr [ebx*4+D645b8]
-Func6470b_ endp
+RPL124_BlendPixelR2C3_ endp
     dword offset L648b9
     dword offset L64896
     dword offset L648ab
     dword offset L64878
     dword offset L64870
-    dword offset Func6484c_
-    dword offset Func6484c_
-    dword offset Func6484c_
-    dword offset Func6484c_
-    dword offset Func6484c_
-    dword offset Func6484c_
-    dword offset Func6484c_
-    dword offset Func6484c_
-    dword offset Func6484c_
-    dword offset Func6484c_
-    dword offset Func6484c_
-    dword offset Func6484c_
-    dword offset Func6484c_
-    dword offset Func6484c_
-    dword offset Func6484c_
-    dword offset Func6484c_
-    dword offset Func6484c_
-    dword offset Func6484c_
-    dword offset Func6484c_
-    dword offset Func6484c_
-    dword offset Func6484c_
-    dword offset Func6484c_
-    dword offset Func6484c_
-    dword offset Func6484c_
-    dword offset Func6484c_
-    dword offset Func6484c_
-    dword offset Func6484c_
-    dword offset Func6484c_
-    dword offset Func6484c_
-    dword offset Func6484c_
-    dword offset Func6484c_
-    dword offset Func6484c_
-Func6484c_ proc near
+    dword offset RPL124_BlendPixelR3C2_
+    dword offset RPL124_BlendPixelR3C2_
+    dword offset RPL124_BlendPixelR3C2_
+    dword offset RPL124_BlendPixelR3C2_
+    dword offset RPL124_BlendPixelR3C2_
+    dword offset RPL124_BlendPixelR3C2_
+    dword offset RPL124_BlendPixelR3C2_
+    dword offset RPL124_BlendPixelR3C2_
+    dword offset RPL124_BlendPixelR3C2_
+    dword offset RPL124_BlendPixelR3C2_
+    dword offset RPL124_BlendPixelR3C2_
+    dword offset RPL124_BlendPixelR3C2_
+    dword offset RPL124_BlendPixelR3C2_
+    dword offset RPL124_BlendPixelR3C2_
+    dword offset RPL124_BlendPixelR3C2_
+    dword offset RPL124_BlendPixelR3C2_
+    dword offset RPL124_BlendPixelR3C2_
+    dword offset RPL124_BlendPixelR3C2_
+    dword offset RPL124_BlendPixelR3C2_
+    dword offset RPL124_BlendPixelR3C2_
+    dword offset RPL124_BlendPixelR3C2_
+    dword offset RPL124_BlendPixelR3C2_
+    dword offset RPL124_BlendPixelR3C2_
+    dword offset RPL124_BlendPixelR3C2_
+    dword offset RPL124_BlendPixelR3C2_
+    dword offset RPL124_BlendPixelR3C2_
+    dword offset RPL124_BlendPixelR3C2_
+    dword offset RPL124_BlendPixelR3C2_
+    dword offset RPL124_BlendPixelR3C2_
+    dword offset RPL124_BlendPixelR3C2_
+    dword offset RPL124_BlendPixelR3C2_
+    dword offset RPL124_BlendPixelR3C2_
+RPL124_BlendPixelR3C2_ proc near
     lea ecx, [ebx-085h]
     add ecx, dword ptr [Dc9bf0]
     mov ebx, edi
@@ -9752,45 +9752,45 @@ L648e6::
     xor ebx, ebx
     add bl, dl
     jmp dword ptr [ebx*4+D646ff]
-Func6484c_ endp
+RPL124_BlendPixelR3C2_ endp
     dword offset L64a00
     dword offset L649dd
     dword offset L649f2
     dword offset L649bf
     dword offset L649b7
-    dword offset Func64993_
-    dword offset Func64993_
-    dword offset Func64993_
-    dword offset Func64993_
-    dword offset Func64993_
-    dword offset Func64993_
-    dword offset Func64993_
-    dword offset Func64993_
-    dword offset Func64993_
-    dword offset Func64993_
-    dword offset Func64993_
-    dword offset Func64993_
-    dword offset Func64993_
-    dword offset Func64993_
-    dword offset Func64993_
-    dword offset Func64993_
-    dword offset Func64993_
-    dword offset Func64993_
-    dword offset Func64993_
-    dword offset Func64993_
-    dword offset Func64993_
-    dword offset Func64993_
-    dword offset Func64993_
-    dword offset Func64993_
-    dword offset Func64993_
-    dword offset Func64993_
-    dword offset Func64993_
-    dword offset Func64993_
-    dword offset Func64993_
-    dword offset Func64993_
-    dword offset Func64993_
-    dword offset Func64993_
-Func64993_ proc near
+    dword offset RPL124_BlendPixelR3C3_
+    dword offset RPL124_BlendPixelR3C3_
+    dword offset RPL124_BlendPixelR3C3_
+    dword offset RPL124_BlendPixelR3C3_
+    dword offset RPL124_BlendPixelR3C3_
+    dword offset RPL124_BlendPixelR3C3_
+    dword offset RPL124_BlendPixelR3C3_
+    dword offset RPL124_BlendPixelR3C3_
+    dword offset RPL124_BlendPixelR3C3_
+    dword offset RPL124_BlendPixelR3C3_
+    dword offset RPL124_BlendPixelR3C3_
+    dword offset RPL124_BlendPixelR3C3_
+    dword offset RPL124_BlendPixelR3C3_
+    dword offset RPL124_BlendPixelR3C3_
+    dword offset RPL124_BlendPixelR3C3_
+    dword offset RPL124_BlendPixelR3C3_
+    dword offset RPL124_BlendPixelR3C3_
+    dword offset RPL124_BlendPixelR3C3_
+    dword offset RPL124_BlendPixelR3C3_
+    dword offset RPL124_BlendPixelR3C3_
+    dword offset RPL124_BlendPixelR3C3_
+    dword offset RPL124_BlendPixelR3C3_
+    dword offset RPL124_BlendPixelR3C3_
+    dword offset RPL124_BlendPixelR3C3_
+    dword offset RPL124_BlendPixelR3C3_
+    dword offset RPL124_BlendPixelR3C3_
+    dword offset RPL124_BlendPixelR3C3_
+    dword offset RPL124_BlendPixelR3C3_
+    dword offset RPL124_BlendPixelR3C3_
+    dword offset RPL124_BlendPixelR3C3_
+    dword offset RPL124_BlendPixelR3C3_
+    dword offset RPL124_BlendPixelR3C3_
+RPL124_BlendPixelR3C3_ proc near
     lea ecx, [ebx-085h]
     add ecx, dword ptr [Dc9bf0]
     mov ebx, edi
@@ -9854,45 +9854,45 @@ L64a31::
     xor ebx, ebx
     add bl, dl
     jmp dword ptr [ebx*4+D64a5e-80h*4]
-Func64993_ endp
+RPL124_BlendPixelR3C3_ endp
 D64a5e dword offset L64b58
     dword offset L64b38
     dword offset L64b4c
     dword offset L64b1c
     dword offset L64b14
-    dword offset Func64af2_
-    dword offset Func64af2_
-    dword offset Func64af2_
-    dword offset Func64af2_
-    dword offset Func64af2_
-    dword offset Func64af2_
-    dword offset Func64af2_
-    dword offset Func64af2_
-    dword offset Func64af2_
-    dword offset Func64af2_
-    dword offset Func64af2_
-    dword offset Func64af2_
-    dword offset Func64af2_
-    dword offset Func64af2_
-    dword offset Func64af2_
-    dword offset Func64af2_
-    dword offset Func64af2_
-    dword offset Func64af2_
-    dword offset Func64af2_
-    dword offset Func64af2_
-    dword offset Func64af2_
-    dword offset Func64af2_
-    dword offset Func64af2_
-    dword offset Func64af2_
-    dword offset Func64af2_
-    dword offset Func64af2_
-    dword offset Func64af2_
-D64ade dword offset Func64af2_
-    dword offset Func64af2_
-    dword offset Func64af2_
-    dword offset Func64af2_
-    dword offset Func64af2_
-Func64af2_ proc near
+    dword offset RPL124_BlendPixelR2C4_
+    dword offset RPL124_BlendPixelR2C4_
+    dword offset RPL124_BlendPixelR2C4_
+    dword offset RPL124_BlendPixelR2C4_
+    dword offset RPL124_BlendPixelR2C4_
+    dword offset RPL124_BlendPixelR2C4_
+    dword offset RPL124_BlendPixelR2C4_
+    dword offset RPL124_BlendPixelR2C4_
+    dword offset RPL124_BlendPixelR2C4_
+    dword offset RPL124_BlendPixelR2C4_
+    dword offset RPL124_BlendPixelR2C4_
+    dword offset RPL124_BlendPixelR2C4_
+    dword offset RPL124_BlendPixelR2C4_
+    dword offset RPL124_BlendPixelR2C4_
+    dword offset RPL124_BlendPixelR2C4_
+    dword offset RPL124_BlendPixelR2C4_
+    dword offset RPL124_BlendPixelR2C4_
+    dword offset RPL124_BlendPixelR2C4_
+    dword offset RPL124_BlendPixelR2C4_
+    dword offset RPL124_BlendPixelR2C4_
+    dword offset RPL124_BlendPixelR2C4_
+    dword offset RPL124_BlendPixelR2C4_
+    dword offset RPL124_BlendPixelR2C4_
+    dword offset RPL124_BlendPixelR2C4_
+    dword offset RPL124_BlendPixelR2C4_
+    dword offset RPL124_BlendPixelR2C4_
+    dword offset RPL124_BlendPixelR2C4_
+D64ade dword offset RPL124_BlendPixelR2C4_
+    dword offset RPL124_BlendPixelR2C4_
+    dword offset RPL124_BlendPixelR2C4_
+    dword offset RPL124_BlendPixelR2C4_
+    dword offset RPL124_BlendPixelR2C4_
+RPL124_BlendPixelR2C4_ proc near
     lea ecx, [ebx-085h]
     add ecx, dword ptr [Dc9bf0]
     mov ebx, dword ptr [Dc9bec]
@@ -9943,45 +9943,45 @@ L64b84::
     xor ebx, ebx
     add bl, dh
     jmp dword ptr [ebx*4+D64b9d-80h*4]
-Func64af2_ endp
+RPL124_BlendPixelR2C4_ endp
 D64b9d dword offset L64c97
     dword offset L64c77
     dword offset L64c8b
     dword offset L64c5b
     dword offset L64c53
-    dword offset Func64c31_
-    dword offset Func64c31_
-    dword offset Func64c31_
-    dword offset Func64c31_
-    dword offset Func64c31_
-    dword offset Func64c31_
-    dword offset Func64c31_
-    dword offset Func64c31_
-    dword offset Func64c31_
-    dword offset Func64c31_
-    dword offset Func64c31_
-    dword offset Func64c31_
-    dword offset Func64c31_
-    dword offset Func64c31_
-    dword offset Func64c31_
-    dword offset Func64c31_
-    dword offset Func64c31_
-    dword offset Func64c31_
-    dword offset Func64c31_
-    dword offset Func64c31_
-    dword offset Func64c31_
-    dword offset Func64c31_
-    dword offset Func64c31_
-    dword offset Func64c31_
-    dword offset Func64c31_
-    dword offset Func64c31_
-    dword offset Func64c31_
-    dword offset Func64c31_
-    dword offset Func64c31_
-D64c25 dword offset Func64c31_
-    dword offset Func64c31_
-    dword offset Func64c31_
-Func64c31_ proc near
+    dword offset RPL124_BlendPixelR2C5_
+    dword offset RPL124_BlendPixelR2C5_
+    dword offset RPL124_BlendPixelR2C5_
+    dword offset RPL124_BlendPixelR2C5_
+    dword offset RPL124_BlendPixelR2C5_
+    dword offset RPL124_BlendPixelR2C5_
+    dword offset RPL124_BlendPixelR2C5_
+    dword offset RPL124_BlendPixelR2C5_
+    dword offset RPL124_BlendPixelR2C5_
+    dword offset RPL124_BlendPixelR2C5_
+    dword offset RPL124_BlendPixelR2C5_
+    dword offset RPL124_BlendPixelR2C5_
+    dword offset RPL124_BlendPixelR2C5_
+    dword offset RPL124_BlendPixelR2C5_
+    dword offset RPL124_BlendPixelR2C5_
+    dword offset RPL124_BlendPixelR2C5_
+    dword offset RPL124_BlendPixelR2C5_
+    dword offset RPL124_BlendPixelR2C5_
+    dword offset RPL124_BlendPixelR2C5_
+    dword offset RPL124_BlendPixelR2C5_
+    dword offset RPL124_BlendPixelR2C5_
+    dword offset RPL124_BlendPixelR2C5_
+    dword offset RPL124_BlendPixelR2C5_
+    dword offset RPL124_BlendPixelR2C5_
+    dword offset RPL124_BlendPixelR2C5_
+    dword offset RPL124_BlendPixelR2C5_
+    dword offset RPL124_BlendPixelR2C5_
+    dword offset RPL124_BlendPixelR2C5_
+    dword offset RPL124_BlendPixelR2C5_
+D64c25 dword offset RPL124_BlendPixelR2C5_
+    dword offset RPL124_BlendPixelR2C5_
+    dword offset RPL124_BlendPixelR2C5_
+RPL124_BlendPixelR2C5_ proc near
     lea ecx, [ebx-085h]
     add ecx, dword ptr [Dc9bf0]
     mov ebx, dword ptr [Dc9bec]
@@ -10033,45 +10033,45 @@ L64cc3::
     xor ebx, ebx
     add bl, dh
     jmp dword ptr [ebx*4+D64ade]
-Func64c31_ endp
+RPL124_BlendPixelR2C5_ endp
     dword offset L64ddf
     dword offset L64dbc
     dword offset L64dd1
     dword offset L64d9e
     dword offset L64d96
-    dword offset Func64d72_
-    dword offset Func64d72_
-    dword offset Func64d72_
-    dword offset Func64d72_
-    dword offset Func64d72_
-    dword offset Func64d72_
-    dword offset Func64d72_
-    dword offset Func64d72_
-    dword offset Func64d72_
-    dword offset Func64d72_
-    dword offset Func64d72_
-    dword offset Func64d72_
-    dword offset Func64d72_
-    dword offset Func64d72_
-    dword offset Func64d72_
-    dword offset Func64d72_
-    dword offset Func64d72_
-    dword offset Func64d72_
-    dword offset Func64d72_
-    dword offset Func64d72_
-    dword offset Func64d72_
-    dword offset Func64d72_
-    dword offset Func64d72_
-    dword offset Func64d72_
-    dword offset Func64d72_
-    dword offset Func64d72_
-    dword offset Func64d72_
-    dword offset Func64d72_
-    dword offset Func64d72_
-    dword offset Func64d72_
-    dword offset Func64d72_
-    dword offset Func64d72_
-Func64d72_ proc near
+    dword offset RPL124_BlendPixelR3C4_
+    dword offset RPL124_BlendPixelR3C4_
+    dword offset RPL124_BlendPixelR3C4_
+    dword offset RPL124_BlendPixelR3C4_
+    dword offset RPL124_BlendPixelR3C4_
+    dword offset RPL124_BlendPixelR3C4_
+    dword offset RPL124_BlendPixelR3C4_
+    dword offset RPL124_BlendPixelR3C4_
+    dword offset RPL124_BlendPixelR3C4_
+    dword offset RPL124_BlendPixelR3C4_
+    dword offset RPL124_BlendPixelR3C4_
+    dword offset RPL124_BlendPixelR3C4_
+    dword offset RPL124_BlendPixelR3C4_
+    dword offset RPL124_BlendPixelR3C4_
+    dword offset RPL124_BlendPixelR3C4_
+    dword offset RPL124_BlendPixelR3C4_
+    dword offset RPL124_BlendPixelR3C4_
+    dword offset RPL124_BlendPixelR3C4_
+    dword offset RPL124_BlendPixelR3C4_
+    dword offset RPL124_BlendPixelR3C4_
+    dword offset RPL124_BlendPixelR3C4_
+    dword offset RPL124_BlendPixelR3C4_
+    dword offset RPL124_BlendPixelR3C4_
+    dword offset RPL124_BlendPixelR3C4_
+    dword offset RPL124_BlendPixelR3C4_
+    dword offset RPL124_BlendPixelR3C4_
+    dword offset RPL124_BlendPixelR3C4_
+    dword offset RPL124_BlendPixelR3C4_
+    dword offset RPL124_BlendPixelR3C4_
+    dword offset RPL124_BlendPixelR3C4_
+    dword offset RPL124_BlendPixelR3C4_
+    dword offset RPL124_BlendPixelR3C4_
+RPL124_BlendPixelR3C4_ proc near
     lea ecx, [ebx-085h]
     add ecx, dword ptr [Dc9bf0]
     mov ebx, edi
@@ -10125,45 +10125,45 @@ L64e0c::
     xor ebx, ebx
     add bl, dl
     jmp dword ptr [ebx*4+D64c25]
-Func64d72_ endp
+RPL124_BlendPixelR3C4_ endp
     dword offset L64f26
     dword offset L64f03
     dword offset L64f18
     dword offset L64ee5
     dword offset L64edd
-    dword offset Func64eb9_
-    dword offset Func64eb9_
-    dword offset Func64eb9_
-    dword offset Func64eb9_
-    dword offset Func64eb9_
-    dword offset Func64eb9_
-    dword offset Func64eb9_
-    dword offset Func64eb9_
-    dword offset Func64eb9_
-    dword offset Func64eb9_
-    dword offset Func64eb9_
-    dword offset Func64eb9_
-    dword offset Func64eb9_
-    dword offset Func64eb9_
-    dword offset Func64eb9_
-    dword offset Func64eb9_
-    dword offset Func64eb9_
-    dword offset Func64eb9_
-    dword offset Func64eb9_
-    dword offset Func64eb9_
-    dword offset Func64eb9_
-    dword offset Func64eb9_
-    dword offset Func64eb9_
-    dword offset Func64eb9_
-    dword offset Func64eb9_
-    dword offset Func64eb9_
-    dword offset Func64eb9_
-    dword offset Func64eb9_
-    dword offset Func64eb9_
-    dword offset Func64eb9_
-    dword offset Func64eb9_
-    dword offset Func64eb9_
-Func64eb9_ proc near
+    dword offset RPL124_BlendPixelR3C5_
+    dword offset RPL124_BlendPixelR3C5_
+    dword offset RPL124_BlendPixelR3C5_
+    dword offset RPL124_BlendPixelR3C5_
+    dword offset RPL124_BlendPixelR3C5_
+    dword offset RPL124_BlendPixelR3C5_
+    dword offset RPL124_BlendPixelR3C5_
+    dword offset RPL124_BlendPixelR3C5_
+    dword offset RPL124_BlendPixelR3C5_
+    dword offset RPL124_BlendPixelR3C5_
+    dword offset RPL124_BlendPixelR3C5_
+    dword offset RPL124_BlendPixelR3C5_
+    dword offset RPL124_BlendPixelR3C5_
+    dword offset RPL124_BlendPixelR3C5_
+    dword offset RPL124_BlendPixelR3C5_
+    dword offset RPL124_BlendPixelR3C5_
+    dword offset RPL124_BlendPixelR3C5_
+    dword offset RPL124_BlendPixelR3C5_
+    dword offset RPL124_BlendPixelR3C5_
+    dword offset RPL124_BlendPixelR3C5_
+    dword offset RPL124_BlendPixelR3C5_
+    dword offset RPL124_BlendPixelR3C5_
+    dword offset RPL124_BlendPixelR3C5_
+    dword offset RPL124_BlendPixelR3C5_
+    dword offset RPL124_BlendPixelR3C5_
+    dword offset RPL124_BlendPixelR3C5_
+    dword offset RPL124_BlendPixelR3C5_
+    dword offset RPL124_BlendPixelR3C5_
+    dword offset RPL124_BlendPixelR3C5_
+    dword offset RPL124_BlendPixelR3C5_
+    dword offset RPL124_BlendPixelR3C5_
+    dword offset RPL124_BlendPixelR3C5_
+RPL124_BlendPixelR3C5_ proc near
     lea ecx, [ebx-085h]
     add ecx, dword ptr [Dc9bf0]
     mov ebx, edi
@@ -10227,45 +10227,45 @@ L64f57::
     xor ebx, ebx
     add bl, dl
     jmp dword ptr [ebx*4+D64f84-80h*4]
-Func64eb9_ endp
+RPL124_BlendPixelR3C5_ endp
 D64f84 dword offset L6507e
     dword offset L6505e
     dword offset L65072
     dword offset L65042
     dword offset L6503a
-    dword offset Func65018_
-    dword offset Func65018_
-    dword offset Func65018_
-    dword offset Func65018_
-    dword offset Func65018_
-    dword offset Func65018_
-    dword offset Func65018_
-    dword offset Func65018_
-    dword offset Func65018_
-    dword offset Func65018_
-    dword offset Func65018_
-    dword offset Func65018_
-    dword offset Func65018_
-    dword offset Func65018_
-    dword offset Func65018_
-    dword offset Func65018_
-    dword offset Func65018_
-    dword offset Func65018_
-    dword offset Func65018_
-    dword offset Func65018_
-    dword offset Func65018_
-    dword offset Func65018_
-    dword offset Func65018_
-    dword offset Func65018_
-    dword offset Func65018_
-    dword offset Func65018_
-    dword offset Func65018_
-    dword offset Func65018_
-    dword offset Func65018_
-    dword offset Func65018_
-    dword offset Func65018_
-    dword offset Func65018_
-Func65018_ proc near
+    dword offset RPL124_BlendPixelR2C6_
+    dword offset RPL124_BlendPixelR2C6_
+    dword offset RPL124_BlendPixelR2C6_
+    dword offset RPL124_BlendPixelR2C6_
+    dword offset RPL124_BlendPixelR2C6_
+    dword offset RPL124_BlendPixelR2C6_
+    dword offset RPL124_BlendPixelR2C6_
+    dword offset RPL124_BlendPixelR2C6_
+    dword offset RPL124_BlendPixelR2C6_
+    dword offset RPL124_BlendPixelR2C6_
+    dword offset RPL124_BlendPixelR2C6_
+    dword offset RPL124_BlendPixelR2C6_
+    dword offset RPL124_BlendPixelR2C6_
+    dword offset RPL124_BlendPixelR2C6_
+    dword offset RPL124_BlendPixelR2C6_
+    dword offset RPL124_BlendPixelR2C6_
+    dword offset RPL124_BlendPixelR2C6_
+    dword offset RPL124_BlendPixelR2C6_
+    dword offset RPL124_BlendPixelR2C6_
+    dword offset RPL124_BlendPixelR2C6_
+    dword offset RPL124_BlendPixelR2C6_
+    dword offset RPL124_BlendPixelR2C6_
+    dword offset RPL124_BlendPixelR2C6_
+    dword offset RPL124_BlendPixelR2C6_
+    dword offset RPL124_BlendPixelR2C6_
+    dword offset RPL124_BlendPixelR2C6_
+    dword offset RPL124_BlendPixelR2C6_
+    dword offset RPL124_BlendPixelR2C6_
+    dword offset RPL124_BlendPixelR2C6_
+    dword offset RPL124_BlendPixelR2C6_
+    dword offset RPL124_BlendPixelR2C6_
+    dword offset RPL124_BlendPixelR2C6_
+RPL124_BlendPixelR2C6_ proc near
     lea ecx, [ebx-085h]
     add ecx, dword ptr [Dc9bf0]
     mov ebx, dword ptr [Dc9bec]
@@ -10316,45 +10316,45 @@ L650aa::
     xor ebx, ebx
     add bl, dh
     jmp dword ptr [ebx*4+D650c3-80h*4]
-Func65018_ endp
+RPL124_BlendPixelR2C6_ endp
 D650c3 dword offset L651bd
     dword offset L6519d
     dword offset L651b1
     dword offset L65181
     dword offset L65179
-    dword offset Func65157_
-    dword offset Func65157_
-    dword offset Func65157_
-    dword offset Func65157_
-    dword offset Func65157_
-    dword offset Func65157_
-    dword offset Func65157_
-    dword offset Func65157_
-    dword offset Func65157_
-    dword offset Func65157_
-    dword offset Func65157_
-    dword offset Func65157_
-    dword offset Func65157_
-    dword offset Func65157_
-    dword offset Func65157_
-    dword offset Func65157_
-    dword offset Func65157_
-    dword offset Func65157_
-    dword offset Func65157_
-    dword offset Func65157_
-    dword offset Func65157_
-    dword offset Func65157_
-    dword offset Func65157_
-    dword offset Func65157_
-    dword offset Func65157_
-    dword offset Func65157_
-    dword offset Func65157_
-    dword offset Func65157_
-    dword offset Func65157_
-    dword offset Func65157_
-    dword offset Func65157_
-    dword offset Func65157_
-Func65157_ proc near
+    dword offset RPL124_BlendPixelR2C7_
+    dword offset RPL124_BlendPixelR2C7_
+    dword offset RPL124_BlendPixelR2C7_
+    dword offset RPL124_BlendPixelR2C7_
+    dword offset RPL124_BlendPixelR2C7_
+    dword offset RPL124_BlendPixelR2C7_
+    dword offset RPL124_BlendPixelR2C7_
+    dword offset RPL124_BlendPixelR2C7_
+    dword offset RPL124_BlendPixelR2C7_
+    dword offset RPL124_BlendPixelR2C7_
+    dword offset RPL124_BlendPixelR2C7_
+    dword offset RPL124_BlendPixelR2C7_
+    dword offset RPL124_BlendPixelR2C7_
+    dword offset RPL124_BlendPixelR2C7_
+    dword offset RPL124_BlendPixelR2C7_
+    dword offset RPL124_BlendPixelR2C7_
+    dword offset RPL124_BlendPixelR2C7_
+    dword offset RPL124_BlendPixelR2C7_
+    dword offset RPL124_BlendPixelR2C7_
+    dword offset RPL124_BlendPixelR2C7_
+    dword offset RPL124_BlendPixelR2C7_
+    dword offset RPL124_BlendPixelR2C7_
+    dword offset RPL124_BlendPixelR2C7_
+    dword offset RPL124_BlendPixelR2C7_
+    dword offset RPL124_BlendPixelR2C7_
+    dword offset RPL124_BlendPixelR2C7_
+    dword offset RPL124_BlendPixelR2C7_
+    dword offset RPL124_BlendPixelR2C7_
+    dword offset RPL124_BlendPixelR2C7_
+    dword offset RPL124_BlendPixelR2C7_
+    dword offset RPL124_BlendPixelR2C7_
+    dword offset RPL124_BlendPixelR2C7_
+RPL124_BlendPixelR2C7_ proc near
     lea ecx, [ebx-085h]
     add ecx, dword ptr [Dc9bf0]
     mov ebx, dword ptr [Dc9bec]
@@ -10406,45 +10406,45 @@ L651ec::
     xor ebx, ebx
     add bl, dh
     jmp dword ptr [ebx*4+D650c3-2fh*4]
-Func65157_ endp
+RPL124_BlendPixelR2C7_ endp
     dword offset L65308
     dword offset L652e5
     dword offset L652fa
     dword offset L652c7
     dword offset L652bf
-    dword offset Func6529b_
-    dword offset Func6529b_
-    dword offset Func6529b_
-    dword offset Func6529b_
-    dword offset Func6529b_
-    dword offset Func6529b_
-    dword offset Func6529b_
-    dword offset Func6529b_
-    dword offset Func6529b_
-    dword offset Func6529b_
-    dword offset Func6529b_
-    dword offset Func6529b_
-    dword offset Func6529b_
-    dword offset Func6529b_
-    dword offset Func6529b_
-    dword offset Func6529b_
-    dword offset Func6529b_
-    dword offset Func6529b_
-    dword offset Func6529b_
-    dword offset Func6529b_
-    dword offset Func6529b_
-    dword offset Func6529b_
-    dword offset Func6529b_
-    dword offset Func6529b_
-    dword offset Func6529b_
-    dword offset Func6529b_
-    dword offset Func6529b_
-    dword offset Func6529b_
-    dword offset Func6529b_
-    dword offset Func6529b_
-    dword offset Func6529b_
-    dword offset Func6529b_
-Func6529b_ proc near
+    dword offset RPL124_BlendPixelR3C6_
+    dword offset RPL124_BlendPixelR3C6_
+    dword offset RPL124_BlendPixelR3C6_
+    dword offset RPL124_BlendPixelR3C6_
+    dword offset RPL124_BlendPixelR3C6_
+    dword offset RPL124_BlendPixelR3C6_
+    dword offset RPL124_BlendPixelR3C6_
+    dword offset RPL124_BlendPixelR3C6_
+    dword offset RPL124_BlendPixelR3C6_
+    dword offset RPL124_BlendPixelR3C6_
+    dword offset RPL124_BlendPixelR3C6_
+    dword offset RPL124_BlendPixelR3C6_
+    dword offset RPL124_BlendPixelR3C6_
+    dword offset RPL124_BlendPixelR3C6_
+    dword offset RPL124_BlendPixelR3C6_
+    dword offset RPL124_BlendPixelR3C6_
+    dword offset RPL124_BlendPixelR3C6_
+    dword offset RPL124_BlendPixelR3C6_
+    dword offset RPL124_BlendPixelR3C6_
+    dword offset RPL124_BlendPixelR3C6_
+    dword offset RPL124_BlendPixelR3C6_
+    dword offset RPL124_BlendPixelR3C6_
+    dword offset RPL124_BlendPixelR3C6_
+    dword offset RPL124_BlendPixelR3C6_
+    dword offset RPL124_BlendPixelR3C6_
+    dword offset RPL124_BlendPixelR3C6_
+    dword offset RPL124_BlendPixelR3C6_
+    dword offset RPL124_BlendPixelR3C6_
+    dword offset RPL124_BlendPixelR3C6_
+    dword offset RPL124_BlendPixelR3C6_
+    dword offset RPL124_BlendPixelR3C6_
+    dword offset RPL124_BlendPixelR3C6_
+RPL124_BlendPixelR3C6_ proc near
     lea ecx, [ebx-085h]
     add ecx, dword ptr [Dc9bf0]
     mov ebx, edi
@@ -10498,45 +10498,45 @@ L65335::
     xor ebx, ebx
     add bl, dl
     jmp dword ptr [ebx*4+D6534e-80h*4]
-Func6529b_ endp
+RPL124_BlendPixelR3C6_ endp
 D6534e dword offset L6544f
     dword offset L6542c
     dword offset L65441
     dword offset L6540e
     dword offset L65406
-    dword offset Func653e2_
-    dword offset Func653e2_
-    dword offset Func653e2_
-    dword offset Func653e2_
-    dword offset Func653e2_
-    dword offset Func653e2_
-    dword offset Func653e2_
-    dword offset Func653e2_
-    dword offset Func653e2_
-    dword offset Func653e2_
-    dword offset Func653e2_
-    dword offset Func653e2_
-    dword offset Func653e2_
-    dword offset Func653e2_
-    dword offset Func653e2_
-    dword offset Func653e2_
-    dword offset Func653e2_
-    dword offset Func653e2_
-    dword offset Func653e2_
-    dword offset Func653e2_
-    dword offset Func653e2_
-    dword offset Func653e2_
-    dword offset Func653e2_
-    dword offset Func653e2_
-    dword offset Func653e2_
-    dword offset Func653e2_
-    dword offset Func653e2_
-    dword offset Func653e2_
-    dword offset Func653e2_
-    dword offset Func653e2_
-    dword offset Func653e2_
-    dword offset Func653e2_
-Func653e2_ proc near
+    dword offset RPL124_BlendPixelR3C7_
+    dword offset RPL124_BlendPixelR3C7_
+    dword offset RPL124_BlendPixelR3C7_
+    dword offset RPL124_BlendPixelR3C7_
+    dword offset RPL124_BlendPixelR3C7_
+    dword offset RPL124_BlendPixelR3C7_
+    dword offset RPL124_BlendPixelR3C7_
+    dword offset RPL124_BlendPixelR3C7_
+    dword offset RPL124_BlendPixelR3C7_
+    dword offset RPL124_BlendPixelR3C7_
+    dword offset RPL124_BlendPixelR3C7_
+    dword offset RPL124_BlendPixelR3C7_
+    dword offset RPL124_BlendPixelR3C7_
+    dword offset RPL124_BlendPixelR3C7_
+    dword offset RPL124_BlendPixelR3C7_
+    dword offset RPL124_BlendPixelR3C7_
+    dword offset RPL124_BlendPixelR3C7_
+    dword offset RPL124_BlendPixelR3C7_
+    dword offset RPL124_BlendPixelR3C7_
+    dword offset RPL124_BlendPixelR3C7_
+    dword offset RPL124_BlendPixelR3C7_
+    dword offset RPL124_BlendPixelR3C7_
+    dword offset RPL124_BlendPixelR3C7_
+    dword offset RPL124_BlendPixelR3C7_
+    dword offset RPL124_BlendPixelR3C7_
+    dword offset RPL124_BlendPixelR3C7_
+    dword offset RPL124_BlendPixelR3C7_
+    dword offset RPL124_BlendPixelR3C7_
+    dword offset RPL124_BlendPixelR3C7_
+    dword offset RPL124_BlendPixelR3C7_
+    dword offset RPL124_BlendPixelR3C7_
+    dword offset RPL124_BlendPixelR3C7_
+RPL124_BlendPixelR3C7_ proc near
     lea ecx, [ebx-085h]
     add ecx, dword ptr [Dc9bf0]
     mov ebx, edi
@@ -10601,45 +10601,45 @@ L65483::
     xor ebx, ebx
     add bl, dl
     jmp dword ptr [ebx*4+D654b3-80h*4]
-Func653e2_ endp
+RPL124_BlendPixelR3C7_ endp
 D654b3 dword offset L655a9
     dword offset L6558b
     dword offset L6559e
     dword offset L65570
     dword offset L65568
-    dword offset Func65547_
-    dword offset Func65547_
-    dword offset Func65547_
-    dword offset Func65547_
-    dword offset Func65547_
-    dword offset Func65547_
-    dword offset Func65547_
-    dword offset Func65547_
-    dword offset Func65547_
-    dword offset Func65547_
-    dword offset Func65547_
-    dword offset Func65547_
-    dword offset Func65547_
-    dword offset Func65547_
-    dword offset Func65547_
-    dword offset Func65547_
-    dword offset Func65547_
-    dword offset Func65547_
-    dword offset Func65547_
-    dword offset Func65547_
-    dword offset Func65547_
-    dword offset Func65547_
-    dword offset Func65547_
-    dword offset Func65547_
-    dword offset Func65547_
-    dword offset Func65547_
-    dword offset Func65547_
-    dword offset Func65547_
-    dword offset Func65547_
-    dword offset Func65547_
-    dword offset Func65547_
-    dword offset Func65547_
-Func65547_ proc near
+    dword offset RPL124_BlendPixelR4C0_
+    dword offset RPL124_BlendPixelR4C0_
+    dword offset RPL124_BlendPixelR4C0_
+    dword offset RPL124_BlendPixelR4C0_
+    dword offset RPL124_BlendPixelR4C0_
+    dword offset RPL124_BlendPixelR4C0_
+    dword offset RPL124_BlendPixelR4C0_
+    dword offset RPL124_BlendPixelR4C0_
+    dword offset RPL124_BlendPixelR4C0_
+    dword offset RPL124_BlendPixelR4C0_
+    dword offset RPL124_BlendPixelR4C0_
+    dword offset RPL124_BlendPixelR4C0_
+    dword offset RPL124_BlendPixelR4C0_
+    dword offset RPL124_BlendPixelR4C0_
+    dword offset RPL124_BlendPixelR4C0_
+    dword offset RPL124_BlendPixelR4C0_
+    dword offset RPL124_BlendPixelR4C0_
+    dword offset RPL124_BlendPixelR4C0_
+    dword offset RPL124_BlendPixelR4C0_
+    dword offset RPL124_BlendPixelR4C0_
+    dword offset RPL124_BlendPixelR4C0_
+    dword offset RPL124_BlendPixelR4C0_
+    dword offset RPL124_BlendPixelR4C0_
+    dword offset RPL124_BlendPixelR4C0_
+    dword offset RPL124_BlendPixelR4C0_
+    dword offset RPL124_BlendPixelR4C0_
+    dword offset RPL124_BlendPixelR4C0_
+    dword offset RPL124_BlendPixelR4C0_
+    dword offset RPL124_BlendPixelR4C0_
+    dword offset RPL124_BlendPixelR4C0_
+    dword offset RPL124_BlendPixelR4C0_
+    dword offset RPL124_BlendPixelR4C0_
+RPL124_BlendPixelR4C0_ proc near
     lea ecx, [ebx-085h]
     add ecx, dword ptr [Dc9bf0]
     mov ebx, dword ptr [Dc9bec]
@@ -10690,45 +10690,45 @@ L655d4::
     xor ebx, ebx
     add bl, dh
     jmp dword ptr [ebx*4+D655ed-80h*4]
-Func65547_ endp
+RPL124_BlendPixelR4C0_ endp
 D655ed dword offset L656e7
     dword offset L656c7
     dword offset L656db
     dword offset L656ab
     dword offset L656a3
-    dword offset Func65681_
-    dword offset Func65681_
-    dword offset Func65681_
-    dword offset Func65681_
-    dword offset Func65681_
-    dword offset Func65681_
-    dword offset Func65681_
-    dword offset Func65681_
-    dword offset Func65681_
-    dword offset Func65681_
-    dword offset Func65681_
-    dword offset Func65681_
-    dword offset Func65681_
-    dword offset Func65681_
-    dword offset Func65681_
-    dword offset Func65681_
-    dword offset Func65681_
-    dword offset Func65681_
-    dword offset Func65681_
-    dword offset Func65681_
-    dword offset Func65681_
-    dword offset Func65681_
-    dword offset Func65681_
-    dword offset Func65681_
-    dword offset Func65681_
-    dword offset Func65681_
-    dword offset Func65681_
-    dword offset Func65681_
-    dword offset Func65681_
-    dword offset Func65681_
-    dword offset Func65681_
-    dword offset Func65681_
-Func65681_ proc near
+    dword offset RPL124_BlendPixelR4C1_
+    dword offset RPL124_BlendPixelR4C1_
+    dword offset RPL124_BlendPixelR4C1_
+    dword offset RPL124_BlendPixelR4C1_
+    dword offset RPL124_BlendPixelR4C1_
+    dword offset RPL124_BlendPixelR4C1_
+    dword offset RPL124_BlendPixelR4C1_
+    dword offset RPL124_BlendPixelR4C1_
+    dword offset RPL124_BlendPixelR4C1_
+    dword offset RPL124_BlendPixelR4C1_
+    dword offset RPL124_BlendPixelR4C1_
+    dword offset RPL124_BlendPixelR4C1_
+    dword offset RPL124_BlendPixelR4C1_
+    dword offset RPL124_BlendPixelR4C1_
+    dword offset RPL124_BlendPixelR4C1_
+    dword offset RPL124_BlendPixelR4C1_
+    dword offset RPL124_BlendPixelR4C1_
+    dword offset RPL124_BlendPixelR4C1_
+    dword offset RPL124_BlendPixelR4C1_
+    dword offset RPL124_BlendPixelR4C1_
+    dword offset RPL124_BlendPixelR4C1_
+    dword offset RPL124_BlendPixelR4C1_
+    dword offset RPL124_BlendPixelR4C1_
+    dword offset RPL124_BlendPixelR4C1_
+    dword offset RPL124_BlendPixelR4C1_
+    dword offset RPL124_BlendPixelR4C1_
+    dword offset RPL124_BlendPixelR4C1_
+    dword offset RPL124_BlendPixelR4C1_
+    dword offset RPL124_BlendPixelR4C1_
+    dword offset RPL124_BlendPixelR4C1_
+    dword offset RPL124_BlendPixelR4C1_
+    dword offset RPL124_BlendPixelR4C1_
+RPL124_BlendPixelR4C1_ proc near
     lea ecx, [ebx-085h]
     add ecx, dword ptr [Dc9bf0]
     mov ebx, dword ptr [Dc9bec]
@@ -10780,45 +10780,45 @@ L65713::
     xor ebx, ebx
     add bl, dh
     jmp dword ptr [ebx*4+D6572e-80h*4]
-Func65681_ endp
+RPL124_BlendPixelR4C1_ endp
 D6572e dword offset L6582b
     dword offset L6580a
     dword offset L6581e
     dword offset L657ed
     dword offset L657e5
-    dword offset Func657c2_
-    dword offset Func657c2_
-    dword offset Func657c2_
-    dword offset Func657c2_
-    dword offset Func657c2_
-    dword offset Func657c2_
-    dword offset Func657c2_
-    dword offset Func657c2_
-    dword offset Func657c2_
-    dword offset Func657c2_
-    dword offset Func657c2_
-    dword offset Func657c2_
-    dword offset Func657c2_
-    dword offset Func657c2_
-    dword offset Func657c2_
-    dword offset Func657c2_
-    dword offset Func657c2_
-    dword offset Func657c2_
-    dword offset Func657c2_
-    dword offset Func657c2_
-    dword offset Func657c2_
-    dword offset Func657c2_
-    dword offset Func657c2_
-    dword offset Func657c2_
-    dword offset Func657c2_
-    dword offset Func657c2_
-    dword offset Func657c2_
-    dword offset Func657c2_
-    dword offset Func657c2_
-    dword offset Func657c2_
-    dword offset Func657c2_
-    dword offset Func657c2_
-Func657c2_ proc near
+    dword offset RPL124_BlendPixelR5C0_
+    dword offset RPL124_BlendPixelR5C0_
+    dword offset RPL124_BlendPixelR5C0_
+    dword offset RPL124_BlendPixelR5C0_
+    dword offset RPL124_BlendPixelR5C0_
+    dword offset RPL124_BlendPixelR5C0_
+    dword offset RPL124_BlendPixelR5C0_
+    dword offset RPL124_BlendPixelR5C0_
+    dword offset RPL124_BlendPixelR5C0_
+    dword offset RPL124_BlendPixelR5C0_
+    dword offset RPL124_BlendPixelR5C0_
+    dword offset RPL124_BlendPixelR5C0_
+    dword offset RPL124_BlendPixelR5C0_
+    dword offset RPL124_BlendPixelR5C0_
+    dword offset RPL124_BlendPixelR5C0_
+    dword offset RPL124_BlendPixelR5C0_
+    dword offset RPL124_BlendPixelR5C0_
+    dword offset RPL124_BlendPixelR5C0_
+    dword offset RPL124_BlendPixelR5C0_
+    dword offset RPL124_BlendPixelR5C0_
+    dword offset RPL124_BlendPixelR5C0_
+    dword offset RPL124_BlendPixelR5C0_
+    dword offset RPL124_BlendPixelR5C0_
+    dword offset RPL124_BlendPixelR5C0_
+    dword offset RPL124_BlendPixelR5C0_
+    dword offset RPL124_BlendPixelR5C0_
+    dword offset RPL124_BlendPixelR5C0_
+    dword offset RPL124_BlendPixelR5C0_
+    dword offset RPL124_BlendPixelR5C0_
+    dword offset RPL124_BlendPixelR5C0_
+    dword offset RPL124_BlendPixelR5C0_
+    dword offset RPL124_BlendPixelR5C0_
+RPL124_BlendPixelR5C0_ proc near
     lea ecx, [ebx-085h]
     add ecx, dword ptr [Dc9bf0]
     mov ebx, edi
@@ -10872,45 +10872,45 @@ L65857::
     xor ebx, ebx
     add bl, dl
     jmp dword ptr [ebx*4+D65870-80h*4]
-Func657c2_ endp
+RPL124_BlendPixelR5C0_ endp
 D65870 dword offset L65971
     dword offset L6594e
     dword offset L65963
     dword offset L65930
     dword offset L65928
-    dword offset Func65904_
-    dword offset Func65904_
-    dword offset Func65904_
-    dword offset Func65904_
-    dword offset Func65904_
-    dword offset Func65904_
-    dword offset Func65904_
-    dword offset Func65904_
-    dword offset Func65904_
-    dword offset Func65904_
-    dword offset Func65904_
-    dword offset Func65904_
-    dword offset Func65904_
-    dword offset Func65904_
-    dword offset Func65904_
-    dword offset Func65904_
-    dword offset Func65904_
-    dword offset Func65904_
-    dword offset Func65904_
-    dword offset Func65904_
-    dword offset Func65904_
-    dword offset Func65904_
-    dword offset Func65904_
-    dword offset Func65904_
-    dword offset Func65904_
-    dword offset Func65904_
-    dword offset Func65904_
-    dword offset Func65904_
-    dword offset Func65904_
-    dword offset Func65904_
-    dword offset Func65904_
-    dword offset Func65904_
-Func65904_ proc near
+    dword offset RPL124_BlendPixelR5C1_
+    dword offset RPL124_BlendPixelR5C1_
+    dword offset RPL124_BlendPixelR5C1_
+    dword offset RPL124_BlendPixelR5C1_
+    dword offset RPL124_BlendPixelR5C1_
+    dword offset RPL124_BlendPixelR5C1_
+    dword offset RPL124_BlendPixelR5C1_
+    dword offset RPL124_BlendPixelR5C1_
+    dword offset RPL124_BlendPixelR5C1_
+    dword offset RPL124_BlendPixelR5C1_
+    dword offset RPL124_BlendPixelR5C1_
+    dword offset RPL124_BlendPixelR5C1_
+    dword offset RPL124_BlendPixelR5C1_
+    dword offset RPL124_BlendPixelR5C1_
+    dword offset RPL124_BlendPixelR5C1_
+    dword offset RPL124_BlendPixelR5C1_
+    dword offset RPL124_BlendPixelR5C1_
+    dword offset RPL124_BlendPixelR5C1_
+    dword offset RPL124_BlendPixelR5C1_
+    dword offset RPL124_BlendPixelR5C1_
+    dword offset RPL124_BlendPixelR5C1_
+    dword offset RPL124_BlendPixelR5C1_
+    dword offset RPL124_BlendPixelR5C1_
+    dword offset RPL124_BlendPixelR5C1_
+    dword offset RPL124_BlendPixelR5C1_
+    dword offset RPL124_BlendPixelR5C1_
+    dword offset RPL124_BlendPixelR5C1_
+    dword offset RPL124_BlendPixelR5C1_
+    dword offset RPL124_BlendPixelR5C1_
+    dword offset RPL124_BlendPixelR5C1_
+    dword offset RPL124_BlendPixelR5C1_
+    dword offset RPL124_BlendPixelR5C1_
+RPL124_BlendPixelR5C1_ proc near
     lea ecx, [ebx-085h]
     add ecx, dword ptr [Dc9bf0]
     mov ebx, edi
@@ -10974,45 +10974,45 @@ L659a2::
     xor ebx, ebx
     add bl, dl
     jmp dword ptr [ebx*4+D659cf-80h*4]
-Func65904_ endp
+RPL124_BlendPixelR5C1_ endp
 D659cf dword offset L65ac9
     dword offset L65aa9
     dword offset L65abd
     dword offset L65a8d
     dword offset L65a85
-    dword offset Func65a63_
-    dword offset Func65a63_
-    dword offset Func65a63_
-    dword offset Func65a63_
-    dword offset Func65a63_
-    dword offset Func65a63_
-    dword offset Func65a63_
-    dword offset Func65a63_
-    dword offset Func65a63_
-    dword offset Func65a63_
-    dword offset Func65a63_
-    dword offset Func65a63_
-    dword offset Func65a63_
-    dword offset Func65a63_
-    dword offset Func65a63_
-    dword offset Func65a63_
-    dword offset Func65a63_
-    dword offset Func65a63_
-    dword offset Func65a63_
-    dword offset Func65a63_
-    dword offset Func65a63_
-    dword offset Func65a63_
-    dword offset Func65a63_
-    dword offset Func65a63_
-    dword offset Func65a63_
-    dword offset Func65a63_
-    dword offset Func65a63_
-D65a4f dword offset Func65a63_
-    dword offset Func65a63_
-    dword offset Func65a63_
-    dword offset Func65a63_
-    dword offset Func65a63_
-Func65a63_ proc near
+    dword offset RPL124_BlendPixelR4C2_
+    dword offset RPL124_BlendPixelR4C2_
+    dword offset RPL124_BlendPixelR4C2_
+    dword offset RPL124_BlendPixelR4C2_
+    dword offset RPL124_BlendPixelR4C2_
+    dword offset RPL124_BlendPixelR4C2_
+    dword offset RPL124_BlendPixelR4C2_
+    dword offset RPL124_BlendPixelR4C2_
+    dword offset RPL124_BlendPixelR4C2_
+    dword offset RPL124_BlendPixelR4C2_
+    dword offset RPL124_BlendPixelR4C2_
+    dword offset RPL124_BlendPixelR4C2_
+    dword offset RPL124_BlendPixelR4C2_
+    dword offset RPL124_BlendPixelR4C2_
+    dword offset RPL124_BlendPixelR4C2_
+    dword offset RPL124_BlendPixelR4C2_
+    dword offset RPL124_BlendPixelR4C2_
+    dword offset RPL124_BlendPixelR4C2_
+    dword offset RPL124_BlendPixelR4C2_
+    dword offset RPL124_BlendPixelR4C2_
+    dword offset RPL124_BlendPixelR4C2_
+    dword offset RPL124_BlendPixelR4C2_
+    dword offset RPL124_BlendPixelR4C2_
+    dword offset RPL124_BlendPixelR4C2_
+    dword offset RPL124_BlendPixelR4C2_
+    dword offset RPL124_BlendPixelR4C2_
+    dword offset RPL124_BlendPixelR4C2_
+D65a4f dword offset RPL124_BlendPixelR4C2_
+    dword offset RPL124_BlendPixelR4C2_
+    dword offset RPL124_BlendPixelR4C2_
+    dword offset RPL124_BlendPixelR4C2_
+    dword offset RPL124_BlendPixelR4C2_
+RPL124_BlendPixelR4C2_ proc near
     lea ecx, [ebx-085h]
     add ecx, dword ptr [Dc9bf0]
     mov ebx, dword ptr [Dc9bec]
@@ -11063,45 +11063,45 @@ L65af5::
     xor ebx, ebx
     add bl, dh
     jmp dword ptr [ebx*4+D65b0e-80h*4]
-Func65a63_ endp
+RPL124_BlendPixelR4C2_ endp
 D65b0e dword offset L65c08
     dword offset L65be8
     dword offset L65bfc
     dword offset L65bcc
     dword offset L65bc4
-    dword offset Func65ba2_
-    dword offset Func65ba2_
-    dword offset Func65ba2_
-    dword offset Func65ba2_
-    dword offset Func65ba2_
-    dword offset Func65ba2_
-    dword offset Func65ba2_
-    dword offset Func65ba2_
-    dword offset Func65ba2_
-    dword offset Func65ba2_
-    dword offset Func65ba2_
-    dword offset Func65ba2_
-    dword offset Func65ba2_
-    dword offset Func65ba2_
-    dword offset Func65ba2_
-    dword offset Func65ba2_
-    dword offset Func65ba2_
-    dword offset Func65ba2_
-    dword offset Func65ba2_
-    dword offset Func65ba2_
-    dword offset Func65ba2_
-    dword offset Func65ba2_
-    dword offset Func65ba2_
-    dword offset Func65ba2_
-    dword offset Func65ba2_
-    dword offset Func65ba2_
-    dword offset Func65ba2_
-    dword offset Func65ba2_
-    dword offset Func65ba2_
-D65b96 dword offset Func65ba2_
-    dword offset Func65ba2_
-    dword offset Func65ba2_
-Func65ba2_ proc near
+    dword offset RPL124_BlendPixelR4C3_
+    dword offset RPL124_BlendPixelR4C3_
+    dword offset RPL124_BlendPixelR4C3_
+    dword offset RPL124_BlendPixelR4C3_
+    dword offset RPL124_BlendPixelR4C3_
+    dword offset RPL124_BlendPixelR4C3_
+    dword offset RPL124_BlendPixelR4C3_
+    dword offset RPL124_BlendPixelR4C3_
+    dword offset RPL124_BlendPixelR4C3_
+    dword offset RPL124_BlendPixelR4C3_
+    dword offset RPL124_BlendPixelR4C3_
+    dword offset RPL124_BlendPixelR4C3_
+    dword offset RPL124_BlendPixelR4C3_
+    dword offset RPL124_BlendPixelR4C3_
+    dword offset RPL124_BlendPixelR4C3_
+    dword offset RPL124_BlendPixelR4C3_
+    dword offset RPL124_BlendPixelR4C3_
+    dword offset RPL124_BlendPixelR4C3_
+    dword offset RPL124_BlendPixelR4C3_
+    dword offset RPL124_BlendPixelR4C3_
+    dword offset RPL124_BlendPixelR4C3_
+    dword offset RPL124_BlendPixelR4C3_
+    dword offset RPL124_BlendPixelR4C3_
+    dword offset RPL124_BlendPixelR4C3_
+    dword offset RPL124_BlendPixelR4C3_
+    dword offset RPL124_BlendPixelR4C3_
+    dword offset RPL124_BlendPixelR4C3_
+    dword offset RPL124_BlendPixelR4C3_
+    dword offset RPL124_BlendPixelR4C3_
+D65b96 dword offset RPL124_BlendPixelR4C3_
+    dword offset RPL124_BlendPixelR4C3_
+    dword offset RPL124_BlendPixelR4C3_
+RPL124_BlendPixelR4C3_ proc near
     lea ecx, [ebx-085h]
     add ecx, dword ptr [Dc9bf0]
     mov ebx, dword ptr [Dc9bec]
@@ -11153,45 +11153,45 @@ L65c34::
     xor ebx, ebx
     add bl, dh
     jmp dword ptr [ebx*4+D65a4f]
-Func65ba2_ endp
+RPL124_BlendPixelR4C3_ endp
     dword offset L65d50
     dword offset L65d2d
     dword offset L65d42
     dword offset L65d0f
     dword offset L65d07
-    dword offset Func65ce3_
-    dword offset Func65ce3_
-    dword offset Func65ce3_
-    dword offset Func65ce3_
-    dword offset Func65ce3_
-    dword offset Func65ce3_
-    dword offset Func65ce3_
-    dword offset Func65ce3_
-    dword offset Func65ce3_
-    dword offset Func65ce3_
-    dword offset Func65ce3_
-    dword offset Func65ce3_
-    dword offset Func65ce3_
-    dword offset Func65ce3_
-    dword offset Func65ce3_
-    dword offset Func65ce3_
-    dword offset Func65ce3_
-    dword offset Func65ce3_
-    dword offset Func65ce3_
-    dword offset Func65ce3_
-    dword offset Func65ce3_
-    dword offset Func65ce3_
-    dword offset Func65ce3_
-    dword offset Func65ce3_
-    dword offset Func65ce3_
-    dword offset Func65ce3_
-    dword offset Func65ce3_
-    dword offset Func65ce3_
-    dword offset Func65ce3_
-    dword offset Func65ce3_
-    dword offset Func65ce3_
-    dword offset Func65ce3_
-Func65ce3_ proc near
+    dword offset RPL124_BlendPixelR5C2_
+    dword offset RPL124_BlendPixelR5C2_
+    dword offset RPL124_BlendPixelR5C2_
+    dword offset RPL124_BlendPixelR5C2_
+    dword offset RPL124_BlendPixelR5C2_
+    dword offset RPL124_BlendPixelR5C2_
+    dword offset RPL124_BlendPixelR5C2_
+    dword offset RPL124_BlendPixelR5C2_
+    dword offset RPL124_BlendPixelR5C2_
+    dword offset RPL124_BlendPixelR5C2_
+    dword offset RPL124_BlendPixelR5C2_
+    dword offset RPL124_BlendPixelR5C2_
+    dword offset RPL124_BlendPixelR5C2_
+    dword offset RPL124_BlendPixelR5C2_
+    dword offset RPL124_BlendPixelR5C2_
+    dword offset RPL124_BlendPixelR5C2_
+    dword offset RPL124_BlendPixelR5C2_
+    dword offset RPL124_BlendPixelR5C2_
+    dword offset RPL124_BlendPixelR5C2_
+    dword offset RPL124_BlendPixelR5C2_
+    dword offset RPL124_BlendPixelR5C2_
+    dword offset RPL124_BlendPixelR5C2_
+    dword offset RPL124_BlendPixelR5C2_
+    dword offset RPL124_BlendPixelR5C2_
+    dword offset RPL124_BlendPixelR5C2_
+    dword offset RPL124_BlendPixelR5C2_
+    dword offset RPL124_BlendPixelR5C2_
+    dword offset RPL124_BlendPixelR5C2_
+    dword offset RPL124_BlendPixelR5C2_
+    dword offset RPL124_BlendPixelR5C2_
+    dword offset RPL124_BlendPixelR5C2_
+    dword offset RPL124_BlendPixelR5C2_
+RPL124_BlendPixelR5C2_ proc near
     lea ecx, [ebx-085h]
     add ecx, dword ptr [Dc9bf0]
     mov ebx, edi
@@ -11245,45 +11245,45 @@ L65d7d::
     xor ebx, ebx
     add bl, dl
     jmp dword ptr [ebx*4+D65b96]
-Func65ce3_ endp
+RPL124_BlendPixelR5C2_ endp
     dword offset L65e97
     dword offset L65e74
     dword offset L65e89
     dword offset L65e56
     dword offset L65e4e
-    dword offset Func65e2a_
-    dword offset Func65e2a_
-    dword offset Func65e2a_
-    dword offset Func65e2a_
-    dword offset Func65e2a_
-    dword offset Func65e2a_
-    dword offset Func65e2a_
-    dword offset Func65e2a_
-    dword offset Func65e2a_
-    dword offset Func65e2a_
-    dword offset Func65e2a_
-    dword offset Func65e2a_
-    dword offset Func65e2a_
-    dword offset Func65e2a_
-    dword offset Func65e2a_
-    dword offset Func65e2a_
-    dword offset Func65e2a_
-    dword offset Func65e2a_
-    dword offset Func65e2a_
-    dword offset Func65e2a_
-    dword offset Func65e2a_
-    dword offset Func65e2a_
-    dword offset Func65e2a_
-    dword offset Func65e2a_
-    dword offset Func65e2a_
-    dword offset Func65e2a_
-    dword offset Func65e2a_
-    dword offset Func65e2a_
-    dword offset Func65e2a_
-    dword offset Func65e2a_
-    dword offset Func65e2a_
-    dword offset Func65e2a_
-Func65e2a_ proc near
+    dword offset RPL124_BlendPixelR5C3_
+    dword offset RPL124_BlendPixelR5C3_
+    dword offset RPL124_BlendPixelR5C3_
+    dword offset RPL124_BlendPixelR5C3_
+    dword offset RPL124_BlendPixelR5C3_
+    dword offset RPL124_BlendPixelR5C3_
+    dword offset RPL124_BlendPixelR5C3_
+    dword offset RPL124_BlendPixelR5C3_
+    dword offset RPL124_BlendPixelR5C3_
+    dword offset RPL124_BlendPixelR5C3_
+    dword offset RPL124_BlendPixelR5C3_
+    dword offset RPL124_BlendPixelR5C3_
+    dword offset RPL124_BlendPixelR5C3_
+    dword offset RPL124_BlendPixelR5C3_
+    dword offset RPL124_BlendPixelR5C3_
+    dword offset RPL124_BlendPixelR5C3_
+    dword offset RPL124_BlendPixelR5C3_
+    dword offset RPL124_BlendPixelR5C3_
+    dword offset RPL124_BlendPixelR5C3_
+    dword offset RPL124_BlendPixelR5C3_
+    dword offset RPL124_BlendPixelR5C3_
+    dword offset RPL124_BlendPixelR5C3_
+    dword offset RPL124_BlendPixelR5C3_
+    dword offset RPL124_BlendPixelR5C3_
+    dword offset RPL124_BlendPixelR5C3_
+    dword offset RPL124_BlendPixelR5C3_
+    dword offset RPL124_BlendPixelR5C3_
+    dword offset RPL124_BlendPixelR5C3_
+    dword offset RPL124_BlendPixelR5C3_
+    dword offset RPL124_BlendPixelR5C3_
+    dword offset RPL124_BlendPixelR5C3_
+    dword offset RPL124_BlendPixelR5C3_
+RPL124_BlendPixelR5C3_ proc near
     lea ecx, [ebx-085h]
     add ecx, dword ptr [Dc9bf0]
     mov ebx, edi
@@ -11347,45 +11347,45 @@ L65ec8::
     xor ebx, ebx
     add bl, dl
     jmp dword ptr [ebx*4+D65ef5-80h*4]
-Func65e2a_ endp
+RPL124_BlendPixelR5C3_ endp
 D65ef5 dword offset L65fef
     dword offset L65fcf
     dword offset L65fe3
     dword offset L65fb3
     dword offset L65fab
-    dword offset Func65f89_
-    dword offset Func65f89_
-    dword offset Func65f89_
-    dword offset Func65f89_
-    dword offset Func65f89_
-    dword offset Func65f89_
-    dword offset Func65f89_
-    dword offset Func65f89_
-    dword offset Func65f89_
-    dword offset Func65f89_
-    dword offset Func65f89_
-    dword offset Func65f89_
-    dword offset Func65f89_
-    dword offset Func65f89_
-    dword offset Func65f89_
-    dword offset Func65f89_
-    dword offset Func65f89_
-    dword offset Func65f89_
-    dword offset Func65f89_
-    dword offset Func65f89_
-    dword offset Func65f89_
-    dword offset Func65f89_
-    dword offset Func65f89_
-    dword offset Func65f89_
-    dword offset Func65f89_
-    dword offset Func65f89_
-    dword offset Func65f89_
-D65f75 dword offset Func65f89_
-    dword offset Func65f89_
-    dword offset Func65f89_
-    dword offset Func65f89_
-    dword offset Func65f89_
-Func65f89_ proc near
+    dword offset RPL124_BlendPixelR4C4_
+    dword offset RPL124_BlendPixelR4C4_
+    dword offset RPL124_BlendPixelR4C4_
+    dword offset RPL124_BlendPixelR4C4_
+    dword offset RPL124_BlendPixelR4C4_
+    dword offset RPL124_BlendPixelR4C4_
+    dword offset RPL124_BlendPixelR4C4_
+    dword offset RPL124_BlendPixelR4C4_
+    dword offset RPL124_BlendPixelR4C4_
+    dword offset RPL124_BlendPixelR4C4_
+    dword offset RPL124_BlendPixelR4C4_
+    dword offset RPL124_BlendPixelR4C4_
+    dword offset RPL124_BlendPixelR4C4_
+    dword offset RPL124_BlendPixelR4C4_
+    dword offset RPL124_BlendPixelR4C4_
+    dword offset RPL124_BlendPixelR4C4_
+    dword offset RPL124_BlendPixelR4C4_
+    dword offset RPL124_BlendPixelR4C4_
+    dword offset RPL124_BlendPixelR4C4_
+    dword offset RPL124_BlendPixelR4C4_
+    dword offset RPL124_BlendPixelR4C4_
+    dword offset RPL124_BlendPixelR4C4_
+    dword offset RPL124_BlendPixelR4C4_
+    dword offset RPL124_BlendPixelR4C4_
+    dword offset RPL124_BlendPixelR4C4_
+    dword offset RPL124_BlendPixelR4C4_
+    dword offset RPL124_BlendPixelR4C4_
+D65f75 dword offset RPL124_BlendPixelR4C4_
+    dword offset RPL124_BlendPixelR4C4_
+    dword offset RPL124_BlendPixelR4C4_
+    dword offset RPL124_BlendPixelR4C4_
+    dword offset RPL124_BlendPixelR4C4_
+RPL124_BlendPixelR4C4_ proc near
     lea ecx, [ebx-085h]
     add ecx, dword ptr [Dc9bf0]
     mov ebx, dword ptr [Dc9bec]
@@ -11436,45 +11436,45 @@ L6601b::
     xor ebx, ebx
     add bl, dh
     jmp dword ptr [ebx*4+D66034-80h*4]
-Func65f89_ endp
+RPL124_BlendPixelR4C4_ endp
 D66034 dword offset L6612e
     dword offset L6610e
     dword offset L66122
     dword offset L660f2
     dword offset L660ea
-    dword offset Func660c8_
-    dword offset Func660c8_
-    dword offset Func660c8_
-    dword offset Func660c8_
-    dword offset Func660c8_
-    dword offset Func660c8_
-    dword offset Func660c8_
-    dword offset Func660c8_
-    dword offset Func660c8_
-    dword offset Func660c8_
-    dword offset Func660c8_
-    dword offset Func660c8_
-    dword offset Func660c8_
-    dword offset Func660c8_
-    dword offset Func660c8_
-    dword offset Func660c8_
-    dword offset Func660c8_
-    dword offset Func660c8_
-    dword offset Func660c8_
-    dword offset Func660c8_
-    dword offset Func660c8_
-    dword offset Func660c8_
-    dword offset Func660c8_
-    dword offset Func660c8_
-    dword offset Func660c8_
-    dword offset Func660c8_
-    dword offset Func660c8_
-    dword offset Func660c8_
-    dword offset Func660c8_
-D660bc dword offset Func660c8_
-    dword offset Func660c8_
-    dword offset Func660c8_
-Func660c8_ proc near
+    dword offset RPL124_BlendPixelR4C5_
+    dword offset RPL124_BlendPixelR4C5_
+    dword offset RPL124_BlendPixelR4C5_
+    dword offset RPL124_BlendPixelR4C5_
+    dword offset RPL124_BlendPixelR4C5_
+    dword offset RPL124_BlendPixelR4C5_
+    dword offset RPL124_BlendPixelR4C5_
+    dword offset RPL124_BlendPixelR4C5_
+    dword offset RPL124_BlendPixelR4C5_
+    dword offset RPL124_BlendPixelR4C5_
+    dword offset RPL124_BlendPixelR4C5_
+    dword offset RPL124_BlendPixelR4C5_
+    dword offset RPL124_BlendPixelR4C5_
+    dword offset RPL124_BlendPixelR4C5_
+    dword offset RPL124_BlendPixelR4C5_
+    dword offset RPL124_BlendPixelR4C5_
+    dword offset RPL124_BlendPixelR4C5_
+    dword offset RPL124_BlendPixelR4C5_
+    dword offset RPL124_BlendPixelR4C5_
+    dword offset RPL124_BlendPixelR4C5_
+    dword offset RPL124_BlendPixelR4C5_
+    dword offset RPL124_BlendPixelR4C5_
+    dword offset RPL124_BlendPixelR4C5_
+    dword offset RPL124_BlendPixelR4C5_
+    dword offset RPL124_BlendPixelR4C5_
+    dword offset RPL124_BlendPixelR4C5_
+    dword offset RPL124_BlendPixelR4C5_
+    dword offset RPL124_BlendPixelR4C5_
+    dword offset RPL124_BlendPixelR4C5_
+D660bc dword offset RPL124_BlendPixelR4C5_
+    dword offset RPL124_BlendPixelR4C5_
+    dword offset RPL124_BlendPixelR4C5_
+RPL124_BlendPixelR4C5_ proc near
     lea ecx, [ebx-085h]
     add ecx, dword ptr [Dc9bf0]
     mov ebx, dword ptr [Dc9bec]
@@ -11526,45 +11526,45 @@ L6615a::
     xor ebx, ebx
     add bl, dh
     jmp dword ptr [ebx*4+D65f75]
-Func660c8_ endp
+RPL124_BlendPixelR4C5_ endp
     dword offset L66276
     dword offset L66253
     dword offset L66268
     dword offset L66235
     dword offset L6622d
-    dword offset Func66209_
-    dword offset Func66209_
-    dword offset Func66209_
-    dword offset Func66209_
-    dword offset Func66209_
-    dword offset Func66209_
-    dword offset Func66209_
-    dword offset Func66209_
-    dword offset Func66209_
-    dword offset Func66209_
-    dword offset Func66209_
-    dword offset Func66209_
-    dword offset Func66209_
-    dword offset Func66209_
-    dword offset Func66209_
-    dword offset Func66209_
-    dword offset Func66209_
-    dword offset Func66209_
-    dword offset Func66209_
-    dword offset Func66209_
-    dword offset Func66209_
-    dword offset Func66209_
-    dword offset Func66209_
-    dword offset Func66209_
-    dword offset Func66209_
-    dword offset Func66209_
-    dword offset Func66209_
-    dword offset Func66209_
-    dword offset Func66209_
-    dword offset Func66209_
-    dword offset Func66209_
-    dword offset Func66209_
-Func66209_ proc near
+    dword offset RPL124_BlendPixelR5C4_
+    dword offset RPL124_BlendPixelR5C4_
+    dword offset RPL124_BlendPixelR5C4_
+    dword offset RPL124_BlendPixelR5C4_
+    dword offset RPL124_BlendPixelR5C4_
+    dword offset RPL124_BlendPixelR5C4_
+    dword offset RPL124_BlendPixelR5C4_
+    dword offset RPL124_BlendPixelR5C4_
+    dword offset RPL124_BlendPixelR5C4_
+    dword offset RPL124_BlendPixelR5C4_
+    dword offset RPL124_BlendPixelR5C4_
+    dword offset RPL124_BlendPixelR5C4_
+    dword offset RPL124_BlendPixelR5C4_
+    dword offset RPL124_BlendPixelR5C4_
+    dword offset RPL124_BlendPixelR5C4_
+    dword offset RPL124_BlendPixelR5C4_
+    dword offset RPL124_BlendPixelR5C4_
+    dword offset RPL124_BlendPixelR5C4_
+    dword offset RPL124_BlendPixelR5C4_
+    dword offset RPL124_BlendPixelR5C4_
+    dword offset RPL124_BlendPixelR5C4_
+    dword offset RPL124_BlendPixelR5C4_
+    dword offset RPL124_BlendPixelR5C4_
+    dword offset RPL124_BlendPixelR5C4_
+    dword offset RPL124_BlendPixelR5C4_
+    dword offset RPL124_BlendPixelR5C4_
+    dword offset RPL124_BlendPixelR5C4_
+    dword offset RPL124_BlendPixelR5C4_
+    dword offset RPL124_BlendPixelR5C4_
+    dword offset RPL124_BlendPixelR5C4_
+    dword offset RPL124_BlendPixelR5C4_
+    dword offset RPL124_BlendPixelR5C4_
+RPL124_BlendPixelR5C4_ proc near
     lea ecx, [ebx-085h]
     add ecx, dword ptr [Dc9bf0]
     mov ebx, edi
@@ -11618,45 +11618,45 @@ L662a3::
     xor ebx, ebx
     add bl, dl
     jmp dword ptr [ebx*4+D660bc]
-Func66209_ endp
+RPL124_BlendPixelR5C4_ endp
     dword offset L663bd
     dword offset L6639a
     dword offset L663af
     dword offset L6637c
     dword offset L66374
-    dword offset Func66350_
-    dword offset Func66350_
-    dword offset Func66350_
-    dword offset Func66350_
-    dword offset Func66350_
-    dword offset Func66350_
-    dword offset Func66350_
-    dword offset Func66350_
-    dword offset Func66350_
-    dword offset Func66350_
-    dword offset Func66350_
-    dword offset Func66350_
-    dword offset Func66350_
-    dword offset Func66350_
-    dword offset Func66350_
-    dword offset Func66350_
-    dword offset Func66350_
-    dword offset Func66350_
-    dword offset Func66350_
-    dword offset Func66350_
-    dword offset Func66350_
-    dword offset Func66350_
-    dword offset Func66350_
-    dword offset Func66350_
-    dword offset Func66350_
-    dword offset Func66350_
-    dword offset Func66350_
-    dword offset Func66350_
-    dword offset Func66350_
-    dword offset Func66350_
-    dword offset Func66350_
-    dword offset Func66350_
-Func66350_ proc near
+    dword offset RPL124_BlendPixelR5C5_
+    dword offset RPL124_BlendPixelR5C5_
+    dword offset RPL124_BlendPixelR5C5_
+    dword offset RPL124_BlendPixelR5C5_
+    dword offset RPL124_BlendPixelR5C5_
+    dword offset RPL124_BlendPixelR5C5_
+    dword offset RPL124_BlendPixelR5C5_
+    dword offset RPL124_BlendPixelR5C5_
+    dword offset RPL124_BlendPixelR5C5_
+    dword offset RPL124_BlendPixelR5C5_
+    dword offset RPL124_BlendPixelR5C5_
+    dword offset RPL124_BlendPixelR5C5_
+    dword offset RPL124_BlendPixelR5C5_
+    dword offset RPL124_BlendPixelR5C5_
+    dword offset RPL124_BlendPixelR5C5_
+    dword offset RPL124_BlendPixelR5C5_
+    dword offset RPL124_BlendPixelR5C5_
+    dword offset RPL124_BlendPixelR5C5_
+    dword offset RPL124_BlendPixelR5C5_
+    dword offset RPL124_BlendPixelR5C5_
+    dword offset RPL124_BlendPixelR5C5_
+    dword offset RPL124_BlendPixelR5C5_
+    dword offset RPL124_BlendPixelR5C5_
+    dword offset RPL124_BlendPixelR5C5_
+    dword offset RPL124_BlendPixelR5C5_
+    dword offset RPL124_BlendPixelR5C5_
+    dword offset RPL124_BlendPixelR5C5_
+    dword offset RPL124_BlendPixelR5C5_
+    dword offset RPL124_BlendPixelR5C5_
+    dword offset RPL124_BlendPixelR5C5_
+    dword offset RPL124_BlendPixelR5C5_
+    dword offset RPL124_BlendPixelR5C5_
+RPL124_BlendPixelR5C5_ proc near
     lea ecx, [ebx-085h]
     add ecx, dword ptr [Dc9bf0]
     mov ebx, edi
@@ -11720,45 +11720,45 @@ L663ee::
     xor ebx, ebx
     add bl, dl
     jmp dword ptr [ebx*4+D6641b-80h*4]
-Func66350_ endp
+RPL124_BlendPixelR5C5_ endp
 D6641b dword offset L66515
     dword offset L664f5
     dword offset L66509
     dword offset L664d9
     dword offset L664d1
-    dword offset Func664af_
-    dword offset Func664af_
-    dword offset Func664af_
-    dword offset Func664af_
-    dword offset Func664af_
-    dword offset Func664af_
-    dword offset Func664af_
-    dword offset Func664af_
-    dword offset Func664af_
-    dword offset Func664af_
-    dword offset Func664af_
-    dword offset Func664af_
-    dword offset Func664af_
-    dword offset Func664af_
-    dword offset Func664af_
-    dword offset Func664af_
-    dword offset Func664af_
-    dword offset Func664af_
-    dword offset Func664af_
-    dword offset Func664af_
-    dword offset Func664af_
-    dword offset Func664af_
-    dword offset Func664af_
-    dword offset Func664af_
-    dword offset Func664af_
-    dword offset Func664af_
-    dword offset Func664af_
-    dword offset Func664af_
-    dword offset Func664af_
-    dword offset Func664af_
-    dword offset Func664af_
-    dword offset Func664af_
-Func664af_ proc near
+    dword offset RPL124_BlendPixelR4C6_
+    dword offset RPL124_BlendPixelR4C6_
+    dword offset RPL124_BlendPixelR4C6_
+    dword offset RPL124_BlendPixelR4C6_
+    dword offset RPL124_BlendPixelR4C6_
+    dword offset RPL124_BlendPixelR4C6_
+    dword offset RPL124_BlendPixelR4C6_
+    dword offset RPL124_BlendPixelR4C6_
+    dword offset RPL124_BlendPixelR4C6_
+    dword offset RPL124_BlendPixelR4C6_
+    dword offset RPL124_BlendPixelR4C6_
+    dword offset RPL124_BlendPixelR4C6_
+    dword offset RPL124_BlendPixelR4C6_
+    dword offset RPL124_BlendPixelR4C6_
+    dword offset RPL124_BlendPixelR4C6_
+    dword offset RPL124_BlendPixelR4C6_
+    dword offset RPL124_BlendPixelR4C6_
+    dword offset RPL124_BlendPixelR4C6_
+    dword offset RPL124_BlendPixelR4C6_
+    dword offset RPL124_BlendPixelR4C6_
+    dword offset RPL124_BlendPixelR4C6_
+    dword offset RPL124_BlendPixelR4C6_
+    dword offset RPL124_BlendPixelR4C6_
+    dword offset RPL124_BlendPixelR4C6_
+    dword offset RPL124_BlendPixelR4C6_
+    dword offset RPL124_BlendPixelR4C6_
+    dword offset RPL124_BlendPixelR4C6_
+    dword offset RPL124_BlendPixelR4C6_
+    dword offset RPL124_BlendPixelR4C6_
+    dword offset RPL124_BlendPixelR4C6_
+    dword offset RPL124_BlendPixelR4C6_
+    dword offset RPL124_BlendPixelR4C6_
+RPL124_BlendPixelR4C6_ proc near
     lea ecx, [ebx-085h]
     add ecx, dword ptr [Dc9bf0]
     mov ebx, dword ptr [Dc9bec]
@@ -11809,45 +11809,45 @@ L66541::
     xor ebx, ebx
     add bl, dh
     jmp dword ptr [ebx*4+D6655a-80h*4]
-Func664af_ endp
+RPL124_BlendPixelR4C6_ endp
 D6655a dword offset L66654
     dword offset L66634
     dword offset L66648
     dword offset L66618
     dword offset L66610
-    dword offset Func665ee_
-    dword offset Func665ee_
-    dword offset Func665ee_
-    dword offset Func665ee_
-    dword offset Func665ee_
-    dword offset Func665ee_
-    dword offset Func665ee_
-    dword offset Func665ee_
-    dword offset Func665ee_
-    dword offset Func665ee_
-    dword offset Func665ee_
-    dword offset Func665ee_
-    dword offset Func665ee_
-    dword offset Func665ee_
-    dword offset Func665ee_
-    dword offset Func665ee_
-    dword offset Func665ee_
-    dword offset Func665ee_
-    dword offset Func665ee_
-    dword offset Func665ee_
-    dword offset Func665ee_
-    dword offset Func665ee_
-    dword offset Func665ee_
-    dword offset Func665ee_
-    dword offset Func665ee_
-    dword offset Func665ee_
-    dword offset Func665ee_
-    dword offset Func665ee_
-    dword offset Func665ee_
-    dword offset Func665ee_
-    dword offset Func665ee_
-    dword offset Func665ee_
-Func665ee_ proc near
+    dword offset RPL124_BlendPixelR4C7_
+    dword offset RPL124_BlendPixelR4C7_
+    dword offset RPL124_BlendPixelR4C7_
+    dword offset RPL124_BlendPixelR4C7_
+    dword offset RPL124_BlendPixelR4C7_
+    dword offset RPL124_BlendPixelR4C7_
+    dword offset RPL124_BlendPixelR4C7_
+    dword offset RPL124_BlendPixelR4C7_
+    dword offset RPL124_BlendPixelR4C7_
+    dword offset RPL124_BlendPixelR4C7_
+    dword offset RPL124_BlendPixelR4C7_
+    dword offset RPL124_BlendPixelR4C7_
+    dword offset RPL124_BlendPixelR4C7_
+    dword offset RPL124_BlendPixelR4C7_
+    dword offset RPL124_BlendPixelR4C7_
+    dword offset RPL124_BlendPixelR4C7_
+    dword offset RPL124_BlendPixelR4C7_
+    dword offset RPL124_BlendPixelR4C7_
+    dword offset RPL124_BlendPixelR4C7_
+    dword offset RPL124_BlendPixelR4C7_
+    dword offset RPL124_BlendPixelR4C7_
+    dword offset RPL124_BlendPixelR4C7_
+    dword offset RPL124_BlendPixelR4C7_
+    dword offset RPL124_BlendPixelR4C7_
+    dword offset RPL124_BlendPixelR4C7_
+    dword offset RPL124_BlendPixelR4C7_
+    dword offset RPL124_BlendPixelR4C7_
+    dword offset RPL124_BlendPixelR4C7_
+    dword offset RPL124_BlendPixelR4C7_
+    dword offset RPL124_BlendPixelR4C7_
+    dword offset RPL124_BlendPixelR4C7_
+    dword offset RPL124_BlendPixelR4C7_
+RPL124_BlendPixelR4C7_ proc near
     lea ecx, [ebx-085h]
     add ecx, dword ptr [Dc9bf0]
     mov ebx, dword ptr [Dc9bec]
@@ -11899,45 +11899,45 @@ L66683::
     xor ebx, ebx
     add bl, dh
     jmp dword ptr [ebx*4+D6655a-2fh*4]
-Func665ee_ endp
+RPL124_BlendPixelR4C7_ endp
     dword offset L6679f
     dword offset L6677c
     dword offset L66791
     dword offset L6675e
     dword offset L66756
-    dword offset Func66732_
-    dword offset Func66732_
-    dword offset Func66732_
-    dword offset Func66732_
-    dword offset Func66732_
-    dword offset Func66732_
-    dword offset Func66732_
-    dword offset Func66732_
-    dword offset Func66732_
-    dword offset Func66732_
-    dword offset Func66732_
-    dword offset Func66732_
-    dword offset Func66732_
-    dword offset Func66732_
-    dword offset Func66732_
-    dword offset Func66732_
-    dword offset Func66732_
-    dword offset Func66732_
-    dword offset Func66732_
-    dword offset Func66732_
-    dword offset Func66732_
-    dword offset Func66732_
-    dword offset Func66732_
-    dword offset Func66732_
-    dword offset Func66732_
-    dword offset Func66732_
-    dword offset Func66732_
-    dword offset Func66732_
-    dword offset Func66732_
-    dword offset Func66732_
-    dword offset Func66732_
-    dword offset Func66732_
-Func66732_ proc near
+    dword offset RPL124_BlendPixelR5C6_
+    dword offset RPL124_BlendPixelR5C6_
+    dword offset RPL124_BlendPixelR5C6_
+    dword offset RPL124_BlendPixelR5C6_
+    dword offset RPL124_BlendPixelR5C6_
+    dword offset RPL124_BlendPixelR5C6_
+    dword offset RPL124_BlendPixelR5C6_
+    dword offset RPL124_BlendPixelR5C6_
+    dword offset RPL124_BlendPixelR5C6_
+    dword offset RPL124_BlendPixelR5C6_
+    dword offset RPL124_BlendPixelR5C6_
+    dword offset RPL124_BlendPixelR5C6_
+    dword offset RPL124_BlendPixelR5C6_
+    dword offset RPL124_BlendPixelR5C6_
+    dword offset RPL124_BlendPixelR5C6_
+    dword offset RPL124_BlendPixelR5C6_
+    dword offset RPL124_BlendPixelR5C6_
+    dword offset RPL124_BlendPixelR5C6_
+    dword offset RPL124_BlendPixelR5C6_
+    dword offset RPL124_BlendPixelR5C6_
+    dword offset RPL124_BlendPixelR5C6_
+    dword offset RPL124_BlendPixelR5C6_
+    dword offset RPL124_BlendPixelR5C6_
+    dword offset RPL124_BlendPixelR5C6_
+    dword offset RPL124_BlendPixelR5C6_
+    dword offset RPL124_BlendPixelR5C6_
+    dword offset RPL124_BlendPixelR5C6_
+    dword offset RPL124_BlendPixelR5C6_
+    dword offset RPL124_BlendPixelR5C6_
+    dword offset RPL124_BlendPixelR5C6_
+    dword offset RPL124_BlendPixelR5C6_
+    dword offset RPL124_BlendPixelR5C6_
+RPL124_BlendPixelR5C6_ proc near
     lea ecx, [ebx-085h]
     add ecx, dword ptr [Dc9bf0]
     mov ebx, edi
@@ -11991,45 +11991,45 @@ L667cc::
     xor ebx, ebx
     add bl, dl
     jmp dword ptr [ebx*4+D667e5-80h*4]
-Func66732_ endp
+RPL124_BlendPixelR5C6_ endp
 D667e5 dword offset L668e6
     dword offset L668c3
     dword offset L668d8
     dword offset L668a5
     dword offset L6689d
-    dword offset Func66879_
-    dword offset Func66879_
-    dword offset Func66879_
-    dword offset Func66879_
-    dword offset Func66879_
-    dword offset Func66879_
-    dword offset Func66879_
-    dword offset Func66879_
-    dword offset Func66879_
-    dword offset Func66879_
-    dword offset Func66879_
-    dword offset Func66879_
-    dword offset Func66879_
-    dword offset Func66879_
-    dword offset Func66879_
-    dword offset Func66879_
-    dword offset Func66879_
-    dword offset Func66879_
-    dword offset Func66879_
-    dword offset Func66879_
-    dword offset Func66879_
-    dword offset Func66879_
-    dword offset Func66879_
-    dword offset Func66879_
-    dword offset Func66879_
-    dword offset Func66879_
-    dword offset Func66879_
-    dword offset Func66879_
-    dword offset Func66879_
-    dword offset Func66879_
-    dword offset Func66879_
-    dword offset Func66879_
-Func66879_ proc near
+    dword offset RPL124_BlendPixelR5C7_
+    dword offset RPL124_BlendPixelR5C7_
+    dword offset RPL124_BlendPixelR5C7_
+    dword offset RPL124_BlendPixelR5C7_
+    dword offset RPL124_BlendPixelR5C7_
+    dword offset RPL124_BlendPixelR5C7_
+    dword offset RPL124_BlendPixelR5C7_
+    dword offset RPL124_BlendPixelR5C7_
+    dword offset RPL124_BlendPixelR5C7_
+    dword offset RPL124_BlendPixelR5C7_
+    dword offset RPL124_BlendPixelR5C7_
+    dword offset RPL124_BlendPixelR5C7_
+    dword offset RPL124_BlendPixelR5C7_
+    dword offset RPL124_BlendPixelR5C7_
+    dword offset RPL124_BlendPixelR5C7_
+    dword offset RPL124_BlendPixelR5C7_
+    dword offset RPL124_BlendPixelR5C7_
+    dword offset RPL124_BlendPixelR5C7_
+    dword offset RPL124_BlendPixelR5C7_
+    dword offset RPL124_BlendPixelR5C7_
+    dword offset RPL124_BlendPixelR5C7_
+    dword offset RPL124_BlendPixelR5C7_
+    dword offset RPL124_BlendPixelR5C7_
+    dword offset RPL124_BlendPixelR5C7_
+    dword offset RPL124_BlendPixelR5C7_
+    dword offset RPL124_BlendPixelR5C7_
+    dword offset RPL124_BlendPixelR5C7_
+    dword offset RPL124_BlendPixelR5C7_
+    dword offset RPL124_BlendPixelR5C7_
+    dword offset RPL124_BlendPixelR5C7_
+    dword offset RPL124_BlendPixelR5C7_
+    dword offset RPL124_BlendPixelR5C7_
+RPL124_BlendPixelR5C7_ proc near
     lea ecx, [ebx-085h]
     add ecx, dword ptr [Dc9bf0]
     mov ebx, edi
@@ -12094,45 +12094,45 @@ L6691a::
     xor ebx, ebx
     add bl, dl
     jmp dword ptr [ebx*4+D6694a-80h*4]
-Func66879_ endp
+RPL124_BlendPixelR5C7_ endp
 D6694a dword offset L66a40
     dword offset L66a22
     dword offset L66a35
     dword offset L66a07
     dword offset L669ff
-    dword offset Func669de_
-    dword offset Func669de_
-    dword offset Func669de_
-    dword offset Func669de_
-    dword offset Func669de_
-    dword offset Func669de_
-    dword offset Func669de_
-    dword offset Func669de_
-    dword offset Func669de_
-    dword offset Func669de_
-    dword offset Func669de_
-    dword offset Func669de_
-    dword offset Func669de_
-    dword offset Func669de_
-    dword offset Func669de_
-    dword offset Func669de_
-    dword offset Func669de_
-    dword offset Func669de_
-    dword offset Func669de_
-    dword offset Func669de_
-    dword offset Func669de_
-    dword offset Func669de_
-    dword offset Func669de_
-    dword offset Func669de_
-    dword offset Func669de_
-    dword offset Func669de_
-    dword offset Func669de_
-    dword offset Func669de_
-    dword offset Func669de_
-    dword offset Func669de_
-    dword offset Func669de_
-    dword offset Func669de_
-Func669de_ proc near
+    dword offset RPL124_BlendPixelR6C0_
+    dword offset RPL124_BlendPixelR6C0_
+    dword offset RPL124_BlendPixelR6C0_
+    dword offset RPL124_BlendPixelR6C0_
+    dword offset RPL124_BlendPixelR6C0_
+    dword offset RPL124_BlendPixelR6C0_
+    dword offset RPL124_BlendPixelR6C0_
+    dword offset RPL124_BlendPixelR6C0_
+    dword offset RPL124_BlendPixelR6C0_
+    dword offset RPL124_BlendPixelR6C0_
+    dword offset RPL124_BlendPixelR6C0_
+    dword offset RPL124_BlendPixelR6C0_
+    dword offset RPL124_BlendPixelR6C0_
+    dword offset RPL124_BlendPixelR6C0_
+    dword offset RPL124_BlendPixelR6C0_
+    dword offset RPL124_BlendPixelR6C0_
+    dword offset RPL124_BlendPixelR6C0_
+    dword offset RPL124_BlendPixelR6C0_
+    dword offset RPL124_BlendPixelR6C0_
+    dword offset RPL124_BlendPixelR6C0_
+    dword offset RPL124_BlendPixelR6C0_
+    dword offset RPL124_BlendPixelR6C0_
+    dword offset RPL124_BlendPixelR6C0_
+    dword offset RPL124_BlendPixelR6C0_
+    dword offset RPL124_BlendPixelR6C0_
+    dword offset RPL124_BlendPixelR6C0_
+    dword offset RPL124_BlendPixelR6C0_
+    dword offset RPL124_BlendPixelR6C0_
+    dword offset RPL124_BlendPixelR6C0_
+    dword offset RPL124_BlendPixelR6C0_
+    dword offset RPL124_BlendPixelR6C0_
+    dword offset RPL124_BlendPixelR6C0_
+RPL124_BlendPixelR6C0_ proc near
     lea ecx, [ebx-085h]
     add ecx, dword ptr [Dc9bf0]
     mov ebx, dword ptr [Dc9bec]
@@ -12183,45 +12183,45 @@ L66a6b::
     xor ebx, ebx
     add bl, dh
     jmp dword ptr [ebx*4+D66a84-80h*4]
-Func669de_ endp
+RPL124_BlendPixelR6C0_ endp
 D66a84 dword offset L66b7e
     dword offset L66b5e
     dword offset L66b72
     dword offset L66b42
     dword offset L66b3a
-    dword offset Func66b18_
-    dword offset Func66b18_
-    dword offset Func66b18_
-    dword offset Func66b18_
-    dword offset Func66b18_
-    dword offset Func66b18_
-    dword offset Func66b18_
-    dword offset Func66b18_
-    dword offset Func66b18_
-    dword offset Func66b18_
-    dword offset Func66b18_
-    dword offset Func66b18_
-    dword offset Func66b18_
-    dword offset Func66b18_
-    dword offset Func66b18_
-    dword offset Func66b18_
-    dword offset Func66b18_
-    dword offset Func66b18_
-    dword offset Func66b18_
-    dword offset Func66b18_
-    dword offset Func66b18_
-    dword offset Func66b18_
-    dword offset Func66b18_
-    dword offset Func66b18_
-    dword offset Func66b18_
-    dword offset Func66b18_
-    dword offset Func66b18_
-    dword offset Func66b18_
-    dword offset Func66b18_
-    dword offset Func66b18_
-    dword offset Func66b18_
-    dword offset Func66b18_
-Func66b18_ proc near
+    dword offset RPL124_BlendPixelR6C1_
+    dword offset RPL124_BlendPixelR6C1_
+    dword offset RPL124_BlendPixelR6C1_
+    dword offset RPL124_BlendPixelR6C1_
+    dword offset RPL124_BlendPixelR6C1_
+    dword offset RPL124_BlendPixelR6C1_
+    dword offset RPL124_BlendPixelR6C1_
+    dword offset RPL124_BlendPixelR6C1_
+    dword offset RPL124_BlendPixelR6C1_
+    dword offset RPL124_BlendPixelR6C1_
+    dword offset RPL124_BlendPixelR6C1_
+    dword offset RPL124_BlendPixelR6C1_
+    dword offset RPL124_BlendPixelR6C1_
+    dword offset RPL124_BlendPixelR6C1_
+    dword offset RPL124_BlendPixelR6C1_
+    dword offset RPL124_BlendPixelR6C1_
+    dword offset RPL124_BlendPixelR6C1_
+    dword offset RPL124_BlendPixelR6C1_
+    dword offset RPL124_BlendPixelR6C1_
+    dword offset RPL124_BlendPixelR6C1_
+    dword offset RPL124_BlendPixelR6C1_
+    dword offset RPL124_BlendPixelR6C1_
+    dword offset RPL124_BlendPixelR6C1_
+    dword offset RPL124_BlendPixelR6C1_
+    dword offset RPL124_BlendPixelR6C1_
+    dword offset RPL124_BlendPixelR6C1_
+    dword offset RPL124_BlendPixelR6C1_
+    dword offset RPL124_BlendPixelR6C1_
+    dword offset RPL124_BlendPixelR6C1_
+    dword offset RPL124_BlendPixelR6C1_
+    dword offset RPL124_BlendPixelR6C1_
+    dword offset RPL124_BlendPixelR6C1_
+RPL124_BlendPixelR6C1_ proc near
     lea ecx, [ebx-085h]
     add ecx, dword ptr [Dc9bf0]
     mov ebx, dword ptr [Dc9bec]
@@ -12273,45 +12273,45 @@ L66baa::
     xor ebx, ebx
     add bl, dh
     jmp dword ptr [ebx*4+D66bc5-80h*4]
-Func66b18_ endp
+RPL124_BlendPixelR6C1_ endp
 D66bc5 dword offset L66cc2
     dword offset L66ca1
     dword offset L66cb5
     dword offset L66c84
     dword offset L66c7c
-    dword offset Func66c59_
-    dword offset Func66c59_
-    dword offset Func66c59_
-    dword offset Func66c59_
-    dword offset Func66c59_
-    dword offset Func66c59_
-    dword offset Func66c59_
-    dword offset Func66c59_
-    dword offset Func66c59_
-    dword offset Func66c59_
-    dword offset Func66c59_
-    dword offset Func66c59_
-    dword offset Func66c59_
-    dword offset Func66c59_
-    dword offset Func66c59_
-    dword offset Func66c59_
-    dword offset Func66c59_
-    dword offset Func66c59_
-    dword offset Func66c59_
-    dword offset Func66c59_
-    dword offset Func66c59_
-    dword offset Func66c59_
-    dword offset Func66c59_
-    dword offset Func66c59_
-    dword offset Func66c59_
-    dword offset Func66c59_
-    dword offset Func66c59_
-    dword offset Func66c59_
-    dword offset Func66c59_
-    dword offset Func66c59_
-    dword offset Func66c59_
-    dword offset Func66c59_
-Func66c59_ proc near
+    dword offset RPL124_BlendPixelR7C0_
+    dword offset RPL124_BlendPixelR7C0_
+    dword offset RPL124_BlendPixelR7C0_
+    dword offset RPL124_BlendPixelR7C0_
+    dword offset RPL124_BlendPixelR7C0_
+    dword offset RPL124_BlendPixelR7C0_
+    dword offset RPL124_BlendPixelR7C0_
+    dword offset RPL124_BlendPixelR7C0_
+    dword offset RPL124_BlendPixelR7C0_
+    dword offset RPL124_BlendPixelR7C0_
+    dword offset RPL124_BlendPixelR7C0_
+    dword offset RPL124_BlendPixelR7C0_
+    dword offset RPL124_BlendPixelR7C0_
+    dword offset RPL124_BlendPixelR7C0_
+    dword offset RPL124_BlendPixelR7C0_
+    dword offset RPL124_BlendPixelR7C0_
+    dword offset RPL124_BlendPixelR7C0_
+    dword offset RPL124_BlendPixelR7C0_
+    dword offset RPL124_BlendPixelR7C0_
+    dword offset RPL124_BlendPixelR7C0_
+    dword offset RPL124_BlendPixelR7C0_
+    dword offset RPL124_BlendPixelR7C0_
+    dword offset RPL124_BlendPixelR7C0_
+    dword offset RPL124_BlendPixelR7C0_
+    dword offset RPL124_BlendPixelR7C0_
+    dword offset RPL124_BlendPixelR7C0_
+    dword offset RPL124_BlendPixelR7C0_
+    dword offset RPL124_BlendPixelR7C0_
+    dword offset RPL124_BlendPixelR7C0_
+    dword offset RPL124_BlendPixelR7C0_
+    dword offset RPL124_BlendPixelR7C0_
+    dword offset RPL124_BlendPixelR7C0_
+RPL124_BlendPixelR7C0_ proc near
     lea ecx, [ebx-085h]
     add ecx, dword ptr [Dc9bf0]
     mov ebx, edi
@@ -12366,45 +12366,45 @@ L66cf8::
     xor ebx, ebx
     add bl, dl
     jmp dword ptr [ebx*4+D66bc5-2dh*4]
-Func66c59_ endp
+RPL124_BlendPixelR7C0_ endp
     dword offset L66e12
     dword offset L66def
     dword offset L66e04
     dword offset L66dd1
     dword offset L66dc9
-    dword offset Func66da5_
-    dword offset Func66da5_
-    dword offset Func66da5_
-    dword offset Func66da5_
-    dword offset Func66da5_
-    dword offset Func66da5_
-    dword offset Func66da5_
-    dword offset Func66da5_
-    dword offset Func66da5_
-    dword offset Func66da5_
-    dword offset Func66da5_
-    dword offset Func66da5_
-    dword offset Func66da5_
-    dword offset Func66da5_
-    dword offset Func66da5_
-    dword offset Func66da5_
-    dword offset Func66da5_
-    dword offset Func66da5_
-    dword offset Func66da5_
-    dword offset Func66da5_
-    dword offset Func66da5_
-    dword offset Func66da5_
-    dword offset Func66da5_
-    dword offset Func66da5_
-    dword offset Func66da5_
-    dword offset Func66da5_
-    dword offset Func66da5_
-    dword offset Func66da5_
-    dword offset Func66da5_
-    dword offset Func66da5_
-    dword offset Func66da5_
-    dword offset Func66da5_
-Func66da5_ proc near
+    dword offset RPL124_BlendPixelR7C1_
+    dword offset RPL124_BlendPixelR7C1_
+    dword offset RPL124_BlendPixelR7C1_
+    dword offset RPL124_BlendPixelR7C1_
+    dword offset RPL124_BlendPixelR7C1_
+    dword offset RPL124_BlendPixelR7C1_
+    dword offset RPL124_BlendPixelR7C1_
+    dword offset RPL124_BlendPixelR7C1_
+    dword offset RPL124_BlendPixelR7C1_
+    dword offset RPL124_BlendPixelR7C1_
+    dword offset RPL124_BlendPixelR7C1_
+    dword offset RPL124_BlendPixelR7C1_
+    dword offset RPL124_BlendPixelR7C1_
+    dword offset RPL124_BlendPixelR7C1_
+    dword offset RPL124_BlendPixelR7C1_
+    dword offset RPL124_BlendPixelR7C1_
+    dword offset RPL124_BlendPixelR7C1_
+    dword offset RPL124_BlendPixelR7C1_
+    dword offset RPL124_BlendPixelR7C1_
+    dword offset RPL124_BlendPixelR7C1_
+    dword offset RPL124_BlendPixelR7C1_
+    dword offset RPL124_BlendPixelR7C1_
+    dword offset RPL124_BlendPixelR7C1_
+    dword offset RPL124_BlendPixelR7C1_
+    dword offset RPL124_BlendPixelR7C1_
+    dword offset RPL124_BlendPixelR7C1_
+    dword offset RPL124_BlendPixelR7C1_
+    dword offset RPL124_BlendPixelR7C1_
+    dword offset RPL124_BlendPixelR7C1_
+    dword offset RPL124_BlendPixelR7C1_
+    dword offset RPL124_BlendPixelR7C1_
+    dword offset RPL124_BlendPixelR7C1_
+RPL124_BlendPixelR7C1_ proc near
     lea ecx, [ebx-085h]
     add ecx, dword ptr [Dc9bf0]
     mov ebx, edi
@@ -12469,45 +12469,45 @@ L66e4d::
     xor ebx, ebx
     add bl, dl
     jmp dword ptr [ebx*4+D66e7a-80h*4]
-Func66da5_ endp
+RPL124_BlendPixelR7C1_ endp
 D66e7a dword offset L66f74
     dword offset L66f54
     dword offset L66f68
     dword offset L66f38
     dword offset L66f30
-    dword offset Func66f0e_
-    dword offset Func66f0e_
-    dword offset Func66f0e_
-    dword offset Func66f0e_
-    dword offset Func66f0e_
-    dword offset Func66f0e_
-    dword offset Func66f0e_
-    dword offset Func66f0e_
-    dword offset Func66f0e_
-    dword offset Func66f0e_
-    dword offset Func66f0e_
-    dword offset Func66f0e_
-    dword offset Func66f0e_
-    dword offset Func66f0e_
-    dword offset Func66f0e_
-    dword offset Func66f0e_
-    dword offset Func66f0e_
-    dword offset Func66f0e_
-    dword offset Func66f0e_
-    dword offset Func66f0e_
-    dword offset Func66f0e_
-    dword offset Func66f0e_
-    dword offset Func66f0e_
-    dword offset Func66f0e_
-    dword offset Func66f0e_
-    dword offset Func66f0e_
-    dword offset Func66f0e_
-D66efa dword offset Func66f0e_
-    dword offset Func66f0e_
-    dword offset Func66f0e_
-    dword offset Func66f0e_
-    dword offset Func66f0e_
-Func66f0e_ proc near
+    dword offset RPL124_BlendPixelR6C2_
+    dword offset RPL124_BlendPixelR6C2_
+    dword offset RPL124_BlendPixelR6C2_
+    dword offset RPL124_BlendPixelR6C2_
+    dword offset RPL124_BlendPixelR6C2_
+    dword offset RPL124_BlendPixelR6C2_
+    dword offset RPL124_BlendPixelR6C2_
+    dword offset RPL124_BlendPixelR6C2_
+    dword offset RPL124_BlendPixelR6C2_
+    dword offset RPL124_BlendPixelR6C2_
+    dword offset RPL124_BlendPixelR6C2_
+    dword offset RPL124_BlendPixelR6C2_
+    dword offset RPL124_BlendPixelR6C2_
+    dword offset RPL124_BlendPixelR6C2_
+    dword offset RPL124_BlendPixelR6C2_
+    dword offset RPL124_BlendPixelR6C2_
+    dword offset RPL124_BlendPixelR6C2_
+    dword offset RPL124_BlendPixelR6C2_
+    dword offset RPL124_BlendPixelR6C2_
+    dword offset RPL124_BlendPixelR6C2_
+    dword offset RPL124_BlendPixelR6C2_
+    dword offset RPL124_BlendPixelR6C2_
+    dword offset RPL124_BlendPixelR6C2_
+    dword offset RPL124_BlendPixelR6C2_
+    dword offset RPL124_BlendPixelR6C2_
+    dword offset RPL124_BlendPixelR6C2_
+    dword offset RPL124_BlendPixelR6C2_
+D66efa dword offset RPL124_BlendPixelR6C2_
+    dword offset RPL124_BlendPixelR6C2_
+    dword offset RPL124_BlendPixelR6C2_
+    dword offset RPL124_BlendPixelR6C2_
+    dword offset RPL124_BlendPixelR6C2_
+RPL124_BlendPixelR6C2_ proc near
     lea ecx, [ebx-085h]
     add ecx, dword ptr [Dc9bf0]
     mov ebx, dword ptr [Dc9bec]
@@ -12558,45 +12558,45 @@ L66fa0::
     xor ebx, ebx
     add bl, dh
     jmp dword ptr [ebx*4+D66fb9-80h*4]
-Func66f0e_ endp
+RPL124_BlendPixelR6C2_ endp
 D66fb9 dword offset L670b3
     dword offset L67093
     dword offset L670a7
     dword offset L67077
     dword offset L6706f
-    dword offset Func6704d_
-    dword offset Func6704d_
-    dword offset Func6704d_
-    dword offset Func6704d_
-    dword offset Func6704d_
-    dword offset Func6704d_
-    dword offset Func6704d_
-    dword offset Func6704d_
-    dword offset Func6704d_
-    dword offset Func6704d_
-    dword offset Func6704d_
-    dword offset Func6704d_
-    dword offset Func6704d_
-    dword offset Func6704d_
-    dword offset Func6704d_
-    dword offset Func6704d_
-    dword offset Func6704d_
-    dword offset Func6704d_
-    dword offset Func6704d_
-    dword offset Func6704d_
-    dword offset Func6704d_
-    dword offset Func6704d_
-    dword offset Func6704d_
-    dword offset Func6704d_
-    dword offset Func6704d_
-    dword offset Func6704d_
-    dword offset Func6704d_
-    dword offset Func6704d_
-    dword offset Func6704d_
-    dword offset Func6704d_
-    dword offset Func6704d_
-    dword offset Func6704d_
-Func6704d_ proc near
+    dword offset RPL124_BlendPixelR6C3_
+    dword offset RPL124_BlendPixelR6C3_
+    dword offset RPL124_BlendPixelR6C3_
+    dword offset RPL124_BlendPixelR6C3_
+    dword offset RPL124_BlendPixelR6C3_
+    dword offset RPL124_BlendPixelR6C3_
+    dword offset RPL124_BlendPixelR6C3_
+    dword offset RPL124_BlendPixelR6C3_
+    dword offset RPL124_BlendPixelR6C3_
+    dword offset RPL124_BlendPixelR6C3_
+    dword offset RPL124_BlendPixelR6C3_
+    dword offset RPL124_BlendPixelR6C3_
+    dword offset RPL124_BlendPixelR6C3_
+    dword offset RPL124_BlendPixelR6C3_
+    dword offset RPL124_BlendPixelR6C3_
+    dword offset RPL124_BlendPixelR6C3_
+    dword offset RPL124_BlendPixelR6C3_
+    dword offset RPL124_BlendPixelR6C3_
+    dword offset RPL124_BlendPixelR6C3_
+    dword offset RPL124_BlendPixelR6C3_
+    dword offset RPL124_BlendPixelR6C3_
+    dword offset RPL124_BlendPixelR6C3_
+    dword offset RPL124_BlendPixelR6C3_
+    dword offset RPL124_BlendPixelR6C3_
+    dword offset RPL124_BlendPixelR6C3_
+    dword offset RPL124_BlendPixelR6C3_
+    dword offset RPL124_BlendPixelR6C3_
+    dword offset RPL124_BlendPixelR6C3_
+    dword offset RPL124_BlendPixelR6C3_
+    dword offset RPL124_BlendPixelR6C3_
+    dword offset RPL124_BlendPixelR6C3_
+    dword offset RPL124_BlendPixelR6C3_
+RPL124_BlendPixelR6C3_ proc near
     lea ecx, [ebx-085h]
     add ecx, dword ptr [Dc9bf0]
     mov ebx, dword ptr [Dc9bec]
@@ -12648,45 +12648,45 @@ L670df::
     xor ebx, ebx
     add bl, dh
     jmp dword ptr [ebx*4+D66efa]
-Func6704d_ endp
+RPL124_BlendPixelR6C3_ endp
     dword offset L671fb
     dword offset L671d8
     dword offset L671ed
     dword offset L671ba
     dword offset L671b2
-    dword offset Func6718e_
-    dword offset Func6718e_
-    dword offset Func6718e_
-    dword offset Func6718e_
-    dword offset Func6718e_
-    dword offset Func6718e_
-    dword offset Func6718e_
-    dword offset Func6718e_
-    dword offset Func6718e_
-    dword offset Func6718e_
-    dword offset Func6718e_
-    dword offset Func6718e_
-    dword offset Func6718e_
-    dword offset Func6718e_
-    dword offset Func6718e_
-    dword offset Func6718e_
-    dword offset Func6718e_
-    dword offset Func6718e_
-    dword offset Func6718e_
-    dword offset Func6718e_
-    dword offset Func6718e_
-    dword offset Func6718e_
-    dword offset Func6718e_
-    dword offset Func6718e_
-    dword offset Func6718e_
-    dword offset Func6718e_
-    dword offset Func6718e_
-    dword offset Func6718e_
-    dword offset Func6718e_
-    dword offset Func6718e_
-    dword offset Func6718e_
-    dword offset Func6718e_
-Func6718e_ proc near
+    dword offset RPL124_BlendPixelR7C2_
+    dword offset RPL124_BlendPixelR7C2_
+    dword offset RPL124_BlendPixelR7C2_
+    dword offset RPL124_BlendPixelR7C2_
+    dword offset RPL124_BlendPixelR7C2_
+    dword offset RPL124_BlendPixelR7C2_
+    dword offset RPL124_BlendPixelR7C2_
+    dword offset RPL124_BlendPixelR7C2_
+    dword offset RPL124_BlendPixelR7C2_
+    dword offset RPL124_BlendPixelR7C2_
+    dword offset RPL124_BlendPixelR7C2_
+    dword offset RPL124_BlendPixelR7C2_
+    dword offset RPL124_BlendPixelR7C2_
+    dword offset RPL124_BlendPixelR7C2_
+    dword offset RPL124_BlendPixelR7C2_
+    dword offset RPL124_BlendPixelR7C2_
+    dword offset RPL124_BlendPixelR7C2_
+    dword offset RPL124_BlendPixelR7C2_
+    dword offset RPL124_BlendPixelR7C2_
+    dword offset RPL124_BlendPixelR7C2_
+    dword offset RPL124_BlendPixelR7C2_
+    dword offset RPL124_BlendPixelR7C2_
+    dword offset RPL124_BlendPixelR7C2_
+    dword offset RPL124_BlendPixelR7C2_
+    dword offset RPL124_BlendPixelR7C2_
+    dword offset RPL124_BlendPixelR7C2_
+    dword offset RPL124_BlendPixelR7C2_
+    dword offset RPL124_BlendPixelR7C2_
+    dword offset RPL124_BlendPixelR7C2_
+    dword offset RPL124_BlendPixelR7C2_
+    dword offset RPL124_BlendPixelR7C2_
+    dword offset RPL124_BlendPixelR7C2_
+RPL124_BlendPixelR7C2_ proc near
     lea ecx, [ebx-085h]
     add ecx, dword ptr [Dc9bf0]
     mov ebx, edi
@@ -12741,45 +12741,45 @@ L67232::
     xor ebx, ebx
     add bl, dl
     jmp dword ptr [ebx*4+D6724b-80h*4]
-Func6718e_ endp
+RPL124_BlendPixelR7C2_ endp
 D6724b dword offset L6734c
     dword offset L67329
     dword offset L6733e
     dword offset L6730b
     dword offset L67303
-    dword offset Func672df_
-    dword offset Func672df_
-    dword offset Func672df_
-    dword offset Func672df_
-    dword offset Func672df_
-    dword offset Func672df_
-    dword offset Func672df_
-    dword offset Func672df_
-    dword offset Func672df_
-    dword offset Func672df_
-    dword offset Func672df_
-    dword offset Func672df_
-    dword offset Func672df_
-    dword offset Func672df_
-    dword offset Func672df_
-    dword offset Func672df_
-    dword offset Func672df_
-    dword offset Func672df_
-    dword offset Func672df_
-    dword offset Func672df_
-    dword offset Func672df_
-    dword offset Func672df_
-    dword offset Func672df_
-    dword offset Func672df_
-    dword offset Func672df_
-    dword offset Func672df_
-    dword offset Func672df_
-    dword offset Func672df_
-    dword offset Func672df_
-    dword offset Func672df_
-    dword offset Func672df_
-    dword offset Func672df_
-Func672df_ proc near
+    dword offset RPL124_BlendPixelR7C3_
+    dword offset RPL124_BlendPixelR7C3_
+    dword offset RPL124_BlendPixelR7C3_
+    dword offset RPL124_BlendPixelR7C3_
+    dword offset RPL124_BlendPixelR7C3_
+    dword offset RPL124_BlendPixelR7C3_
+    dword offset RPL124_BlendPixelR7C3_
+    dword offset RPL124_BlendPixelR7C3_
+    dword offset RPL124_BlendPixelR7C3_
+    dword offset RPL124_BlendPixelR7C3_
+    dword offset RPL124_BlendPixelR7C3_
+    dword offset RPL124_BlendPixelR7C3_
+    dword offset RPL124_BlendPixelR7C3_
+    dword offset RPL124_BlendPixelR7C3_
+    dword offset RPL124_BlendPixelR7C3_
+    dword offset RPL124_BlendPixelR7C3_
+    dword offset RPL124_BlendPixelR7C3_
+    dword offset RPL124_BlendPixelR7C3_
+    dword offset RPL124_BlendPixelR7C3_
+    dword offset RPL124_BlendPixelR7C3_
+    dword offset RPL124_BlendPixelR7C3_
+    dword offset RPL124_BlendPixelR7C3_
+    dword offset RPL124_BlendPixelR7C3_
+    dword offset RPL124_BlendPixelR7C3_
+    dword offset RPL124_BlendPixelR7C3_
+    dword offset RPL124_BlendPixelR7C3_
+    dword offset RPL124_BlendPixelR7C3_
+    dword offset RPL124_BlendPixelR7C3_
+    dword offset RPL124_BlendPixelR7C3_
+    dword offset RPL124_BlendPixelR7C3_
+    dword offset RPL124_BlendPixelR7C3_
+    dword offset RPL124_BlendPixelR7C3_
+RPL124_BlendPixelR7C3_ proc near
     lea ecx, [ebx-085h]
     add ecx, dword ptr [Dc9bf0]
     mov ebx, edi
@@ -12844,45 +12844,45 @@ L67387::
     xor ebx, ebx
     add bl, dl
     jmp dword ptr [ebx*4+D673b4-80h*4]
-Func672df_ endp
+RPL124_BlendPixelR7C3_ endp
 D673b4 dword offset L674ae
     dword offset L6748e
     dword offset L674a2
     dword offset L67472
     dword offset L6746a
-    dword offset Func67448_
-    dword offset Func67448_
-    dword offset Func67448_
-    dword offset Func67448_
-    dword offset Func67448_
-    dword offset Func67448_
-    dword offset Func67448_
-    dword offset Func67448_
-    dword offset Func67448_
-    dword offset Func67448_
-    dword offset Func67448_
-    dword offset Func67448_
-    dword offset Func67448_
-    dword offset Func67448_
-    dword offset Func67448_
-    dword offset Func67448_
-    dword offset Func67448_
-    dword offset Func67448_
-    dword offset Func67448_
-    dword offset Func67448_
-    dword offset Func67448_
-    dword offset Func67448_
-    dword offset Func67448_
-    dword offset Func67448_
-    dword offset Func67448_
-    dword offset Func67448_
-    dword offset Func67448_
-D67434 dword offset Func67448_
-    dword offset Func67448_
-    dword offset Func67448_
-    dword offset Func67448_
-    dword offset Func67448_
-Func67448_ proc near
+    dword offset RPL124_BlendPixelR6C4_
+    dword offset RPL124_BlendPixelR6C4_
+    dword offset RPL124_BlendPixelR6C4_
+    dword offset RPL124_BlendPixelR6C4_
+    dword offset RPL124_BlendPixelR6C4_
+    dword offset RPL124_BlendPixelR6C4_
+    dword offset RPL124_BlendPixelR6C4_
+    dword offset RPL124_BlendPixelR6C4_
+    dword offset RPL124_BlendPixelR6C4_
+    dword offset RPL124_BlendPixelR6C4_
+    dword offset RPL124_BlendPixelR6C4_
+    dword offset RPL124_BlendPixelR6C4_
+    dword offset RPL124_BlendPixelR6C4_
+    dword offset RPL124_BlendPixelR6C4_
+    dword offset RPL124_BlendPixelR6C4_
+    dword offset RPL124_BlendPixelR6C4_
+    dword offset RPL124_BlendPixelR6C4_
+    dword offset RPL124_BlendPixelR6C4_
+    dword offset RPL124_BlendPixelR6C4_
+    dword offset RPL124_BlendPixelR6C4_
+    dword offset RPL124_BlendPixelR6C4_
+    dword offset RPL124_BlendPixelR6C4_
+    dword offset RPL124_BlendPixelR6C4_
+    dword offset RPL124_BlendPixelR6C4_
+    dword offset RPL124_BlendPixelR6C4_
+    dword offset RPL124_BlendPixelR6C4_
+    dword offset RPL124_BlendPixelR6C4_
+D67434 dword offset RPL124_BlendPixelR6C4_
+    dword offset RPL124_BlendPixelR6C4_
+    dword offset RPL124_BlendPixelR6C4_
+    dword offset RPL124_BlendPixelR6C4_
+    dword offset RPL124_BlendPixelR6C4_
+RPL124_BlendPixelR6C4_ proc near
     lea ecx, [ebx-085h]
     add ecx, dword ptr [Dc9bf0]
     mov ebx, dword ptr [Dc9bec]
@@ -12933,45 +12933,45 @@ L674da::
     xor ebx, ebx
     add bl, dh
     jmp dword ptr [ebx*4+D674f3-80h*4]
-Func67448_ endp
+RPL124_BlendPixelR6C4_ endp
 D674f3 dword offset L675ed
     dword offset L675cd
     dword offset L675e1
     dword offset L675b1
     dword offset L675a9
-    dword offset Func67587_
-    dword offset Func67587_
-    dword offset Func67587_
-    dword offset Func67587_
-    dword offset Func67587_
-    dword offset Func67587_
-    dword offset Func67587_
-    dword offset Func67587_
-    dword offset Func67587_
-    dword offset Func67587_
-    dword offset Func67587_
-    dword offset Func67587_
-    dword offset Func67587_
-    dword offset Func67587_
-    dword offset Func67587_
-    dword offset Func67587_
-    dword offset Func67587_
-    dword offset Func67587_
-    dword offset Func67587_
-    dword offset Func67587_
-    dword offset Func67587_
-    dword offset Func67587_
-    dword offset Func67587_
-    dword offset Func67587_
-    dword offset Func67587_
-    dword offset Func67587_
-    dword offset Func67587_
-    dword offset Func67587_
-    dword offset Func67587_
-    dword offset Func67587_
-    dword offset Func67587_
-    dword offset Func67587_
-Func67587_ proc near
+    dword offset RPL124_BlendPixelR6C5_
+    dword offset RPL124_BlendPixelR6C5_
+    dword offset RPL124_BlendPixelR6C5_
+    dword offset RPL124_BlendPixelR6C5_
+    dword offset RPL124_BlendPixelR6C5_
+    dword offset RPL124_BlendPixelR6C5_
+    dword offset RPL124_BlendPixelR6C5_
+    dword offset RPL124_BlendPixelR6C5_
+    dword offset RPL124_BlendPixelR6C5_
+    dword offset RPL124_BlendPixelR6C5_
+    dword offset RPL124_BlendPixelR6C5_
+    dword offset RPL124_BlendPixelR6C5_
+    dword offset RPL124_BlendPixelR6C5_
+    dword offset RPL124_BlendPixelR6C5_
+    dword offset RPL124_BlendPixelR6C5_
+    dword offset RPL124_BlendPixelR6C5_
+    dword offset RPL124_BlendPixelR6C5_
+    dword offset RPL124_BlendPixelR6C5_
+    dword offset RPL124_BlendPixelR6C5_
+    dword offset RPL124_BlendPixelR6C5_
+    dword offset RPL124_BlendPixelR6C5_
+    dword offset RPL124_BlendPixelR6C5_
+    dword offset RPL124_BlendPixelR6C5_
+    dword offset RPL124_BlendPixelR6C5_
+    dword offset RPL124_BlendPixelR6C5_
+    dword offset RPL124_BlendPixelR6C5_
+    dword offset RPL124_BlendPixelR6C5_
+    dword offset RPL124_BlendPixelR6C5_
+    dword offset RPL124_BlendPixelR6C5_
+    dword offset RPL124_BlendPixelR6C5_
+    dword offset RPL124_BlendPixelR6C5_
+    dword offset RPL124_BlendPixelR6C5_
+RPL124_BlendPixelR6C5_ proc near
     lea ecx, [ebx-085h]
     add ecx, dword ptr [Dc9bf0]
     mov ebx, dword ptr [Dc9bec]
@@ -13023,45 +13023,45 @@ L67619::
     xor ebx, ebx
     add bl, dh
     jmp dword ptr [ebx*4+D67434]
-Func67587_ endp
+RPL124_BlendPixelR6C5_ endp
     dword offset L67735
     dword offset L67712
     dword offset L67727
     dword offset L676f4
     dword offset L676ec
-    dword offset Func676c8_
-    dword offset Func676c8_
-    dword offset Func676c8_
-    dword offset Func676c8_
-    dword offset Func676c8_
-    dword offset Func676c8_
-    dword offset Func676c8_
-    dword offset Func676c8_
-    dword offset Func676c8_
-    dword offset Func676c8_
-    dword offset Func676c8_
-    dword offset Func676c8_
-    dword offset Func676c8_
-    dword offset Func676c8_
-    dword offset Func676c8_
-    dword offset Func676c8_
-    dword offset Func676c8_
-    dword offset Func676c8_
-    dword offset Func676c8_
-    dword offset Func676c8_
-    dword offset Func676c8_
-    dword offset Func676c8_
-    dword offset Func676c8_
-    dword offset Func676c8_
-    dword offset Func676c8_
-    dword offset Func676c8_
-    dword offset Func676c8_
-    dword offset Func676c8_
-    dword offset Func676c8_
-    dword offset Func676c8_
-    dword offset Func676c8_
-    dword offset Func676c8_
-Func676c8_ proc near
+    dword offset RPL124_BlendPixelR7C4_
+    dword offset RPL124_BlendPixelR7C4_
+    dword offset RPL124_BlendPixelR7C4_
+    dword offset RPL124_BlendPixelR7C4_
+    dword offset RPL124_BlendPixelR7C4_
+    dword offset RPL124_BlendPixelR7C4_
+    dword offset RPL124_BlendPixelR7C4_
+    dword offset RPL124_BlendPixelR7C4_
+    dword offset RPL124_BlendPixelR7C4_
+    dword offset RPL124_BlendPixelR7C4_
+    dword offset RPL124_BlendPixelR7C4_
+    dword offset RPL124_BlendPixelR7C4_
+    dword offset RPL124_BlendPixelR7C4_
+    dword offset RPL124_BlendPixelR7C4_
+    dword offset RPL124_BlendPixelR7C4_
+    dword offset RPL124_BlendPixelR7C4_
+    dword offset RPL124_BlendPixelR7C4_
+    dword offset RPL124_BlendPixelR7C4_
+    dword offset RPL124_BlendPixelR7C4_
+    dword offset RPL124_BlendPixelR7C4_
+    dword offset RPL124_BlendPixelR7C4_
+    dword offset RPL124_BlendPixelR7C4_
+    dword offset RPL124_BlendPixelR7C4_
+    dword offset RPL124_BlendPixelR7C4_
+    dword offset RPL124_BlendPixelR7C4_
+    dword offset RPL124_BlendPixelR7C4_
+    dword offset RPL124_BlendPixelR7C4_
+    dword offset RPL124_BlendPixelR7C4_
+    dword offset RPL124_BlendPixelR7C4_
+    dword offset RPL124_BlendPixelR7C4_
+    dword offset RPL124_BlendPixelR7C4_
+    dword offset RPL124_BlendPixelR7C4_
+RPL124_BlendPixelR7C4_ proc near
     lea ecx, [ebx-085h]
     add ecx, dword ptr [Dc9bf0]
     mov ebx, edi
@@ -13116,45 +13116,45 @@ L6776c::
     xor ebx, ebx
     add bl, dl
     jmp dword ptr [ebx*4+D67785-80h*4]
-Func676c8_ endp
+RPL124_BlendPixelR7C4_ endp
 D67785 dword offset L67886
     dword offset L67863
     dword offset L67878
     dword offset L67845
     dword offset L6783d
-    dword offset Func67819_
-    dword offset Func67819_
-    dword offset Func67819_
-    dword offset Func67819_
-    dword offset Func67819_
-    dword offset Func67819_
-    dword offset Func67819_
-    dword offset Func67819_
-    dword offset Func67819_
-    dword offset Func67819_
-    dword offset Func67819_
-    dword offset Func67819_
-    dword offset Func67819_
-    dword offset Func67819_
-    dword offset Func67819_
-    dword offset Func67819_
-    dword offset Func67819_
-    dword offset Func67819_
-    dword offset Func67819_
-    dword offset Func67819_
-    dword offset Func67819_
-    dword offset Func67819_
-    dword offset Func67819_
-    dword offset Func67819_
-    dword offset Func67819_
-    dword offset Func67819_
-    dword offset Func67819_
-    dword offset Func67819_
-    dword offset Func67819_
-    dword offset Func67819_
-    dword offset Func67819_
-    dword offset Func67819_
-Func67819_ proc near
+    dword offset RPL124_BlendPixelR7C5_
+    dword offset RPL124_BlendPixelR7C5_
+    dword offset RPL124_BlendPixelR7C5_
+    dword offset RPL124_BlendPixelR7C5_
+    dword offset RPL124_BlendPixelR7C5_
+    dword offset RPL124_BlendPixelR7C5_
+    dword offset RPL124_BlendPixelR7C5_
+    dword offset RPL124_BlendPixelR7C5_
+    dword offset RPL124_BlendPixelR7C5_
+    dword offset RPL124_BlendPixelR7C5_
+    dword offset RPL124_BlendPixelR7C5_
+    dword offset RPL124_BlendPixelR7C5_
+    dword offset RPL124_BlendPixelR7C5_
+    dword offset RPL124_BlendPixelR7C5_
+    dword offset RPL124_BlendPixelR7C5_
+    dword offset RPL124_BlendPixelR7C5_
+    dword offset RPL124_BlendPixelR7C5_
+    dword offset RPL124_BlendPixelR7C5_
+    dword offset RPL124_BlendPixelR7C5_
+    dword offset RPL124_BlendPixelR7C5_
+    dword offset RPL124_BlendPixelR7C5_
+    dword offset RPL124_BlendPixelR7C5_
+    dword offset RPL124_BlendPixelR7C5_
+    dword offset RPL124_BlendPixelR7C5_
+    dword offset RPL124_BlendPixelR7C5_
+    dword offset RPL124_BlendPixelR7C5_
+    dword offset RPL124_BlendPixelR7C5_
+    dword offset RPL124_BlendPixelR7C5_
+    dword offset RPL124_BlendPixelR7C5_
+    dword offset RPL124_BlendPixelR7C5_
+    dword offset RPL124_BlendPixelR7C5_
+    dword offset RPL124_BlendPixelR7C5_
+RPL124_BlendPixelR7C5_ proc near
     lea ecx, [ebx-085h]
     add ecx, dword ptr [Dc9bf0]
     mov ebx, edi
@@ -13219,45 +13219,45 @@ L678c1::
     xor ebx, ebx
     add bl, dl
     jmp dword ptr [ebx*4+D678ee-80h*4]
-Func67819_ endp
+RPL124_BlendPixelR7C5_ endp
 D678ee dword offset L679e8
     dword offset L679c8
     dword offset L679dc
     dword offset L679ac
     dword offset L679a4
-    dword offset Func67982_
-    dword offset Func67982_
-    dword offset Func67982_
-    dword offset Func67982_
-    dword offset Func67982_
-    dword offset Func67982_
-    dword offset Func67982_
-    dword offset Func67982_
-    dword offset Func67982_
-    dword offset Func67982_
-    dword offset Func67982_
-    dword offset Func67982_
-    dword offset Func67982_
-    dword offset Func67982_
-    dword offset Func67982_
-    dword offset Func67982_
-    dword offset Func67982_
-    dword offset Func67982_
-    dword offset Func67982_
-    dword offset Func67982_
-    dword offset Func67982_
-    dword offset Func67982_
-    dword offset Func67982_
-    dword offset Func67982_
-    dword offset Func67982_
-    dword offset Func67982_
-    dword offset Func67982_
-    dword offset Func67982_
-    dword offset Func67982_
-    dword offset Func67982_
-    dword offset Func67982_
-    dword offset Func67982_
-Func67982_ proc near
+    dword offset RPL124_BlendPixelR6C6_
+    dword offset RPL124_BlendPixelR6C6_
+    dword offset RPL124_BlendPixelR6C6_
+    dword offset RPL124_BlendPixelR6C6_
+    dword offset RPL124_BlendPixelR6C6_
+    dword offset RPL124_BlendPixelR6C6_
+    dword offset RPL124_BlendPixelR6C6_
+    dword offset RPL124_BlendPixelR6C6_
+    dword offset RPL124_BlendPixelR6C6_
+    dword offset RPL124_BlendPixelR6C6_
+    dword offset RPL124_BlendPixelR6C6_
+    dword offset RPL124_BlendPixelR6C6_
+    dword offset RPL124_BlendPixelR6C6_
+    dword offset RPL124_BlendPixelR6C6_
+    dword offset RPL124_BlendPixelR6C6_
+    dword offset RPL124_BlendPixelR6C6_
+    dword offset RPL124_BlendPixelR6C6_
+    dword offset RPL124_BlendPixelR6C6_
+    dword offset RPL124_BlendPixelR6C6_
+    dword offset RPL124_BlendPixelR6C6_
+    dword offset RPL124_BlendPixelR6C6_
+    dword offset RPL124_BlendPixelR6C6_
+    dword offset RPL124_BlendPixelR6C6_
+    dword offset RPL124_BlendPixelR6C6_
+    dword offset RPL124_BlendPixelR6C6_
+    dword offset RPL124_BlendPixelR6C6_
+    dword offset RPL124_BlendPixelR6C6_
+    dword offset RPL124_BlendPixelR6C6_
+    dword offset RPL124_BlendPixelR6C6_
+    dword offset RPL124_BlendPixelR6C6_
+    dword offset RPL124_BlendPixelR6C6_
+    dword offset RPL124_BlendPixelR6C6_
+RPL124_BlendPixelR6C6_ proc near
     lea ecx, [ebx-085h]
     add ecx, dword ptr [Dc9bf0]
     mov ebx, dword ptr [Dc9bec]
@@ -13308,45 +13308,45 @@ L67a14::
     xor ebx, ebx
     add bl, dh
     jmp dword ptr [ebx*4+D67a2d-80h*4]
-Func67982_ endp
+RPL124_BlendPixelR6C6_ endp
 D67a2d dword offset L67b27
     dword offset L67b07
     dword offset L67b1b
     dword offset L67aeb
     dword offset L67ae3
-    dword offset Func67ac1_
-    dword offset Func67ac1_
-    dword offset Func67ac1_
-    dword offset Func67ac1_
-    dword offset Func67ac1_
-    dword offset Func67ac1_
-    dword offset Func67ac1_
-    dword offset Func67ac1_
-    dword offset Func67ac1_
-    dword offset Func67ac1_
-    dword offset Func67ac1_
-    dword offset Func67ac1_
-    dword offset Func67ac1_
-    dword offset Func67ac1_
-    dword offset Func67ac1_
-    dword offset Func67ac1_
-    dword offset Func67ac1_
-    dword offset Func67ac1_
-    dword offset Func67ac1_
-    dword offset Func67ac1_
-    dword offset Func67ac1_
-    dword offset Func67ac1_
-    dword offset Func67ac1_
-    dword offset Func67ac1_
-    dword offset Func67ac1_
-    dword offset Func67ac1_
-    dword offset Func67ac1_
-    dword offset Func67ac1_
-    dword offset Func67ac1_
-    dword offset Func67ac1_
-    dword offset Func67ac1_
-    dword offset Func67ac1_
-Func67ac1_ proc near
+    dword offset RPL124_BlendPixelR6C7_
+    dword offset RPL124_BlendPixelR6C7_
+    dword offset RPL124_BlendPixelR6C7_
+    dword offset RPL124_BlendPixelR6C7_
+    dword offset RPL124_BlendPixelR6C7_
+    dword offset RPL124_BlendPixelR6C7_
+    dword offset RPL124_BlendPixelR6C7_
+    dword offset RPL124_BlendPixelR6C7_
+    dword offset RPL124_BlendPixelR6C7_
+    dword offset RPL124_BlendPixelR6C7_
+    dword offset RPL124_BlendPixelR6C7_
+    dword offset RPL124_BlendPixelR6C7_
+    dword offset RPL124_BlendPixelR6C7_
+    dword offset RPL124_BlendPixelR6C7_
+    dword offset RPL124_BlendPixelR6C7_
+    dword offset RPL124_BlendPixelR6C7_
+    dword offset RPL124_BlendPixelR6C7_
+    dword offset RPL124_BlendPixelR6C7_
+    dword offset RPL124_BlendPixelR6C7_
+    dword offset RPL124_BlendPixelR6C7_
+    dword offset RPL124_BlendPixelR6C7_
+    dword offset RPL124_BlendPixelR6C7_
+    dword offset RPL124_BlendPixelR6C7_
+    dword offset RPL124_BlendPixelR6C7_
+    dword offset RPL124_BlendPixelR6C7_
+    dword offset RPL124_BlendPixelR6C7_
+    dword offset RPL124_BlendPixelR6C7_
+    dword offset RPL124_BlendPixelR6C7_
+    dword offset RPL124_BlendPixelR6C7_
+    dword offset RPL124_BlendPixelR6C7_
+    dword offset RPL124_BlendPixelR6C7_
+    dword offset RPL124_BlendPixelR6C7_
+RPL124_BlendPixelR6C7_ proc near
     lea ecx, [ebx-085h]
     add ecx, dword ptr [Dc9bf0]
     mov ebx, dword ptr [Dc9bec]
@@ -13398,45 +13398,45 @@ L67b56::
     xor ebx, ebx
     add bl, dh
     jmp dword ptr [ebx*4+D67a2d-2fh*4]
-Func67ac1_ endp
+RPL124_BlendPixelR6C7_ endp
     dword offset L67c72
     dword offset L67c4f
     dword offset L67c64
     dword offset L67c31
     dword offset L67c29
-    dword offset Func67c05_
-    dword offset Func67c05_
-    dword offset Func67c05_
-    dword offset Func67c05_
-    dword offset Func67c05_
-    dword offset Func67c05_
-    dword offset Func67c05_
-    dword offset Func67c05_
-    dword offset Func67c05_
-    dword offset Func67c05_
-    dword offset Func67c05_
-    dword offset Func67c05_
-    dword offset Func67c05_
-    dword offset Func67c05_
-    dword offset Func67c05_
-    dword offset Func67c05_
-    dword offset Func67c05_
-    dword offset Func67c05_
-    dword offset Func67c05_
-    dword offset Func67c05_
-    dword offset Func67c05_
-    dword offset Func67c05_
-    dword offset Func67c05_
-    dword offset Func67c05_
-    dword offset Func67c05_
-    dword offset Func67c05_
-    dword offset Func67c05_
-    dword offset Func67c05_
-    dword offset Func67c05_
-    dword offset Func67c05_
-    dword offset Func67c05_
-    dword offset Func67c05_
-Func67c05_ proc near
+    dword offset RPL124_BlendPixelR7C6_
+    dword offset RPL124_BlendPixelR7C6_
+    dword offset RPL124_BlendPixelR7C6_
+    dword offset RPL124_BlendPixelR7C6_
+    dword offset RPL124_BlendPixelR7C6_
+    dword offset RPL124_BlendPixelR7C6_
+    dword offset RPL124_BlendPixelR7C6_
+    dword offset RPL124_BlendPixelR7C6_
+    dword offset RPL124_BlendPixelR7C6_
+    dword offset RPL124_BlendPixelR7C6_
+    dword offset RPL124_BlendPixelR7C6_
+    dword offset RPL124_BlendPixelR7C6_
+    dword offset RPL124_BlendPixelR7C6_
+    dword offset RPL124_BlendPixelR7C6_
+    dword offset RPL124_BlendPixelR7C6_
+    dword offset RPL124_BlendPixelR7C6_
+    dword offset RPL124_BlendPixelR7C6_
+    dword offset RPL124_BlendPixelR7C6_
+    dword offset RPL124_BlendPixelR7C6_
+    dword offset RPL124_BlendPixelR7C6_
+    dword offset RPL124_BlendPixelR7C6_
+    dword offset RPL124_BlendPixelR7C6_
+    dword offset RPL124_BlendPixelR7C6_
+    dword offset RPL124_BlendPixelR7C6_
+    dword offset RPL124_BlendPixelR7C6_
+    dword offset RPL124_BlendPixelR7C6_
+    dword offset RPL124_BlendPixelR7C6_
+    dword offset RPL124_BlendPixelR7C6_
+    dword offset RPL124_BlendPixelR7C6_
+    dword offset RPL124_BlendPixelR7C6_
+    dword offset RPL124_BlendPixelR7C6_
+    dword offset RPL124_BlendPixelR7C6_
+RPL124_BlendPixelR7C6_ proc near
     lea ecx, [ebx-085h]
     add ecx, dword ptr [Dc9bf0]
     mov ebx, edi
@@ -13491,45 +13491,45 @@ L67ca9::
     xor ebx, ebx
     add bl, dl
     jmp dword ptr [ebx*4+D67cc2-80h*4]
-Func67c05_ endp
+RPL124_BlendPixelR7C6_ endp
 D67cc2 dword offset L67dc3
     dword offset L67da0
     dword offset L67db5
     dword offset L67d82
     dword offset L67d7a
-    dword offset Func67d56_
-    dword offset Func67d56_
-    dword offset Func67d56_
-    dword offset Func67d56_
-    dword offset Func67d56_
-    dword offset Func67d56_
-    dword offset Func67d56_
-    dword offset Func67d56_
-    dword offset Func67d56_
-    dword offset Func67d56_
-    dword offset Func67d56_
-    dword offset Func67d56_
-    dword offset Func67d56_
-    dword offset Func67d56_
-    dword offset Func67d56_
-    dword offset Func67d56_
-    dword offset Func67d56_
-    dword offset Func67d56_
-    dword offset Func67d56_
-    dword offset Func67d56_
-    dword offset Func67d56_
-    dword offset Func67d56_
-    dword offset Func67d56_
-    dword offset Func67d56_
-    dword offset Func67d56_
-    dword offset Func67d56_
-    dword offset Func67d56_
-    dword offset Func67d56_
-    dword offset Func67d56_
-    dword offset Func67d56_
-    dword offset Func67d56_
-    dword offset Func67d56_
-Func67d56_ proc near
+    dword offset RPL124_BlendPixelR7C7_
+    dword offset RPL124_BlendPixelR7C7_
+    dword offset RPL124_BlendPixelR7C7_
+    dword offset RPL124_BlendPixelR7C7_
+    dword offset RPL124_BlendPixelR7C7_
+    dword offset RPL124_BlendPixelR7C7_
+    dword offset RPL124_BlendPixelR7C7_
+    dword offset RPL124_BlendPixelR7C7_
+    dword offset RPL124_BlendPixelR7C7_
+    dword offset RPL124_BlendPixelR7C7_
+    dword offset RPL124_BlendPixelR7C7_
+    dword offset RPL124_BlendPixelR7C7_
+    dword offset RPL124_BlendPixelR7C7_
+    dword offset RPL124_BlendPixelR7C7_
+    dword offset RPL124_BlendPixelR7C7_
+    dword offset RPL124_BlendPixelR7C7_
+    dword offset RPL124_BlendPixelR7C7_
+    dword offset RPL124_BlendPixelR7C7_
+    dword offset RPL124_BlendPixelR7C7_
+    dword offset RPL124_BlendPixelR7C7_
+    dword offset RPL124_BlendPixelR7C7_
+    dword offset RPL124_BlendPixelR7C7_
+    dword offset RPL124_BlendPixelR7C7_
+    dword offset RPL124_BlendPixelR7C7_
+    dword offset RPL124_BlendPixelR7C7_
+    dword offset RPL124_BlendPixelR7C7_
+    dword offset RPL124_BlendPixelR7C7_
+    dword offset RPL124_BlendPixelR7C7_
+    dword offset RPL124_BlendPixelR7C7_
+    dword offset RPL124_BlendPixelR7C7_
+    dword offset RPL124_BlendPixelR7C7_
+    dword offset RPL124_BlendPixelR7C7_
+RPL124_BlendPixelR7C7_ proc near
     lea ecx, [ebx-085h]
     add ecx, dword ptr [Dc9bf0]
     mov ebx, edi
@@ -13609,7 +13609,7 @@ L67e1f::
     pop esi
     leave
     ret
-Func67d56_ endp
+RPL124_BlendPixelR7C7_ endp
 draw_frame proc near
     push ebp
     mov ebp, esp
@@ -22564,102 +22564,102 @@ Db0880 dword 0, 0, 0421h, 0421h, 0842h, 0842h, 0c63h, 0c63h
     dword 0d6b4h, 0d6b4h, 0dad5h, 0dad5h, 0def6h, 0def6h, 0e317h, 0e317h
     dword 0e738h, 0e738h, 0eb59h, 0eb59h, 0ef7ah, 0ef7ah, 0f39bh, 0f39bh
     dword 0f7bch, 0f7bch, 0fbddh, 0fbddh, 0fffeh, 0fffeh, 01041fh, 01041fh
-colour_ops dword offset Func5e35c_
-    dword offset Func5e323_
-    dword offset Func5e32a_
-    dword offset Func5e331_
-    dword offset Func5e338_
-    dword offset Func5e33f_
-    dword offset Func5e346_
-    dword offset Func5e34d_
-    dword offset Func5e356_
-    dword offset Func5e35d_
-    dword offset Func5e366_
-    dword offset Func5e36f_
-    dword offset Func5e378_
-    dword offset Func5e381_
-    dword offset Func5e38a_
-    dword offset Func5e393_
-    dword offset Func5e2e1_
-    dword offset Func5e2a8_
-    dword offset Func5e2af_
-    dword offset Func5e2b6_
-    dword offset Func5e2bd_
-    dword offset Func5e2c4_
-    dword offset Func5e2cb_
-    dword offset Func5e2d2_
-    dword offset Func5e2db_
-    dword offset Func5e2e2_
-    dword offset Func5e2eb_
-    dword offset Func5e2f4_
-    dword offset Func5e2fd_
-    dword offset Func5e306_
-    dword offset Func5e30f_
-    dword offset Func5e318_
-blend_ops dword offset Func5f33c_
-    dword offset Func5f33d_
-    dword offset Func5f39e_
-    dword offset Func5f402_
-    dword offset Func5f46c_
-    dword offset Func5f4d0_
-    dword offset Func5f53d_
-    dword offset Func5f5aa_
-    dword offset Func5f614_
-    dword offset Func5f684_
-    dword offset Func5f6ee_
-    dword offset Func5f75b_
-    dword offset Func5f7c8_
-    dword offset Func5f841_
-    dword offset Func5f8ae_
-    dword offset Func5f91b_
-    dword offset Func5f985_
-    dword offset Func5f9a2_
-    dword offset Func5fa0c_
-    dword offset Func5fa79_
-    dword offset Func5fae6_
-    dword offset Func5fb5f_
-    dword offset Func5fbcc_
-    dword offset Func5fc39_
-    dword offset Func5fca3_
-    dword offset Func5fd13_
-    dword offset Func5fd7d_
-    dword offset Func5fdea_
-    dword offset Func5fe57_
-    dword offset Func5febb_
-    dword offset Func5ff25_
-    dword offset Func5ff89_
-    dword offset Func5ffea_
-    dword offset Func5ff89_
-    dword offset Func5ff25_
-    dword offset Func5febb_
-    dword offset Func5fe57_
-    dword offset Func5fdea_
-    dword offset Func5fd7d_
-    dword offset Func5fd13_
-    dword offset Func5fca3_
-    dword offset Func5fc39_
-    dword offset Func5fbcc_
-    dword offset Func5fb5f_
-    dword offset Func5fae6_
-    dword offset Func5fa79_
-    dword offset Func5fa0c_
-    dword offset Func5f9a2_
-    dword offset Func5f985_
-    dword offset Func5f91b_
-    dword offset Func5f8ae_
-    dword offset Func5f841_
-    dword offset Func5f7c8_
-    dword offset Func5f75b_
-    dword offset Func5f6ee_
-    dword offset Func5f684_
-    dword offset Func5f614_
-    dword offset Func5f5aa_
-    dword offset Func5f53d_
-    dword offset Func5f4d0_
-    dword offset Func5f46c_
-    dword offset Func5f402_
-    dword offset Func5f39e_
-    dword offset Func5f33d_
+colour_ops dword offset RPL124_FilterESIIdentity_
+    dword offset RPL124_FilterESIRed_
+    dword offset RPL124_FilterESIGreen_
+    dword offset RPL124_FilterESIBlue_
+    dword offset RPL124_FilterESIYellow_
+    dword offset RPL124_FilterESIMagenta_
+    dword offset RPL124_FilterESICyan_
+    dword offset RPL124_FilterESIHalf_
+    dword offset RPL124_FilterESIInvert_
+    dword offset RPL124_FilterESIInvertRed_
+    dword offset RPL124_FilterESIInvertGreen_
+    dword offset RPL124_FilterESIInvertBlue_
+    dword offset RPL124_FilterESIInvertYellow_
+    dword offset RPL124_FilterESIInvertMagenta_
+    dword offset RPL124_FilterESIInvertCyan_
+    dword offset RPL124_FilterESIGray5_
+    dword offset RPL124_FilterEBXIdentity_
+    dword offset RPL124_FilterEBXRed_
+    dword offset RPL124_FilterEBXGreen_
+    dword offset RPL124_FilterEBXBlue_
+    dword offset RPL124_FilterEBXYellow_
+    dword offset RPL124_FilterEBXMagenta_
+    dword offset RPL124_FilterEBXCyan_
+    dword offset RPL124_FilterEBXHalf_
+    dword offset RPL124_FilterEBXInvert_
+    dword offset RPL124_FilterEBXInvertRed_
+    dword offset RPL124_FilterEBXInvertGreen_
+    dword offset RPL124_FilterEBXInvertBlue_
+    dword offset RPL124_FilterEBXInvertYellow_
+    dword offset RPL124_FilterEBXInvertMagenta_
+    dword offset RPL124_FilterEBXInvertCyan_
+    dword offset RPL124_FilterEBXGray5_
+blend_ops dword offset RPL124_Blend00Of32_
+    dword offset RPL124_Blend01Of32_
+    dword offset RPL124_Blend02Of32_
+    dword offset RPL124_Blend03Of32_
+    dword offset RPL124_Blend04Of32_
+    dword offset RPL124_Blend05Of32_
+    dword offset RPL124_Blend06Of32_
+    dword offset RPL124_Blend07Of32_
+    dword offset RPL124_Blend08Of32_
+    dword offset RPL124_Blend09Of32_
+    dword offset RPL124_Blend10Of32_
+    dword offset RPL124_Blend11Of32_
+    dword offset RPL124_Blend12Of32_
+    dword offset RPL124_Blend13Of32_
+    dword offset RPL124_Blend14Of32_
+    dword offset RPL124_Blend15Of32_
+    dword offset RPL124_Blend16Of32_
+    dword offset RPL124_Blend17Of32_
+    dword offset RPL124_Blend18Of32_
+    dword offset RPL124_Blend19Of32_
+    dword offset RPL124_Blend20Of32_
+    dword offset RPL124_Blend21Of32_
+    dword offset RPL124_Blend22Of32_
+    dword offset RPL124_Blend23Of32_
+    dword offset RPL124_Blend24Of32_
+    dword offset RPL124_Blend25Of32_
+    dword offset RPL124_Blend26Of32_
+    dword offset RPL124_Blend27Of32_
+    dword offset RPL124_Blend28Of32_
+    dword offset RPL124_Blend29Of32_
+    dword offset RPL124_Blend30Of32_
+    dword offset RPL124_Blend31Of32_
+    dword offset RPL124_Blend32Of32_
+    dword offset RPL124_Blend31Of32_
+    dword offset RPL124_Blend30Of32_
+    dword offset RPL124_Blend29Of32_
+    dword offset RPL124_Blend28Of32_
+    dword offset RPL124_Blend27Of32_
+    dword offset RPL124_Blend26Of32_
+    dword offset RPL124_Blend25Of32_
+    dword offset RPL124_Blend24Of32_
+    dword offset RPL124_Blend23Of32_
+    dword offset RPL124_Blend22Of32_
+    dword offset RPL124_Blend21Of32_
+    dword offset RPL124_Blend20Of32_
+    dword offset RPL124_Blend19Of32_
+    dword offset RPL124_Blend18Of32_
+    dword offset RPL124_Blend17Of32_
+    dword offset RPL124_Blend16Of32_
+    dword offset RPL124_Blend15Of32_
+    dword offset RPL124_Blend14Of32_
+    dword offset RPL124_Blend13Of32_
+    dword offset RPL124_Blend12Of32_
+    dword offset RPL124_Blend11Of32_
+    dword offset RPL124_Blend10Of32_
+    dword offset RPL124_Blend09Of32_
+    dword offset RPL124_Blend08Of32_
+    dword offset RPL124_Blend07Of32_
+    dword offset RPL124_Blend06Of32_
+    dword offset RPL124_Blend05Of32_
+    dword offset RPL124_Blend04Of32_
+    dword offset RPL124_Blend03Of32_
+    dword offset RPL124_Blend02Of32_
+    dword offset RPL124_Blend01Of32_
 OBJ4 ends
 
     end

@@ -294,7 +294,7 @@ int EscapeFMV(int sequence, int mode)
     if (shandle)
         Player_StartSound(shandle);
 
-    while (mhandle->vdf < frames - frigfactor)
+    while (mhandle->decoded_frames < frames - frigfactor)
     {
         pRes = Player_Playframe(mhandle, vhandle, shandle, NULL, 0, 0, NULL, 0);
         if (pRes != PLAYER_OK)

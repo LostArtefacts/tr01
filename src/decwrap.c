@@ -1,43 +1,43 @@
-int __cdecl Func80bcd(void *dest, const void *src, int width, int height);
-int __cdecl Func879bd(void *dest, const void *src, int width, int height);
-int __cdecl Func8537e(int bank_a, int granularity);
-int __cdecl Func8c16e(int bank_a, int granularity);
-int __cdecl Func853b7(void *dest, const void *src, int a, int b, int c, int d, int e, int f, int g, int h);
-int __cdecl Func8c1a7(void *dest, const void *src, int a, int b, int c, int d, int e, int f, int g, int h);
+int __cdecl RPL124RGB555_DecodeFrame(void *compressed_data, const void *destination, int codebooks, int block_list);
+int __cdecl RPL124RGB565_DecodeFrame(void *compressed_data, const void *destination, int codebooks, int block_list);
+int __cdecl RPL124RGB555_SetBankMode(int bank_a, int granularity);
+int __cdecl RPL124RGB565_SetBankMode(int bank_a, int granularity);
+int __cdecl RPL124RGB555_BuildBlockList(void *width, const void *height, int x_offset, int y_offset, int clip_x, int clip_y, int clip_width, int clip_height, int flags, int block_list);
+int __cdecl RPL124RGB565_BuildBlockList(void *width, const void *height, int x_offset, int y_offset, int clip_x, int clip_y, int clip_width, int clip_height, int flags, int block_list);
 
-#pragma aux (__cdecl) Func80bcd "Func80bcd_";
-#pragma aux (__cdecl) Func879bd "Func879bd_";
-#pragma aux (__cdecl) Func8537e "Func8537e_";
-#pragma aux (__cdecl) Func8c16e "Func8c16e_";
-#pragma aux (__cdecl) Func853b7 "Func853b7_";
-#pragma aux (__cdecl) Func8c1a7 "Func8c1a7_";
+#pragma aux (__cdecl) RPL124RGB555_DecodeFrame "RPL124RGB555_DecodeFrame_";
+#pragma aux (__cdecl) RPL124RGB565_DecodeFrame "RPL124RGB565_DecodeFrame_";
+#pragma aux (__cdecl) RPL124RGB555_SetBankMode "RPL124RGB555_SetBankMode_";
+#pragma aux (__cdecl) RPL124RGB565_SetBankMode "RPL124RGB565_SetBankMode_";
+#pragma aux (__cdecl) RPL124RGB555_BuildBlockList "RPL124RGB555_BuildBlockList_";
+#pragma aux (__cdecl) RPL124RGB565_BuildBlockList "RPL124RGB565_BuildBlockList_";
 
-int Func58550(void *dest, const void *src, int width, int height)
+int RPL124_DecodeRGB555(void *compressed_data, const void *destination, int codebooks, int block_list)
 {
-    return Func80bcd(dest, src, width, height);
+    return RPL124RGB555_DecodeFrame(compressed_data, destination, codebooks, block_list);
 }
 
-int Func58560(void *dest, const void *src, int width, int height)
+int RPL124_DecodeRGB565(void *compressed_data, const void *destination, int codebooks, int block_list)
 {
-    return Func879bd(dest, src, width, height);
+    return RPL124RGB565_DecodeFrame(compressed_data, destination, codebooks, block_list);
 }
 
-int Func58570(int bank_a, int granularity)
+int RPL124_SetBankModeRGB555(int bank_a, int granularity)
 {
-    return Func8537e(bank_a, granularity);
+    return RPL124RGB555_SetBankMode(bank_a, granularity);
 }
 
-int Func58580(int bank_a, int granularity)
+int RPL124_SetBankModeRGB565(int bank_a, int granularity)
 {
-    return Func8c16e(bank_a, granularity);
+    return RPL124RGB565_SetBankMode(bank_a, granularity);
 }
 
-int Func58590(void *dest, const void *src, int a, int b, int c, int d, int e, int f, int g, int h)
+int RPL124_BuildRGB555BlockList(void *width, const void *height, int x_offset, int y_offset, int clip_x, int clip_y, int clip_width, int clip_height, int flags, int block_list)
 {
-    return Func853b7(dest, src, a, b, c, d, e, f, g, h);
+    return RPL124RGB555_BuildBlockList(width, height, x_offset, y_offset, clip_x, clip_y, clip_width, clip_height, flags, block_list);
 }
 
-int Func585c4(void *dest, const void *src, int a, int b, int c, int d, int e, int f, int g, int h)
+int RPL124_BuildRGB565BlockList(void *width, const void *height, int x_offset, int y_offset, int clip_x, int clip_y, int clip_width, int clip_height, int flags, int block_list)
 {
-    return Func8c1a7(dest, src, a, b, c, d, e, f, g, h);
+    return RPL124RGB565_BuildBlockList(width, height, x_offset, y_offset, clip_x, clip_y, clip_width, clip_height, flags, block_list);
 }

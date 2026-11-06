@@ -38,12 +38,12 @@ struct
     byte reserved[6];
 } dpmi_state;
 
-void *Func58f34(word segment, word shift)
+void *RPLDPMI_SegmentToPointer(word segment, word shift)
 {
     return (void *)((dword)segment << (shift + 4));
 }
 
-int Func58f48(int int_number, union REGS *in, union REGS *out)
+int RPLDPMI_RealInterrupt(int int_number, union REGS *in, union REGS *out)
 {
     memset(&dpmi_state.real, 0, sizeof(REALREGS));
     dpmi_state.real.eax = in->w.ax;
@@ -73,7 +73,7 @@ int Func58f48(int int_number, union REGS *in, union REGS *out)
     return out->w.ax;
 }
 
-int Func59064(int int_number, union REGS *in, union REGS *out, struct SREGS *segments)
+int RPLDPMI_RealInterruptWithSegments(int int_number, union REGS *in, union REGS *out, struct SREGS *segments)
 {
     memset(&dpmi_state.real, 0, sizeof(REALREGS));
     dpmi_state.real.eax = in->w.ax;
@@ -107,7 +107,7 @@ int Func59064(int int_number, union REGS *in, union REGS *out, struct SREGS *seg
     return out->w.ax;
 }
 
-byte Func591ac(word size, word *selector, word *segment)
+byte RPLDPMI_AllocateDOSMemory(word size, word *selector, word *segment)
 {
     dpmi_state.regs.w.ax = 0x100;
     dpmi_state.regs.w.bx = size / 16 + (size % 16 != 0);
@@ -117,7 +117,7 @@ byte Func591ac(word size, word *selector, word *segment)
     return !(dpmi_state.regs.x.cflag & 1);
 }
 
-byte Func59228(word selector)
+byte RPLDPMI_FreeDOSMemory(word selector)
 {
     dpmi_state.regs.w.ax = 0x101;
     dpmi_state.regs.w.dx = selector;

@@ -18,7 +18,7 @@ typedef struct
     byte info[0x3c];
     dword flags;
     byte reserved2[8];
-    short __far *irq_list;
+    short __far *dma_choices;
     byte reserved3[0x16];
     dword device_id;
     byte reserved4[0x30];
@@ -42,103 +42,103 @@ typedef struct
 } SOSFILEENTRY;
 #pragma pack()
 
-extern dword Datac8128;
-extern char Datac81ac[128];
-extern SOSFILEHEADER Datac822c;
-extern SOSFILEENTRY Datac8258;
-extern byte Datac8288[0x6c];
-extern byte *Datac82f4;
-extern void __far *Datac82f8;
-extern void __far *Datac8300;
-extern int Datac8308;
-extern dword Datac830c;
-extern dword Datac8310;
-extern dword Datac8314;
-extern dword Datac8318;
-extern char *Datac831c[];
-extern dword Datac85a4;
-extern dword Datac85a8;
-extern dword Datac85ac;
-extern dword Datac85b0;
+extern dword sos_detect_flags;
+extern char sos_detect_filename[128];
+extern SOSFILEHEADER sos_detect_file_header;
+extern SOSFILEENTRY sos_detect_file_entry;
+extern byte sos_detect_driver_info[0x6c];
+extern byte *sos_detect_current_info;
+extern void __far *sos_detect_image_offset;
+extern void __far *sos_detect_data_offset;
+extern int sos_detect_file_handle;
+extern dword sos_detect_driver_file_offset;
+extern dword sos_detect_entry_index;
+extern dword sos_detect_memory_handle;
+extern dword sos_detect_linear_base;
+extern char *sos_error_messages[];
+extern dword sos_detect_port;
+extern dword sos_detect_dma;
+extern dword sos_detect_irq;
+extern dword sos_detect_hardware;
 
-void __far *__cdecl Func56da7(dword, dword *, dword *);
-void __far *__cdecl Func56e89(void __far *);
-int __cdecl Func56d2d(void *, dword);
-int __cdecl Func56d6a(void *, dword);
-void __cdecl Func56e53(void __far *, dword);
-dword __cdecl Func57000(void __far *, void __far *);
-void __cdecl Func57023(void __far *, void __far *);
-void __cdecl Func57067(void __far *, void __far *, void *);
-dword __cdecl Func570bd(void __far *, dword, dword, dword, void __far *);
-void __cdecl Func571e5(dword);
-void __cdecl Func5721a(dword);
-void __cdecl Func5724f(void __far *, void __far *);
-char *__cdecl Func5728e(dword);
-void __cdecl Func572d8(dword, char *);
-#pragma aux (__cdecl) Func56da7 "Func56da7_";
-#pragma aux (__cdecl) Func56e89 "Func56e89_";
-#pragma aux (__cdecl) Func56d2d "Func56d2d_";
-#pragma aux (__cdecl) Func56d6a "Func56d6a_";
-#pragma aux (__cdecl) Func56e53 "Func56e53_";
-#pragma aux (__cdecl) Func57000 "Func57000_";
-#pragma aux (__cdecl) Func57023 "Func57023_";
-#pragma aux (__cdecl) Func57067 "Func57067_";
-#pragma aux (__cdecl) Func570bd "Func570bd_";
-#pragma aux (__cdecl) Func571e5 "Func571e5_";
-#pragma aux (__cdecl) Func5721a "Func5721a_";
-#pragma aux (__cdecl) Func5724f "Func5724f_";
-#pragma aux (__cdecl) Func5728e "Func5728e_";
-#pragma aux (__cdecl) Func572d8 "Func572d8_";
+void __far *__cdecl sosDPMIAllocateLinearMemory(dword, dword *, dword *);
+void __far *__cdecl sosDPMICreateCodeAlias(void __far *);
+int __cdecl sosDPMILockMemory(void *, dword);
+int __cdecl sosDPMIUnlockMemory(void *, dword);
+void __cdecl sosDPMIFreeLinearMemory(void __far *, dword);
+dword __cdecl sosDETECTProbe(void __far *, void __far *);
+void __cdecl sosDETECTProbeSettings(void __far *, void __far *);
+void __cdecl sosDETECTGetDriverInfo(void __far *, void __far *, void *);
+dword __cdecl sosDETECTTestSettings(void __far *, dword, dword, dword, void __far *);
+void __cdecl sosVDSDisableDMATranslation(dword);
+void __cdecl sosVDSEnableDMATranslation(dword);
+void __cdecl sosDETECTGetEnvironmentTables(void __far *, void __far *);
+char *__cdecl sosDETECTGetEnvironmentName(dword);
+void __cdecl sosDETECTSetEnvironmentValue(dword, char *);
+#pragma aux (__cdecl) sosDPMIAllocateLinearMemory "sosDPMIAllocateLinearMemory_";
+#pragma aux (__cdecl) sosDPMICreateCodeAlias "sosDPMICreateCodeAlias_";
+#pragma aux (__cdecl) sosDPMILockMemory "sosDPMILockMemory_";
+#pragma aux (__cdecl) sosDPMIUnlockMemory "sosDPMIUnlockMemory_";
+#pragma aux (__cdecl) sosDPMIFreeLinearMemory "sosDPMIFreeLinearMemory_";
+#pragma aux (__cdecl) sosDETECTProbe "sosDETECTProbe_";
+#pragma aux (__cdecl) sosDETECTProbeSettings "sosDETECTProbeSettings_";
+#pragma aux (__cdecl) sosDETECTGetDriverInfo "sosDETECTGetDriverInfo_";
+#pragma aux (__cdecl) sosDETECTTestSettings "sosDETECTTestSettings_";
+#pragma aux (__cdecl) sosVDSDisableDMATranslation "sosVDSDisableDMATranslation_";
+#pragma aux (__cdecl) sosVDSEnableDMATranslation "sosVDSEnableDMATranslation_";
+#pragma aux (__cdecl) sosDETECTGetEnvironmentTables "sosDETECTGetEnvironmentTables_";
+#pragma aux (__cdecl) sosDETECTGetEnvironmentName "sosDETECTGetEnvironmentName_";
+#pragma aux (__cdecl) sosDETECTSetEnvironmentValue "sosDETECTSetEnvironmentValue_";
 
-void Func59b67(void)
+void sosDETECTCodeStart(void)
 {
 }
 
-int Func59b7c(char *path)
+int sosDETECTInit(char *path)
 {
     dword index;
     dword size;
 
-    if (Datac8128 & 1) {
+    if (sos_detect_flags & 1) {
         return 3;
     }
     if (path) {
-        strcpy(Datac81ac, path);
-        strcat(Datac81ac, "hmidet.386");
+        strcpy(sos_detect_filename, path);
+        strcat(sos_detect_filename, "hmidet.386");
     } else {
-        strcpy(Datac81ac, "hmidet.386");
+        strcpy(sos_detect_filename, "hmidet.386");
     }
-    Datac8308 = open(Datac81ac, 0x200);
-    if (Datac8308 == -1) {
+    sos_detect_file_handle = open(sos_detect_filename, 0x200);
+    if (sos_detect_file_handle == -1) {
         return 15;
     }
-    read(Datac8308, &Datac822c, sizeof(SOSFILEHEADER));
-    Datac82f8 = Func56da7(0x1000, &Datac8314, &Datac8318);
-    if (Datac82f8 == 0) {
+    read(sos_detect_file_handle, &sos_detect_file_header, sizeof(SOSFILEHEADER));
+    sos_detect_image_offset = sosDPMIAllocateLinearMemory(0x1000, &sos_detect_memory_handle, &sos_detect_linear_base);
+    if (sos_detect_image_offset == 0) {
         return 5;
     }
-    Datac8300 = Func56e89(Datac82f8);
-    if (Func56d2d((void *)Datac8318, 0x1000)) {
+    sos_detect_data_offset = sosDPMICreateCodeAlias(sos_detect_image_offset);
+    if (sosDPMILockMemory((void *)sos_detect_linear_base, 0x1000)) {
         return 5;
     }
-    _lseek(Datac8308, 0, 0);
-    Datac8128 |= 1;
+    _lseek(sos_detect_file_handle, 0, 0);
+    sos_detect_flags |= 1;
     return 0;
 }
 
-int Func59cc9(void)
+int sosDETECTUninit(void)
 {
-    Datac8128 &= ~1;
-    close(Datac8308);
-    if (Func56d6a((void *)Datac8318, 0x1000)) {
+    sos_detect_flags &= ~1;
+    close(sos_detect_file_handle);
+    if (sosDPMIUnlockMemory((void *)sos_detect_linear_base, 0x1000)) {
         return 5;
     }
-    Func56e53(Datac82f8, Datac8314);
-    Func56e53(Datac8300, Datac8314);
+    sosDPMIFreeLinearMemory(sos_detect_image_offset, sos_detect_memory_handle);
+    sosDPMIFreeLinearMemory(sos_detect_data_offset, sos_detect_memory_handle);
     return 0;
 }
 
-int Func59d51(dword id, SOSDRIVER *driver)
+int sosDETECTFindHardware(dword id, SOSDRIVER *driver)
 {
     int found;
     dword port;
@@ -158,39 +158,39 @@ int Func59d51(dword id, SOSDRIVER *driver)
     if (id < 0xe000 || id > 0xe200) {
         return 6;
     }
-    Datac8310 = 0;
-    _lseek(Datac8308, 0, 0);
-    read(Datac8308, &Datac822c, sizeof(SOSFILEHEADER));
-    while (Datac8310 <= Datac822c.count && !found) {
-        position = _lseek(Datac8308, 0, 1);
-        read(Datac8308, &Datac8258, sizeof(SOSFILEENTRY));
-        size = Datac8258.size;
-        if (Datac8258.id == id && (Datac8258.flags & 0x8000)) {
+    sos_detect_entry_index = 0;
+    _lseek(sos_detect_file_handle, 0, 0);
+    read(sos_detect_file_handle, &sos_detect_file_header, sizeof(SOSFILEHEADER));
+    while (sos_detect_entry_index <= sos_detect_file_header.count && !found) {
+        position = _lseek(sos_detect_file_handle, 0, 1);
+        read(sos_detect_file_handle, &sos_detect_file_entry, sizeof(SOSFILEENTRY));
+        size = sos_detect_file_entry.size;
+        if (sos_detect_file_entry.id == id && (sos_detect_file_entry.flags & 0x8000)) {
             found = 1;
-            _dos_read(Datac8308, Datac82f8, size, &bytes_read);
+            _dos_read(sos_detect_file_handle, sos_detect_image_offset, size, &bytes_read);
         } else {
-            _lseek(Datac8308, size, 1);
+            _lseek(sos_detect_file_handle, size, 1);
         }
-        Datac8310++;
+        sos_detect_entry_index++;
     }
     if (found) {
-        Func57067(Datac8300, Datac82f8, Datac8288);
-        if (Datac8288[0x3d] & 1) {
-            Func5724f(Datac8300, Datac82f8);
+        sosDETECTGetDriverInfo(sos_detect_data_offset, sos_detect_image_offset, sos_detect_driver_info);
+        if (sos_detect_driver_info[0x3d] & 1) {
+            sosDETECTGetEnvironmentTables(sos_detect_data_offset, sos_detect_image_offset);
             env_index = 0;
-            while (Func5728e(env_index)) {
-                env = getenv(Func5728e(env_index));
-                Func572d8(env_index, env);
+            while (sosDETECTGetEnvironmentName(env_index)) {
+                env = getenv(sosDETECTGetEnvironmentName(env_index));
+                sosDETECTSetEnvironmentValue(env_index, env);
                 env_index++;
             }
         }
-        port = Func57000(Datac8300, Datac82f8);
+        port = sosDETECTProbe(sos_detect_data_offset, sos_detect_image_offset);
         if (port) {
-            Func57067(Datac8300, Datac82f8, driver->info);
-            Datac82f4 = driver->info;
+            sosDETECTGetDriverInfo(sos_detect_data_offset, sos_detect_image_offset, driver->info);
+            sos_detect_current_info = driver->info;
             driver->port = port;
             driver->loaded_device_id = driver->device_id;
-            Datac830c = position;
+            sos_detect_driver_file_offset = position;
             return 0;
         } else {
             return 8;
@@ -200,7 +200,7 @@ int Func59d51(dword id, SOSDRIVER *driver)
     }
 }
 
-int Func59fc8(dword id, SOSDRIVER *driver)
+int sosDETECTLoadDriverInfo(dword id, SOSDRIVER *driver)
 {
     dword size;
     int found;
@@ -214,32 +214,32 @@ int Func59fc8(dword id, SOSDRIVER *driver)
     if (id < 0xe000 || id > 0xe200) {
         return 6;
     }
-    Datac8310 = 0;
-    _lseek(Datac8308, 0, 0);
-    read(Datac8308, &Datac822c, sizeof(SOSFILEHEADER));
-    while (Datac8310 <= Datac822c.count && !found) {
-        position = _lseek(Datac8308, 0, 1);
-        read(Datac8308, &Datac8258, sizeof(SOSFILEENTRY));
-        size = Datac8258.size;
-        if (Datac8258.id == id && (Datac8258.flags & 0x8000)) {
+    sos_detect_entry_index = 0;
+    _lseek(sos_detect_file_handle, 0, 0);
+    read(sos_detect_file_handle, &sos_detect_file_header, sizeof(SOSFILEHEADER));
+    while (sos_detect_entry_index <= sos_detect_file_header.count && !found) {
+        position = _lseek(sos_detect_file_handle, 0, 1);
+        read(sos_detect_file_handle, &sos_detect_file_entry, sizeof(SOSFILEENTRY));
+        size = sos_detect_file_entry.size;
+        if (sos_detect_file_entry.id == id && (sos_detect_file_entry.flags & 0x8000)) {
             found = 1;
-            _dos_read(Datac8308, Datac82f8, size, &bytes_read);
+            _dos_read(sos_detect_file_handle, sos_detect_image_offset, size, &bytes_read);
         } else {
-            _lseek(Datac8308, size, 1);
+            _lseek(sos_detect_file_handle, size, 1);
         }
-        Datac8310++;
+        sos_detect_entry_index++;
     }
     if (found) {
-        Func57067(Datac8300, Datac82f8, driver->info);
-        Datac82f4 = driver->info;
-        Datac830c = position;
+        sosDETECTGetDriverInfo(sos_detect_data_offset, sos_detect_image_offset, driver->info);
+        sos_detect_current_info = driver->info;
+        sos_detect_driver_file_offset = position;
         return 0;
     } else {
         return 7;
     }
 }
 
-int Func5a142(SOSDRIVER *driver)
+int sosDETECTFindFirst(SOSDRIVER *driver)
 {
     dword size;
     int found;
@@ -257,43 +257,43 @@ int Func5a142(SOSDRIVER *driver)
         return 2;
     }
     port = 0;
-    Datac8310 = 0;
-    _lseek(Datac8308, 0, 0);
-    read(Datac8308, &Datac822c, sizeof(SOSFILEHEADER));
-    while (Datac8310 <= Datac822c.count && !found) {
-        position = _lseek(Datac8308, 0, 1);
-        read(Datac8308, &Datac8258, sizeof(SOSFILEENTRY));
-        size = Datac8258.size;
-        if (Datac8258.flags & 0x8000) {
-            _dos_read(Datac8308, Datac82f8, size, &bytes_read);
-            Func57067(Datac8300, Datac82f8, Datac8288);
-            if (Datac8288[0x3d] & 1) {
-                Func5724f(Datac8300, Datac82f8);
+    sos_detect_entry_index = 0;
+    _lseek(sos_detect_file_handle, 0, 0);
+    read(sos_detect_file_handle, &sos_detect_file_header, sizeof(SOSFILEHEADER));
+    while (sos_detect_entry_index <= sos_detect_file_header.count && !found) {
+        position = _lseek(sos_detect_file_handle, 0, 1);
+        read(sos_detect_file_handle, &sos_detect_file_entry, sizeof(SOSFILEENTRY));
+        size = sos_detect_file_entry.size;
+        if (sos_detect_file_entry.flags & 0x8000) {
+            _dos_read(sos_detect_file_handle, sos_detect_image_offset, size, &bytes_read);
+            sosDETECTGetDriverInfo(sos_detect_data_offset, sos_detect_image_offset, sos_detect_driver_info);
+            if (sos_detect_driver_info[0x3d] & 1) {
+                sosDETECTGetEnvironmentTables(sos_detect_data_offset, sos_detect_image_offset);
                 env_index = 0;
-                while (Func5728e(env_index)) {
-                    env = getenv(Func5728e(env_index));
-                    Func572d8(env_index, env);
+                while (sosDETECTGetEnvironmentName(env_index)) {
+                    env = getenv(sosDETECTGetEnvironmentName(env_index));
+                    sosDETECTSetEnvironmentValue(env_index, env);
                     env_index++;
                 }
             }
-            port = Func57000(Datac8300, Datac82f8);
+            port = sosDETECTProbe(sos_detect_data_offset, sos_detect_image_offset);
             if (port) {
-                Datac830c = position;
-                Func57067(Datac8300, Datac82f8, driver->info);
-                Datac82f4 = driver->info;
+                sos_detect_driver_file_offset = position;
+                sosDETECTGetDriverInfo(sos_detect_data_offset, sos_detect_image_offset, driver->info);
+                sos_detect_current_info = driver->info;
                 driver->port = port;
                 driver->loaded_device_id = driver->device_id;
                 return 0;
             }
         } else {
-            _lseek(Datac8308, size, 1);
+            _lseek(sos_detect_file_handle, size, 1);
         }
-        Datac8310++;
+        sos_detect_entry_index++;
     }
     return 7;
 }
 
-int Func5a37f(SOSDRIVER *driver)
+int sosDETECTFindNext(SOSDRIVER *driver)
 {
     dword size;
     int found;
@@ -311,64 +311,64 @@ int Func5a37f(SOSDRIVER *driver)
         return 2;
     }
     port = 0;
-    while (Datac8310 <= Datac822c.count && !found) {
-        position = _lseek(Datac8308, 0, 1);
-        read(Datac8308, &Datac8258, sizeof(SOSFILEENTRY));
-        size = Datac8258.size;
-        if (Datac8258.flags & 0x8000) {
-            _dos_read(Datac8308, Datac82f8, size, &bytes_read);
-            Func57067(Datac8300, Datac82f8, Datac8288);
-            if (Datac8288[0x3d] & 1) {
-                Func5724f(Datac8300, Datac82f8);
+    while (sos_detect_entry_index <= sos_detect_file_header.count && !found) {
+        position = _lseek(sos_detect_file_handle, 0, 1);
+        read(sos_detect_file_handle, &sos_detect_file_entry, sizeof(SOSFILEENTRY));
+        size = sos_detect_file_entry.size;
+        if (sos_detect_file_entry.flags & 0x8000) {
+            _dos_read(sos_detect_file_handle, sos_detect_image_offset, size, &bytes_read);
+            sosDETECTGetDriverInfo(sos_detect_data_offset, sos_detect_image_offset, sos_detect_driver_info);
+            if (sos_detect_driver_info[0x3d] & 1) {
+                sosDETECTGetEnvironmentTables(sos_detect_data_offset, sos_detect_image_offset);
                 env_index = 0;
-                while (Func5728e(env_index)) {
-                    env = getenv(Func5728e(env_index));
-                    Func572d8(env_index, env);
+                while (sosDETECTGetEnvironmentName(env_index)) {
+                    env = getenv(sosDETECTGetEnvironmentName(env_index));
+                    sosDETECTSetEnvironmentValue(env_index, env);
                     env_index++;
                 }
             }
-            port = Func57000(Datac8300, Datac82f8);
+            port = sosDETECTProbe(sos_detect_data_offset, sos_detect_image_offset);
             if (port) {
-                Datac830c = position;
-                Func57067(Datac8300, Datac82f8, driver->info);
-                Datac82f4 = driver->info;
+                sos_detect_driver_file_offset = position;
+                sosDETECTGetDriverInfo(sos_detect_data_offset, sos_detect_image_offset, driver->info);
+                sos_detect_current_info = driver->info;
                 driver->port = port;
                 driver->loaded_device_id = driver->device_id;
                 return 0;
             }
         } else {
-            _lseek(Datac8308, size, 1);
+            _lseek(sos_detect_file_handle, size, 1);
         }
-        Datac8310++;
+        sos_detect_entry_index++;
     }
     return 7;
 }
 
-int Func5a590(SOSDRIVER *driver)
+int sosDETECTGetSettings(SOSDRIVER *driver)
 {
     dword index;
 
     if (!driver) {
         return 2;
     }
-    _lseek(Datac8308, Datac830c, 0);
+    _lseek(sos_detect_file_handle, sos_detect_driver_file_offset, 0);
     index = 0;
-    while ((word)driver->irq_list[index] != 0xffff) {
-        Func571e5(driver->irq_list[index]);
+    while ((word)driver->dma_choices[index] != 0xffff) {
+        sosVDSDisableDMATranslation(driver->dma_choices[index]);
         index++;
     }
-    Func57023(Datac8300, Datac82f8);
+    sosDETECTProbeSettings(sos_detect_data_offset, sos_detect_image_offset);
     index = 0;
-    while ((word)driver->irq_list[index] != 0xffff) {
-        Func5721a(driver->irq_list[index]);
+    while ((word)driver->dma_choices[index] != 0xffff) {
+        sosVDSEnableDMATranslation(driver->dma_choices[index]);
         index++;
     }
-    driver->port = Datac85a4;
-    driver->dma = Datac85a8;
-    driver->irq = Datac85ac;
-    driver->hardware = Datac85b0;
+    driver->port = sos_detect_port;
+    driver->dma = sos_detect_dma;
+    driver->irq = sos_detect_irq;
+    driver->hardware = sos_detect_hardware;
     if (!(driver->flags & 1)) {
-        if (Datac85ac > 1 && Datac85ac < 16) {
+        if (sos_detect_irq > 1 && sos_detect_irq < 16) {
             return 0;
         } else {
             return 17;
@@ -378,7 +378,7 @@ int Func5a590(SOSDRIVER *driver)
     }
 }
 
-int Func5a710(SOSDRIVER *driver)
+int sosDETECTVerifySettings(SOSDRIVER *driver)
 {
     dword port;
     dword irq;
@@ -398,25 +398,25 @@ int Func5a710(SOSDRIVER *driver)
             return 17;
         }
     }
-    Func571e5(driver->dma);
-    result = Func570bd(Datac8300, port, irq, dma, Datac82f8);
-    Func5721a(driver->dma);
+    sosVDSDisableDMATranslation(driver->dma);
+    result = sosDETECTTestSettings(sos_detect_data_offset, port, irq, dma, sos_detect_image_offset);
+    sosVDSEnableDMATranslation(driver->dma);
     return result;
 }
 
-void Func5a7cb(void)
+void sosDETECTCodeEnd(void)
 {
 }
 
-void Func5a7e0(void)
+void sosERRORCodeStart(void)
 {
 }
 
-char *Func5a7f5(dword error)
+char *sosGetErrorString(dword error)
 {
-    return Datac831c[error];
+    return sos_error_messages[error];
 }
 
-void Func5a81f(void)
+void sosERRORCodeEnd(void)
 {
 }

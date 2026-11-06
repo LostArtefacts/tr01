@@ -33,258 +33,258 @@ struct SOSSAMPLE
 typedef struct
 {
     dword flags;
-    dword field04;
-    dword field08;
-    dword field0c;
-    dword field10;
+    dword sample_rate;
+    dword output_channels;
+    dword output_bits;
+    dword output_format;
     dword max_samples;
-    dword field18;
-    dword field1c;
-    dword field20;
-    dword field24;
-    byte *field28;
-    dword field2c;
+    dword dma_count_port;
+    dword dma_position;
+    dword last_dma_position;
+    dword bytes_to_mix;
+    byte *write_cursor;
+    dword write_ahead_bytes;
     SOSSAMPLE *active;
     void __far *callback;
     word reserved3a;
     byte *buffer;
-    byte *field40;
-    dword field44;
+    byte *buffer_end;
+    dword buffer_size;
     byte *mix_buffer;
-    byte *field4c;
-    dword field50;
-    dword field54;
+    byte *mix_buffer_limit;
+    dword mix_buffer_size;
+    dword active_samples;
     SOSSAMPLE *samples;
-    dword field5c;
-    dword field60;
-    dword field64;
-    dword field68;
-    dword field6c;
-    dword field70;
-    dword field74;
-    dword field78;
-    dword field7c;
-    dword field80;
-    dword field84;
-    dword field88;
-    dword field8c;
-    dword field90;
-    dword field94;
-    dword field98;
-    dword field9c;
-    dword fielda0;
-    dword fielda4;
-    dword fielda8;
-    dword fieldac;
-    dword fieldb0;
-    dword fieldb4;
-    dword fieldb8;
-    dword fieldbc;
-    dword fieldc0;
-    dword fieldc4;
-    dword fieldc8;
-    dword fieldcc;
-    dword fieldd0;
-    dword fieldd4;
-    void __far *imaged8;
+    dword port;
+    dword irq;
+    dword dma;
+    dword hardware;
+    dword driver_name_word0;
+    dword driver_name_word1;
+    dword driver_name_word2;
+    dword driver_name_word3;
+    dword driver_name_word4;
+    dword driver_name_word5;
+    dword driver_name_word6;
+    dword driver_name_word7;
+    dword unused_info_word0;
+    dword driver_bits;
+    dword stereo_mode;
+    dword min_sample_rate;
+    dword max_sample_rate;
+    dword unused_info_word1;
+    dword unused_info_word2;
+    dword capabilities;
+    dword port_choices_offset;
+    dword port_choices_selector;
+    dword dma_choices_offset;
+    dword dma_choices_selector;
+    dword irq_choices_offset;
+    dword irq_choices_selector;
+    dword aux_choices_offset;
+    dword aux_choices_selector;
+    dword unused_info_word3;
+    dword driver_info_id;
+    dword unused_info_word4;
+    void __far *image;
     word reservedde;
-    void __far *imagee0;
+    void __far *entry_point;
     word reservede6;
-    dword fielde8;
-    dword fieldec;
-    dword fieldf0;
+    dword locked_size;
+    dword locked_buffer;
+    dword dma_physical_address;
     void __far *buffer_pointer;
     word reservedfa;
-    dword fieldfc;
-    dword field100;
-    dword field104;
+    dword image_memory_handle;
+    dword dma_memory_handle;
+    dword driver_id;
     void (*timer)(void);
 } SOSDRIVER;
 #pragma pack()
 
-extern dword Datac7e50;
-extern char Datac7e54[];
-extern SOSDRIVER *Datac7f54[];
-extern dword Datac837c[];
-extern void (*Datac839c[])(void);
-extern dword Datac7f68[];
-extern dword Datac7f74;
-int Func561b6(void);
-int Func56528(void);
-void __cdecl Func57539(SOSDRIVER *driver);
-#pragma aux (__cdecl) Func57539 "Func57539_";
+extern dword sos_digi_flags;
+extern char sos_driver_directory[];
+extern SOSDRIVER *sos_drivers[];
+extern dword sos_dma_count_ports[];
+extern void (*sos_driver_mix_callbacks[])(void);
+extern dword sos_vds_buffer_descriptor[];
+extern dword sos_vds_buffer_physical_address;
+int sosLockSystem(void);
+int sosUnlockSystem(void);
+void __cdecl sosMIXUpdateDriver(SOSDRIVER *driver);
+#pragma aux (__cdecl) sosMIXUpdateDriver "sosMIXUpdateDriver_";
 
-int Func568e3(dword id, dword handle, void __far **data, void __far **image, dword *flags, byte *format, dword *base);
-int Func56ac5(dword handle);
-void *Func56bb5(dword size);
-void Func56bf2(void *pointer);
-int Func56c90(dword handle, void *config);
-byte *Func4e387(dword size, dword *physical, dword *handle, void __far **pointer);
-int Func4e450(void __far **pointer, dword *handle, dword *physical);
-void Func4e56c(dword selector, dword handle, dword physical);
-dword __cdecl Func57339(void);
-int __cdecl Func56d2d(void *begin, dword size);
-int __cdecl Func56ee6(dword size, dword *physical, dword *selector);
-int __cdecl Func56f1c(dword selector);
-int __cdecl Func57356(dword size, dword *selector, dword *handle);
-int __cdecl Func57397(dword selector, dword handle);
-int __cdecl Func573c5(dword handle);
-int __cdecl Func57431(dword handle);
-void *__cdecl Func5747e(dword physical);
-void __far *__cdecl Func574de(void __far *data, void __far *image);
-void __cdecl Func571e5(dword dma);
-void __cdecl Func57110(void __far *data, void __far *image, dword port, dword irq, dword dma, dword a, dword b, dword c);
-void __cdecl Func57194(void __far *data, void __far *image);
-void __cdecl Func5716e(void __far *data, void __far *image, dword rate);
-void __cdecl Func57145(void __far *data, void __far *image, dword physical, dword size);
-void __cdecl Func56fdd(void __far *data, void __far *image);
-void __cdecl Func570ed(void __far *data, void __far *image);
-void __cdecl Func5721a(dword dma);
-#pragma aux (__cdecl) Func57339 "Func57339_";
-#pragma aux (__cdecl) Func56d2d "Func56d2d_";
-#pragma aux (__cdecl) Func56ee6 "Func56ee6_";
-#pragma aux (__cdecl) Func56f1c "Func56f1c_";
-#pragma aux (__cdecl) Func57356 "Func57356_";
-#pragma aux (__cdecl) Func57397 "Func57397_";
-#pragma aux (__cdecl) Func573c5 "Func573c5_";
-#pragma aux (__cdecl) Func57431 "Func57431_";
-#pragma aux (__cdecl) Func5747e "Func5747e_";
-#pragma aux (__cdecl) Func574de "Func574de_";
-#pragma aux (__cdecl) Func571e5 "Func571e5_";
-#pragma aux (__cdecl) Func57110 "Func57110_";
-#pragma aux (__cdecl) Func57194 "Func57194_";
-#pragma aux (__cdecl) Func5716e "Func5716e_";
-#pragma aux (__cdecl) Func57145 "Func57145_";
-#pragma aux (__cdecl) Func56fdd "Func56fdd_";
-#pragma aux (__cdecl) Func570ed "Func570ed_";
-#pragma aux (__cdecl) Func5721a "Func5721a_";
+int sosLoadDriver(dword id, dword handle, void __far **data, void __far **image, dword *flags, byte *format, dword *base);
+int sosUnloadDriver(dword handle);
+void *sosAllocate(dword size);
+void sosFree(void *pointer);
+int sosGetDriverConfig(dword handle, void *config);
+byte *sosDIGIAllocateDMABuffer(dword size, dword *physical, dword *handle, void __far **pointer);
+int sosDIGIAllocateVDSBuffer(void __far **pointer, dword *handle, dword *physical);
+void sosDIGIFreeVDSBuffer(dword selector, dword handle, dword physical);
+dword __cdecl sosGetWindowsVersion(void);
+int __cdecl sosDPMILockMemory(void *begin, dword size);
+int __cdecl sosDPMIAllocateDOSBuffer(dword size, dword *physical, dword *selector);
+int __cdecl sosDPMIFreeDOSBuffer(dword selector);
+int __cdecl sosDPMIAllocateDOSMemory(dword size, dword *selector, dword *handle);
+int __cdecl sosDPMIFreeDOSMemory(dword selector, dword handle);
+int __cdecl sosVDSLockBuffer(dword handle);
+int __cdecl sosVDSUnlockBuffer(dword handle);
+void *__cdecl sosDPMIMapPhysicalMemory(dword physical);
+void __far *__cdecl sosDRIVERGetDMAPositionCallback(void __far *data, void __far *image);
+void __cdecl sosVDSDisableDMATranslation(dword dma);
+void __cdecl sosDRIVERInit(void __far *data, void __far *image, dword port, dword irq, dword dma, dword a, dword b, dword c);
+void __cdecl sosDRIVERSetSampleSize(void __far *data, void __far *image);
+void __cdecl sosDRIVERSetRate(void __far *data, void __far *image, dword rate);
+void __cdecl sosDRIVERSetBuffer(void __far *data, void __far *image, dword physical, dword size);
+void __cdecl sosDRIVERStop(void __far *data, void __far *image);
+void __cdecl sosDRIVERUninit(void __far *data, void __far *image);
+void __cdecl sosVDSEnableDMATranslation(dword dma);
+#pragma aux (__cdecl) sosGetWindowsVersion "sosGetWindowsVersion_";
+#pragma aux (__cdecl) sosDPMILockMemory "sosDPMILockMemory_";
+#pragma aux (__cdecl) sosDPMIAllocateDOSBuffer "sosDPMIAllocateDOSBuffer_";
+#pragma aux (__cdecl) sosDPMIFreeDOSBuffer "sosDPMIFreeDOSBuffer_";
+#pragma aux (__cdecl) sosDPMIAllocateDOSMemory "sosDPMIAllocateDOSMemory_";
+#pragma aux (__cdecl) sosDPMIFreeDOSMemory "sosDPMIFreeDOSMemory_";
+#pragma aux (__cdecl) sosVDSLockBuffer "sosVDSLockBuffer_";
+#pragma aux (__cdecl) sosVDSUnlockBuffer "sosVDSUnlockBuffer_";
+#pragma aux (__cdecl) sosDPMIMapPhysicalMemory "sosDPMIMapPhysicalMemory_";
+#pragma aux (__cdecl) sosDRIVERGetDMAPositionCallback "sosDRIVERGetDMAPositionCallback_";
+#pragma aux (__cdecl) sosVDSDisableDMATranslation "sosVDSDisableDMATranslation_";
+#pragma aux (__cdecl) sosDRIVERInit "sosDRIVERInit_";
+#pragma aux (__cdecl) sosDRIVERSetSampleSize "sosDRIVERSetSampleSize_";
+#pragma aux (__cdecl) sosDRIVERSetRate "sosDRIVERSetRate_";
+#pragma aux (__cdecl) sosDRIVERSetBuffer "sosDRIVERSetBuffer_";
+#pragma aux (__cdecl) sosDRIVERStop "sosDRIVERStop_";
+#pragma aux (__cdecl) sosDRIVERUninit "sosDRIVERUninit_";
+#pragma aux (__cdecl) sosVDSEnableDMATranslation "sosVDSEnableDMATranslation_";
 
-void Func4dc7a(void)
+void sosDIGISystemCodeStart(void)
 {
 }
 
-int Func4dc8f(char *path, dword flags)
+int sosDIGIInitSystem(char *path, dword flags)
 {
     int error;
 
-    error = Func561b6();
+    error = sosLockSystem();
     if (error) {
         return error;
     }
-    Datac7e50 |= 1;
+    sos_digi_flags |= 1;
     if (path) {
-        strcpy(Datac7e54, path);
+        strcpy(sos_driver_directory, path);
     } else {
-        Datac7e54[0] = 0;
+        sos_driver_directory[0] = 0;
     }
     return 0;
 }
 
-int Func4dceb(void)
+int sosDIGIUninitSystem(void)
 {
     int error;
 
-    error = Func56528();
+    error = sosUnlockSystem();
     if (error) {
         return 0;
     }
-    Datac7e50 &= ~1;
+    sos_digi_flags &= ~1;
     return 0;
 }
 
-void Func4dd28(void)
+void sosDIGISystemCodeEnd(void)
 {
 }
 
-void Func4dd3d(void)
+void sosDIGIDriverCodeStart(void)
 {
 }
 
-int Func4dd52(SOSDRIVER *driver, dword *handle)
+int sosDIGIInitDriver(SOSDRIVER *driver, dword *handle)
 {
     dword index;
     dword i;
     int error;
 
     for (index = 0; index < 5; index++) {
-        if (!Datac7f54[index]) {
+        if (!sos_drivers[index]) {
             break;
         }
     }
     if (index == 6) {
         return 11;
     }
-    Datac7f54[index] = driver;
-    if (!driver->imaged8) {
-        error = Func568e3(driver->field104, index, &driver->imagee0, &driver->imaged8, &driver->fieldfc, (byte *)&driver->fielde8, &driver->fieldec);
+    sos_drivers[index] = driver;
+    if (!driver->image) {
+        error = sosLoadDriver(driver->driver_id, index, &driver->entry_point, &driver->image, &driver->image_memory_handle, (byte *)&driver->locked_size, &driver->locked_buffer);
         if (error) {
             return error;
         }
-        driver->samples = Func56bb5(0x1e00);
-        driver->mix_buffer = Func56bb5(0x4000);
+        driver->samples = sosAllocate(0x1e00);
+        driver->mix_buffer = sosAllocate(0x4000);
         driver->flags |= 2;
     }
     memset(driver->samples, 0, 0x1e00);
-    error = Func56c90(index, &driver->field6c);
+    error = sosGetDriverConfig(index, &driver->driver_name_word0);
     if (error) {
         return error;
     }
     if (!driver->buffer) {
         driver->flags |= 4;
-        if (!(driver->buffer = Func4e387(driver->field44, &driver->fieldf0, &driver->field100, &driver->buffer_pointer))) {
-            Func56ac5(index);
+        if (!(driver->buffer = sosDIGIAllocateDMABuffer(driver->buffer_size, &driver->dma_physical_address, &driver->dma_memory_handle, &driver->buffer_pointer))) {
+            sosUnloadDriver(index);
             return 5;
         }
-        if (driver->field90 == 8) {
-            if (driver->fielda8 & 0x8000) {
-                for (i = 0; i < driver->field44; i++) {
+        if (driver->driver_bits == 8) {
+            if (driver->capabilities & 0x8000) {
+                for (i = 0; i < driver->buffer_size; i++) {
                     driver->buffer[i] = 0;
                 }
             } else {
-                for (i = 0; i < driver->field44; i++) {
+                for (i = 0; i < driver->buffer_size; i++) {
                     driver->buffer[i] = 0x80;
                 }
             }
         } else {
-            for (i = 0; i < driver->field44; i++) {
+            for (i = 0; i < driver->buffer_size; i++) {
                 driver->buffer[i] = 0;
             }
         }
     }
-    driver->field40 = driver->buffer + driver->field44;
-    driver->field18 = Datac837c[driver->field64];
-    driver->field28 = driver->buffer;
-    driver->field4c = driver->mix_buffer + 0x4000;
-    driver->field50 = 0x4000;
+    driver->buffer_end = driver->buffer + driver->buffer_size;
+    driver->dma_count_port = sos_dma_count_ports[driver->dma];
+    driver->write_cursor = driver->buffer;
+    driver->mix_buffer_limit = driver->mix_buffer + 0x4000;
+    driver->mix_buffer_size = 0x4000;
     driver->active = 0;
-    driver->field54 = -1;
-    driver->field2c = 0x400;
+    driver->active_samples = -1;
+    driver->write_ahead_bytes = 0x400;
     driver->max_samples = 32;
-    driver->field0c = driver->field90;
-    driver->field08 = driver->field94 + 1;
-    driver->field10 = 0x8000;
-    driver->timer = Datac839c[index];
-    driver->field1c = 0;
-    driver->field20 = 0;
-    driver->field24 = 0;
-    if (driver->fielda8 & 0x200) {
-        driver->callback = Func574de(driver->imagee0, driver->imaged8);
+    driver->output_bits = driver->driver_bits;
+    driver->output_channels = driver->stereo_mode + 1;
+    driver->output_format = 0x8000;
+    driver->timer = sos_driver_mix_callbacks[index];
+    driver->dma_position = 0;
+    driver->last_dma_position = 0;
+    driver->bytes_to_mix = 0;
+    if (driver->capabilities & 0x200) {
+        driver->callback = sosDRIVERGetDMAPositionCallback(driver->entry_point, driver->image);
     }
-    Func571e5(driver->field64);
-    Func57110(driver->imagee0, driver->imaged8, driver->field5c, driver->field60, driver->field64, driver->field68, driver->field68, driver->field68);
-    Func57194(driver->imagee0, driver->imaged8);
-    Func5716e(driver->imagee0, driver->imaged8, driver->field04);
-    Func57145(driver->imagee0, driver->imaged8, driver->fieldf0, driver->field44);
+    sosVDSDisableDMATranslation(driver->dma);
+    sosDRIVERInit(driver->entry_point, driver->image, driver->port, driver->irq, driver->dma, driver->hardware, driver->hardware, driver->hardware);
+    sosDRIVERSetSampleSize(driver->entry_point, driver->image);
+    sosDRIVERSetRate(driver->entry_point, driver->image, driver->sample_rate);
+    sosDRIVERSetBuffer(driver->entry_point, driver->image, driver->dma_physical_address, driver->buffer_size);
     driver->flags |= 1;
     *handle = index;
     return 0;
 }
 
-int Func4e1b5(dword handle, int free_buffer, int free_driver)
+int sosDIGIUninitDriver(dword handle, int free_buffer, int free_driver)
 {
     SOSDRIVER *driver;
 
-    driver = Datac7f54[handle];
+    driver = sos_drivers[handle];
     if (!driver) {
         return 10;
     }
@@ -292,52 +292,52 @@ int Func4e1b5(dword handle, int free_buffer, int free_driver)
         return 1;
     }
     driver->active = 0;
-    Func56fdd(driver->imagee0, driver->imaged8);
-    Func570ed(driver->imagee0, driver->imaged8);
-    Func5721a(driver->field64);
+    sosDRIVERStop(driver->entry_point, driver->image);
+    sosDRIVERUninit(driver->entry_point, driver->image);
+    sosVDSEnableDMATranslation(driver->dma);
     if ((driver->flags & 4) && free_buffer) {
         driver->flags &= ~4;
-        if ((Func57339() & 0xff) == 3) {
-            Func4e56c(FP_SEG(driver->buffer_pointer), (dword)driver->field100, (dword)driver->fieldf0);
+        if ((sosGetWindowsVersion() & 0xff) == 3) {
+            sosDIGIFreeVDSBuffer(FP_SEG(driver->buffer_pointer), (dword)driver->dma_memory_handle, (dword)driver->dma_physical_address);
         } else {
-            Func56f1c(FP_SEG(driver->buffer_pointer));
+            sosDPMIFreeDOSBuffer(FP_SEG(driver->buffer_pointer));
             driver->flags &= ~4;
         }
     }
     if ((driver->flags & 2) && free_driver) {
-        Func56ac5(handle);
-        driver->imaged8 = 0;
-        driver->imagee0 = 0;
-        Func56bf2(driver->mix_buffer);
-        Func56bf2(driver->samples);
+        sosUnloadDriver(handle);
+        driver->image = 0;
+        driver->entry_point = 0;
+        sosFree(driver->mix_buffer);
+        sosFree(driver->samples);
         driver->flags &= ~2;
     }
-    Datac7f54[handle] = 0;
+    sos_drivers[handle] = 0;
     driver->flags &= ~1;
     return 0;
 }
 
-byte *Func4e387(dword size, dword *physical, dword *handle, void __far **pointer)
+byte *sosDIGIAllocateDMABuffer(dword size, dword *physical, dword *handle, void __far **pointer)
 {
     dword selector;
 
-    if ((Func57339() & 0xff) == 3) {
-        if (Func4e450(pointer, handle, physical)) {
+    if ((sosGetWindowsVersion() & 0xff) == 3) {
+        if (sosDIGIAllocateVDSBuffer(pointer, handle, physical)) {
             return 0;
         }
-        Func56d2d(*(void **)pointer, size);
+        sosDPMILockMemory(*(void **)pointer, size);
         return (byte *)*pointer;
     } else {
-        Func56ee6((size >> 4) + 4, physical, &selector);
+        sosDPMIAllocateDOSBuffer((size >> 4) + 4, physical, &selector);
         while ((*physical & 0xffff) > 0xffff - size) {
-            Func56ee6((size >> 4) + 4, physical, &selector);
+            sosDPMIAllocateDOSBuffer((size >> 4) + 4, physical, &selector);
         }
         *pointer = MK_FP(selector, 0);
         return (byte *)*physical;
     }
 }
 
-int Func4e450(void __far **pointer, dword *handle, dword *physical)
+int sosDIGIAllocateVDSBuffer(void __far **pointer, dword *handle, dword *physical)
 {
     dword memory_handle;
     dword reserved;
@@ -351,18 +351,18 @@ int Func4e450(void __far **pointer, dword *handle, dword *physical)
     *handle = 0;
     *physical = 0;
     memory_handle = 0;
-    if (Func57356(32, &memory_selector, &memory_handle)) {
+    if (sosDPMIAllocateDOSMemory(32, &memory_selector, &memory_handle)) {
         return 0;
     }
     memory = MK_FP(memory_selector, 0);
     *memory = 0x1000;
-    error = Func573c5(memory_handle);
-    _fmemcpy(Datac7f68, memory, 16);
-    Func57397(memory_selector, memory_handle);
+    error = sosVDSLockBuffer(memory_handle);
+    _fmemcpy(sos_vds_buffer_descriptor, memory, 16);
+    sosDPMIFreeDOSMemory(memory_selector, memory_handle);
     if (!error) {
-        Datac7f74 &= 0xfffff000;
-        linear = Func5747e(Datac7f74);
-        physical_address = Datac7f74;
+        sos_vds_buffer_physical_address &= 0xfffff000;
+        linear = sosDPMIMapPhysicalMemory(sos_vds_buffer_physical_address);
+        physical_address = sos_vds_buffer_physical_address;
         *pointer = MK_FP(0, (dword)linear);
         *physical = physical_address;
         return 0;
@@ -371,59 +371,59 @@ int Func4e450(void __far **pointer, dword *handle, dword *physical)
     }
 }
 
-void Func4e56c(dword selector, dword handle, dword physical)
+void sosDIGIFreeVDSBuffer(dword selector, dword handle, dword physical)
 {
     void __far *memory;
     dword memory_selector;
     dword memory_handle;
 
-    Func57356(32, &memory_selector, &memory_handle);
+    sosDPMIAllocateDOSMemory(32, &memory_selector, &memory_handle);
     memory = MK_FP(memory_selector, 0);
-    _fmemcpy(memory, Datac7f68, 16);
-    Func57431(memory_handle);
-    Func57397(memory_selector, memory_handle);
+    _fmemcpy(memory, sos_vds_buffer_descriptor, 16);
+    sosVDSUnlockBuffer(memory_handle);
+    sosDPMIFreeDOSMemory(memory_selector, memory_handle);
 }
 
-void Func4e5dd(void)
+void sosDIGIMixDriver0(void)
 {
-    Func57539(Datac7f54[0]);
+    sosMIXUpdateDriver(sos_drivers[0]);
 }
 
-void Func4e600(void)
+void sosDIGIMixDriver1(void)
 {
-    Func57539(Datac7f54[1]);
+    sosMIXUpdateDriver(sos_drivers[1]);
 }
 
-void Func4e623(void)
+void sosDIGIMixDriver2(void)
 {
-    Func57539(Datac7f54[2]);
+    sosMIXUpdateDriver(sos_drivers[2]);
 }
 
-void Func4e646(void)
+void sosDIGIMixDriver3(void)
 {
-    Func57539(Datac7f54[3]);
+    sosMIXUpdateDriver(sos_drivers[3]);
 }
 
-void Func4e669(void)
+void sosDIGIMixDriver4(void)
 {
-    Func57539(Datac7f54[4]);
+    sosMIXUpdateDriver(sos_drivers[4]);
 }
 
-void Func4e68c(void)
-{
-}
-
-void Func4e6a1(void)
+void sosDIGIDriverCodeEnd(void)
 {
 }
 
-dword Func4e6b6(dword handle, SOSSAMPLE *sample)
+void sosDIGISampleCodeStart(void)
+{
+}
+
+dword sosDIGIStartSample(dword handle, SOSSAMPLE *sample)
 {
     dword index;
     SOSSAMPLE *tail;
     SOSDRIVER *driver;
 
-    driver = Datac7f54[handle];
+    driver = sos_drivers[handle];
     if (!driver) {
         return 10;
     }
@@ -454,11 +454,11 @@ dword Func4e6b6(dword handle, SOSSAMPLE *sample)
     return index;
 }
 
-dword Func4e836(dword handle, dword index)
+dword sosDIGIStopSample(dword handle, dword index)
 {
     SOSDRIVER *driver;
 
-    driver = Datac7f54[handle];
+    driver = sos_drivers[handle];
     if (!driver) {
         return 10;
     }
@@ -469,12 +469,12 @@ dword Func4e836(dword handle, dword index)
     return 0;
 }
 
-dword Func4e8a8(dword handle)
+dword sosDIGIStopAllSamples(dword handle)
 {
     SOSDRIVER *driver;
     dword index;
 
-    driver = Datac7f54[handle];
+    driver = sos_drivers[handle];
     if (!driver) {
         return 10;
     }
@@ -484,32 +484,32 @@ dword Func4e8a8(dword handle)
     return 0;
 }
 
-void Func4e916(void)
+void sosDIGISampleCodeEnd(void)
 {
 }
 
-void Func4e92b(void)
+void sosDIGIQueryCodeStart(void)
 {
 }
 
-dword Func4e940(dword handle)
+dword sosDIGIGetBufferPosition(dword handle)
 {
     SOSDRIVER *driver;
 
-    driver = Datac7f54[handle];
+    driver = sos_drivers[handle];
     if (!driver) {
         return 10;
     }
-    return driver->field1c;
+    return driver->dma_position;
 }
 
-dword Func4e982(dword handle, dword index, dword value)
+dword sosDIGISetSampleVolume(dword handle, dword index, dword value)
 {
     SOSDRIVER *driver;
     SOSSAMPLE *sample;
     dword old;
 
-    driver = Datac7f54[handle];
+    driver = sos_drivers[handle];
     if (!driver) {
         return 10;
     }
@@ -526,12 +526,12 @@ dword Func4e982(dword handle, dword index, dword value)
     return old;
 }
 
-dword Func4ea0a(dword handle, dword index)
+dword sosDIGIGetSampleVolume(dword handle, dword index)
 {
     SOSDRIVER *driver;
     SOSSAMPLE *sample;
 
-    driver = Datac7f54[handle];
+    driver = sos_drivers[handle];
     if (!driver) {
         return 10;
     }
@@ -546,12 +546,12 @@ dword Func4ea0a(dword handle, dword index)
     }
 }
 
-dword Func4ea80(dword handle, dword index)
+dword sosDIGIGetBytesProcessed(dword handle, dword index)
 {
     SOSDRIVER *driver;
     SOSSAMPLE *sample;
 
-    driver = Datac7f54[handle];
+    driver = sos_drivers[handle];
     if (!driver) {
         return 10;
     }
@@ -566,12 +566,12 @@ dword Func4ea80(dword handle, dword index)
     }
 }
 
-dword Func4eaf6(dword handle, dword index)
+dword sosDIGIGetSampleLoopCount(dword handle, dword index)
 {
     SOSDRIVER *driver;
     SOSSAMPLE *sample;
 
-    driver = Datac7f54[handle];
+    driver = sos_drivers[handle];
     if (!driver) {
         return 10;
     }
@@ -586,13 +586,13 @@ dword Func4eaf6(dword handle, dword index)
     }
 }
 
-dword Func4eb6c(dword handle, dword index, dword value)
+dword sosDIGISetSamplePan(dword handle, dword index, dword value)
 {
     SOSDRIVER *driver;
     SOSSAMPLE *sample;
     dword old;
 
-    driver = Datac7f54[handle];
+    driver = sos_drivers[handle];
     if (!driver) {
         return 10;
     }
@@ -609,12 +609,12 @@ dword Func4eb6c(dword handle, dword index, dword value)
     }
 }
 
-dword Func4ebf2(dword handle, dword index)
+dword sosDIGIGetSamplePan(dword handle, dword index)
 {
     SOSDRIVER *driver;
     SOSSAMPLE *sample;
 
-    driver = Datac7f54[handle];
+    driver = sos_drivers[handle];
     if (!driver) {
         return 10;
     }
@@ -629,13 +629,13 @@ dword Func4ebf2(dword handle, dword index)
     }
 }
 
-dword Func4ec68(dword handle, dword index, dword value)
+dword sosDIGISetSampleRate(dword handle, dword index, dword value)
 {
     SOSDRIVER *driver;
     SOSSAMPLE *sample;
     dword old;
 
-    driver = Datac7f54[handle];
+    driver = sos_drivers[handle];
     if (!driver) {
         return 10;
     }
@@ -652,12 +652,12 @@ dword Func4ec68(dword handle, dword index, dword value)
     }
 }
 
-dword Func4ecee(dword handle, dword index)
+dword sosDIGIGetSampleRate(dword handle, dword index)
 {
     SOSDRIVER *driver;
     SOSSAMPLE *sample;
 
-    driver = Datac7f54[handle];
+    driver = sos_drivers[handle];
     if (!driver) {
         return 10;
     }
@@ -672,12 +672,12 @@ dword Func4ecee(dword handle, dword index)
     }
 }
 
-dword Func4ed64(dword handle, dword index)
+dword sosDIGIGetSamplePanSpeed(dword handle, dword index)
 {
     SOSDRIVER *driver;
     SOSSAMPLE *sample;
 
-    driver = Datac7f54[handle];
+    driver = sos_drivers[handle];
     if (!driver) {
         return 10;
     }
@@ -692,12 +692,12 @@ dword Func4ed64(dword handle, dword index)
     }
 }
 
-dword Func4edda(dword handle, dword index)
+dword sosDIGIGetSampleID(dword handle, dword index)
 {
     SOSDRIVER *driver;
     SOSSAMPLE *sample;
 
-    driver = Datac7f54[handle];
+    driver = sos_drivers[handle];
     if (!driver) {
         return 10;
     }
@@ -708,12 +708,12 @@ dword Func4edda(dword handle, dword index)
     return sample->id;
 }
 
-dword Func4ee3e(dword handle, dword id)
+dword sosDIGIFindDifferentSample(dword handle, dword id)
 {
     SOSDRIVER *driver;
     dword index;
 
-    driver = Datac7f54[handle];
+    driver = sos_drivers[handle];
     if (!driver) {
         return 10;
     }
@@ -725,23 +725,23 @@ dword Func4ee3e(dword handle, dword id)
     return -1;
 }
 
-dword Func4eec8(dword handle)
+dword sosDIGIGetActiveSampleCount(dword handle)
 {
     SOSDRIVER *driver;
 
-    driver = Datac7f54[handle];
+    driver = sos_drivers[handle];
     if (!driver) {
         return 10;
     }
-    return driver->field54;
+    return driver->active_samples;
 }
 
-dword Func4ef0a(dword handle, dword index)
+dword sosDIGISampleDone(dword handle, dword index)
 {
     SOSDRIVER *driver;
     SOSSAMPLE *sample;
 
-    driver = Datac7f54[handle];
+    driver = sos_drivers[handle];
     if (!driver) {
         return 10;
     }
@@ -752,6 +752,6 @@ dword Func4ef0a(dword handle, dword index)
     return !(sample->flags & 0x8000);
 }
 
-void Func4ef84(void)
+void sosDIGIQueryCodeEnd(void)
 {
 }

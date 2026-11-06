@@ -7,9 +7,9 @@ typedef struct
     void *extra;
 } FMVHANDLE;
 
-void Func58720(FMVHANDLE *handle);
+void RPLSound_FreeHandle(FMVHANDLE *handle);
 
-FMVHANDLE *Func586d0(void)
+FMVHANDLE *RPLSound_AllocateHandle(void)
 {
     FMVHANDLE *handle;
 
@@ -19,17 +19,17 @@ FMVHANDLE *Func586d0(void)
     }
     handle->state = malloc(0x58);
     if (!handle->state) {
-        Func58720(handle);
+        RPLSound_FreeHandle(handle);
     }
     return handle;
 }
 
-void *Func58714(void)
+void *RPLSound_AllocateExtra(void)
 {
     return malloc(0x3c);
 }
 
-void Func58720(FMVHANDLE *handle)
+void RPLSound_FreeHandle(FMVHANDLE *handle)
 {
     if (handle) {
         if (handle->state) {
@@ -40,7 +40,7 @@ void Func58720(FMVHANDLE *handle)
     }
 }
 
-void Func58748(void *dest, const void *src, unsigned int size)
+void RPL_CopyMemory(void *dest, const void *src, unsigned int size)
 {
     memcpy(dest, src, size);
 }

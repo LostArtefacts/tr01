@@ -1,32 +1,32 @@
     .386p
     .model flat
 
-    extrn _Data5a835:near
-    extrn _Data5c779:near
-    extrn _Datac85c0:byte
-    extrn _Datac85c4:byte
-    extrn _Datac85c8:byte
-    extrn _Datac85cc:byte
-    extrn _Datac85d0:byte
-    extrn _Datac85d4:byte
-    extrn _Datac85d8:byte
-    extrn _Datac85dc:byte
-    extrn _Datac85e0:byte
-    extrn _Datac85e4:byte
-    extrn _Datac85ec:byte
-    extrn _Datac85f0:byte
-    extrn _Datac85f4:byte
-    extrn _Datac85fc:byte
+    extrn _sos_mix_routines:near
+    extrn _sos_mix_convert_routines:near
+    extrn _sos_mix_current_sample:byte
+    extrn _sos_mix_output_limit:byte
+    extrn _sos_mix_output_bytes:byte
+    extrn _sos_mix_output_cursor:byte
+    extrn _sos_mix_previous_sample:byte
+    extrn _sos_mix_sample_end:byte
+    extrn _sos_mix_fractional_step:byte
+    extrn _sos_mix_step_without_carry:byte
+    extrn _sos_mix_step_with_carry:byte
+    extrn _sos_mix_flags:byte
+    extrn _sos_mix_convert_flags:byte
+    extrn _sos_mix_left_volume:byte
+    extrn _sos_mix_right_volume:byte
+    extrn _sos_mix_selected_routine:byte
 
-    public Func57538_
-    public Func57539_
-    public Func579d3_
+    public sosMIXCodeStart_
+    public sosMIXUpdateDriver_
+    public sosMIXCodeEnd_
 
     .code
-Func57538_ proc near
+sosMIXCodeStart_ proc near
     ret
-Func57538_ endp
-Func57539_ proc near
+sosMIXCodeStart_ endp
+sosMIXUpdateDriver_ proc near
     push ebp
     mov ebp, esp
     push ebx
@@ -115,13 +115,13 @@ have_length:
     shl eax, 1
 length_in_bytes:
     shl eax, 1
-    mov dword ptr [_Datac85c8], eax
+    mov dword ptr [_sos_mix_output_bytes], eax
     add eax, dword ptr [ebp+048h]
     dec eax
     mov dword ptr [ebp+04ch], eax
-    mov dword ptr [_Datac85c4], eax
+    mov dword ptr [_sos_mix_output_limit], eax
     mov edi, dword ptr [ebp+048h]
-    mov ecx, dword ptr [_Datac85c8]
+    mov ecx, dword ptr [_sos_mix_output_bytes]
     add ecx, 020h
     xor eax, eax
     push ecx
@@ -133,25 +133,25 @@ length_in_bytes:
     mov eax, dword ptr [ebp+01ch]
     mov dword ptr [ebp+020h], eax
     mov dword ptr [ebp+054h], 00h
-    mov dword ptr [_Datac85d0], 00h
+    mov dword ptr [_sos_mix_previous_sample], 00h
     mov esi, dword ptr [ebp+030h]
     or esi, esi
     je select_converter
 next_sample:
-    mov dword ptr [_Datac85c0], esi
+    mov dword ptr [_sos_mix_current_sample], esi
     test dword ptr [esi+020h], 04000h
     jne remove_sample
     inc dword ptr [ebp+054h]
     mov edi, dword ptr [ebp+048h]
 mix_chunk:
-    mov dword ptr [_Datac85e4], 00h
+    mov dword ptr [_sos_mix_flags], 00h
     test dword ptr [esi+040h], 08000h
     je short check_flag_4000
     nop
     nop
     nop
     nop
-    or dword ptr [_Datac85e4], 01h
+    or dword ptr [_sos_mix_flags], 01h
 check_flag_4000:
     test dword ptr [esi+040h], 04000h
     je short check_volume
@@ -159,17 +159,17 @@ check_flag_4000:
     nop
     nop
     nop
-    or dword ptr [_Datac85e4], 040h
+    or dword ptr [_sos_mix_flags], 040h
 check_volume:
     cmp dword ptr [esi+044h], 08000h
     jne short split_pan
     mov eax, dword ptr [esi+02ch]
     and eax, 07fffh
-    mov dword ptr [_Datac85f0], eax
+    mov dword ptr [_sos_mix_left_volume], eax
     mov eax, dword ptr [esi+02ch]
     shr eax, 010h
     and eax, 07fffh
-    mov dword ptr [_Datac85f4], eax
+    mov dword ptr [_sos_mix_right_volume], eax
     jmp short check_full_volume
 split_pan:
     mov ebx, 07fffh
@@ -186,31 +186,31 @@ scale_volume:
     mov eax, dword ptr [esi+02ch]
     imul bx
     add edx, edx
-    mov dword ptr [_Datac85f0], edx
+    mov dword ptr [_sos_mix_left_volume], edx
     xor edx, edx
     mov eax, dword ptr [esi+02ch]
     imul cx
     add edx, edx
-    mov dword ptr [_Datac85f4], edx
+    mov dword ptr [_sos_mix_right_volume], edx
 check_full_volume:
-    cmp dword ptr [_Datac85f0], 07ff0h
+    cmp dword ptr [_sos_mix_left_volume], 07ff0h
     jb short set_volume_bit
-    cmp dword ptr [_Datac85f4], 07ff0h
+    cmp dword ptr [_sos_mix_right_volume], 07ff0h
     jae short check_sample_bits
 set_volume_bit:
-    or dword ptr [_Datac85e4], 020h
+    or dword ptr [_sos_mix_flags], 020h
 check_sample_bits:
     cmp dword ptr [esi+038h], 08h
     je short check_sample_channels
-    or dword ptr [_Datac85e4], 02h
+    or dword ptr [_sos_mix_flags], 02h
 check_sample_channels:
     cmp dword ptr [esi+03ch], 01h
     je short check_output_channels
-    or dword ptr [_Datac85e4], 08h
+    or dword ptr [_sos_mix_flags], 08h
 check_output_channels:
     cmp dword ptr [ebp+08h], 01h
     je short check_rate
-    or dword ptr [_Datac85e4], 04h
+    or dword ptr [_sos_mix_flags], 04h
 check_rate:
     xor eax, eax
     mov edx, dword ptr [esi+034h]
@@ -222,15 +222,15 @@ check_rate:
     mov ebx, eax
     shr ebx, 010h
     shl eax, 010h
-    mov dword ptr [_Datac85d8], eax
+    mov dword ptr [_sos_mix_fractional_step], eax
     mov eax, ebx
     inc ebx
-    test dword ptr [_Datac85e4], 08h
+    test dword ptr [_sos_mix_flags], 08h
     je short check_16bit_step
     shl eax, 1
     shl ebx, 1
 check_16bit_step:
-    test dword ptr [_Datac85e4], 02h
+    test dword ptr [_sos_mix_flags], 02h
     je short store_step
     nop
     nop
@@ -239,37 +239,37 @@ check_16bit_step:
     shl eax, 1
     shl ebx, 1
 store_step:
-    mov word ptr [_Datac85dc], ax
-    mov word ptr [_Datac85e0], bx
-    or dword ptr [_Datac85e4], 010h
+    mov word ptr [_sos_mix_step_without_carry], ax
+    mov word ptr [_sos_mix_step_with_carry], bx
+    or dword ptr [_sos_mix_flags], 010h
 call_mixer:
-    mov eax, dword ptr [_Datac85e4]
+    mov eax, dword ptr [_sos_mix_flags]
     shl eax, 02h
-    add eax, offset _Data5a835
+    add eax, offset _sos_mix_routines
     mov eax, dword ptr [eax]
-    mov dword ptr [_Datac85fc], eax
+    mov dword ptr [_sos_mix_selected_routine], eax
     mov eax, dword ptr [esi]
     add eax, dword ptr [esi+0ch]
-    mov dword ptr [_Datac85d4], eax
+    mov dword ptr [_sos_mix_sample_end], eax
     mov esi, dword ptr [esi+04h]
     mov ecx, 080000000h
     push ebp
     xor eax, eax
     xor ebx, ebx
-    call dword ptr [_Datac85fc]
+    call dword ptr [_sos_mix_selected_routine]
     pop ebp
-    mov dword ptr [_Datac85cc], edi
+    mov dword ptr [_sos_mix_output_cursor], edi
     mov edi, esi
-    mov esi, dword ptr [_Datac85c0]
+    mov esi, dword ptr [_sos_mix_current_sample]
     mov eax, edi
     sub eax, dword ptr [esi+04h]
     add dword ptr [esi+04h], eax
-    mov eax, dword ptr [_Datac85cc]
+    mov eax, dword ptr [_sos_mix_output_cursor]
     sub eax, dword ptr [ebp+048h]
     shr eax, 02h
     add dword ptr [esi+058h], eax
     mov eax, dword ptr [esi+04h]
-    cmp eax, dword ptr [_Datac85d4]
+    cmp eax, dword ptr [_sos_mix_sample_end]
     jb check_sample_limit
     cmp dword ptr [esi+030h], 0ffffffffh
     je restart_sample
@@ -334,7 +334,7 @@ remove_sample:
 unlink_sample:
     and dword ptr [esi+020h], 0ffff7fffh
     or dword ptr [esi+020h], 02000h
-    cmp dword ptr [_Datac85d0], 00h
+    cmp dword ptr [_sos_mix_previous_sample], 00h
     jne short unlink_from_previous
     mov eax, dword ptr [esi+0ech]
     mov dword ptr [ebp+030h], eax
@@ -344,7 +344,7 @@ unlink_sample:
     nop
 unlink_from_previous:
     mov eax, dword ptr [esi+0ech]
-    mov edi, dword ptr [_Datac85d0]
+    mov edi, dword ptr [_sos_mix_previous_sample]
     mov dword ptr [edi+0ech], eax
     jmp short advance_list
     nop
@@ -353,7 +353,7 @@ unlink_from_previous:
 restart_sample:
     mov eax, dword ptr [esi]
     mov dword ptr [esi+04h], eax
-    mov edi, dword ptr [_Datac85cc]
+    mov edi, dword ptr [_sos_mix_output_cursor]
     cmp edi, dword ptr [ebp+04ch]
     jb mix_chunk
 check_sample_limit:
@@ -364,7 +364,7 @@ check_sample_limit:
     nop
     nop
     nop
-    mov dword ptr [_Datac85d0], esi
+    mov dword ptr [_sos_mix_previous_sample], esi
 advance_list:
     mov esi, dword ptr [esi+0ech]
     or esi, esi
@@ -400,14 +400,14 @@ check_clip:
     jbe short store_format
     or eax, 010h
 store_format:
-    mov dword ptr [_Datac85ec], eax
+    mov dword ptr [_sos_mix_convert_flags], eax
     shl eax, 02h
-    add eax, offset _Data5c779
+    add eax, offset _sos_mix_convert_routines
     mov eax, dword ptr [eax]
-    mov dword ptr [_Datac85fc], eax
+    mov dword ptr [_sos_mix_selected_routine], eax
     mov edi, dword ptr [ebp+028h]
     mov esi, dword ptr [ebp+048h]
-    mov ecx, dword ptr [_Datac85c8]
+    mov ecx, dword ptr [_sos_mix_output_bytes]
     shr ecx, 02h
     mov edx, ecx
     cmp dword ptr [ebp+08h], 01h
@@ -439,7 +439,7 @@ first_part_channels:
     je short convert_first_part
     shr ecx, 1
 convert_first_part:
-    call dword ptr [_Datac85fc]
+    call dword ptr [_sos_mix_selected_routine]
     pop ecx
     mov edi, dword ptr [ebp+03ch]
     or ecx, ecx
@@ -452,10 +452,10 @@ second_part_bits:
     je short convert_second_part
     shr ecx, 1
 convert_second_part:
-    call dword ptr [_Datac85fc]
+    call dword ptr [_sos_mix_selected_routine]
     jmp short converted
 convert_whole:
-    call dword ptr [_Datac85fc]
+    call dword ptr [_sos_mix_selected_routine]
 converted:
     mov dword ptr [ebp+028h], edi
     cmp dword ptr [ebp+054h], 00h
@@ -481,9 +481,9 @@ mix_done:
     pop ebx
     pop ebp
     ret
-Func57539_ endp
-Func579d3_ proc near
+sosMIXUpdateDriver_ endp
+sosMIXCodeEnd_ proc near
     ret
-Func579d3_ endp
+sosMIXCodeEnd_ endp
 
     end

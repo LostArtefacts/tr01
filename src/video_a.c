@@ -7,11 +7,11 @@ typedef struct
     char reserved[0x164];
 } VIDEOBUFFER;
 
-char Datac89e0[80] = "$Id: VIDEO_A.ASM 1.4 1995/08/14 10:01:03 MFC Exp $";
+char video_rcsid[80] = "$Id: VIDEO_A.ASM 1.4 1995/08/14 10:01:03 MFC Exp $";
 
-void Func58aa0(VIDEOBUFFER *video);
+void RPLMovie_Free(VIDEOBUFFER *video);
 
-VIDEOBUFFER *Func58a50(unsigned int size)
+VIDEOBUFFER *RPLMovie_Allocate(unsigned int size)
 {
     VIDEOBUFFER *video;
 
@@ -26,13 +26,13 @@ VIDEOBUFFER *Func58a50(unsigned int size)
     }
     video->buffer = malloc(size);
     if (!video->buffer) {
-        Func58aa0(video);
+        RPLMovie_Free(video);
         return 0;
     }
     return video;
 }
 
-void Func58aa0(VIDEOBUFFER *video)
+void RPLMovie_Free(VIDEOBUFFER *video)
 {
     if (video) {
         if (video->buffer) {

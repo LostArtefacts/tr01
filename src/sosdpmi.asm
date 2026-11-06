@@ -5,61 +5,61 @@
 .text
 .balign 4
 
-.extern _Datac84c4
-.extern _Datac8514
-.extern _Datac8518
-.extern _Datac851c
-.extern _Datac8520
-.extern _Datac8524
-.extern _Datac8554
-.extern _Datac85a4
-.extern _Datac85a8
-.extern _Datac85ac
-.extern _Datac85b0
-.extern _Datac85b4
+.extern _sos_detect_environment_name
+.extern _sos_detect_environment_names_offset
+.extern _sos_detect_environment_names_selector
+.extern _sos_detect_environment_values_offset
+.extern _sos_detect_environment_values_selector
+.extern _sos_dpmi_memory_info
+.extern _sos_dpmi_real_registers
+.extern _sos_detect_port
+.extern _sos_detect_dma
+.extern _sos_detect_irq
+.extern _sos_detect_hardware
+.extern _sos_dpmi_allocated_selector
 
-.global Func56d2c_
-.global Func56d2d_
-.global Func56d6a_
-.global Func56da7_
-.global Func56e53_
-.global Func56e89_
-.global Func56ee6_
-.global Func56f1c_
-.global Func56f47_
-.global Func56f81_
-.global Func56fdd_
-.global Func57000_
-.global Func57023_
-.global Func57067_
-.global Func570bd_
-.global Func570ed_
-.global Func57110_
-.global Func57145_
-.global Func5716e_
-.global Func57194_
-.global Func571bb_
-.global Func571e5_
-.global Func5721a_
-.global Func5724f_
-.global Func5728e_
-.global Func572d8_
-.global Func5730e_
-.global Func57339_
-.global Func57356_
-.global Func57397_
-.global Func573c5_
-.global Func57431_
-.global Func5747e_
-.global Func574b4_
-.global Func574de_
-.global Func57504_
-.global Func57508_
-.global Func5750c_
+.global sosDPMICodeStart_
+.global sosDPMILockMemory_
+.global sosDPMIUnlockMemory_
+.global sosDPMIAllocateLinearMemory_
+.global sosDPMIFreeLinearMemory_
+.global sosDPMICreateCodeAlias_
+.global sosDPMIAllocateDOSBuffer_
+.global sosDPMIFreeDOSBuffer_
+.global sosDRIVERCopyInfo_
+.global sosDRIVERGetConfig_
+.global sosDRIVERStop_
+.global sosDETECTProbe_
+.global sosDETECTProbeSettings_
+.global sosDETECTGetDriverInfo_
+.global sosDETECTTestSettings_
+.global sosDRIVERUninit_
+.global sosDRIVERInit_
+.global sosDRIVERSetBuffer_
+.global sosDRIVERSetRate_
+.global sosDRIVERSetSampleSize_
+.global sosWindowsCompatibilityStub_
+.global sosVDSDisableDMATranslation_
+.global sosVDSEnableDMATranslation_
+.global sosDETECTGetEnvironmentTables_
+.global sosDETECTGetEnvironmentName_
+.global sosDETECTSetEnvironmentValue_
+.global sosDPMIGetFreeMemory_
+.global sosGetWindowsVersion_
+.global sosDPMIAllocateDOSMemory_
+.global sosDPMIFreeDOSMemory_
+.global sosVDSLockBuffer_
+.global sosVDSUnlockBuffer_
+.global sosDPMIMapPhysicalMemory_
+.global sosDPMIFreeSelector_
+.global sosDRIVERGetDMAPositionCallback_
+.global sosGetDataSelector_
+.global sosGetCodeSelector_
+.global sosDPMICodeEnd_
 
-Func56d2c_:
+sosDPMICodeStart_:
     ret
-Func56d2d_:
+sosDPMILockMemory_:
     push ebp
     {load} mov ebp, esp
     push esi
@@ -92,7 +92,7 @@ Func56d2d_:
     pop esi
     pop ebp
     ret
-Func56d6a_:
+sosDPMIUnlockMemory_:
     push ebp
     {load} mov ebp, esp
     push esi
@@ -125,7 +125,7 @@ Func56d6a_:
     pop esi
     pop ebp
     ret
-Func56da7_:
+sosDPMIAllocateLinearMemory_:
     push ebp
     {load} mov ebp, esp
     push esi
@@ -139,7 +139,7 @@ Func56da7_:
     mov cx, 0x01
     int 0x031
     push eax
-    mov word ptr [_Datac85b4], ax
+    mov word ptr [_sos_dpmi_allocated_selector], ax
     push eax
     {load} mov bx, ax
     mov ax, 0x08
@@ -180,11 +180,11 @@ Func56da7_:
     {load} mov bx, ax
     mov ax, 0x07
     int 0x031
-    movzx ecx, word ptr [_Datac85b4]
+    movzx ecx, word ptr [_sos_dpmi_allocated_selector]
     lar ecx, ecx
     shr ecx, 0x08
     or cx, 0x04000
-    mov bx, word ptr [_Datac85b4]
+    mov bx, word ptr [_sos_dpmi_allocated_selector]
     mov ax, 0x09
     int 0x031
     pop eax
@@ -201,7 +201,7 @@ Func56da7_:
     pop esi
     pop ebp
     ret
-Func56e53_:
+sosDPMIFreeLinearMemory_:
     push eax
     mov ax, ds
     mov gs, eax
@@ -231,7 +231,7 @@ Func56e53_:
     pop esi
     pop ebp
     ret
-Func56e89_:
+sosDPMICreateCodeAlias_:
     push ebp
     {load} mov ebp, esp
     push esi
@@ -278,7 +278,7 @@ Func56e89_:
     pop esi
     pop ebp
     ret
-Func56ee6_:
+sosDPMIAllocateDOSBuffer_:
     push ebp
     {load} mov ebp, esp
     push esi
@@ -307,7 +307,7 @@ Func56ee6_:
     pop esi
     pop ebp
     ret
-Func56f1c_:
+sosDPMIFreeDOSBuffer_:
     mov ax, ds
     mov gs, eax
     {load} mov es, eax
@@ -334,7 +334,7 @@ Func56f1c_:
     pop esi
     pop ebp
     ret
-Func56f47_:
+sosDRIVERCopyInfo_:
     push ebp
     {load} mov ebp, esp
     push esi
@@ -367,7 +367,7 @@ Func56f47_:
     pop esi
     pop ebp
     ret
-Func56f81_:
+sosDRIVERGetConfig_:
     push ebp
     {load} mov ebp, esp
     push esi
@@ -418,7 +418,7 @@ Func56f81_:
     pop esi
     pop ebp
     ret
-Func56fdd_:
+sosDRIVERStop_:
     push ebp
     {load} mov ebp, esp
     push esi
@@ -440,7 +440,7 @@ Func56fdd_:
     pop esi
     pop ebp
     ret
-Func57000_:
+sosDETECTProbe_:
     push ebp
     {load} mov ebp, esp
     push esi
@@ -462,7 +462,7 @@ Func57000_:
     pop esi
     pop ebp
     ret
-Func57023_:
+sosDETECTProbeSettings_:
     push ebp
     {load} mov ebp, esp
     push esi
@@ -475,14 +475,14 @@ Func57023_:
     mov eax, 0x01
     lfs edi, fword ptr [ebp+0x010]
     call fword ptr [ebp+0x08]
-    mov word ptr [_Datac85a4], ax
+    mov word ptr [_sos_detect_port], ax
     {load} mov al, ch
     cbw
-    mov word ptr [_Datac85ac], ax
+    mov word ptr [_sos_detect_irq], ax
     {load} mov al, cl
     cbw
-    mov word ptr [_Datac85a8], ax
-    mov word ptr [_Datac85b0], dx
+    mov word ptr [_sos_detect_dma], ax
+    mov word ptr [_sos_detect_hardware], dx
     pop es
     pop gs
     pop fs
@@ -492,7 +492,7 @@ Func57023_:
     pop esi
     pop ebp
     ret
-Func57067_:
+sosDETECTGetDriverInfo_:
     push ebp
     {load} mov ebp, esp
     push esi
@@ -541,7 +541,7 @@ Func57067_:
     pop esi
     pop ebp
     ret
-Func570bd_:
+sosDETECTTestSettings_:
     push ebp
     {load} mov ebp, esp
     push esi
@@ -568,7 +568,7 @@ Func570bd_:
     pop esi
     pop ebp
     ret
-Func570ed_:
+sosDRIVERUninit_:
     push ebp
     {load} mov ebp, esp
     push esi
@@ -590,7 +590,7 @@ Func570ed_:
     pop esi
     pop ebp
     ret
-Func57110_:
+sosDRIVERInit_:
     push ebp
     {load} mov ebp, esp
     push esi
@@ -617,7 +617,7 @@ Func57110_:
     pop esi
     pop ebp
     ret
-Func57145_:
+sosDRIVERSetBuffer_:
     push ebp
     {load} mov ebp, esp
     push esi
@@ -641,7 +641,7 @@ Func57145_:
     pop esi
     pop ebp
     ret
-Func5716e_:
+sosDRIVERSetRate_:
     push ebp
     {load} mov ebp, esp
     push esi
@@ -664,7 +664,7 @@ Func5716e_:
     pop esi
     pop ebp
     ret
-Func57194_:
+sosDRIVERSetSampleSize_:
     push ebp
     {load} mov ebp, esp
     push esi
@@ -687,7 +687,7 @@ Func57194_:
     pop esi
     pop ebp
     ret
-Func571bb_:
+sosWindowsCompatibilityStub_:
     push ebp
     {load} mov ebp, esp
     push esi
@@ -716,7 +716,7 @@ Func571bb_:
     pop esi
     pop ebp
     ret
-Func571e5_:
+sosVDSDisableDMATranslation_:
     push ebp
     {load} mov ebp, esp
     push esi
@@ -750,7 +750,7 @@ Func571e5_:
     pop esi
     pop ebp
     ret
-Func5721a_:
+sosVDSEnableDMATranslation_:
     push ebp
     {load} mov ebp, esp
     push esi
@@ -784,7 +784,7 @@ Func5721a_:
     pop esi
     pop ebp
     ret
-Func5724f_:
+sosDETECTGetEnvironmentTables_:
     push ebp
     {load} mov ebp, esp
     push esi
@@ -797,11 +797,11 @@ Func5724f_:
     lfs edi, fword ptr [ebp+0x010]
     mov eax, 0x04
     call fword ptr [ebp+0x08]
-    mov dword ptr [_Datac8514], esi
-    mov dword ptr [_Datac851c], edi
+    mov dword ptr [_sos_detect_environment_names_offset], esi
+    mov dword ptr [_sos_detect_environment_values_offset], edi
     mov ax, word ptr [ebp+0x014]
-    mov word ptr [_Datac8518], ax
-    mov word ptr [_Datac8520], ax
+    mov word ptr [_sos_detect_environment_names_selector], ax
+    mov word ptr [_sos_detect_environment_values_selector], ax
     pop es
     pop gs
     pop fs
@@ -811,7 +811,7 @@ Func5724f_:
     pop esi
     pop ebp
     ret
-Func5728e_:
+sosDETECTGetEnvironmentName_:
     push ebp
     {load} mov ebp, esp
     push esi
@@ -824,9 +824,9 @@ Func5728e_:
     push ds
     push ds
     pop es
-    mov edi, offset _Datac84c4
+    mov edi, offset _sos_detect_environment_name
     mov ebx, dword ptr [ebp+0x08]
-    lds esi, fword ptr [_Datac8514]
+    lds esi, fword ptr [_sos_detect_environment_names_offset]
     mov esi, dword ptr [esi+ebx*4]
     cmp esi, 0x0ffffffff
     jne short .Lcopy_name
@@ -845,7 +845,7 @@ Func5728e_:
     cld
     repne movsb
     pop ds
-    mov eax, offset _Datac84c4
+    mov eax, offset _sos_detect_environment_name
 .Lname_done:
     pop es
     pop gs
@@ -856,7 +856,7 @@ Func5728e_:
     pop esi
     pop ebp
     ret
-Func572d8_:
+sosDETECTSetEnvironmentValue_:
     push ebp
     {load} mov ebp, esp
     push esi
@@ -866,7 +866,7 @@ Func572d8_:
     push fs
     push gs
     push es
-    les esi, fword ptr [_Datac851c]
+    les esi, fword ptr [_sos_detect_environment_values_offset]
     mov eax, dword ptr [ebp+0x08]
     {load} mov ebx, eax
     shl eax, 1
@@ -885,7 +885,7 @@ Func572d8_:
     pop esi
     pop ebp
     ret
-Func5730e_:
+sosDPMIGetFreeMemory_:
     push ebp
     {load} mov ebp, esp
     push esi
@@ -899,9 +899,9 @@ Func5730e_:
     int 0x031
     push ds
     pop es
-    mov edi, offset _Datac8524
+    mov edi, offset _sos_dpmi_memory_info
     int 0x031
-    mov eax, dword ptr [_Datac8524]
+    mov eax, dword ptr [_sos_dpmi_memory_info]
     pop es
     pop gs
     pop fs
@@ -911,7 +911,7 @@ Func5730e_:
     pop esi
     pop ebp
     ret
-Func57339_:
+sosGetWindowsVersion_:
     push ebp
     {load} mov ebp, esp
     push esi
@@ -932,7 +932,7 @@ Func57339_:
     pop esi
     pop ebp
     ret
-Func57356_:
+sosDPMIAllocateDOSMemory_:
     push ebp
     {load} mov ebp, esp
     push esi
@@ -971,7 +971,7 @@ Func57356_:
     pop esi
     pop ebp
     ret
-Func57397_:
+sosDPMIFreeDOSMemory_:
     mov ax, ds
     mov gs, eax
     mov fs, eax
@@ -998,7 +998,7 @@ Func57397_:
     pop esi
     pop ebp
     ret
-Func573c5_:
+sosVDSLockBuffer_:
     push ebp
     {load} mov ebp, esp
     push esi
@@ -1008,7 +1008,7 @@ Func573c5_:
     push fs
     push gs
     push es
-    mov esi, offset _Datac8554
+    mov esi, offset _sos_dpmi_real_registers
     mov dword ptr [esi+0x01c], 0x08107
     mov dword ptr [esi+0x014], 0x00
     mov ax, word ptr [ebp+0x08]
@@ -1018,11 +1018,11 @@ Func573c5_:
     mov bl, 0x04b
     mov bh, 0x00
     mov cx, 0x00
-    mov edi, offset _Datac8554
+    mov edi, offset _sos_dpmi_real_registers
     push ds
     pop es
     int 0x031
-    mov esi, offset _Datac8554
+    mov esi, offset _sos_dpmi_real_registers
     and word ptr [esi+0x020], 0x01
     jne short .Lvds_failed
     nop
@@ -1046,7 +1046,7 @@ Func573c5_:
     pop esi
     pop ebp
     ret
-Func57431_:
+sosVDSUnlockBuffer_:
     push ebp
     {load} mov ebp, esp
     push esi
@@ -1056,7 +1056,7 @@ Func57431_:
     push fs
     push gs
     push es
-    mov esi, offset _Datac8554
+    mov esi, offset _sos_dpmi_real_registers
     mov dword ptr [esi+0x01c], 0x08108
     mov dword ptr [esi+0x014], 0x00
     mov ax, word ptr [ebp+0x08]
@@ -1066,7 +1066,7 @@ Func57431_:
     mov bl, 0x04b
     mov bh, 0x00
     mov cx, 0x00
-    mov edi, offset _Datac8554
+    mov edi, offset _sos_dpmi_real_registers
     push ds
     pop es
     int 0x031
@@ -1079,7 +1079,7 @@ Func57431_:
     pop esi
     pop ebp
     ret
-Func5747e_:
+sosDPMIMapPhysicalMemory_:
     push ebp
     {load} mov ebp, esp
     push esi
@@ -1107,7 +1107,7 @@ Func5747e_:
     pop esi
     pop ebp
     ret
-Func574b4_:
+sosDPMIFreeSelector_:
     mov ax, ds
     mov gs, eax
     mov fs, eax
@@ -1133,7 +1133,7 @@ Func574b4_:
     pop esi
     pop ebp
     ret
-Func574de_:
+sosDRIVERGetDMAPositionCallback_:
     push ebp
     {load} mov ebp, esp
     push esi
@@ -1159,12 +1159,12 @@ Func574de_:
     pop esi
     pop ebp
     ret
-Func57504_:
+sosGetDataSelector_:
     mov ax, ds
     ret
-Func57508_:
+sosGetCodeSelector_:
     mov ax, cs
     ret
-Func5750c_:
+sosDPMICodeEnd_:
     ret
 

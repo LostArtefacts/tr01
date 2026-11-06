@@ -23,13 +23,13 @@ typedef struct
 int FileSize(char *name);
 byte *FileLoad(char *name, void *where, dword flags);
 int FileSave(char *name, void *data, dword size);
-int Func4dc00(char *text);
-int Func4dc4c(char digit);
+int INI_ParseHex(char *text);
+int INI_HexDigit(char digit);
 
 static char *hex_digits = "0123456789ABCDEF0123456789abcdef";
 static dword hex_powers[] = {1, 0x10, 0x100, 0x1000, 0x10000, 0x100000, 0x1000000, 0x10000000};
 
-int Func4d170(INI_INSTANCE *ini, char *name)
+int INI_Open(INI_INSTANCE *ini, char *name)
 {
     int size;
 
@@ -52,7 +52,7 @@ int Func4d170(INI_INSTANCE *ini, char *name)
     return 1;
 }
 
-int Func4d224(INI_INSTANCE *ini)
+int INI_Close(INI_INSTANCE *ini)
 {
     if (ini->dwFlags & 0x8000) {
         FileSave((char *)ini->szName, ini->pData, ini->dwSize);
@@ -61,7 +61,7 @@ int Func4d224(INI_INSTANCE *ini)
     return 1;
 }
 
-int Func4d258(INI_INSTANCE *ini, char *name)
+int INI_FindSection(INI_INSTANCE *ini, char *name)
 {
     char *p;
     char *start;
@@ -99,7 +99,7 @@ int Func4d258(INI_INSTANCE *ini, char *name)
     return found;
 }
 
-int Func4d2e4(INI_INSTANCE *ini, char *name)
+int INI_FindItem(INI_INSTANCE *ini, char *name)
 {
     char *p;
     char *start;
@@ -144,7 +144,7 @@ int Func4d2e4(INI_INSTANCE *ini, char *name)
     return found;
 }
 
-int Func4d3a0(INI_INSTANCE *ini, dword *value)
+int INI_ReadInteger(INI_INSTANCE *ini, dword *value)
 {
     char *p;
     char text[32];
@@ -180,14 +180,14 @@ int Func4d3a0(INI_INSTANCE *ini, dword *value)
     }
     ini->pList = p;
     if (text[1] == 'x') {
-        *value = Func4dc00(text + 2);
+        *value = INI_ParseHex(text + 2);
     } else {
         *value = atoi(text);
     }
     return 1;
 }
 
-int Func4d454(INI_INSTANCE *ini, char *text, dword size)
+int INI_ReadString(INI_INSTANCE *ini, char *text, dword size)
 {
     char *p;
     dword n;
@@ -220,7 +220,7 @@ int Func4d454(INI_INSTANCE *ini, char *text, dword size)
     return 1;
 }
 
-int Func4d4f0(INI_INSTANCE *ini, char *text, dword size)
+int INI_ReadLine(INI_INSTANCE *ini, char *text, dword size)
 {
     char *p;
     char *end;
@@ -248,7 +248,7 @@ int Func4d4f0(INI_INSTANCE *ini, char *text, dword size)
     return 1;
 }
 
-int Func4d580(INI_INSTANCE *ini, dword value)
+int INI_WriteInteger(INI_INSTANCE *ini, dword value)
 {
     char *p;
     char *start;
@@ -296,7 +296,7 @@ int Func4d580(INI_INSTANCE *ini, dword value)
     return 1;
 }
 
-int Func4d6b0(INI_INSTANCE *ini, char *text)
+int INI_WriteString(INI_INSTANCE *ini, char *text)
 {
     char *p;
     char *start;
@@ -335,14 +335,14 @@ int Func4d6b0(INI_INSTANCE *ini, char *text)
     return 1;
 }
 
-int Func4d794(INI_INSTANCE *ini, char *item)
+int INI_GetBoolean(INI_INSTANCE *ini, char *item)
 {
     char text[32];
 
-    if (!Func4d2e4(ini, item)) {
+    if (!INI_FindItem(ini, item)) {
         return 0;
     }
-    if (!Func4d454(ini, text, 32)) {
+    if (!INI_ReadString(ini, text, 32)) {
         return 0;
     }
     if (!_stricmp(text, "YES")) {
@@ -351,53 +351,53 @@ int Func4d794(INI_INSTANCE *ini, char *item)
     return 0;
 }
 
-int Func4d7d8(INI_INSTANCE *ini, char *item, dword *value)
+int INI_GetInteger(INI_INSTANCE *ini, char *item, dword *value)
 {
-    if (!Func4d2e4(ini, item)) {
+    if (!INI_FindItem(ini, item)) {
         return 0;
     }
-    if (!Func4d3a0(ini, value)) {
+    if (!INI_ReadInteger(ini, value)) {
         return 0;
     }
     return 1;
 }
 
-int Func4d7f8(INI_INSTANCE *ini, char *item, char *text, dword size)
+int INI_GetString(INI_INSTANCE *ini, char *item, char *text, dword size)
 {
-    if (!Func4d2e4(ini, item)) {
+    if (!INI_FindItem(ini, item)) {
         return 0;
     }
-    if (!Func4d454(ini, text, size)) {
+    if (!INI_ReadString(ini, text, size)) {
         return 0;
     }
     return 1;
 }
 
-int Func4d820(INI_INSTANCE *ini, char *item, int state)
+int INI_SetBoolean(INI_INSTANCE *ini, char *item, int state)
 {
-    if (!Func4d2e4(ini, item)) {
+    if (!INI_FindItem(ini, item)) {
         return 0;
     }
     if (state) {
-        if (!Func4d6b0(ini, "Yes")) {
+        if (!INI_WriteString(ini, "Yes")) {
             return 0;
         }
     } else {
-        if (!Func4d6b0(ini, "No")) {
+        if (!INI_WriteString(ini, "No")) {
             return 0;
         }
     }
     return 1;
 }
 
-int Func4d85c(INI_INSTANCE *ini, char *item)
+int INI_DeleteItem(INI_INSTANCE *ini, char *item)
 {
     char *p;
     char *start;
     dword size;
 
     size = 0;
-    if (!Func4d2e4(ini, item)) {
+    if (!INI_FindItem(ini, item)) {
         return 0;
     }
     start = ini->pItemPtr;
@@ -415,13 +415,13 @@ int Func4d85c(INI_INSTANCE *ini, char *item)
     return 1;
 }
 
-int Func4d8bc(INI_INSTANCE *ini, char *section)
+int INI_DeleteSection(INI_INSTANCE *ini, char *section)
 {
     char *end;
     char *start;
     dword size;
 
-    if (!Func4d258(ini, section)) {
+    if (!INI_FindSection(ini, section)) {
         return 0;
     }
     size = 1;
@@ -436,12 +436,12 @@ int Func4d8bc(INI_INSTANCE *ini, char *section)
     return 1;
 }
 
-int Func4d930(INI_INSTANCE *ini, char *name)
+int INI_AddSection(INI_INSTANCE *ini, char *name)
 {
     char *p;
     dword size;
 
-    if (Func4d258(ini, name)) {
+    if (INI_FindSection(ini, name)) {
         return 0;
     }
     p = ini->pData + ini->dwSize;
@@ -466,13 +466,13 @@ int Func4d930(INI_INSTANCE *ini, char *name)
     return 1;
 }
 
-int Func4d9e0(INI_INSTANCE *ini, char *item, char *text, dword justify)
+int INI_SetString(INI_INSTANCE *ini, char *item, char *text, dword justify)
 {
     char *p;
     dword size;
 
-    if (Func4d2e4(ini, item)) {
-        Func4d6b0(ini, text);
+    if (INI_FindItem(ini, item)) {
+        INI_WriteString(ini, text);
     } else {
         p = ini->pCurrent;
         size = strlen(text) + (justify + 4);
@@ -500,15 +500,15 @@ int Func4d9e0(INI_INSTANCE *ini, char *item, char *text, dword justify)
     return 1;
 }
 
-int Func4dae4(INI_INSTANCE *ini, char *item, dword value, dword justify, dword radix)
+int INI_SetInteger(INI_INSTANCE *ini, char *item, dword value, dword justify, dword radix)
 {
     char text[32];
     char *p;
     dword size;
     dword n;
 
-    if (Func4d2e4(ini, item)) {
-        Func4d580(ini, value);
+    if (INI_FindItem(ini, item)) {
+        INI_WriteInteger(ini, value);
     } else {
         if (radix == 16) {
             text[0] = '0';
@@ -544,7 +544,7 @@ int Func4dae4(INI_INSTANCE *ini, char *item, dword value, dword justify, dword r
     return 1;
 }
 
-int Func4dc00(char *text)
+int INI_ParseHex(char *text)
 {
     dword n;
     dword value;
@@ -554,13 +554,13 @@ int Func4dc00(char *text)
     i = 0;
     value = 0;
     do {
-        value += Func4dc4c(text[i++]) * hex_powers[n - 1];
+        value += INI_HexDigit(text[i++]) * hex_powers[n - 1];
         n--;
     } while (n > 0);
     return value;
 }
 
-int Func4dc4c(char digit)
+int INI_HexDigit(char digit)
 {
     dword i;
 

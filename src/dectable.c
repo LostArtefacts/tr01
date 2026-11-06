@@ -1,6 +1,6 @@
 #include "rplfile_internal.h"
 
-int Func57a00(DECODE **decode, unsigned int flags)
+int RPLDecode_Create(DECODE **decode, unsigned int flags)
 {
     dword count2;
     dword count1;
@@ -20,25 +20,25 @@ int Func57a00(DECODE **decode, unsigned int flags)
         return 12;
     }
     if (!((*decode)->state = calloc(1, sizeof(DECODESTATE)))) {
-        Func57b74(*decode);
+        RPLDecode_Destroy(*decode);
         return 12;
     }
     if (!((*decode)->state->table1 = calloc(count1, 4))) {
-        Func57b74(*decode);
+        RPLDecode_Destroy(*decode);
         return 12;
     }
     for (i = 0; i < count1; i++) {
         (*decode)->state->table1[i] = 0xffff;
     }
     if (!((*decode)->state->table2 = calloc(count2, 4))) {
-        Func57b74(*decode);
+        RPLDecode_Destroy(*decode);
         return 12;
     }
     for (i = 0; i < count2; i++) {
         (*decode)->state->table2[i] = 0xffff;
     }
     if (!((*decode)->state->table3 = calloc(count3, 4))) {
-        Func57b74(*decode);
+        RPLDecode_Destroy(*decode);
         return 12;
     }
     for (i = 0; i < count3; i++) {
@@ -47,7 +47,7 @@ int Func57a00(DECODE **decode, unsigned int flags)
     return 0;
 }
 
-void Func57b74(DECODE *decode)
+void RPLDecode_Destroy(DECODE *decode)
 {
     if (decode) {
         if (decode->state) {

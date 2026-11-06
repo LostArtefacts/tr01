@@ -7,81 +7,81 @@ _DATA ends
 
     assume cs:FLAT, ds:FLAT, es:FLAT, ss:FLAT
 
-    extrn Func4f344_:near
-    extrn Func57b74_:near
-    extrn Func57c20_:near
-    extrn Func57c4c_:near
-    extrn Func57cf0_:near
-    extrn Func57d44_:near
-    extrn Func57d78_:near
-    extrn Func57dac_:near
-    extrn Func57ee8_:near
-    extrn Func583b8_:near
-    extrn Func583dc_:near
-    extrn Func583e4_:near
-    extrn Func58444_:near
-    extrn Func58674_:near
-    extrn Func58698_:near
-    extrn Func586a4_:near
-    extrn Func586a8_:near
-    extrn Func586ac_:near
-    extrn Func586d0_:near
-    extrn Func58720_:near
-    extrn Func58748_:near
-    extrn Func58770_:near
-    extrn Func588e0_:near
-    extrn Func58aa0_:near
-    extrn _Datac6d58:byte
+    extrn RPLVideo_DecodeFrame_:near
+    extrn RPLDecode_Destroy_:near
+    extrn RPLDecode_SetBackground_:near
+    extrn RPLDecode_ClearBackground_:near
+    extrn RPLFile_LoadMetadata_:near
+    extrn RPLFile_ReadAudioData_:near
+    extrn RPLFile_ReadChunkData_:near
+    extrn RPLFile_ReadSectorTail_:near
+    extrn RPLFile_FreeMetadata_:near
+    extrn RPLFile_Open_:near
+    extrn RPLFile_Close_:near
+    extrn RPLFile_AppendNode_:near
+    extrn RPLFile_RemoveNode_:near
+    extrn RPLBuffer_GetData_:near
+    extrn RPLBuffer_GetXOffset_:near
+    extrn RPLBuffer_GetYOffset_:near
+    extrn RPLBuffer_GetWidth_:near
+    extrn RPLBuffer_GetHeight_:near
+    extrn RPLSound_AllocateHandle_:near
+    extrn RPLSound_FreeHandle_:near
+    extrn RPL_CopyMemory_:near
+    extrn RPLADPCM_DecodeStereo_:near
+    extrn RPLADPCM_DecodeMono_:near
+    extrn RPLMovie_Free_:near
+    extrn _rpl_next_movie_id:byte
     extrn memset_:near
 
-    public Func4f450_
-    public Func4f548_
-    public Func4f55c_
-    public Func4f5b0_
-    public Func4f5c4_
-    public Func4f610_
-    public Func4f620_
-    public Func4f81c_
-    public Func4f850_
-    public Func4f86c_
-    public Func4f9f4_
-    public Func4fbf4_
-    public Func502d0_
-    public Func503cc_
-    public Func50518_
-    public Func50564_
-    public Func5056c_
-    public Func505d8_
-    public Func50624_
-    public Func5062c_
-    public Func50634_
-    public Func5063c_
-    public Func50644_
-    public Func5064c_
-    public Func50654_
-    public Func5065c_
-    public Func50664_
-    public Func5066c_
-    public Func50674_
-    public Func5067c_
-    public Func50684_
-    public Func5068c_
-    public Func506a0_
-    public Func506b0_
-    public Func506c4_
-    public Func506d0_
-    public Func506ec_
-    public Func506f8_
-    public Func50704_
-    public Func5070c_
-    public Func50714_
+    public RPLSound_Init_
+    public RPLSound_SetBufferStatus_
+    public RPLSound_DecodeBuffer_
+    public RPLSound_ShutDown_
+    public RPLVideo_SetPixelFormat_
+    public RPLVideo_ShutDown_
+    public RPLMovie_Open_
+    public RPLMovie_Close_
+    public RPLMovie_ReadComplete_
+    public RPLMovie_FillSoundBuffers_
+    public RPLMovie_InitPlayback_
+    public RPLMovie_PlayFrame_
+    public RPLMovie_AdvanceVideoChunk_
+    public RPLMovie_ResetPlayback_
+    public RPLVideo_SetWindow_
+    public RPLSound_GetBufferStatus_
+    public RPLVideo_SetBackground_
+    public RPLVideo_ClearBackground_
+    public RPLMovie_GetTitle_
+    public RPLMovie_GetAuthor_
+    public RPLMovie_GetSoundDescription_
+    public RPLMovie_GetCopyright_
+    public RPLMovie_GetCompression_
+    public RPLMovie_GetPixelDepth_
+    public RPLMovie_GetWidth_
+    public RPLMovie_GetHeight_
+    public RPLMovie_GetSampleRate_
+    public RPLMovie_GetSampleBits_
+    public RPLMovie_GetChannels_
+    public RPLMovie_GetLastChunkIndex_
+    public RPLMovie_GetFramesPerChunk_
+    public RPLMovie_GetFrameRate_
+    public RPLMovie_SetFrameRate_
+    public RPLMovie_GetFrameCount_
+    public RPLMovie_GetDecodedFrameCount_
+    public RPLMovie_GetPendingFrameCount_
+    public RPLMovie_GetVideoChunkIndex_
+    public RPLMovie_GetAudioChunkIndex_
+    public RPLSound_SetSyncCorrection_
+    public RPLSound_GetSyncCorrection_
+    public RPLMovie_GetDuration_
 
 _TEXT segment
-Func4f450_ proc near
+RPLSound_Init_ proc near
     push esi
     push ebp
     db 089h, 0c6h
-    call Func586d0_
+    call RPLSound_AllocateHandle_
     mov dword ptr [edx], eax
     test eax, eax
     jne short L4f469
@@ -154,7 +154,7 @@ L4f475::
     test esi, esi
     jne short L4f538
     mov eax, dword ptr [edx]
-    call Func58720_
+    call RPLSound_FreeHandle_
     mov eax, 01bh
     pop ebp
     pop esi
@@ -167,9 +167,9 @@ L4f538::
     pop ebp
     pop esi
     ret 0ch
-Func4f450_ endp
+RPLSound_Init_ endp
     db 08bh, 0c0h
-Func4f548_ proc near
+RPLSound_SetBufferStatus_ proc near
     test eax, eax
     je short L4f554
     mov eax, dword ptr [eax]
@@ -179,9 +179,9 @@ Func4f548_ proc near
 L4f554::
     mov eax, 026h
     ret
-Func4f548_ endp
+RPLSound_SetBufferStatus_ endp
     db 08bh, 0c0h
-Func4f55c_ proc near
+RPLSound_DecodeBuffer_ proc near
     push ebx
     push ecx
     push edx
@@ -194,7 +194,7 @@ Func4f55c_ proc near
     mov ebx, dword ptr [eax]
     mov edx, dword ptr [eax+044h]
     mov eax, dword ptr [eax+048h]
-    call Func58748_
+    call RPL_CopyMemory_
     jmp short L4f5a4
 L4f579::
     cmp dword ptr [eax+020h], 01h
@@ -205,7 +205,7 @@ L4f579::
     push edx
     mov ebx, dword ptr [eax+044h]
     push ebx
-    call Func58770_
+    call RPLADPCM_DecodeStereo_
     jmp short L4f5a1
 L4f591::
     mov ecx, dword ptr [eax]
@@ -214,7 +214,7 @@ L4f591::
     push esi
     mov edi, dword ptr [eax+044h]
     push edi
-    call Func588e0_
+    call RPLADPCM_DecodeMono_
 L4f5a1::
     add esp, 0ch
 L4f5a4::
@@ -226,20 +226,20 @@ L4f5a4::
     pop ecx
     pop ebx
     ret
-Func4f55c_ endp
+RPLSound_DecodeBuffer_ endp
     db 08dh, 040h, 000h
-Func4f5b0_ proc near
+RPLSound_ShutDown_ proc near
     test eax, eax
     je short L4f5bc
-    call Func58720_
+    call RPLSound_FreeHandle_
     db 031h, 0c0h
     ret
 L4f5bc::
     mov eax, 026h
     ret
-Func4f5b0_ endp
+RPLSound_ShutDown_ endp
     db 08bh, 0c0h
-Func4f5c4_ proc near
+RPLVideo_SetPixelFormat_ proc near
     push esi
     mov esi, dword ptr [eax]
     mov word ptr [esi], dx
@@ -268,18 +268,18 @@ Func4f5c4_ proc near
     db 031h, 0c0h
     pop esi
     ret 018h
-Func4f5c4_ endp
-Func4f610_ proc near
+RPLVideo_SetPixelFormat_ endp
+RPLVideo_ShutDown_ proc near
     test eax, eax
     db 074h, 008h
-    call Func57b74_
+    call RPLDecode_Destroy_
     db 08dh, 040h, 000h
 L4f61c::
     db 031h, 0c0h
     db 0c3h
-Func4f610_ endp
+RPLVideo_ShutDown_ endp
     db 090h
-Func4f620_ proc near
+RPLMovie_Open_ proc near
     db 056h
     db 057h
     db 055h
@@ -295,7 +295,7 @@ Func4f620_ proc near
 L4f641::
     db 0c7h, 080h, 05ch, 001h, 000h, 000h, 000h, 020h, 000h, 000h
     db 08bh, 07dh, 000h
-    mov eax, dword ptr [_Datac6d58]
+    mov eax, dword ptr [_rpl_next_movie_id]
     db 089h, 087h, 060h, 001h, 000h, 000h
     db 08bh, 07dh, 000h
     db 0c7h, 087h, 054h, 001h, 000h, 000h, 002h, 000h, 000h, 000h
@@ -324,12 +324,12 @@ L4f641::
     db 08bh, 05dh, 000h
     mov dword ptr [ebx+0150h], edx
     mov edx, dword ptr [ebp+00h]
-    mov dword ptr [edx+014ch], offset Func4f850_
+    mov dword ptr [edx+014ch], offset RPLMovie_ReadComplete_
     inc eax
     mov edi, dword ptr [ebp+00h]
     db 089h, 0ceh
     add edi, 064h
-    mov dword ptr [_Datac6d58], eax
+    mov dword ptr [_rpl_next_movie_id], eax
     push edi
 L4f70e::
     mov al, byte ptr [esi]
@@ -347,11 +347,11 @@ L4f726::
     mov eax, dword ptr [ebp+00h]
     lea edx, [eax+064h]
     add eax, 08h
-    call Func57cf0_
+    call RPLFile_LoadMetadata_
     test eax, eax
     je short L4f753
     mov eax, dword ptr [ebp+00h]
-    call Func58aa0_
+    call RPLMovie_Free_
     mov eax, 011h
     mov dword ptr [ebp+00h], 00h
     pop ebp
@@ -407,10 +407,10 @@ L4f753::
     mov dword ptr [eax+0144h], 00h
     lea edx, [eax+064h]
     mov eax, dword ptr [eax+04h]
-    call Func583b8_
-    mov edx, offset Dc6d54
+    call RPLFile_Open_
+    mov edx, offset rpl_movie_list
     mov eax, dword ptr [ebp+00h]
-    call Func583e4_
+    call RPLFile_AppendNode_
     mov eax, dword ptr [ebp+00h]
     mov eax, dword ptr [eax+0148h]
     mov byte ptr [eax+08h], 00h
@@ -418,7 +418,7 @@ L4f753::
     mov edx, dword ptr [eax+04h]
     cmp dword ptr [edx], 0ffffffffh
     jne short L4f813
-    call Func58aa0_
+    call RPLMovie_Free_
     mov eax, 011h
     mov dword ptr [ebp+00h], 00h
     pop ebp
@@ -432,9 +432,9 @@ L4f815::
     pop edi
     pop esi
     ret 04h
-Func4f620_ endp
+RPLMovie_Open_ endp
     db 090h
-Func4f81c_ proc near
+RPLMovie_Close_ proc near
     push ebx
     push edx
     db 089h, 0c3h
@@ -442,25 +442,25 @@ Func4f81c_ proc near
     je short L4f84b
     mov eax, dword ptr [eax+04h]
     mov eax, dword ptr [eax]
-    mov edx, offset Dc6d54
-    call Func583dc_
+    mov edx, offset rpl_movie_list
+    call RPLFile_Close_
     db 089h, 0d8h
-    call Func58444_
+    call RPLFile_RemoveNode_
     lea eax, [ebx+08h]
-    call Func57ee8_
+    call RPLFile_FreeMetadata_
     db 089h, 0d8h
-    call Func58aa0_
+    call RPLMovie_Free_
     db 031h, 0c0h
 L4f84b::
     pop edx
     pop ebx
     ret
-Func4f81c_ endp
+RPLMovie_Close_ endp
     db 08bh, 0c0h
-Func4f850_ proc near
+RPLMovie_ReadComplete_ proc near
     push edx
     db 089h, 0c2h
-    mov eax, dword ptr [Dc6d54]
+    mov eax, dword ptr [rpl_movie_list]
     cmp edx, dword ptr [eax]
     je short L4f863
 L4f85c::
@@ -471,9 +471,9 @@ L4f863::
     mov byte ptr [eax+08h], 01h
     pop edx
     ret
-Func4f850_ endp
+RPLMovie_ReadComplete_ endp
     db 08dh, 040h, 000h
-Func4f86c_ proc near
+RPLMovie_FillSoundBuffers_ proc near
     push esi
     push edi
     push ebp
@@ -513,7 +513,7 @@ L4f8b7::
     cmp ebx, dword ptr [edx]
     jle short L4f927
     db 089h, 0f0h
-    call Func4f55c_
+    call RPLSound_DecodeBuffer_
     mov edx, dword ptr [esi]
     mov ebx, dword ptr [edx]
     imul ebx, dword ptr [edx+010h]
@@ -543,7 +543,7 @@ L4f8b7::
 L4f927::
     db 089h, 0f0h
     mov dword ptr [edx], ebx
-    call Func4f55c_
+    call RPLSound_DecodeBuffer_
     mov edx, dword ptr [esi]
     mov ebx, dword ptr [edx]
     imul ebx, dword ptr [edx+010h]
@@ -620,8 +620,8 @@ L4f9b7::
     pop edi
     pop esi
     ret 08h
-Func4f86c_ endp
-Func4f9f4_ proc near
+RPLMovie_FillSoundBuffers_ endp
+RPLMovie_InitPlayback_ proc near
     push ecx
     push esi
     push edi
@@ -659,7 +659,7 @@ Func4f9f4_ proc near
     lea ebx, [esi+0b4h]
     mov edx, dword ptr [edx]
     mov eax, dword ptr [eax]
-    call Func57dac_
+    call RPLFile_ReadSectorTail_
     db 031h, 0dbh
 L4fa7e::
     mov edx, dword ptr [esi+0b4h]
@@ -673,7 +673,7 @@ L4fa7e::
     jne short L4fabe
     mov byte ptr [eax+08h], 02h
     db 089h, 0f0h
-    call Func57d44_
+    call RPLFile_ReadAudioData_
     test eax, eax
     je short L4fabe
     mov eax, 019h
@@ -721,7 +721,7 @@ L4fb50::
     lea ebx, [esi+0108h]
     push eax
     db 089h, 0f0h
-    call Func502d0_
+    call RPLMovie_AdvanceVideoChunk_
     test edi, edi
     je short L4fbca
     mov eax, dword ptr [esi]
@@ -743,7 +743,7 @@ L4fb50::
     push eax
     db 089h, 0f2h
     db 089h, 0f8h
-    call Func4f86c_
+    call RPLMovie_FillSoundBuffers_
     mov eax, dword ptr [edi]
     mov dword ptr [eax+03ch], 0ffffffffh
     jmp short L4fbd4
@@ -765,9 +765,9 @@ L4fbec::
     pop esi
     pop ecx
     ret
-Func4f9f4_ endp
+RPLMovie_InitPlayback_ endp
     db 090h
-Func4fbf4_ proc near
+RPLMovie_PlayFrame_ proc near
     push esi
     push edi
     push ebp
@@ -852,14 +852,14 @@ L4fd11::
     cmp eax, dword ptr [ebp+015ch]
     jbe short L4fd44
     db 089h, 0e8h
-    call Func57d44_
+    call RPLFile_ReadAudioData_
     test eax, eax
     je short L4fd59
     mov eax, 019h
     jmp near ptr L502c5
 L4fd44::
     db 089h, 0e8h
-    call Func57d78_
+    call RPLFile_ReadChunkData_
     test eax, eax
     je short L4fd59
     mov eax, 019h
@@ -894,7 +894,7 @@ L4fdb5::
     push esi
     mov edx, dword ptr [ebp+0b4h]
     mov ecx, dword ptr [esp+018h]
-    call Func502d0_
+    call RPLMovie_AdvanceVideoChunk_
     mov eax, dword ptr [ebp+0148h]
     mov byte ptr [eax+08h], 00h
     jmp near ptr L4fe97
@@ -1001,7 +1001,7 @@ L4ff1b::
     push eax
     mov edx, dword ptr [esp+08h]
     mov eax, dword ptr [esp+018h]
-    call Func4f344_
+    call RPLVideo_DecodeFrame_
 L4ff45::
     mov eax, dword ptr [esp+014h]
     mov eax, dword ptr [eax]
@@ -1104,7 +1104,7 @@ L50089::
     jle short L50108
     mov eax, dword ptr [esp+018h]
     mov edx, dword ptr [esp+018h]
-    call Func4f55c_
+    call RPLSound_DecodeBuffer_
     mov edx, dword ptr [edx]
     mov eax, dword ptr [edx]
     imul eax, dword ptr [edx+010h]
@@ -1142,7 +1142,7 @@ L50108::
     jle short L5016d
     mov dword ptr [eax], edx
     mov eax, dword ptr [esp+018h]
-    call Func4f55c_
+    call RPLSound_DecodeBuffer_
     mov eax, dword ptr [esp+018h]
     mov eax, dword ptr [eax]
     mov edx, dword ptr [eax]
@@ -1278,9 +1278,9 @@ L502c5::
     pop edi
     pop esi
     ret 010h
-Func4fbf4_ endp
+RPLMovie_PlayFrame_ endp
     db 08bh, 0c0h
-Func502d0_ proc near
+RPLMovie_AdvanceVideoChunk_ proc near
     push esi
     push edi
     push ebp
@@ -1387,9 +1387,9 @@ L503c0::
     pop edi
     pop esi
     ret 08h
-Func502d0_ endp
+RPLMovie_AdvanceVideoChunk_ endp
     db 08dh, 040h, 000h
-Func503cc_ proc near
+RPLMovie_ResetPlayback_ proc near
     push ecx
     push esi
     push edi
@@ -1453,7 +1453,7 @@ Func503cc_ proc near
     db 089h, 0c2h
     mov ebx, dword ptr [eax+0108h]
     db 089h, 0f8h
-    call Func4f86c_
+    call RPLMovie_FillSoundBuffers_
     mov ebx, dword ptr [edi]
     mov dword ptr [ebx+03ch], 0ffffffffh
     jmp short L504f9
@@ -1475,8 +1475,8 @@ L50511::
     pop esi
     pop ecx
     ret
-Func503cc_ endp
-Func50518_ proc near
+RPLMovie_ResetPlayback_ endp
+RPLVideo_SetWindow_ proc near
     push esi
     push edi
     mov esi, dword ptr [eax]
@@ -1507,15 +1507,15 @@ Func50518_ proc near
     pop edi
     pop esi
     ret 010h
-Func50518_ endp
+RPLVideo_SetWindow_ endp
     db 090h
-Func50564_ proc near
+RPLSound_GetBufferStatus_ proc near
     mov eax, dword ptr [eax]
     mov eax, dword ptr [eax+03ch]
     ret
-Func50564_ endp
+RPLSound_GetBufferStatus_ endp
     db 08bh, 0c0h
-Func5056c_ proc near
+RPLVideo_SetBackground_ proc near
     push ecx
     push esi
     push edi
@@ -1536,24 +1536,24 @@ L50582::
     mov eax, dword ptr [edx+04h]
     push eax
     db 089h, 0d0h
-    call Func586ac_
+    call RPLBuffer_GetHeight_
     push eax
     db 089h, 0d0h
-    call Func586a8_
+    call RPLBuffer_GetWidth_
     push eax
     db 089h, 0d0h
-    call Func586a4_
+    call RPLBuffer_GetYOffset_
     push eax
     db 089h, 0d0h
-    call Func58698_
+    call RPLBuffer_GetXOffset_
     db 089h, 0c1h
     db 089h, 0d0h
-    call Func58674_
+    call RPLBuffer_GetData_
     mov edi, dword ptr [esi]
     mov edi, dword ptr [edi+04ah]
     db 089h, 0c2h
     db 089h, 0f8h
-    call Func57c20_
+    call RPLDecode_SetBackground_
     mov eax, dword ptr [esi]
     mov dword ptr [eax+05ah], 01h
 L505d0::
@@ -1562,9 +1562,9 @@ L505d0::
     pop esi
     pop ecx
     ret
-Func5056c_ endp
+RPLVideo_SetBackground_ endp
     db 08bh, 0c0h
-Func505d8_ proc near
+RPLVideo_ClearBackground_ proc near
     push ecx
     push esi
     db 089h, 0c1h
@@ -1577,19 +1577,19 @@ Func505d8_ proc near
     ret
 L505ec::
     db 089h, 0d0h
-    call Func58674_
+    call RPLBuffer_GetData_
     test eax, eax
     je short L5061d
     mov eax, dword ptr [ecx]
     cmp dword ptr [eax+05ah], 00h
     je short L5061d
     db 089h, 0d0h
-    call Func58674_
+    call RPLBuffer_GetData_
     mov esi, dword ptr [ecx]
     mov esi, dword ptr [esi+04ah]
     db 089h, 0c2h
     db 089h, 0f0h
-    call Func57c4c_
+    call RPLDecode_ClearBackground_
     mov eax, dword ptr [ecx]
     mov dword ptr [eax+05ah], 00h
 L5061d::
@@ -1597,100 +1597,100 @@ L5061d::
     pop esi
     pop ecx
     ret
-Func505d8_ endp
+RPLVideo_ClearBackground_ endp
     db 08bh, 0c0h
-Func50624_ proc near
+RPLMovie_GetTitle_ proc near
     test eax, eax
     je short L5062b
     mov eax, dword ptr [eax+08h]
 L5062b::
     ret
-Func50624_ endp
-Func5062c_ proc near
+RPLMovie_GetTitle_ endp
+RPLMovie_GetAuthor_ proc near
     test eax, eax
     je short L50633
     mov eax, dword ptr [eax+0ch]
 L50633::
     ret
-Func5062c_ endp
-Func50634_ proc near
+RPLMovie_GetAuthor_ endp
+RPLMovie_GetSoundDescription_ proc near
     test eax, eax
     je short L5063b
     mov eax, dword ptr [eax+010h]
 L5063b::
     ret
-Func50634_ endp
-Func5063c_ proc near
+RPLMovie_GetSoundDescription_ endp
+RPLMovie_GetCopyright_ proc near
     test eax, eax
     je short L50643
     mov eax, dword ptr [eax+014h]
 L50643::
     ret
-Func5063c_ endp
-Func50644_ proc near
+RPLMovie_GetCopyright_ endp
+RPLMovie_GetCompression_ proc near
     test eax, eax
     je short L5064b
     mov eax, dword ptr [eax+018h]
 L5064b::
     ret
-Func50644_ endp
-Func5064c_ proc near
+RPLMovie_GetCompression_ endp
+RPLMovie_GetPixelDepth_ proc near
     test eax, eax
     je short L50653
     mov eax, dword ptr [eax+024h]
 L50653::
     ret
-Func5064c_ endp
-Func50654_ proc near
+RPLMovie_GetPixelDepth_ endp
+RPLMovie_GetWidth_ proc near
     test eax, eax
     je short L5065b
     mov eax, dword ptr [eax+01ch]
 L5065b::
     ret
-Func50654_ endp
-Func5065c_ proc near
+RPLMovie_GetWidth_ endp
+RPLMovie_GetHeight_ proc near
     test eax, eax
     je short L50663
     mov eax, dword ptr [eax+020h]
 L50663::
     ret
-Func5065c_ endp
-Func50664_ proc near
+RPLMovie_GetHeight_ endp
+RPLMovie_GetSampleRate_ proc near
     test eax, eax
     je short L5066b
     mov eax, dword ptr [eax+028h]
 L5066b::
     ret
-Func50664_ endp
-Func5066c_ proc near
+RPLMovie_GetSampleRate_ endp
+RPLMovie_GetSampleBits_ proc near
     test eax, eax
     je short L50673
     mov eax, dword ptr [eax+030h]
 L50673::
     ret
-Func5066c_ endp
-Func50674_ proc near
+RPLMovie_GetSampleBits_ endp
+RPLMovie_GetChannels_ proc near
     test eax, eax
     je short L5067b
     mov eax, dword ptr [eax+02ch]
 L5067b::
     ret
-Func50674_ endp
-Func5067c_ proc near
+RPLMovie_GetChannels_ endp
+RPLMovie_GetLastChunkIndex_ proc near
     test eax, eax
     je short L50683
     mov eax, dword ptr [eax+038h]
 L50683::
     ret
-Func5067c_ endp
-Func50684_ proc near
+RPLMovie_GetLastChunkIndex_ endp
+RPLMovie_GetFramesPerChunk_ proc near
     test eax, eax
     je short L5068b
     mov eax, dword ptr [eax+034h]
 L5068b::
     ret
-Func50684_ endp
-Func5068c_ proc near
+RPLMovie_GetFramesPerChunk_ endp
+RPLMovie_GetFrameRate_ proc near
     sub esp, 04h
     test eax, eax
     je short L50696
@@ -1700,8 +1700,8 @@ L50696::
     fld dword ptr [esp]
     add esp, 04h
     ret
-Func5068c_ endp
-Func506a0_ proc near
+RPLMovie_GetFrameRate_ endp
+RPLMovie_SetFrameRate_ proc near
     push edx
     test eax, eax
     je short L506ac
@@ -1710,8 +1710,8 @@ Func506a0_ proc near
 L506ac::
     pop edx
     ret 04h
-Func506a0_ endp
-Func506b0_ proc near
+RPLMovie_SetFrameRate_ endp
+RPLMovie_GetFrameCount_ proc near
     push edx
     test eax, eax
     je short L506bf
@@ -1722,17 +1722,17 @@ Func506b0_ proc near
 L506bf::
     pop edx
     ret
-Func506b0_ endp
+RPLMovie_GetFrameCount_ endp
     db 08dh, 040h, 000h
-Func506c4_ proc near
+RPLMovie_GetDecodedFrameCount_ proc near
     test eax, eax
     je short L506ce
     mov eax, dword ptr [eax+0104h]
 L506ce::
     ret
-Func506c4_ endp
+RPLMovie_GetDecodedFrameCount_ endp
     db 090h
-Func506d0_ proc near
+RPLMovie_GetPendingFrameCount_ proc near
     push edx
     test eax, eax
     je short L506e5
@@ -1746,37 +1746,37 @@ L506e5::
     db 089h, 0d0h
     pop edx
     ret
-Func506d0_ endp
+RPLMovie_GetPendingFrameCount_ endp
     db 090h
-Func506ec_ proc near
+RPLMovie_GetVideoChunkIndex_ proc near
     test eax, eax
     je short L506f6
     mov eax, dword ptr [eax+0110h]
 L506f6::
     ret
-Func506ec_ endp
+RPLMovie_GetVideoChunkIndex_ endp
     db 090h
-Func506f8_ proc near
+RPLMovie_GetAudioChunkIndex_ proc near
     test eax, eax
     je short L50702
     mov eax, dword ptr [eax+010ch]
 L50702::
     ret
-Func506f8_ endp
+RPLMovie_GetAudioChunkIndex_ endp
     db 090h
-Func50704_ proc near
+RPLSound_SetSyncCorrection_ proc near
     mov eax, dword ptr [eax+04h]
     mov dword ptr [eax+010h], edx
     ret
-Func50704_ endp
+RPLSound_SetSyncCorrection_ endp
     db 090h
-Func5070c_ proc near
+RPLSound_GetSyncCorrection_ proc near
     mov eax, dword ptr [eax+04h]
     mov eax, dword ptr [eax+010h]
     ret
-Func5070c_ endp
+RPLSound_GetSyncCorrection_ endp
     db 090h
-Func50714_ proc near
+RPLMovie_GetDuration_ proc near
     push ebx
     push edx
     sub esp, 08h
@@ -1799,11 +1799,11 @@ L5073a::
     pop edx
     pop ebx
     ret
-Func50714_ endp
+RPLMovie_GetDuration_ endp
 _TEXT ends
 
 _DATA segment
-Dc6d54 label byte
+rpl_movie_list label byte
     db 000h, 000h, 000h, 000h
 _DATA ends
 

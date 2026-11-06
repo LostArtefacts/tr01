@@ -90,29 +90,29 @@ typedef struct
     PLAYERSAMPLE *samples;
 } PLAYERDRIVER;
 
-int Func4f3ec(void);
-int Func4f418(void);
-int Func4efa0(LPVIDEOHANDLE *, int, int, int, int, int, int, int, int, int, int *, int *);
-int Func4f610(LPVIDEOHANDLE);
-int Func4f620(LPMOVIEHANDLE *, void *, void *, char *, int);
-int Func4f81c(LPMOVIEHANDLE);
+int RPLVideo_InitPlaybackMode(void);
+int RPLVideo_ShutDownPlaybackMode(void);
+int RPLVideo_Init(LPVIDEOHANDLE *, int, int, int, int, int, int, int, int, int, int *, int *);
+int RPLVideo_ShutDown(LPVIDEOHANDLE);
+int RPLMovie_Open(LPMOVIEHANDLE *, void *, void *, char *, int);
+int RPLMovie_Close(LPMOVIEHANDLE);
 int sosTIMERRegisterEvent(dword, void (*)(void), dword *);
 int sosTIMERRemoveEvent(dword);
-int Func4f450(void (*)(SOUNDHANDLE *), LPSOUNDHANDLE *, int, int, int, int, int);
-int Func4f548(LPSOUNDHANDLE, int);
-int Func4f5b0(LPSOUNDHANDLE);
-int Func4f9f4(LPMOVIEHANDLE, LPVIDEOHANDLE, LPSOUNDHANDLE);
-int Func4fbf4(LPMOVIEHANDLE, LPVIDEOHANDLE, LPSOUNDHANDLE, void *, int, void *, void *, int);
-int Func4f140(LPVIDEOHANDLE, void *, int);
-void Func50d04(int, byte *, int, int, int, int, int);
-int Func5056c(LPVIDEOHANDLE, void *, void *);
-int Func505d8(LPVIDEOHANDLE, void *, void *);
-int Func50518(LPVIDEOHANDLE, int, int, int, int, int, int, dword);
-dword Func4e6b6(dword, void *);
-dword Func4e836(dword, dword);
+int RPLSound_Init(void (*)(SOUNDHANDLE *), LPSOUNDHANDLE *, int, int, int, int, int);
+int RPLSound_SetBufferStatus(LPSOUNDHANDLE, int);
+int RPLSound_ShutDown(LPSOUNDHANDLE);
+int RPLMovie_InitPlayback(LPMOVIEHANDLE, LPVIDEOHANDLE, LPSOUNDHANDLE);
+int RPLMovie_PlayFrame(LPMOVIEHANDLE, LPVIDEOHANDLE, LPSOUNDHANDLE, void *, int, void *, void *, int);
+int RPLVideo_Map(LPVIDEOHANDLE, void *, int);
+void RPLGraphics_Blit(int, byte *, int, int, int, int, int);
+int RPLVideo_SetBackground(LPVIDEOHANDLE, void *, void *);
+int RPLVideo_ClearBackground(LPVIDEOHANDLE, void *, void *);
+int RPLVideo_SetWindow(LPVIDEOHANDLE, int, int, int, int, int, int, dword);
+dword sosDIGIStartSample(dword, void *);
+dword sosDIGIStopSample(dword, dword);
 
-void Func492e0(void);
-void Func495c4(SOUNDHANDLE *s);
+void Player_TimerCallback(void);
+void Player_SoundChunkCallback(SOUNDHANDLE *s);
 
 volatile int player_ticks = 0;
 int player_mode = 1;
@@ -122,22 +122,22 @@ dword player_sound_driver_handle;
 PLAYERDRIVER *player_driver;
 dword player_timer_handle;
 
-void __cdecl Func495f8(void *sample);
-int Func49db0(LPMOVIEHANDLE m);
+void __cdecl Player_SampleProcessedCallback(void *sample);
+int Player_GetElapsedTicks(LPMOVIEHANDLE m);
 
 PLRESULT Player_InitPlaybackMode(void)
 {
     player_mode = 0x110;
-    return Func4f3ec();
+    return RPLVideo_InitPlaybackMode();
 }
 
-int Func48f7c(void)
+int Player_ShutDownPlaybackMode(void)
 {
     player_mode = 1;
-    return Func4f418();
+    return RPLVideo_ShutDownPlaybackMode();
 }
 
-PLRESULT Player_InitVideo(LPVIDEOHANDLE *handle, int x_size, int y_size, int xoffset, int yoffset, int a, int b, int width, int height, int buffered, int flags)
+PLRESULT Player_InitVideo(LPVIDEOHANDLE *handle, int x_size, int y_size, int xoffset, int yoffset, int clip_x, int clip_y, int width, int height, int buffered, int flags)
 {
     int result;
     int w;
@@ -149,7 +149,7 @@ PLRESULT Player_InitVideo(LPVIDEOHANDLE *handle, int x_size, int y_size, int xof
     if (buffered) {
         flags |= 0x20;
     }
-    result = Func4efa0(handle, x_size, y_size, xoffset, yoffset, a, b, width, height, flags, &w, &h);
+    result = RPLVideo_Init(handle, x_size, y_size, xoffset, yoffset, clip_x, clip_y, width, height, flags, &w, &h);
     if (result) {
         return result;
     }
@@ -185,23 +185,23 @@ PLRESULT Player_ShutDownVideo(LPVIDEOHANDLE handle)
             }
             free(handle->extra);
         }
-        Func4f610(handle);
+        RPLVideo_ShutDown(handle);
     }
     return 0;
 }
 
-PLRESULT Player_InitMovie(LPMOVIEHANDLE *m, void *a, void *b, char *filename, int buffer_size)
+PLRESULT Player_InitMovie(LPMOVIEHANDLE *m, void *read_progress_callback, void *callback_interval_bytes, char *filename, int buffer_size)
 {
-    if (Func4f620(m, a, b, filename, buffer_size)) {
+    if (RPLMovie_Open(m, read_progress_callback, callback_interval_bytes, filename, buffer_size)) {
         return 0x3fa;
     }
     (*m)->start_ticks = 0;
-    (*m)->field138 = 0;
-    (*m)->fielde4 = 0;
+    (*m)->unused_playback_state = 0;
+    (*m)->unused_timing_state0 = 0;
     (*m)->elapsed = 0;
     (*m)->resume_ticks = 0;
     (*m)->pause_ticks = 0;
-    (*m)->fieldf4 = 0;
+    (*m)->unused_timing_state1 = 0;
     (*m)->timer_started = 0;
     (*m)->paused = 1;
     return 0;
@@ -209,7 +209,7 @@ PLRESULT Player_InitMovie(LPMOVIEHANDLE *m, void *a, void *b, char *filename, in
 
 PLRESULT Player_ShutDownMovie(LPMOVIEHANDLE m)
 {
-    Func4f81c(m);
+    RPLMovie_Close(m);
     return 0;
 }
 
@@ -217,16 +217,16 @@ PLRESULT Player_InitPlaybackSystem(ULONG handle, void *driver)
 {
     player_sound_driver_handle = handle;
     player_driver = driver;
-    sosTIMERRegisterEvent(200, Func492e0, &player_timer_handle);
+    sosTIMERRegisterEvent(200, Player_TimerCallback, &player_timer_handle);
     return 0;
 }
 
-void Func492e0(void)
+void Player_TimerCallback(void)
 {
     player_ticks++;
 }
 
-PLRESULT Player_InitSound(LPSOUNDHANDLE *handle, int buffer_size, int compression, int pcm, int a, int channels, int rate, ULONG precision)
+PLRESULT Player_InitSound(LPSOUNDHANDLE *handle, int buffer_size, int compression, int pcm, int chunk_size, int channels, int rate, ULONG precision)
 {
     int result;
     float tick_rate;
@@ -235,7 +235,7 @@ PLRESULT Player_InitSound(LPSOUNDHANDLE *handle, int buffer_size, int compressio
     float size;
     PLAYERSAMPLE *sample;
 
-    result = Func4f450(Func495c4, handle, buffer_size, compression, pcm, a, channels);
+    result = RPLSound_Init(Player_SoundChunkCallback, handle, buffer_size, compression, pcm, chunk_size, channels);
     if (result) {
         return result;
     }
@@ -274,7 +274,7 @@ PLRESULT Player_InitSound(LPSOUNDHANDLE *handle, int buffer_size, int compressio
     sample->rate = rate;
     sample->pan = 0x8000;
     *(dword *)((byte *)sample + 0x2c) = 0x7fff7fff;
-    sample->processed = Func495f8;
+    sample->processed = Player_SampleProcessedCallback;
     sample->buffer1 = (*handle)->sound->buffer1;
     sample->buffer2 = (*handle)->sound->buffer2;
     sample->buffer = (*handle)->sound->buffer1;
@@ -284,18 +284,18 @@ PLRESULT Player_InitSound(LPSOUNDHANDLE *handle, int buffer_size, int compressio
 
 PLRESULT Player_StartSound(LPSOUNDHANDLE handle)
 {
-    handle->extra->device->handle = Func4e6b6(player_sound_driver_handle, handle->extra->device->sample);
+    handle->extra->device->handle = sosDIGIStartSample(player_sound_driver_handle, handle->extra->device->sample);
     player_sound = handle;
     return 0;
 }
 
-void Func495c4(SOUNDHANDLE *s)
+void Player_SoundChunkCallback(SOUNDHANDLE *s)
 {
     s->sound->pending = s->sound->compression;
     s->extra->chunks++;
 }
 
-void __cdecl Func495f8(void *ptr)
+void __cdecl Player_SampleProcessedCallback(void *ptr)
 {
     byte *buffer;
 
@@ -304,7 +304,7 @@ void __cdecl Func495f8(void *ptr)
     ((PLAYERSAMPLE *)ptr)->buffer1 = buffer;
     ((PLAYERSAMPLE *)ptr)->buffer = buffer;
     *(int *)((byte *)ptr + 0xc) = player_sound->sound->buffer_size;
-    Func4f548(player_sound, player_sound->sound->pending == 0);
+    RPLSound_SetBufferStatus(player_sound, player_sound->sound->pending == 0);
 }
 
 PLRESULT Player_ShutDownPlaybackSystem(void)
@@ -331,7 +331,7 @@ PLRESULT Player_ShutDownSound(LPSOUNDHANDLE handle)
         if (handle->sound->buffer2) {
             free(handle->sound->buffer2);
         }
-        Func4f5b0(handle);
+        RPLSound_ShutDown(handle);
     }
 }
 
@@ -351,7 +351,7 @@ PLRESULT Player_StartTimer(LPMOVIEHANDLE m)
     return 0;
 }
 
-int Func49808(LPMOVIEHANDLE m)
+int Player_StopTimer(LPMOVIEHANDLE m)
 {
     if (!m->paused) {
         m->paused = 1;
@@ -360,7 +360,7 @@ int Func49808(LPMOVIEHANDLE m)
     return 0;
 }
 
-int Func49854(LPMOVIEHANDLE m, int ticks)
+int Player_AdjustElapsedTicks(LPMOVIEHANDLE m, int ticks)
 {
     m->elapsed += ticks;
     return 0;
@@ -368,11 +368,11 @@ int Func49854(LPMOVIEHANDLE m, int ticks)
 
 PLRESULT Player_InitMoviePlayback(LPMOVIEHANDLE m, LPVIDEOHANDLE v, LPSOUNDHANDLE s)
 {
-    Func4f9f4(m, v, s);
+    RPLMovie_InitPlayback(m, v, s);
     return 0;
 }
 
-int Func498bc(int handle)
+int Player_GetSamplePosition(int handle)
 {
     PLAYERSAMPLE *sample;
 
@@ -380,7 +380,7 @@ int Func498bc(int handle)
     return *(byte **)((byte *)sample + 4) - sample->buffer;
 }
 
-PLRESULT Player_Playframe(LPMOVIEHANDLE m, LPVIDEOHANDLE v, LPSOUNDHANDLE s, void *a, int b, int c, void *d, int e)
+PLRESULT Player_Playframe(LPMOVIEHANDLE m, LPVIDEOHANDLE v, LPSOUNDHANDLE s, void *reference_buffer, int x_offset, int y_offset, void *reference_frame, int blend_mode)
 {
     float sound_time;
     float duration;
@@ -400,24 +400,24 @@ PLRESULT Player_Playframe(LPMOVIEHANDLE m, LPVIDEOHANDLE v, LPSOUNDHANDLE s, voi
         } else {
             ticks = current->elapsed + (player_ticks - current->resume_ticks);
         }
-        if (ticks * m->frame_rate * 0.005f > m->vdf) {
+        if (ticks * m->frame_rate * 0.005f > m->decoded_frames) {
             if (v->extra->buffered) {
-                result = Func4fbf4(m, v, s, a, 1, *v->extra->buffer, d, e);
+                result = RPLMovie_PlayFrame(m, v, s, reference_buffer, 1, *v->extra->buffer, reference_frame, blend_mode);
                 if (v->video->flags & 8) {
-                    Func50d04(0, *v->extra->buffer, v->video->width, v->video->height, b, c, 2);
+                    RPLGraphics_Blit(0, *v->extra->buffer, v->video->width, v->video->height, x_offset, y_offset, 2);
                 } else if (v->video->flags & 0x40) {
-                    Func50d04(0, *v->extra->buffer, v->video->width, v->video->height, b, c, 1);
+                    RPLGraphics_Blit(0, *v->extra->buffer, v->video->width, v->video->height, x_offset, y_offset, 1);
                 } else {
-                    Func50d04(0, *v->extra->buffer, v->video->width, v->video->height, b, c, 0);
+                    RPLGraphics_Blit(0, *v->extra->buffer, v->video->width, v->video->height, x_offset, y_offset, 0);
                 }
             } else {
-                result = Func4fbf4(m, v, s, a, 1, vidmode_state.display.buffer, d, e);
+                result = RPLMovie_PlayFrame(m, v, s, reference_buffer, 1, vidmode_state.display.buffer, reference_frame, blend_mode);
             }
         } else {
-            result = Func4fbf4(m, v, s, a, 0, 0, d, e);
+            result = RPLMovie_PlayFrame(m, v, s, reference_buffer, 0, 0, reference_frame, blend_mode);
         }
     } else {
-        result = Func4fbf4(m, v, s, a, 0, 0, d, e);
+        result = RPLMovie_PlayFrame(m, v, s, reference_buffer, 0, 0, reference_frame, blend_mode);
     }
     if (s) {
         int handle;
@@ -436,9 +436,9 @@ PLRESULT Player_Playframe(LPMOVIEHANDLE m, LPVIDEOHANDLE v, LPSOUNDHANDLE s, voi
         if (duration <= sound_time * 0.005) {
             return 0x3fc;
         }
-        if (Func49db0(m) < (int)sound_time) {
+        if (Player_GetElapsedTicks(m) < (int)sound_time) {
             m->elapsed += s->extra->correction;
-        } else if (Func49db0(m) > (int)sound_time) {
+        } else if (Player_GetElapsedTicks(m) > (int)sound_time) {
             m->elapsed -= s->extra->correction;
         }
     }
@@ -446,51 +446,51 @@ PLRESULT Player_Playframe(LPMOVIEHANDLE m, LPVIDEOHANDLE v, LPSOUNDHANDLE s, voi
     return result == 0 ? 0 : result;
 }
 
-PLRESULT Player_MapVideo(LPVIDEOHANDLE v, int a)
+PLRESULT Player_MapVideo(LPVIDEOHANDLE v, int colour_mode)
 {
     if (v->extra->buffered) {
-        return Func4f140(v, *v->extra->buffer, a);
+        return RPLVideo_Map(v, *v->extra->buffer, colour_mode);
     } else {
-        return Func4f140(v, vidmode_state.display.buffer, a);
+        return RPLVideo_Map(v, vidmode_state.display.buffer, colour_mode);
     }
 }
 
 PLRESULT Player_StopSound(LPSOUNDHANDLE s)
 {
-    Func4e836(player_sound_driver_handle, s->extra->device->handle);
+    sosDIGIStopSample(player_sound_driver_handle, s->extra->device->handle);
     return 0;
 }
 
-int Func49cbc(LPSOUNDHANDLE s)
+int Player_SetCurrentSound(LPSOUNDHANDLE s)
 {
     player_sound = s;
     return 0;
 }
 
-int Func49ce8(void *a, int b)
+int Player_NoOp(void *unused_data, int unused_value)
 {
     return 0;
 }
 
-int Func49d10(LPVIDEOHANDLE v, void *a)
-{
-    if (!v->extra->buffered) {
-        return 0x3eb;
-    }
-    Func5056c(v, a, *v->extra->buffer);
-    return 0;
-}
-
-int Func49d60(LPVIDEOHANDLE v, void *a)
+int Player_SetBackground(LPVIDEOHANDLE v, void *background_buffer)
 {
     if (!v->extra->buffered) {
         return 0x3eb;
     }
-    Func505d8(v, a, *v->extra->buffer);
+    RPLVideo_SetBackground(v, background_buffer, *v->extra->buffer);
     return 0;
 }
 
-int Func49db0(LPMOVIEHANDLE m)
+int Player_ClearBackground(LPVIDEOHANDLE v, void *background_buffer)
+{
+    if (!v->extra->buffered) {
+        return 0x3eb;
+    }
+    RPLVideo_ClearBackground(v, background_buffer, *v->extra->buffer);
+    return 0;
+}
+
+int Player_GetElapsedTicks(LPMOVIEHANDLE m)
 {
     if (m->paused) {
         return m->elapsed + (m->pause_ticks - m->resume_ticks);
@@ -499,7 +499,7 @@ int Func49db0(LPMOVIEHANDLE m)
     }
 }
 
-int Func49e1c(LPMOVIEHANDLE m)
+int Player_GetFrameLead(LPMOVIEHANDLE m)
 {
     {
         LPMOVIEHANDLE handle;
@@ -513,11 +513,11 @@ int Func49e1c(LPMOVIEHANDLE m)
         } else {
             ticks = current->elapsed + (player_ticks - current->resume_ticks);
         }
-        return m->vdf - (int)(ticks * m->frame_rate * 0.005f);
+        return m->decoded_frames - (int)(ticks * m->frame_rate * 0.005f);
     }
 }
 
-int Func49ebc(LPVIDEOHANDLE v, int x, int y, int a, int b, int width, int height, dword flags)
+int Player_SetVideoWindow(LPVIDEOHANDLE v, int x, int y, int clip_x, int clip_y, int width, int height, dword flags)
 {
-    return Func50518(v, x, y, a, b, width, height, flags);
+    return RPLVideo_SetWindow(v, x, y, clip_x, clip_y, width, height, flags);
 }

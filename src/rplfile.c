@@ -1,6 +1,6 @@
 #include "rplfile_internal.h"
 
-int Func57cf0(RPLFILE *rpl, char *name)
+int RPLFile_LoadMetadata(RPLFILE *rpl, char *name)
 {
     FILE *fp;
 
@@ -8,19 +8,19 @@ int Func57cf0(RPLFILE *rpl, char *name)
     if (!fp) {
         return 19;
     }
-    if (!Func57e14(fp, rpl)) {
+    if (!RPLFile_ReadMetadata(fp, rpl)) {
         fclose(fp);
     } else {
         fclose(fp);
         if (rpl->format == 124) {
             return 0;
         }
-        Func57ee8(rpl);
+        RPLFile_FreeMetadata(rpl);
     }
     return 20;
 }
 
-int Func57d44(RPLFILE *rpl)
+int RPLFile_ReadAudioData(RPLFILE *rpl)
 {
     if (read(*(int *)rpl->author, rpl->buffer, rpl->audio_size) != rpl->audio_size) {
         rpl->callback(rpl->context);
@@ -30,7 +30,7 @@ int Func57d44(RPLFILE *rpl)
     return 0;
 }
 
-int Func57d78(RPLFILE *rpl)
+int RPLFile_ReadChunkData(RPLFILE *rpl)
 {
     if (read(*(int *)rpl->author, rpl->buffer, rpl->read_size) != rpl->read_size) {
         rpl->callback(rpl->context);
@@ -40,7 +40,7 @@ int Func57d78(RPLFILE *rpl)
     return 0;
 }
 
-int Func57dac(int handle, long offset, char **buffer)
+int RPLFile_ReadSectorTail(int handle, long offset, char **buffer)
 {
     int size;
     int got;
@@ -57,17 +57,17 @@ int Func57dac(int handle, long offset, char **buffer)
     return got ^ size;
 }
 
-long Func57e00(int handle)
+long RPLFile_Tell(int handle)
 {
     return tell(handle);
 }
 
-long Func57e08(int handle, long offset)
+long RPLFile_Seek(int handle, long offset)
 {
     return lseek(handle, offset, SEEK_SET);
 }
 
-int Func57e14(FILE *fp, RPLFILE *rpl)
+int RPLFile_ReadMetadata(FILE *fp, RPLFILE *rpl)
 {
     int error;
 
@@ -75,24 +75,24 @@ int Func57e14(FILE *fp, RPLFILE *rpl)
     if (!rpl || !fp) {
         return 0;
     }
-    Func57eb0(rpl);
-    if (!Func57f6c(fp, rpl)) {
+    RPLFile_InitMetadata(rpl);
+    if (!RPLFile_ReadHeader(fp, rpl)) {
         error = 1;
     }
-    if (!error && !Func58264(fp, rpl)) {
+    if (!error && !RPLFile_ReadIndex(fp, rpl)) {
         error = 1;
     }
     if (!error) {
         rpl->chunk_samples = (long)(rpl->sample_rate / rpl->frame_rate) & ~3;
     }
     if (error) {
-        Func57ee8(rpl);
+        RPLFile_FreeMetadata(rpl);
         return 0;
     }
     return 1;
 }
 
-void Func57eb0(RPLFILE *rpl)
+void RPLFile_InitMetadata(RPLFILE *rpl)
 {
     if (rpl) {
         rpl->magic = 0x9f82c384;
@@ -101,11 +101,11 @@ void Func57eb0(RPLFILE *rpl)
         rpl->copyright = 0;
         rpl->sound = 0;
         rpl->index = 0;
-        rpl->chunks = 0;
+        rpl->last_chunk_index = 0;
     }
 }
 
-void Func57ee8(RPLFILE *rpl)
+void RPLFile_FreeMetadata(RPLFILE *rpl)
 {
     if (rpl && rpl->magic == 0x9f82c384) {
         if (rpl->title) {
@@ -131,7 +131,7 @@ void Func57ee8(RPLFILE *rpl)
     }
 }
 
-int Func57f6c(FILE *fp, RPLFILE *rpl)
+int RPLFile_ReadHeader(FILE *fp, RPLFILE *rpl)
 {
     char text[256];
 
@@ -211,15 +211,15 @@ int Func57f6c(FILE *fp, RPLFILE *rpl)
     if (!fgets(text, sizeof(text), fp)) {
         return 0;
     }
-    rpl->chunks = atol(text);
+    rpl->last_chunk_index = atol(text);
     if (!fgets(text, sizeof(text), fp)) {
         return 0;
     }
-    rpl->field34 = atol(text);
+    rpl->even_chunk_size = atol(text);
     if (!fgets(text, sizeof(text), fp)) {
         return 0;
     }
-    rpl->field38 = atol(text);
+    rpl->odd_chunk_size = atol(text);
     if (!fgets(text, sizeof(text), fp)) {
         return 0;
     }
@@ -227,35 +227,35 @@ int Func57f6c(FILE *fp, RPLFILE *rpl)
     if (!fgets(text, sizeof(text), fp)) {
         return 0;
     }
-    rpl->field40 = atol(text);
+    rpl->sprite_offset = atol(text);
     if (!fgets(text, sizeof(text), fp)) {
         return 0;
     }
-    rpl->field44 = atol(text);
+    rpl->sprite_size = atol(text);
     if (!fgets(text, sizeof(text), fp)) {
         return 0;
     }
-    rpl->field48 = atol(text);
+    rpl->keyframe_list_offset = atol(text);
     return 1;
 }
 
-int Func58264(FILE *fp, RPLFILE *rpl)
+int RPLFile_ReadIndex(FILE *fp, RPLFILE *rpl)
 {
     char text[256];
     char *p;
     int i;
 
-    if (rpl->chunks < 0 || rpl->index_offset < 0) {
+    if (rpl->last_chunk_index < 0 || rpl->index_offset < 0) {
         return 0;
     }
     if (fseek(fp, rpl->index_offset, SEEK_SET)) {
         return 0;
     }
-    rpl->index = malloc((rpl->chunks + 1) * sizeof(CHUNK));
+    rpl->index = malloc((rpl->last_chunk_index + 1) * sizeof(CHUNK));
     if (!rpl->index) {
         return 0;
     }
-    for (i = 0; i <= rpl->chunks; i++) {
+    for (i = 0; i <= rpl->last_chunk_index; i++) {
         if (!fgets(text, sizeof(text), fp)) {
             return 0;
         }
@@ -274,7 +274,7 @@ int Func58264(FILE *fp, RPLFILE *rpl)
     return 1;
 }
 
-int Func58398(unsigned int size, void **buffer)
+int RPLFile_AllocateBuffer(unsigned int size, void **buffer)
 {
     *buffer = calloc(size, 1);
     if (!*buffer) {
@@ -283,7 +283,7 @@ int Func58398(unsigned int size, void **buffer)
     return 0;
 }
 
-int Func583b8(int *handle, char *name)
+int RPLFile_Open(int *handle, char *name)
 {
     *handle = open(name, O_BINARY);
     if (*handle == -1) {
@@ -292,12 +292,12 @@ int Func583b8(int *handle, char *name)
     return 0;
 }
 
-int Func583dc(int handle)
+int RPLFile_Close(int handle)
 {
     return close(handle);
 }
 
-int Func583e4(RPLFILE *rpl, NODE **head)
+int RPLFile_AppendNode(RPLFILE *rpl, NODE **head)
 {
     NODE *tail;
     NODE *node;
@@ -323,7 +323,7 @@ int Func583e4(RPLFILE *rpl, NODE **head)
     return 0;
 }
 
-int Func58444(RPLFILE *rpl, NODE **head)
+int RPLFile_RemoveNode(RPLFILE *rpl, NODE **head)
 {
     NODE *p;
 

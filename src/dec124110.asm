@@ -1,17 +1,17 @@
     .486p
 
-expand_color     textequ <Func7fa90_>
-pass1_write      textequ <Func80638_>
-decode_frame     textequ <Func80bcd_>
-pass1_decode     textequ <Func81241_>
-pass2_decode     textequ <Func827fd_>
-pass3_start      textequ <Func83a28_>
-pass3_decode     textequ <Func84068_>
-set_bank_mode    textequ <Func8537e_>
-build_block_list textequ <Func853b7_>
-set_bank         textequ <Func854dc_>
-bank_regs        textequ <_Data86538>
-id_string        textequ <_Dataca790>
+expand_color     textequ <RPL124RGB555_ExpandColour_>
+pass1_write      textequ <RPL124RGB555_Pass1Write_>
+decode_frame     textequ <RPL124RGB555_DecodeFrame_>
+pass1_decode     textequ <RPL124RGB555_Pass1Decode_>
+pass2_decode     textequ <RPL124RGB555_Pass2Decode_>
+pass3_start      textequ <RPL124RGB555_Pass3Start_>
+pass3_decode     textequ <RPL124RGB555_Pass3Decode_>
+set_bank_mode    textequ <RPL124RGB555_SetBankMode_>
+build_block_list textequ <RPL124RGB555_BuildBlockList_>
+set_bank         textequ <RPL124RGB555_SetBank_>
+bank_regs        textequ <_rpl124rgb555_bank_registers>
+id_string        textequ <_rpl124rgb555_rcsid>
 WRITER_SET       equ 0
 
     include dec12411.inc

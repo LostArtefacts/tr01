@@ -9,34 +9,34 @@ _BSS ends
 
     assume cs:FLAT, ds:FLAT, es:FLAT, ss:FLAT
 
-    extrn Func58b10_:near
-    extrn Func58b34_:near
-    extrn Func58e28_:near
-    extrn Func58ecc_:near
-    extrn Func58f34_:near
-    extrn Func59338_:near
-    extrn Func593e8_:near
-    extrn Func5941c_:near
-    extrn Func59458_:near
-    extrn Func5949c_:near
-    extrn Func594e0_:near
-    extrn Func59604_:near
-    extrn Func596c9_:near
+    extrn RPLVGA_SetMode13_:near
+    extrn RPLVGA_SetTextMode_:near
+    extrn RPLVGA_Set320x240_:near
+    extrn RPLVGA_SetDisplayStart_:near
+    extrn RPLDPMI_SegmentToPointer_:near
+    extrn RPLVESA_GetModeInfo_:near
+    extrn RPLVESA_SetMode_:near
+    extrn RPLVESA_GetMode_:near
+    extrn RPLVESA_SetWindowA_:near
+    extrn RPLVESA_SetWindowB_:near
+    extrn RPLVESA_SetDisplayStart_:near
+    extrn RPLVGA_Blit320x200Planar_:near
+    extrn RPLVGA_Blit320x240Planar_:near
     extrn calloc_:near
     extrn memset_:near
 
-    public Func50784_
-    public Func50be0_
-    public Func50c2c_
-    public Func50d04_
-    public Func511a0_
-    public Func511fc_
-    public _Datac6d58
+    public RPLGraphics_SetMode_
+    public RPLGraphics_RestoreMode_
+    public RPLGraphics_ClearPage_
+    public RPLGraphics_Blit_
+    public RPLGraphics_SetBank_
+    public RPLGraphics_ShowPage_
+    public _rpl_next_movie_id
 
 _TEXT segment
     db "$Id: RPLGRAPH.C 1.17 1995/08/21 16:17:41 MFC Exp $"
     db 000h, 090h
-Func50784_ proc near
+RPLGraphics_SetMode_ proc near
     push ebx
     push ecx
     push esi
@@ -46,51 +46,51 @@ Func50784_ proc near
     db 089h, 0c7h
     db 089h, 0d3h
     db 031h, 0d2h
-    mov dword ptr [B13034d], edx
-    mov dword ptr [B130351], edx
+    mov dword ptr [rpl_display_reserved1], edx
+    mov dword ptr [rpl_display_reserved2], edx
     cmp bx, 013h
     jne near ptr L5086d
-    call Func58b10_
+    call RPLVGA_SetMode13_
     mov eax, 0c8h
     mov ebp, 0140h
-    mov dword ptr [B130324], eax
+    mov dword ptr [rpl_display_height], eax
     mov eax, 0a000h
-    mov dword ptr [B130320], ebp
-    call Func58f34_
-    mov dword ptr [B130328], eax
-    mov eax, dword ptr [B130320]
-    mov ebp, dword ptr [B130324]
-    mov dword ptr [B130340], eax
+    mov dword ptr [rpl_display_width], ebp
+    call RPLDPMI_SegmentToPointer_
+    mov dword ptr [rpl_display_buffer], eax
+    mov eax, dword ptr [rpl_display_width]
+    mov ebp, dword ptr [rpl_display_height]
+    mov dword ptr [rpl_display_pitch], eax
     imul eax, ebp
     mov ebx, 01h
     mov cl, 01h
     mov edx, 010000h
-    mov dword ptr [B130330], ebx
-    mov dword ptr [B130338], ebx
-    mov dword ptr [B13033c], ebx
-    mov dword ptr [B130334], ebx
-    mov byte ptr [Dc6d5e], cl
+    mov dword ptr [rpl_display_granularity], ebx
+    mov dword ptr [rpl_display_format], ebx
+    mov dword ptr [rpl_display_pixel_bytes], ebx
+    mov dword ptr [rpl_display_pages], ebx
+    mov byte ptr [rpl_graphics_active], cl
     mov bh, 02h
-    mov dword ptr [B13032c], edx
+    mov dword ptr [rpl_display_window_size], edx
     db 031h, 0d2h
-    mov byte ptr [B13034c], bh
-    mov dword ptr [B130348], edx
-    mov dword ptr [B130344], eax
+    mov byte ptr [rpl_display_mode_kind], bh
+    mov dword ptr [rpl_display_use_window_a], edx
+    mov dword ptr [rpl_display_page_bytes], eax
 L50829::
     mov ebx, 02710h
     db 031h, 0c0h
-    mov dword ptr [Dc6d64], ebx
-    mov dword ptr [Dc6d60], ebx
-    call Func511fc_
+    mov dword ptr [rpl_visible_page], ebx
+    mov dword ptr [rpl_graphics_unused_page], ebx
+    call RPLGraphics_ShowPage_
     db 031h, 0c0h
     db 031h, 0d2h
-    call Func511a0_
+    call RPLGraphics_SetBank_
     db 031h, 0c0h
-    call Func50c2c_
+    call RPLGraphics_ClearPage_
     test edi, edi
     je short L50862
     mov ecx, 0eh
-    mov esi, offset B130320
+    mov esi, offset rpl_display_width
     rep movs dword ptr es:[edi], dword ptr ds:[esi]
     movs byte ptr es:[edi], byte ptr ds:[esi]
 L50862::
@@ -107,64 +107,64 @@ L5086d::
     movsx eax, bx
     cmp eax, 0ffffffffh
     jne short L508f1
-    call Func58b10_
-    call Func58e28_
+    call RPLVGA_SetMode13_
+    call RPLVGA_Set320x240_
     mov eax, 0140h
     mov edx, 0f0h
     mov ecx, 010000h
     mov esi, 01h
     db 031h, 0dbh
-    mov dword ptr [B130320], eax
-    mov dword ptr [B130324], edx
-    mov dword ptr [B130328], ebx
-    mov dword ptr [B13032c], ecx
-    mov dword ptr [B130330], esi
-    mov dword ptr [B130338], esi
-    mov dword ptr [B13033c], esi
-    mov dword ptr [B130340], eax
+    mov dword ptr [rpl_display_width], eax
+    mov dword ptr [rpl_display_height], edx
+    mov dword ptr [rpl_display_buffer], ebx
+    mov dword ptr [rpl_display_window_size], ecx
+    mov dword ptr [rpl_display_granularity], esi
+    mov dword ptr [rpl_display_format], esi
+    mov dword ptr [rpl_display_pixel_bytes], esi
+    mov dword ptr [rpl_display_pitch], eax
     mov ebx, 012c00h
     mov dh, 03h
     db 031h, 0c9h
-    mov dword ptr [B130344], ebx
-    mov dword ptr [B130334], ecx
-    mov dword ptr [B130348], ecx
+    mov dword ptr [rpl_display_page_bytes], ebx
+    mov dword ptr [rpl_display_pages], ecx
+    mov dword ptr [rpl_display_use_window_a], ecx
     mov bl, 01h
-    mov byte ptr [B13034c], dh
-    mov byte ptr [Dc6d5e], bl
+    mov byte ptr [rpl_display_mode_kind], dh
+    mov byte ptr [rpl_graphics_active], bl
     jmp near ptr L50829
 L508f1::
     test bx, bx
     jne short L508fb
     mov ebx, 0110h
 L508fb::
-    mov byte ptr [B13034c], 01h
+    mov byte ptr [rpl_display_mode_kind], 01h
     cmp bx, 0110h
     jne near ptr L50983
     db 089h, 0e0h
-    call Func5941c_
+    call RPLVESA_GetMode_
     test al, al
     je short L5093f
-    mov edx, offset B130120
+    mov edx, offset rpl_vesa_mode_attributes
     movsx eax, bx
-    call Func59338_
+    call RPLVESA_GetModeInfo_
     test al, al
     je short L5093f
-    cmp word ptr [B130120], 00h
+    cmp word ptr [rpl_vesa_mode_attributes], 00h
     sete al
     and eax, 0ffh
     je near ptr L50a39
 L5093f::
     db 089h, 0e0h
     mov ebx, 0111h
-    call Func5941c_
+    call RPLVESA_GetMode_
     test al, al
     je short L50978
-    mov edx, offset B130120
+    mov edx, offset rpl_vesa_mode_attributes
     mov eax, 0111h
-    call Func59338_
+    call RPLVESA_GetModeInfo_
     test al, al
     je short L50978
-    cmp word ptr [B130120], 00h
+    cmp word ptr [rpl_vesa_mode_attributes], 00h
     sete al
     and eax, 0ffh
     je near ptr L50a39
@@ -181,30 +181,30 @@ L50983::
     cmp bx, 0111h
     jne near ptr L50a00
     db 089h, 0e0h
-    call Func5941c_
+    call RPLVESA_GetMode_
     test al, al
     je short L509c0
-    mov edx, offset B130120
+    mov edx, offset rpl_vesa_mode_attributes
     movsx eax, bx
-    call Func59338_
+    call RPLVESA_GetModeInfo_
     test al, al
     je short L509c0
-    cmp word ptr [B130120], 00h
+    cmp word ptr [rpl_vesa_mode_attributes], 00h
     sete al
     and eax, 0ffh
     je near ptr L50a39
 L509c0::
     db 089h, 0e0h
     mov ebx, 0110h
-    call Func5941c_
+    call RPLVESA_GetMode_
     test al, al
     je short L509f5
-    mov edx, offset B130120
+    mov edx, offset rpl_vesa_mode_attributes
     mov eax, 0110h
-    call Func59338_
+    call RPLVESA_GetModeInfo_
     test al, al
     je short L509f5
-    cmp word ptr [B130120], 00h
+    cmp word ptr [rpl_vesa_mode_attributes], 00h
     sete al
     and eax, 0ffh
     je short L50a39
@@ -219,15 +219,15 @@ L509f5::
     ret
 L50a00::
     db 089h, 0e0h
-    call Func5941c_
+    call RPLVESA_GetMode_
     test al, al
     je short L50a2e
-    mov edx, offset B130120
+    mov edx, offset rpl_vesa_mode_attributes
     movsx eax, bx
-    call Func59338_
+    call RPLVESA_GetModeInfo_
     test al, al
     je short L50a2e
-    cmp word ptr [B130120], 00h
+    cmp word ptr [rpl_vesa_mode_attributes], 00h
     sete al
     and eax, 0ffh
     je short L50a39
@@ -245,22 +245,22 @@ L50a39::
     sete al
     and eax, 0ffh
     add eax, 0fh
-    mov dl, byte ptr [B130122]
-    mov dword ptr [B130355], eax
+    mov dl, byte ptr [rpl_vesa_window_a_attributes]
+    mov dword ptr [rpl_display_precision], eax
     test dl, 01h
     je short L50a7f
     test dl, 04h
     je short L50a7f
     db 031h, 0c0h
     db 031h, 0d2h
-    mov ax, word ptr [B130128]
+    mov ax, word ptr [rpl_vesa_window_a_segment]
     mov ebp, 01h
-    call Func58f34_
-    mov dword ptr [B130328], eax
-    mov dword ptr [B130348], ebp
+    call RPLDPMI_SegmentToPointer_
+    mov dword ptr [rpl_display_buffer], eax
+    mov dword ptr [rpl_display_use_window_a], ebp
     jmp short L50ab9
 L50a7f::
-    mov cl, byte ptr [B130123]
+    mov cl, byte ptr [rpl_vesa_window_b_attributes]
     test cl, 01h
     je short L50a8f
     test cl, 04h
@@ -277,45 +277,45 @@ L50a8f::
 L50a9a::
     db 031h, 0c0h
     db 031h, 0d2h
-    mov ax, word ptr [B13012a]
+    mov ax, word ptr [rpl_vesa_window_b_and_callback]
     mov esi, 01h
-    call Func58f34_
-    mov dword ptr [B130328], eax
-    mov dword ptr [B130348], esi
+    call RPLDPMI_SegmentToPointer_
+    mov dword ptr [rpl_display_buffer], eax
+    mov dword ptr [rpl_display_use_window_a], esi
 L50ab9::
-    mov byte ptr [Dc6d5e], 01h
-    mov eax, dword ptr [Dc6d5a]
+    mov byte ptr [rpl_graphics_active], 01h
+    mov eax, dword ptr [rpl_saved_mode_pair]
     sar eax, 010h
     cmp eax, 0ffffffffh
     jne short L50ad6
     mov eax, dword ptr [esp]
-    mov word ptr [Dc6d5c], ax
+    mov word ptr [rpl_previous_vesa_mode], ax
 L50ad6::
     db 031h, 0c0h
-    mov ax, word ptr [B130132]
-    mov dword ptr [B130320], eax
+    mov ax, word ptr [rpl_vesa_width]
+    mov dword ptr [rpl_display_width], eax
     db 031h, 0c0h
-    mov ax, word ptr [B130134]
-    mov dword ptr [B130324], eax
-    cmp byte ptr [B13013d], 00h
+    mov ax, word ptr [rpl_vesa_height_and_cell_layout]
+    mov dword ptr [rpl_display_height], eax
+    cmp byte ptr [rpl_vesa_image_pages_and_reserved], 00h
     je short L50b07
     db 031h, 0c0h
-    mov al, byte ptr [B13013d]
-    mov dword ptr [B130334], eax
+    mov al, byte ptr [rpl_vesa_image_pages_and_reserved]
+    mov dword ptr [rpl_display_pages], eax
     jmp short L50b11
 L50b07::
-    mov dword ptr [B130334], 01h
+    mov dword ptr [rpl_display_pages], 01h
 L50b11::
     db 031h, 0c0h
-    mov ax, word ptr [B130130]
+    mov ax, word ptr [rpl_vesa_scanline_bytes]
     db 031h, 0d2h
-    mov dword ptr [B130340], eax
+    mov dword ptr [rpl_display_pitch], eax
     db 031h, 0c0h
-    mov dx, word ptr [B130134]
-    mov ax, word ptr [B130130]
+    mov dx, word ptr [rpl_vesa_height_and_cell_layout]
+    mov ax, word ptr [rpl_vesa_scanline_bytes]
     imul eax, edx
-    mov dword ptr [B130344], eax
-    mov al, byte ptr [B130139]
+    mov dword ptr [rpl_display_page_bytes], eax
+    mov al, byte ptr [rpl_vesa_pixel_format]
     cmp al, 08h
     jb short L50b64
     jbe short L50b4c
@@ -325,17 +325,17 @@ L50b11::
     jbe short L50b58
     jmp short L50b64
 L50b4c::
-    mov dword ptr [B130338], 01h
+    mov dword ptr [rpl_display_format], 01h
     jmp short L50b6c
 L50b58::
-    mov dword ptr [B130338], 02h
+    mov dword ptr [rpl_display_format], 02h
     jmp short L50b6c
 L50b64::
     db 031h, 0f6h
-    mov dword ptr [B130338], esi
+    mov dword ptr [rpl_display_format], esi
 L50b6c::
     db 031h, 0c9h
-    mov cl, byte ptr [B130139]
+    mov cl, byte ptr [rpl_vesa_pixel_format]
     db 089h, 0cah
     db 089h, 0c8h
     sar edx, 01fh
@@ -343,28 +343,28 @@ L50b6c::
     sbb eax, edx
     sar eax, 03h
     mov esi, 08h
-    mov dword ptr [B13033c], eax
+    mov dword ptr [rpl_display_pixel_bytes], eax
     db 089h, 0cah
     db 089h, 0c8h
     sar edx, 01fh
     idiv esi
     test edx, edx
     je short L50ba0
-    inc dword ptr [B13033c]
+    inc dword ptr [rpl_display_pixel_bytes]
 L50ba0::
     db 031h, 0c0h
-    mov ax, word ptr [B130124]
+    mov ax, word ptr [rpl_vesa_window_granularity]
     shl eax, 0ah
-    mov dword ptr [B130330], eax
+    mov dword ptr [rpl_display_granularity], eax
     db 031h, 0c0h
-    mov ax, word ptr [B130126]
+    mov ax, word ptr [rpl_vesa_window_size]
     shl eax, 0ah
-    mov dword ptr [B13032c], eax
+    mov dword ptr [rpl_display_window_size], eax
     movsx eax, bx
-    call Func593e8_
+    call RPLVESA_SetMode_
     test al, al
     jne near ptr L50829
-    mov byte ptr [Dc6d5e], al
+    mov byte ptr [rpl_graphics_active], al
     add esp, 04h
     pop ebp
     pop edi
@@ -372,37 +372,37 @@ L50ba0::
     pop ecx
     pop ebx
     ret
-Func50784_ endp
+RPLGraphics_SetMode_ endp
     db 08bh, 0c0h
-Func50be0_ proc near
+RPLGraphics_RestoreMode_ proc near
     push edx
-    cmp byte ptr [Dc6d5e], 00h
+    cmp byte ptr [rpl_graphics_active], 00h
     je short L50c27
     db 030h, 0d2h
-    mov byte ptr [Dc6d5e], dl
-    mov dh, byte ptr [B13034c]
+    mov byte ptr [rpl_graphics_active], dl
+    mov dh, byte ptr [rpl_display_mode_kind]
     cmp dh, 02h
     je short L50c02
     cmp dh, 03h
     jne short L50c09
 L50c02::
-    call Func58b34_
+    call RPLVGA_SetTextMode_
     pop edx
     ret
 L50c09::
-    mov eax, dword ptr [Dc6d5a]
+    mov eax, dword ptr [rpl_saved_mode_pair]
     sar eax, 010h
     cmp eax, 0ffffffffh
     jle short L50c27
     mov edx, 0ffffffffh
-    call Func593e8_
-    mov word ptr [Dc6d5c], dx
+    call RPLVESA_SetMode_
+    mov word ptr [rpl_previous_vesa_mode], dx
 L50c27::
     pop edx
     ret
-Func50be0_ endp
+RPLGraphics_RestoreMode_ endp
     db 08dh, 040h, 000h
-Func50c2c_ proc near
+RPLGraphics_ClearPage_ proc near
     push ebx
     push ecx
     push esi
@@ -411,25 +411,25 @@ Func50c2c_ proc near
     sub esp, 04h
     db 089h, 0c3h
     mov byte ptr [esp], dl
-    cmp byte ptr [Dc6d5e], 00h
+    cmp byte ptr [rpl_graphics_active], 00h
     je near ptr L50864
-    cmp ebx, dword ptr [B130334]
+    cmp ebx, dword ptr [rpl_display_pages]
     ja near ptr L50864
-    cmp byte ptr [B13034c], 03h
+    cmp byte ptr [rpl_display_mode_kind], 03h
     jne short L50c9e
-    cmp dword ptr [Dc6d68], 00h
+    cmp dword ptr [rpl_clear_buffer], 00h
     jne short L50c80
     mov edx, 01h
-    mov eax, dword ptr [B130344]
+    mov eax, dword ptr [rpl_display_page_bytes]
     call calloc_
-    mov dword ptr [Dc6d68], eax
+    mov dword ptr [rpl_clear_buffer], eax
     test eax, eax
     je near ptr L50864
 L50c80::
-    imul ebx, dword ptr [B130344]
-    mov esi, dword ptr [Dc6d68]
+    imul ebx, dword ptr [rpl_display_page_bytes]
+    mov esi, dword ptr [rpl_clear_buffer]
     shr ebx, 02h
-    call Func59604_
+    call RPLVGA_Blit320x200Planar_
     add esp, 04h
     pop ebp
     pop edi
@@ -438,11 +438,11 @@ L50c80::
     pop ebx
     ret
 L50c9e::
-    mov ecx, dword ptr [B130344]
+    mov ecx, dword ptr [rpl_display_page_bytes]
     imul ebx, ecx
     lea esi, [ecx+ebx*1]
 L50caa::
-    mov ebp, dword ptr [B130330]
+    mov ebp, dword ptr [rpl_display_granularity]
     db 089h, 0dah
     db 089h, 0d8h
     sar edx, 01fh
@@ -453,10 +453,10 @@ L50caa::
     sar edx, 01fh
     idiv ebp
     db 089h, 0c8h
-    mov edi, dword ptr [B130328]
-    call Func511a0_
-    imul ecx, dword ptr [B130330]
-    add ecx, dword ptr [B13032c]
+    mov edi, dword ptr [rpl_display_buffer]
+    call RPLGraphics_SetBank_
+    imul ecx, dword ptr [rpl_display_granularity]
+    add ecx, dword ptr [rpl_display_window_size]
     db 001h, 0d7h
     db 039h, 0f1h
     jb short L50ce6
@@ -473,8 +473,8 @@ L50ce6::
     jge near ptr L50864
     db 089h, 0cbh
     jmp short L50caa
-Func50c2c_ endp
-Func50d04_ proc near
+RPLGraphics_ClearPage_ endp
+RPLGraphics_Blit_ proc near
     push esi
     push edi
     push ebp
@@ -483,13 +483,13 @@ Func50d04_ proc near
     db 089h, 0deh
     mov ebx, dword ptr [esp+040h]
     mov edx, dword ptr [esp+044h]
-    cmp byte ptr [B13034c], 03h
+    cmp byte ptr [rpl_display_mode_kind], 03h
     jne short L50d3b
-    mov ebx, dword ptr [B130344]
+    mov ebx, dword ptr [rpl_display_page_bytes]
     imul ebx, eax
     mov esi, dword ptr [esp+02ch]
     shr ebx, 02h
-    call Func596c9_
+    call RPLVGA_Blit320x240Planar_
     jmp near ptr L51195
 L50d3b::
     mov edi, dword ptr [esp+048h]
@@ -501,7 +501,7 @@ L50d49::
     db 001h, 0f6h
     db 001h, 0c9h
 L50d4d::
-    mov edi, dword ptr [B130324]
+    mov edi, dword ptr [rpl_display_height]
     db 001h, 0d1h
     db 039h, 0f9h
     jbe short L50d5b
@@ -519,7 +519,7 @@ L50d65::
     jge short L50d6d
     db 031h, 0c9h
 L50d6d::
-    mov ebp, dword ptr [B130320]
+    mov ebp, dword ptr [rpl_display_width]
     mov dword ptr [esp+08h], ecx
     lea ecx, [ebx+esi*1]
     db 039h, 0e9h
@@ -538,13 +538,13 @@ L50d8c::
 L50d8e::
     db 029h, 0cfh
     db 089h, 0f9h
-    imul ecx, dword ptr [B13033c]
+    imul ecx, dword ptr [rpl_display_pixel_bytes]
     test ecx, ecx
     jge short L50d9f
     db 031h, 0c9h
 L50d9f::
     mov dword ptr [esp+01ch], ecx
-    mov ecx, dword ptr [B13033c]
+    mov ecx, dword ptr [rpl_display_pixel_bytes]
     imul ecx, esi
     mov dword ptr [esp+010h], ecx
     test edx, edx
@@ -556,19 +556,19 @@ L50d9f::
 L50dbf::
     test ebx, ebx
     jge short L50dd4
-    mov esi, dword ptr [B13033c]
+    mov esi, dword ptr [rpl_display_pixel_bytes]
     neg ebx
     imul ebx, esi
     add dword ptr [esp+02ch], ebx
     db 031h, 0dbh
 L50dd4::
-    imul edx, dword ptr [B130340]
-    imul eax, dword ptr [B130344]
-    imul ebx, dword ptr [B13033c]
+    imul edx, dword ptr [rpl_display_pitch]
+    imul eax, dword ptr [rpl_display_page_bytes]
+    imul ebx, dword ptr [rpl_display_pixel_bytes]
     db 001h, 0d0h
     db 001h, 0d8h
     db 089h, 0c2h
-    mov edi, dword ptr [B130330]
+    mov edi, dword ptr [rpl_display_granularity]
     sar edx, 01fh
     mov dword ptr [esp+024h], eax
     idiv edi
@@ -577,14 +577,14 @@ L50dd4::
     db 089h, 0c2h
     sar edx, 01fh
     idiv edi
-    mov eax, dword ptr [B130328]
+    mov eax, dword ptr [rpl_display_buffer]
     db 001h, 0d0h
     mov dword ptr [esp+028h], eax
     db 089h, 0d8h
-    call Func511a0_
-    imul ebx, dword ptr [B130330]
+    call RPLGraphics_SetBank_
+    imul ebx, dword ptr [rpl_display_granularity]
     db 089h, 0fdh
-    mov eax, dword ptr [B13032c]
+    mov eax, dword ptr [rpl_display_window_size]
     db 031h, 0fdh
     db 001h, 0d8h
     mov edx, dword ptr [esp+08h]
@@ -623,7 +623,7 @@ L50e85::
     test edx, edx
     je short L50f0a
 L50e9e::
-    mov edi, dword ptr [B13033c]
+    mov edi, dword ptr [rpl_display_pixel_bytes]
     cmp edi, 01h
     jne short L50ec6
     mov ecx, dword ptr [esp]
@@ -694,7 +694,7 @@ L50f40::
     add dword ptr [esp+02ch], eax
 L50f44::
     mov ebx, dword ptr [esp+024h]
-    mov eax, dword ptr [B130340]
+    mov eax, dword ptr [rpl_display_pitch]
     mov ecx, dword ptr [esp+028h]
     db 001h, 0c3h
     db 001h, 0c1h
@@ -727,7 +727,7 @@ L50f8c::
     test edx, edx
     je near ptr L51035
 L50fa9::
-    mov esi, dword ptr [B13033c]
+    mov esi, dword ptr [rpl_display_pixel_bytes]
     cmp esi, 01h
     jne short L50fd4
     mov ecx, dword ptr [esp+020h]
@@ -789,7 +789,7 @@ L5101d::
 L51035::
     mov ebx, dword ptr [esp+024h]
     add ebx, dword ptr [esp+020h]
-    mov ecx, dword ptr [B130330]
+    mov ecx, dword ptr [rpl_display_granularity]
     db 089h, 0dah
     db 089h, 0d8h
     sar edx, 01fh
@@ -800,8 +800,8 @@ L51035::
     sar edx, 01fh
     idiv ecx
     mov eax, dword ptr [esp+014h]
-    mov edi, dword ptr [B130328]
-    call Func511a0_
+    mov edi, dword ptr [rpl_display_buffer]
+    call RPLGraphics_SetBank_
     mov eax, dword ptr [esp+048h]
     db 001h, 0d7h
     cmp eax, 01h
@@ -824,7 +824,7 @@ L51095::
     mov eax, dword ptr [esp+02ch]
     db 029h, 0f1h
     sar esi, 1
-    mov edx, dword ptr [B13033c]
+    mov edx, dword ptr [rpl_display_pixel_bytes]
     db 001h, 0c6h
     cmp edx, 01h
     jne short L510c6
@@ -896,18 +896,18 @@ L5111d::
     mov dword ptr [esp+02ch], edx
 L5114b::
     mov esi, dword ptr [esp+024h]
-    add esi, dword ptr [B130340]
-    mov edi, dword ptr [B130330]
+    add esi, dword ptr [rpl_display_pitch]
+    mov edi, dword ptr [rpl_display_granularity]
     db 089h, 0f2h
     db 089h, 0f0h
     sar edx, 01fh
     idiv edi
-    mov ebx, dword ptr [B130328]
+    mov ebx, dword ptr [rpl_display_buffer]
     mov eax, dword ptr [esp+014h]
     db 001h, 0d3h
     db 089h, 0fah
     imul edx, eax
-    mov eax, dword ptr [B13032c]
+    mov eax, dword ptr [rpl_display_window_size]
     mov dword ptr [esp+024h], esi
     db 001h, 0d0h
     mov dword ptr [esp+028h], ebx
@@ -923,19 +923,19 @@ L51195::
     pop edi
     pop esi
     ret 0ch
-Func50d04_ endp
+RPLGraphics_Blit_ endp
     db 08bh, 0c0h
-Func511a0_ proc near
+RPLGraphics_SetBank_ proc near
     push ebx
     push edx
-    cmp byte ptr [Dc6d5e], 00h
+    cmp byte ptr [rpl_graphics_active], 00h
     jne short L511b0
     db 030h, 0c0h
     pop edx
     pop ebx
     ret
 L511b0::
-    mov dh, byte ptr [B13034c]
+    mov dh, byte ptr [rpl_display_mode_kind]
     cmp dh, 02h
     je short L511c0
     cmp dh, 03h
@@ -946,150 +946,150 @@ L511c0::
     pop ebx
     ret
 L511c5::
-    cmp eax, dword ptr [Dc6d6c]
+    cmp eax, dword ptr [rpl_current_bank]
     jne short L511d2
     mov al, 01h
     pop edx
     pop ebx
     ret
 L511d2::
-    mov ebx, dword ptr [B130348]
-    mov dword ptr [Dc6d6c], eax
+    mov ebx, dword ptr [rpl_display_use_window_a]
+    mov dword ptr [rpl_current_bank], eax
     test ebx, ebx
     je short L511ee
     and eax, 0ffffh
-    call Func59458_
+    call RPLVESA_SetWindowA_
     pop edx
     pop ebx
     ret
 L511ee::
     and eax, 0ffffh
-    call Func5949c_
+    call RPLVESA_SetWindowB_
     pop edx
     pop ebx
     ret
-Func511a0_ endp
+RPLGraphics_SetBank_ endp
     db 090h
-Func511fc_ proc near
+RPLGraphics_ShowPage_ proc near
     push ebx
     push edx
-    cmp byte ptr [Dc6d5e], 00h
+    cmp byte ptr [rpl_graphics_active], 00h
     jne short L5120c
     db 030h, 0c0h
     pop edx
     pop ebx
     ret
 L5120c::
-    cmp byte ptr [B13034c], 02h
+    cmp byte ptr [rpl_display_mode_kind], 02h
     jne short L5121a
     db 030h, 0c0h
     pop edx
     pop ebx
     ret
 L5121a::
-    cmp eax, dword ptr [Dc6d64]
+    cmp eax, dword ptr [rpl_visible_page]
     jne short L51227
     mov al, 01h
     pop edx
     pop ebx
     ret
 L51227::
-    mov bl, byte ptr [B13034c]
-    mov dword ptr [Dc6d64], eax
+    mov bl, byte ptr [rpl_display_mode_kind]
+    mov dword ptr [rpl_visible_page], eax
     cmp bl, 03h
     jne short L5124b
-    imul eax, dword ptr [B130344]
+    imul eax, dword ptr [rpl_display_page_bytes]
     shr eax, 02h
-    call Func58ecc_
+    call RPLVGA_SetDisplayStart_
     mov al, 01h
     pop edx
     pop ebx
     ret
 L5124b::
-    imul ax, word ptr [B130324]
+    imul ax, word ptr [rpl_display_height]
     db 031h, 0d2h
     db 066h, 089h, 0c2h
     db 031h, 0c0h
-    call Func594e0_
+    call RPLVESA_SetDisplayStart_
     pop edx
     pop ebx
     ret
-Func511fc_ endp
+RPLGraphics_ShowPage_ endp
 _TEXT ends
 
 _DATA segment
-_Datac6d58 label byte
+_rpl_next_movie_id label byte
     db 000h, 000h
-Dc6d5a label byte
+rpl_saved_mode_pair label byte
     db 000h, 000h
-Dc6d5c label byte
+rpl_previous_vesa_mode label byte
     db 0ffh, 0ffh
-Dc6d5e label byte
+rpl_graphics_active label byte
     db 000h, 000h
-Dc6d60 label byte
+rpl_graphics_unused_page label byte
     db 000h, 000h, 000h, 000h
-Dc6d64 label byte
+rpl_visible_page label byte
     db 000h, 000h, 000h, 000h
-Dc6d68 label byte
+rpl_clear_buffer label byte
     db 000h, 000h, 000h, 000h
-Dc6d6c label byte
+rpl_current_bank label byte
     db 010h, 027h, 000h, 000h
 _DATA ends
 
 _BSS segment
-B130120 label byte
+rpl_vesa_mode_attributes label byte
     db 2 dup(?)
-B130122 label byte
+rpl_vesa_window_a_attributes label byte
     db 1 dup(?)
-B130123 label byte
+rpl_vesa_window_b_attributes label byte
     db 1 dup(?)
-B130124 label byte
+rpl_vesa_window_granularity label byte
     db 2 dup(?)
-B130126 label byte
+rpl_vesa_window_size label byte
     db 2 dup(?)
-B130128 label byte
+rpl_vesa_window_a_segment label byte
     db 2 dup(?)
-B13012a label byte
+rpl_vesa_window_b_and_callback label byte
     db 6 dup(?)
-B130130 label byte
+rpl_vesa_scanline_bytes label byte
     db 2 dup(?)
-B130132 label byte
+rpl_vesa_width label byte
     db 2 dup(?)
-B130134 label byte
+rpl_vesa_height_and_cell_layout label byte
     db 5 dup(?)
-B130139 label byte
+rpl_vesa_pixel_format label byte
     db 4 dup(?)
-B13013d label byte
+rpl_vesa_image_pages_and_reserved label byte
     db 483 dup(?)
-B130320 label byte
+rpl_display_width label byte
     db 4 dup(?)
-B130324 label byte
+rpl_display_height label byte
     db 4 dup(?)
-B130328 label byte
+rpl_display_buffer label byte
     db 4 dup(?)
-B13032c label byte
+rpl_display_window_size label byte
     db 4 dup(?)
-B130330 label byte
+rpl_display_granularity label byte
     db 4 dup(?)
-B130334 label byte
+rpl_display_pages label byte
     db 4 dup(?)
-B130338 label byte
+rpl_display_format label byte
     db 4 dup(?)
-B13033c label byte
+rpl_display_pixel_bytes label byte
     db 4 dup(?)
-B130340 label byte
+rpl_display_pitch label byte
     db 4 dup(?)
-B130344 label byte
+rpl_display_page_bytes label byte
     db 4 dup(?)
-B130348 label byte
+rpl_display_use_window_a label byte
     db 4 dup(?)
-B13034c label byte
+rpl_display_mode_kind label byte
     db 1 dup(?)
-B13034d label byte
+rpl_display_reserved1 label byte
     db 4 dup(?)
-B130351 label byte
+rpl_display_reserved2 label byte
     db 4 dup(?)
-B130355 label byte
+rpl_display_precision label byte
     db 4 dup(?)
 _BSS ends
 

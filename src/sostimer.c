@@ -19,33 +19,33 @@ typedef union
     byte channel;
 } TIMERCHANNEL;
 
-extern byte Datac7e40;
-extern byte Datac7e44;
-extern dword Datac7fdc;
-extern dword Datac7fe0;
-extern TIMEREVENT Datac7fe4[];
-extern TIMEREVENT Datac8020;
-extern dword Datac8024[];
-extern dword Datac8060;
-extern dword Datac8064[];
-extern dword Datac80a0;
-extern TIMERPHASE Datac80a4[];
-extern TIMERCHANNEL Datac80e4[];
-extern dword Datac8124;
+extern byte sos_timer_irq_enabled;
+extern byte sos_timer_use_dpmi_vector;
+extern dword sos_timer_flags;
+extern dword sos_timer_divisor;
+extern TIMEREVENT sos_timer_events[];
+extern TIMEREVENT sos_timer_chain_callback;
+extern dword sos_timer_event_rates[];
+extern dword sos_timer_base_rate;
+extern dword sos_timer_event_steps[];
+extern dword sos_timer_chain_step;
+extern TIMERPHASE sos_timer_event_phases[];
+extern TIMERCHANNEL sos_timer_event_channels[];
+extern dword sos_timer_current_channel;
 
-void Func52281(void);
-void Func522ad(void);
-void Func522d9(void);
-void Func52355(void);
-void __cdecl Func52180(dword divisor);
-void __cdecl Func521c6(dword divisor, TIMEREVENT event);
-#pragma aux (__cdecl) Func52180 "Func52180_";
-#pragma aux (__cdecl) Func521c6 "Func521c6_";
-int Func4b09a(dword divisor);
-void Func4b0cf(void);
-void Func4b16f(void);
+void sosTIMERMaskInterrupt(void);
+void sosTIMERUnmaskInterrupt(void);
+void sosTIMERRestoreInterrupt(void);
+void sosTIMERChainInterrupt(void);
+void __cdecl sosTIMERProgramPIT(dword divisor);
+void __cdecl sosTIMERInstallInterrupt(dword divisor, TIMEREVENT event);
+#pragma aux (__cdecl) sosTIMERProgramPIT "sosTIMERProgramPIT_";
+#pragma aux (__cdecl) sosTIMERInstallInterrupt "sosTIMERInstallInterrupt_";
+int sosTIMERSetDivisor(dword divisor);
+void sosTIMERDispatchEvents(void);
+void sosTIMERChainHandler(void);
 
-void Func4aa5c(void)
+void sosTIMERCodeStart(void)
 {
 }
 
@@ -54,41 +54,41 @@ int sosTIMERInitSystem(dword rate, dword flags)
     dword handle;
 
     if (flags & 2) {
-        Datac7e44 = 1;
+        sos_timer_use_dpmi_vector = 1;
     } else {
-        Datac7e44 = 0;
+        sos_timer_use_dpmi_vector = 0;
     }
     if (!(flags & 1)) {
-        Datac7e40 = 1;
-        Datac7fdc |= 1;
-        Func52281();
-        Func521c6(0xffff, Func4b0cf);
-        Func522ad();
+        sos_timer_irq_enabled = 1;
+        sos_timer_flags |= 1;
+        sosTIMERMaskInterrupt();
+        sosTIMERInstallInterrupt(0xffff, sosTIMERDispatchEvents);
+        sosTIMERUnmaskInterrupt();
     } else {
-        Datac7fdc &= ~1;
+        sos_timer_flags &= ~1;
     }
     if (rate && !(flags & 1)) {
         if (rate == 0xff00) {
-            Func4b09a(0xffff);
-            Datac8060 = 0xff00;
+            sosTIMERSetDivisor(0xffff);
+            sos_timer_base_rate = 0xff00;
         } else {
-            Func4b09a(0x1234dc / rate);
-            Datac8060 = rate;
+            sosTIMERSetDivisor(0x1234dc / rate);
+            sos_timer_base_rate = rate;
         }
-        Datac8020 = Func4b16f;
-        Datac80a0 = 0x10000;
+        sos_timer_chain_callback = sosTIMERChainHandler;
+        sos_timer_chain_step = 0x10000;
     } else {
-        Datac7fe0 = 0xffff;
+        sos_timer_divisor = 0xffff;
     }
     return 0;
 }
 
 int sosTIMERUninitSystem(dword flags)
 {
-    if (Datac7fdc & 1) {
-        Func52281();
-        Func522d9();
-        Func522ad();
+    if (sos_timer_flags & 1) {
+        sosTIMERMaskInterrupt();
+        sosTIMERRestoreInterrupt();
+        sosTIMERUnmaskInterrupt();
     }
     return 0;
 }
@@ -102,79 +102,79 @@ int sosTIMERRegisterEvent(dword rate, TIMEREVENT event, dword *handle)
 
     scale = 0;
     for (i = 0; i < 16; i++) {
-        if (!Datac7fe4[i]) {
+        if (!sos_timer_events[i]) {
             break;
         }
     }
     if (i >= 16) {
         return 11;
     }
-    if (Datac7fdc & 1) {
-        Func52281();
+    if (sos_timer_flags & 1) {
+        sosTIMERMaskInterrupt();
     }
     selected = i;
-    Datac7fe4[i] = event;
-    Datac8024[i] = rate;
-    if (0x1234dc / rate < Datac7fe0) {
-        Func4b09a(0x1234dc / rate);
-        scale = (Datac7fe0 << 16) / (0x1234dc / rate);
+    sos_timer_events[i] = event;
+    sos_timer_event_rates[i] = rate;
+    if (0x1234dc / rate < sos_timer_divisor) {
+        sosTIMERSetDivisor(0x1234dc / rate);
+        scale = (sos_timer_divisor << 16) / (0x1234dc / rate);
     }
     for (i = 0; i < 16; i++) {
-        if (Datac7fe4[i]) {
-            if (Datac8024[i] == 0xff00) {
-                if (Datac7fe0 == 0xffff) {
-                    Datac8064[i] = 0x10000;
+        if (sos_timer_events[i]) {
+            if (sos_timer_event_rates[i] == 0xff00) {
+                if (sos_timer_divisor == 0xffff) {
+                    sos_timer_event_steps[i] = 0x10000;
                 } else {
-                    Datac8064[i] = 0x123333 / (0x1234dc / Datac7fe0);
+                    sos_timer_event_steps[i] = 0x123333 / (0x1234dc / sos_timer_divisor);
                 }
             } else {
-                Datac8064[i] = (Datac8024[i] << 16) / (0x1234dc / Datac7fe0);
+                sos_timer_event_steps[i] = (sos_timer_event_rates[i] << 16) / (0x1234dc / sos_timer_divisor);
             }
             if (scale) {
-                phase = (Datac80a4[i].value * (scale & 0xffff)) >> 16;
-                phase += (Datac80a4[i].value * (scale >> 16)) >> 16;
-                Datac80a4[i].value = phase;
+                phase = (sos_timer_event_phases[i].value * (scale & 0xffff)) >> 16;
+                phase += (sos_timer_event_phases[i].value * (scale >> 16)) >> 16;
+                sos_timer_event_phases[i].value = phase;
             }
         }
     }
-    if (Datac7fdc & 1) {
-        Func522ad();
+    if (sos_timer_flags & 1) {
+        sosTIMERUnmaskInterrupt();
     }
     *handle = selected;
     return 0;
 }
 
-int Func4ad70(dword handle, dword rate)
+int sosTIMERSetEventRate(dword handle, dword rate)
 {
     dword i;
 
     if (handle >= 16) {
         return 10;
     }
-    if (Datac7fe4[handle]) {
-        if (Datac7fdc & 1) {
-            Func52281();
+    if (sos_timer_events[handle]) {
+        if (sos_timer_flags & 1) {
+            sosTIMERMaskInterrupt();
         }
-        Datac8024[handle] = rate;
-        if (0x1234dc / rate < Datac7fe0) {
-            Func4b09a(0x1234dc / rate);
+        sos_timer_event_rates[handle] = rate;
+        if (0x1234dc / rate < sos_timer_divisor) {
+            sosTIMERSetDivisor(0x1234dc / rate);
         }
         for (i = 0; i < 16; i++) {
-            if (Datac7fe4[i]) {
-                if (Datac8024[i] == 0xff00) {
-                    if (Datac7fe0 == 0xffff) {
-                        Datac8064[i] = 0x10000;
+            if (sos_timer_events[i]) {
+                if (sos_timer_event_rates[i] == 0xff00) {
+                    if (sos_timer_divisor == 0xffff) {
+                        sos_timer_event_steps[i] = 0x10000;
                     } else {
-                        Datac8064[i] = 0x123333 / (0x1234dc / Datac7fe0);
+                        sos_timer_event_steps[i] = 0x123333 / (0x1234dc / sos_timer_divisor);
                     }
                 } else {
-                    Datac8064[i] = (Datac8024[i] << 16) / (0x1234dc / Datac7fe0);
+                    sos_timer_event_steps[i] = (sos_timer_event_rates[i] << 16) / (0x1234dc / sos_timer_divisor);
                 }
-                Datac80a4[i].value = 0;
+                sos_timer_event_phases[i].value = 0;
             }
         }
-        if (Datac7fdc & 1) {
-            Func522ad();
+        if (sos_timer_flags & 1) {
+            sosTIMERUnmaskInterrupt();
         }
     } else {
         return 10;
@@ -188,78 +188,78 @@ int sosTIMERRemoveEvent(dword handle)
     dword rate;
 
     rate = 0;
-    Datac7fe4[handle] = 0;
+    sos_timer_events[handle] = 0;
     for (i = 0; i < 16; i++) {
-        if (Datac7fe4[i]) {
-            if (Datac8024[i] > rate && Datac8024[i] != 0xff00) {
-                rate = Datac8024[i];
+        if (sos_timer_events[i]) {
+            if (sos_timer_event_rates[i] > rate && sos_timer_event_rates[i] != 0xff00) {
+                rate = sos_timer_event_rates[i];
             }
         }
     }
     if (rate) {
-        Func4b09a(0x1234dc / rate);
+        sosTIMERSetDivisor(0x1234dc / rate);
     } else {
-        Func4b09a(0xffff);
+        sosTIMERSetDivisor(0xffff);
     }
-    if (Datac7fdc & 1) {
-        Func52281();
+    if (sos_timer_flags & 1) {
+        sosTIMERMaskInterrupt();
     }
     for (i = 0; i < 16; i++) {
-        if (Datac7fe4[i]) {
-            if (Datac8024[i] == 0xff00) {
-                if (Datac7fe0 == 0xffff) {
-                    Datac8064[i] = 0x10000;
+        if (sos_timer_events[i]) {
+            if (sos_timer_event_rates[i] == 0xff00) {
+                if (sos_timer_divisor == 0xffff) {
+                    sos_timer_event_steps[i] = 0x10000;
                 } else {
-                    Datac8064[i] = 0x123333 / (0x1234dc / Datac7fe0);
+                    sos_timer_event_steps[i] = 0x123333 / (0x1234dc / sos_timer_divisor);
                 }
             } else {
-                Datac8064[i] = (Datac8024[i] << 16) / (0x1234dc / Datac7fe0);
+                sos_timer_event_steps[i] = (sos_timer_event_rates[i] << 16) / (0x1234dc / sos_timer_divisor);
             }
-            Datac80a4[i].value = 0;
+            sos_timer_event_phases[i].value = 0;
         }
     }
-    if (Datac7fdc & 1) {
-        Func522ad();
+    if (sos_timer_flags & 1) {
+        sosTIMERUnmaskInterrupt();
     }
     return 0;
 }
 
-dword Func4b070(dword handle)
+dword sosTIMERGetEventRate(dword handle)
 {
-    return Datac8024[handle];
+    return sos_timer_event_rates[handle];
 }
 
-int Func4b09a(dword divisor)
+int sosTIMERSetDivisor(dword divisor)
 {
-    Datac7fe0 = divisor;
-    Func52180(divisor);
+    sos_timer_divisor = divisor;
+    sosTIMERProgramPIT(divisor);
     return 0;
 }
 
-void Func4b0cf(void)
+void sosTIMERDispatchEvents(void)
 {
     dword i;
 
     for (i = 0; i < 16; i++) {
-        if (Datac7fe4[i]) {
-            Datac80a4[i].value += Datac8064[i];
-            if (Datac80a4[i].parts.whole & 1) {
-                Datac80a4[i].parts.whole = 0;
-                if (Datac80e4[i].channel != 0xff) {
-                    Datac8124 = Datac80e4[i].channel;
+        if (sos_timer_events[i]) {
+            sos_timer_event_phases[i].value += sos_timer_event_steps[i];
+            if (sos_timer_event_phases[i].parts.whole & 1) {
+                sos_timer_event_phases[i].parts.whole = 0;
+                if (sos_timer_event_channels[i].channel != 0xff) {
+                    sos_timer_current_channel = sos_timer_event_channels[i].channel;
                 }
-                Datac7fe4[i]();
+                sos_timer_events[i]();
             }
         }
     }
 }
 
-void Func4b16f(void)
+void sosTIMERChainHandler(void)
 {
-    Func52355();
+    sosTIMERChainInterrupt();
 }
 
-void Func4b189(void)
+void sosTIMERCodeEnd(void)
 {
 }
 
@@ -273,7 +273,7 @@ struct
 {
     TIMERGLYPH glyphs[95];
     byte end;
-} Datac66e8 = {
+} sos_timer_font = {
     {
         {2, {0x40, 0x40, 0x40, 0x40, 0x40, 0x00, 0x40, 0x00}},
         {4, {0x50, 0x50, 0xa0, 0x00, 0x00, 0x00, 0x00, 0x00}},
